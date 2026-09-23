@@ -42,6 +42,7 @@ The generated universal app is under `builds/macos/`, which Git ignores. It is c
 godot --headless --path . --import
 godot --headless --path . --script res://tools/validation/smoke.gd
 godot --headless --path . --script res://tools/validation/gameplay_smoke.gd
+godot --headless --path . --script res://tools/validation/collision_smoke.gd
 godot --headless --path . --script res://tools/validation/round_smoke.gd
 godot --headless --path . --script res://tools/validation/save_smoke.gd
 godot --headless --path . --script res://tools/validation/settings_smoke.gd
