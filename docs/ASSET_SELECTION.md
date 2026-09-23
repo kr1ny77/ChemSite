@@ -15,7 +15,8 @@ The Godot vertical slice starts from the CC0 Kenney Factory Kit 3.0 and Building
 | Project-authored `tools/blender/build_material_cache.py` | `assets/models/environment/material_cache.glb` | Palletized cement and brick storage | Eight material-grouped meshes; route and collision review complete |
 | Project-authored `tools/blender/build_safety_point.py` | `assets/models/environment/safety_point.glb` | Freestanding first-aid and eyewash landmark | Six material-grouped meshes; pictogram and collision review complete |
 | Project-authored `tools/blender/build_site_mixer.py` | `assets/models/environment/site_mixer.glb` | Right-side construction machinery landmark | Six material-grouped meshes; drum, frame and collision review complete |
+| Project-authored `tools/blender/build_rebar_bay.py` | `assets/models/environment/rebar_bay.glb` | Left build-pad reinforcement and formwork | Five material-grouped meshes; cage silhouette and collision review complete |
 
 The browser's merged GLB libraries remain in `legacy-web/public/assets/models/` for reference. The source packs remain under `assets-source/` and are excluded from Godot import with `.gdignore`.
 
-Standardized six-view reviews are saved at `docs/screenshots/site-cabin-contact-sheet.png`, `docs/screenshots/material-cache-contact-sheet.png`, `docs/screenshots/safety-point-contact-sheet.png` and `docs/screenshots/site-mixer-contact-sheet.png`.
+Standardized six-view reviews are saved at `docs/screenshots/site-cabin-contact-sheet.png`, `docs/screenshots/material-cache-contact-sheet.png`, `docs/screenshots/safety-point-contact-sheet.png`, `docs/screenshots/site-mixer-contact-sheet.png` and `docs/screenshots/rebar-bay-contact-sheet.png`.

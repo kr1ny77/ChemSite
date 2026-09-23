@@ -22,6 +22,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Authored cement-sack and strapped-brick pallets in Blender. Exported eight material-grouped meshes with an editable `.blend` source; added a collision proxy and reviewed the six-view contact sheet and updated site capture. Walked from spawn to all three stations in a physics route smoke test.
 - Authored a freestanding first-aid and eyewash safety point in Blender beside the laboratory cabin. Six material-grouped meshes, front pictograms, lower supply cases and a collision proxy passed multi-angle, import, geometry and route review.
 - Replaced two abstract off-perimeter machinery props with an original tilted-drum mixer inside the right boundary. Kept editable Blender source, a six-view review, and a simple frame-and-drum collision proxy.
+- Replaced the left pad's unused stairs with an original paired rebar and formwork bay. Adjusted its position after the first camera capture hid the cages behind columns; both cages now read from the gameplay camera and leave the central route open.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -32,15 +33,15 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Improve construction depth on the left build pad, then review character and station silhouettes from multiple camera angles.
+Review character and station silhouettes from multiple camera angles, then improve station material polish and chemistry feedback.
 
 ## Last verification
 
-2026-09-24: Godot import, complete-round, collision and all-three-station walking-route smoke scripts passed with the mixer in place. Blender Agent Studio inspection found six meshes, six materials, 3,110 triangles, zero degenerate faces, zero zero-length edges and a passing hard gate. The six-view contact sheet and 1440×900 Godot site capture were reviewed. The earlier safety point and material cache also passed geometry inspection. The macOS release export was refreshed and its app binary launched headless with the mixer in place.
+2026-09-24: Godot import, complete-round, collision and all-three-station walking-route smoke scripts passed with the rebar bay in place. Blender Agent Studio inspection found five meshes, five materials, 3,456 triangles, zero degenerate faces, zero zero-length edges and a passing hard gate. The six-view contact sheet and 1440×900 Godot site capture were reviewed. The earlier mixer, safety point and material cache also passed geometry inspection. The macOS release export was refreshed and its app binary launched headless with the rebar bay in place.
 
 ## Known issues
 
-- The laboratory cabin, material cache, safety point and mixer improve the site silhouette; the left build pad still needs construction depth and more coherent unfinished-building detail.
+- The laboratory cabin, material cache, safety point, mixer and rebar bay improve the site silhouette; the unfinished-building shell still needs a more coherent upper structure and material polish.
 - Station animations, chemistry-specific VFX, footstep/machinery ambience and accessibility controls remain pending. Answer feedback and audio settings are present.
 - Character animation transitions work in the controller, but close-up deformation and timing need visual review.
 - The macOS release is unsigned and unnotarized; a complete five-task playtest in the exported app remains open. Windows export is pending.

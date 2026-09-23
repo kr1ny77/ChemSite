@@ -10,6 +10,7 @@
 | Cement and brick material cache | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_material_cache.py` | `assets/models/environment/material_cache.glb` | Blender 5.2.2 export |
 | First-aid and eyewash safety point | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_safety_point.py` | `assets/models/environment/safety_point.glb` | Blender 5.2.2 export |
 | Portable site mixer | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_site_mixer.py` | `assets/models/environment/site_mixer.glb` | Blender 5.2.2 export |
+| Rebar and formwork bay | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_rebar_bay.py` | `assets/models/environment/rebar_bay.glb` | Blender 5.2.2 export |
 | Menu illustration | ChemSite project-authored SVG | Original project asset | `assets/ui/menu_illustration.svg` | `assets/ui/menu_illustration.svg` | Native Godot UI |
 | Music track | ChemSite browser prototype source | Existing project asset | `legacy-web/public/assets/audio/lofi-1.mp3` | `assets/audio/lofi-1.mp3` | Copied for native use |
 | Interaction and answer cues | ChemSite project-authored synthesis | Original project assets | `tools/audio/render_cues.py` | `assets/audio/*.wav` | Generated WAV files |

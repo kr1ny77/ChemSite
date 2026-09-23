@@ -92,6 +92,8 @@ func _build_world() -> void:
 	_block("CentralPath", Vector3(0, 0.01, 0.2), Vector3(3.6, 0.03, 12.5), Color("bbc7bc"), false)
 	_block("RearPath", Vector3(0, 0.015, -3.4), Vector3(14, 0.03, 2.5), Color("bbc7bc"), false)
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
+	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
+	_block("Rebar bay collision", Vector3(-2.5, 1.34, 4.0), Vector3(2.35, 2.4, 1.26), Color(0, 0, 0, 0), true)
 	for x in [-8.7, 8.7]:
 		_block("Perimeter", Vector3(x, 0.62, 0), Vector3(0.25, 1.2, 14), Color("304c57"), true)
 	for z in [-6.8, 6.8]:
@@ -115,8 +117,6 @@ func _build_world() -> void:
 	_prop("structure-yellow-medium", Vector3(-7.7, 0, -1.6), 1.2, 0.15)
 	_block("Storage frame collision", Vector3(-7.7, 0.7, -1.6), Vector3(0.75, 1.4, 0.75), Color(0, 0, 0, 0), true)
 	_prop("structure-yellow-tall", Vector3(-8.1, 0, 4.0), 1.2, 0.0)
-	_prop("stairs-open-short", Vector3(-2.2, 0, 4.2), 1.25, -PI / 2.0)
-	_block("Stair collision", Vector3(-2.2, 0.35, 4.2), Vector3(1.4, 0.7, 1.5), Color(0, 0, 0, 0), true)
 	_prop("wall-window-wide-square-detailed", Vector3(-5.2, 0.14, 2.3), 2.1, 0.0)
 	_block("Scaffold collision", Vector3(-8.1, 0.7, 4.0), Vector3(0.7, 1.4, 0.7), Color(0, 0, 0, 0), true)
 	_prop("catwalk-straight", Vector3(-5.35, 2.35, 4.1), 1.7, 0.0)
