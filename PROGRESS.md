@@ -13,6 +13,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Imported nine player actions with seven skeleton bones and wired locomotion, interaction and answer reactions to AnimationTree.
 - Added ten verified Level 1 chemistry tasks, a five-task timed round, station routing, answer feedback, formula token assembly and periodic/card selections.
 - Added an audio bus, a licensed legacy music track and generated interaction/correct/incorrect cues.
+- Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
@@ -26,7 +27,7 @@ Add authored environment clusters and reliable collision proxies around the cons
 
 ## Last verification
 
-2026-09-23: Godot headless import passed; scene, gameplay, audio and save smoke scripts passed; Python task-integrity check passed all ten tasks. Character import inspection found seven bones and all nine required actions. The universal macOS release app launched and rendered its menu outside the editor. `git diff --check` passed.
+2026-09-23: Godot headless import passed; scene, gameplay, complete-round, audio and save smoke scripts passed; Python task-integrity check passed all ten tasks. Character import inspection found seven bones and all nine required actions. The universal macOS release app launched and rendered its menu outside the editor. `git diff --check` passed.
 
 ## Known issues
 

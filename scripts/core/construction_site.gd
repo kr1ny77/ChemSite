@@ -27,6 +27,7 @@ var _hud: Control
 var _nearest_station: Dictionary = {}
 var _round_done: bool = false
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
+var save_path: String = SAVE_DATA.SAVE_PATH
 
 func _ready() -> void:
 	_camera.position = Vector3(10.0, 15.5, 19.0)
@@ -241,7 +242,7 @@ func _finish_round() -> void:
 		return
 	_round_done = true
 	_player.controls_enabled = false
-	var save_error: Error = SAVE_DATA.record_round(_score, _completed)
+	var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path)
 	if save_error != OK:
 		push_warning("Could not save round progress: %s" % error_string(save_error))
 	_hud.show_results(_score, _completed, _time_left)
