@@ -98,6 +98,8 @@ func _build_world() -> void:
 		_block("Perimeter", Vector3(0, 0.62, z), Vector3(17.5, 1.2, 0.25), Color("304c57"), true)
 	_environment_prop("site_cabin", Vector3(0.0, 0.0, -5.65))
 	_block("Site laboratory cabin collision", Vector3(0.0, 1.15, -5.65), Vector3(3.85, 2.3, 1.8), Color(0, 0, 0, 0), true)
+	_environment_prop("safety_point", Vector3(3.2, 0.0, -5.15))
+	_block("Safety point collision", Vector3(3.2, 1.06, -5.15), Vector3(1.85, 2.12, 0.9), Color(0, 0, 0, 0), true)
 	for z in [2.3, 5.5]:
 		for x in [-7.4, -3.2]:
 			_prop("column-wide", Vector3(x, 0.14, z), 1.55, 0.0)
