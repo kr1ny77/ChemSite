@@ -27,6 +27,7 @@ var _hud: Control
 var _nearest_station: Dictionary = {}
 var _round_done: bool = false
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
+const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 var save_path: String = SAVE_DATA.SAVE_PATH
 
 func _ready() -> void:
@@ -223,6 +224,10 @@ func _submit_answer(answer: String) -> void:
 	var task: Dictionary = _tasks[_task_index]
 	var valid: bool = TASK_BANK.validate_choice(task, answer)
 	feedback_given.emit(valid)
+	var burst := ANSWER_BURST.new() as GPUParticles3D
+	_world.add_child(burst)
+	burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
+	burst.start(valid)
 	if valid:
 		_score += 100
 		_completed += 1

@@ -12,6 +12,8 @@ The playable native slice has an original rigged character with nine actions, an
 
 ![Native macOS release menu](docs/screenshots/mac-release-menu.png)
 
+![Correct-answer particle feedback](docs/screenshots/answer-feedback.png)
+
 ## Run
 
 Install Godot 4.7.2, then open `project.godot` in the editor and press F5, or run:
