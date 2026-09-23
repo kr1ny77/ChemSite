@@ -16,6 +16,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added a small color-coded answer particle burst; rendered the effect above the player and verified that its emitter frees itself after playback.
 - Added a native audio settings panel with live music/effects bus control, persistent versioned values, keyboard focus and Escape navigation; captured it at 1440×900.
 - Split the gameplay HUD into a mission panel and a compact score/timer panel; reviewed the updated site capture at 1440×900.
+- Compared the source Kenney GLB appearance in Godot, found that many props import white, and differentiated crane, steelwork, machinery and concrete with controlled runtime material families. Reviewed the new site capture.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.

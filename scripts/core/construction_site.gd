@@ -174,8 +174,17 @@ func _prop(asset_name: String, pos: Vector3, scale_value: float, yaw: float) -> 
 	prop.rotation.y = yaw
 	var finish := StandardMaterial3D.new()
 	finish.roughness = 0.72
-	if asset_name in ["column-wide", "wall-half", "stairs-open-short", "wall-window-wide-square-detailed"]:
+	if asset_name in ["column-wide", "wall-half", "wall-window-wide-square-detailed"]:
 		finish.albedo_color = Color("b8bec0")
+	elif asset_name in ["crane", "structure-yellow-medium", "structure-yellow-tall"]:
+		finish.albedo_color = Color("dca34a")
+		finish.metallic = 0.25
+	elif asset_name in ["stairs-open-short", "catwalk-straight", "pipe-large-long"]:
+		finish.albedo_color = Color("809a9a")
+		finish.metallic = 0.4
+	elif asset_name in ["machine", "hopper-high-round"]:
+		finish.albedo_color = Color("496b70")
+		finish.metallic = 0.35
 	elif asset_name in ["screen-wide", "scanner-high"]:
 		finish.albedo_color = Color("247d91")
 		finish.metallic = 0.35
