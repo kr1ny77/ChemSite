@@ -6,6 +6,8 @@ signal exit_requested
 
 var _objective: Label
 var _status: Label
+var _score_label: Label
+var _timer_label: Label
 var _prompt: Label
 var _panel: PanelContainer
 var _panel_content: VBoxContainer
@@ -16,11 +18,10 @@ var _formula_output: Label
 
 func _ready() -> void:
 	var top := PanelContainer.new()
-	top.anchor_right = 1.0
+	top.anchor_right = 0.58
 	top.offset_left = 24
 	top.offset_top = 20
-	top.offset_right = -24
-	top.offset_bottom = 140
+	top.offset_bottom = 112
 	top.add_theme_stylebox_override("panel", _panel_style(Color("173744"), 13))
 	add_child(top)
 	var row := HBoxContainer.new()
@@ -35,6 +36,21 @@ func _ready() -> void:
 	_status.autowrap_mode = TextServer.AUTOWRAP_OFF
 	title.add_child(_objective)
 	title.add_child(_status)
+	var round_panel := PanelContainer.new()
+	round_panel.anchor_left = 0.73
+	round_panel.anchor_right = 1.0
+	round_panel.offset_top = 20
+	round_panel.offset_right = -24
+	round_panel.offset_bottom = 112
+	round_panel.add_theme_stylebox_override("panel", _panel_style(Color("173744"), 13))
+	add_child(round_panel)
+	var round_content := VBoxContainer.new()
+	round_content.add_theme_constant_override("separation", 3)
+	round_panel.add_child(round_content)
+	_score_label = _label("ОЧКИ  0", 21, Color("f3a846"))
+	_timer_label = _label("ВРЕМЯ  15:00", 19, Color("f7f4e7"))
+	round_content.add_child(_score_label)
+	round_content.add_child(_timer_label)
 	_prompt = _label("", 22, Color("173744"))
 	_prompt.anchor_left = 0.21
 	_prompt.anchor_right = 0.79
@@ -57,7 +73,9 @@ func _ready() -> void:
 
 func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary) -> void:
 	_objective.text = "ЗАДАНИЕ %d/5  ·  %s" % [mini(completed + 1, 5), task.topic]
-	_status.text = "СТАНЦИЯ: %s    •    ОЧКИ: %d    •    ВРЕМЯ: %02d:%02d" % [_station_name(task.station), score, int(time_left) / 60, int(time_left) % 60]
+	_status.text = "СТАНЦИЯ: %s" % _station_name(task.station)
+	_score_label.text = "ОЧКИ  %d" % score
+	_timer_label.text = "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
 	if nearest.is_empty():
 		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
 	elif nearest.id == task.station:
