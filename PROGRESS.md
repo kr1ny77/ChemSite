@@ -19,6 +19,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Compared the source Kenney GLB appearance in Godot, found that many props import white, and differentiated crane, steelwork, machinery and concrete with controlled runtime material families. Reviewed the new site capture.
 - Added simple collision proxies for the storage frame, pipe rack, stairs, safety marker and machinery dressing. A physics smoke test confirms the perimeter and storage frame block movement.
 - Authored a beveled, six-material site laboratory cabin in Blender with door, glazing, analyzer silhouettes, roof equipment and safety trim. Imported it as a rear landmark with a box collision proxy. Blender Agent Studio geometry inspection passed, and its six-view contact sheet and Godot site capture were reviewed.
+- Authored cement-sack and strapped-brick pallets in Blender. Exported eight material-grouped meshes with an editable `.blend` source; added a collision proxy and reviewed the six-view contact sheet and updated site capture. Walked from spawn to all three stations in a physics route smoke test.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -29,15 +30,15 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Add a Blender-authored material-storage cluster and safety dressing, then capture the updated site and verify routes to all three stations.
+Add safety-area dressing and improve framing around the right-edge machinery. Then review character and station silhouettes from multiple camera angles.
 
 ## Last verification
 
-2026-09-24: Godot import passed; complete-round and collision smoke scripts passed with the cabin in place. Blender Agent Studio inspection found six materials, zero degenerate faces, zero zero-length edges and a passing hard gate. The six-view contact sheet and 1440×900 Godot site capture were reviewed. Earlier scene, gameplay, audio, settings, save and task-integrity checks passed on 2026-09-23.
+2026-09-24: Godot import, complete-round, collision and all-three-station walking-route smoke scripts passed with the material cache in place. Blender Agent Studio inspection found eight meshes, eight materials, 18,232 triangles, zero degenerate faces, zero zero-length edges and a passing hard gate. The six-view contact sheet and 1440×900 Godot site capture were reviewed. A macOS release export completed and its app binary launched headless. Earlier scene, gameplay, audio, settings, save and task-integrity checks passed on 2026-09-23.
 
 ## Known issues
 
-- The laboratory cabin improves the rear silhouette; material storage and safety areas still need more authored detail, and edge machinery still needs framing work.
+- The laboratory cabin and material cache improve the site silhouette; safety areas and edge machinery still need authored dressing and framing work.
 - Station animations, chemistry-specific VFX, footstep/machinery ambience and accessibility controls remain pending. Answer feedback and audio settings are present.
 - Character animation transitions work in the controller, but close-up deformation and timing need visual review.
 - The macOS release is unsigned and unnotarized; a complete five-task playtest in the exported app remains open. Windows export is pending.
