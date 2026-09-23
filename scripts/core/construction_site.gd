@@ -81,6 +81,9 @@ func _build_world() -> void:
 	settings.ambient_light_color = Color("b8d2cd")
 	settings.ambient_light_energy = 0.32
 	settings.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	settings.ssao_enabled = true
+	settings.ssao_radius = 0.9
+	settings.ssao_intensity = 1.25
 	environment.environment = settings
 	_world.add_child(environment)
 	_block("Foundation", Vector3(0, -0.32, 0), Vector3(19, 0.6, 14), Color("d7c9ad"), true)
@@ -128,6 +131,13 @@ func _build_world() -> void:
 		_station_prop(station.model, station.position)
 		_block(station.name, station.position + Vector3(0, 0.03, 0), Vector3(2.3, 0.06, 2.3), Color("efa945"), false)
 		_block(station.name + " collider", station.position + Vector3(0, 0.55, 0), Vector3(1.3, 1.1, 1.1), Color(0, 0, 0, 0), true)
+		var task_light := OmniLight3D.new()
+		task_light.name = station.name + " Work Light"
+		task_light.position = station.position + Vector3(0, 2.1, 0)
+		task_light.light_color = Color("6ed9dc")
+		task_light.light_energy = 0.8
+		task_light.omni_range = 3.4
+		_world.add_child(task_light)
 
 func _block(label: String, pos: Vector3, dimensions: Vector3, color: Color, solid: bool) -> void:
 	if color.a > 0.0:
