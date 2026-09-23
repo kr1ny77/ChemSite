@@ -20,5 +20,12 @@ func _run() -> void:
 		await physics_frame
 	Input.action_release("move_back")
 	assert(player.global_position.z < -2.2, "Player passed through storage frame")
+	player.global_position = Vector3(0.0, 0.05, -3.8)
+	player.velocity = Vector3.ZERO
+	Input.action_press("move_forward")
+	for i in range(90):
+		await physics_frame
+	Input.action_release("move_forward")
+	assert(player.global_position.z > -4.5, "Player passed through site cabin")
 	print("CHEMSITE_COLLISION_SMOKE_OK")
 	quit()

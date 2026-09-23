@@ -6,4 +6,4 @@ Use softened edges, readable silhouettes, deliberate material families, and comp
 
 The player reads as a young site chemist through an oversized helmet, safety vest, gloves, boots, and cyan chemistry pack. From the gameplay camera, the helmet and vest must remain distinct at normal zoom. Native Control UI uses large Russian labels and concise work orders.
 
-Current screenshot evidence: `artifacts/godot-site.png`. It shows the initial composition and material language. The rigged character and station silhouettes are in place. Outstanding art work: site density and landmarks, PBR material refinement, multiview animation review, contact shadows, VFX and ambience.
+Current screenshot evidence: `docs/screenshots/vertical-slice-site.png`. The original site laboratory cabin adds a rear landmark and a stronger chemistry identity. The rigged character and station silhouettes are in place. Outstanding art work: material-storage density, PBR material refinement, multiview animation review, contact shadows, station VFX and ambience.

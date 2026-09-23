@@ -96,6 +96,12 @@ func _build_world() -> void:
 		_block("Perimeter", Vector3(x, 0.62, 0), Vector3(0.25, 1.2, 14), Color("304c57"), true)
 	for z in [-6.8, 6.8]:
 		_block("Perimeter", Vector3(0, 0.62, z), Vector3(17.5, 1.2, 0.25), Color("304c57"), true)
+	var cabin_scene := load("res://assets/models/environment/site_cabin.glb") as PackedScene
+	if cabin_scene:
+		var cabin := cabin_scene.instantiate() as Node3D
+		cabin.position = Vector3(0.0, 0.0, -5.65)
+		_world.add_child(cabin)
+		_block("Site laboratory cabin collision", Vector3(0.0, 1.15, -5.65), Vector3(3.85, 2.3, 1.8), Color(0, 0, 0, 0), true)
 	for z in [2.3, 5.5]:
 		for x in [-7.4, -3.2]:
 			_prop("column-wide", Vector3(x, 0.14, z), 1.55, 0.0)

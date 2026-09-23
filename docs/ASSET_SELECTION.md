@@ -11,5 +11,8 @@ The Godot vertical slice starts from the CC0 Kenney Factory Kit 3.0 and Building
 | Kenney Building Kit: `column-wide`, `wall-half`, `stairs-open-short`, `wall-window-wide-square-detailed` | `assets/models/construction/` | Unfinished shell | Material and collision proxy pass |
 | Project-authored `tools/blender/build_chemist.py` | `assets/models/character/chemist.glb` | Rigged player and nine actions | Multiview deformation and timing review |
 | Project-authored `tools/blender/build_stations.py` | `assets/models/stations/` | Storage, formula board and periodic terminal | Material, lighting and VFX refinement |
+| Project-authored `tools/blender/build_site_cabin.py` | `assets/models/environment/site_cabin.glb` | Rear laboratory landmark and active-site story | Final sign treatment and lighting review |
 
 The browser's merged GLB libraries remain in `legacy-web/public/assets/models/` for reference. The source packs remain under `assets-source/` and are excluded from Godot import with `.gdignore`.
+
+The site cabin's standardized six-view review is saved at `docs/screenshots/site-cabin-contact-sheet.png`.
