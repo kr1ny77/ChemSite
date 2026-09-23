@@ -13,7 +13,7 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
-- [ ] Author denser construction and chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache and safety point now define the rear and right-hand work areas
+- [ ] Author denser construction and chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache, safety point and mixer now define the rear and right-hand work areas
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles
 - [ ] Add chemistry VFX and restrained environment motion, plus footstep and machinery ambience
 - [ ] Complete production HUD hierarchy, formula typography, accessibility, score/XP/combo presentation and Career/Practice menu modes; audio settings and keyboard focus are in place

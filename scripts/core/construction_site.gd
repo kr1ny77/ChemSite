@@ -106,8 +106,8 @@ func _build_world() -> void:
 			_block("Column collision", Vector3(x, 0.9, z), Vector3(0.7, 1.8, 0.7), Color(0, 0, 0, 0), true)
 	_prop("wall-half", Vector3(-5.3, 0.14, 5.8), 1.9, 0.0)
 	_prop("crane", Vector3(-9.8, 0, -5.3), 1.2, 0.0)
-	_prop("machine", Vector3(9.4, 0, 0.3), 1.55, 0.0)
-	_prop("hopper-high-round", Vector3(9.3, 0, 5.0), 1.6, 0.0)
+	_environment_prop("site_mixer", Vector3(7.55, 0.0, -1.35))
+	_block("Site mixer collision", Vector3(7.55, 0.77, -1.35), Vector3(1.8, 1.55, 1.75), Color(0, 0, 0, 0), true)
 	_environment_prop("material_cache", Vector3(4.7, 0.0, 0.1))
 	_block("Material cache collision", Vector3(4.7, 0.65, 0.1), Vector3(3.8, 1.3, 1.55), Color(0, 0, 0, 0), true)
 	for i in range(3):
