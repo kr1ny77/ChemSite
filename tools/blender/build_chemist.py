@@ -150,6 +150,10 @@ for name, keys in poses.items():
   values={'Torso':(torso,0,0),'Leg_L':(leg_l,0,0),'Leg_R':(leg_r,0,0),
           'Arm_L':(-arm_r if name in ('Walk','Run','Celebrate') else 0,0,0),
           'Arm_R':(arm_r,0,0),'Head':(0,0,0)}
+  if name == 'Celebrate' and frame > 1:
+   # Local Z lifts the rigid shoulder assemblies out into a readable V.
+   values['Arm_L'] = (0,0,2.2)
+   values['Arm_R'] = (0,0,-2.2)
   for part,angles in values.items():
    pb=rig.pose.bones[part];pb.rotation_mode='XYZ';pb.rotation_euler=angles
    pb.keyframe_insert(data_path='rotation_euler',frame=frame,group=part)
