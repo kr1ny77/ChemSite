@@ -6,7 +6,7 @@ signal station_used
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 const STATION_CONFIG := [
-	{"id": "substance-storage", "name": "СКЛАД ВЕЩЕСТВ", "position": Vector3(-6.0, 0.0, -3.5), "model": "substance_storage"},
+	{"id": "substance-storage", "name": "СКЛАД ВЕЩЕСТВ", "position": Vector3(-3.3, 0.0, -3.5), "model": "substance_storage"},
 	{"id": "formula-board", "name": "ДОСКА ФОРМУЛ", "position": Vector3(5.7, 0.0, -3.4), "model": "formula_board"},
 	{"id": "periodic-table-terminal", "name": "ПЕРИОДИЧЕСКАЯ СИСТЕМА", "position": Vector3(5.5, 0.0, 4.5), "model": "periodic_terminal"},
 ]

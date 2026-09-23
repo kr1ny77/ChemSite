@@ -8,7 +8,7 @@ import bpy
 
 ROOT = Path(__file__).resolve().parents[2]
 action_name = sys.argv[-1]
-if action_name not in {"Idle", "Walk", "Run", "Interact", "Celebrate", "Failure"}:
+if action_name not in {"Idle", "Walk", "Run", "Turn", "Interact", "PickUp", "UseStation", "Celebrate", "Failure"}:
     raise ValueError(f"Unsupported review action: {action_name}")
 
 bpy.ops.object.select_all(action="SELECT")

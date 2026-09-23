@@ -1,7 +1,7 @@
 extends SceneTree
 
 const ROUTES := [
-	{"station": "substance-storage", "steps": [["move_left", -6.0, "x"], ["move_forward", -1.7, "z"]]},
+	{"station": "substance-storage", "steps": [["move_left", -3.3, "x"], ["move_forward", -1.7, "z"]]},
 	{"station": "formula-board", "steps": [["move_forward", -3.4, "z"], ["move_right", 4.0, "x"]]},
 	{"station": "periodic-table-terminal", "steps": [["move_back", 4.5, "z"], ["move_right", 3.7, "x"]]},
 ]

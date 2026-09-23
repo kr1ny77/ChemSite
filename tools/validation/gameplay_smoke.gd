@@ -15,7 +15,7 @@ func _run() -> void:
 		await physics_frame
 	Input.action_release("move_right")
 	assert(player.position.x > start_x + 0.2, "Player movement failed")
-	player.global_position = Vector3(-6.0, 0.05, -1.6)
+	player.global_position = Vector3(-3.3, 0.05, -1.6)
 	site._find_nearest_station()
 	var event := InputEventAction.new()
 	event.action = "interact"

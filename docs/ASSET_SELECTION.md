@@ -9,7 +9,7 @@ The Godot vertical slice starts from the CC0 Kenney Factory Kit 3.0 and Building
 | Kenney Factory Kit: `cone`, `warning-orange`, `box-large`, `box-small` | `assets/models/construction/` | Safety and storage dressing | Batch or instance repeated props |
 | Kenney Factory Kit: `structure-yellow-tall`, `structure-yellow-medium` | `assets/models/construction/` | Structural accents | Integrate with modular build area |
 | Kenney Building Kit: `column-wide`, `wall-half`, `stairs-open-short`, `wall-window-wide-square-detailed` | `assets/models/construction/` | Unfinished shell | Material and collision proxy pass |
-| Project-authored `tools/blender/build_chemist.py` | `assets/models/character/chemist.glb` | Rigged player and nine actions | Neutral and four-action multiview review complete; foot contact and remaining actions await review |
+| Project-authored `tools/blender/build_chemist.py` | `assets/models/character/chemist.glb` | Rigged player and nine actions | Neutral and all nine action key poses reviewed; sustained locomotion foot contact awaits runtime timing review |
 | Project-authored `tools/blender/build_stations.py` | `assets/models/stations/` | Storage, formula board and periodic terminal | Six-view silhouette review complete; material, lighting and VFX refinement remains |
 | Project-authored `tools/blender/build_site_cabin.py` | `assets/models/environment/site_cabin.glb` | Rear laboratory landmark and active-site story | Final sign treatment and lighting review |
 | Project-authored `tools/blender/build_material_cache.py` | `assets/models/environment/material_cache.glb` | Palletized cement and brick storage | Eight material-grouped meshes; route and collision review complete |
@@ -22,3 +22,5 @@ The browser's merged GLB libraries remain in `legacy-web/public/assets/models/` 
 Standardized six-view reviews are saved at `docs/screenshots/site-cabin-contact-sheet.png`, `docs/screenshots/material-cache-contact-sheet.png`, `docs/screenshots/safety-point-contact-sheet.png`, `docs/screenshots/site-mixer-contact-sheet.png` and `docs/screenshots/rebar-bay-contact-sheet.png`.
 
 Character and station reviews are saved at `docs/screenshots/chemist-contact-sheet.png`, `docs/screenshots/chemist-celebrate-frames.png`, `docs/screenshots/chemist-celebrate-godot.png`, `docs/screenshots/substance-storage-contact-sheet.png`, `docs/screenshots/formula-board-contact-sheet.png` and `docs/screenshots/periodic-terminal-contact-sheet.png`.
+
+Additional action contact sheets cover Walk, Turn, PickUp and UseStation under `docs/screenshots/chemist-*-frames.png`.

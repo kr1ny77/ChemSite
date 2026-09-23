@@ -14,7 +14,7 @@
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache, safety point, mixer and rebar bay define the construction site
-- [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; neutral and four-action character reviews found and fixed the celebration pose, and six-view station silhouettes are recorded
+- [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; all nine character actions have key-pose reviews, the celebration pose is fixed, and the substance-storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion, plus footstep and machinery ambience
 - [ ] Complete production HUD hierarchy, formula typography, accessibility, score/XP/combo presentation and Career/Practice menu modes; audio settings and keyboard focus are in place
 - [ ] Play a complete five-task round in the native exported app and resolve gameplay and visual QA findings
