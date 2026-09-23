@@ -1,0 +1,325 @@
+[
+  {
+    "id": "L1-001",
+    "topic": "Номенклатура",
+    "station": "substance-storage",
+    "prompt": "Назови вещество BaSO₄.",
+    "correctAnswer": "сульфат бария",
+    "options": [
+      "сульфат бария",
+      "сульфит бария",
+      "карбонат бария",
+      "сульфид бария"
+    ],
+    "explanation": "BaSO₄ состоит из катиона Ba²⁺ и сульфат-иона SO₄²⁻.",
+    "rule": "SO₄²⁻ называется сульфатом.",
+    "hint": "Определи название иона SO₄²⁻.",
+    "reviewStatus": "verified",
+    "interactionType": "substance-card",
+    "level": 1,
+    "subtopic": "Соли",
+    "difficulty": 1,
+    "tags": [
+      "salt",
+      "sulfate",
+      "barium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": [
+      "barium sulfate"
+    ]
+  },
+  {
+    "id": "L1-007",
+    "topic": "Формулы",
+    "station": "formula-board",
+    "prompt": "Собери формулу карбоната кальция из Ca²⁺ и CO₃²⁻.",
+    "correctAnswer": "CaCO3",
+    "options": [
+      "CaCO3",
+      "Ca2CO3",
+      "Ca(CO3)2",
+      "CaCO2"
+    ],
+    "explanation": "Заряды +2 и −2 компенсируются в отношении 1:1.",
+    "rule": "Суммарный заряд нейтральной формульной единицы равен нулю.",
+    "hint": "Оба иона имеют одинаковый по модулю заряд.",
+    "reviewStatus": "verified",
+    "interactionType": "formula-builder",
+    "tokenOptions": [
+      "Ca",
+      "CO3",
+      "2",
+      "(",
+      ")",
+      "O3"
+    ],
+    "level": 1,
+    "subtopic": "Баланс зарядов",
+    "difficulty": 1,
+    "tags": [
+      "formula",
+      "carbonate",
+      "calcium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-032",
+    "topic": "Периодическая система",
+    "station": "periodic-table-terminal",
+    "prompt": "Сколько валентных электронов у атома кислорода?",
+    "correctAnswer": "6",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "explanation": "Кислород находится в группе 16 и имеет шесть валентных электронов.",
+    "rule": "Для элементов главных подгрупп номер группы связан с числом валентных электронов.",
+    "hint": "Кислород находится в группе 16.",
+    "reviewStatus": "verified",
+    "interactionType": "periodic-table",
+    "level": 1,
+    "subtopic": "Валентные электроны",
+    "difficulty": 1,
+    "tags": [
+      "periodic-table",
+      "oxygen",
+      "valence-electrons"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-002",
+    "topic": "Номенклатура",
+    "station": "substance-storage",
+    "prompt": "Назови вещество BaSO₃.",
+    "correctAnswer": "сульфит бария",
+    "options": [
+      "сульфит бария",
+      "сульфат бария",
+      "сульфид бария",
+      "карбонат бария"
+    ],
+    "explanation": "BaSO₃ содержит сульфит-ион SO₃²⁻.",
+    "rule": "SO₃²⁻ — сульфит, SO₄²⁻ — сульфат.",
+    "hint": "У сульфит-иона три атома кислорода.",
+    "reviewStatus": "verified",
+    "interactionType": "substance-card",
+    "level": 1,
+    "subtopic": "Сульфиты и сульфаты",
+    "difficulty": 1,
+    "tags": [
+      "salt",
+      "sulfite",
+      "barium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-008",
+    "topic": "Формулы",
+    "station": "formula-board",
+    "prompt": "Собери формулу сульфата алюминия из Al³⁺ и SO₄²⁻.",
+    "correctAnswer": "Al2(SO4)3",
+    "options": [
+      "Al2(SO4)3",
+      "AlSO4",
+      "Al3(SO4)2",
+      "Al(SO4)3"
+    ],
+    "explanation": "Наименьшее общее кратное зарядов 3 и 2 равно 6: нужны 2 Al³⁺ и 3 SO₄²⁻.",
+    "rule": "Многоатомный ион берут в скобки, когда его индекс больше единицы.",
+    "hint": "Уравняй заряды до +6 и −6.",
+    "reviewStatus": "verified",
+    "interactionType": "formula-builder",
+    "tokenOptions": [
+      "Al",
+      "2",
+      "(",
+      ")",
+      "SO4",
+      "3",
+      "SO3"
+    ],
+    "level": 1,
+    "subtopic": "Баланс зарядов",
+    "difficulty": 2,
+    "tags": [
+      "formula",
+      "sulfate",
+      "aluminium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-033",
+    "topic": "Периодическая система",
+    "station": "periodic-table-terminal",
+    "prompt": "Сколько валентных электронов у атома натрия?",
+    "correctAnswer": "1",
+    "options": [
+      "1",
+      "2",
+      "7",
+      "11"
+    ],
+    "explanation": "Внешняя оболочка Na имеет конфигурацию 3s¹, поэтому валентный электрон один.",
+    "rule": "Натрий относится к группе 1.",
+    "hint": "Смотри на группу натрия.",
+    "reviewStatus": "verified",
+    "interactionType": "periodic-table",
+    "level": 1,
+    "subtopic": "Валентные электроны",
+    "difficulty": 1,
+    "tags": [
+      "periodic-table",
+      "sodium",
+      "valence-electrons"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-003",
+    "topic": "Номенклатура",
+    "station": "substance-storage",
+    "prompt": "Назови вещество NaHCO₃.",
+    "correctAnswer": "гидрокарбонат натрия",
+    "options": [
+      "гидрокарбонат натрия",
+      "карбонат натрия",
+      "гидроксид натрия",
+      "нитрат натрия"
+    ],
+    "explanation": "NaHCO₃ содержит катион Na⁺ и гидрокарбонат-ион HCO₃⁻.",
+    "rule": "HCO₃⁻ называется гидрокарбонатом.",
+    "hint": "В анионе HCO₃⁻ сохраняется атом водорода.",
+    "reviewStatus": "verified",
+    "interactionType": "substance-card",
+    "level": 1,
+    "subtopic": "Кислые соли",
+    "difficulty": 1,
+    "tags": [
+      "salt",
+      "hydrogen-carbonate",
+      "sodium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": [
+      "бикарбонат натрия",
+      "sodium bicarbonate"
+    ]
+  },
+  {
+    "id": "L1-009",
+    "topic": "Формулы",
+    "station": "formula-board",
+    "prompt": "Напиши формулу нитрата железа(III).",
+    "correctAnswer": "Fe(NO3)3",
+    "options": [
+      "Fe(NO3)3",
+      "FeNO3",
+      "Fe2(NO3)3",
+      "Fe(NO2)3"
+    ],
+    "explanation": "Fe³⁺ требует три нитрат-иона NO₃⁻.",
+    "rule": "Три одинаковых многоатомных иона записывают со скобками.",
+    "hint": "Сочетай Fe³⁺ с тремя NO₃⁻.",
+    "reviewStatus": "verified",
+    "interactionType": "formula-builder",
+    "tokenOptions": [
+      "Fe",
+      "(",
+      ")",
+      "NO3",
+      "3",
+      "NO2"
+    ],
+    "level": 1,
+    "subtopic": "Соли переходных металлов",
+    "difficulty": 2,
+    "tags": [
+      "formula",
+      "nitrate",
+      "iron"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  },
+  {
+    "id": "L1-034",
+    "topic": "Периодическая система",
+    "station": "periodic-table-terminal",
+    "prompt": "Какому элементу соответствует конфигурация 1s² 2s² 2p⁶ 3s¹?",
+    "correctAnswer": "натрий",
+    "options": [
+      "натрий",
+      "магний",
+      "калий",
+      "неон"
+    ],
+    "explanation": "Сумма электронов равна 11; порядковый номер 11 принадлежит натрию.",
+    "rule": "У нейтрального атома число электронов равно порядковому номеру.",
+    "hint": "Сложи показатели степеней: 2 + 2 + 6 + 1.",
+    "reviewStatus": "verified",
+    "interactionType": "periodic-table",
+    "level": 1,
+    "subtopic": "Электронная конфигурация",
+    "difficulty": 2,
+    "tags": [
+      "atomic-structure",
+      "electron-configuration",
+      "sodium"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": [
+      "Na"
+    ]
+  },
+  {
+    "id": "L1-004",
+    "topic": "Номенклатура",
+    "station": "substance-storage",
+    "prompt": "Назови вещество CaCO₃.",
+    "correctAnswer": "карбонат кальция",
+    "options": [
+      "карбонат кальция",
+      "гидрокарбонат кальция",
+      "оксид кальция",
+      "сульфат кальция"
+    ],
+    "explanation": "CaCO₃ состоит из Ca²⁺ и карбонат-иона CO₃²⁻.",
+    "rule": "CO₃²⁻ называется карбонатом.",
+    "hint": "Распознай карбонат-ион CO₃²⁻.",
+    "reviewStatus": "verified",
+    "interactionType": "substance-card",
+    "level": 1,
+    "subtopic": "Соли",
+    "difficulty": 1,
+    "tags": [
+      "salt",
+      "carbonate",
+      "calcium",
+      "construction"
+    ],
+    "points": 100,
+    "procedural": false,
+    "acceptedAnswers": []
+  }
+]

@@ -12,7 +12,7 @@ Distribution:
 
 These tasks are curated seed content for ChemSite.
 
-They should later be converted into structured TypeScript data according to `CONTENT_SCHEMA.md`.
+The browser prototype converted these seeds into structured TypeScript data under `legacy-web/`. The native Godot game currently uses ten reviewed Level 1 tasks in `data/chemistry/vertical_slice_tasks.json`; the remaining seeds await staged porting and verification.
 
 ## General Rules
 

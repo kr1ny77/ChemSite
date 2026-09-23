@@ -1,8 +1,10 @@
 # Chemistry Content Schema
 
+The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved browser schema and guides the remaining native content migration.
+
 All chemistry content must be stored as structured data.
 
-Chemistry questions must never be hardcoded directly inside React components.
+Chemistry questions belong in structured data, separate from native scenes and UI scripts.
 
 The same task system should support:
 

@@ -1,31 +1,30 @@
-## Completed
+# ChemSite native production plan
 
-- [x] Phase 0 — React, TypeScript and Vite application setup
-- [x] Phase 1 — 3D movement, Rapier collisions, construction site, isometric camera, station proximity and pause flow
-- [x] Phase 2 — Chemistry engine, 40 Level 1 seeds, five-task round, scoring, feedback and results
-- [x] Phase 3 — 40 Level 2 seeds, 40 Level 3 seeds, equation/numeric validators and reaction/solution mechanics
-- [x] Phase 4 — 40 Level 4 seeds, 40 Level 5 seeds, engineering instruments and staged construction missions
-- [x] Phase 5 — Adaptive learning, versioned persistence, topic mastery, spaced repetition and 520 playable task instances
-- [x] Phase 6 — Production 3D assets
-- [x] Phase 7 — Animations, effects and sound
-- [x] Phase 8 — UI, menus, Practice Mode and Career Mode
-- [x] Phase 9 — Full playtest, chemistry validation and optimization
+## Completed checkpoints
 
-## Current
+- [x] Phase 0: inspect the repository, local skills and tools; preserve the browser runtime and all 200 curated tasks in `legacy-web/`; establish Godot as the root project
+- [x] Phase 1: create the Godot 4.7 Forward+ project, main menu, native scenes and selected CC0 GLB imports
+- [x] Phase 2: implement CharacterBody3D movement, collision, camera follow and station proximity
+- [x] Phase 4 foundation: build the original rigged player in Blender, export nine skeletal actions and drive locomotion and reactions through AnimationTree
+- [x] Phase 5 foundation: build three distinct Blender-authored stations and implement card, periodic selection and formula assembly interactions
+- [x] Phase 6 slice: port ten verified Level 1 tasks to native JSON; validate their answers and run a five-task round
+- [x] Phase 9 foundation: persist best score, XP and completed rounds in a versioned Godot save
+- [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
 
-- [ ] Correct hammer grip/strike, enrich background architecture and vegetation, improve render sampling; verify close-up animation and performance
+## Current phase — Phase 3/7/8: vertical-slice quality pass
 
-- [x] Production checklist complete
-- [x] Stable localhost launch through `npm start` and the macOS one-click launcher
-- [x] Fix full-screen dark flicker caused by oversized station labels; verify composed frames in Chrome
+- [ ] Author denser construction, material storage, chemistry and safety clusters with coherent landmarks, paths and collision proxies
+- [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles
+- [ ] Add chemistry VFX and restrained environment motion, plus footstep and machinery ambience
+- [ ] Complete production HUD hierarchy, formula typography, keyboard focus, settings, accessibility, score/XP/combo presentation and menu modes
+- [ ] Play a complete five-task round in the native exported app and resolve gameplay and visual QA findings
 
-## Planned
+## Later phases
 
-- [x] Detailed smooth engineer with articulated movement, blinking and answer reactions
-- [x] Separated conveyor/box geometry; existing solid-prop collision regressions verified
-- [x] Ambient construction crew, articulated crane and hoist; pause/reduced-motion support
-- [x] Smooth 80–280% mouse-wheel/button zoom with player tracking and persistent settings
-- [x] Four original local lo-fi tracks, cyclic playback and independent persistent volume
-- [x] Screenshot review and browser regression coverage for character, camera and music
-
-- [x] Material and lighting production pass, aligned prop collisions, visual and movement regression checks
+- [ ] Phase 9: adaptive mastery, weak-topic scheduling and expanded versioned save data
+- [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
+- [ ] Phase 12: port and validate all 200 curated tasks
+- [ ] Phase 13: Levels 2–5 and their station mechanics
+- [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
+- [ ] Phase 15: Windows x86_64 export and black-box test
+- [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate

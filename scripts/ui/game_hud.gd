@@ -1,0 +1,263 @@
+extends Control
+
+signal answer_submitted(answer: String)
+signal resume_requested
+signal exit_requested
+
+var _objective: Label
+var _status: Label
+var _prompt: Label
+var _panel: PanelContainer
+var _panel_content: VBoxContainer
+var _feedback: Label
+var _formula_buffer: String = ""
+var _formula_tokens: Array[String] = []
+var _formula_output: Label
+
+func _ready() -> void:
+	var top := PanelContainer.new()
+	top.anchor_right = 1.0
+	top.offset_left = 24
+	top.offset_top = 20
+	top.offset_right = -24
+	top.offset_bottom = 140
+	top.add_theme_stylebox_override("panel", _panel_style(Color("173744"), 13))
+	add_child(top)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 35)
+	top.add_child(row)
+	var title := VBoxContainer.new()
+	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(title)
+	_objective = _label("ЗАГРУЗКА ЗАДАНИЯ", 22, Color("f7f4e7"))
+	_status = _label("", 17, Color("cfddd8"))
+	_objective.autowrap_mode = TextServer.AUTOWRAP_OFF
+	_status.autowrap_mode = TextServer.AUTOWRAP_OFF
+	title.add_child(_objective)
+	title.add_child(_status)
+	_prompt = _label("", 22, Color("173744"))
+	_prompt.anchor_left = 0.21
+	_prompt.anchor_right = 0.79
+	_prompt.anchor_top = 0.84
+	_prompt.anchor_bottom = 0.93
+	_prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	add_child(_prompt)
+	_panel = PanelContainer.new()
+	_panel.anchor_left = 0.26
+	_panel.anchor_right = 0.74
+	_panel.anchor_top = 0.19
+	_panel.anchor_bottom = 0.81
+	_panel.visible = false
+	_panel.mouse_filter = Control.MOUSE_FILTER_STOP
+	_panel.add_theme_stylebox_override("panel", _panel_style(Color("f3efe1"), 16))
+	add_child(_panel)
+	_panel_content = VBoxContainer.new()
+	_panel_content.add_theme_constant_override("separation", 13)
+	_panel.add_child(_panel_content)
+
+func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary) -> void:
+	_objective.text = "ЗАДАНИЕ %d/5  ·  %s" % [mini(completed + 1, 5), task.topic]
+	_status.text = "СТАНЦИЯ: %s    •    ОЧКИ: %d    •    ВРЕМЯ: %02d:%02d" % [_station_name(task.station), score, int(time_left) / 60, int(time_left) % 60]
+	if nearest.is_empty():
+		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
+	elif nearest.id == task.station:
+		_prompt.text = "[ E ]  %s" % nearest.name
+	else:
+		_prompt.text = "%s  ·  ТЕКУЩАЯ ЦЕЛЬ: %s" % [nearest.name, _station_name(task.station)]
+
+func show_task(task: Dictionary, station_id: String) -> void:
+	_clear_panel()
+	_panel.visible = true
+	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
+	_panel_content.add_child(eyebrow)
+	_panel_content.add_child(_label(task.prompt, 27, Color("243b43")))
+	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 17, Color("627679")))
+	if task.get("interactionType", "") == "formula-builder":
+		_show_formula_builder(task)
+	else:
+		var cards := GridContainer.new()
+		cards.columns = 2
+		cards.add_theme_constant_override("h_separation", 10)
+		cards.add_theme_constant_override("v_separation", 10)
+		_panel_content.add_child(cards)
+		for option in task.options:
+			var button := Button.new()
+			button.text = option
+			button.custom_minimum_size = Vector2(270, 67)
+			button.add_theme_font_size_override("font_size", 20)
+			_style_button(button)
+			button.pressed.connect(_submit_option.bind(option))
+			cards.add_child(button)
+	var cancel := Button.new()
+	cancel.text = "ЗАКРЫТЬ"
+	_style_button(cancel, true)
+	cancel.pressed.connect(func() -> void: resume_requested.emit())
+	_panel_content.add_child(cancel)
+	var focus_target := _panel_content.get_child(3)
+	if focus_target is GridContainer and focus_target.get_child_count() > 0:
+		focus_target.get_child(0).grab_focus()
+	elif focus_target is Label and _panel_content.get_child_count() > 4:
+		var tile_grid := _panel_content.get_child(4)
+		if tile_grid is GridContainer and tile_grid.get_child_count() > 0:
+			tile_grid.get_child(0).grab_focus()
+	elif focus_target is Button:
+		focus_target.grab_focus()
+
+func _show_formula_builder(task: Dictionary) -> void:
+	_formula_buffer = ""
+	_formula_tokens.clear()
+	_formula_output = _label("_", 34, Color("173744"))
+	_formula_output.custom_minimum_size.y = 53
+	_panel_content.add_child(_formula_output)
+	var tokens := GridContainer.new()
+	tokens.columns = 3
+	tokens.add_theme_constant_override("h_separation", 9)
+	tokens.add_theme_constant_override("v_separation", 9)
+	_panel_content.add_child(tokens)
+	for token in task.tokenOptions:
+		var tile := Button.new()
+		tile.text = token
+		tile.custom_minimum_size = Vector2(170, 54)
+		tile.add_theme_font_size_override("font_size", 22)
+		_style_button(tile)
+		tile.pressed.connect(_append_token.bind(token))
+		tokens.add_child(tile)
+	var actions := HBoxContainer.new()
+	_panel_content.add_child(actions)
+	var back := Button.new()
+	back.text = "УБРАТЬ"
+	_style_button(back, true)
+	back.pressed.connect(_remove_token)
+	actions.add_child(back)
+	var reset := Button.new()
+	reset.text = "СБРОС"
+	_style_button(reset, true)
+	reset.pressed.connect(_reset_formula)
+	actions.add_child(reset)
+	var submit := Button.new()
+	submit.text = "ПРОВЕРИТЬ  →"
+	_style_button(submit)
+	submit.pressed.connect(func() -> void: answer_submitted.emit(_formula_buffer))
+	actions.add_child(submit)
+
+func _submit_option(option: String) -> void:
+	answer_submitted.emit(option)
+
+func _append_token(token: String) -> void:
+	_formula_tokens.append(token)
+	_refresh_formula()
+
+func _remove_token() -> void:
+	if _formula_tokens.is_empty():
+		return
+	_formula_tokens.pop_back()
+	_refresh_formula()
+
+func _reset_formula() -> void:
+	_formula_tokens.clear()
+	_refresh_formula()
+
+func _refresh_formula() -> void:
+	_formula_buffer = "".join(_formula_tokens)
+	_formula_output.text = _formula_buffer if not _formula_buffer.is_empty() else "_"
+
+func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
+	_clear_panel()
+	_panel.visible = true
+	_panel_content.add_child(_label("ДРУГАЯ СТАНЦИЯ", 28, Color("c66c47")))
+	_panel_content.add_child(_label("Здесь: " + station.name, 21, Color("243b43")))
+	_panel_content.add_child(_label("Для текущего задания нужна станция: " + _station_name(task.station), 19, Color("627679")))
+	var close := Button.new()
+	close.text = "ВЕРНУТЬСЯ НА ПЛОЩАДКУ"
+	close.pressed.connect(func() -> void: resume_requested.emit())
+	_panel_content.add_child(close)
+	close.grab_focus()
+
+func show_feedback(correct: bool, task: Dictionary) -> void:
+	_clear_panel()
+	_panel.visible = true
+	var title := "ВЕРНО  +100" if correct else "ПОПРОБУЙ ЕЩЁ"
+	_panel_content.add_child(_label(title, 29, Color("2c977b") if correct else Color("c66c47")))
+	_panel_content.add_child(_label(task.explanation, 21, Color("243b43")))
+	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("627679")))
+	if not correct:
+		_panel_content.add_child(_label("ОТВЕТ: " + str(task.correctAnswer), 19, Color("243b43")))
+	var next := Button.new()
+	next.text = "ПРОДОЛЖИТЬ  →"
+	next.custom_minimum_size.y = 55
+	next.pressed.connect(func() -> void: resume_requested.emit())
+	_panel_content.add_child(next)
+	next.grab_focus()
+
+func show_results(score: int, completed: int, time_left: float) -> void:
+	_clear_panel()
+	_panel.visible = true
+	_panel_content.add_child(_label("СМЕНА ЗАВЕРШЕНА", 31, Color("cf7729")))
+	_panel_content.add_child(_label("Выполнено задач: %d / 5" % completed, 23, Color("243b43")))
+	_panel_content.add_child(_label("Очки: %d" % score, 23, Color("243b43")))
+	_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
+	var menu := Button.new()
+	menu.text = "ГЛАВНОЕ МЕНЮ"
+	menu.custom_minimum_size.y = 55
+	menu.pressed.connect(func() -> void: exit_requested.emit())
+	_panel_content.add_child(menu)
+	menu.grab_focus()
+
+func show_pause() -> void:
+	_clear_panel()
+	_panel.visible = true
+	_panel_content.add_child(_label("ПАУЗА", 31, Color("243b43")))
+	var resume := Button.new()
+	resume.text = "ПРОДОЛЖИТЬ"
+	resume.custom_minimum_size.y = 55
+	resume.pressed.connect(func() -> void: resume_requested.emit())
+	_panel_content.add_child(resume)
+	var menu := Button.new()
+	menu.text = "ГЛАВНОЕ МЕНЮ"
+	menu.pressed.connect(func() -> void: exit_requested.emit())
+	_panel_content.add_child(menu)
+	resume.grab_focus()
+
+func close_panel() -> void:
+	_panel.visible = false
+
+func is_panel_open() -> bool:
+	return _panel.visible
+
+func _clear_panel() -> void:
+	for child in _panel_content.get_children():
+		_panel_content.remove_child(child)
+		child.queue_free()
+
+func _label(value: String, size: int, color: Color) -> Label:
+	var label := Label.new()
+	label.text = value
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.add_theme_font_size_override("font_size", size)
+	label.add_theme_color_override("font_color", color)
+	return label
+
+func _panel_style(color: Color, radius: int) -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = color
+	style.set_corner_radius_all(radius)
+	style.set_content_margin_all(19)
+	return style
+
+func _style_button(button: Button, secondary: bool = false) -> void:
+	var normal := _panel_style(Color("dce8de") if secondary else Color("e8a447"), 9)
+	normal.set_content_margin_all(9)
+	var hover := _panel_style(Color("c2d8d1") if secondary else Color("f2b95b"), 9)
+	hover.set_content_margin_all(9)
+	button.add_theme_stylebox_override("normal", normal)
+	button.add_theme_stylebox_override("hover", hover)
+	button.add_theme_stylebox_override("pressed", hover)
+	button.add_theme_color_override("font_color", Color("173744"))
+	button.add_theme_color_override("font_hover_color", Color("173744"))
+
+func _station_name(station_id: String) -> String:
+	match station_id:
+		"substance-storage": return "СКЛАД ВЕЩЕСТВ"
+		"formula-board": return "ДОСКА ФОРМУЛ"
+		"periodic-table-terminal": return "ПЕРИОДИЧЕСКАЯ СИСТЕМА"
+	return station_id

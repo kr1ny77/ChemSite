@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+<defs>
+ <linearGradient id="base" x2="0" y2="1"><stop stop-color="#f2c270"/><stop offset="1" stop-color="#a86d35"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#58bfbb"/><stop offset="1" stop-color="#126c80"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<ellipse cx="432" cy="741" rx="361" ry="92" fill="#0a141c" opacity=".45" filter="url(#shadow)"/>
+<!-- miniature site slab -->
+<path d="M65 579 438 364 835 589 457 806Z" fill="#f0d9a4"/>
+<path d="M65 579 457 806 457 844 65 618Z" fill="url(#base)"/>
+<path d="M457 806 835 589 835 626 457 844Z" fill="#8d6a47"/>
+<path d="M107 584 438 397 787 595 457 781Z" fill="#c5c9b4"/>
+<path d="M284 487 388 429 703 611 602 670Z" fill="#e2b774"/>
+<!-- poured concrete structure -->
+<path d="M102 570 168 533 168 318 102 353Z" fill="#869a98"/>
+<path d="M168 533 203 552 203 336 168 318Z" fill="#4e6a6f"/>
+<path d="M102 353 168 318 203 336 139 371Z" fill="#c0c5ae"/>
+<path d="M230 642 298 603 298 381 230 419Z" fill="#9daea5"/>
+<path d="M298 603 334 623 334 401 298 381Z" fill="#4b6971"/>
+<path d="M230 419 298 381 334 401 266 439Z" fill="#d4d4b8"/>
+<path d="M146 396 273 469 273 504 146 432Z" fill="#85999a"/>
+<path d="M273 469 333 435 333 470 273 504Z" fill="#5c797c"/>
+<!-- chemistry station -->
+<path d="M526 641 645 576 741 629 619 698Z" fill="#e6953f"/>
+<path d="M526 641 619 698 619 727 526 671Z" fill="#9d5b2b"/>
+<path d="M619 698 741 629 741 659 619 727Z" fill="#c27631"/>
+<path d="M556 579 639 533 707 572 625 621Z" fill="#1c5260"/>
+<path d="M556 579 625 621 625 677 556 634Z" fill="#0d3443"/>
+<path d="M625 621 707 572 707 627 625 677Z" fill="#0a2c3c"/>
+<path d="M571 579 639 541 691 572 625 610Z" fill="#47acb4"/>
+<path d="M588 568 605 558 615 565 598 575ZM618 552 635 543 645 550 628 560ZM650 567 667 557 677 564 660 574Z" fill="#d8f3d7"/>
+<!-- crane mast -->
+<path d="M350 481 380 464 380 193 350 210Z" fill="#f4af44"/>
+<path d="M380 464 402 477 402 205 380 193Z" fill="#b97429"/>
+<path d="M350 210 380 193 402 205 372 222Z" fill="#ffd077"/>
+<path d="M251 252 532 90 573 112 291 275Z" fill="#f5b04a"/>
+<path d="M291 275 573 112 573 133 291 296Z" fill="#a66628"/>
+<path d="M251 252 291 275 291 296 251 273Z" fill="#cf8430"/>
+<path d="M517 124 517 356" stroke="#d9d2aa" stroke-width="8"/>
+<path d="M492 356 542 356 529 385 505 385Z" fill="#f8b843"/>
+<path d="M517 385v30" stroke="#d9d2aa" stroke-width="7"/>
+<!-- student silhouette -->
+<ellipse cx="404" cy="711" rx="44" ry="16" fill="#385b5a" opacity=".35"/>
+<path d="M382 686 398 686 394 721 376 721Z" fill="#143a4c"/>
+<path d="M409 686 425 686 432 721 414 721Z" fill="#143a4c"/>
+<path d="M374 706 401 707 401 724 369 724Z" fill="#102b37"/>
+<path d="M408 707 435 706 440 724 408 724Z" fill="#102b37"/>
+<path d="M375 628Q402 615 431 629L426 692Q403 701 380 690Z" fill="#e8822b"/>
+<path d="M386 629 391 629 388 688 383 686ZM417 628 423 628 426 684 420 687Z" fill="#f4edc4"/>
+<path d="M371 634Q355 638 357 657L370 684 384 677 374 647Z" fill="#17475a"/>
+<path d="M434 634Q451 641 450 659L438 683 422 676 434 648Z" fill="#17475a"/>
+<circle cx="370" cy="681" r="12" fill="#0c7987"/><circle cx="437" cy="681" r="12" fill="#0c7987"/>
+<circle cx="402" cy="600" r="30" fill="#ba8260"/>
+<path d="M367 586Q369 551 401 547Q434 551 438 586Z" fill="#f6bd45"/>
+<path d="M366 585Q402 572 439 585L445 595Q404 605 360 594Z" fill="#d88d2a"/>
+<path d="M378 588 425 588" stroke="#ffe18c" stroke-width="5"/>
+<circle cx="396" cy="600" r="3" fill="#132b34"/><circle cx="411" cy="600" r="3" fill="#132b34"/>
+<!-- chemistry emblem -->
+<circle cx="707" cy="244" r="78" fill="#0e5061"/>
+<circle cx="707" cy="244" r="69" fill="none" stroke="#52b8bb" stroke-width="3"/>
+<path d="M690 199h33m-23 0v45l-25 39q-5 10 8 10h48q13 0 8-10l-26-39v-45" fill="none" stroke="#e6e5c7" stroke-width="8" stroke-linejoin="round"/>
+<path d="M682 275q26-11 51 0l8 17h-67Z" fill="url(#glass)"/>
+<circle cx="695" cy="258" r="5" fill="#91e6d1"/><circle cx="716" cy="268" r="4" fill="#91e6d1"/>
+</svg>

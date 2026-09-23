@@ -16,18 +16,7 @@ Target curriculum:
 
 ## Core stack
 
-Use:
-
-- React
-- TypeScript
-- Vite
-- Three.js
-- React Three Fiber
-- @react-three/drei
-- @react-three/rapier
-- Zustand where useful
-- DOM/CSS for complex HUD and menus
-- localStorage for persistent progress
+The production game uses Godot 4.x, Forward+, GDScript, native scenes and Control UI, and GLB assets. The previous React, TypeScript, Vite and Three.js game is preserved in `legacy-web/` as a reference and content source.
 
 The game is desktop-first.
 
@@ -35,13 +24,7 @@ Target approximately 60 FPS on a normal student laptop.
 
 ## Available game skills
 
-Use the appropriate Game Studio skills when available:
-
-- web-game-foundations
-- react-three-fiber-game
-- web-3d-asset-pipeline
-- game-ui-frontend
-- game-playtest
+Use `studio-router` to select relevant Godot, Blender, art, UI, QA, and release skills. Browser skills apply only to `legacy-web/`.
 
 ## Single-player only
 
@@ -62,13 +45,13 @@ Do not implement:
 At the beginning of every run read:
 
 1. AGENTS.md
-2. GAME_DESIGN.md
-3. ARCHITECTURE.md
-4. CHEMISTRY_CURRICULUM.md
-5. CONTENT_SCHEMA.md
+2. docs/GAME_DESIGN.md
+3. docs/ARCHITECTURE.md
+4. docs/CHEMISTRY_CURRICULUM.md
+5. docs/CONTENT_SCHEMA.md
 6. TODO.md
 7. PROGRESS.md
-8. CHEMISTRY_REVIEW.md when chemistry content is involved
+8. docs/CHEMISTRY_REVIEW.md when chemistry content is involved
 
 Inspect the repository and git diff before modifying existing work.
 
@@ -115,7 +98,7 @@ Keep these systems separate:
 - persistence
 - audio
 
-Do not put chemistry questions directly inside React components.
+Do not put chemistry questions directly inside Godot scenes or UI scripts.
 
 Do not create giant monolithic components.
 
@@ -127,10 +110,10 @@ After meaningful changes run the relevant checks.
 
 At minimum where applicable:
 
-- typecheck
-- tests
-- build
-- browser playtest
+- Godot editor import and parse
+- native runtime smoke test
+- relevant tests and visual playtest
+- export verification for release work
 
 Fix errors before advancing to the next phase.
 
@@ -167,7 +150,7 @@ For every chemistry task:
 If an answer is ambiguous or uncertain:
 
 1. do not guess
-2. add the task to CHEMISTRY_REVIEW.md
+2. add the task to docs/CHEMISTRY_REVIEW.md
 3. exclude it from production question selection until reviewed
 
 Runtime question generation must use deterministic logic or a verified curated dataset.
