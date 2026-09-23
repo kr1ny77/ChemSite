@@ -16,7 +16,7 @@
 - [ ] Author denser construction, material storage, chemistry and safety clusters with coherent landmarks, paths and collision proxies
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles
 - [ ] Add chemistry VFX and restrained environment motion, plus footstep and machinery ambience
-- [ ] Complete production HUD hierarchy, formula typography, keyboard focus, settings, accessibility, score/XP/combo presentation and menu modes
+- [ ] Complete production HUD hierarchy, formula typography, accessibility, score/XP/combo presentation and Career/Practice menu modes; audio settings and keyboard focus are in place
 - [ ] Play a complete five-task round in the native exported app and resolve gameplay and visual QA findings
 
 ## Later phases

@@ -1,5 +1,7 @@
 extends Node
 
+const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
+
 const MUSIC_PATH := "res://assets/audio/lofi-1.mp3"
 const SUCCESS_PATH := "res://assets/audio/correct.wav"
 const ERROR_PATH := "res://assets/audio/incorrect.wav"
@@ -9,6 +11,7 @@ var _music: AudioStreamPlayer
 var _effects: AudioStreamPlayer
 
 func _ready() -> void:
+	apply_settings(SETTINGS_DATA.load_settings())
 	_music = AudioStreamPlayer.new()
 	_music.bus = "Music"
 	_music.volume_db = -8.0
@@ -23,6 +26,13 @@ func _ready() -> void:
 	_effects.bus = "SFX"
 	_effects.volume_db = -4.0
 	add_child(_effects)
+
+func apply_settings(settings: Dictionary) -> void:
+	for entry in [{"bus": "Music", "key": "music_volume"}, {"bus": "SFX", "key": "sfx_volume"}]:
+		var bus_index := AudioServer.get_bus_index(entry.bus)
+		if bus_index >= 0:
+			var volume := clampf(float(settings.get(entry.key, 1.0)), 0.0, 1.0)
+			AudioServer.set_bus_volume_db(bus_index, linear_to_db(maxf(volume, 0.001)))
 
 func play_feedback(correct: bool) -> void:
 	_effects.stream = load(SUCCESS_PATH if correct else ERROR_PATH) as AudioStream

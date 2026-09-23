@@ -14,6 +14,8 @@ The playable native slice has an original rigged character with nine actions, an
 
 ![Correct-answer particle feedback](docs/screenshots/answer-feedback.png)
 
+![Native audio settings](docs/screenshots/audio-settings.png)
+
 ## Run
 
 Install Godot 4.7.2, then open `project.godot` in the editor and press F5, or run:
@@ -22,7 +24,7 @@ Install Godot 4.7.2, then open `project.godot` in the editor and press F5, or ru
 godot --path .
 ```
 
-Controls: WASD or arrow keys move, E interacts near a station, Esc opens or closes the pause panel. Use the mouse or keyboard focus to select an answer. The formula board assembles formulas from tokens.
+Controls: WASD or arrow keys move, E interacts near a station, Esc opens or closes the pause/settings panel. Use the mouse or keyboard focus to select an answer. The formula board assembles formulas from tokens. The menu stores separate music and effects volume settings.
 
 ## Desktop build
 
@@ -42,6 +44,7 @@ godot --headless --path . --script res://tools/validation/smoke.gd
 godot --headless --path . --script res://tools/validation/gameplay_smoke.gd
 godot --headless --path . --script res://tools/validation/round_smoke.gd
 godot --headless --path . --script res://tools/validation/save_smoke.gd
+godot --headless --path . --script res://tools/validation/settings_smoke.gd
 godot --headless --path . --script res://tools/validation/audio_smoke.gd
 python3 tools/validation/check_tasks.py
 ```

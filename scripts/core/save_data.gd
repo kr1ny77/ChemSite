@@ -10,7 +10,10 @@ static func load_progress(path: String = SAVE_PATH) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
 		return defaults
-	var parsed: Variant = JSON.parse_string(file.get_as_text())
+	var parser := JSON.new()
+	if parser.parse(file.get_as_text()) != OK:
+		return defaults
+	var parsed: Variant = parser.data
 	if not parsed is Dictionary or parsed.get("save_version", -1) != VERSION:
 		return defaults
 	for key in defaults.keys():

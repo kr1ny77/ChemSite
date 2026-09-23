@@ -11,6 +11,7 @@ func _ready() -> void:
 func show_menu() -> void:
 	_replace(MENU_SCENE)
 	_current.start_requested.connect(start_game)
+	_current.settings_changed.connect($AudioController.apply_settings)
 
 func start_game() -> void:
 	_replace(SITE_SCENE)
