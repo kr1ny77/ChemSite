@@ -62,7 +62,7 @@ Build Level 4 electrochemistry and corrosion station assets in Blender, connect 
 
 ## Last verification
 
-2026-09-24: Level 4 chemistry audit passed two independent Hess calculations, 38 choices and explicit equilibrium conditions. Godot 4.7.2 editor parse and all 40 Level 4 HUD panels passed. The 1440×900 long-answer recapture now contains every choice and the full prompt within the panel. Earlier packaged Level 3 macOS and Windows PCK rounds and station routes remain verified. Native Windows execution remains pending.
+2026-09-24: Level 4 chemistry audit passed two independent Hess calculations, 38 choices and explicit equilibrium conditions. Godot 4.7.2 editor parse and all 40 Level 4 HUD panels passed. The 1440×900 long-answer recapture now contains every choice and the full prompt within the panel. Refreshed macOS and Windows exports each passed packaged Level 1, 2 and 3 five-task smokes after the HUD change; the Windows PCK ran under matching Godot on macOS. Native Windows execution remains pending.
 
 ## Known issues
 
