@@ -28,6 +28,7 @@ var _nearest_station: Dictionary = {}
 var _round_done: bool = false
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
+const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
 var save_path: String = SAVE_DATA.SAVE_PATH
 
 func _ready() -> void:
@@ -243,6 +244,13 @@ func _submit_answer(answer: String) -> void:
 	_world.add_child(burst)
 	burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
 	burst.start(valid)
+	for station in STATION_CONFIG:
+		if station.id == _active_station:
+			var pulse := STATION_PULSE.new() as Node3D
+			_world.add_child(pulse)
+			pulse.global_position = station.position + Vector3(0, 0.11, 0)
+			pulse.start(valid)
+			break
 	if valid:
 		_score += 100
 		_completed += 1

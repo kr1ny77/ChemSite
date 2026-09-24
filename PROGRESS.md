@@ -25,6 +25,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Replaced the left pad's unused stairs with an original paired rebar and formwork bay. Adjusted its position after the first camera capture hid the cages behind columns; both cages now read from the gameplay camera and leave the central route open.
 - Reviewed the exported character and all three stations from six angles. Fresh-imported the character's Run, Interact, Celebrate and Failure actions for key-frame review, found crossed arms in Celebrate, changed it to a raised-arm V, and verified the revised reaction in a Godot close-up capture.
 - Reviewed Walk, Turn, PickUp and UseStation key poses as well. Moved the substance-storage station from behind the left building wall into the open rear lane, verified its first-task visibility at gameplay zoom, and revalidated the walking route, interaction, full round and collisions.
+- Captured eight sustained locomotion frames in Godot and reviewed boot support and swing at gameplay zoom. Added a brief cyan/amber answer pulse at the active chemistry station; captured its appearance at 1440×900 and verified automatic cleanup.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -35,16 +36,16 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Review sustained locomotion foot contact in Godot, then improve station material polish and chemistry-specific feedback.
+Improve station material polish and add chemistry-specific visual language to the station interactions, then complete an exported-app round playtest.
 
 ## Last verification
 
-2026-09-24: The revised chemist GLB passed Blender Agent Studio's hard gate with nine exported actions and 15,708 triangles. Neutral and all nine action key poses were reviewed; the Celebrate action was repaired and captured in Godot at 1440×900. The storage rack was moved into view and captured at 1440×900. Godot gameplay, complete-round, collision and all-three-station walking-route smoke scripts passed after the move. The macOS release export was refreshed and its app binary launched headless with the station move.
+2026-09-24: Eight Godot locomotion frames were captured and reviewed: support and swing alternate without visible ground penetration at gameplay zoom. Godot editor import/parse and gameplay smoke passed after station pulse integration. A graphical 1440×900 capture shows the pulse at the storage rack; its cleanup assertion passed.
 
 ## Known issues
 
 - The laboratory cabin, material cache, safety point, mixer and rebar bay improve the site silhouette; the unfinished-building shell still needs a more coherent upper structure and material polish.
 - Station animations, chemistry-specific VFX, footstep/machinery ambience and accessibility controls remain pending. Answer feedback and audio settings are present.
-- All nine action key poses have visual evidence and the revised celebration pose reads in Godot; sustained locomotion foot contact still needs runtime timing review.
+- All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; a complete five-task playtest in the exported app remains open. Windows export is pending.
 - Advanced mastery, weak-topic scheduling, combo/stars, Career/Practice modes and the remaining 190 curated tasks await later phases.
