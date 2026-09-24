@@ -11,7 +11,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Built a Godot 4.7 Forward+ root project with native menu, level, player, HUD, deterministic task data, scoring, results and versioned best-score/XP save.
 - Selected 18 CC0 Kenney GLBs for the site. Authored an original rigged construction chemist and three chemistry stations using reproducible Blender scripts; exported GLBs and kept the `.blend` sources.
 - Imported nine player actions with seven skeleton bones and wired locomotion, interaction and answer reactions to AnimationTree.
-- Added ten verified Level 1 chemistry tasks, a five-task timed round, station routing, answer feedback, formula token assembly and periodic/card selections.
+- Added all 40 curated Level 1 chemistry tasks to normal selection and exported all 200 structured tasks to native JSON. A schema check and Level 1 interaction smoke validate task shape, correct-answer acceptance, formula tiles and option choices. Formula and oxidation-state inputs now cover the Level 1 interaction set.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
 - Added a small color-coded answer particle burst; rendered the effect above the player and verified that its emitter frees itself after playback.
 - Added a native audio settings panel with live music/effects bus control, persistent versioned values, keyboard focus and Escape navigation; captured it at 1440×900.
@@ -38,15 +38,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Improve the site composition, lighting, visual feedback and UI so the native slice meets the intended indie-game quality bar. Perform a complete exported-app round playtest.
+Complete visual QA for the expanded 40-task Level 1 bank, then continue site, feedback and UI polish. Perform a complete exported-app round playtest.
 
 ## Next task
 
-Add chemistry-specific station interactions and visual feedback, then complete visual exported-app playtesting and listen to the audio mix on target speakers. Expand progression data with later levels.
+Finish a visually reviewed five-task round in the exported app and listen to the audio mix on target speakers. Implement distinct station mechanics for Levels 2–5 and independently review their chemistry content.
 
 ## Last verification
 
-2026-09-24: Godot editor import/parse, Career round, Practice round, learning-system and save-migration smoke passed. Learning smoke confirmed unique tasks, a related task after two intervening questions, mastery/mistake persistence and weak-topic priority in the next round. The incorrect-answer panel was captured and reviewed at 1440×900. The refreshed packaged macOS app completed its five-task QA round with the version-3 save and task scheduler.
+2026-09-24: The preserved web bank passed 41 tests. Native JSON structural validation found 200 tasks, 40 per level. All 40 Level 1 tasks opened in Godot, accepted their curated answer, and supplied working formula tiles or a valid option where applicable. Career, Practice, learning and five-task round smokes passed with the expanded bank. Formula and eight-topic Practice panels were captured and reviewed at 1440×900. Godot editor import/parse passed; the refreshed macOS release export completed an isolated five-task packaged-app QA round successfully.
 
 ## Known issues
 
@@ -54,4 +54,4 @@ Add chemistry-specific station interactions and visual feedback, then complete v
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round passes, while a visual playtest in the exported app remains open. Windows export is pending.
-- Level 1 mastery and weak-topic scheduling now work. Level progression/unlocks, broader mastery coverage and the remaining 190 curated tasks await later phases.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; only 40 Level 1 tasks enter gameplay. Level progression, later-level mechanics and independent scientific review of the broader bank remain pending.

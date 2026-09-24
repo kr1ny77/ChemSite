@@ -10,7 +10,7 @@ static func order_tasks(tasks: Array, mastery: Dictionary) -> Array:
 			var task: Dictionary = remaining[index]
 			var topic_record: Dictionary = mastery.get(str(task.get("topic", "")), {})
 			var topic_mastery := clampf(float(topic_record.get("mastery", 0.5)), 0.0, 1.0)
-			var score := (0.5 - topic_mastery) * 4.0 - float(index) * 0.025
+			var score := (0.5 - topic_mastery) * 4.0 - float(index) * 0.005
 			if not ordered.is_empty():
 				var previous: Dictionary = ordered.back()
 				if previous.get("station", "") != task.get("station", ""):
@@ -19,6 +19,14 @@ static func order_tasks(tasks: Array, mastery: Dictionary) -> Array:
 					score += 1.1
 				else:
 					score -= 1.5
+				for recent_index in range(maxi(0, ordered.size() - 3), ordered.size()):
+					var recent: Dictionary = ordered[recent_index]
+					if recent.get("topic", "") == task.get("topic", ""):
+						score -= 1.2
+					if recent.get("interactionType", "") == task.get("interactionType", ""):
+						score -= 0.8
+					if recent.get("station", "") == task.get("station", ""):
+						score -= 0.7
 			if score > best_score:
 				best_score = score
 				best_index = index

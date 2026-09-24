@@ -1,0 +1,6217 @@
+[
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество BaSO₄.",
+    "correctAnswer": "сульфат бария",
+    "acceptedAnswers": [
+      "barium sulfate"
+    ],
+    "options": [
+      "сульфат бария",
+      "сульфит бария",
+      "карбонат бария",
+      "сульфид бария"
+    ],
+    "explanation": "BaSO₄ состоит из катиона Ba²⁺ и сульфат-иона SO₄²⁻.",
+    "rule": "SO₄²⁻ называется сульфатом.",
+    "example": "Na₂SO₄ — сульфат натрия.",
+    "hint": "Определи название иона SO₄²⁻.",
+    "tags": [
+      "salt",
+      "sulfate",
+      "barium"
+    ],
+    "parameters": {
+      "compound": "BaSO4"
+    },
+    "id": "L1-001",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Сульфиты и сульфаты",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество BaSO₃.",
+    "correctAnswer": "сульфит бария",
+    "options": [
+      "сульфит бария",
+      "сульфат бария",
+      "сульфид бария",
+      "карбонат бария"
+    ],
+    "explanation": "BaSO₃ содержит сульфит-ион SO₃²⁻.",
+    "rule": "SO₃²⁻ — сульфит, SO₄²⁻ — сульфат.",
+    "example": "Na₂SO₃ — сульфит натрия.",
+    "hint": "У сульфит-иона три атома кислорода.",
+    "tags": [
+      "salt",
+      "sulfite",
+      "barium"
+    ],
+    "parameters": {
+      "compound": "BaSO3"
+    },
+    "id": "L1-002",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Кислые соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество NaHCO₃.",
+    "correctAnswer": "гидрокарбонат натрия",
+    "acceptedAnswers": [
+      "бикарбонат натрия",
+      "sodium bicarbonate"
+    ],
+    "options": [
+      "гидрокарбонат натрия",
+      "карбонат натрия",
+      "гидроксид натрия",
+      "нитрат натрия"
+    ],
+    "explanation": "NaHCO₃ содержит катион Na⁺ и гидрокарбонат-ион HCO₃⁻.",
+    "rule": "HCO₃⁻ называется гидрокарбонатом.",
+    "example": "Ca(HCO₃)₂ — гидрокарбонат кальция.",
+    "hint": "В анионе HCO₃⁻ сохраняется атом водорода.",
+    "tags": [
+      "salt",
+      "hydrogen-carbonate",
+      "sodium"
+    ],
+    "parameters": {
+      "compound": "NaHCO3"
+    },
+    "id": "L1-003",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество CaCO₃.",
+    "correctAnswer": "карбонат кальция",
+    "options": [
+      "карбонат кальция",
+      "гидрокарбонат кальция",
+      "оксид кальция",
+      "сульфат кальция"
+    ],
+    "explanation": "CaCO₃ состоит из Ca²⁺ и карбонат-иона CO₃²⁻.",
+    "rule": "CO₃²⁻ называется карбонатом.",
+    "example": "CaCO₃ — основной компонент известняка.",
+    "hint": "Распознай карбонат-ион CO₃²⁻.",
+    "tags": [
+      "salt",
+      "carbonate",
+      "calcium",
+      "construction"
+    ],
+    "constructionContext": "Карбонат кальция входит в состав известняка.",
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L1-004",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Соли переходных металлов",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество FeCl₃.",
+    "correctAnswer": "хлорид железа(III)",
+    "acceptedAnswers": [
+      "хлорид железа 3",
+      "хлорид железа (iii)"
+    ],
+    "options": [
+      "хлорид железа(III)",
+      "хлорид железа(II)",
+      "хлорат железа(III)",
+      "хлорид алюминия"
+    ],
+    "explanation": "Три иона Cl⁻ требуют катион Fe³⁺, поэтому железо имеет степень окисления +3.",
+    "rule": "Для металлов с переменной степенью окисления её указывают римской цифрой.",
+    "example": "FeCl₂ — хлорид железа(II).",
+    "hint": "Суммарный заряд трёх Cl⁻ равен −3.",
+    "tags": [
+      "salt",
+      "chloride",
+      "iron",
+      "oxidation-state"
+    ],
+    "parameters": {
+      "compound": "FeCl3"
+    },
+    "id": "L1-005",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Номенклатура",
+    "subtopic": "Соли переходных металлов",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "substance-card",
+    "prompt": "Назови вещество CuSO₄.",
+    "correctAnswer": "сульфат меди(II)",
+    "acceptedAnswers": [
+      "сульфат меди 2",
+      "сульфат меди (ii)"
+    ],
+    "options": [
+      "сульфат меди(II)",
+      "сульфит меди(II)",
+      "сульфат меди(I)",
+      "карбонат меди(II)"
+    ],
+    "explanation": "Сульфат-ион имеет заряд −2, поэтому катион меди здесь Cu²⁺.",
+    "rule": "Степень окисления меди указывают в названии соли.",
+    "example": "CuCl₂ — хлорид меди(II).",
+    "hint": "Уравновесь заряд SO₄²⁻ зарядом меди.",
+    "tags": [
+      "salt",
+      "sulfate",
+      "copper"
+    ],
+    "parameters": {
+      "compound": "CuSO4"
+    },
+    "id": "L1-006",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Баланс зарядов",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу карбоната кальция из Ca²⁺ и CO₃²⁻.",
+    "correctAnswer": "CaCO3",
+    "explanation": "Заряды +2 и −2 компенсируются в отношении 1:1.",
+    "rule": "Суммарный заряд нейтральной формульной единицы равен нулю.",
+    "example": "Mg²⁺ + CO₃²⁻ → MgCO₃.",
+    "hint": "Оба иона имеют одинаковый по модулю заряд.",
+    "tags": [
+      "formula",
+      "carbonate",
+      "calcium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "CO₃"
+      ],
+      "compound": "CaCO3"
+    },
+    "id": "L1-007",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Баланс зарядов",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу сульфата алюминия из Al³⁺ и SO₄²⁻.",
+    "correctAnswer": "Al2(SO4)3",
+    "explanation": "Наименьшее общее кратное зарядов 3 и 2 равно 6: нужны 2 Al³⁺ и 3 SO₄²⁻.",
+    "rule": "Многоатомный ион берут в скобки, когда его индекс больше единицы.",
+    "example": "Al₂(SO₄)₃.",
+    "hint": "Уравняй заряды до +6 и −6.",
+    "tags": [
+      "formula",
+      "sulfate",
+      "aluminium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "₂",
+        "(",
+        "SO₄",
+        ")",
+        "₃"
+      ],
+      "compound": "Al2(SO4)3"
+    },
+    "id": "L1-008",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Соли переходных металлов",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Напиши формулу нитрата железа(III).",
+    "correctAnswer": "Fe(NO3)3",
+    "explanation": "Fe³⁺ требует три нитрат-иона NO₃⁻.",
+    "rule": "Три одинаковых многоатомных иона записывают со скобками.",
+    "example": "Al(NO₃)₃ — нитрат алюминия.",
+    "hint": "Сочетай Fe³⁺ с тремя NO₃⁻.",
+    "tags": [
+      "formula",
+      "nitrate",
+      "iron"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "(",
+        "NO₃",
+        ")",
+        "₃"
+      ],
+      "compound": "Fe(NO3)3"
+    },
+    "id": "L1-009",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Кислые соли",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Напиши формулу гидрокарбоната бария.",
+    "correctAnswer": "Ba(HCO3)2",
+    "explanation": "Ba²⁺ уравновешивают два гидрокарбонат-иона HCO₃⁻.",
+    "rule": "При нескольких многоатомных ионах используют скобки.",
+    "example": "Ca(HCO₃)₂.",
+    "hint": "К одному Ba²⁺ нужны два однозарядных аниона.",
+    "tags": [
+      "formula",
+      "hydrogen-carbonate",
+      "barium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Ba",
+        "(",
+        "HCO₃",
+        ")",
+        "₂"
+      ],
+      "compound": "Ba(HCO3)2"
+    },
+    "id": "L1-010",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Исправление формул",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "На доске написано CaCl. Исправь формулу хлорида кальция.",
+    "correctAnswer": "CaCl2",
+    "explanation": "Катиону Ca²⁺ нужны два аниона Cl⁻.",
+    "rule": "Индексы отражают наименьшее целое соотношение ионов.",
+    "example": "MgCl₂.",
+    "hint": "Компенсируй заряд +2 двумя хлорид-ионами.",
+    "tags": [
+      "formula",
+      "chloride",
+      "calcium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "Cl",
+        "₂"
+      ],
+      "compound": "CaCl2"
+    },
+    "id": "L1-011",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Исправление формул",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "На доске написано AlSO₄. Исправь формулу сульфата алюминия.",
+    "correctAnswer": "Al2(SO4)3",
+    "explanation": "Два Al³⁺ и три SO₄²⁻ дают нейтральную формульную единицу.",
+    "rule": "Сумма зарядов катионов и анионов должна равняться нулю.",
+    "example": "Al₂(SO₄)₃.",
+    "hint": "Наименьшее общее кратное 3 и 2 равно 6.",
+    "tags": [
+      "formula",
+      "sulfate",
+      "aluminium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "₂",
+        "(",
+        "SO₄",
+        ")",
+        "₃"
+      ],
+      "compound": "Al2(SO4)3"
+    },
+    "id": "L1-012",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические формулы",
+    "subtopic": "Исправление формул",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "На доске написано MgOH₂. Исправь формулу гидроксида магния.",
+    "correctAnswer": "Mg(OH)2",
+    "explanation": "Две группы OH⁻ записывают в скобках: Mg(OH)₂.",
+    "rule": "Скобки сохраняют целостность многоатомного иона.",
+    "example": "Ca(OH)₂.",
+    "hint": "Индекс 2 относится ко всей группе OH.",
+    "tags": [
+      "formula",
+      "hydroxide",
+      "magnesium"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "(",
+        "OH",
+        ")",
+        "₂"
+      ],
+      "compound": "Mg(OH)2"
+    },
+    "id": "L1-013",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Кислоты",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится H₂SO₄?",
+    "correctAnswer": "кислота",
+    "options": [
+      "кислота",
+      "основание",
+      "соль",
+      "оксид"
+    ],
+    "explanation": "H₂SO₄ — серная кислота.",
+    "rule": "Кислоты в растворе образуют катионы H⁺ и анионы кислотного остатка.",
+    "example": "HCl — соляная кислота.",
+    "hint": "Формула начинается с атомов водорода.",
+    "tags": [
+      "classification",
+      "acid"
+    ],
+    "parameters": {
+      "compound": "H2SO4"
+    },
+    "id": "L1-014",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Основания",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится NaOH?",
+    "correctAnswer": "основание",
+    "acceptedAnswers": [
+      "щелочь",
+      "основание, щелочь"
+    ],
+    "options": [
+      "кислота",
+      "основание",
+      "соль",
+      "оксид"
+    ],
+    "explanation": "NaOH — растворимое основание, то есть щёлочь.",
+    "rule": "Основания содержат катион металла и гидроксид-ионы.",
+    "example": "KOH — щёлочь.",
+    "hint": "Найди группу OH.",
+    "tags": [
+      "classification",
+      "base",
+      "alkali"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L1-015",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Основания",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится Cu(OH)₂?",
+    "correctAnswer": "основание",
+    "acceptedAnswers": [
+      "малорастворимый гидроксид",
+      "основание, малорастворимый гидроксид"
+    ],
+    "options": [
+      "кислота",
+      "основание",
+      "соль",
+      "оксид"
+    ],
+    "explanation": "Cu(OH)₂ — малорастворимое основание.",
+    "rule": "Гидроксиды металлов обычно относят к основаниям.",
+    "example": "Fe(OH)₃ — малорастворимый гидроксид.",
+    "hint": "Формула содержит металл и группы OH.",
+    "tags": [
+      "classification",
+      "base",
+      "copper"
+    ],
+    "parameters": {
+      "compound": "Cu(OH)2"
+    },
+    "id": "L1-016",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Амфотерные гидроксиды",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится Al(OH)₃?",
+    "correctAnswer": "амфотерный гидроксид",
+    "options": [
+      "щелочь",
+      "амфотерный гидроксид",
+      "кислота",
+      "соль"
+    ],
+    "explanation": "Al(OH)₃ проявляет кислотные и основные свойства.",
+    "rule": "Амфотерные гидроксиды реагируют и с кислотами, и со щелочами.",
+    "example": "Zn(OH)₂ также амфотерен.",
+    "hint": "Гидроксид алюминия проявляет двойственный характер.",
+    "tags": [
+      "classification",
+      "amphoteric",
+      "aluminium"
+    ],
+    "parameters": {
+      "compound": "Al(OH)3"
+    },
+    "id": "L1-017",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Оксиды",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится CaO?",
+    "correctAnswer": "основный оксид",
+    "options": [
+      "основный оксид",
+      "кислотный оксид",
+      "амфотерный оксид",
+      "несолеобразующий оксид"
+    ],
+    "explanation": "CaO — основный оксид активного металла.",
+    "rule": "Основные оксиды реагируют с кислотами с образованием соли и воды.",
+    "example": "CaO + 2HCl → CaCl₂ + H₂O.",
+    "hint": "Кальций — активный металл.",
+    "tags": [
+      "classification",
+      "oxide",
+      "calcium"
+    ],
+    "constructionContext": "CaO используется в известковом цикле.",
+    "parameters": {
+      "compound": "CaO"
+    },
+    "id": "L1-018",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Оксиды",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится SO₃?",
+    "correctAnswer": "кислотный оксид",
+    "options": [
+      "основный оксид",
+      "кислотный оксид",
+      "амфотерный оксид",
+      "несолеобразующий оксид"
+    ],
+    "explanation": "SO₃ — кислотный оксид; с водой он образует H₂SO₄.",
+    "rule": "Многие оксиды неметаллов являются кислотными.",
+    "example": "SO₃ + H₂O → H₂SO₄.",
+    "hint": "Сера в высокой степени окисления образует кислотный оксид.",
+    "tags": [
+      "classification",
+      "oxide",
+      "sulfur"
+    ],
+    "parameters": {
+      "compound": "SO3"
+    },
+    "id": "L1-019",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Оксиды",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится Al₂O₃?",
+    "correctAnswer": "амфотерный оксид",
+    "options": [
+      "основный оксид",
+      "кислотный оксид",
+      "амфотерный оксид",
+      "несолеобразующий оксид"
+    ],
+    "explanation": "Al₂O₃ реагирует и с кислотами, и со щелочами.",
+    "rule": "Амфотерные оксиды проявляют кислотные и основные свойства.",
+    "example": "ZnO — амфотерный оксид.",
+    "hint": "Оксид алюминия обладает двойственными свойствами.",
+    "tags": [
+      "classification",
+      "oxide",
+      "amphoteric",
+      "aluminium"
+    ],
+    "parameters": {
+      "compound": "Al2O3"
+    },
+    "id": "L1-020",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Оксиды",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "К какому классу относится CO?",
+    "correctAnswer": "несолеобразующий оксид",
+    "options": [
+      "основный оксид",
+      "кислотный оксид",
+      "амфотерный оксид",
+      "несолеобразующий оксид"
+    ],
+    "explanation": "CO при обычной классификации относят к несолеобразующим оксидам.",
+    "rule": "Несолеобразующие оксиды не образуют солей в типичных кислотно-основных реакциях.",
+    "example": "NO также несолеобразующий оксид.",
+    "hint": "CO не соответствует кислотному ангидриду.",
+    "tags": [
+      "classification",
+      "oxide",
+      "carbon"
+    ],
+    "parameters": {
+      "compound": "CO"
+    },
+    "id": "L1-021",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионы",
+    "subtopic": "Кислотные остатки",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери сульфат-ион.",
+    "correctAnswer": "SO4^2-",
+    "options": [
+      "SO₄²⁻",
+      "SO₃²⁻",
+      "S²⁻",
+      "HSO₄⁻"
+    ],
+    "explanation": "Сульфат-ион имеет формулу SO₄²⁻.",
+    "rule": "Сульфат содержит четыре атома кислорода.",
+    "example": "Ba²⁺ + SO₄²⁻ → BaSO₄.",
+    "hint": "Ищи четыре атома кислорода и заряд −2.",
+    "tags": [
+      "ion",
+      "sulfate"
+    ],
+    "id": "L1-022",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионы",
+    "subtopic": "Кислотные остатки",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери сульфит-ион.",
+    "correctAnswer": "SO3^2-",
+    "options": [
+      "SO₃²⁻",
+      "SO₄²⁻",
+      "S²⁻",
+      "HSO₃⁻"
+    ],
+    "explanation": "Сульфит-ион имеет формулу SO₃²⁻.",
+    "rule": "Сульфит содержит на один атом кислорода меньше, чем сульфат.",
+    "example": "Na₂SO₃ — сульфит натрия.",
+    "hint": "Ищи три атома кислорода и заряд −2.",
+    "tags": [
+      "ion",
+      "sulfite"
+    ],
+    "id": "L1-023",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионы",
+    "subtopic": "Кислотные остатки",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери нитрат-ион.",
+    "correctAnswer": "NO3^-",
+    "options": [
+      "NO₃⁻",
+      "NO₂⁻",
+      "NH₄⁺",
+      "N³⁻"
+    ],
+    "explanation": "Нитрат-ион имеет формулу NO₃⁻.",
+    "rule": "Нитрат является однозарядным анионом.",
+    "example": "NaNO₃ — нитрат натрия.",
+    "hint": "Ищи три атома кислорода и заряд −1.",
+    "tags": [
+      "ion",
+      "nitrate"
+    ],
+    "id": "L1-024",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионы",
+    "subtopic": "Кислотные остатки",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери фосфат-ион.",
+    "correctAnswer": "PO4^3-",
+    "options": [
+      "PO₄³⁻",
+      "SO₄²⁻",
+      "CO₃²⁻",
+      "HPO₄²⁻"
+    ],
+    "explanation": "Фосфат-ион имеет формулу PO₄³⁻.",
+    "rule": "Фосфат несёт заряд −3.",
+    "example": "Ca₃(PO₄)₂ — фосфат кальция.",
+    "hint": "Ищи фосфор, четыре атома кислорода и заряд −3.",
+    "tags": [
+      "ion",
+      "phosphate"
+    ],
+    "id": "L1-025",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионы",
+    "subtopic": "Кислые остатки",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери гидрокарбонат-ион.",
+    "correctAnswer": "HCO3^-",
+    "options": [
+      "HCO₃⁻",
+      "CO₃²⁻",
+      "OH⁻",
+      "HSO₄⁻"
+    ],
+    "explanation": "Гидрокарбонат-ион имеет формулу HCO₃⁻.",
+    "rule": "При присоединении H⁺ к CO₃²⁻ заряд уменьшается по модулю до −1.",
+    "example": "NaHCO₃ — гидрокарбонат натрия.",
+    "hint": "В составе есть H, C и три O.",
+    "tags": [
+      "ion",
+      "hydrogen-carbonate"
+    ],
+    "id": "L1-026",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Степени окисления",
+    "subtopic": "Кислоты",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления серы в H₂SO₄.",
+    "correctAnswer": "+6",
+    "acceptedAnswers": [
+      "6+",
+      "VI"
+    ],
+    "explanation": "2·(+1) + x + 4·(−2) = 0, поэтому x = +6.",
+    "rule": "Сумма степеней окисления атомов в нейтральной молекуле равна нулю.",
+    "example": "В SO₃ сера также имеет +6.",
+    "hint": "Используй H = +1 и O = −2.",
+    "tags": [
+      "oxidation-state",
+      "sulfur"
+    ],
+    "parameters": {
+      "compound": "H2SO4"
+    },
+    "id": "L1-027",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Степени окисления",
+    "subtopic": "Сложные соли",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления хрома в K₂Cr₂O₇.",
+    "correctAnswer": "+6",
+    "acceptedAnswers": [
+      "6+",
+      "VI"
+    ],
+    "explanation": "2·(+1) + 2x + 7·(−2) = 0, поэтому x = +6.",
+    "rule": "Сумма степеней окисления в нейтральном соединении равна нулю.",
+    "example": "В CrO₃ хром имеет +6.",
+    "hint": "K = +1, O = −2; учти два атома Cr.",
+    "tags": [
+      "oxidation-state",
+      "chromium"
+    ],
+    "parameters": {
+      "compound": "K2Cr2O7"
+    },
+    "id": "L1-028",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Степени окисления",
+    "subtopic": "Гидриды неметаллов",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления азота в NH₃.",
+    "correctAnswer": "-3",
+    "acceptedAnswers": [
+      "3-",
+      "-III"
+    ],
+    "explanation": "x + 3·(+1) = 0, поэтому азот имеет −3.",
+    "rule": "В соединениях с неметаллами водород обычно имеет +1.",
+    "example": "В NH₄⁺ азот также имеет −3.",
+    "hint": "Три H дают суммарно +3.",
+    "tags": [
+      "oxidation-state",
+      "nitrogen"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L1-029",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Степени окисления",
+    "subtopic": "Сложные соли",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления марганца в KMnO₄.",
+    "correctAnswer": "+7",
+    "acceptedAnswers": [
+      "7+",
+      "VII"
+    ],
+    "explanation": "(+1) + x + 4·(−2) = 0, поэтому x = +7.",
+    "rule": "Калий имеет +1, кислород обычно −2.",
+    "example": "В MnO₂ марганец имеет +4.",
+    "hint": "Суммарный вклад четырёх O равен −8.",
+    "tags": [
+      "oxidation-state",
+      "manganese"
+    ],
+    "parameters": {
+      "compound": "KMnO4"
+    },
+    "id": "L1-030",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Степени окисления",
+    "subtopic": "Оксиды",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления железа в Fe₂O₃.",
+    "correctAnswer": "+3",
+    "acceptedAnswers": [
+      "3+",
+      "III"
+    ],
+    "explanation": "2x + 3·(−2) = 0, поэтому x = +3.",
+    "rule": "Кислород в обычных оксидах имеет −2.",
+    "example": "В FeO железо имеет +2.",
+    "hint": "Три O дают суммарно −6; раздели +6 между двумя Fe.",
+    "tags": [
+      "oxidation-state",
+      "iron",
+      "oxide"
+    ],
+    "parameters": {
+      "compound": "Fe2O3"
+    },
+    "id": "L1-031",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Периодическая система",
+    "subtopic": "Валентные электроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "periodic-table",
+    "prompt": "Сколько валентных электронов у атома кислорода?",
+    "correctAnswer": "6",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "explanation": "Кислород находится в 16-й группе и имеет 6 валентных электронов.",
+    "rule": "Для элементов главных подгрупп номер группы связан с числом валентных электронов.",
+    "example": "Сера также имеет 6 валентных электронов.",
+    "hint": "Кислород находится в 16-й группе.",
+    "tags": [
+      "periodic-table",
+      "oxygen",
+      "valence-electrons"
+    ],
+    "id": "L1-032",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Периодическая система",
+    "subtopic": "Валентные электроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "periodic-table",
+    "prompt": "Сколько валентных электронов у атома натрия?",
+    "correctAnswer": "1",
+    "options": [
+      "1",
+      "2",
+      "7",
+      "8"
+    ],
+    "explanation": "Натрий находится в 1-й группе и имеет один электрон на внешнем уровне.",
+    "rule": "Щелочные металлы имеют один валентный электрон.",
+    "example": "Калий также имеет один валентный электрон.",
+    "hint": "Натрий — элемент 1-й группы.",
+    "tags": [
+      "periodic-table",
+      "sodium",
+      "valence-electrons"
+    ],
+    "id": "L1-033",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строение атома",
+    "subtopic": "Электронная конфигурация",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "periodic-table",
+    "prompt": "Какому элементу соответствует конфигурация 1s² 2s² 2p⁶ 3s¹?",
+    "correctAnswer": "натрий",
+    "acceptedAnswers": [
+      "Na"
+    ],
+    "options": [
+      "натрий",
+      "магний",
+      "неон",
+      "алюминий"
+    ],
+    "explanation": "В конфигурации 11 электронов, значит порядковый номер элемента равен 11 — это натрий.",
+    "rule": "В нейтральном атоме число электронов равно порядковому номеру.",
+    "example": "1s² 2s² 2p⁶ — неон.",
+    "hint": "Сложи показатели степеней во всех орбиталях.",
+    "tags": [
+      "atomic-structure",
+      "electron-configuration",
+      "sodium"
+    ],
+    "id": "L1-034",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строение атома",
+    "subtopic": "Электронная конфигурация",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "periodic-table",
+    "prompt": "Какому элементу соответствует внешний уровень 3s² 3p⁵?",
+    "correctAnswer": "хлор",
+    "acceptedAnswers": [
+      "Cl"
+    ],
+    "options": [
+      "хлор",
+      "сера",
+      "аргон",
+      "фосфор"
+    ],
+    "explanation": "На третьем внешнем уровне 7 электронов; элемент 3-го периода и 17-й группы — хлор.",
+    "rule": "Конфигурация ns²np⁵ характерна для галогенов.",
+    "example": "2s²2p⁵ соответствует фтору.",
+    "hint": "Семь валентных электронов указывает на галоген.",
+    "tags": [
+      "atomic-structure",
+      "electron-configuration",
+      "chlorine"
+    ],
+    "id": "L1-035",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строение атома",
+    "subtopic": "Квантовые числа",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "multiple-choice",
+    "prompt": "Что характеризует главное квантовое число n?",
+    "correctAnswer": "главный энергетический уровень электронной оболочки",
+    "options": [
+      "главный энергетический уровень электронной оболочки",
+      "ориентацию орбитали",
+      "направление спина",
+      "только заряд ядра"
+    ],
+    "explanation": "Главное квантовое число n определяет энергетический уровень и связано с размером электронной оболочки.",
+    "rule": "n принимает положительные целые значения: 1, 2, 3 и далее.",
+    "example": "Для орбиталей 3s и 3p главное квантовое число равно 3.",
+    "hint": "Число n стоит перед буквенным обозначением орбитали.",
+    "tags": [
+      "atomic-structure",
+      "quantum-number"
+    ],
+    "id": "L1-036",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая связь",
+    "subtopic": "Ионная связь",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "multiple-choice",
+    "prompt": "Какой тип химической связи преобладает в NaCl?",
+    "correctAnswer": "ионная",
+    "options": [
+      "ионная",
+      "ковалентная неполярная",
+      "металлическая",
+      "водородная"
+    ],
+    "explanation": "Na передаёт электрон Cl, образуя притягивающиеся ионы Na⁺ и Cl⁻.",
+    "rule": "Ионная связь возникает благодаря электростатическому притяжению противоположно заряженных ионов.",
+    "example": "CaO — ионное соединение.",
+    "hint": "Это соединение активного металла с неметаллом.",
+    "tags": [
+      "bonding",
+      "ionic",
+      "sodium-chloride"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L1-037",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая связь",
+    "subtopic": "Ковалентная связь",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "multiple-choice",
+    "prompt": "Какая связь существует между атомами в молекуле H₂?",
+    "correctAnswer": "ковалентная неполярная",
+    "options": [
+      "ковалентная неполярная",
+      "ковалентная полярная",
+      "ионная",
+      "металлическая"
+    ],
+    "explanation": "Одинаковые атомы водорода делят электронную пару поровну.",
+    "rule": "Связь между одинаковыми атомами неметалла является ковалентной неполярной.",
+    "example": "Связь в O₂ также ковалентная неполярная.",
+    "hint": "Электроотрицательности двух атомов одинаковы.",
+    "tags": [
+      "bonding",
+      "covalent",
+      "hydrogen"
+    ],
+    "parameters": {
+      "compound": "H2"
+    },
+    "id": "L1-038",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая связь",
+    "subtopic": "Металлическая связь",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "multiple-choice",
+    "prompt": "Какой тип связи характерен для металлического железа?",
+    "correctAnswer": "металлическая",
+    "options": [
+      "металлическая",
+      "ионная",
+      "ковалентная неполярная",
+      "водородная"
+    ],
+    "explanation": "В металлическом железе катионные остовы удерживаются общими делокализованными электронами.",
+    "rule": "Металлическая связь характерна для простых веществ-металлов и сплавов.",
+    "example": "В металлической меди связь также металлическая.",
+    "hint": "Железо здесь рассматривается как простое вещество-металл.",
+    "tags": [
+      "bonding",
+      "metallic",
+      "iron"
+    ],
+    "parameters": {
+      "compound": "Fe"
+    },
+    "id": "L1-039",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Классы веществ",
+    "subtopic": "Сортировка",
+    "difficulty": 2,
+    "station": "substance-storage",
+    "interactionType": "sorting",
+    "prompt": "Выбери полностью правильную сортировку HCl, NaOH, CO₂ и K₂SO₄.",
+    "correctAnswer": "HCl — кислота; NaOH — основание; CO₂ — кислотный оксид; K₂SO₄ — соль",
+    "options": [
+      "HCl — кислота; NaOH — основание; CO₂ — кислотный оксид; K₂SO₄ — соль",
+      "HCl — соль; NaOH — кислота; CO₂ — основной оксид; K₂SO₄ — основание",
+      "HCl — кислота; NaOH — соль; CO₂ — несолеобразующий оксид; K₂SO₄ — кислота",
+      "HCl — основание; NaOH — кислота; CO₂ — амфотерный оксид; K₂SO₄ — соль"
+    ],
+    "explanation": "HCl — кислота, NaOH — основание, CO₂ — кислотный оксид, K₂SO₄ — соль.",
+    "rule": "Класс вещества определяют по составу и характерным химическим свойствам.",
+    "example": "H₂SO₄ — кислота, CaO — основный оксид.",
+    "hint": "Начни с легко узнаваемых HCl и NaOH.",
+    "tags": [
+      "classification",
+      "sorting",
+      "acid",
+      "base",
+      "oxide",
+      "salt"
+    ],
+    "id": "L1-040",
+    "level": 1,
+    "points": 100,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Соединение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи реакцию: CaO + H₂O → ?",
+    "correctAnswer": "CaO + H2O -> Ca(OH)2",
+    "explanation": "Оксид кальция соединяется с водой с образованием гидроксида кальция.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "CaO + H₂O → Ca(OH)₂.",
+    "hint": "Продукт — гашёная известь.",
+    "tags": [
+      "reaction",
+      "lime",
+      "construction"
+    ],
+    "parameters": {
+      "compound": "CaO"
+    },
+    "constructionContext": "Реакция лежит в основе гашения извести.",
+    "id": "L2-041",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Соединение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи реакцию: SO₃ + H₂O → ?",
+    "correctAnswer": "SO3 + H2O -> H2SO4",
+    "explanation": "Кислотный оксид SO₃ с водой образует серную кислоту.",
+    "rule": "Кислотный оксид с водой может образовывать соответствующую кислоту.",
+    "example": "SO₃ + H₂O → H₂SO₄.",
+    "hint": "Продукт содержит два H, одну S и четыре O.",
+    "tags": [
+      "reaction",
+      "acidic-oxide"
+    ],
+    "parameters": {
+      "compound": "SO3"
+    },
+    "id": "L2-042",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Нейтрализация",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи реакцию: NaOH + HCl → ?",
+    "correctAnswer": "NaOH + HCl -> NaCl + H2O",
+    "explanation": "Сильная кислота и щёлочь образуют соль и воду.",
+    "rule": "Нейтрализация: кислота + основание → соль + вода.",
+    "example": "KOH + HNO₃ → KNO₃ + H₂O.",
+    "hint": "Собери соль из Na⁺ и Cl⁻.",
+    "tags": [
+      "reaction",
+      "neutralization"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L2-043",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Разложение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи разложение: CaCO₃ → ?",
+    "correctAnswer": "CaCO3 -> CaO + CO2",
+    "explanation": "При нагревании карбонат кальция разлагается на оксид кальция и углекислый газ.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "CaCO₃ → CaO + CO₂.",
+    "hint": "Это реакция обжига известняка.",
+    "tags": [
+      "reaction",
+      "decomposition",
+      "construction"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "constructionContext": "Обжиг известняка даёт негашёную известь.",
+    "id": "L2-044",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Металл и кислота",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи реакцию: Zn + 2HCl → ?",
+    "correctAnswer": "Zn + 2HCl -> ZnCl2 + H2",
+    "explanation": "Цинк вытесняет водород из соляной кислоты, образуя ZnCl₂ и H₂.",
+    "rule": "Металл выше водорода в ряду активности реагирует с разбавленной неокисляющей кислотой.",
+    "example": "Mg + 2HCl → MgCl₂ + H₂.",
+    "hint": "Продукты — хлорид цинка и водород.",
+    "tags": [
+      "reaction",
+      "activity-series",
+      "gas"
+    ],
+    "parameters": {
+      "compound": "Zn"
+    },
+    "id": "L2-045",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Уравнивание реакций",
+    "subtopic": "Окисление металлов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Расставь коэффициенты: Al + O₂ → Al₂O₃.",
+    "correctAnswer": "4Al + 3O2 -> 2Al2O3",
+    "explanation": "Коэффициенты 4:3:2 дают по 4 Al и 6 O с каждой стороны.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "4Al + 3O₂ → 2Al₂O₃.",
+    "hint": "Подбери наименьшие целые коэффициенты и пересчитай атомы с обеих сторон.",
+    "tags": [
+      "balancing",
+      "aluminium",
+      "oxygen"
+    ],
+    "parameters": {
+      "compound": "Al2O3"
+    },
+    "id": "L2-046",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Уравнивание реакций",
+    "subtopic": "Окисление металлов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Расставь коэффициенты: Fe + O₂ → Fe₂O₃.",
+    "correctAnswer": "4Fe + 3O2 -> 2Fe2O3",
+    "explanation": "Коэффициенты 4:3:2 сохраняют четыре атома Fe и шесть атомов O.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "4Fe + 3O₂ → 2Fe₂O₃.",
+    "hint": "Подбери наименьшие целые коэффициенты и пересчитай атомы с обеих сторон.",
+    "tags": [
+      "balancing",
+      "iron",
+      "oxygen"
+    ],
+    "parameters": {
+      "compound": "Fe2O3"
+    },
+    "id": "L2-047",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Уравнивание реакций",
+    "subtopic": "Реакции соединения",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Расставь коэффициенты: H₂ + O₂ → H₂O.",
+    "correctAnswer": "2H2 + O2 -> 2H2O",
+    "explanation": "Две молекулы H₂ и одна O₂ образуют две молекулы H₂O.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "2H₂ + O₂ → 2H₂O.",
+    "hint": "Сначала уравняй кислород коэффициентом 2 перед водой.",
+    "tags": [
+      "balancing",
+      "hydrogen",
+      "water"
+    ],
+    "parameters": {
+      "compound": "H2O"
+    },
+    "id": "L2-048",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Уравнивание реакций",
+    "subtopic": "Металл и вода",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Расставь коэффициенты: Na + H₂O → NaOH + H₂.",
+    "correctAnswer": "2Na + 2H2O -> 2NaOH + H2",
+    "explanation": "Коэффициенты 2:2:2:1 сохраняют Na, H и O.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "2Na + 2H₂O → 2NaOH + H₂.",
+    "hint": "Водород выделяется двухатомными молекулами.",
+    "tags": [
+      "balancing",
+      "sodium",
+      "water"
+    ],
+    "parameters": {
+      "compound": "Na"
+    },
+    "id": "L2-049",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Уравнивание реакций",
+    "subtopic": "Окисление неметаллов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Расставь коэффициенты: P + O₂ → P₂O₅.",
+    "correctAnswer": "4P + 5O2 -> 2P2O5",
+    "explanation": "Коэффициенты 4:5:2 дают четыре P и десять O с каждой стороны.",
+    "rule": "Число атомов каждого элемента сохраняется в химической реакции.",
+    "example": "4P + 5O₂ → 2P₂O₅.",
+    "hint": "Сделай число атомов кислорода равным 10.",
+    "tags": [
+      "balancing",
+      "phosphorus",
+      "oxygen"
+    ],
+    "parameters": {
+      "compound": "P2O5"
+    },
+    "id": "L2-050",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Реакции обмена",
+    "subtopic": "Осаждение",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "virtual-mixing",
+    "prompt": "Запиши реакцию смешивания BaCl₂ и Na₂SO₄.",
+    "correctAnswer": "BaCl2 + Na2SO4 -> BaSO4 + 2NaCl",
+    "explanation": "Ba²⁺ и SO₄²⁻ образуют малорастворимый белый BaSO₄.",
+    "rule": "Реакция обмена идёт до конца при образовании осадка.",
+    "example": "Ba²⁺ + SO₄²⁻ → BaSO₄↓.",
+    "hint": "Нерастворимый продукт содержит Ba²⁺ и SO₄²⁻.",
+    "tags": [
+      "mixing",
+      "precipitate",
+      "sulfate"
+    ],
+    "parameters": {
+      "compound": "BaSO4"
+    },
+    "id": "L2-051",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Реакции обмена",
+    "subtopic": "Осаждение",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "virtual-mixing",
+    "prompt": "Запиши реакцию смешивания AgNO₃ и NaCl.",
+    "correctAnswer": "AgNO3 + NaCl -> AgCl + NaNO3",
+    "explanation": "Ag⁺ и Cl⁻ образуют малорастворимый белый AgCl.",
+    "rule": "Нитраты растворимы, а AgCl выпадает в осадок.",
+    "example": "Ag⁺ + Cl⁻ → AgCl↓.",
+    "hint": "Осадок образуют ионы Ag⁺ и Cl⁻.",
+    "tags": [
+      "mixing",
+      "precipitate",
+      "chloride"
+    ],
+    "parameters": {
+      "compound": "AgCl"
+    },
+    "id": "L2-052",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Реакции обмена",
+    "subtopic": "Осаждение гидроксидов",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "virtual-mixing",
+    "prompt": "Закончи реакцию: CuSO₄ + 2NaOH → ?",
+    "correctAnswer": "CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4",
+    "explanation": "Cu²⁺ с OH⁻ образует малорастворимый Cu(OH)₂.",
+    "rule": "Большинство гидроксидов переходных металлов малорастворимы.",
+    "example": "Cu²⁺ + 2OH⁻ → Cu(OH)₂↓.",
+    "hint": "Осадок — гидроксид меди(II).",
+    "tags": [
+      "mixing",
+      "precipitate",
+      "hydroxide"
+    ],
+    "parameters": {
+      "compound": "Cu(OH)2"
+    },
+    "id": "L2-053",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Реакции обмена",
+    "subtopic": "Осаждение гидроксидов",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "virtual-mixing",
+    "prompt": "Закончи реакцию: FeCl₃ + 3NaOH → ?",
+    "correctAnswer": "FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl",
+    "explanation": "Fe³⁺ с тремя OH⁻ образует малорастворимый Fe(OH)₃.",
+    "rule": "Заряд Fe³⁺ требует три гидроксид-иона.",
+    "example": "Fe³⁺ + 3OH⁻ → Fe(OH)₃↓.",
+    "hint": "Осадок содержит Fe³⁺ и три OH⁻.",
+    "tags": [
+      "mixing",
+      "precipitate",
+      "iron"
+    ],
+    "parameters": {
+      "compound": "Fe(OH)3"
+    },
+    "id": "L2-054",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Реакции обмена",
+    "subtopic": "Выделение газа",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "virtual-mixing",
+    "prompt": "Закончи реакцию: Na₂CO₃ + 2HCl → ?",
+    "correctAnswer": "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+    "explanation": "Карбонат с сильной кислотой даёт соль, воду и CO₂.",
+    "rule": "Угольная кислота неустойчива и распадается на H₂O и CO₂.",
+    "example": "CO₃²⁻ + 2H⁺ → H₂O + CO₂↑.",
+    "hint": "Газообразный продукт — углекислый газ.",
+    "tags": [
+      "mixing",
+      "gas",
+      "carbonate"
+    ],
+    "parameters": {
+      "compound": "CO2"
+    },
+    "id": "L2-055",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Признаки реакций",
+    "subtopic": "Выделение газа",
+    "difficulty": 1,
+    "station": "mixing-station",
+    "interactionType": "gas-identification",
+    "prompt": "Какой газ выделяется при взаимодействии карбонатов с сильной кислотой?",
+    "correctAnswer": "CO2",
+    "acceptedAnswers": [
+      "углекислый газ",
+      "диоксид углерода"
+    ],
+    "options": [
+      "CO₂",
+      "H₂",
+      "O₂",
+      "NH₃"
+    ],
+    "explanation": "Ионы CO₃²⁻ с H⁺ образуют H₂CO₃, которая распадается на H₂O и CO₂.",
+    "rule": "Карбонат + кислота сопровождается выделением CO₂.",
+    "example": "CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂.",
+    "hint": "Этот газ образуется при распаде угольной кислоты.",
+    "tags": [
+      "gas",
+      "carbonate"
+    ],
+    "parameters": {
+      "compound": "CO2"
+    },
+    "id": "L2-056",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворимость",
+    "subtopic": "Получение осадка",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "precipitate-prediction",
+    "prompt": "Какая пара растворов образует осадок BaSO₄?",
+    "correctAnswer": "BaCl2 + Na2SO4",
+    "options": [
+      "BaCl₂ + Na₂SO₄",
+      "NaCl + KNO₃",
+      "HCl + NaOH",
+      "K₂SO₄ + NaNO₃"
+    ],
+    "explanation": "BaCl₂ даёт Ba²⁺, а Na₂SO₄ — SO₄²⁻; их сочетание образует BaSO₄.",
+    "rule": "Оба реагента должны быть растворимыми источниками нужных ионов.",
+    "example": "BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl.",
+    "hint": "Найди растворимые источники Ba²⁺ и SO₄²⁻.",
+    "tags": [
+      "solubility",
+      "precipitate",
+      "sulfate"
+    ],
+    "parameters": {
+      "compound": "BaSO4"
+    },
+    "id": "L2-057",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворимость",
+    "subtopic": "Получение осадка",
+    "difficulty": 2,
+    "station": "mixing-station",
+    "interactionType": "precipitate-prediction",
+    "prompt": "Какая пара растворов образует осадок AgCl?",
+    "correctAnswer": "AgNO3 + NaCl",
+    "options": [
+      "AgNO₃ + NaCl",
+      "NaNO₃ + KCl",
+      "Ag + HCl",
+      "NaCl + KOH"
+    ],
+    "explanation": "AgNO₃ даёт Ag⁺, а NaCl — Cl⁻; образуется AgCl.",
+    "rule": "AgCl малорастворим в воде.",
+    "example": "Ag⁺ + Cl⁻ → AgCl↓.",
+    "hint": "Найди растворимые источники Ag⁺ и Cl⁻.",
+    "tags": [
+      "solubility",
+      "precipitate",
+      "chloride"
+    ],
+    "parameters": {
+      "compound": "AgCl"
+    },
+    "id": "L2-058",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворимость",
+    "subtopic": "Растворимые соли",
+    "difficulty": 1,
+    "station": "mixing-station",
+    "interactionType": "precipitate-prediction",
+    "prompt": "Выпадает ли NaCl в осадок в обычной реакции обмена разбавленных растворов?",
+    "correctAnswer": "нет",
+    "options": [
+      "нет",
+      "да, всегда",
+      "только при нейтрализации",
+      "только с нитратами"
+    ],
+    "explanation": "NaCl хорошо растворим в воде и обычно остаётся в растворе.",
+    "rule": "Большинство солей натрия растворимы.",
+    "example": "NaNO₃ также хорошо растворим.",
+    "hint": "Вспомни правило растворимости солей натрия.",
+    "tags": [
+      "solubility",
+      "sodium-chloride"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L2-059",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворимость",
+    "subtopic": "Малорастворимые соли",
+    "difficulty": 1,
+    "station": "mixing-station",
+    "interactionType": "precipitate-prediction",
+    "prompt": "Как характеризуется растворимость CaCO₃ в воде?",
+    "correctAnswer": "практически нерастворим",
+    "acceptedAnswers": [
+      "малорастворим",
+      "малорастворимое вещество"
+    ],
+    "options": [
+      "практически нерастворим",
+      "хорошо растворим",
+      "полностью смешивается",
+      "является газом"
+    ],
+    "explanation": "CaCO₃ имеет очень низкую растворимость в воде.",
+    "rule": "Большинство карбонатов, кроме солей щелочных металлов и аммония, малорастворимы.",
+    "example": "MgCO₃ также малорастворим.",
+    "hint": "Известняк сохраняется в воде как твёрдая фаза.",
+    "tags": [
+      "solubility",
+      "carbonate",
+      "construction"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L2-060",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионные уравнения",
+    "subtopic": "Нейтрализация",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "ionic-equation",
+    "prompt": "Напиши сокращённое ионное уравнение нейтрализации сильной кислоты сильной щёлочью.",
+    "correctAnswer": "H+ + OH- -> H2O",
+    "explanation": "Ионы H⁺ и OH⁻ соединяются в слабодиссоциирующую воду.",
+    "rule": "Ионы-наблюдатели исключают из сокращённого ионного уравнения.",
+    "example": "H⁺ + OH⁻ → H₂O.",
+    "hint": "Оставь только ионы, которые образуют воду.",
+    "tags": [
+      "ionic-equation",
+      "neutralization"
+    ],
+    "parameters": {
+      "compound": "H2O"
+    },
+    "id": "L2-061",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионные уравнения",
+    "subtopic": "Осаждение",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "ionic-equation",
+    "prompt": "Напиши сокращённое ионное уравнение образования BaSO₄.",
+    "correctAnswer": "Ba^2+ + SO4^2- -> BaSO4",
+    "explanation": "Ba²⁺ и SO₄²⁻ непосредственно образуют осадок BaSO₄.",
+    "rule": "В сокращённом уравнении сохраняют частицы, участвующие в превращении.",
+    "example": "Ba²⁺ + SO₄²⁻ → BaSO₄↓.",
+    "hint": "Соедини катион бария и сульфат-ион.",
+    "tags": [
+      "ionic-equation",
+      "precipitate",
+      "sulfate"
+    ],
+    "parameters": {
+      "compound": "BaSO4"
+    },
+    "id": "L2-062",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионные уравнения",
+    "subtopic": "Осаждение",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "ionic-equation",
+    "prompt": "Напиши сокращённое ионное уравнение образования AgCl.",
+    "correctAnswer": "Ag+ + Cl- -> AgCl",
+    "explanation": "Ag⁺ и Cl⁻ образуют малорастворимый AgCl.",
+    "rule": "Заряды и число атомов должны сохраняться.",
+    "example": "Ag⁺ + Cl⁻ → AgCl↓.",
+    "hint": "У каждого исходного иона заряд по модулю равен 1.",
+    "tags": [
+      "ionic-equation",
+      "precipitate",
+      "chloride"
+    ],
+    "parameters": {
+      "compound": "AgCl"
+    },
+    "id": "L2-063",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионные уравнения",
+    "subtopic": "Осаждение гидроксидов",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "ionic-equation",
+    "prompt": "Напиши сокращённое ионное уравнение образования Cu(OH)₂.",
+    "correctAnswer": "Cu^2+ + 2OH- -> Cu(OH)2",
+    "explanation": "Одному Cu²⁺ нужны два OH⁻ для образования нейтрального осадка.",
+    "rule": "Суммарный заряд левой части должен совпадать с правой.",
+    "example": "Cu²⁺ + 2OH⁻ → Cu(OH)₂↓.",
+    "hint": "Уравняй заряд Cu²⁺ двумя гидроксид-ионами.",
+    "tags": [
+      "ionic-equation",
+      "hydroxide",
+      "copper"
+    ],
+    "parameters": {
+      "compound": "Cu(OH)2"
+    },
+    "id": "L2-064",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ионные уравнения",
+    "subtopic": "Ионы-наблюдатели",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "multiple-choice",
+    "prompt": "Какие ионы являются наблюдателями в реакции HCl + NaOH → NaCl + H₂O?",
+    "correctAnswer": "Na+ и Cl-",
+    "acceptedAnswers": [
+      "Na+, Cl-"
+    ],
+    "options": [
+      "Na⁺ и Cl⁻",
+      "H⁺ и OH⁻",
+      "Na⁺ и OH⁻",
+      "H⁺ и Cl⁻"
+    ],
+    "explanation": "Na⁺ и Cl⁻ присутствуют в растворе до и после реакции без изменения.",
+    "rule": "Ионы-наблюдатели сокращаются при переходе к сокращённому ионному уравнению.",
+    "example": "Остаётся H⁺ + OH⁻ → H₂O.",
+    "hint": "Найди ионы, не вошедшие в состав воды.",
+    "tags": [
+      "ionic-equation",
+      "spectator-ions"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L2-065",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ряд активности",
+    "subtopic": "Вытеснение металлов",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "activity-series",
+    "prompt": "Будет ли Zn реагировать с раствором CuSO₄?",
+    "correctAnswer": "да",
+    "options": [
+      "да",
+      "нет"
+    ],
+    "explanation": "Цинк активнее меди и вытесняет её из раствора соли.",
+    "rule": "Более активный металл вытесняет менее активный из раствора его соли.",
+    "example": "Zn + CuSO₄ → ZnSO₄ + Cu.",
+    "hint": "Сравни положение Zn и Cu в ряду активности.",
+    "tags": [
+      "activity-series",
+      "zinc",
+      "copper"
+    ],
+    "id": "L2-066",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ряд активности",
+    "subtopic": "Вытеснение металлов",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "activity-series",
+    "prompt": "Будет ли Cu вытеснять Zn из раствора ZnSO₄?",
+    "correctAnswer": "нет",
+    "options": [
+      "нет",
+      "да"
+    ],
+    "explanation": "Медь менее активна, чем цинк, и не вытесняет его из соли.",
+    "rule": "Вытеснение возможно только более активным металлом.",
+    "example": "Cu + ZnSO₄ — реакции нет.",
+    "hint": "Медь расположена ниже цинка в ряду активности.",
+    "tags": [
+      "activity-series",
+      "zinc",
+      "copper"
+    ],
+    "id": "L2-067",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ряд активности",
+    "subtopic": "Вытеснение металлов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи реакцию: Fe + CuSO₄ → ?",
+    "correctAnswer": "Fe + CuSO4 -> FeSO4 + Cu",
+    "explanation": "Железо активнее меди и вытесняет её из CuSO₄.",
+    "rule": "Более активный металл занимает место менее активного в соли.",
+    "example": "Fe + CuSO₄ → FeSO₄ + Cu.",
+    "hint": "Железо переходит в раствор как Fe²⁺.",
+    "tags": [
+      "activity-series",
+      "iron",
+      "copper"
+    ],
+    "id": "L2-068",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ряд активности",
+    "subtopic": "Металл и кислота",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "activity-series",
+    "prompt": "Будет ли Cu выделять H₂ из разбавленной HCl?",
+    "correctAnswer": "нет",
+    "options": [
+      "нет",
+      "да"
+    ],
+    "explanation": "Медь находится ниже водорода в ряду активности и не вытесняет его из HCl.",
+    "rule": "Металлы ниже водорода не выделяют H₂ из разбавленных неокисляющих кислот.",
+    "example": "Cu + HCl — реакции нет.",
+    "hint": "Сравни положение Cu с водородом.",
+    "tags": [
+      "activity-series",
+      "copper",
+      "acid"
+    ],
+    "id": "L2-069",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Ряд активности",
+    "subtopic": "Металл и кислота",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "activity-series",
+    "prompt": "Будет ли Mg реагировать с HCl?",
+    "correctAnswer": "да, с выделением H2",
+    "acceptedAnswers": [
+      "да",
+      "да, с выделением водорода"
+    ],
+    "options": [
+      "да, с выделением H₂",
+      "нет",
+      "да, с выделением O₂",
+      "только с образованием осадка"
+    ],
+    "explanation": "Магний расположен выше водорода и вытесняет его из HCl.",
+    "rule": "Активный металл + разбавленная кислота → соль + H₂.",
+    "example": "Mg + 2HCl → MgCl₂ + H₂.",
+    "hint": "Магний выше водорода в ряду активности.",
+    "tags": [
+      "activity-series",
+      "magnesium",
+      "acid"
+    ],
+    "id": "L2-070",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Окислительно-восстановительные реакции",
+    "subtopic": "Окисление",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "redox",
+    "prompt": "Что происходит в переходе Fe⁰ → Fe²⁺?",
+    "correctAnswer": "окисление, отдача двух электронов",
+    "options": [
+      "окисление, отдача двух электронов",
+      "восстановление, принятие двух электронов",
+      "нейтрализация",
+      "осаждение"
+    ],
+    "explanation": "Степень окисления Fe возрастает от 0 до +2, атом отдаёт 2e⁻.",
+    "rule": "Окисление — отдача электронов и повышение степени окисления.",
+    "example": "Fe → Fe²⁺ + 2e⁻.",
+    "hint": "Степень окисления увеличивается.",
+    "tags": [
+      "redox",
+      "oxidation",
+      "iron"
+    ],
+    "id": "L2-071",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Окислительно-восстановительные реакции",
+    "subtopic": "Восстановление",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "redox",
+    "prompt": "Что происходит в переходе Cu²⁺ → Cu⁰?",
+    "correctAnswer": "восстановление, принятие двух электронов",
+    "options": [
+      "восстановление, принятие двух электронов",
+      "окисление, отдача двух электронов",
+      "диссоциация",
+      "нейтрализация"
+    ],
+    "explanation": "Степень окисления Cu уменьшается от +2 до 0, ион принимает 2e⁻.",
+    "rule": "Восстановление — принятие электронов и снижение степени окисления.",
+    "example": "Cu²⁺ + 2e⁻ → Cu.",
+    "hint": "Степень окисления уменьшается.",
+    "tags": [
+      "redox",
+      "reduction",
+      "copper"
+    ],
+    "id": "L2-072",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Окислительно-восстановительные реакции",
+    "subtopic": "Восстановитель",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "redox",
+    "prompt": "Кто является восстановителем в Zn + Cu²⁺ → Zn²⁺ + Cu?",
+    "correctAnswer": "Zn",
+    "acceptedAnswers": [
+      "цинк"
+    ],
+    "options": [
+      "Zn",
+      "Cu²⁺",
+      "Zn²⁺",
+      "Cu"
+    ],
+    "explanation": "Zn отдаёт электроны и сам окисляется, поэтому он восстановитель.",
+    "rule": "Восстановитель отдаёт электроны.",
+    "example": "Zn → Zn²⁺ + 2e⁻.",
+    "hint": "Найди частицу, степень окисления которой повышается.",
+    "tags": [
+      "redox",
+      "reducing-agent",
+      "zinc"
+    ],
+    "id": "L2-073",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Окислительно-восстановительные реакции",
+    "subtopic": "Окислитель",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "redox",
+    "prompt": "Кто является окислителем в Zn + Cu²⁺ → Zn²⁺ + Cu?",
+    "correctAnswer": "Cu^2+",
+    "acceptedAnswers": [
+      "ион меди(II)",
+      "Cu²⁺"
+    ],
+    "options": [
+      "Cu²⁺",
+      "Zn",
+      "Zn²⁺",
+      "Cu"
+    ],
+    "explanation": "Cu²⁺ принимает электроны и восстанавливается, поэтому это окислитель.",
+    "rule": "Окислитель принимает электроны.",
+    "example": "Cu²⁺ + 2e⁻ → Cu.",
+    "hint": "Найди частицу, степень окисления которой снижается.",
+    "tags": [
+      "redox",
+      "oxidizing-agent",
+      "copper"
+    ],
+    "id": "L2-074",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Окислительно-восстановительные реакции",
+    "subtopic": "Электронный баланс",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "redox",
+    "prompt": "Сколько электронов отдаёт Al при переходе Al⁰ → Al³⁺?",
+    "correctAnswer": "3",
+    "acceptedAnswers": [
+      "3 электрона",
+      "3e-"
+    ],
+    "options": [
+      "3",
+      "1",
+      "2",
+      "6"
+    ],
+    "explanation": "Степень окисления возрастает на три единицы, поэтому Al отдаёт 3e⁻.",
+    "rule": "Число отданных электронов равно увеличению степени окисления.",
+    "example": "Al → Al³⁺ + 3e⁻.",
+    "hint": "Вычти начальную степень окисления из конечной.",
+    "tags": [
+      "redox",
+      "electron-balance",
+      "aluminium"
+    ],
+    "id": "L2-075",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Типы реакций",
+    "subtopic": "Разложение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Определи тип реакции: CaCO₃ → CaO + CO₂.",
+    "correctAnswer": "реакция разложения",
+    "options": [
+      "реакция разложения",
+      "реакция соединения",
+      "реакция замещения",
+      "реакция обмена"
+    ],
+    "explanation": "Из одного сложного вещества образуются два продукта.",
+    "rule": "При разложении одно вещество даёт несколько веществ.",
+    "example": "2KClO₃ → 2KCl + 3O₂.",
+    "hint": "Посчитай число реагентов и продуктов.",
+    "tags": [
+      "reaction-type",
+      "decomposition"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L2-076",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Типы реакций",
+    "subtopic": "Замещение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Определи тип реакции: Zn + CuSO₄ → ZnSO₄ + Cu.",
+    "correctAnswer": "реакция замещения",
+    "options": [
+      "реакция замещения",
+      "реакция соединения",
+      "реакция разложения",
+      "реакция обмена"
+    ],
+    "explanation": "Цинк замещает медь в составе соли.",
+    "rule": "В реакции замещения простое вещество вытесняет элемент из сложного.",
+    "example": "Fe + CuSO₄ → FeSO₄ + Cu.",
+    "hint": "Один металл занимает место другого.",
+    "tags": [
+      "reaction-type",
+      "displacement"
+    ],
+    "id": "L2-077",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Типы реакций",
+    "subtopic": "Обмен и нейтрализация",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Определи тип реакции: HCl + NaOH → NaCl + H₂O.",
+    "correctAnswer": "реакция обмена, нейтрализация",
+    "options": [
+      "реакция обмена, нейтрализация",
+      "реакция замещения",
+      "реакция разложения",
+      "реакция соединения"
+    ],
+    "explanation": "Кислота и основание обмениваются ионами с образованием соли и воды.",
+    "rule": "Нейтрализация является реакцией обмена.",
+    "example": "HNO₃ + KOH → KNO₃ + H₂O.",
+    "hint": "Реагируют кислота и щёлочь.",
+    "tags": [
+      "reaction-type",
+      "neutralization"
+    ],
+    "id": "L2-078",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Типы реакций",
+    "subtopic": "Соединение",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Определи тип реакции: 2H₂ + O₂ → 2H₂O.",
+    "correctAnswer": "реакция соединения",
+    "options": [
+      "реакция соединения",
+      "реакция разложения",
+      "реакция замещения",
+      "реакция обмена"
+    ],
+    "explanation": "Из двух простых веществ образуется одно сложное вещество.",
+    "rule": "В реакции соединения несколько веществ дают один продукт.",
+    "example": "CaO + H₂O → Ca(OH)₂.",
+    "hint": "Сравни число реагентов и типов продуктов.",
+    "tags": [
+      "reaction-type",
+      "combination"
+    ],
+    "id": "L2-079",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химические реакции",
+    "subtopic": "Комплексная миссия",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Выбери набор из трёх реакций, который последовательно демонстрирует осадок, газ и образование воды.",
+    "correctAnswer": "AgNO3 + NaCl; Na2CO3 + HCl; HCl + NaOH",
+    "options": [
+      "AgNO₃ + NaCl; Na₂CO₃ + HCl; HCl + NaOH",
+      "NaCl + KNO₃; HCl + NaOH; AgNO₃ + NaCl",
+      "HCl + NaOH; NaCl + KNO₃; CuSO₄ + NaCl",
+      "Zn + CuSO₄; NaOH + KCl; HCl + NaCl"
+    ],
+    "explanation": "Первая реакция даёт AgCl↓, вторая — CO₂↑, третья — H₂O.",
+    "rule": "Признаки реакции включают образование осадка, газа или слабого электролита.",
+    "example": "Ag⁺ + Cl⁻ → AgCl↓.",
+    "hint": "Проверь по одному требуемому признаку в каждой позиции.",
+    "tags": [
+      "mission",
+      "precipitate",
+      "gas",
+      "neutralization"
+    ],
+    "id": "L2-080",
+    "level": 2,
+    "points": 120,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Молярная масса",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Рассчитай молярную массу H₂O в g/mol.",
+    "correctAnswer": {
+      "value": 18.02,
+      "absoluteTolerance": 0.05,
+      "unit": "g/mol"
+    },
+    "explanation": "M(H₂O) = 2·1.008 + 16.00 = 18.016 g/mol.",
+    "rule": "Молярная масса равна сумме атомных масс с учётом индексов.",
+    "example": "M(O₂) = 32.00 g/mol.",
+    "hint": "Сложи массы двух H и одного O.",
+    "tags": [
+      "molar-mass",
+      "water"
+    ],
+    "parameters": {
+      "compound": "H2O"
+    },
+    "id": "L3-081",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Молярная масса",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Рассчитай молярную массу NaOH в g/mol.",
+    "correctAnswer": {
+      "value": 40,
+      "absoluteTolerance": 0.05,
+      "unit": "g/mol"
+    },
+    "explanation": "M(NaOH) = 22.99 + 16.00 + 1.008 ≈ 40.00 g/mol.",
+    "rule": "Суммируй атомные массы всех атомов формулы.",
+    "example": "M(KOH) ≈ 56.11 g/mol.",
+    "hint": "Сложи Na, O и H.",
+    "tags": [
+      "molar-mass",
+      "sodium-hydroxide"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L3-082",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Молярная масса",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Рассчитай молярную массу CaCO₃ в g/mol.",
+    "correctAnswer": {
+      "value": 100.09,
+      "absoluteTolerance": 0.2,
+      "unit": "g/mol"
+    },
+    "explanation": "M(CaCO₃) = 40.08 + 12.01 + 3·16.00 = 100.09 g/mol.",
+    "rule": "Индекс 3 умножает атомную массу кислорода.",
+    "example": "0.10 mol CaCO₃ имеет массу около 10.01 g.",
+    "hint": "Учти три атома кислорода.",
+    "tags": [
+      "molar-mass",
+      "carbonate",
+      "construction"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "constructionContext": "CaCO₃ — основной компонент известняка.",
+    "id": "L3-083",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Молярная масса",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Рассчитай молярную массу H₂SO₄ в g/mol.",
+    "correctAnswer": {
+      "value": 98.08,
+      "absoluteTolerance": 0.2,
+      "unit": "g/mol"
+    },
+    "explanation": "M(H₂SO₄) = 2·1.008 + 32.06 + 4·16.00 ≈ 98.08 g/mol.",
+    "rule": "Каждый индекс умножает атомную массу соответствующего элемента.",
+    "example": "M(SO₃) ≈ 80.06 g/mol.",
+    "hint": "Учти два H и четыре O.",
+    "tags": [
+      "molar-mass",
+      "sulfuric-acid"
+    ],
+    "parameters": {
+      "compound": "H2SO4"
+    },
+    "id": "L3-084",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Молярная масса",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Рассчитай молярную массу NaCl в g/mol.",
+    "correctAnswer": {
+      "value": 58.44,
+      "absoluteTolerance": 0.1,
+      "unit": "g/mol"
+    },
+    "explanation": "M(NaCl) = 22.99 + 35.45 = 58.44 g/mol.",
+    "rule": "Для формульной единицы соли складывают массы всех ионов по составу.",
+    "example": "0.25 mol NaCl имеет массу около 14.61 g.",
+    "hint": "Сложи атомные массы Na и Cl.",
+    "tags": [
+      "molar-mass",
+      "sodium-chloride"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-085",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Масса в моли",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "virtual-scales",
+    "prompt": "Сколько mol содержится в 18.02 g H₂O?",
+    "correctAnswer": {
+      "value": 1,
+      "absoluteTolerance": 0.01,
+      "unit": "mol"
+    },
+    "explanation": "n = m/M = 18.02/18.02 = 1 mol.",
+    "rule": "Количество вещества n = m/M.",
+    "example": "36.04 g H₂O соответствует 2 mol.",
+    "hint": "Запиши формулу, переведи величины в согласованные единицы и подставь данные.",
+    "tags": [
+      "moles",
+      "mass",
+      "water"
+    ],
+    "parameters": {
+      "compound": "H2O"
+    },
+    "id": "L3-086",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Масса в моли",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "virtual-scales",
+    "prompt": "Сколько mol содержится в 20 g NaOH?",
+    "correctAnswer": {
+      "value": 0.5,
+      "absoluteTolerance": 0.01,
+      "unit": "mol"
+    },
+    "explanation": "n = 20/40.00 = 0.50 mol.",
+    "rule": "Количество вещества n = m/M.",
+    "example": "40 g NaOH соответствует 1 mol.",
+    "hint": "Используй M(NaOH) = 40.00 g/mol.",
+    "tags": [
+      "moles",
+      "mass",
+      "sodium-hydroxide"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L3-087",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Моли в массу",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "virtual-scales",
+    "prompt": "Найди массу 2 mol CO₂ в граммах.",
+    "correctAnswer": {
+      "value": 88.02,
+      "absoluteTolerance": 0.2,
+      "unit": "g"
+    },
+    "explanation": "m = nM = 2·44.01 = 88.02 g.",
+    "rule": "Масса m = nM.",
+    "example": "1 mol CO₂ имеет массу около 44.01 g.",
+    "hint": "Сначала найди M(CO₂).",
+    "tags": [
+      "moles",
+      "mass",
+      "carbon-dioxide"
+    ],
+    "parameters": {
+      "compound": "CO2"
+    },
+    "id": "L3-088",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Моли в массу",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "virtual-scales",
+    "prompt": "Найди массу 0.25 mol NaCl в граммах.",
+    "correctAnswer": {
+      "value": 14.61,
+      "absoluteTolerance": 0.1,
+      "unit": "g"
+    },
+    "explanation": "m = 0.25·58.44 = 14.61 g.",
+    "rule": "Масса m = nM.",
+    "example": "0.50 mol NaCl имеет массу 29.22 g.",
+    "hint": "Умножь 0.25 mol на 58.44 g/mol.",
+    "tags": [
+      "moles",
+      "mass",
+      "sodium-chloride"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-089",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Количество вещества",
+    "subtopic": "Моли в массу",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "virtual-scales",
+    "prompt": "Найди массу 0.10 mol CaCO₃ в граммах.",
+    "correctAnswer": {
+      "value": 10.01,
+      "absoluteTolerance": 0.1,
+      "unit": "g"
+    },
+    "explanation": "m = 0.10·100.09 ≈ 10.01 g.",
+    "rule": "Масса m = nM.",
+    "example": "1 mol CaCO₃ имеет массу 100.09 g.",
+    "hint": "Умножь количество вещества на молярную массу.",
+    "tags": [
+      "moles",
+      "mass",
+      "carbonate",
+      "construction"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L3-090",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Молярная концентрация",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "0.5 mol вещества находится в 1 L раствора. Найди C в mol/L.",
+    "correctAnswer": {
+      "value": 0.5,
+      "absoluteTolerance": 0.01,
+      "unit": "mol/L"
+    },
+    "explanation": "C = n/V = 0.5/1 = 0.5 mol/L.",
+    "rule": "Молярная концентрация C = n/V, где V выражен в литрах.",
+    "example": "1 mol в 2 L даёт 0.5 mol/L.",
+    "hint": "Запиши формулу, переведи величины в согласованные единицы и подставь данные.",
+    "tags": [
+      "molarity",
+      "solution"
+    ],
+    "id": "L3-091",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Молярная концентрация",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "0.2 mol вещества находится в 500 mL раствора. Найди C в mol/L.",
+    "correctAnswer": {
+      "value": 0.4,
+      "absoluteTolerance": 0.01,
+      "unit": "mol/L"
+    },
+    "explanation": "500 mL = 0.500 L; C = 0.2/0.500 = 0.4 mol/L.",
+    "rule": "Молярная концентрация C = n/V, где V выражен в литрах.",
+    "example": "0.1 mol в 0.25 L также даёт 0.4 mol/L.",
+    "hint": "Переведи 500 mL в 0.500 L.",
+    "tags": [
+      "molarity",
+      "volume"
+    ],
+    "id": "L3-092",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Количество вещества в растворе",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Раствор имеет C = 2 mol/L и V = 0.25 L. Найди n.",
+    "correctAnswer": {
+      "value": 0.5,
+      "absoluteTolerance": 0.01,
+      "unit": "mol"
+    },
+    "explanation": "n = CV = 2·0.25 = 0.5 mol.",
+    "rule": "Количество вещества в растворе n = CV.",
+    "example": "1 mol/L · 0.5 L = 0.5 mol.",
+    "hint": "Запиши формулу, переведи величины в согласованные единицы и подставь данные.",
+    "tags": [
+      "molarity",
+      "moles"
+    ],
+    "id": "L3-093",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Объём раствора",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Какой объём раствора C = 1 mol/L содержит 0.5 mol вещества?",
+    "correctAnswer": {
+      "value": 0.5,
+      "absoluteTolerance": 0.01,
+      "unit": "L"
+    },
+    "explanation": "V = n/C = 0.5/1 = 0.5 L.",
+    "rule": "Из C = n/V следует V = n/C.",
+    "example": "0.25 mol при 1 mol/L занимает 0.25 L.",
+    "hint": "Запиши формулу, переведи величины в согласованные единицы и подставь данные.",
+    "tags": [
+      "molarity",
+      "volume"
+    ],
+    "id": "L3-094",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Приготовление растворов",
+    "subtopic": "Навеска соли",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "solution-preparation",
+    "prompt": "Какую массу NaCl взять для 500 mL раствора 0.20 mol/L?",
+    "correctAnswer": {
+      "value": 5.84,
+      "absoluteTolerance": 0.05,
+      "unit": "g"
+    },
+    "explanation": "n = 0.20·0.500 = 0.100 mol; m = 0.100·58.44 = 5.844 g.",
+    "rule": "Для навески используй m = CVM.",
+    "example": "Раствор готовят виртуально с доведением до конечного объёма.",
+    "hint": "Переведи 500 mL в 0.500 L.",
+    "tags": [
+      "solution-preparation",
+      "molarity",
+      "sodium-chloride"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-095",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Приготовление растворов",
+    "subtopic": "Навеска щёлочи",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "solution-preparation",
+    "prompt": "Какую массу NaOH взять для 250 mL раствора 0.10 mol/L?",
+    "correctAnswer": {
+      "value": 1,
+      "absoluteTolerance": 0.03,
+      "unit": "g"
+    },
+    "explanation": "n = 0.10·0.250 = 0.025 mol; m = 0.025·40.00 = 1.00 g.",
+    "rule": "Для навески используй m = CVM.",
+    "example": "Все операции в ChemSite являются виртуальными.",
+    "hint": "V = 0.250 L, M(NaOH) = 40.00 g/mol.",
+    "tags": [
+      "solution-preparation",
+      "molarity",
+      "sodium-hydroxide"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L3-096",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Разбавление",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "solution-preparation",
+    "prompt": "Из 1.0 mol/L раствора нужно получить 500 mL раствора 0.20 mol/L. Какой объём исходного раствора взять?",
+    "correctAnswer": {
+      "value": 100,
+      "absoluteTolerance": 1,
+      "unit": "mL"
+    },
+    "explanation": "V₁ = C₂V₂/C₁ = 0.20·500/1.0 = 100 mL.",
+    "rule": "При разбавлении C₁V₁ = C₂V₂.",
+    "example": "Остальной объём до 500 mL восполняет растворитель.",
+    "hint": "Используй C₁V₁ = C₂V₂.",
+    "tags": [
+      "dilution",
+      "volume"
+    ],
+    "id": "L3-097",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Разбавление",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "50 mL раствора 2 mol/L довели до 200 mL. Найди новую концентрацию.",
+    "correctAnswer": {
+      "value": 0.5,
+      "absoluteTolerance": 0.01,
+      "unit": "mol/L"
+    },
+    "explanation": "C₂ = C₁V₁/V₂ = 2·50/200 = 0.5 mol/L.",
+    "rule": "При разбавлении количество растворённого вещества сохраняется.",
+    "example": "Увеличение объёма в 4 раза уменьшает C в 4 раза.",
+    "hint": "Используй C₁V₁ = C₂V₂.",
+    "tags": [
+      "dilution",
+      "molarity"
+    ],
+    "id": "L3-098",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Массовая доля",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "10 g соли растворили в 90 g воды. Найди массовую долю соли в процентах.",
+    "correctAnswer": {
+      "value": 10,
+      "absoluteTolerance": 0.1,
+      "unit": "%"
+    },
+    "explanation": "Масса раствора 100 g; w = 10/100·100% = 10%.",
+    "rule": "w = m(вещества)/m(раствора)·100%.",
+    "example": "5 g в 95 g воды также дают 5%.",
+    "hint": "Сначала сложи массы соли и воды.",
+    "tags": [
+      "mass-fraction",
+      "solution"
+    ],
+    "id": "L3-099",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Растворы",
+    "subtopic": "Массовая доля",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 200 g раствора содержится 25 g вещества. Найди массовую долю в процентах.",
+    "correctAnswer": {
+      "value": 12.5,
+      "absoluteTolerance": 0.1,
+      "unit": "%"
+    },
+    "explanation": "w = 25/200·100% = 12.5%.",
+    "rule": "w = m(вещества)/m(раствора)·100%.",
+    "example": "20 g в 200 g раствора дают 10%.",
+    "hint": "Запиши формулу, переведи величины в согласованные единицы и подставь данные.",
+    "tags": [
+      "mass-fraction",
+      "solution"
+    ],
+    "id": "L3-100",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Шкала pH",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "pH-terminal",
+    "prompt": "Раствор имеет pH = 3. Какая среда?",
+    "correctAnswer": "кислая",
+    "options": [
+      "кислая",
+      "нейтральная",
+      "щелочная"
+    ],
+    "explanation": "pH ниже 7 соответствует кислой среде в стандартной учебной модели.",
+    "rule": "pH < 7 — кислая среда.",
+    "example": "pH 2 также соответствует кислой среде.",
+    "hint": "Сравни pH с 7.",
+    "tags": [
+      "pH",
+      "acidic"
+    ],
+    "id": "L3-101",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Шкала pH",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "pH-terminal",
+    "prompt": "Раствор имеет pH = 7 при стандартных учебных условиях. Какая среда?",
+    "correctAnswer": "нейтральная",
+    "options": [
+      "нейтральная",
+      "кислая",
+      "щелочная"
+    ],
+    "explanation": "В базовой модели pH 7 соответствует нейтральной среде.",
+    "rule": "При 25 °C нейтральный водный раствор имеет pH около 7.",
+    "example": "Чистая вода в учебной модели нейтральна.",
+    "hint": "Это центральное значение учебной шкалы.",
+    "tags": [
+      "pH",
+      "neutral"
+    ],
+    "id": "L3-102",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Шкала pH",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "pH-terminal",
+    "prompt": "Раствор имеет pH = 11. Какая среда?",
+    "correctAnswer": "щелочная",
+    "acceptedAnswers": [
+      "основная"
+    ],
+    "options": [
+      "щелочная",
+      "нейтральная",
+      "кислая"
+    ],
+    "explanation": "pH выше 7 соответствует щелочной среде в стандартной учебной модели.",
+    "rule": "pH > 7 — щелочная среда.",
+    "example": "pH 12 также соответствует щелочной среде.",
+    "hint": "Сравни pH с 7.",
+    "tags": [
+      "pH",
+      "basic"
+    ],
+    "id": "L3-103",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Расчёт pH",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "[H⁺] = 10⁻⁴ mol/L. Найди pH.",
+    "correctAnswer": {
+      "value": 4,
+      "absoluteTolerance": 0.01
+    },
+    "explanation": "pH = −lg[H⁺] = −lg(10⁻⁴) = 4.",
+    "rule": "pH = −lg[H⁺].",
+    "example": "[H⁺] = 10⁻³ mol/L даёт pH 3.",
+    "hint": "Знак показателя степени меняется при вычислении −lg.",
+    "tags": [
+      "pH",
+      "hydrogen-ion"
+    ],
+    "id": "L3-104",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Расчёт pH",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "[H⁺] = 10⁻² mol/L. Найди pH.",
+    "correctAnswer": {
+      "value": 2,
+      "absoluteTolerance": 0.01
+    },
+    "explanation": "pH = −lg(10⁻²) = 2, поэтому раствор кислый.",
+    "rule": "pH = −lg[H⁺].",
+    "example": "[H⁺] = 10⁻⁵ mol/L даёт pH 5.",
+    "hint": "Возьми отрицательный десятичный логарифм.",
+    "tags": [
+      "pH",
+      "hydrogen-ion"
+    ],
+    "id": "L3-105",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Концентрация H⁺",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "pH = 5. Найди [H⁺] в mol/L.",
+    "correctAnswer": {
+      "value": 0.00001,
+      "relativeTolerance": 0.01,
+      "unit": "mol/L"
+    },
+    "explanation": "[H⁺] = 10⁻ᵖᴴ = 10⁻⁵ mol/L.",
+    "rule": "[H⁺] = 10⁻ᵖᴴ.",
+    "example": "При pH 3 концентрация H⁺ равна 10⁻³ mol/L.",
+    "hint": "Возведи 10 в степень −pH.",
+    "tags": [
+      "pH",
+      "hydrogen-ion"
+    ],
+    "id": "L3-106",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Сравнение pH",
+    "difficulty": 1,
+    "station": "solution-laboratory",
+    "interactionType": "pH-terminal",
+    "prompt": "Какой раствор более кислый: pH 2 или pH 4?",
+    "correctAnswer": "pH 2",
+    "options": [
+      "pH 2",
+      "pH 4",
+      "одинаково"
+    ],
+    "explanation": "Меньшее значение pH соответствует большей концентрации H⁺.",
+    "rule": "Шкала pH логарифмическая и обратна концентрации H⁺.",
+    "example": "pH 3 кислее pH 5.",
+    "hint": "Более кислый раствор имеет меньшее pH.",
+    "tags": [
+      "pH",
+      "comparison"
+    ],
+    "id": "L3-107",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Кислотность",
+    "subtopic": "Логарифмическая шкала",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Во сколько раз [H⁺] при pH 3 выше, чем при pH 5?",
+    "correctAnswer": {
+      "value": 100,
+      "absoluteTolerance": 0.1,
+      "unit": "раз"
+    },
+    "explanation": "Разница в 2 единицы pH означает отношение 10² = 100.",
+    "rule": "Одна единица pH соответствует десятикратному изменению [H⁺].",
+    "example": "Разница в 3 единицы даёт 1000 раз.",
+    "hint": "Возведи 10 в степень разности pH.",
+    "tags": [
+      "pH",
+      "comparison"
+    ],
+    "id": "L3-108",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Диссоциация солей",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "dissociation",
+    "prompt": "Напиши диссоциацию NaCl в воде.",
+    "correctAnswer": "NaCl -> Na+ + Cl-",
+    "explanation": "Растворимый NaCl распадается на Na⁺ и Cl⁻.",
+    "rule": "Индексы и заряды определяют число и заряд ионов.",
+    "example": "KCl → K⁺ + Cl⁻.",
+    "hint": "Получаются два однозарядных иона.",
+    "tags": [
+      "dissociation",
+      "salt"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-109",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Диссоциация солей",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "dissociation",
+    "prompt": "Напиши диссоциацию CaCl₂ в воде.",
+    "correctAnswer": "CaCl2 -> Ca^2+ + 2Cl-",
+    "explanation": "Одна формульная единица CaCl₂ даёт Ca²⁺ и два Cl⁻.",
+    "rule": "Коэффициент перед ионом соответствует индексу в формуле соли.",
+    "example": "MgCl₂ → Mg²⁺ + 2Cl⁻.",
+    "hint": "Учти два хлорид-иона.",
+    "tags": [
+      "dissociation",
+      "salt",
+      "calcium"
+    ],
+    "parameters": {
+      "compound": "CaCl2"
+    },
+    "id": "L3-110",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Диссоциация солей",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "dissociation",
+    "prompt": "Напиши диссоциацию Na₂SO₄ в воде.",
+    "correctAnswer": "Na2SO4 -> 2Na+ + SO4^2-",
+    "explanation": "Na₂SO₄ даёт два Na⁺ и один SO₄²⁻.",
+    "rule": "Суммарный заряд продуктов диссоциации равен нулю.",
+    "example": "K₂SO₄ → 2K⁺ + SO₄²⁻.",
+    "hint": "Индекс 2 перед Na превращается в коэффициент.",
+    "tags": [
+      "dissociation",
+      "salt",
+      "sulfate"
+    ],
+    "parameters": {
+      "compound": "Na2SO4"
+    },
+    "id": "L3-111",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Диссоциация солей",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "dissociation",
+    "prompt": "Напиши диссоциацию AlCl₃ в воде.",
+    "correctAnswer": "AlCl3 -> Al^3+ + 3Cl-",
+    "explanation": "AlCl₃ даёт Al³⁺ и три Cl⁻.",
+    "rule": "Число и заряд ионов должны сохранять электронейтральность.",
+    "example": "FeCl₃ → Fe³⁺ + 3Cl⁻.",
+    "hint": "К одному Al³⁺ нужны три хлорид-иона.",
+    "tags": [
+      "dissociation",
+      "salt",
+      "aluminium"
+    ],
+    "parameters": {
+      "compound": "AlCl3"
+    },
+    "id": "L3-112",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Сильные электролиты",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "classification",
+    "prompt": "К какому типу электролитов относится HCl в воде?",
+    "correctAnswer": "сильный электролит",
+    "options": [
+      "сильный электролит",
+      "слабый электролит",
+      "неэлектролит"
+    ],
+    "explanation": "HCl в разбавленном водном растворе практически полностью диссоциирует.",
+    "rule": "Сильные кислоты относятся к сильным электролитам.",
+    "example": "HNO₃ — сильный электролит.",
+    "hint": "Соляная кислота относится к сильным кислотам.",
+    "tags": [
+      "electrolyte",
+      "strong",
+      "acid"
+    ],
+    "parameters": {
+      "compound": "HCl"
+    },
+    "id": "L3-113",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Сильные электролиты",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "classification",
+    "prompt": "К какому типу электролитов относится NaOH в воде?",
+    "correctAnswer": "сильный электролит",
+    "options": [
+      "сильный электролит",
+      "слабый электролит",
+      "неэлектролит"
+    ],
+    "explanation": "Растворимый NaOH практически полностью распадается на Na⁺ и OH⁻.",
+    "rule": "Растворимые щёлочи являются сильными электролитами.",
+    "example": "KOH — сильный электролит.",
+    "hint": "NaOH — растворимая щёлочь.",
+    "tags": [
+      "electrolyte",
+      "strong",
+      "base"
+    ],
+    "parameters": {
+      "compound": "NaOH"
+    },
+    "id": "L3-114",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Слабые электролиты",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "classification",
+    "prompt": "К какому типу электролитов относится уксусная кислота?",
+    "correctAnswer": "слабый электролит",
+    "options": [
+      "слабый электролит",
+      "сильный электролит",
+      "неэлектролит"
+    ],
+    "explanation": "Уксусная кислота диссоциирует в воде лишь частично.",
+    "rule": "Слабые кислоты являются слабыми электролитами.",
+    "example": "CH₃COOH ⇌ H⁺ + CH₃COO⁻.",
+    "hint": "Её диссоциация обратима и неполна.",
+    "tags": [
+      "electrolyte",
+      "weak",
+      "acid"
+    ],
+    "parameters": {
+      "compound": "CH3COOH"
+    },
+    "id": "L3-115",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электролиты",
+    "subtopic": "Неэлектролиты",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "classification",
+    "prompt": "Выбери неэлектролит.",
+    "correctAnswer": "сахароза",
+    "options": [
+      "сахароза",
+      "NaCl",
+      "HCl",
+      "NaOH"
+    ],
+    "explanation": "Сахароза растворяется молекулярно и практически не образует ионов.",
+    "rule": "Неэлектролиты не дают заметного количества подвижных ионов в растворе.",
+    "example": "Раствор глюкозы также является неэлектролитом.",
+    "hint": "Выбери молекулярное органическое вещество.",
+    "tags": [
+      "electrolyte",
+      "nonelectrolyte"
+    ],
+    "id": "L3-116",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Гидролиз",
+    "subtopic": "Соль сильной кислоты и основания",
+    "difficulty": 1,
+    "station": "ionic-reaction-station",
+    "interactionType": "hydrolysis",
+    "prompt": "Происходит ли значимый гидролиз NaCl в базовой учебной модели?",
+    "correctAnswer": "практически нет",
+    "acceptedAnswers": [
+      "нет"
+    ],
+    "options": [
+      "практически нет",
+      "да, по катиону",
+      "да, по аниону"
+    ],
+    "explanation": "NaCl образован сильной кислотой HCl и сильным основанием NaOH.",
+    "rule": "Ионы соли сильной кислоты и сильного основания практически не гидролизуются.",
+    "example": "Раствор KNO₃ также близок к нейтральному.",
+    "hint": "Оцени силу исходных кислоты и основания.",
+    "tags": [
+      "hydrolysis",
+      "neutral-salt"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-117",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Гидролиз",
+    "subtopic": "Карбонаты",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "hydrolysis",
+    "prompt": "Какая среда характерна для раствора Na₂CO₃?",
+    "correctAnswer": "щелочная",
+    "acceptedAnswers": [
+      "основная"
+    ],
+    "options": [
+      "щелочная",
+      "кислая",
+      "нейтральная"
+    ],
+    "explanation": "CO₃²⁻ гидролизуется с образованием OH⁻, поэтому среда щелочная.",
+    "rule": "Анион слабой кислоты может создавать щелочную среду.",
+    "example": "CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻.",
+    "hint": "Карбонат-ион — остаток слабой угольной кислоты.",
+    "tags": [
+      "hydrolysis",
+      "basic",
+      "carbonate"
+    ],
+    "parameters": {
+      "compound": "Na2CO3"
+    },
+    "id": "L3-118",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Гидролиз",
+    "subtopic": "Соли аммония",
+    "difficulty": 2,
+    "station": "ionic-reaction-station",
+    "interactionType": "hydrolysis",
+    "prompt": "Какая среда характерна для раствора NH₄Cl?",
+    "correctAnswer": "кислая",
+    "options": [
+      "кислая",
+      "щелочная",
+      "нейтральная"
+    ],
+    "explanation": "NH₄⁺ гидролизуется с образованием H₃O⁺, поэтому среда кислая.",
+    "rule": "Катион слабого основания может создавать кислую среду.",
+    "example": "NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺.",
+    "hint": "NH₄⁺ связан со слабым основанием NH₃·H₂O.",
+    "tags": [
+      "hydrolysis",
+      "acidic",
+      "ammonium"
+    ],
+    "parameters": {
+      "compound": "NH4Cl"
+    },
+    "id": "L3-119",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Анализ растворов",
+    "subtopic": "Лабораторная миссия",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Неизвестный раствор имеет pH ≈ 7, содержит Na⁺ и Cl⁻ и не даёт осадка в заданных контрольных пробах. Определи вещество.",
+    "correctAnswer": "NaCl",
+    "acceptedAnswers": [
+      "хлорид натрия"
+    ],
+    "options": [
+      "NaCl",
+      "Na₂CO₃",
+      "NH₄Cl",
+      "AgNO₃"
+    ],
+    "explanation": "Набор ионов Na⁺ и Cl⁻ однозначно соответствует NaCl; его раствор близок к нейтральному.",
+    "rule": "Идентификацию проводят по совокупности pH, ионного состава и проверенных реакций.",
+    "example": "NaCl → Na⁺ + Cl⁻.",
+    "hint": "Собери нейтральную соль из обнаруженных ионов.",
+    "tags": [
+      "mission",
+      "solution-analysis",
+      "ions"
+    ],
+    "parameters": {
+      "compound": "NaCl"
+    },
+    "id": "L3-120",
+    "level": 3,
+    "points": 140,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Экзотермические процессы",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Реакционная система выделяет тепло в окружающую среду. Как называется процесс?",
+    "correctAnswer": "экзотермический",
+    "acceptedAnswers": [
+      "экзотермическая реакция"
+    ],
+    "options": [
+      "экзотермический",
+      "эндотермический",
+      "изотермический",
+      "электролитический"
+    ],
+    "explanation": "При экзотермическом процессе энергия в форме тепла передаётся от системы окружающей среде.",
+    "rule": "Для экзотермической реакции ΔH < 0.",
+    "example": "Горение топлива — экзотермический процесс.",
+    "hint": "Тепло выходит из реакционной системы.",
+    "tags": [
+      "thermochemistry",
+      "exothermic"
+    ],
+    "id": "L4-121",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Эндотермические процессы",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Реакционная система поглощает тепло из окружающей среды. Как называется процесс?",
+    "correctAnswer": "эндотермический",
+    "acceptedAnswers": [
+      "эндотермическая реакция"
+    ],
+    "options": [
+      "эндотермический",
+      "экзотермический",
+      "каталитический",
+      "электрохимический"
+    ],
+    "explanation": "При эндотермическом процессе система получает энергию в форме тепла из окружающей среды.",
+    "rule": "Для эндотермической реакции ΔH > 0.",
+    "example": "Термическое разложение CaCO₃ требует подвода энергии.",
+    "hint": "Тепло входит в реакционную систему.",
+    "tags": [
+      "thermochemistry",
+      "endothermic"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "constructionContext": "Обжиг известняка требует подвода тепла.",
+    "id": "L4-122",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Знак энтальпии",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Какой знак имеет ΔH экзотермической реакции?",
+    "correctAnswer": "ΔH < 0",
+    "acceptedAnswers": [
+      "отрицательный",
+      "меньше нуля"
+    ],
+    "options": [
+      "ΔH < 0",
+      "ΔH > 0",
+      "ΔH = 0",
+      "знак не определён"
+    ],
+    "explanation": "Система теряет энтальпию при передаче тепла окружающей среде, поэтому изменение отрицательно.",
+    "rule": "Выделение тепла системой соответствует отрицательному ΔH.",
+    "example": "Для реакции с ΔH = −120 kJ тепло выделяется.",
+    "hint": "Энергия системы уменьшается.",
+    "tags": [
+      "thermochemistry",
+      "enthalpy",
+      "exothermic"
+    ],
+    "id": "L4-123",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Знак энтальпии",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Какой знак имеет ΔH эндотермической реакции?",
+    "correctAnswer": "ΔH > 0",
+    "acceptedAnswers": [
+      "положительный",
+      "больше нуля"
+    ],
+    "options": [
+      "ΔH > 0",
+      "ΔH < 0",
+      "ΔH = 0",
+      "знак всегда меняется"
+    ],
+    "explanation": "Система получает энергию из окружающей среды, поэтому её изменение энтальпии положительно.",
+    "rule": "Поглощение тепла системой соответствует положительному ΔH.",
+    "example": "Для процесса с ΔH = +45 kJ тепло поглощается.",
+    "hint": "Энергия системы увеличивается.",
+    "tags": [
+      "thermochemistry",
+      "enthalpy",
+      "endothermic"
+    ],
+    "id": "L4-124",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Энтальпия реакции",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "multiple-choice",
+    "prompt": "Что характеризует изменение энтальпии реакции ΔH?",
+    "correctAnswer": "изменение энтальпии системы; при постоянном давлении — тепловой эффект процесса",
+    "options": [
+      "изменение энтальпии системы; при постоянном давлении — тепловой эффект процесса",
+      "только скорость реакции",
+      "только энергию активации",
+      "число молей катализатора"
+    ],
+    "explanation": "ΔH описывает разность энтальпий конечного и начального состояний; при постоянном давлении она связана с теплотой процесса.",
+    "rule": "ΔH = H(продукты) − H(реагенты).",
+    "example": "Отрицательное ΔH указывает на экзотермический процесс.",
+    "hint": "Сравни энергетические состояния продуктов и реагентов.",
+    "tags": [
+      "thermochemistry",
+      "enthalpy"
+    ],
+    "id": "L4-125",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Закон Гесса",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "hess-puzzle",
+    "prompt": "Зависит ли тепловой эффект реакции от пути перехода между заданными начальным и конечным состояниями?",
+    "correctAnswer": "нет",
+    "options": [
+      "нет",
+      "да, всегда",
+      "только при катализаторе",
+      "только для газов"
+    ],
+    "explanation": "Энтальпия является функцией состояния, поэтому суммарное ΔH определяется только начальным и конечным состояниями.",
+    "rule": "Закон Гесса позволяет складывать термохимические уравнения.",
+    "example": "ΔH(A→C) = ΔH(A→B) + ΔH(B→C).",
+    "hint": "Энтальпия является функцией состояния.",
+    "tags": [
+      "thermochemistry",
+      "hess-law"
+    ],
+    "id": "L4-126",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Закон Гесса",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "hess-puzzle",
+    "prompt": "A → B: ΔH = +20 kJ; B → C: ΔH = −50 kJ. Найди ΔH для A → C.",
+    "correctAnswer": {
+      "value": -30,
+      "absoluteTolerance": 0.1,
+      "unit": "kJ"
+    },
+    "explanation": "По закону Гесса ΔH(A→C) = +20 + (−50) = −30 kJ.",
+    "rule": "Последовательные стадии складывают с их знаками.",
+    "example": "+10 kJ + (−25 kJ) = −15 kJ.",
+    "hint": "Сложи тепловые эффекты двух последовательных переходов.",
+    "tags": [
+      "thermochemistry",
+      "hess-law",
+      "calculation"
+    ],
+    "id": "L4-127",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Закон Гесса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "hess-puzzle",
+    "prompt": "A → B: ΔH = −100 kJ; A → C: ΔH = −40 kJ. Найди ΔH для B → C.",
+    "correctAnswer": {
+      "value": 60,
+      "absoluteTolerance": 0.1,
+      "unit": "kJ"
+    },
+    "explanation": "Поскольку ΔH(A→C) = ΔH(A→B) + ΔH(B→C), получаем −40 = −100 + x, откуда x = +60 kJ.",
+    "rule": "Неизвестную стадию находят из алгебраической суммы тепловых эффектов.",
+    "example": "Если полный путь равен −20, а первая стадия −70, вторая равна +50 kJ.",
+    "hint": "Вычти ΔH(A→B) из ΔH(A→C).",
+    "tags": [
+      "thermochemistry",
+      "hess-law",
+      "calculation"
+    ],
+    "id": "L4-128",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Энергетическая диаграмма",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "hess-puzzle",
+    "prompt": "На энергетической диаграмме продукты расположены ниже реагентов. Какой характер имеет реакция?",
+    "correctAnswer": "экзотермический",
+    "options": [
+      "экзотермический",
+      "эндотермический",
+      "равновесный",
+      "каталитический"
+    ],
+    "explanation": "Энтальпия продуктов ниже энтальпии реагентов, поэтому ΔH отрицательно и энергия выделяется.",
+    "rule": "Продукты ниже реагентов на диаграмме: ΔH < 0.",
+    "example": "Падение уровня на 80 kJ соответствует ΔH = −80 kJ.",
+    "hint": "Сравни вертикальные уровни продуктов и реагентов.",
+    "tags": [
+      "thermochemistry",
+      "energy-diagram",
+      "exothermic"
+    ],
+    "id": "L4-129",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Термохимия",
+    "subtopic": "Энергетическая диаграмма",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "hess-puzzle",
+    "prompt": "На энергетической диаграмме продукты расположены выше реагентов. Какой характер имеет процесс?",
+    "correctAnswer": "эндотермический",
+    "options": [
+      "эндотермический",
+      "экзотермический",
+      "самопроизвольный при любых условиях",
+      "нейтральный"
+    ],
+    "explanation": "Энтальпия продуктов выше энтальпии реагентов, поэтому системе требуется поглотить энергию.",
+    "rule": "Продукты выше реагентов на диаграмме: ΔH > 0.",
+    "example": "Подъём уровня на 35 kJ соответствует ΔH = +35 kJ.",
+    "hint": "Для подъёма энергетического уровня нужен приток энергии.",
+    "tags": [
+      "thermochemistry",
+      "energy-diagram",
+      "endothermic"
+    ],
+    "id": "L4-130",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Площадь поверхности",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "Что быстрее реагирует с одной и той же кислотой: порошок CaCO₃ или крупный кусок той же массы?",
+    "correctAnswer": "порошок CaCO3",
+    "acceptedAnswers": [
+      "порошок",
+      "порошок CaCO₃"
+    ],
+    "options": [
+      "порошок CaCO₃",
+      "крупный кусок CaCO₃",
+      "одинаково",
+      "скорость всегда равна нулю"
+    ],
+    "explanation": "Порошок имеет большую суммарную площадь контакта с раствором, поэтому столкновения частиц происходят чаще.",
+    "rule": "Увеличение площади поверхности твёрдого реагента обычно повышает скорость реакции.",
+    "example": "Измельчённый известняк реагирует быстрее монолита.",
+    "hint": "Сравни доступную кислоте поверхность.",
+    "tags": [
+      "kinetics",
+      "surface-area",
+      "carbonate"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L4-131",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Площадь поверхности",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "Почему порошок обычно реагирует быстрее крупного куска того же вещества?",
+    "correctAnswer": "из-за большей площади поверхности контакта",
+    "options": [
+      "из-за большей площади поверхности контакта",
+      "из-за меньшей массы вещества",
+      "из-за изменения химической формулы",
+      "из-за исчезновения энергии активации"
+    ],
+    "explanation": "При измельчении возрастает площадь границы между реагентами, что увеличивает число эффективных столкновений.",
+    "rule": "Скорость гетерогенной реакции зависит от площади контакта фаз.",
+    "example": "Мелкая крошка CaCO₃ активнее контактирует с кислотой.",
+    "hint": "Измельчение открывает больше поверхности.",
+    "tags": [
+      "kinetics",
+      "surface-area"
+    ],
+    "id": "L4-132",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Температура",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "Как повышение температуры обычно влияет на скорость большинства химических реакций?",
+    "correctAnswer": "увеличивает скорость",
+    "acceptedAnswers": [
+      "увеличивает"
+    ],
+    "options": [
+      "увеличивает скорость",
+      "уменьшает скорость",
+      "всегда останавливает реакцию",
+      "не влияет ни при каких условиях"
+    ],
+    "explanation": "При повышении температуры частицы движутся быстрее и большая их доля преодолевает энергетический барьер.",
+    "rule": "Рост температуры обычно повышает константу скорости реакции.",
+    "example": "Нагретая модельная система достигает результата быстрее.",
+    "hint": "Подумай об энергии и частоте столкновений частиц.",
+    "tags": [
+      "kinetics",
+      "temperature"
+    ],
+    "id": "L4-133",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Концентрация",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "Как увеличение концентрации реагента обычно влияет на скорость реакции при прочих равных условиях?",
+    "correctAnswer": "увеличивает скорость",
+    "acceptedAnswers": [
+      "увеличивает"
+    ],
+    "options": [
+      "увеличивает скорость",
+      "уменьшает скорость",
+      "меняет продукты на другие",
+      "не влияет на частоту столкновений"
+    ],
+    "explanation": "Большее число частиц в единице объёма повышает частоту столкновений и обычно ускоряет реакцию.",
+    "rule": "Для многих реакций скорость возрастает с концентрацией реагентов.",
+    "example": "Более концентрированный раствор может реагировать быстрее разбавленного.",
+    "hint": "Сравни число частиц в одинаковом объёме.",
+    "tags": [
+      "kinetics",
+      "concentration"
+    ],
+    "id": "L4-134",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Катализ",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "Как катализатор влияет на энергию активации?",
+    "correctAnswer": "предоставляет путь с меньшей энергией активации",
+    "options": [
+      "предоставляет путь с меньшей энергией активации",
+      "повышает энергию активации",
+      "изменяет ΔH реакции",
+      "расходуется как основной реагент"
+    ],
+    "explanation": "Катализатор создаёт альтернативный механизм реакции с более низким энергетическим барьером.",
+    "rule": "Катализатор меняет путь реакции, сохраняя начальные и конечные состояния.",
+    "example": "На энергетической диаграмме каталитический барьер ниже.",
+    "hint": "Катализатор облегчает прохождение энергетического барьера.",
+    "tags": [
+      "kinetics",
+      "catalyst",
+      "activation-energy"
+    ],
+    "id": "L4-135",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Катализатор",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Изменяет ли катализатор положение химического равновесия?",
+    "correctAnswer": "нет",
+    "options": [
+      "нет",
+      "смещает только вправо",
+      "смещает только влево",
+      "полностью подавляет обратную реакцию"
+    ],
+    "explanation": "Катализатор ускоряет прямую и обратную реакции, поэтому равновесие достигается быстрее без изменения его положения.",
+    "rule": "Катализатор не изменяет константу равновесия при заданной температуре.",
+    "example": "Равновесный состав остаётся тем же.",
+    "hint": "Катализатор влияет на скорость обоих направлений.",
+    "tags": [
+      "kinetics",
+      "equilibrium",
+      "catalyst"
+    ],
+    "id": "L4-136",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Катализ обратимой реакции",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Как катализатор влияет на прямую и обратную реакции в обратимой системе?",
+    "correctAnswer": "ускоряет обе реакции и позволяет быстрее достичь равновесия",
+    "options": [
+      "ускоряет обе реакции и позволяет быстрее достичь равновесия",
+      "ускоряет только прямую реакцию",
+      "ускоряет только обратную реакцию",
+      "останавливает обе реакции"
+    ],
+    "explanation": "Один и тот же альтернативный путь снижает энергетические барьеры обоих направлений реакции.",
+    "rule": "Катализатор сокращает время установления равновесия.",
+    "example": "Конечный равновесный состав сохраняется.",
+    "hint": "Обратимая реакция идёт одновременно в двух направлениях.",
+    "tags": [
+      "kinetics",
+      "equilibrium",
+      "catalyst"
+    ],
+    "id": "L4-137",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическая кинетика",
+    "subtopic": "Управление скоростью",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "kinetics-experiment",
+    "prompt": "В виртуальном опыте температура и концентрация фиксированы. Как ускорить реакцию куска CaCO₃ с кислотой изменением только формы твёрдого реагента?",
+    "correctAnswer": "измельчить CaCO3",
+    "acceptedAnswers": [
+      "измельчить карбонат кальция",
+      "увеличить площадь поверхности"
+    ],
+    "options": [
+      "измельчить CaCO₃",
+      "укрупнить кусок CaCO₃",
+      "уменьшить площадь контакта",
+      "изолировать поверхность покрытием"
+    ],
+    "explanation": "Измельчение увеличивает площадь поверхности CaCO₃ при той же массе и повышает частоту контактов с кислотой.",
+    "rule": "При фиксированных прочих условиях большая площадь контакта ускоряет гетерогенную реакцию.",
+    "example": "Порошок реагирует быстрее крупного куска.",
+    "hint": "Разрешено менять только площадь поверхности.",
+    "tags": [
+      "kinetics",
+      "surface-area",
+      "scenario"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L4-138",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Динамическое равновесие",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Что означает динамическое химическое равновесие?",
+    "correctAnswer": "скорости прямой и обратной реакций равны, поэтому состав системы постоянен",
+    "options": [
+      "скорости прямой и обратной реакций равны, поэтому состав системы постоянен",
+      "обе реакции полностью прекращаются",
+      "в системе остаются только продукты",
+      "концентрации всех веществ становятся равными"
+    ],
+    "explanation": "Микроскопические процессы продолжаются в обоих направлениях с одинаковыми скоростями, сохраняя постоянный макроскопический состав.",
+    "rule": "Равенство скоростей не означает равенство концентраций.",
+    "example": "Реагенты и продукты могут одновременно присутствовать в постоянных количествах.",
+    "hint": "Реакции продолжаются в обоих направлениях.",
+    "tags": [
+      "equilibrium",
+      "dynamic-equilibrium"
+    ],
+    "id": "L4-139",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Концентрация",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Что происходит с равновесием после увеличения концентрации одного из реагентов?",
+    "correctAnswer": "смещается в сторону расходования добавленного реагента",
+    "options": [
+      "смещается в сторону расходования добавленного реагента",
+      "всегда смещается к реагентам",
+      "полностью прекращается",
+      "катализатор образуется автоматически"
+    ],
+    "explanation": "Система отвечает на добавление вещества усилением направления, в котором это вещество расходуется.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Добавление N₂ в синтезе NH₃ благоприятствует прямой реакции.",
+    "hint": "Система стремится уменьшить внесённое изменение.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "concentration"
+    ],
+    "id": "L4-140",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Давление",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Для N₂ + 3H₂ ⇌ 2NH₃ увеличили давление. Куда сместится равновесие?",
+    "correctAnswer": "вправо, к NH₃",
+    "acceptedAnswers": [
+      "вправо",
+      "вправо, к NH3",
+      "в сторону NH3",
+      "к продуктам"
+    ],
+    "options": [
+      "вправо, к NH₃",
+      "влево, к N₂ и H₂",
+      "не изменится при любых условиях",
+      "реакция остановится"
+    ],
+    "explanation": "Слева четыре моля газа, справа два; повышение давления благоприятствует стороне с меньшим числом молей газа.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Сжатие смещает это равновесие к аммиаку.",
+    "hint": "Посчитай коэффициенты газообразных веществ с обеих сторон.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "pressure",
+      "ammonia"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L4-141",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Давление",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Для N₂ + 3H₂ ⇌ 2NH₃ уменьшили давление. Куда сместится равновесие?",
+    "correctAnswer": "влево, к N₂ и H₂",
+    "acceptedAnswers": [
+      "влево",
+      "влево, к N2 и H2",
+      "к реагентам"
+    ],
+    "options": [
+      "влево, к N₂ и H₂",
+      "вправо, к NH₃",
+      "в сторону катализатора",
+      "полностью исчезнет"
+    ],
+    "explanation": "Уменьшение давления благоприятствует стороне с большим числом молей газа: четырём молям слева.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Расширение системы уменьшает выход NH₃ в этой модели.",
+    "hint": "При снижении давления выгодна сторона с большим числом молей газа.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "pressure",
+      "ammonia"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L4-142",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Температура",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Реакция N₂ + 3H₂ ⇌ 2NH₃ + Q экзотермическая. Что произойдёт при повышении температуры?",
+    "correctAnswer": "равновесие сместится влево",
+    "acceptedAnswers": [
+      "влево",
+      "к реагентам"
+    ],
+    "options": [
+      "равновесие сместится влево",
+      "равновесие сместится вправо",
+      "равновесие исчезнет",
+      "температура не влияет"
+    ],
+    "explanation": "Подвод тепла смещает экзотермическое равновесие в эндотермическом обратном направлении.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Тепло можно рассматривать как продукт прямой реакции.",
+    "hint": "Система стремится расходовать добавленное тепло.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "temperature",
+      "ammonia"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L4-143",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Температура",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Для экзотермической реакции N₂ + 3H₂ ⇌ 2NH₃ + Q понизили температуру. Куда сместится равновесие?",
+    "correctAnswer": "вправо, к NH₃",
+    "acceptedAnswers": [
+      "вправо",
+      "к NH3",
+      "к продуктам"
+    ],
+    "options": [
+      "вправо, к NH₃",
+      "влево, к N₂ и H₂",
+      "положение всегда сохраняется",
+      "реакция становится необратимой"
+    ],
+    "explanation": "Охлаждение благоприятствует экзотермическому направлению, которое компенсирует отвод тепла.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Понижение температуры повышает равновесную долю NH₃ в этой модели.",
+    "hint": "Прямая реакция выделяет тепло.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "temperature",
+      "ammonia"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L4-144",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Удаление продукта",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Из системы N₂ + 3H₂ ⇌ 2NH₃ постоянно удаляют NH₃. Куда смещается равновесие?",
+    "correctAnswer": "вправо, к образованию NH₃",
+    "acceptedAnswers": [
+      "вправо",
+      "к продуктам",
+      "в сторону образования NH3"
+    ],
+    "options": [
+      "вправо, к образованию NH₃",
+      "влево, к реагентам",
+      "не меняется",
+      "реакция останавливается"
+    ],
+    "explanation": "Удаление продукта снижает его концентрацию, и система образует дополнительный NH₃.",
+    "rule": "По принципу Ле Шателье система ослабляет действие внешнего воздействия.",
+    "example": "Отвод продукта может поддерживать протекание прямой реакции.",
+    "hint": "Система стремится восполнить удалённый продукт.",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "concentration",
+      "ammonia"
+    ],
+    "parameters": {
+      "compound": "NH3"
+    },
+    "id": "L4-145",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химическое равновесие",
+    "subtopic": "Катализатор",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equilibrium-control",
+    "prompt": "Что произойдёт с положением равновесия после добавления катализатора?",
+    "correctAnswer": "положение не изменится; равновесие установится быстрее",
+    "options": [
+      "положение не изменится; равновесие установится быстрее",
+      "сместится только вправо",
+      "сместится только влево",
+      "исчезнет обратная реакция"
+    ],
+    "explanation": "Катализатор одинаково ускоряет прямое и обратное направления и сокращает время установления равновесия.",
+    "rule": "Катализатор не изменяет равновесный состав при неизменной температуре.",
+    "example": "Он помогает быстрее прийти к тому же состоянию.",
+    "hint": "Раздели влияние на скорость и влияние на состав.",
+    "tags": [
+      "equilibrium",
+      "catalyst"
+    ],
+    "id": "L4-146",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Анод",
+    "difficulty": 1,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "На каком электроде происходит окисление?",
+    "correctAnswer": "на аноде",
+    "acceptedAnswers": [
+      "анод"
+    ],
+    "options": [
+      "на аноде",
+      "на катоде",
+      "в солевом мостике",
+      "на обоих без переноса электронов"
+    ],
+    "explanation": "На аноде частицы отдают электроны, поэтому там протекает окисление.",
+    "rule": "Окисление происходит на аноде, восстановление — на катоде.",
+    "example": "Zn → Zn²⁺ + 2e⁻ — анодный процесс.",
+    "hint": "Свяжи анод с отдачей электронов.",
+    "tags": [
+      "electrochemistry",
+      "anode",
+      "oxidation"
+    ],
+    "id": "L4-147",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Катод",
+    "difficulty": 1,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "На каком электроде происходит восстановление?",
+    "correctAnswer": "на катоде",
+    "acceptedAnswers": [
+      "катод"
+    ],
+    "options": [
+      "на катоде",
+      "на аноде",
+      "в электролите без электрода",
+      "только в проводнике"
+    ],
+    "explanation": "На катоде частицы принимают электроны, поэтому там протекает восстановление.",
+    "rule": "Окисление происходит на аноде, восстановление — на катоде.",
+    "example": "Cu²⁺ + 2e⁻ → Cu — катодный процесс.",
+    "hint": "Свяжи катод с принятием электронов.",
+    "tags": [
+      "electrochemistry",
+      "cathode",
+      "reduction"
+    ],
+    "id": "L4-148",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Электродный процесс",
+    "difficulty": 1,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "Определи процесс: Zn → Zn²⁺ + 2e⁻.",
+    "correctAnswer": "окисление",
+    "options": [
+      "окисление",
+      "восстановление",
+      "нейтрализация",
+      "гидролиз"
+    ],
+    "explanation": "Атом цинка отдаёт два электрона, а его степень окисления возрастает от 0 до +2.",
+    "rule": "Отдача электронов означает окисление.",
+    "example": "Этот процесс идёт на цинковом аноде.",
+    "hint": "Электроны находятся среди продуктов.",
+    "tags": [
+      "electrochemistry",
+      "oxidation",
+      "zinc"
+    ],
+    "parameters": {
+      "compound": "Zn"
+    },
+    "id": "L4-149",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Электродный процесс",
+    "difficulty": 1,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "Определи процесс: Cu²⁺ + 2e⁻ → Cu.",
+    "correctAnswer": "восстановление",
+    "options": [
+      "восстановление",
+      "окисление",
+      "диссоциация",
+      "разложение"
+    ],
+    "explanation": "Ион меди принимает два электрона, а его степень окисления уменьшается от +2 до 0.",
+    "rule": "Принятие электронов означает восстановление.",
+    "example": "Этот процесс идёт на медном катоде.",
+    "hint": "Электроны находятся среди реагентов.",
+    "tags": [
+      "electrochemistry",
+      "reduction",
+      "copper"
+    ],
+    "parameters": {
+      "compound": "Cu"
+    },
+    "id": "L4-150",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Гальванический элемент",
+    "difficulty": 2,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "В гальваническом элементе Zn/Cu какой металл окисляется?",
+    "correctAnswer": "цинк",
+    "acceptedAnswers": [
+      "Zn"
+    ],
+    "options": [
+      "цинк",
+      "медь",
+      "оба металла одновременно",
+      "ни один металл"
+    ],
+    "explanation": "Более активный цинк отдаёт электроны и превращается в Zn²⁺ на аноде.",
+    "rule": "В элементе Zn/Cu цинк служит анодом.",
+    "example": "Zn → Zn²⁺ + 2e⁻.",
+    "hint": "Сравни активность Zn и Cu.",
+    "tags": [
+      "electrochemistry",
+      "galvanic-cell",
+      "zinc",
+      "copper"
+    ],
+    "id": "L4-151",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Электрохимия",
+    "subtopic": "Гальванический элемент",
+    "difficulty": 2,
+    "station": "electrochemistry-station",
+    "interactionType": "electrochemistry",
+    "prompt": "В элементе Zn/Cu куда движутся электроны по внешней цепи?",
+    "correctAnswer": "от цинка к медному электроду",
+    "acceptedAnswers": [
+      "от Zn к Cu",
+      "от цинка к меди"
+    ],
+    "options": [
+      "от цинка к медному электроду",
+      "от меди к цинковому электроду",
+      "из раствора в солевой мостик",
+      "электроны не движутся"
+    ],
+    "explanation": "Электроны образуются при окислении Zn на аноде и поступают к медному катоду, где идёт восстановление.",
+    "rule": "Во внешней цепи электроны движутся от анода к катоду.",
+    "example": "Zn-анод → проводник → Cu-катод.",
+    "hint": "Начни с электрода, где электроны образуются.",
+    "tags": [
+      "electrochemistry",
+      "galvanic-cell",
+      "electron-flow"
+    ],
+    "id": "L4-152",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Условия коррозии",
+    "difficulty": 1,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Стальная конструкция контактирует с водой и кислородом. Какой процесс может происходить?",
+    "correctAnswer": "электрохимическая коррозия стали",
+    "acceptedAnswers": [
+      "коррозия стали",
+      "электрохимическая коррозия"
+    ],
+    "options": [
+      "электрохимическая коррозия стали",
+      "полная пассивация при любых условиях",
+      "нейтрализация воды",
+      "плавление железа"
+    ],
+    "explanation": "Влага действует как электролит, а на поверхности стали возникают сопряжённые анодные и катодные участки.",
+    "rule": "Электрохимическая коррозия требует электронного и ионного переноса.",
+    "example": "На анодном участке Fe превращается в Fe²⁺.",
+    "hint": "Учти одновременное присутствие металла, воды и кислорода.",
+    "tags": [
+      "corrosion",
+      "steel",
+      "moisture",
+      "oxygen"
+    ],
+    "constructionContext": "Осмотр стальной балки во влажной зоне.",
+    "id": "L4-153",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Анодный процесс железа",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Выбери анодный процесс железа при коррозии.",
+    "correctAnswer": "Fe → Fe²⁺ + 2e⁻",
+    "acceptedAnswers": [
+      "Fe -> Fe^2+ + 2e-"
+    ],
+    "options": [
+      "Fe → Fe²⁺ + 2e⁻",
+      "Fe²⁺ + 2e⁻ → Fe",
+      "O₂ + 2H₂O + 4e⁻ → 4OH⁻",
+      "H⁺ + OH⁻ → H₂O"
+    ],
+    "explanation": "На анодном участке атомы железа окисляются, переходят в раствор как Fe²⁺ и отдают электроны.",
+    "rule": "Анодный процесс является окислением.",
+    "example": "Повышение степени окисления Fe: 0 → +2.",
+    "hint": "Выбери полуреакцию с электронами справа.",
+    "tags": [
+      "corrosion",
+      "steel",
+      "anode",
+      "oxidation"
+    ],
+    "parameters": {
+      "compound": "Fe"
+    },
+    "id": "L4-154",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Барьерная защита",
+    "difficulty": 1,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Как работает сплошное барьерное защитное покрытие металла?",
+    "correctAnswer": "уменьшает контакт металла с агрессивной средой",
+    "options": [
+      "уменьшает контакт металла с агрессивной средой",
+      "ускоряет доступ воды и кислорода",
+      "повышает электропроводность электролита",
+      "превращает железо в более активный металл"
+    ],
+    "explanation": "Неповреждённое покрытие отделяет поверхность металла от воды, кислорода и растворённых агрессивных веществ.",
+    "rule": "Эффективность барьерной защиты зависит от целостности покрытия.",
+    "example": "Защитная лакокрасочная система снижает контакт стали со средой.",
+    "hint": "Покрытие создаёт физическую границу.",
+    "tags": [
+      "corrosion",
+      "protection",
+      "coating"
+    ],
+    "id": "L4-155",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Протекторная защита",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "В чём принцип протекторной защиты металлической конструкции?",
+    "correctAnswer": "более активный соединённый металл окисляется преимущественно и защищает основной металл",
+    "options": [
+      "более активный соединённый металл окисляется преимущественно и защищает основной металл",
+      "основной металл нагревают до плавления",
+      "электролит делают более проводящим",
+      "защищаемый металл используют как анод"
+    ],
+    "explanation": "Протектор принимает роль расходуемого анода, поставляет электроны и поддерживает защищаемую конструкцию в катодном состоянии.",
+    "rule": "Протектор должен быть электрохимически активнее защищаемого металла.",
+    "example": "Цинковый протектор может защищать стальную деталь.",
+    "hint": "Один металл расходуется ради сохранения другого.",
+    "tags": [
+      "corrosion",
+      "protection",
+      "sacrificial-anode"
+    ],
+    "id": "L4-156",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Пассивация",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Что такое пассивация металла?",
+    "correctAnswer": "образование защитной поверхностной плёнки, снижающей скорость коррозии",
+    "options": [
+      "образование защитной поверхностной плёнки, снижающей скорость коррозии",
+      "полное растворение металла",
+      "увеличение площади активной поверхности",
+      "механическое разрушение покрытия"
+    ],
+    "explanation": "Плотная поверхностная плёнка затрудняет дальнейший перенос веществ и электрохимические процессы на металле.",
+    "rule": "Пассивное состояние уменьшает скорость коррозии.",
+    "example": "Щелочная среда бетона помогает сохранять пассивность арматуры.",
+    "hint": "Речь идёт о защитном состоянии поверхности.",
+    "tags": [
+      "corrosion",
+      "passivation",
+      "protection"
+    ],
+    "constructionContext": "Пассивная плёнка важна для стальной арматуры.",
+    "id": "L4-157",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Влияние среды",
+    "difficulty": 1,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Какая среда обычно наиболее благоприятна для электрохимической коррозии стали?",
+    "correctAnswer": "влажная среда с растворённым электролитом",
+    "options": [
+      "влажная среда с растворённым электролитом",
+      "сухой воздух",
+      "сухая инертная атмосфера",
+      "вакуум"
+    ],
+    "explanation": "Вода с растворёнными ионами обеспечивает ионную проводимость и облегчает работу коррозионных микроэлементов.",
+    "rule": "Влага и электролиты обычно повышают риск электрохимической коррозии.",
+    "example": "Растворённые соли увеличивают проводимость водной плёнки.",
+    "hint": "Выбери среду с хорошим ионным переносом.",
+    "tags": [
+      "corrosion",
+      "environment",
+      "electrolyte",
+      "moisture"
+    ],
+    "id": "L4-158",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Гальваническая пара",
+    "difficulty": 3,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Два разных металла электрически контактируют во влажной среде. Какой дополнительный риск возникает?",
+    "correctAnswer": "гальваническая пара усиливает коррозию менее благородного металла",
+    "options": [
+      "гальваническая пара усиливает коррозию менее благородного металла",
+      "оба металла автоматически пассивируются",
+      "вода перестаёт проводить ионы",
+      "металлы обязательно сплавляются"
+    ],
+    "explanation": "Электрический контакт и общий электролит создают гальваническую пару, где более активный металл становится анодом.",
+    "rule": "Гальваническая коррозия зависит от сочетания металлов и условий среды.",
+    "example": "Активный металл в паре растворяется преимущественно.",
+    "hint": "Определи, какой металл станет анодом пары.",
+    "tags": [
+      "corrosion",
+      "galvanic-couple",
+      "dissimilar-metals"
+    ],
+    "constructionContext": "Узел соединяет разные металлы и открыт дождевой воде.",
+    "id": "L4-159",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Коррозия",
+    "subtopic": "Инженерная диагностика",
+    "difficulty": 4,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Балка имеет повреждённое покрытие, влажную солевую плёнку и очаги ржавчины. Выбери правильную цепочку диагностики и защиты.",
+    "correctAnswer": "влага с электролитом → окисление Fe на аноде → электрохимическая коррозия → восстановить барьерную защиту",
+    "options": [
+      "влага с электролитом → окисление Fe на аноде → электрохимическая коррозия → восстановить барьерную защиту",
+      "сухой воздух → восстановление Fe на аноде → нейтрализация → увеличить проводимость",
+      "влага → плавление Fe → термическая коррозия → удалить всё покрытие",
+      "электролит → окисление O₂ → гидролиз → добавить соль"
+    ],
+    "explanation": "Влажная солевая плёнка служит электролитом; железо окисляется на анодных участках, а целостное покрытие ограничивает контакт со средой.",
+    "rule": "Диагностика связывает условия среды, полуреакцию, механизм и подходящий принцип защиты.",
+    "example": "Fe → Fe²⁺ + 2e⁻; после подготовки поверхности восстанавливают защитную систему.",
+    "hint": "Начни с среды, затем найди анодный процесс и барьерный принцип.",
+    "tags": [
+      "corrosion",
+      "mission",
+      "inspection",
+      "steel",
+      "coating"
+    ],
+    "constructionContext": "Виртуальная инспекция стальной балки на открытой площадке.",
+    "id": "L4-160",
+    "level": 4,
+    "points": 160,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строительные материалы",
+    "subtopic": "Бетон",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какое минеральное вяжущее является основой обычного цементного бетона?",
+    "correctAnswer": "цемент",
+    "options": [
+      "цемент",
+      "кварцевый песок",
+      "стальная арматура",
+      "вода"
+    ],
+    "explanation": "Цемент при взаимодействии с водой образует продукты гидратации, которые связывают заполнители в монолит.",
+    "rule": "Цемент является гидравлическим минеральным вяжущим.",
+    "example": "Портландцемент широко используют в обычном бетоне.",
+    "hint": "Выбери компонент, который выполняет роль вяжущего.",
+    "tags": [
+      "construction-materials",
+      "cement",
+      "concrete"
+    ],
+    "id": "L5-161",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строительные материалы",
+    "subtopic": "Состав бетона",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Выбери полный базовый состав обычного цементного бетона.",
+    "correctAnswer": "цемент, вода, мелкий и крупный заполнители",
+    "options": [
+      "цемент, вода, мелкий и крупный заполнители",
+      "только цемент и вода",
+      "известь и гипс без заполнителей",
+      "сталь, стекло и полимер"
+    ],
+    "explanation": "Обычный бетон включает цементное вяжущее, воду затворения, мелкий и крупный заполнители; специальные добавки вводят по необходимости.",
+    "rule": "Вывод о строительном материале связывают с его составом, структурой и условиями эксплуатации.",
+    "example": "Песок служит мелким, щебень — крупным заполнителем.",
+    "hint": "В составе нужны вяжущее, вода и заполнители двух фракций.",
+    "tags": [
+      "construction-materials",
+      "concrete",
+      "composition"
+    ],
+    "id": "L5-162",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия цемента",
+    "subtopic": "Гидратация",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Как называется общий процесс взаимодействия цементных минералов с водой?",
+    "correctAnswer": "гидратация",
+    "options": [
+      "гидратация",
+      "карбонизация",
+      "коррозия",
+      "пиролиз"
+    ],
+    "explanation": "Гидратация охватывает химические реакции цементных минералов с водой и образование гидратных продуктов.",
+    "rule": "Гидратация начинается после смешивания цемента с водой.",
+    "example": "Продукты гидратации формируют структуру цементного камня.",
+    "hint": "Название связано с присоединением и участием воды.",
+    "tags": [
+      "cement",
+      "hydration",
+      "binder"
+    ],
+    "id": "L5-163",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия цемента",
+    "subtopic": "Твердение",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Почему цементный материал постепенно твердеет после смешивания с водой?",
+    "correctAnswer": "из-за гидратации цементных минералов и образования продуктов твердения",
+    "options": [
+      "из-за гидратации цементных минералов и образования продуктов твердения",
+      "только из-за испарения всей воды",
+      "из-за плавления заполнителя",
+      "из-за окисления песка"
+    ],
+    "explanation": "Химические и физико-химические процессы гидратации создают новые твёрдые фазы и связную структуру цементного камня.",
+    "rule": "Вывод о строительном материале связывают с его составом, структурой и условиями эксплуатации.",
+    "example": "Развитие структуры продолжается после начального схватывания.",
+    "hint": "Свяжи воду с реакциями цементных минералов.",
+    "tags": [
+      "cement",
+      "hydration",
+      "hardening"
+    ],
+    "id": "L5-164",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Бетон",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Как чрезмерное увеличение водоцементного отношения обычно влияет на затвердевший бетон?",
+    "correctAnswer": "увеличивает пористость и снижает прочность",
+    "options": [
+      "увеличивает пористость и снижает прочность",
+      "устраняет все поры и повышает прочность",
+      "превращает бетон в металл",
+      "не влияет на структуру"
+    ],
+    "explanation": "Избыточная вода оставляет после удаления дополнительное поровое пространство, что обычно повышает проницаемость и снижает прочность.",
+    "rule": "При сопоставимых условиях рост водоцементного отношения ухудшает плотность структуры.",
+    "example": "Состав с В/Ц 0,70 обычно пористее состава с В/Ц 0,45.",
+    "hint": "Представь пространство, которое останется после избытка воды.",
+    "tags": [
+      "concrete",
+      "water-cement-ratio",
+      "porosity",
+      "strength"
+    ],
+    "id": "L5-165",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Оксид кальция",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу оксида кальция, используемого в известковом цикле.",
+    "correctAnswer": "CaO",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "O"
+      ],
+      "compound": "CaO"
+    },
+    "explanation": "Катион Ca²⁺ и анион O²⁻ соединяются в отношении 1:1, образуя CaO.",
+    "rule": "Суммарный заряд формульной единицы равен нулю.",
+    "example": "CaO называют негашёной известью.",
+    "hint": "Модули зарядов ионов одинаковы.",
+    "tags": [
+      "lime",
+      "formula",
+      "calcium-oxide"
+    ],
+    "constructionContext": "CaO — промежуточное вещество известкового цикла.",
+    "id": "L5-166",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Гашение извести",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи уравнение гашения извести: CaO + H₂O → ?",
+    "correctAnswer": "Ca(OH)2",
+    "acceptedAnswers": [
+      "Ca(OH)₂"
+    ],
+    "explanation": "Оксид кальция взаимодействует с водой с образованием гидроксида кальция.",
+    "rule": "Основный оксид активного металла с водой образует основание.",
+    "example": "CaO + H₂O → Ca(OH)₂.",
+    "hint": "Продукт содержит кальций и две гидроксогруппы.",
+    "tags": [
+      "lime",
+      "hydration",
+      "reaction"
+    ],
+    "parameters": {
+      "compound": "CaO"
+    },
+    "id": "L5-167",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи уравнение: Ca(OH)₂ + CO₂ → ?",
+    "correctAnswer": "CaCO3 + H2O",
+    "acceptedAnswers": [
+      "CaCO₃ + H₂O"
+    ],
+    "explanation": "Гидроксид кальция связывает углекислый газ с образованием карбоната кальция и воды.",
+    "rule": "Основание и кислотный оксид могут образовывать соль и воду.",
+    "example": "Эта реакция замыкает известковый цикл.",
+    "hint": "Продукт соли содержит карбонат-ион.",
+    "tags": [
+      "lime",
+      "carbonation",
+      "reaction"
+    ],
+    "parameters": {
+      "compound": "Ca(OH)2"
+    },
+    "id": "L5-168",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Гипсовые материалы",
+    "subtopic": "Природный гипс",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "formula-builder",
+    "prompt": "Укажи формулу природного двуводного гипса.",
+    "correctAnswer": "CaSO4·2H2O",
+    "acceptedAnswers": [
+      "CaSO₄·2H₂O",
+      "CaSO4*2H2O"
+    ],
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "SO4",
+        "·",
+        "2H2O"
+      ],
+      "compound": "CaSO4·2H2O"
+    },
+    "explanation": "Природный гипс является дигидратом сульфата кальция и содержит две молекулы кристаллизационной воды.",
+    "rule": "Точка в формуле отделяет соль от кристаллизационной воды.",
+    "example": "CaSO₄·2H₂O — дигидрат сульфата кальция.",
+    "hint": "Добавь две молекулы воды к CaSO₄.",
+    "tags": [
+      "gypsum",
+      "hydrate",
+      "formula"
+    ],
+    "id": "L5-169",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Карбонатные материалы",
+    "subtopic": "Известняк",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какое соединение является основным компонентом известняка?",
+    "correctAnswer": "CaCO3",
+    "acceptedAnswers": [
+      "CaCO₃",
+      "карбонат кальция"
+    ],
+    "options": [
+      "CaCO₃",
+      "CaO",
+      "Ca(OH)₂",
+      "CaSO₄·2H₂O"
+    ],
+    "explanation": "Известняк преимущественно состоит из минерала кальцита — карбоната кальция CaCO₃.",
+    "rule": "Вывод о строительном материале связывают с его составом, структурой и условиями эксплуатации.",
+    "example": "При обжиге CaCO₃ образуется CaO.",
+    "hint": "Ищи карбонат кальция.",
+    "tags": [
+      "limestone",
+      "carbonate",
+      "construction-materials"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L5-170",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Обжиг известняка",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Закончи уравнение обжига известняка: CaCO₃ → ?",
+    "correctAnswer": "CaO + CO2",
+    "acceptedAnswers": [
+      "CaO + CO₂"
+    ],
+    "explanation": "При нагревании карбонат кальция разлагается на оксид кальция и углекислый газ.",
+    "rule": "Термическое разложение CaCO₃: CaCO₃ → CaO + CO₂.",
+    "example": "Процесс является стадией получения извести.",
+    "hint": "Образуются оксид кальция и газ.",
+    "tags": [
+      "limestone",
+      "lime",
+      "decomposition"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L5-171",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Известковый цикл",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Выбери правильную последовательность веществ известкового цикла.",
+    "correctAnswer": "CaCO₃ → CaO → Ca(OH)₂ → CaCO₃",
+    "acceptedAnswers": [
+      "CaCO3 → CaO → Ca(OH)2 → CaCO3"
+    ],
+    "options": [
+      "CaCO₃ → CaO → Ca(OH)₂ → CaCO₃",
+      "CaO → CaCO₃ → Ca(OH)₂ → CaO",
+      "Ca(OH)₂ → CaO → CaCO₃ → H₂O",
+      "CaCO₃ → Ca(OH)₂ → CaO → CO₂"
+    ],
+    "explanation": "Известняк обжигают до CaO, гашением получают Ca(OH)₂, а карбонизация возвращает CaCO₃.",
+    "rule": "Цикл объединяет обжиг, гашение и карбонизацию.",
+    "example": "Ca(OH)₂ + CO₂ → CaCO₃ + H₂O.",
+    "hint": "Начни с известняка и найди стадии обжига и гашения.",
+    "tags": [
+      "lime",
+      "sequence",
+      "carbonation"
+    ],
+    "id": "L5-172",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Обжиг известняка",
+    "difficulty": 1,
+    "station": "reaction-bench",
+    "interactionType": "construction-material",
+    "prompt": "Какой тип реакции происходит при обжиге CaCO₃?",
+    "correctAnswer": "термическое разложение",
+    "options": [
+      "термическое разложение",
+      "нейтрализация",
+      "замещение",
+      "полимеризация"
+    ],
+    "explanation": "Одно сложное вещество при нагревании образует два продукта: CaO и CO₂.",
+    "rule": "При разложении из одного реагента образуется несколько продуктов.",
+    "example": "CaCO₃ → CaO + CO₂.",
+    "hint": "Посчитай число исходных веществ и продуктов.",
+    "tags": [
+      "lime",
+      "reaction-type",
+      "decomposition"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L5-173",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строительные материалы",
+    "subtopic": "Минеральные вяжущие",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Сопоставь материал с игровой категорией: цемент, гипс и воздушная известь.",
+    "correctAnswer": "цемент — гидравлическое; гипс — воздушное; воздушная известь — воздушное",
+    "options": [
+      "цемент — гидравлическое; гипс — воздушное; воздушная известь — воздушное",
+      "все три — металлические",
+      "цемент — воздушное; гипс — гидравлическое; известь — полимерное",
+      "все три — заполнители"
+    ],
+    "explanation": "Портландцемент способен твердеть и сохранять прочность в воде; гипсовое и воздушно-известковое вяжущие относят к воздушным.",
+    "rule": "Категория вяжущего определяется условиями твердения и сохранения прочности.",
+    "example": "Цемент используют для бетона во влажных условиях.",
+    "hint": "Отдели гидравлическое вяжущее от воздушных.",
+    "tags": [
+      "binders",
+      "cement",
+      "gypsum",
+      "lime"
+    ],
+    "id": "L5-174",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Силикаты",
+    "subtopic": "Степень окисления",
+    "difficulty": 1,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления кремния в SiO₂.",
+    "correctAnswer": "+4",
+    "acceptedAnswers": [
+      "4+"
+    ],
+    "options": [
+      "+4",
+      "+2",
+      "−4",
+      "0"
+    ],
+    "explanation": "Два атома кислорода дают суммарно −4, поэтому кремний в нейтральном SiO₂ имеет степень окисления +4.",
+    "rule": "Сумма степеней окисления в нейтральном соединении равна нулю.",
+    "example": "+4 + 2·(−2) = 0.",
+    "hint": "Кислород обычно имеет степень окисления −2.",
+    "tags": [
+      "silicates",
+      "oxidation-state",
+      "silicon"
+    ],
+    "parameters": {
+      "compound": "SiO2"
+    },
+    "id": "L5-175",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Временная жёсткость",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какие соли преимущественно вызывают временную жёсткость воды?",
+    "correctAnswer": "гидрокарбонаты кальция и магния",
+    "options": [
+      "гидрокарбонаты кальция и магния",
+      "нитраты натрия и калия",
+      "хлориды натрия и калия",
+      "сульфаты алюминия и железа"
+    ],
+    "explanation": "Карбонатная временная жёсткость связана главным образом с растворёнными гидрокарбонатами Ca(HCO₃)₂ и Mg(HCO₃)₂.",
+    "rule": "Временную жёсткость также называют карбонатной.",
+    "example": "Ca(HCO₃)₂ содержит ион жёсткости Ca²⁺.",
+    "hint": "Выбери соли с гидрокарбонат-ионом.",
+    "tags": [
+      "water",
+      "hardness",
+      "bicarbonate"
+    ],
+    "id": "L5-176",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Постоянная жёсткость",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какие соли могут формировать постоянную жёсткость воды?",
+    "correctAnswer": "сульфаты и хлориды кальция и магния",
+    "options": [
+      "сульфаты и хлориды кальция и магния",
+      "только гидрокарбонат натрия",
+      "нитрат калия и сахароза",
+      "карбонат натрия и гидроксид калия"
+    ],
+    "explanation": "Некарбонатная постоянная жёсткость связана, например, с сульфатами и хлоридами Ca²⁺ и Mg²⁺.",
+    "rule": "Жёсткость определяют прежде всего ионы Ca²⁺ и Mg²⁺.",
+    "example": "CaSO₄ и MgCl₂ вносят вклад в постоянную жёсткость.",
+    "hint": "Ищи соли кальция и магния без гидрокарбоната.",
+    "tags": [
+      "water",
+      "hardness",
+      "sulfate",
+      "chloride"
+    ],
+    "id": "L5-177",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Ионы жёсткости",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "ion-builder",
+    "prompt": "Выбери два основных катиона жёсткости воды.",
+    "correctAnswer": "Ca^2+ и Mg^2+",
+    "acceptedAnswers": [
+      "Ca²⁺ и Mg²⁺",
+      "Mg^2+ и Ca^2+",
+      "Mg²⁺ и Ca²⁺"
+    ],
+    "options": [
+      "Ca²⁺ и Mg²⁺",
+      "Na⁺ и K⁺",
+      "H⁺ и NH₄⁺",
+      "Al³⁺ и Fe³⁺"
+    ],
+    "explanation": "Общую жёсткость природной воды в основной учебной модели определяют концентрации Ca²⁺ и Mg²⁺.",
+    "rule": "Кальций и магний являются главными ионами жёсткости.",
+    "example": "Их суммарное содержание используют при сравнении проб.",
+    "hint": "Это щёлочноземельные металлы второй группы.",
+    "tags": [
+      "water",
+      "hardness",
+      "calcium",
+      "magnesium"
+    ],
+    "id": "L5-178",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Карбонатная накипь",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какое соединение часто является важным компонентом карбонатной накипи?",
+    "correctAnswer": "CaCO3",
+    "acceptedAnswers": [
+      "CaCO₃",
+      "карбонат кальция"
+    ],
+    "options": [
+      "CaCO₃",
+      "NaCl",
+      "KNO₃",
+      "CO₂"
+    ],
+    "explanation": "Карбонат кальция малорастворим и может выделяться в твёрдую фазу при изменении состава и нагревании воды.",
+    "rule": "Карбонатная накипь часто содержит CaCO₃.",
+    "example": "CaCO₃ также является главным компонентом известняка.",
+    "hint": "Выбери малорастворимый карбонат кальция.",
+    "tags": [
+      "water",
+      "scale",
+      "carbonate"
+    ],
+    "parameters": {
+      "compound": "CaCO3"
+    },
+    "id": "L5-179",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Сравнение жёсткости",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-mission",
+    "prompt": "Проба A: Ca²⁺ = 2.0 mmol/L, Mg²⁺ = 0.5 mmol/L. Проба B: Ca²⁺ = 1.0 mmol/L, Mg²⁺ = 1.0 mmol/L. Какая проба жёстче по сумме концентраций?",
+    "correctAnswer": "проба A",
+    "acceptedAnswers": [
+      "A"
+    ],
+    "options": [
+      "проба A",
+      "проба B",
+      "одинаковая жёсткость",
+      "данных о pH достаточно"
+    ],
+    "explanation": "Сумма для A равна 2.5 mmol/L, для B — 2.0 mmol/L, поэтому в заданной модели проба A жёстче.",
+    "rule": "При одинаковых единицах сравнивают суммарную концентрацию Ca²⁺ и Mg²⁺.",
+    "example": "2.0 + 0.5 = 2.5 mmol/L.",
+    "hint": "Сложи две концентрации для каждой пробы.",
+    "tags": [
+      "water",
+      "hardness",
+      "calculation",
+      "mission"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Проба A",
+          "readout": "Ca²⁺ 2.0 · Mg²⁺ 0.5 mmol/L"
+        },
+        {
+          "title": "Проба B",
+          "readout": "Ca²⁺ 1.0 · Mg²⁺ 1.0 mmol/L"
+        },
+        {
+          "title": "Сравнение",
+          "readout": "Σ(Ca²⁺ + Mg²⁺)"
+        }
+      ]
+    },
+    "id": "L5-180",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "Пассивация арматуры",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Почему высокая щёлочность нормального цементного бетона может защищать стальную арматуру?",
+    "correctAnswer": "способствует образованию и сохранению пассивного состояния стали",
+    "options": [
+      "способствует образованию и сохранению пассивного состояния стали",
+      "полностью удаляет железо из арматуры",
+      "растворяет защитный слой бетона",
+      "заменяет сталь полимером"
+    ],
+    "explanation": "Высокий pH поровой жидкости поддерживает на стали защитную пассивную плёнку и снижает скорость коррозии.",
+    "rule": "Щелочная среда бетона является важным фактором пассивности арматуры.",
+    "example": "Снижение pH у поверхности стали повышает риск депассивации.",
+    "hint": "Свяжи высокий pH с защитной плёнкой.",
+    "tags": [
+      "reinforcement",
+      "passivation",
+      "alkalinity",
+      "concrete"
+    ],
+    "id": "L5-181",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Карбонизация бетона",
+    "subtopic": "Реагент",
+    "difficulty": 1,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Какой газ участвует в карбонизации бетона?",
+    "correctAnswer": "CO2",
+    "acceptedAnswers": [
+      "CO₂",
+      "углекислый газ"
+    ],
+    "options": [
+      "CO₂",
+      "O₂",
+      "H₂",
+      "N₂"
+    ],
+    "explanation": "Углекислый газ проникает в поры и реагирует с щелочными компонентами цементного камня.",
+    "rule": "Карбонизация связана с воздействием атмосферного CO₂.",
+    "example": "CO₂ может реагировать с Ca(OH)₂ с образованием CaCO₃.",
+    "hint": "Название процесса связано с углеродом.",
+    "tags": [
+      "concrete",
+      "carbonation",
+      "carbon-dioxide"
+    ],
+    "parameters": {
+      "compound": "CO2"
+    },
+    "id": "L5-182",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Карбонизация бетона",
+    "subtopic": "Изменение pH",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Как карбонизация обычно влияет на pH цементного бетона?",
+    "correctAnswer": "снижает pH",
+    "acceptedAnswers": [
+      "снижает"
+    ],
+    "options": [
+      "снижает pH",
+      "повышает pH до максимума",
+      "всегда сохраняет pH без изменений",
+      "делает pH отрицательным"
+    ],
+    "explanation": "Карбонизация расходует щелочные компоненты цементного камня, поэтому щёлочность и pH снижаются.",
+    "rule": "Продвижение фронта карбонизации уменьшает защитную щёлочность.",
+    "example": "У арматуры это может привести к потере пассивации.",
+    "hint": "Щелочные компоненты вступают в реакцию с CO₂.",
+    "tags": [
+      "concrete",
+      "carbonation",
+      "pH"
+    ],
+    "id": "L5-183",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "Карбонизация и арматура",
+    "difficulty": 3,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Чем опасно продвижение фронта карбонизации к арматуре?",
+    "correctAnswer": "снижение щёлочности может нарушить пассивность стали и повысить риск коррозии",
+    "options": [
+      "снижение щёлочности может нарушить пассивность стали и повысить риск коррозии",
+      "арматура превращается в заполнитель",
+      "бетон автоматически становится водонепроницаемым",
+      "CO₂ повышает pH у стали"
+    ],
+    "explanation": "Когда карбонизированная зона достигает арматуры, пониженный pH может дестабилизировать защитную плёнку стали.",
+    "rule": "Глубину карбонизации сопоставляют с толщиной защитного слоя.",
+    "example": "Депассивация создаёт условия для коррозии при наличии влаги и кислорода.",
+    "hint": "Оцени влияние пониженного pH на защитную плёнку.",
+    "tags": [
+      "reinforcement",
+      "carbonation",
+      "corrosion",
+      "passivation"
+    ],
+    "id": "L5-184",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "Хлоридное воздействие",
+    "difficulty": 3,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Почему хлорид-ионы опасны для железобетона?",
+    "correctAnswer": "могут нарушать пассивность стали и способствовать локальной коррозии",
+    "options": [
+      "могут нарушать пассивность стали и способствовать локальной коррозии",
+      "всегда повышают прочность стали",
+      "полностью блокируют перенос ионов",
+      "превращают бетон в стекло"
+    ],
+    "explanation": "При достаточном содержании у поверхности арматуры хлориды способны локально разрушать пассивное состояние и инициировать питтинговую коррозию.",
+    "rule": "Риск зависит от содержания хлоридов у арматуры и условий эксплуатации.",
+    "example": "Морская среда требует контроля проникновения Cl⁻.",
+    "hint": "Подумай о локальном разрушении пассивной плёнки.",
+    "tags": [
+      "reinforcement",
+      "chloride",
+      "corrosion",
+      "passivation"
+    ],
+    "id": "L5-185",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Инспекция конструкций",
+    "subtopic": "Признаки коррозии",
+    "difficulty": 2,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "На железобетоне обнаружены продольные трещины и ржавые пятна. Что следует проверить в первую очередь?",
+    "correctAnswer": "состояние арматуры и возможную коррозию",
+    "options": [
+      "состояние арматуры и возможную коррозию",
+      "только цвет заполнителя",
+      "электронную конфигурацию кремния",
+      "температуру плавления цемента"
+    ],
+    "explanation": "Трещины вдоль арматуры и ржавые пятна являются основанием для обследования стали, защитного слоя и условий коррозии.",
+    "rule": "Диагноз подтверждают совокупностью наблюдений и измерений.",
+    "example": "Дополнительно оценивают pH, хлориды и влажность.",
+    "hint": "Свяжи ржавые следы с металлическим элементом внутри бетона.",
+    "tags": [
+      "inspection",
+      "reinforcement",
+      "corrosion",
+      "cracks"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Визуальный осмотр",
+          "readout": "Продольные трещины · ржавые пятна"
+        },
+        {
+          "title": "Локализация",
+          "readout": "Следы совпадают с линией арматуры"
+        },
+        {
+          "title": "Решение",
+          "readout": "Назначить обследование стали"
+        }
+      ]
+    },
+    "id": "L5-186",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "pH у арматуры",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Вблизи арматуры измерен значительно пониженный pH. Какой риск возрастает?",
+    "correctAnswer": "потеря пассивации и последующая коррозия стали",
+    "options": [
+      "потеря пассивации и последующая коррозия стали",
+      "мгновенное увеличение диаметра арматуры",
+      "переход стали в полимер",
+      "образование нейтронов"
+    ],
+    "explanation": "Снижение щёлочности может дестабилизировать пассивную плёнку; при наличии воды и кислорода возрастает риск коррозии.",
+    "rule": "pH у арматуры является одним из индикаторов условий пассивности.",
+    "example": "Карбонизация способна снижать pH защитного слоя.",
+    "hint": "Оцени устойчивость защитной плёнки при меньшей щёлочности.",
+    "tags": [
+      "reinforcement",
+      "pH",
+      "passivation",
+      "corrosion"
+    ],
+    "id": "L5-187",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "Хлориды у арматуры",
+    "difficulty": 2,
+    "station": "corrosion-test-rig",
+    "interactionType": "corrosion-inspection",
+    "prompt": "Около арматуры обнаружено повышенное содержание Cl⁻. Какой риск это создаёт?",
+    "correctAnswer": "нарушение пассивности и локальная коррозия арматуры",
+    "options": [
+      "нарушение пассивности и локальная коррозия арматуры",
+      "полное исключение электрохимических процессов",
+      "увеличение pH без ограничений",
+      "образование гипса внутри стали"
+    ],
+    "explanation": "Хлориды у поверхности стали могут локально нарушать пассивную плёнку и инициировать интенсивные коррозионные очаги.",
+    "rule": "Контролируют содержание Cl⁻ именно в зоне арматуры.",
+    "example": "Особое внимание требуется в солесодержащей среде.",
+    "hint": "Хлориды опасны для локальной устойчивости пассивной плёнки.",
+    "tags": [
+      "reinforcement",
+      "chloride",
+      "corrosion"
+    ],
+    "id": "L5-188",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Защита бетона",
+    "subtopic": "Проницаемость",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Какой общий принцип уменьшает проникновение воды и агрессивных веществ в бетон?",
+    "correctAnswer": "снижение проницаемости и применение подходящей защитной системы",
+    "options": [
+      "снижение проницаемости и применение подходящей защитной системы",
+      "увеличение открытой пористости",
+      "создание дополнительных трещин",
+      "добавление растворимых солей на поверхность"
+    ],
+    "explanation": "Плотная структура и правильно выбранная защитная система замедляют транспорт воды, газов и растворённых ионов.",
+    "rule": "Вывод о строительном материале связывают с его составом, структурой и условиями эксплуатации.",
+    "example": "Качественный защитный слой снижает скорость проникновения среды.",
+    "hint": "Нужно затруднить транспорт веществ через поры.",
+    "tags": [
+      "concrete",
+      "protection",
+      "permeability"
+    ],
+    "id": "L5-189",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Инспекция конструкций",
+    "subtopic": "Источник проблемы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Проба воды имеет высокие Ca²⁺ и Mg²⁺, а на трубопроводе обнаружена карбонатная накипь. Выбери основной источник проблемы.",
+    "correctAnswer": "строительная вода",
+    "acceptedAnswers": [
+      "вода"
+    ],
+    "options": [
+      "строительная вода",
+      "полимерный герметик",
+      "стальная арматура",
+      "кварцевый заполнитель"
+    ],
+    "explanation": "Повышенное содержание ионов жёсткости в воде согласуется с образованием карбонатных отложений в водном контуре.",
+    "rule": "Источник диагностируют по согласованной цепочке измерение → процесс → проявление.",
+    "example": "Ca²⁺ и Mg²⁺ являются главными ионами жёсткости.",
+    "hint": "Сопоставь химический анализ пробы и тип отложений.",
+    "tags": [
+      "inspection",
+      "water",
+      "hardness",
+      "scale"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Отбор пробы",
+          "readout": "Вода из строительного контура"
+        },
+        {
+          "title": "Ионный анализ",
+          "readout": "Повышены Ca²⁺ и Mg²⁺"
+        },
+        {
+          "title": "Осмотр",
+          "readout": "Карбонатная накипь на трубе"
+        }
+      ]
+    },
+    "id": "L5-190",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Агрессивные среды",
+    "subtopic": "Кислотное воздействие",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Как кислая среда может влиять на цементный камень?",
+    "correctAnswer": "реагирует с компонентами цементного камня и вызывает постепенное разрушение",
+    "options": [
+      "реагирует с компонентами цементного камня и вызывает постепенное разрушение",
+      "всегда повышает щёлочность",
+      "превращает цемент в сталь",
+      "полностью закрывает все поры"
+    ],
+    "explanation": "Кислоты нейтрализуют и растворяют щелочные компоненты цементного камня, ослабляя его структуру.",
+    "rule": "Кислотостойкость обычного цементного камня ограничена.",
+    "example": "Воздействие оценивают по составу, концентрации и длительности.",
+    "hint": "Учти кислотно-основное взаимодействие со щелочными компонентами.",
+    "tags": [
+      "aggressive-environment",
+      "acid",
+      "cement"
+    ],
+    "id": "L5-191",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Агрессивные среды",
+    "subtopic": "Сульфатное воздействие",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Почему сульфатсодержащие среды важны для строительной химии?",
+    "correctAnswer": "могут вызывать химические превращения, расширяющиеся продукты и повреждение цементных материалов",
+    "options": [
+      "могут вызывать химические превращения, расширяющиеся продукты и повреждение цементных материалов",
+      "всегда повышают прочность любого бетона",
+      "не взаимодействуют с цементным камнем",
+      "заменяют заполнитель металлом"
+    ],
+    "explanation": "Некоторые виды сульфатного воздействия приводят к образованию фаз с увеличенным объёмом и внутренним напряжениям.",
+    "rule": "Опасность зависит от состава цемента, проницаемости и условий среды.",
+    "example": "Повреждение может проявляться расширением и трещинами.",
+    "hint": "Подумай о новых твёрдых фазах и изменении объёма.",
+    "tags": [
+      "aggressive-environment",
+      "sulfate",
+      "cement",
+      "expansion"
+    ],
+    "id": "L5-192",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Агрессивные среды",
+    "subtopic": "Морская среда",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Что необходимо контролировать при эксплуатации железобетона в солесодержащей морской среде?",
+    "correctAnswer": "ионы, защитный слой, арматуру и признаки коррозии",
+    "options": [
+      "ионы, защитный слой, арматуру и признаки коррозии",
+      "только цвет поверхности",
+      "только температуру воздуха один раз",
+      "только марку заполнителя"
+    ],
+    "explanation": "Надёжная оценка объединяет проникновение агрессивных ионов, состояние защитного слоя бетона, арматуры и внешние признаки повреждения.",
+    "rule": "Инспекция агрессивной среды использует несколько взаимосвязанных показателей.",
+    "example": "Содержание Cl⁻ сопоставляют с глубиной арматуры.",
+    "hint": "Выбери комплексный контроль среды и конструкции.",
+    "tags": [
+      "marine",
+      "chloride",
+      "inspection",
+      "reinforcement"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Среда",
+          "readout": "Солесодержащая вода · циклы увлажнения"
+        },
+        {
+          "title": "Защитный слой",
+          "readout": "Проверить толщину и трещины"
+        },
+        {
+          "title": "Арматура",
+          "readout": "Cl⁻ · потенциал · следы коррозии"
+        }
+      ]
+    },
+    "id": "L5-193",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Бетон",
+    "subtopic": "Пористость",
+    "difficulty": 1,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Как высокая открытая пористость обычно влияет на проникновение воды и растворённых веществ в бетон?",
+    "correctAnswer": "облегчает проникновение",
+    "options": [
+      "облегчает проникновение",
+      "полностью блокирует проникновение",
+      "не влияет на транспорт",
+      "превращает воду в газ"
+    ],
+    "explanation": "Связанная система открытых пор создаёт пути для капиллярного всасывания и переноса растворённых веществ.",
+    "rule": "Проницаемость связана с объёмом, размером и связностью пор.",
+    "example": "Более плотная структура обычно замедляет транспорт воды.",
+    "hint": "Представь связанную сеть каналов внутри материала.",
+    "tags": [
+      "concrete",
+      "porosity",
+      "permeability"
+    ],
+    "id": "L5-194",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Полимерные материалы",
+    "subtopic": "Применение",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "construction-material",
+    "prompt": "Для чего применяют полимерные материалы и добавки в строительстве?",
+    "correctAnswer": "для направленного изменения требуемых свойств и защиты материалов",
+    "options": [
+      "для направленного изменения требуемых свойств и защиты материалов",
+      "только для увеличения плотности стали",
+      "для превращения цемента в элемент",
+      "исключительно как крупный заполнитель"
+    ],
+    "explanation": "Полимеры применяют для регулирования адгезии, водостойкости, деформативности, герметичности и защитных характеристик.",
+    "rule": "Конкретный эффект определяется типом полимера и системой материала.",
+    "example": "Полимерные покрытия могут выполнять барьерную функцию.",
+    "hint": "Ищи ответ с несколькими управляемыми свойствами.",
+    "tags": [
+      "polymers",
+      "construction-materials",
+      "protection"
+    ],
+    "id": "L5-195",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Химия воды",
+    "subtopic": "Оценка строительной воды",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Проба содержит Ca²⁺ = 1.8 mmol/L и Mg²⁺ = 1.2 mmol/L. Определи суммарную концентрацию ионов жёсткости.",
+    "correctAnswer": {
+      "value": 3,
+      "absoluteTolerance": 0.05,
+      "unit": "mmol/L"
+    },
+    "explanation": "В заданной модели суммарная концентрация ионов жёсткости равна 1.8 + 1.2 = 3.0 mmol/L.",
+    "rule": "При одинаковых единицах складывают концентрации Ca²⁺ и Mg²⁺.",
+    "example": "2.0 + 0.5 = 2.5 mmol/L.",
+    "hint": "Сложи показания двух ионных каналов.",
+    "tags": [
+      "mission",
+      "water",
+      "hardness",
+      "calculation"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Отбор",
+          "readout": "Проба W-16 принята"
+        },
+        {
+          "title": "Кальций",
+          "readout": "Ca²⁺ = 1.8 mmol/L"
+        },
+        {
+          "title": "Магний",
+          "readout": "Mg²⁺ = 1.2 mmol/L"
+        },
+        {
+          "title": "Оценка",
+          "readout": "Рассчитать сумму"
+        }
+      ]
+    },
+    "constructionContext": "Виртуальная оценка воды для строительного контура.",
+    "id": "L5-196",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Железобетон",
+    "subtopic": "Комплексная инспекция",
+    "difficulty": 4,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "У арматуры pH = 9.2, обнаружены Cl⁻ и высокая влажность. Выбери итоговую оценку.",
+    "correctAnswer": "высокий риск депассивации и электрохимической коррозии арматуры",
+    "options": [
+      "высокий риск депассивации и электрохимической коррозии арматуры",
+      "арматура надёжно защищена при любых условиях",
+      "происходит только гидратация цемента",
+      "хлориды устраняют влияние влажности"
+    ],
+    "explanation": "Пониженная щёлочность, хлориды и влага совместно создают неблагоприятные условия для пассивности и коррозионной стойкости стали.",
+    "rule": "Риск оценивают по совокупности pH, хлоридов, влаги и состояния бетона.",
+    "example": "Защитное решение выбирают после подтверждённой диагностики.",
+    "hint": "Объедини три неблагоприятных показателя.",
+    "tags": [
+      "mission",
+      "reinforcement",
+      "pH",
+      "chloride",
+      "corrosion"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Осмотр",
+          "readout": "Трещины вдоль арматуры"
+        },
+        {
+          "title": "pH-скан",
+          "readout": "pH = 9.2 у стали"
+        },
+        {
+          "title": "Хлориды",
+          "readout": "Cl⁻ обнаружены"
+        },
+        {
+          "title": "Влажность",
+          "readout": "Высокая"
+        },
+        {
+          "title": "Диагноз",
+          "readout": "Оценить коррозионный риск"
+        }
+      ]
+    },
+    "constructionContext": "Виртуальное обследование железобетонного элемента.",
+    "id": "L5-197",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Бетон",
+    "subtopic": "Сравнение составов",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "construction-mission",
+    "prompt": "Состав A имеет В/Ц = 0.45, состав B — В/Ц = 0.70. При сопоставимых материалах какой состав обычно плотнее и прочнее после твердения?",
+    "correctAnswer": "состав A",
+    "acceptedAnswers": [
+      "A"
+    ],
+    "options": [
+      "состав A",
+      "состав B",
+      "характеристики всегда одинаковы",
+      "В/Ц не связано с пористостью"
+    ],
+    "explanation": "Меньшее водоцементное отношение при корректном уплотнении обычно оставляет меньше капиллярных пор и обеспечивает более высокую прочность.",
+    "rule": "Сравнение справедливо при сопоставимых материалах, уходе и достаточной удобоукладываемости.",
+    "example": "В/Ц 0.45 обычно даёт более плотную структуру, чем 0.70.",
+    "hint": "Сопоставь избыток воды с будущей пористостью.",
+    "tags": [
+      "mission",
+      "concrete",
+      "water-cement-ratio",
+      "strength"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Состав A",
+          "readout": "В/Ц = 0.45"
+        },
+        {
+          "title": "Состав B",
+          "readout": "В/Ц = 0.70"
+        },
+        {
+          "title": "Прогноз пористости",
+          "readout": "Избыток воды → дополнительные поры"
+        },
+        {
+          "title": "Выбор",
+          "readout": "Нужна более плотная структура"
+        }
+      ]
+    },
+    "id": "L5-198",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Известковые материалы",
+    "subtopic": "Идентификация веществ",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "construction-mission",
+    "prompt": "Сопоставь три образца известкового цикла с названиями.",
+    "correctAnswer": "CaO — оксид кальция; Ca(OH)2 — гидроксид кальция; CaCO3 — карбонат кальция",
+    "options": [
+      "CaO — оксид кальция; Ca(OH)₂ — гидроксид кальция; CaCO₃ — карбонат кальция",
+      "CaO — карбонат; Ca(OH)₂ — оксид; CaCO₃ — гидроксид",
+      "все три — сульфаты кальция",
+      "все три — формы металлического кальция"
+    ],
+    "explanation": "CaO является оксидом, Ca(OH)₂ — основанием, а CaCO₃ — солью угольной кислоты.",
+    "rule": "Формула определяет класс и систематическое название вещества.",
+    "example": "Обжиг, гашение и карбонизация связывают эти три соединения.",
+    "hint": "Различи O²⁻, OH⁻ и CO₃²⁻.",
+    "tags": [
+      "mission",
+      "lime",
+      "nomenclature",
+      "formula"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Образец A",
+          "readout": "CaO · продукт обжига"
+        },
+        {
+          "title": "Образец B",
+          "readout": "Ca(OH)₂ · продукт гашения"
+        },
+        {
+          "title": "Образец C",
+          "readout": "CaCO₃ · продукт карбонизации"
+        }
+      ]
+    },
+    "id": "L5-199",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  },
+  {
+    "topic": "Строительная химия",
+    "subtopic": "Итоговая инспекция",
+    "difficulty": 5,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Финальная инспекция: выбери последовательность, связывающую формулу, реакцию, раствор, коррозию и строительный вывод.",
+    "correctAnswer": "CaCO₃ → CaO + CO₂; pH снижен; Fe окисляется; защиту восстановить",
+    "acceptedAnswers": [
+      "CaCO3 → CaO + CO2; pH снижен; Fe окисляется; защиту восстановить"
+    ],
+    "options": [
+      "CaCO₃ → CaO + CO₂; pH снижен; Fe окисляется; защиту восстановить",
+      "CaCO₃ → Ca + CO₃; pH повышен; Fe восстанавливается; добавить хлориды",
+      "CaO → CaCO₃ + O₂; pH не измерять; Fe плавится; увеличить пористость",
+      "CaCO₃ не реагирует; вода не влияет; коррозия невозможна; снять покрытие"
+    ],
+    "explanation": "Проверенная цепочка объединяет разложение карбоната, потерю щёлочности у стали, анодное окисление железа и восстановление защитного барьера.",
+    "rule": "Итоговая миссия связывает данные предыдущих уровней в единую инженерную причинную цепь.",
+    "example": "Fe → Fe²⁺ + 2e⁻ является анодной стадией коррозии.",
+    "hint": "Проверь каждую часть цепочки отдельно: уравнение, pH, электродный процесс, защита.",
+    "tags": [
+      "final-mission",
+      "adaptive",
+      "reaction",
+      "pH",
+      "corrosion",
+      "construction"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Формула",
+          "readout": "Известняк: CaCO₃"
+        },
+        {
+          "title": "Реакция",
+          "readout": "Обжиг: CaCO₃ → CaO + CO₂"
+        },
+        {
+          "title": "Раствор",
+          "readout": "pH у арматуры снижен"
+        },
+        {
+          "title": "Электрохимия",
+          "readout": "Fe → Fe²⁺ + 2e⁻"
+        },
+        {
+          "title": "Инспекция",
+          "readout": "Покрытие повреждено"
+        }
+      ]
+    },
+    "constructionContext": "Финальная виртуальная приёмка химической безопасности участка.",
+    "id": "L5-200",
+    "level": 5,
+    "points": 180,
+    "procedural": false,
+    "reviewStatus": "verified"
+  }
+]

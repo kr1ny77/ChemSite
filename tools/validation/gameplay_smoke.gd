@@ -6,6 +6,8 @@ func _initialize() -> void:
 func _run() -> void:
 	var scene := load("res://scenes/levels/construction_site.tscn") as PackedScene
 	var site := scene.instantiate()
+	site.save_path = "user://gameplay-smoke-progress.json"
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(site.save_path))
 	root.add_child(site)
 	await process_frame
 	var player := site.get_node("Player") as CharacterBody3D
@@ -32,9 +34,12 @@ func _run() -> void:
 	site._unhandled_input(event)
 	assert(hud.is_panel_open(), "Formula board did not open")
 	hud._append_token("Ca")
-	hud._append_token("CO3")
-	assert(hud._formula_buffer == "CaCO3", "Formula assembly failed")
+	hud._append_token("CO₃")
+	assert(hud._formula_buffer == "CaCO₃", "Formula assembly failed")
 	site._submit_answer(hud._formula_buffer)
 	assert(site._completed == 2 and site._score == 200, "Formula task did not score")
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(site.save_path))
+	site.queue_free()
+	await process_frame
 	print("CHEMSITE_GAMEPLAY_SMOKE_OK")
 	quit()

@@ -102,6 +102,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 17, Color("627679")))
 	if task.get("interactionType", "") == "formula-builder":
 		_show_formula_builder(task)
+	elif task.get("interactionType", "") == "oxidation-state":
+		_show_short_input()
 	else:
 		var cards := GridContainer.new()
 		cards.columns = 2
@@ -124,6 +126,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	var focus_target := _panel_content.get_child(3)
 	if focus_target is GridContainer and focus_target.get_child_count() > 0:
 		focus_target.get_child(0).grab_focus()
+	elif focus_target is LineEdit:
+		focus_target.grab_focus()
 	elif focus_target is Label and _panel_content.get_child_count() > 4:
 		var tile_grid := _panel_content.get_child(4)
 		if tile_grid is GridContainer and tile_grid.get_child_count() > 0:
@@ -142,7 +146,8 @@ func _show_formula_builder(task: Dictionary) -> void:
 	tokens.add_theme_constant_override("h_separation", 9)
 	tokens.add_theme_constant_override("v_separation", 9)
 	_panel_content.add_child(tokens)
-	for token in task.tokenOptions:
+	var token_options: Array = task.get("tokenOptions", task.get("parameters", {}).get("formulaTokens", []))
+	for token in token_options:
 		var tile := Button.new()
 		tile.text = token
 		tile.custom_minimum_size = Vector2(170, 54)
@@ -167,6 +172,20 @@ func _show_formula_builder(task: Dictionary) -> void:
 	_style_button(submit)
 	submit.pressed.connect(func() -> void: answer_submitted.emit(_formula_buffer))
 	actions.add_child(submit)
+
+func _show_short_input() -> void:
+	var input := LineEdit.new()
+	input.placeholder_text = "+6"
+	input.custom_minimum_size.y = 55
+	input.add_theme_font_size_override("font_size", 25)
+	_panel_content.add_child(input)
+	var submit := Button.new()
+	submit.text = "ПРОВЕРИТЬ  →"
+	submit.custom_minimum_size.y = 55
+	_style_button(submit)
+	submit.pressed.connect(func() -> void: answer_submitted.emit(input.text))
+	input.text_submitted.connect(func(_text: String) -> void: answer_submitted.emit(input.text))
+	_panel_content.add_child(submit)
 
 func _submit_option(option: String) -> void:
 	answer_submitted.emit(option)
@@ -206,7 +225,7 @@ func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: int = 0) -> void:
 	_clear_panel()
 	_panel.anchor_top = 0.24
-	_panel.anchor_bottom = 0.62
+	_panel.anchor_bottom = 0.70 if not correct and not str(task.get("example", "")).is_empty() else 0.62
 	_panel.visible = true
 	var title := "ВЕРНО  +%d" % awarded if correct else "РАЗБЕРИ ОШИБКУ"
 	_panel_content.add_child(_label(title, 29, Color("2c977b") if correct else Color("c66c47")))
@@ -216,6 +235,8 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("627679")))
 	if not correct:
 		_panel_content.add_child(_label("ОТВЕТ: " + str(task.correctAnswer), 19, Color("243b43")))
+		if not str(task.get("example", "")).is_empty():
+			_panel_content.add_child(_label("ПРИМЕР: " + str(task.example), 18, Color("627679")))
 	var next := Button.new()
 	next.text = "СЛЕДУЮЩЕЕ ЗАДАНИЕ  →" if not correct else "ПРОДОЛЖИТЬ  →"
 	next.custom_minimum_size.y = 55
