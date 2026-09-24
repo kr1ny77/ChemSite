@@ -54,15 +54,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest. Levels 2 and 3 are playable as career rounds. Level 4 content and HUD QA are ready for station mechanics; its new assets, playable route and human visual QA remain in progress.
+Levels 1–4 are playable career rounds. Level 4's two new GLBs, station routes, full five-task HUD round and current macOS/Windows packages passed automated QA. Level 5 chemistry audit and station mechanics are next; broader human playtesting, interaction polish, accessibility, performance and release QA remain open.
 
 ## Next task
 
-Build Level 4 electrochemistry and corrosion station assets in Blender, connect the audited bank to a playable round, and test long-answer choice controls in packaged builds. Polish Level 2 virtual-mixing and ionic interactions; audit Level 5, then continue performance and release QA and the human-driven exported-app/audio pass.
+Independently audit all Level 5 answers and explanations, quarantine any ambiguity, then implement its stations and playable round. Continue Level 2–4 interaction polish, human exported-app and audio playtests, performance testing and native Windows QA.
 
 ## Last verification
 
-2026-09-24: Level 4 chemistry audit passed two independent Hess calculations, 38 choices and explicit equilibrium conditions. Godot 4.7.2 editor parse and all 40 Level 4 HUD panels passed. The 1440×900 long-answer recapture now contains every choice and the full prompt within the panel. Refreshed macOS and Windows exports each passed packaged Level 1, 2 and 3 five-task smokes after the HUD change; the Windows PCK ran under matching Godot on macOS. Native Windows execution remains pending.
+2026-09-25: Godot 4.7.2 editor import/parse passed both Level 4 GLBs. Blender Agent Studio fresh-import geometry inspections passed with no issues; two six-view sheets were reviewed. Level 4 physical station routes, save unlock, source five-task HUD round and 1440×900 rendered five-task round passed. Refreshed macOS release app and Windows PCK each passed the packaged Level 4 round. Native Windows EXE testing remains pending.
 
 ## Known issues
 
@@ -70,4 +70,4 @@ Build Level 4 electrochemistry and corrosion station assets in Blender, connect 
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–3 enter gameplay through separate career rounds. Level 4 content/UI passed but needs station assets and round integration; Level 5 needs independent review. Levels 2–3 still need human playtesting and interaction polish.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–4 enter gameplay through separate career rounds. Level 5 needs independent review and implementation. Levels 2–3 still need human playtesting and interaction polish.

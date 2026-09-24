@@ -51,7 +51,7 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1) -> boo
 	if capture_visual and not await _capture(main, capture_dir + "/results.png"):
 		return false
 	var progress: Dictionary = load("res://scripts/core/save_data.gd").load_progress(save_path)
-	var expected_score := int({1: 700, 2: 840, 3: 980}.get(level, -1))
+	var expected_score := int({1: 700, 2: 840, 3: 980, 4: 1120}.get(level, -1))
 	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == 1
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
@@ -105,7 +105,7 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 						button.pressed.emit()
 						return true
 		return false
-	if interaction in ["oxidation-state", "equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation", "dissociation", "numeric-calculation", "virtual-scales", "solution-preparation"]:
+	if task.correctAnswer is Dictionary or interaction in ["oxidation-state", "equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation", "dissociation", "numeric-calculation", "virtual-scales", "solution-preparation"]:
 		for child in panel_content.get_children():
 			if child is LineEdit:
 				child.text = str(task.correctAnswer.value) if task.correctAnswer is Dictionary else str(task.correctAnswer)

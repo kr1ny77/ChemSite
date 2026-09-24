@@ -385,4 +385,6 @@ func _station_name(station_id: String) -> String:
 		"ionic-reaction-station": return "ИОННАЯ ЛАБОРАТОРИЯ"
 		"inspection-station": return "КОНТРОЛЬ МАТЕРИАЛОВ"
 		"solution-laboratory": return "ЛАБОРАТОРИЯ РАСТВОРОВ"
+		"electrochemistry-station": return "ЭЛЕКТРОХИМИЯ"
+		"corrosion-test-rig": return "ИСПЫТАНИЕ КОРРОЗИИ"
 	return station_id

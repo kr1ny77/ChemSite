@@ -35,11 +35,11 @@ func _ready() -> void:
 	var content := VBoxContainer.new()
 	content.anchor_left = 0.5
 	content.anchor_right = 0.5
-	content.anchor_top = 0.16
-	content.anchor_bottom = 0.16
+	content.anchor_top = 0.08
+	content.anchor_bottom = 0.08
 	content.offset_right = 600
 	content.custom_minimum_size = Vector2(600, 420)
-	content.add_theme_constant_override("separation", 18)
+	content.add_theme_constant_override("separation", 12)
 	add_child(content)
 	_menu_content = content
 	var eyebrow := Label.new()
@@ -87,6 +87,14 @@ func _ready() -> void:
 	level_three.add_theme_font_size_override("font_size", 20)
 	level_three.pressed.connect(func() -> void: start_requested.emit("career", "", 3))
 	content.add_child(level_three)
+	var level_four := Button.new()
+	level_four.text = "УРОВЕНЬ 4 · ЭНЕРГИЯ И КОРРОЗИЯ   →" if int(progress.unlocked_level) >= 4 else "УРОВЕНЬ 4 · ЗАВЕРШИ УРОВЕНЬ 3"
+	level_four.disabled = int(progress.unlocked_level) < 4
+	level_four.custom_minimum_size = Vector2(350, 54)
+	level_four.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	level_four.add_theme_font_size_override("font_size", 20)
+	level_four.pressed.connect(func() -> void: start_requested.emit("career", "", 4))
+	content.add_child(level_four)
 	var practice_button := Button.new()
 	practice_button.text = "ПРАКТИКА"
 	practice_button.custom_minimum_size = Vector2(280, 48)

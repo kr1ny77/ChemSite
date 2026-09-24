@@ -23,6 +23,12 @@ const LEVEL_THREE_STATIONS := [
 	{"id": "ionic-reaction-station", "name": "ИОННАЯ ЛАБОРАТОРИЯ", "position": Vector3(5.7, 0.0, -3.4), "model": "ionic_reaction_station"},
 	{"id": "inspection-station", "name": "КОНТРОЛЬ МАТЕРИАЛОВ", "position": Vector3(5.5, 0.0, 4.5), "model": "inspection_station"},
 ]
+const LEVEL_FOUR_STATIONS := [
+	{"id": "reaction-bench", "name": "РЕАКЦИОННЫЙ СТОЛ", "position": Vector3(-3.3, 0.0, -3.5), "model": "reaction_bench"},
+	{"id": "electrochemistry-station", "name": "ЭЛЕКТРОХИМИЯ", "position": Vector3(5.7, 0.0, -3.4), "model": "electrochemistry_station"},
+	{"id": "corrosion-test-rig", "name": "ИСПЫТАНИЕ КОРРОЗИИ", "position": Vector3(5.5, 0.0, 4.5), "model": "corrosion_test_rig"},
+	{"id": "inspection-station", "name": "КОНТРОЛЬ МАТЕРИАЛОВ", "position": Vector3(-3.8, 0.0, 0.8), "model": "inspection_station"},
+]
 
 @onready var _world: Node3D = $World
 @onready var _player: CharacterBody3D = $Player
@@ -375,4 +381,5 @@ func _stations() -> Array:
 	match level:
 		2: return LEVEL_TWO_STATIONS
 		3: return LEVEL_THREE_STATIONS
+		4: return LEVEL_FOUR_STATIONS
 	return STATION_CONFIG
