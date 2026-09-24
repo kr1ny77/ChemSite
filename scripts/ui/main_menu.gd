@@ -35,8 +35,8 @@ func _ready() -> void:
 	var content := VBoxContainer.new()
 	content.anchor_left = 0.5
 	content.anchor_right = 0.5
-	content.anchor_top = 0.23
-	content.anchor_bottom = 0.23
+	content.anchor_top = 0.16
+	content.anchor_bottom = 0.16
 	content.offset_right = 600
 	content.custom_minimum_size = Vector2(600, 420)
 	content.add_theme_constant_override("separation", 18)
@@ -64,7 +64,6 @@ func _ready() -> void:
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
 	var start := Button.new()
-	start.text = "КАРЬЕРА   →"
 	start.custom_minimum_size = Vector2(280, 68)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)
@@ -80,6 +79,14 @@ func _ready() -> void:
 	level_two.add_theme_font_size_override("font_size", 20)
 	level_two.pressed.connect(func() -> void: start_requested.emit("career", "", 2))
 	content.add_child(level_two)
+	var level_three := Button.new()
+	level_three.text = "УРОВЕНЬ 3 · РАСТВОРЫ   →" if int(progress.unlocked_level) >= 3 else "УРОВЕНЬ 3 · ЗАВЕРШИ УРОВЕНЬ 2"
+	level_three.disabled = int(progress.unlocked_level) < 3
+	level_three.custom_minimum_size = Vector2(350, 54)
+	level_three.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	level_three.add_theme_font_size_override("font_size", 20)
+	level_three.pressed.connect(func() -> void: start_requested.emit("career", "", 3))
+	content.add_child(level_three)
 	var practice_button := Button.new()
 	practice_button.text = "ПРАКТИКА"
 	practice_button.custom_minimum_size = Vector2(280, 48)

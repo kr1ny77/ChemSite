@@ -18,6 +18,11 @@ const LEVEL_TWO_STATIONS := [
 	{"id": "ionic-reaction-station", "name": "ИОННАЯ ЛАБОРАТОРИЯ", "position": Vector3(5.5, 0.0, 4.5), "model": "ionic_reaction_station"},
 	{"id": "inspection-station", "name": "КОНТРОЛЬ МАТЕРИАЛОВ", "position": Vector3(-3.8, 0.0, 0.8), "model": "inspection_station"},
 ]
+const LEVEL_THREE_STATIONS := [
+	{"id": "solution-laboratory", "name": "ЛАБОРАТОРИЯ РАСТВОРОВ", "position": Vector3(-3.3, 0.0, -3.5), "model": "solution_laboratory"},
+	{"id": "ionic-reaction-station", "name": "ИОННАЯ ЛАБОРАТОРИЯ", "position": Vector3(5.7, 0.0, -3.4), "model": "ionic_reaction_station"},
+	{"id": "inspection-station", "name": "КОНТРОЛЬ МАТЕРИАЛОВ", "position": Vector3(5.5, 0.0, 4.5), "model": "inspection_station"},
+]
 
 @onready var _world: Node3D = $World
 @onready var _player: CharacterBody3D = $Player
@@ -367,4 +372,7 @@ func _resume() -> void:
 	_update_hud()
 
 func _stations() -> Array:
-	return LEVEL_TWO_STATIONS if level == 2 else STATION_CONFIG
+	match level:
+		2: return LEVEL_TWO_STATIONS
+		3: return LEVEL_THREE_STATIONS
+	return STATION_CONFIG

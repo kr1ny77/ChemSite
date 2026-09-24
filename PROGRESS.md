@@ -19,6 +19,8 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added Level 2 career entry after a completed five-task Level 1 round. Version-4 saves retain earlier progress and unlock Level 2 for prior saves with earned stars. A complete five-task Level 2 smoke visits four stations, accepts verified answers, reaches results and saves progress.
 - Refreshed the macOS and Windows release exports with the Level 2 route. The packaged macOS app and Windows PCK each pass the Level 2 five-task round through HUD answer controls. The Windows binary remains to be executed on a Windows host.
 - Audited all 40 Level 3 tasks: independently recomputed 24 numeric results, checked four dissociation equations for atom/charge conservation, and checked 12 choice tasks. Clarified the dilute-solution approximation in pH prompts and rules in the preserved TypeScript source, then re-exported the 200-task native bank. Added numeric and dissociation HUD controls and visually reviewed a 1440×900 numeric panel; fixed its station label.
+- Authored a Blender solution laboratory with shielded balance, volumetric vessels and pH display; kept editable source and GLB. Fresh Blender Agent Studio inspection passed with 10,628 triangles and no geometry issues, and six-view plus Godot gameplay-camera renders were reviewed.
+- Connected all 40 Level 3 tasks to a career round across the solution, ionic and inspection stations. Completing Level 2 unlocks Level 3. Physical walking routes, a five-task HUD round, the refreshed macOS app, a rendered packaged round and the Windows PCK all passed. Saved 1440×900 Level 3 site, numeric task and result screenshots under `docs/screenshots/`.
 - Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
 - Launched the refreshed macOS app directly, entered Career through its visible menu, and reviewed the live construction-site render and HUD at 1440×900.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
@@ -50,15 +52,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest. Level 2 is playable as a career round; its station-specific interaction and visual QA remain in progress. Level 3 content and input controls have an independent first pass while its playable station remains to be built.
+Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest. Levels 2 and 3 are playable as career rounds; their station-specific interaction and human visual QA remain in progress.
 
 ## Next task
 
-Build the Level 3 solution laboratory in Blender, route its reviewed task bank into a playable round, and test numeric answers through the actual HUD. Polish Level 2 virtual-mixing and ionic interactions, then playtest exported rounds. Continue chemistry review for Levels 4–5 and complete a human-driven exported-app/audio pass.
+Audit Level 4 chemistry and implement its new station interactions and Blender assets. Polish Level 2 virtual-mixing and ionic interactions, then playtest exported rounds. Continue through Level 5, performance and release QA; complete a human-driven exported-app/audio pass.
 
 ## Last verification
 
-2026-09-24: Godot 4.7.2 imported four Level 2 GLBs. Blender Agent Studio inspection passed all four with no issues, and six-view sheets plus the 1440×900 site were reviewed. Level 2 content, full round, routes, packaged macOS and Windows PCK smokes passed. Level 3 independent chemistry audit passed 24 numeric calculations, four dissociations and 12 choices. The native bank still validates as 199 verified plus L2-050 in review; Level 3 HUD smoke passed 40 tasks. A 1440×900 numeric panel was reviewed. Native Windows execution remains pending.
+2026-09-24: Godot 4.7.2 imported the Level 3 laboratory GLB. Blender Agent Studio fresh inspection passed with zero issues; six-view and site renders were reviewed. The Level 3 physical route smoke reached all three stations. A complete Level 3 HUD round passed with 980 points and persisted progress; save smoke verified the Level 2-to-3 unlock. Refreshed macOS app and Windows PCK both passed the Level 3 packaged smoke. A rendered macOS five-task capture showed numeric, dissociation, choice, final feedback and results screens at 1440×900. Native Windows execution remains pending.
 
 ## Known issues
 
@@ -66,4 +68,4 @@ Build the Level 3 solution laboratory in Blender, route its reviewed task bank i
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Level 1 and Level 2 enter gameplay through separate career rounds. Level 3 content/input QA passed but its station and round are pending; Levels 4–5 need independent review. Level 2 still needs human playtesting and interaction polish.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–3 enter gameplay through separate career rounds. Levels 4–5 need independent review and stations. Levels 2–3 still need human playtesting and interaction polish.

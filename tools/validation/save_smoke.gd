@@ -19,6 +19,8 @@ func _run() -> void:
 	assert(saved.unlocked_level == 1, "Incomplete rounds unlocked Level 2")
 	assert(SAVE_DATA.record_round(400, 5, TEST_PATH, 1) == OK)
 	assert(SAVE_DATA.load_progress(TEST_PATH).unlocked_level == 2, "Completed Level 1 did not unlock Level 2")
+	assert(SAVE_DATA.record_round(500, 5, TEST_PATH, 2) == OK)
+	assert(SAVE_DATA.load_progress(TEST_PATH).unlocked_level == 3, "Completed Level 2 did not unlock Level 3")
 	var legacy_file := FileAccess.open(TEST_PATH, FileAccess.WRITE)
 	legacy_file.store_string('{"save_version":1,"best_score":420,"total_xp":100,"completed_rounds":2}')
 	legacy_file.close()

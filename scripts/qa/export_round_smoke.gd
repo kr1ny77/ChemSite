@@ -4,7 +4,7 @@ const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 
 static func run(main: Node, capture_visual: bool = false, level: int = 1) -> bool:
 	var save_path := "user://export-round-smoke-progress.json"
-	var capture_dir := "user://qa-visual-round"
+	var capture_dir := "user://qa-visual-round" if level == 1 else "user://qa-visual-level%d-round" % level
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
 		var directory_error := DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(capture_dir))
@@ -51,7 +51,7 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1) -> boo
 	if capture_visual and not await _capture(main, capture_dir + "/results.png"):
 		return false
 	var progress: Dictionary = load("res://scripts/core/save_data.gd").load_progress(save_path)
-	var expected_score := 840 if level == 2 else 700
+	var expected_score := int({1: 700, 2: 840, 3: 980}.get(level, -1))
 	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == 1
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
@@ -61,7 +61,7 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1) -> boo
 		await main.get_tree().process_frame
 		await main.get_tree().create_timer(0.8).timeout
 	if passed:
-		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else ("CHEMSITE_EXPORT_LEVEL2_ROUND_OK" if level == 2 else "CHEMSITE_EXPORT_ROUND_SMOKE_OK"))
+		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else "CHEMSITE_EXPORT_LEVEL%d_ROUND_OK" % level)
 	else:
 		push_error("Export smoke: results or save are invalid")
 	return passed

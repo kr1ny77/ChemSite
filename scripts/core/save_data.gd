@@ -61,6 +61,8 @@ static func record_round(score: int, completed: int, path: String = SAVE_PATH, l
 		progress.best_stars = maxi(int(progress.best_stars), stars)
 		if level == 1:
 			progress.unlocked_level = maxi(int(progress.unlocked_level), 2)
+		elif level == 2:
+			progress.unlocked_level = maxi(int(progress.unlocked_level), 3)
 	progress.total_xp = int(progress.total_xp) + completed * 50
 	progress.completed_rounds = int(progress.completed_rounds) + 1
 	return _write_progress(progress, path)
