@@ -12,7 +12,7 @@ Distribution:
 
 These tasks are curated seed content for ChemSite.
 
-The browser prototype converted these seeds into structured TypeScript data under `legacy-web/`. All 200 tasks have been exported to `data/chemistry/curated_tasks.json`. The native game selects all 40 Level 1 tasks; their supported interactions are checked by `tools/validation/level1_content_smoke.gd`. Levels 2–5 remain outside normal selection while their station mechanics and independent chemistry review are completed. `data/chemistry/vertical_slice_tasks.json` is retained as a reference for the first ten-task slice.
+The browser prototype converted these seeds into structured TypeScript data under `legacy-web/`. All 200 tasks have been exported to `data/chemistry/curated_tasks.json`; 199 currently retain verified status, while L2-050 is held for notation review. The native game selects all 40 Level 1 tasks; their supported interactions are checked by `tools/validation/level1_content_smoke.gd`. Levels 2–5 remain outside normal selection while their station mechanics and chemistry review are completed. `data/chemistry/vertical_slice_tasks.json` is retained as a reference for the first ten-task slice.
 
 ## General Rules
 

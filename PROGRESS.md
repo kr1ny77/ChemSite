@@ -12,6 +12,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Selected 18 CC0 Kenney GLBs for the site. Authored an original rigged construction chemist and three chemistry stations using reproducible Blender scripts; exported GLBs and kept the `.blend` sources.
 - Imported nine player actions with seven skeleton bones and wired locomotion, interaction and answer reactions to AnimationTree.
 - Added all 40 curated Level 1 chemistry tasks to normal selection and exported all 200 structured tasks to native JSON. A schema check and Level 1 interaction smoke validate task shape, correct-answer acceptance, formula tiles and option choices. Formula and oxidation-state inputs now cover the Level 1 interaction set.
+- Reviewed the Level 2 answer bank and explanations, checked 20 molecular and ionic equations for element and charge conservation, and placed L2-050 in the chemistry review queue for phosphorus oxide notation. Re-exporting the preserved TypeScript bank reapplies the review status through a native override file.
 - Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
 - Launched the refreshed macOS app directly, entered Career through its visible menu, and reviewed the live construction-site render and HUD at 1440×900.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
@@ -47,11 +48,11 @@ Complete visual QA for the expanded 40-task Level 1 bank and continue site, feed
 
 ## Next task
 
-Complete a human-driven five-task round in the exported app and listen to the audio mix on target speakers. Implement distinct station mechanics for Levels 2–5 and independently review their chemistry content.
+Complete a human-driven five-task round in the exported app and listen to the audio mix on target speakers. Implement the Level 2 reaction, mixing, ionic and inspection stations, then continue chemistry review for Levels 3–5.
 
 ## Last verification
 
-2026-09-24: The shell passed Blender fresh import with six materials, 5,132 triangles, no invalid vertices or degenerate faces. Godot import, routes, collision, Career and Practice smokes passed. The refreshed macOS app passed headless and rendered five-task rounds with HUD answer submission; all task/feedback/results screenshots were captured, and final feedback/results reviewed at full resolution. The rendered run exited cleanly. The Windows release export completed as an x86_64 PE plus PCK; the PCK passed the isolated five-task smoke under Godot 4.7.2 on macOS. Native Windows execution remains pending.
+2026-09-24: The shell passed Blender fresh import with six materials and 5,132 triangles. Godot import, routes, collision, Career and Practice smokes passed. The refreshed macOS app passed headless and rendered five-task rounds with HUD answer submission, and the final screens were reviewed at full resolution. The Windows export completed as an x86_64 PE plus PCK; the PCK passed an isolated round under matching Godot on macOS. Native Windows execution remains pending. The Level 2 content audit read all 40 entries, verified atom and charge conservation in 20 equations, and isolated L2-050. The regenerated native bank has 199 verified tasks and one review-required task.
 
 ## Known issues
 
@@ -59,4 +60,4 @@ Complete a human-driven five-task round in the exported app and listen to the au
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; only 40 Level 1 tasks enter gameplay. Level progression, later-level mechanics and independent scientific review of the broader bank remain pending.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Only 40 Level 1 tasks enter gameplay. Level progression and later-level mechanics remain pending.

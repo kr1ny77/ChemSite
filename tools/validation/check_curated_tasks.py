@@ -23,8 +23,10 @@ for task in TASKS:
     for field in ("id", "topic", "subtopic", "station", "interactionType", "prompt", "explanation", "hint"):
         if not isinstance(task.get(field), str) or not task[field].strip():
             errors.append(f"{identifier}: missing {field}")
-    if task.get("reviewStatus") != "verified":
-        errors.append(f"{identifier}: excluded from verified bank")
+    if task.get("reviewStatus") not in {"verified", "review-required"}:
+        errors.append(f"{identifier}: invalid review status")
+    if task.get("reviewStatus") == "review-required" and not task.get("reviewReason"):
+        errors.append(f"{identifier}: review reason missing")
     answer = task.get("correctAnswer")
     if isinstance(answer, dict):
         if not isinstance(answer.get("value"), (float, int)) or answer.get("absoluteTolerance", 0) < 0:
@@ -43,4 +45,6 @@ if len(TASKS) != 200 or counts != {level: 40 for level in range(1, 6)}:
 
 if errors:
     raise SystemExit("\n".join(errors))
-print("CURATED_TASKS_OK: 200 verified seeds, 40 per level, unique IDs and deterministic answers")
+verified = sum(task.get("reviewStatus") == "verified" for task in TASKS)
+review_required = len(TASKS) - verified
+print(f"CURATED_TASKS_OK: 200 seeds, {verified} verified, {review_required} in review; 40 per level")

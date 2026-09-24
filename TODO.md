@@ -14,6 +14,7 @@
 - [x] Phase 9 foundation: persist best score, stars, XP, completed rounds, topic mastery and mistakes in a versioned Godot save
 - [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
 - [x] Phase 15 export foundation: add a Windows Desktop x86_64 release preset, produce a PE32+ build with a separate PCK, and run the packaged data through the isolated round smoke
+- [x] Phase 12 Level 2 audit pass: review all 40 reaction tasks, verify conservation in 20 authored equations, and quarantine one phosphorus oxide notation issue from native selection
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
@@ -27,7 +28,7 @@
 
 - [ ] Phase 9: complete adaptive mastery and expanded progression data for Levels 2–5; Level 1 now records mastery and schedules a related task two questions after a mistake
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
-- [ ] Phase 12 review: independently review the 200 curated answers and explanations; keep Levels 2–5 out of production selection until their station mechanics pass gameplay QA
+- [ ] Phase 12 review: independently review the remaining Level 3–5 answers and explanations, resolve L2-050 with the target curriculum, and keep later levels out of production selection until their station mechanics pass gameplay QA
 - [ ] Phase 13: Levels 2–5 and their station mechanics
 - [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
 - [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test
