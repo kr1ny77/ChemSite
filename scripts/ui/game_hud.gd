@@ -77,13 +77,13 @@ func _ready() -> void:
 	_panel_content.add_theme_constant_override("separation", 13)
 	_panel.add_child(_panel_content)
 
-func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0) -> void:
-	_objective.text = "ЗАДАНИЕ %d/5  ·  %s" % [mini(completed + 1, 5), task.topic]
+func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career") -> void:
+	_objective.text = "%s %d/%d  ·  %s" % ["ПРАКТИКА" if mode == "practice" else "ЗАДАНИЕ", mini(completed + 1, target_count), target_count, task.topic]
 	_status.text = "СТАНЦИЯ: %s" % _station_name(task.station)
 	_score_label.text = "ОЧКИ  %d" % score
-	_timer_label.text = "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
+	_timer_label.text = "БЕЗ ТАЙМЕРА" if mode == "practice" else "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
 	_combo_label.text = "СЕРИЯ  %d  ·  x%s" % [streak, "2" if streak >= 5 else ("1.5" if streak >= 3 else "1")]
-	_xp_label.text = "ОПЫТ  +%d" % (completed * 50)
+	_xp_label.text = "УЧЕБНЫЙ РЕЖИМ" if mode == "practice" else "ОПЫТ  +%d" % (completed * 50)
 	if nearest.is_empty():
 		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
 	elif nearest.id == task.station:
@@ -217,21 +217,24 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	_panel_content.add_child(next)
 	next.grab_focus()
 
-func show_results(score: int, completed: int, time_left: float) -> void:
+func show_results(score: int, completed: int, time_left: float, target_count: int = 5, mode: String = "career") -> void:
 	_clear_panel()
-	_objective.text = "СМЕНА ЗАВЕРШЕНА"
-	_status.text = "ИТОГИ УЧЕБНОЙ СМЕНЫ"
+	_objective.text = "ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА"
+	_status.text = "ИТОГИ ТРЕНИРОВКИ" if mode == "practice" else "ИТОГИ УЧЕБНОЙ СМЕНЫ"
 	_prompt.text = ""
 	_panel.anchor_top = 0.24
 	_panel.anchor_bottom = 0.71
 	_panel.visible = true
-	_panel_content.add_child(_label("СМЕНА ЗАВЕРШЕНА", 31, Color("cf7729")))
-	_panel_content.add_child(_label("Выполнено задач: %d / 5" % completed, 23, Color("243b43")))
+	_panel_content.add_child(_label("ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА", 31, Color("cf7729")))
+	_panel_content.add_child(_label("Выполнено задач: %d / %d" % [completed, target_count], 23, Color("243b43")))
 	_panel_content.add_child(_label("Очки: %d" % score, 23, Color("243b43")))
-	var stars := 3 if score >= 600 and completed == 5 else (2 if score >= 400 and completed == 5 else (1 if completed == 5 else 0))
-	_panel_content.add_child(_label("ЗВЁЗДЫ: %s" % ("★".repeat(stars) + "☆".repeat(3 - stars)), 25, Color("cf7729")))
-	_panel_content.add_child(_label("ОПЫТ: +%d" % (completed * 50), 20, Color("243b43")))
-	_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
+	if mode == "career":
+		var stars := 3 if score >= 600 and completed == 5 else (2 if score >= 400 and completed == 5 else (1 if completed == 5 else 0))
+		_panel_content.add_child(_label("ЗВЁЗДЫ: %s" % ("★".repeat(stars) + "☆".repeat(3 - stars)), 25, Color("cf7729")))
+		_panel_content.add_child(_label("ОПЫТ: +%d" % (completed * 50), 20, Color("243b43")))
+		_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
+	else:
+		_panel_content.add_child(_label("Тема пройдена без таймера", 20, Color("627679")))
 	var menu := Button.new()
 	menu.text = "ГЛАВНОЕ МЕНЮ"
 	menu.custom_minimum_size.y = 55

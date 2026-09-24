@@ -16,7 +16,7 @@
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache, safety point, mixer and rebar bay define the construction site
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; all nine character actions and sustained locomotion have visual reviews, the celebration pose is fixed, and the substance-storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion, plus footstep and machinery ambience; answer feedback now pulses at the active station
-- [ ] Complete production HUD hierarchy, formula typography, accessibility and Career/Practice menu modes; score, XP, combo, stars, audio settings and keyboard focus are in place
+- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place
 - [ ] Play a complete five-task round in the native exported app and resolve gameplay and visual QA findings
 
 ## Later phases

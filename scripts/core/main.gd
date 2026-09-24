@@ -13,8 +13,13 @@ func show_menu() -> void:
 	_current.start_requested.connect(start_game)
 	_current.settings_changed.connect($AudioController.apply_settings)
 
-func start_game() -> void:
-	_replace(SITE_SCENE)
+func start_game(mode: String = "career", topic: String = "") -> void:
+	if is_instance_valid(_current):
+		_current.queue_free()
+	_current = SITE_SCENE.instantiate()
+	_current.mode = mode
+	_current.practice_topic = topic
+	add_child(_current)
 	_current.exit_requested.connect(show_menu)
 	_current.feedback_given.connect($AudioController.play_feedback)
 	_current.station_used.connect($AudioController.play_interact)

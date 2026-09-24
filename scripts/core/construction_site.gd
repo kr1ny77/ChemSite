@@ -27,6 +27,9 @@ var _active_station: String = ""
 var _hud: Control
 var _nearest_station: Dictionary = {}
 var _round_done: bool = false
+var mode: String = "career"
+var practice_topic: String = ""
+var _target_count: int = 5
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
@@ -48,9 +51,10 @@ func _process(delta: float) -> void:
 	_camera_rig.global_position = _camera_rig.global_position.lerp(_player.global_position * Vector3(0.6, 0.0, 0.6), 1.0 - exp(-3.0 * delta))
 	if _round_done or not _player.controls_enabled:
 		return
-	_time_left = maxf(0.0, _time_left - delta)
-	if _time_left <= 0.0:
-		_finish_round()
+	if mode == "career":
+		_time_left = maxf(0.0, _time_left - delta)
+		if _time_left <= 0.0:
+			_finish_round()
 	_find_nearest_station()
 	_update_hud()
 
@@ -75,6 +79,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _load_tasks() -> void:
 	_tasks = TASK_BANK.load_verified_tasks()
+	if mode == "practice":
+		_tasks = _tasks.filter(func(task: Dictionary) -> bool: return task.topic == practice_topic)
+		_target_count = mini(5, _tasks.size())
+		if _tasks.is_empty():
+			push_error("No verified practice tasks for topic: " + practice_topic)
 
 func _build_world() -> void:
 	var environment := WorldEnvironment.new()
@@ -233,7 +242,7 @@ func _find_nearest_station() -> void:
 func _update_hud() -> void:
 	if _tasks.is_empty():
 		return
-	_hud.update_status(_tasks[_task_index], _completed, _score, _time_left, _nearest_station, _streak)
+	_hud.update_status(_tasks[_task_index], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode)
 
 func _submit_answer(answer: String) -> void:
 	if _round_done or _tasks.is_empty():
@@ -265,7 +274,7 @@ func _submit_answer(answer: String) -> void:
 		_streak = 0
 		_player.play_reaction(false)
 		_hud.show_feedback(false, task, 0, _streak)
-	if _completed >= 5:
+	if _completed >= _target_count:
 		_finish_round()
 	else:
 		_update_hud()
@@ -276,10 +285,11 @@ func _finish_round() -> void:
 	_round_done = true
 	_player.controls_enabled = false
 	_update_hud()
-	var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path)
-	if save_error != OK:
-		push_warning("Could not save round progress: %s" % error_string(save_error))
-	_hud.show_results(_score, _completed, _time_left)
+	if mode == "career":
+		var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path)
+		if save_error != OK:
+			push_warning("Could not save round progress: %s" % error_string(save_error))
+	_hud.show_results(_score, _completed, _time_left, _target_count, mode)
 
 func _resume() -> void:
 	if _round_done:

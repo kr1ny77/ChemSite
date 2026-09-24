@@ -1,6 +1,6 @@
 extends Control
 
-signal start_requested
+signal start_requested(mode: String, topic: String)
 signal settings_changed(settings: Dictionary)
 
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
@@ -8,6 +8,8 @@ const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
 var _menu_content: VBoxContainer
 var _settings_panel: PanelContainer
 var _settings_button: Button
+var _practice_panel: PanelContainer
+var _practice_button: Button
 
 func _ready() -> void:
 	var background := ColorRect.new()
@@ -61,13 +63,20 @@ func _ready() -> void:
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
 	var start := Button.new()
-	start.text = "НАЧАТЬ СМЕНУ   →"
+	start.text = "КАРЬЕРА   →"
 	start.custom_minimum_size = Vector2(280, 68)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)
-	start.pressed.connect(func() -> void: start_requested.emit())
+	start.pressed.connect(func() -> void: start_requested.emit("career", ""))
 	content.add_child(start)
 	start.grab_focus()
+	var practice_button := Button.new()
+	practice_button.text = "ПРАКТИКА"
+	practice_button.custom_minimum_size = Vector2(280, 48)
+	practice_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	practice_button.add_theme_font_size_override("font_size", 19)
+	content.add_child(practice_button)
+	_practice_button = practice_button
 	var settings_button := Button.new()
 	settings_button.text = "НАСТРОЙКИ"
 	settings_button.custom_minimum_size = Vector2(280, 48)
@@ -89,6 +98,39 @@ func _ready() -> void:
 	settings_panel.add_theme_stylebox_override("panel", panel_style)
 	add_child(settings_panel)
 	_settings_panel = settings_panel
+	var practice_panel := PanelContainer.new()
+	practice_panel.anchor_left = 0.55
+	practice_panel.anchor_right = 0.94
+	practice_panel.anchor_top = 0.18
+	practice_panel.anchor_bottom = 0.82
+	practice_panel.visible = false
+	practice_panel.add_theme_stylebox_override("panel", panel_style)
+	add_child(practice_panel)
+	_practice_panel = practice_panel
+	var practice_content := VBoxContainer.new()
+	practice_content.add_theme_constant_override("separation", 18)
+	practice_panel.add_child(practice_content)
+	var practice_title := Label.new()
+	practice_title.text = "ВЫБЕРИ ТЕМУ"
+	practice_title.add_theme_color_override("font_color", Color("f3a846"))
+	practice_title.add_theme_font_size_override("font_size", 30)
+	practice_content.add_child(practice_title)
+	for topic in ["Номенклатура", "Формулы", "Периодическая система"]:
+		var topic_button := Button.new()
+		topic_button.text = topic.to_upper()
+		topic_button.custom_minimum_size.y = 58
+		topic_button.pressed.connect(func() -> void: start_requested.emit("practice", topic))
+		practice_content.add_child(topic_button)
+	var close_practice := Button.new()
+	close_practice.text = "НАЗАД  ←"
+	close_practice.custom_minimum_size.y = 54
+	practice_content.add_child(close_practice)
+	practice_button.pressed.connect(func() -> void:
+		content.visible = false
+		practice_panel.visible = true
+		practice_content.get_child(1).grab_focus()
+	)
+	close_practice.pressed.connect(_close_practice)
 	var settings_content := VBoxContainer.new()
 	settings_content.add_theme_constant_override("separation", 20)
 	settings_panel.add_child(settings_content)
@@ -120,11 +162,19 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _settings_panel != null and _settings_panel.visible and event.is_action_pressed("ui_cancel"):
 		_close_settings()
 		get_viewport().set_input_as_handled()
+	elif _practice_panel != null and _practice_panel.visible and event.is_action_pressed("ui_cancel"):
+		_close_practice()
+		get_viewport().set_input_as_handled()
 
 func _close_settings() -> void:
 	_settings_panel.visible = false
 	_menu_content.visible = true
 	_settings_button.grab_focus()
+
+func _close_practice() -> void:
+	_practice_panel.visible = false
+	_menu_content.visible = true
+	_practice_button.grab_focus()
 
 func _add_volume_slider(parent: VBoxContainer, title: String, key: String, settings: Dictionary) -> void:
 	var label := Label.new()

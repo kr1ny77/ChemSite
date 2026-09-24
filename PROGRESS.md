@@ -27,6 +27,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Reviewed Walk, Turn, PickUp and UseStation key poses as well. Moved the substance-storage station from behind the left building wall into the open rear lane, verified its first-task visibility at gameplay zoom, and revalidated the walking route, interaction, full round and collisions.
 - Captured eight sustained locomotion frames in Godot and reviewed boot support and swing at gameplay zoom. Added a brief cyan/amber answer pulse at the active chemistry station; captured its appearance at 1440×900 and verified automatic cleanup.
 - Added streak scoring (x1.5 after three correct, x2 after five), round XP and 1–3 star results. Migrated version-1 saves into version 2 while preserving scores and XP; recorded best stars. Reviewed the results screen at 1440×900 and fixed stale HUD data after the fifth answer.
+- Added Career and topic-specific Practice entry flows. Practice offers the three verified Level 1 topics, disables the timer, ends after that topic's unique questions and leaves career progress untouched. Reviewed both menu states at 1440×900.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -37,11 +38,11 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Build distinct Career and Practice entry flows, then improve station material polish and chemistry-specific interactions before an exported-app round playtest.
+Improve station material polish and chemistry-specific interactions, then complete an exported-app round playtest.
 
 ## Last verification
 
-2026-09-24: Godot editor import/parse, five-task round and save smoke passed with streak scoring and version-1 save migration. The results screen was captured and visually reviewed at 1440×900 after the stale HUD fix. The earlier station pulse cleanup, collision smoke and macOS app launch remain verified.
+2026-09-24: Godot editor import/parse, five-task Career round, version-1 save migration and topic-specific Practice smoke passed. Practice route from the main menu, timer behavior and career-save isolation were checked. Menu, topic picker and results were visually reviewed at 1440×900. The earlier station pulse cleanup, collision smoke and macOS app launch remain verified.
 
 ## Known issues
 
@@ -49,4 +50,4 @@ Build distinct Career and Practice entry flows, then improve station material po
 - Station animations, chemistry-specific VFX, footstep/machinery ambience and accessibility controls remain pending. Answer feedback and audio settings are present.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; a complete five-task playtest in the exported app remains open. Windows export is pending.
-- Advanced mastery, weak-topic scheduling, Career/Practice modes and the remaining 190 curated tasks await later phases. Combo and stars now work in the Level 1 round.
+- Advanced mastery, weak-topic scheduling and the remaining 190 curated tasks await later phases. Career, topic-specific Practice, combo and stars now work in the Level 1 round.
