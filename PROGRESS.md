@@ -13,6 +13,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Imported nine player actions with seven skeleton bones and wired locomotion, interaction and answer reactions to AnimationTree.
 - Added all 40 curated Level 1 chemistry tasks to normal selection and exported all 200 structured tasks to native JSON. A schema check and Level 1 interaction smoke validate task shape, correct-answer acceptance, formula tiles and option choices. Formula and oxidation-state inputs now cover the Level 1 interaction set.
 - Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
+- Launched the refreshed macOS app directly, entered Career through its visible menu, and reviewed the live construction-site render and HUD at 1440×900.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
 - Added a small color-coded answer particle burst; rendered the effect above the player and verified that its emitter frees itself after playback.
 - Added a native audio settings panel with live music/effects bus control, persistent versioned values, keyboard focus and Escape navigation; captured it at 1440×900.
@@ -47,7 +48,7 @@ Finish a visually reviewed five-task round in the exported app and listen to the
 
 ## Last verification
 
-2026-09-24: The preserved web bank passed 41 tests. Native JSON structural validation found 200 tasks, 40 per level. All 40 Level 1 tasks opened in Godot, accepted their curated answer, and supplied working formula tiles or a valid option where applicable. Career, Practice, learning and five-task round smokes passed with the expanded bank. Formula and eight-topic Practice panels were captured and reviewed at 1440×900. Godot editor import/parse passed; the refreshed macOS release export completed an isolated five-task packaged-app QA round successfully.
+2026-09-24: The preserved web bank passed 41 tests. Native JSON structural validation found 200 tasks, 40 per level. All 40 Level 1 tasks opened in Godot, accepted their curated answer, and supplied working formula tiles or a valid option where applicable. Career, Practice, learning and five-task round smokes passed with the expanded bank. Formula, oxidation-state and eight-topic Practice panels were captured and reviewed at 1440×900. Godot editor import/parse passed; the refreshed macOS release export completed an isolated five-task packaged-app QA round successfully. The release app also launched visibly, entered Career and displayed the live site and HUD.
 
 ## Known issues
 
