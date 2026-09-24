@@ -13,6 +13,7 @@
 - [x] Phase 11 exported visual round: capture five task panels, five feedback states and results from the macOS release binary; submit answers through actual HUD controls and preserve the final explanation before results
 - [x] Phase 9 foundation: persist best score, stars, XP, completed rounds, topic mastery and mistakes in a versioned Godot save
 - [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
+- [x] Phase 15 export foundation: add a Windows Desktop x86_64 release preset, produce a PE32+ build with a separate PCK, and run the packaged data through the isolated round smoke
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
@@ -29,5 +30,5 @@
 - [ ] Phase 12 review: independently review the 200 curated answers and explanations; keep Levels 2–5 out of production selection until their station mechanics pass gameplay QA
 - [ ] Phase 13: Levels 2–5 and their station mechanics
 - [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
-- [ ] Phase 15: Windows x86_64 export and black-box test
+- [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate

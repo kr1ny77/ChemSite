@@ -38,6 +38,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added deterministic task ordering that prioritizes weak topics and alternates stations. Career now records per-topic mastery and mistakes in a version-3 save, advances after an incorrect answer, and schedules a different related verified task two questions later when available. Reviewed the incorrect-answer panel at 1440×900.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
+- Configured a Windows Desktop x86_64 release preset. The official Godot 4.7.2 Windows template produced `builds/windows/ChemSite.exe` and `ChemSite.pck`; the PE header identifies a 64-bit Windows GUI program. The PCK completed the packaged five-task round under the matching Godot runtime on macOS.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
 ## Current work
@@ -50,12 +51,12 @@ Complete a human-driven five-task round in the exported app and listen to the au
 
 ## Last verification
 
-2026-09-24: The new shell exported from Blender 5.2.2 and fresh-import inspection passed with six materials, 5,132 triangles, no invalid vertices and no degenerate faces. A six-view contact sheet and 1440×900 Godot site render were reviewed. Godot editor import/parse, station routes, collision, Career and Practice smokes passed. The refreshed macOS app passed both headless and rendered five-task QA rounds, with each answer submitted through HUD controls. All five task and feedback screenshots and results were captured; final feedback and results were reviewed at full resolution. The rendered run exited cleanly after allowing effect resources to finish.
+2026-09-24: The shell passed Blender fresh import with six materials, 5,132 triangles, no invalid vertices or degenerate faces. Godot import, routes, collision, Career and Practice smokes passed. The refreshed macOS app passed headless and rendered five-task rounds with HUD answer submission; all task/feedback/results screenshots were captured, and final feedback/results reviewed at full resolution. The rendered run exited cleanly. The Windows release export completed as an x86_64 PE plus PCK; the PCK passed the isolated five-task smoke under Godot 4.7.2 on macOS. Native Windows execution remains pending.
 
 ## Known issues
 
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
-- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app and Windows export remain pending.
+- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
 - Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; only 40 Level 1 tasks enter gameplay. Level progression, later-level mechanics and independent scientific review of the broader bank remain pending.
