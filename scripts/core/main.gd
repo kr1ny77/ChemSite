@@ -23,6 +23,7 @@ func start_game(mode: String = "career", topic: String = "") -> void:
 	_current.exit_requested.connect(show_menu)
 	_current.feedback_given.connect($AudioController.play_feedback)
 	_current.station_used.connect($AudioController.play_interact)
+	_current.footstep.connect($AudioController.play_footstep)
 
 func _replace(scene: PackedScene) -> void:
 	if is_instance_valid(_current):

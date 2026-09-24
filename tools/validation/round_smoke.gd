@@ -33,5 +33,8 @@ func _run() -> void:
 	var progress: Dictionary = SAVE_DATA.load_progress(TEST_PATH)
 	assert(progress.best_score == 700 and progress.best_stars == 3 and progress.total_xp == 250 and progress.completed_rounds == 1)
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(TEST_PATH))
+	site.queue_free()
+	await process_frame
+	await create_timer(0.1).timeout
 	print("CHEMSITE_ROUND_SMOKE_OK")
 	quit()

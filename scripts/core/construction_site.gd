@@ -3,6 +3,7 @@ extends Node3D
 signal exit_requested
 signal feedback_given(correct: bool)
 signal station_used
+signal footstep
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 const STATION_CONFIG := [
@@ -30,6 +31,7 @@ var _round_done: bool = false
 var mode: String = "career"
 var practice_topic: String = ""
 var _target_count: int = 5
+var _machinery_player: AudioStreamPlayer3D
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
@@ -39,6 +41,7 @@ func _ready() -> void:
 	_camera.position = Vector3(10.0, 15.5, 19.0)
 	_camera.look_at(Vector3(0.0, 0.0, 0.0), Vector3.UP)
 	_load_tasks()
+	_player.footstep.connect(func() -> void: footstep.emit())
 	_build_world()
 	_hud = preload("res://scenes/ui/game_hud.tscn").instantiate()
 	_hud_layer.add_child(_hud)
@@ -120,6 +123,7 @@ func _build_world() -> void:
 	_prop("wall-half", Vector3(-5.3, 0.14, 5.8), 1.9, 0.0)
 	_prop("crane", Vector3(-9.8, 0, -5.3), 1.2, 0.0)
 	_environment_prop("site_mixer", Vector3(7.55, 0.0, -1.35))
+	_add_machinery_ambience(Vector3(7.55, 1.0, -1.35))
 	_block("Site mixer collision", Vector3(7.55, 0.77, -1.35), Vector3(1.8, 1.55, 1.75), Color(0, 0, 0, 0), true)
 	_environment_prop("material_cache", Vector3(4.7, 0.0, 0.1))
 	_block("Material cache collision", Vector3(4.7, 0.65, 0.1), Vector3(3.8, 1.3, 1.55), Color(0, 0, 0, 0), true)
@@ -148,6 +152,30 @@ func _build_world() -> void:
 		task_light.light_energy = 0.8
 		task_light.omni_range = 3.4
 		_world.add_child(task_light)
+
+func _add_machinery_ambience(position: Vector3) -> void:
+	var stream := load("res://assets/audio/machinery_loop.wav") as AudioStreamWAV
+	if stream == null:
+		return
+	stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	var player := AudioStreamPlayer3D.new()
+	player.name = "Mixer Ambience"
+	player.stream = stream
+	player.bus = "SFX"
+	player.position = position
+	player.volume_db = -10.0
+	player.unit_size = 3.0
+	player.max_distance = 25.0
+	player.attenuation_model = AudioStreamPlayer3D.ATTENUATION_INVERSE_DISTANCE
+	_world.add_child(player)
+	_machinery_player = player
+	if DisplayServer.get_name() != "headless":
+		player.play()
+
+func _exit_tree() -> void:
+	if is_instance_valid(_machinery_player):
+		_machinery_player.stop()
+		_machinery_player.stream = null
 
 func _block(label: String, pos: Vector3, dimensions: Vector3, color: Color, solid: bool) -> void:
 	if color.a > 0.0:

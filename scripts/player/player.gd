@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal footstep
+
 @export var run_speed: float = 5.2
 @export var acceleration: float = 17.0
 @export var deceleration: float = 23.0
@@ -12,6 +14,7 @@ var _animation_tree: AnimationTree
 var _playback: AnimationNodeStateMachinePlayback
 var _current_animation: String = ""
 var _reaction_state: String = ""
+var _step_distance: float = 0.0
 
 func _ready() -> void:
 	var model_scene := load("res://assets/models/character/chemist.glb") as PackedScene
@@ -31,6 +34,13 @@ func _physics_process(delta: float) -> void:
 	velocity.z = move_toward(velocity.z, target.z, rate * delta)
 	velocity.y -= 20.0 * delta
 	move_and_slide()
+	if is_on_floor() and controls_enabled and direction.length_squared() > 0.001:
+		_step_distance += Vector2(velocity.x, velocity.z).length() * delta
+		if _step_distance >= 1.5:
+			_step_distance -= 1.5
+			footstep.emit()
+	else:
+		_step_distance = 0.7
 	if direction.length_squared() > 0.001:
 		var target_yaw := atan2(direction.x, direction.z)
 		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(1.0, turn_speed * delta))

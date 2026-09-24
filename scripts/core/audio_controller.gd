@@ -6,9 +6,12 @@ const MUSIC_PATH := "res://assets/audio/lofi-1.mp3"
 const SUCCESS_PATH := "res://assets/audio/correct.wav"
 const ERROR_PATH := "res://assets/audio/incorrect.wav"
 const INTERACT_PATH := "res://assets/audio/interact.wav"
+const STEP_PATHS := ["res://assets/audio/step_a.wav", "res://assets/audio/step_b.wav"]
 
 var _music: AudioStreamPlayer
 var _effects: AudioStreamPlayer
+var _steps: Array[AudioStreamPlayer] = []
+var _step_index: int = 0
 
 func _ready() -> void:
 	apply_settings(SETTINGS_DATA.load_settings())
@@ -26,6 +29,13 @@ func _ready() -> void:
 	_effects.bus = "SFX"
 	_effects.volume_db = -4.0
 	add_child(_effects)
+	for path in STEP_PATHS:
+		var step := AudioStreamPlayer.new()
+		step.bus = "SFX"
+		step.volume_db = -12.0
+		step.stream = load(path) as AudioStream
+		add_child(step)
+		_steps.append(step)
 
 func apply_settings(settings: Dictionary) -> void:
 	for entry in [{"bus": "Music", "key": "music_volume"}, {"bus": "SFX", "key": "sfx_volume"}]:
@@ -41,6 +51,12 @@ func play_feedback(correct: bool) -> void:
 func play_interact() -> void:
 	_effects.stream = load(INTERACT_PATH) as AudioStream
 	_effects.play()
+
+func play_footstep() -> void:
+	var step := _steps[_step_index % _steps.size()]
+	step.pitch_scale = 0.97 if _step_index % 2 == 0 else 1.03
+	step.play()
+	_step_index += 1
 
 func _exit_tree() -> void:
 	if is_instance_valid(_music):
