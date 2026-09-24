@@ -31,6 +31,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added original paired footstep cues driven by actual distance traveled on the floor, plus a spatial looping mixer sound routed through SFX. Both are reproducibly generated from the audio source script.
 - Added a packaged-app QA entry path that exercises station panels, five answers, combo scoring, result state and isolated save data. The refreshed macOS release app passes this black-box runtime smoke with clean shutdown.
 - Added shared, restrained emission to the authored station glyphs, periodic tiles, storage markers and analyzer. The three work lights now vary subtly over time. Reviewed the rendered site at 1440×900 and rechecked all station walking routes.
+- Added deterministic task ordering that prioritizes weak topics and alternates stations. Career now records per-topic mastery and mistakes in a version-3 save, advances after an incorrect answer, and schedules a different related verified task two questions later when available. Reviewed the incorrect-answer panel at 1440×900.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -41,11 +42,11 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Add chemistry-specific station interactions and visual feedback, then complete visual exported-app playtesting and listen to the audio mix on target speakers.
+Add chemistry-specific station interactions and visual feedback, then complete visual exported-app playtesting and listen to the audio mix on target speakers. Expand progression data with later levels.
 
 ## Last verification
 
-2026-09-24: Godot editor import/parse and all-three-station walking routes passed after station emissive accents and restrained work-light motion. The 1440×900 site capture was visually reviewed. The exported macOS app previously completed an isolated five-task QA round with station panels, 700 score, three stars and saved progress, exiting without resource warnings. Audio smoke confirmed mixer routing and distance-driven footsteps.
+2026-09-24: Godot editor import/parse, Career round, Practice round, learning-system and save-migration smoke passed. Learning smoke confirmed unique tasks, a related task after two intervening questions, mastery/mistake persistence and weak-topic priority in the next round. The incorrect-answer panel was captured and reviewed at 1440×900. The refreshed packaged macOS app completed its five-task QA round with the version-3 save and task scheduler.
 
 ## Known issues
 
@@ -53,4 +54,4 @@ Add chemistry-specific station interactions and visual feedback, then complete v
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round passes, while a visual playtest in the exported app remains open. Windows export is pending.
-- Advanced mastery, weak-topic scheduling and the remaining 190 curated tasks await later phases. Career, topic-specific Practice, combo and stars now work in the Level 1 round.
+- Level 1 mastery and weak-topic scheduling now work. Level progression/unlocks, broader mastery coverage and the remaining 190 curated tasks await later phases.

@@ -8,7 +8,7 @@
 - [x] Phase 4 foundation: build the original rigged player in Blender, export nine skeletal actions and drive locomotion and reactions through AnimationTree
 - [x] Phase 5 foundation: build three distinct Blender-authored stations and implement card, periodic selection and formula assembly interactions
 - [x] Phase 6 slice: port ten verified Level 1 tasks to native JSON; validate their answers and run a five-task round
-- [x] Phase 9 foundation: persist best score, XP and completed rounds in a versioned Godot save
+- [x] Phase 9 foundation: persist best score, stars, XP, completed rounds, topic mastery and mistakes in a versioned Godot save
 - [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
@@ -21,7 +21,7 @@
 
 ## Later phases
 
-- [ ] Phase 9: adaptive mastery, weak-topic scheduling and expanded versioned save data
+- [ ] Phase 9: complete adaptive mastery and expanded progression data for Levels 2–5; Level 1 now records mastery and schedules a related task two questions after a mistake
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
 - [ ] Phase 12: port and validate all 200 curated tasks
 - [ ] Phase 13: Levels 2–5 and their station mechanics

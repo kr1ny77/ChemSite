@@ -6,6 +6,7 @@ signal station_used
 signal footstep
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
+const TASK_SCHEDULER = preload("res://scripts/chemistry/task_scheduler.gd")
 const STATION_CONFIG := [
 	{"id": "substance-storage", "name": "СКЛАД ВЕЩЕСТВ", "position": Vector3(-3.3, 0.0, -3.5), "model": "substance_storage"},
 	{"id": "formula-board", "name": "ДОСКА ФОРМУЛ", "position": Vector3(5.7, 0.0, -3.4), "model": "formula_board"},
@@ -93,6 +94,9 @@ func _load_tasks() -> void:
 		_target_count = mini(5, _tasks.size())
 		if _tasks.is_empty():
 			push_error("No verified practice tasks for topic: " + practice_topic)
+	else:
+		var progress: Dictionary = SAVE_DATA.load_progress(save_path)
+		_tasks = TASK_SCHEDULER.order_tasks(_tasks, progress.topic_mastery)
 
 func _build_world() -> void:
 	var environment := WorldEnvironment.new()
@@ -290,13 +294,17 @@ func _find_nearest_station() -> void:
 func _update_hud() -> void:
 	if _tasks.is_empty():
 		return
-	_hud.update_status(_tasks[_task_index], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode)
+	_hud.update_status(_tasks[mini(_task_index, _tasks.size() - 1)], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode)
 
 func _submit_answer(answer: String) -> void:
 	if _round_done or _tasks.is_empty():
 		return
 	var task: Dictionary = _tasks[_task_index]
 	var valid: bool = TASK_BANK.validate_choice(task, answer)
+	if mode == "career":
+		var learning_error: Error = SAVE_DATA.record_answer(task, valid, save_path)
+		if learning_error != OK:
+			push_warning("Could not save topic mastery: %s" % error_string(learning_error))
 	feedback_given.emit(valid)
 	var burst := ANSWER_BURST.new() as GPUParticles3D
 	_world.add_child(burst)
@@ -317,15 +325,15 @@ func _submit_answer(answer: String) -> void:
 		_completed += 1
 		_player.play_reaction(true)
 		_hud.show_feedback(true, task, awarded, _streak)
-		_task_index = (_task_index + 1) % _tasks.size()
 	else:
 		_streak = 0
 		_player.play_reaction(false)
 		_hud.show_feedback(false, task, 0, _streak)
-	if _completed >= _target_count:
+		if mode == "career":
+			TASK_SCHEDULER.schedule_related(_tasks, _task_index)
+	_task_index += 1
+	if _completed >= _target_count or _task_index >= _tasks.size():
 		_finish_round()
-	else:
-		_update_hud()
 
 func _finish_round() -> void:
 	if _round_done:
@@ -345,3 +353,5 @@ func _resume() -> void:
 	_hud.close_panel()
 	_player.clear_reaction()
 	_player.controls_enabled = true
+	_find_nearest_station()
+	_update_hud()

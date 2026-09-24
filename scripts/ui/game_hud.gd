@@ -93,6 +93,8 @@ func update_status(task: Dictionary, completed: int, score: int, time_left: floa
 
 func show_task(task: Dictionary, station_id: String) -> void:
 	_clear_panel()
+	_panel.anchor_top = 0.19
+	_panel.anchor_bottom = 0.81
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
@@ -189,6 +191,8 @@ func _refresh_formula() -> void:
 
 func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 	_clear_panel()
+	_panel.anchor_top = 0.27
+	_panel.anchor_bottom = 0.71
 	_panel.visible = true
 	_panel_content.add_child(_label("ДРУГАЯ СТАНЦИЯ", 28, Color("c66c47")))
 	_panel_content.add_child(_label("Здесь: " + station.name, 21, Color("243b43")))
@@ -201,8 +205,10 @@ func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 
 func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: int = 0) -> void:
 	_clear_panel()
+	_panel.anchor_top = 0.24
+	_panel.anchor_bottom = 0.62
 	_panel.visible = true
-	var title := "ВЕРНО  +%d" % awarded if correct else "ПОПРОБУЙ ЕЩЁ"
+	var title := "ВЕРНО  +%d" % awarded if correct else "РАЗБЕРИ ОШИБКУ"
 	_panel_content.add_child(_label(title, 29, Color("2c977b") if correct else Color("c66c47")))
 	if correct and streak >= 3:
 		_panel_content.add_child(_label("СЕРИЯ %d  ·  МНОЖИТЕЛЬ x%s" % [streak, "2" if streak >= 5 else "1.5"], 18, Color("2c977b")))
@@ -211,7 +217,7 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	if not correct:
 		_panel_content.add_child(_label("ОТВЕТ: " + str(task.correctAnswer), 19, Color("243b43")))
 	var next := Button.new()
-	next.text = "ПРОДОЛЖИТЬ  →"
+	next.text = "СЛЕДУЮЩЕЕ ЗАДАНИЕ  →" if not correct else "ПРОДОЛЖИТЬ  →"
 	next.custom_minimum_size.y = 55
 	next.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(next)
@@ -245,6 +251,8 @@ func show_results(score: int, completed: int, time_left: float, target_count: in
 
 func show_pause() -> void:
 	_clear_panel()
+	_panel.anchor_top = 0.31
+	_panel.anchor_bottom = 0.65
 	_panel.visible = true
 	_panel_content.add_child(_label("ПАУЗА", 31, Color("243b43")))
 	var resume := Button.new()
