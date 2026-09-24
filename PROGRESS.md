@@ -40,7 +40,7 @@ Improve station material polish and add chemistry-specific visual language to th
 
 ## Last verification
 
-2026-09-24: Eight Godot locomotion frames were captured and reviewed: support and swing alternate without visible ground penetration at gameplay zoom. Godot editor import/parse and gameplay smoke passed after station pulse integration. A graphical 1440×900 capture shows the pulse at the storage rack; its cleanup assertion passed.
+2026-09-24: Eight Godot locomotion frames were captured and reviewed: support and swing alternate without visible ground penetration at gameplay zoom. Godot editor import/parse, gameplay, five-task round and collision smoke passed after station pulse integration. A graphical 1440×900 capture shows the pulse at the storage rack; its cleanup assertion passed. The macOS release app was re-exported with the effect and its arm64 binary launched headless.
 
 ## Known issues
 
