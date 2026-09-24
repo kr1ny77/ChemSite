@@ -25,6 +25,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Authored a freestanding first-aid and eyewash safety point in Blender beside the laboratory cabin. Six material-grouped meshes, front pictograms, lower supply cases and a collision proxy passed multi-angle, import, geometry and route review.
 - Replaced two abstract off-perimeter machinery props with an original tilted-drum mixer inside the right boundary. Kept editable Blender source, a six-view review, and a simple frame-and-drum collision proxy.
 - Replaced the left pad's unused stairs with an original paired rebar and formwork bay. Adjusted its position after the first camera capture hid the cages behind columns; both cages now read from the gameplay camera and leave the central route open.
+- Replaced the left pad's flat modular wall and columns with an original Blender concrete-frame shell. The partial slab, four supported posts, exposed rebar, shoring, formwork and safety rail were reviewed from six views and at gameplay zoom. The rebar bay remains visible beside it.
 - Reviewed the exported character and all three stations from six angles. Fresh-imported the character's Run, Interact, Celebrate and Failure actions for key-frame review, found crossed arms in Celebrate, changed it to a raised-arm V, and verified the revised reaction in a Godot close-up capture.
 - Reviewed Walk, Turn, PickUp and UseStation key poses as well. Moved the substance-storage station from behind the left building wall into the open rear lane, verified its first-task visibility at gameplay zoom, and revalidated the walking route, interaction, full round and collisions.
 - Captured eight sustained locomotion frames in Godot and reviewed boot support and swing at gameplay zoom. Added a brief cyan/amber answer pulse at the active chemistry station; captured its appearance at 1440×900 and verified automatic cleanup.
@@ -40,7 +41,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Complete visual QA for the expanded 40-task Level 1 bank, then continue site, feedback and UI polish. Perform a complete exported-app round playtest.
+Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest.
 
 ## Next task
 
@@ -48,11 +49,11 @@ Finish a visually reviewed five-task round in the exported app and listen to the
 
 ## Last verification
 
-2026-09-24: The preserved web bank passed 41 tests. Native JSON structural validation found 200 tasks, 40 per level. All 40 Level 1 tasks opened in Godot, accepted their curated answer, and supplied working formula tiles or a valid option where applicable. Career, Practice, learning and five-task round smokes passed with the expanded bank. Formula, oxidation-state and eight-topic Practice panels were captured and reviewed at 1440×900. Godot editor import/parse passed; the refreshed macOS release export completed an isolated five-task packaged-app QA round successfully. The release app also launched visibly, entered Career and displayed the live site and HUD.
+2026-09-24: The new shell exported from Blender 5.2.2 and fresh-import inspection passed with six materials, 5,132 triangles, no invalid vertices and no degenerate faces. A six-view contact sheet and 1440×900 Godot site render were reviewed. Godot editor import/parse, station routes, collision and five-task round smokes passed. The refreshed macOS app passed its packaged five-task QA round; its live Career site was opened and visually reviewed with the shell in place.
 
 ## Known issues
 
-- The laboratory cabin, material cache, safety point, mixer and rebar bay improve the site silhouette; the unfinished-building shell still needs a more coherent upper structure and material polish.
+- The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round passes, while a visual playtest in the exported app remains open. Windows export is pending.

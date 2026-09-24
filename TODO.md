@@ -9,12 +9,13 @@
 - [x] Phase 5 foundation: build three distinct Blender-authored stations and implement card, periodic selection and formula assembly interactions
 - [x] Phase 6 slice: port ten verified Level 1 tasks to native JSON; validate their answers and run a five-task round
 - [x] Phase 12 data port: export all 200 curated tasks into native JSON, validate schema and answers structurally, and enable all 40 Level 1 tasks with formula tiles, oxidation input and eight practice topics
+- [x] Phase 3 shell landmark: replace the left pad's flat modular wall and columns with a Blender-authored open concrete frame, partial slab, shoring and safety rails; verify six views, game camera, collisions and station routes
 - [x] Phase 9 foundation: persist best score, stars, XP, completed rounds, topic mastery and mistakes in a versioned Godot save
 - [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
-- [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache, safety point, mixer and rebar bay define the construction site
+- [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place

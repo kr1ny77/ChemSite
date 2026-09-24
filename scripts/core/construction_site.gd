@@ -116,6 +116,7 @@ func _build_world() -> void:
 	_block("CentralPath", Vector3(0, 0.01, 0.2), Vector3(3.6, 0.03, 12.5), Color("bbc7bc"), false)
 	_block("RearPath", Vector3(0, 0.015, -3.4), Vector3(14, 0.03, 2.5), Color("bbc7bc"), false)
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
+	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
 	_block("Rebar bay collision", Vector3(-2.5, 1.34, 4.0), Vector3(2.35, 2.4, 1.26), Color(0, 0, 0, 0), true)
 	for x in [-8.7, 8.7]:
@@ -126,11 +127,9 @@ func _build_world() -> void:
 	_block("Site laboratory cabin collision", Vector3(0.0, 1.15, -5.65), Vector3(3.85, 2.3, 1.8), Color(0, 0, 0, 0), true)
 	_environment_prop("safety_point", Vector3(3.2, 0.0, -5.15))
 	_block("Safety point collision", Vector3(3.2, 1.06, -5.15), Vector3(1.85, 2.12, 0.9), Color(0, 0, 0, 0), true)
-	for z in [2.3, 5.5]:
-		for x in [-7.4, -3.2]:
-			_prop("column-wide", Vector3(x, 0.14, z), 1.55, 0.0)
-			_block("Column collision", Vector3(x, 0.9, z), Vector3(0.7, 1.8, 0.7), Color(0, 0, 0, 0), true)
-	_prop("wall-half", Vector3(-5.3, 0.14, 5.8), 1.9, 0.0)
+	for z in [2.68, 5.52]:
+		for x in [-8.02, -3.18]:
+			_block("Construction column collision", Vector3(x, 1.53, z), Vector3(0.73, 2.8, 0.73), Color(0, 0, 0, 0), true)
 	_prop("crane", Vector3(-9.8, 0, -5.3), 1.2, 0.0)
 	_environment_prop("site_mixer", Vector3(7.55, 0.0, -1.35))
 	_add_machinery_ambience(Vector3(7.55, 1.0, -1.35))
@@ -142,9 +141,7 @@ func _build_world() -> void:
 	_prop("structure-yellow-medium", Vector3(-7.7, 0, -1.6), 1.2, 0.15)
 	_block("Storage frame collision", Vector3(-7.7, 0.7, -1.6), Vector3(0.75, 1.4, 0.75), Color(0, 0, 0, 0), true)
 	_prop("structure-yellow-tall", Vector3(-8.1, 0, 4.0), 1.2, 0.0)
-	_prop("wall-window-wide-square-detailed", Vector3(-5.2, 0.14, 2.3), 2.1, 0.0)
 	_block("Scaffold collision", Vector3(-8.1, 0.7, 4.0), Vector3(0.7, 1.4, 0.7), Color(0, 0, 0, 0), true)
-	_prop("catwalk-straight", Vector3(-5.35, 2.35, 4.1), 1.7, 0.0)
 	_prop("warning-orange", Vector3(-0.9, 0.0, -5.65), 1.6, 0.0)
 	_block("Safety marker collision", Vector3(-0.9, 0.55, -5.65), Vector3(0.55, 1.1, 0.55), Color(0, 0, 0, 0), true)
 	_prop("structure-yellow-medium", Vector3(7.6, 0.0, -5.1), 0.85, 0.0)
