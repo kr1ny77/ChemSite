@@ -14,6 +14,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added all 40 curated Level 1 chemistry tasks to normal selection and exported all 200 structured tasks to native JSON. A schema check and Level 1 interaction smoke validate task shape, correct-answer acceptance, formula tiles and option choices. Formula and oxidation-state inputs now cover the Level 1 interaction set.
 - Reviewed the Level 2 answer bank and explanations, checked 20 molecular and ionic equations for element and charge conservation, and placed L2-050 in the chemistry review queue for phosphorus oxide notation. Re-exporting the preserved TypeScript bank reapplies the review status through a native override file.
 - Added full-equation input for Level 2 completion, balancing, virtual mixing and ionic tasks. Chemistry validation now accepts display arrows and Unicode subscript/charge glyphs while retaining exact element case and the curated answer set. A Godot content smoke opens every one of the 39 verified Level 2 panels, accepts each curated answer and excludes L2-050.
+- Rendered the Level 2 equation panel at 1440×900. The first capture exposed an answer-revealing placeholder; the final capture uses a neutral reactant/product prompt and a localized station name.
 - Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
 - Launched the refreshed macOS app directly, entered Career through its visible menu, and reviewed the live construction-site render and HUD at 1440×900.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
@@ -53,7 +54,7 @@ Implement the Level 2 reaction, mixing, ionic and inspection stations and a Leve
 
 ## Last verification
 
-2026-09-24: Godot 4.7.2 editor import passed. Level 1 content smoke passed all 40 tasks; new Level 2 content smoke passed all 39 verified tasks and 19 equation panels. It also caught and fixed the displayed superscript-charge option mismatch. Earlier shell, exported macOS round, Windows PCK and Level 2 equation-conservation checks remain valid. Native Windows execution remains pending.
+2026-09-24: Godot 4.7.2 editor import passed. Level 1 content smoke passed all 40 tasks; new Level 2 content smoke passed all 39 verified tasks and 19 equation panels. It caught and fixed the displayed superscript-charge option mismatch. The Level 2 panel was rendered and visually checked at 1440×900 after removing an answer-revealing placeholder. Earlier shell, exported macOS round, Windows PCK and Level 2 equation-conservation checks remain valid. Native Windows execution remains pending.
 
 ## Known issues
 

@@ -198,7 +198,7 @@ func _show_equation_input() -> void:
 	var guide := _label("Введи полное уравнение. Используй -> для стрелки и ^ для заряда иона.", 17, Color("627679"))
 	_panel_content.add_child(guide)
 	var input := LineEdit.new()
-	input.placeholder_text = "Например: CaO + H2O -> Ca(OH)2"
+	input.placeholder_text = "Реагенты -> продукты"
 	input.custom_minimum_size.y = 55
 	input.add_theme_font_size_override("font_size", 22)
 	input.caret_blink = true
@@ -353,4 +353,8 @@ func _station_name(station_id: String) -> String:
 		"substance-storage": return "СКЛАД ВЕЩЕСТВ"
 		"formula-board": return "ДОСКА ФОРМУЛ"
 		"periodic-table-terminal": return "ПЕРИОДИЧЕСКАЯ СИСТЕМА"
+		"reaction-bench": return "РЕАКЦИОННЫЙ СТОЛ"
+		"mixing-station": return "СМЕСИТЕЛЬНАЯ СТАНЦИЯ"
+		"ionic-reaction-station": return "ИОННАЯ ЛАБОРАТОРИЯ"
+		"inspection-station": return "КОНТРОЛЬ МАТЕРИАЛОВ"
 	return station_id
