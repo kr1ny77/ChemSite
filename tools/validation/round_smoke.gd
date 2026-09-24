@@ -26,8 +26,7 @@ func _run() -> void:
 		assert(hud.is_panel_open(), "Task panel did not open at task %d" % i)
 		site._submit_answer(str(task.correctAnswer))
 		assert(site._completed == i + 1, "Task did not complete")
-		if i < 4:
-			site._resume()
+		site._resume()
 	assert(site._round_done and site._score == 700 and site._streak == 5, "Round results or combo scoring are invalid")
 	assert(hud.is_panel_open() and not player.controls_enabled, "Result panel state is invalid")
 	var progress: Dictionary = SAVE_DATA.load_progress(TEST_PATH)

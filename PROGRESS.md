@@ -33,6 +33,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added Career and topic-specific Practice entry flows. Practice offers the three verified Level 1 topics, disables the timer, ends after that topic's unique questions and leaves career progress untouched. Reviewed both menu states at 1440×900.
 - Added original paired footstep cues driven by actual distance traveled on the floor, plus a spatial looping mixer sound routed through SFX. Both are reproducibly generated from the audio source script.
 - Added a packaged-app QA entry path that exercises station panels, five answers, combo scoring, result state and isolated save data. The refreshed macOS release app passes this black-box runtime smoke with clean shutdown.
+- Added a visual packaged-app QA path that saves all five task panels, five feedback screens and results from the release binary. Its answers now flow through HUD tile/option controls and their signals. The capture exposed two issues: the fifth task's explanation was replaced immediately by results, and feedback showed stale score/streak data. Both were corrected and the final screens re-reviewed at 1440×900.
 - Added shared, restrained emission to the authored station glyphs, periodic tiles, storage markers and analyzer. The three work lights now vary subtly over time. Reviewed the rendered site at 1440×900 and rechecked all station walking routes.
 - Added deterministic task ordering that prioritizes weak topics and alternates stations. Career now records per-topic mastery and mistakes in a version-3 save, advances after an incorrect answer, and schedules a different related verified task two questions later when available. Reviewed the incorrect-answer panel at 1440×900.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
@@ -45,16 +46,16 @@ Complete visual QA for the expanded 40-task Level 1 bank and continue site, feed
 
 ## Next task
 
-Finish a visually reviewed five-task round in the exported app and listen to the audio mix on target speakers. Implement distinct station mechanics for Levels 2–5 and independently review their chemistry content.
+Complete a human-driven five-task round in the exported app and listen to the audio mix on target speakers. Implement distinct station mechanics for Levels 2–5 and independently review their chemistry content.
 
 ## Last verification
 
-2026-09-24: The new shell exported from Blender 5.2.2 and fresh-import inspection passed with six materials, 5,132 triangles, no invalid vertices and no degenerate faces. A six-view contact sheet and 1440×900 Godot site render were reviewed. Godot editor import/parse, station routes, collision and five-task round smokes passed. The refreshed macOS app passed its packaged five-task QA round; its live Career site was opened and visually reviewed with the shell in place.
+2026-09-24: The new shell exported from Blender 5.2.2 and fresh-import inspection passed with six materials, 5,132 triangles, no invalid vertices and no degenerate faces. A six-view contact sheet and 1440×900 Godot site render were reviewed. Godot editor import/parse, station routes, collision, Career and Practice smokes passed. The refreshed macOS app passed both headless and rendered five-task QA rounds, with each answer submitted through HUD controls. All five task and feedback screenshots and results were captured; final feedback and results were reviewed at full resolution. The rendered run exited cleanly after allowing effect resources to finish.
 
 ## Known issues
 
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
-- The macOS release is unsigned and unnotarized; its automated five-task round passes, while a visual playtest in the exported app remains open. Windows export is pending.
+- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app and Windows export remain pending.
 - Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; only 40 Level 1 tasks enter gameplay. Level progression, later-level mechanics and independent scientific review of the broader bank remain pending.

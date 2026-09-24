@@ -27,8 +27,7 @@ func _run() -> void:
 		var task: Dictionary = site._tasks[site._task_index]
 		site._active_station = task.station
 		site._submit_answer(str(task.correctAnswer))
-		if index < 4:
-			site._resume()
+		site._resume()
 	assert(site._round_done and site._completed == 5, "Practice did not finish")
 	assert(not FileAccess.file_exists(save_path), "Practice changed career save")
 	print("CHEMSITE_PRACTICE_SMOKE_OK")

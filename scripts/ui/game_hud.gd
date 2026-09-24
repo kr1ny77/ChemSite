@@ -80,16 +80,19 @@ func _ready() -> void:
 func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career") -> void:
 	_objective.text = "%s %d/%d  ·  %s" % ["ПРАКТИКА" if mode == "practice" else "ЗАДАНИЕ", mini(completed + 1, target_count), target_count, task.topic]
 	_status.text = "СТАНЦИЯ: %s" % _station_name(task.station)
-	_score_label.text = "ОЧКИ  %d" % score
-	_timer_label.text = "БЕЗ ТАЙМЕРА" if mode == "practice" else "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
-	_combo_label.text = "СЕРИЯ  %d  ·  x%s" % [streak, "2" if streak >= 5 else ("1.5" if streak >= 3 else "1")]
-	_xp_label.text = "УЧЕБНЫЙ РЕЖИМ" if mode == "practice" else "ОПЫТ  +%d" % (completed * 50)
+	update_round_stats(completed, score, time_left, streak, mode)
 	if nearest.is_empty():
 		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
 	elif nearest.id == task.station:
 		_prompt.text = "[ E ]  %s" % nearest.name
 	else:
 		_prompt.text = "%s  ·  ТЕКУЩАЯ ЦЕЛЬ: %s" % [nearest.name, _station_name(task.station)]
+
+func update_round_stats(completed: int, score: int, time_left: float, streak: int, mode: String) -> void:
+	_score_label.text = "ОЧКИ  %d" % score
+	_timer_label.text = "БЕЗ ТАЙМЕРА" if mode == "practice" else "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
+	_combo_label.text = "СЕРИЯ  %d  ·  x%s" % [streak, "2" if streak >= 5 else ("1.5" if streak >= 3 else "1")]
+	_xp_label.text = "УЧЕБНЫЙ РЕЖИМ" if mode == "practice" else "ОПЫТ  +%d" % (completed * 50)
 
 func show_task(task: Dictionary, station_id: String) -> void:
 	_clear_panel()

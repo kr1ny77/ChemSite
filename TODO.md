@@ -10,6 +10,7 @@
 - [x] Phase 6 slice: port ten verified Level 1 tasks to native JSON; validate their answers and run a five-task round
 - [x] Phase 12 data port: export all 200 curated tasks into native JSON, validate schema and answers structurally, and enable all 40 Level 1 tasks with formula tiles, oxidation input and eight practice topics
 - [x] Phase 3 shell landmark: replace the left pad's flat modular wall and columns with a Blender-authored open concrete frame, partial slab, shoring and safety rails; verify six views, game camera, collisions and station routes
+- [x] Phase 11 exported visual round: capture five task panels, five feedback states and results from the macOS release binary; submit answers through actual HUD controls and preserve the final explanation before results
 - [x] Phase 9 foundation: persist best score, stars, XP, completed rounds, topic mastery and mistakes in a versioned Godot save
 - [x] Phase 10: configure and launch a universal macOS release app from the official Godot 4.7.2 export template
 
@@ -19,7 +20,7 @@
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place
-- [ ] Complete a visual five-task playtest in the exported app and resolve gameplay and visual QA findings; a packaged macOS app now passes an automated five-task round with save/results verification
+- [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay and visual QA findings; packaged macOS runs now capture and verify all five HUD interaction states and results
 
 ## Later phases
 

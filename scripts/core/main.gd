@@ -10,9 +10,15 @@ func _ready() -> void:
 	show_menu()
 	if OS.get_cmdline_user_args().has("--qa-round"):
 		call_deferred("_run_export_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-round"):
+		call_deferred("_run_export_visual_smoke")
 
 func _run_export_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true)
 	get_tree().quit(0 if passed else 1)
 
 func show_menu() -> void:

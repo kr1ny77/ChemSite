@@ -29,6 +29,7 @@ var _active_station: String = ""
 var _hud: Control
 var _nearest_station: Dictionary = {}
 var _round_done: bool = false
+var _round_complete_pending: bool = false
 var mode: String = "career"
 var practice_topic: String = ""
 var _target_count: int = 5
@@ -320,17 +321,19 @@ func _submit_answer(answer: String) -> void:
 		var awarded := int(roundi(float(task.get("points", 100)) * multiplier))
 		_score += awarded
 		_completed += 1
+		_hud.update_round_stats(_completed, _score, _time_left, _streak, mode)
 		_player.play_reaction(true)
 		_hud.show_feedback(true, task, awarded, _streak)
 	else:
 		_streak = 0
+		_hud.update_round_stats(_completed, _score, _time_left, _streak, mode)
 		_player.play_reaction(false)
 		_hud.show_feedback(false, task, 0, _streak)
 		if mode == "career":
 			TASK_SCHEDULER.schedule_related(_tasks, _task_index)
 	_task_index += 1
 	if _completed >= _target_count or _task_index >= _tasks.size():
-		_finish_round()
+		_round_complete_pending = true
 
 func _finish_round() -> void:
 	if _round_done:
@@ -346,6 +349,9 @@ func _finish_round() -> void:
 
 func _resume() -> void:
 	if _round_done:
+		return
+	if _round_complete_pending:
+		_finish_round()
 		return
 	_hud.close_panel()
 	_player.clear_reaction()
