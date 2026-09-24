@@ -42,10 +42,12 @@ static func _normalize(value: String, interaction: String) -> String:
 	var normalized := value.strip_edges()
 	for pair in [["₀", "0"], ["₁", "1"], ["₂", "2"], ["₃", "3"], ["₄", "4"], ["₅", "5"], ["₆", "6"], ["₇", "7"], ["₈", "8"], ["₉", "9"]]:
 		normalized = normalized.replace(pair[0], pair[1])
+	for pair in [["⁰", "0"], ["¹", "1"], ["²", "2"], ["³", "3"], ["⁴", "4"], ["⁵", "5"], ["⁶", "6"], ["⁷", "7"], ["⁸", "8"], ["⁹", "9"], ["⁺", "+"], ["⁻", "-"]]:
+		normalized = normalized.replace(pair[0], pair[1])
 	if interaction == "formula-builder":
 		return normalized.replace(" ", "")
+	if interaction in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
+		return normalized.replace("→", "->").replace("⟶", "->").replace("⇒", "->").replace("^", "").replace(" ", "").replace("\t", "").replace("\n", "")
 	if interaction == "ion-builder":
-		for pair in [["⁰", "0"], ["¹", "1"], ["²", "2"], ["³", "3"], ["⁴", "4"], ["⁵", "5"], ["⁶", "6"], ["⁷", "7"], ["⁸", "8"], ["⁹", "9"], ["⁺", "+"], ["⁻", "-"]]:
-			normalized = normalized.replace(pair[0], pair[1])
 		return normalized.replace("^", "").replace(" ", "")
 	return " ".join(normalized.to_lower().replace("\t", " ").split(" ", false))

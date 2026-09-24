@@ -107,6 +107,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
 		_show_short_input()
+	elif task.get("interactionType", "") in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
+		_show_equation_input()
 	else:
 		var cards := GridContainer.new()
 		cards.columns = 2
@@ -131,6 +133,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		focus_target.get_child(0).grab_focus()
 	elif focus_target is LineEdit:
 		focus_target.grab_focus()
+	elif focus_target is Label and _panel_content.get_child_count() > 4 and _panel_content.get_child(4) is LineEdit:
+		_panel_content.get_child(4).grab_focus()
 	elif focus_target is Label and _panel_content.get_child_count() > 4:
 		var tile_grid := _panel_content.get_child(4)
 		if tile_grid is GridContainer and tile_grid.get_child_count() > 0:
@@ -181,6 +185,23 @@ func _show_short_input() -> void:
 	input.placeholder_text = "Введите степень окисления"
 	input.custom_minimum_size.y = 55
 	input.add_theme_font_size_override("font_size", 25)
+	_panel_content.add_child(input)
+	var submit := Button.new()
+	submit.text = "ПРОВЕРИТЬ  →"
+	submit.custom_minimum_size.y = 55
+	_style_button(submit)
+	submit.pressed.connect(func() -> void: answer_submitted.emit(input.text))
+	input.text_submitted.connect(func(_text: String) -> void: answer_submitted.emit(input.text))
+	_panel_content.add_child(submit)
+
+func _show_equation_input() -> void:
+	var guide := _label("Введи полное уравнение. Используй -> для стрелки и ^ для заряда иона.", 17, Color("627679"))
+	_panel_content.add_child(guide)
+	var input := LineEdit.new()
+	input.placeholder_text = "Например: CaO + H2O -> Ca(OH)2"
+	input.custom_minimum_size.y = 55
+	input.add_theme_font_size_override("font_size", 22)
+	input.caret_blink = true
 	_panel_content.add_child(input)
 	var submit := Button.new()
 	submit.text = "ПРОВЕРИТЬ  →"
