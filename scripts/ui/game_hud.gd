@@ -96,8 +96,11 @@ func update_round_stats(completed: int, score: int, time_left: float, streak: in
 
 func show_task(task: Dictionary, station_id: String) -> void:
 	_clear_panel()
-	_panel.anchor_top = 0.19
-	_panel.anchor_bottom = 0.81
+	var longest_option := 0
+	for option in task.get("options", []):
+		longest_option = maxi(longest_option, str(option).length())
+	_panel.anchor_top = 0.11 if longest_option > 80 else 0.19
+	_panel.anchor_bottom = 0.89 if longest_option > 80 else 0.81
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
@@ -114,14 +117,17 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	else:
 		var cards := GridContainer.new()
 		cards.columns = 2
+		cards.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		cards.add_theme_constant_override("h_separation", 10)
 		cards.add_theme_constant_override("v_separation", 10)
 		_panel_content.add_child(cards)
 		for option in task.options:
 			var button := Button.new()
 			button.text = option
-			button.custom_minimum_size = Vector2(270, 67)
-			button.add_theme_font_size_override("font_size", 20)
+			button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			button.custom_minimum_size = Vector2(0, 124 if longest_option > 80 else (95 if longest_option > 45 else 67))
+			button.add_theme_font_size_override("font_size", 17 if longest_option > 80 else (18 if longest_option > 45 else 20))
 			_style_button(button)
 			button.pressed.connect(_submit_option.bind(option))
 			cards.add_child(button)
