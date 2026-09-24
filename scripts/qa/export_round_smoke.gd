@@ -2,7 +2,7 @@ extends RefCounted
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 
-static func run(main: Node, capture_visual: bool = false) -> bool:
+static func run(main: Node, capture_visual: bool = false, level: int = 1) -> bool:
 	var save_path := "user://export-round-smoke-progress.json"
 	var capture_dir := "user://qa-visual-round"
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
@@ -11,7 +11,7 @@ static func run(main: Node, capture_visual: bool = false) -> bool:
 		if directory_error != OK:
 			push_error("Export visual smoke: could not create capture directory")
 			return false
-	main.start_game("career", "")
+	main.start_game("career", "", level)
 	var site: Node3D = main._current
 	var audio: Node = main.get_node("AudioController")
 	site.disconnect("feedback_given", audio.play_feedback)
@@ -30,7 +30,7 @@ static func run(main: Node, capture_visual: bool = false) -> bool:
 	interact.pressed = true
 	for index in range(5):
 		var task: Dictionary = site._tasks[site._task_index]
-		var station: Dictionary = site.STATION_CONFIG.filter(func(entry: Dictionary) -> bool: return entry.id == task.station)[0]
+		var station: Dictionary = site._stations().filter(func(entry: Dictionary) -> bool: return entry.id == task.station)[0]
 		player.global_position = station.position + Vector3(0, 0.05, 1.8)
 		site._find_nearest_station()
 		site._unhandled_input(interact)
@@ -51,7 +51,8 @@ static func run(main: Node, capture_visual: bool = false) -> bool:
 	if capture_visual and not await _capture(main, capture_dir + "/results.png"):
 		return false
 	var progress: Dictionary = load("res://scripts/core/save_data.gd").load_progress(save_path)
-	var passed: bool = site._round_done and site._score == 700 and int(progress.best_stars) == 3 and int(progress.completed_rounds) == 1
+	var expected_score := 840 if level == 2 else 700
+	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == 1
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
 		site.queue_free()
@@ -60,7 +61,7 @@ static func run(main: Node, capture_visual: bool = false) -> bool:
 		await main.get_tree().process_frame
 		await main.get_tree().create_timer(0.8).timeout
 	if passed:
-		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else "CHEMSITE_EXPORT_ROUND_SMOKE_OK")
+		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else ("CHEMSITE_EXPORT_LEVEL2_ROUND_OK" if level == 2 else "CHEMSITE_EXPORT_ROUND_SMOKE_OK"))
 	else:
 		push_error("Export smoke: results or save are invalid")
 	return passed
@@ -104,7 +105,7 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 						button.pressed.emit()
 						return true
 		return false
-	if interaction == "oxidation-state":
+	if interaction in ["oxidation-state", "equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
 		for child in panel_content.get_children():
 			if child is LineEdit:
 				child.text = str(task.correctAnswer)

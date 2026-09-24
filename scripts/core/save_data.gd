@@ -1,10 +1,10 @@
 extends RefCounted
 
 const SAVE_PATH := "user://progress.json"
-const VERSION := 3
+const VERSION := 4
 
 static func load_progress(path: String = SAVE_PATH) -> Dictionary:
-	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": []}
+	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": [], "unlocked_level": 1}
 	if not FileAccess.file_exists(path):
 		return defaults
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -20,6 +20,8 @@ static func load_progress(path: String = SAVE_PATH) -> Dictionary:
 		if not parsed.has(key):
 			parsed[key] = defaults[key]
 	parsed.save_version = VERSION
+	if int(parsed.best_stars) > 0:
+		parsed.unlocked_level = maxi(2, int(parsed.unlocked_level))
 	if not parsed.topic_mastery is Dictionary:
 		parsed.topic_mastery = {}
 	if not parsed.mistakes is Array:
@@ -51,12 +53,14 @@ static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_P
 	progress.topic_mastery[topic] = record
 	return _write_progress(progress, path)
 
-static func record_round(score: int, completed: int, path: String = SAVE_PATH) -> Error:
+static func record_round(score: int, completed: int, path: String = SAVE_PATH, level: int = 1) -> Error:
 	var progress := load_progress(path)
 	progress.best_score = maxi(int(progress.best_score), score)
 	if completed >= 5:
 		var stars := 3 if score >= 600 else (2 if score >= 400 else 1)
 		progress.best_stars = maxi(int(progress.best_stars), stars)
+		if level == 1:
+			progress.unlocked_level = maxi(int(progress.unlocked_level), 2)
 	progress.total_xp = int(progress.total_xp) + completed * 50
 	progress.completed_rounds = int(progress.completed_rounds) + 1
 	return _write_progress(progress, path)

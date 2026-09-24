@@ -12,6 +12,12 @@ const STATION_CONFIG := [
 	{"id": "formula-board", "name": "ДОСКА ФОРМУЛ", "position": Vector3(5.7, 0.0, -3.4), "model": "formula_board"},
 	{"id": "periodic-table-terminal", "name": "ПЕРИОДИЧЕСКАЯ СИСТЕМА", "position": Vector3(5.5, 0.0, 4.5), "model": "periodic_terminal"},
 ]
+const LEVEL_TWO_STATIONS := [
+	{"id": "reaction-bench", "name": "РЕАКЦИОННЫЙ СТОЛ", "position": Vector3(-3.3, 0.0, -3.5), "model": "reaction_bench"},
+	{"id": "mixing-station", "name": "СМЕСИТЕЛЬНАЯ СТАНЦИЯ", "position": Vector3(5.7, 0.0, -3.4), "model": "mixing_station"},
+	{"id": "ionic-reaction-station", "name": "ИОННАЯ ЛАБОРАТОРИЯ", "position": Vector3(5.5, 0.0, 4.5), "model": "ionic_reaction_station"},
+	{"id": "inspection-station", "name": "КОНТРОЛЬ МАТЕРИАЛОВ", "position": Vector3(-3.8, 0.0, 0.8), "model": "inspection_station"},
+]
 
 @onready var _world: Node3D = $World
 @onready var _player: CharacterBody3D = $Player
@@ -31,6 +37,7 @@ var _nearest_station: Dictionary = {}
 var _round_done: bool = false
 var _round_complete_pending: bool = false
 var mode: String = "career"
+var level: int = 1
 var practice_topic: String = ""
 var _target_count: int = 5
 var _machinery_player: AudioStreamPlayer3D
@@ -89,7 +96,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			_hud.show_wrong_station(_tasks[_task_index], _nearest_station)
 
 func _load_tasks() -> void:
-	_tasks = TASK_BANK.load_verified_tasks()
+	_tasks = TASK_BANK.load_verified_tasks(level)
 	if mode == "practice":
 		_tasks = _tasks.filter(func(task: Dictionary) -> bool: return task.topic == practice_topic)
 		_target_count = mini(5, _tasks.size())
@@ -149,7 +156,7 @@ func _build_world() -> void:
 	_block("Machinery frame collision", Vector3(7.6, 0.55, -5.1), Vector3(0.65, 1.1, 0.65), Color(0, 0, 0, 0), true)
 	_prop("lever-double", Vector3(7.2, 0.0, 5.3), 1.1, PI)
 	_block("Lever collision", Vector3(7.2, 0.55, 5.3), Vector3(0.65, 1.1, 0.65), Color(0, 0, 0, 0), true)
-	for station in STATION_CONFIG:
+	for station in _stations():
 		_station_prop(station.model, station.position)
 		_block(station.name, station.position + Vector3(0, 0.03, 0), Vector3(2.3, 0.06, 2.3), Color("efa945"), false)
 		_block(station.name + " collider", station.position + Vector3(0, 0.55, 0), Vector3(1.3, 1.1, 1.1), Color(0, 0, 0, 0), true)
@@ -283,7 +290,7 @@ func _environment_prop(asset_name: String, pos: Vector3) -> void:
 func _find_nearest_station() -> void:
 	_nearest_station = {}
 	var nearest_distance := 2.6
-	for station in STATION_CONFIG:
+	for station in _stations():
 		var distance := _player.global_position.distance_to(station.position)
 		if distance < nearest_distance:
 			nearest_distance = distance
@@ -308,7 +315,7 @@ func _submit_answer(answer: String) -> void:
 	_world.add_child(burst)
 	burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
 	burst.start(valid)
-	for station in STATION_CONFIG:
+	for station in _stations():
 		if station.id == _active_station:
 			var pulse := STATION_PULSE.new() as Node3D
 			_world.add_child(pulse)
@@ -342,7 +349,7 @@ func _finish_round() -> void:
 	_player.controls_enabled = false
 	_update_hud()
 	if mode == "career":
-		var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path)
+		var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path, level)
 		if save_error != OK:
 			push_warning("Could not save round progress: %s" % error_string(save_error))
 	_hud.show_results(_score, _completed, _time_left, _target_count, mode)
@@ -358,3 +365,6 @@ func _resume() -> void:
 	_player.controls_enabled = true
 	_find_nearest_station()
 	_update_hud()
+
+func _stations() -> Array:
+	return LEVEL_TWO_STATIONS if level == 2 else STATION_CONFIG

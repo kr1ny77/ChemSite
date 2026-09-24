@@ -1,6 +1,6 @@
 extends Control
 
-signal start_requested(mode: String, topic: String)
+signal start_requested(mode: String, topic: String, level: int)
 signal settings_changed(settings: Dictionary)
 
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
@@ -68,9 +68,18 @@ func _ready() -> void:
 	start.custom_minimum_size = Vector2(280, 68)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)
-	start.pressed.connect(func() -> void: start_requested.emit("career", ""))
+	start.text = "КАРЬЕРА · УРОВЕНЬ 1   →"
+	start.pressed.connect(func() -> void: start_requested.emit("career", "", 1))
 	content.add_child(start)
 	start.grab_focus()
+	var level_two := Button.new()
+	level_two.text = "УРОВЕНЬ 2 · РЕАКЦИИ   →" if int(progress.unlocked_level) >= 2 else "УРОВЕНЬ 2 · ЗАВЕРШИ УРОВЕНЬ 1"
+	level_two.disabled = int(progress.unlocked_level) < 2
+	level_two.custom_minimum_size = Vector2(350, 54)
+	level_two.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	level_two.add_theme_font_size_override("font_size", 20)
+	level_two.pressed.connect(func() -> void: start_requested.emit("career", "", 2))
+	content.add_child(level_two)
 	var practice_button := Button.new()
 	practice_button.text = "ПРАКТИКА"
 	practice_button.custom_minimum_size = Vector2(280, 48)
@@ -194,7 +203,7 @@ func _close_practice() -> void:
 	_practice_button.grab_focus()
 
 func _start_practice(topic: String) -> void:
-	start_requested.emit("practice", topic)
+	start_requested.emit("practice", topic, 1)
 
 func _add_volume_slider(parent: VBoxContainer, title: String, key: String, settings: Dictionary) -> void:
 	var label := Label.new()

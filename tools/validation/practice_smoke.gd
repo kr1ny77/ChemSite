@@ -7,7 +7,7 @@ func _run() -> void:
 	var main := (load("res://scenes/main/main.tscn") as PackedScene).instantiate()
 	root.add_child(main)
 	await process_frame
-	main._current.start_requested.emit("practice", "Химические формулы")
+	main._current.start_requested.emit("practice", "Химические формулы", 1)
 	await process_frame
 	assert(main._current.mode == "practice" and main._current.practice_topic == "Химические формулы", "Menu did not route practice mode")
 	main.queue_free()
