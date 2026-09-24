@@ -12,6 +12,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Selected 18 CC0 Kenney GLBs for the site. Authored an original rigged construction chemist and three chemistry stations using reproducible Blender scripts; exported GLBs and kept the `.blend` sources.
 - Imported nine player actions with seven skeleton bones and wired locomotion, interaction and answer reactions to AnimationTree.
 - Added all 40 curated Level 1 chemistry tasks to normal selection and exported all 200 structured tasks to native JSON. A schema check and Level 1 interaction smoke validate task shape, correct-answer acceptance, formula tiles and option choices. Formula and oxidation-state inputs now cover the Level 1 interaction set.
+- Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
 - Added a small color-coded answer particle burst; rendered the effect above the player and verified that its emitter frees itself after playback.
 - Added a native audio settings panel with live music/effects bus control, persistent versioned values, keyboard focus and Escape navigation; captured it at 1440×900.

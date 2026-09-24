@@ -175,7 +175,7 @@ func _show_formula_builder(task: Dictionary) -> void:
 
 func _show_short_input() -> void:
 	var input := LineEdit.new()
-	input.placeholder_text = "+6"
+	input.placeholder_text = "Введите степень окисления"
 	input.custom_minimum_size.y = 55
 	input.add_theme_font_size_override("font_size", 25)
 	_panel_content.add_child(input)
