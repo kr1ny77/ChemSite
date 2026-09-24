@@ -30,6 +30,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added Career and topic-specific Practice entry flows. Practice offers the three verified Level 1 topics, disables the timer, ends after that topic's unique questions and leaves career progress untouched. Reviewed both menu states at 1440×900.
 - Added original paired footstep cues driven by actual distance traveled on the floor, plus a spatial looping mixer sound routed through SFX. Both are reproducibly generated from the audio source script.
 - Added a packaged-app QA entry path that exercises station panels, five answers, combo scoring, result state and isolated save data. The refreshed macOS release app passes this black-box runtime smoke with clean shutdown.
+- Added shared, restrained emission to the authored station glyphs, periodic tiles, storage markers and analyzer. The three work lights now vary subtly over time. Reviewed the rendered site at 1440×900 and rechecked all station walking routes.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -40,11 +41,11 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Improve station material polish and chemistry-specific interactions, then complete visual exported-app playtesting and listen to the audio mix on target speakers.
+Add chemistry-specific station interactions and visual feedback, then complete visual exported-app playtesting and listen to the audio mix on target speakers.
 
 ## Last verification
 
-2026-09-24: Godot editor import/parse, five-task Career round, version-1 save migration, topic-specific Practice and gameplay smoke passed. The exported macOS app completed an isolated five-task QA round with station panels, 700 score, three stars and saved progress, exiting without resource warnings. Audio smoke confirmed mixer routing and distance-driven footsteps. FFmpeg measured source peaks of −9.9 dBFS (step) and −18.3 dBFS (mixer). Menu, topic picker and results were visually reviewed at 1440×900.
+2026-09-24: Godot editor import/parse and all-three-station walking routes passed after station emissive accents and restrained work-light motion. The 1440×900 site capture was visually reviewed. The exported macOS app previously completed an isolated five-task QA round with station panels, 700 score, three stars and saved progress, exiting without resource warnings. Audio smoke confirmed mixer routing and distance-driven footsteps.
 
 ## Known issues
 

@@ -32,6 +32,9 @@ var mode: String = "career"
 var practice_topic: String = ""
 var _target_count: int = 5
 var _machinery_player: AudioStreamPlayer3D
+var _work_lights: Array[OmniLight3D] = []
+var _site_time: float = 0.0
+var _station_accent_materials: Dictionary = {}
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
@@ -51,6 +54,9 @@ func _ready() -> void:
 	_update_hud()
 
 func _process(delta: float) -> void:
+	_site_time += delta
+	for index in range(_work_lights.size()):
+		_work_lights[index].light_energy = 0.72 + 0.14 * sin(_site_time * 1.5 + float(index) * 2.1)
 	_camera_rig.global_position = _camera_rig.global_position.lerp(_player.global_position * Vector3(0.6, 0.0, 0.6), 1.0 - exp(-3.0 * delta))
 	if _round_done or not _player.controls_enabled:
 		return
@@ -152,6 +158,7 @@ func _build_world() -> void:
 		task_light.light_energy = 0.8
 		task_light.omni_range = 3.4
 		_world.add_child(task_light)
+		_work_lights.append(task_light)
 
 func _add_machinery_ambience(position: Vector3) -> void:
 	var stream := load("res://assets/audio/machinery_loop.wav") as AudioStreamWAV
@@ -247,6 +254,19 @@ func _station_prop(asset_name: String, pos: Vector3) -> void:
 		return
 	var prop := scene.instantiate() as Node3D
 	prop.position = pos
+	for node in prop.find_children("*", "MeshInstance3D", true, false):
+		var mesh := node as MeshInstance3D
+		if mesh.name.begins_with("Periodic element") or mesh.name.begins_with("Formula glyph") or mesh.name.begins_with("Amber header marker") or mesh.name == "Side sample analyzer":
+			var original := mesh.get_active_material(0) as StandardMaterial3D
+			if original != null:
+				var key := original.resource_name
+				if not _station_accent_materials.has(key):
+					var accent := original.duplicate() as StandardMaterial3D
+					accent.emission_enabled = true
+					accent.emission = original.albedo_color
+					accent.emission_energy_multiplier = 0.45
+					_station_accent_materials[key] = accent
+				mesh.material_override = _station_accent_materials[key]
 	_world.add_child(prop)
 
 func _environment_prop(asset_name: String, pos: Vector3) -> void:
