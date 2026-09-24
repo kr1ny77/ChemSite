@@ -29,6 +29,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added streak scoring (x1.5 after three correct, x2 after five), round XP and 1–3 star results. Migrated version-1 saves into version 2 while preserving scores and XP; recorded best stars. Reviewed the results screen at 1440×900 and fixed stale HUD data after the fifth answer.
 - Added Career and topic-specific Practice entry flows. Practice offers the three verified Level 1 topics, disables the timer, ends after that topic's unique questions and leaves career progress untouched. Reviewed both menu states at 1440×900.
 - Added original paired footstep cues driven by actual distance traveled on the floor, plus a spatial looping mixer sound routed through SFX. Both are reproducibly generated from the audio source script.
+- Added a packaged-app QA entry path that exercises station panels, five answers, combo scoring, result state and isolated save data. The refreshed macOS release app passes this black-box runtime smoke with clean shutdown.
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
@@ -39,16 +40,16 @@ Improve the site composition, lighting, visual feedback and UI so the native sli
 
 ## Next task
 
-Improve station material polish and chemistry-specific interactions, then complete an exported-app round playtest and listen to the audio mix on target speakers.
+Improve station material polish and chemistry-specific interactions, then complete visual exported-app playtesting and listen to the audio mix on target speakers.
 
 ## Last verification
 
-2026-09-24: Godot editor import/parse, five-task Career round, version-1 save migration, topic-specific Practice and gameplay smoke passed. Audio smoke confirmed the mixer loop is routed to SFX and sustained movement emits footsteps into the two-player cue pool; graphical runtime starts the loop. FFmpeg measured peaks of −9.9 dBFS for a source footstep and −18.3 dBFS for the source mixer loop before Godot bus and spatial attenuation. Menu, topic picker and results were visually reviewed at 1440×900.
+2026-09-24: Godot editor import/parse, five-task Career round, version-1 save migration, topic-specific Practice and gameplay smoke passed. The exported macOS app completed an isolated five-task QA round with station panels, 700 score, three stars and saved progress, exiting without resource warnings. Audio smoke confirmed mixer routing and distance-driven footsteps. FFmpeg measured source peaks of −9.9 dBFS (step) and −18.3 dBFS (mixer). Menu, topic picker and results were visually reviewed at 1440×900.
 
 ## Known issues
 
 - The laboratory cabin, material cache, safety point, mixer and rebar bay improve the site silhouette; the unfinished-building shell still needs a more coherent upper structure and material polish.
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
-- The macOS release is unsigned and unnotarized; a complete five-task playtest in the exported app remains open. Windows export is pending.
+- The macOS release is unsigned and unnotarized; its automated five-task round passes, while a visual playtest in the exported app remains open. Windows export is pending.
 - Advanced mastery, weak-topic scheduling and the remaining 190 curated tasks await later phases. Career, topic-specific Practice, combo and stars now work in the Level 1 round.

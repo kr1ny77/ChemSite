@@ -17,7 +17,7 @@
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; all nine character actions and sustained locomotion have visual reviews, the celebration pose is fixed, and the substance-storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, while footsteps and spatial mixer ambience now play during movement and exploration
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place
-- [ ] Play a complete five-task round in the native exported app and resolve gameplay and visual QA findings
+- [ ] Complete a visual five-task playtest in the exported app and resolve gameplay and visual QA findings; a packaged macOS app now passes an automated five-task round with save/results verification
 
 ## Later phases
 

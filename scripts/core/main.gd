@@ -2,11 +2,18 @@ extends Node
 
 const SITE_SCENE: PackedScene = preload("res://scenes/levels/construction_site.tscn")
 const MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
+const EXPORT_ROUND_SMOKE = preload("res://scripts/qa/export_round_smoke.gd")
 
 var _current: Node
 
 func _ready() -> void:
 	show_menu()
+	if OS.get_cmdline_user_args().has("--qa-round"):
+		call_deferred("_run_export_smoke")
+
+func _run_export_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)
 
 func show_menu() -> void:
 	_replace(MENU_SCENE)
