@@ -17,6 +17,7 @@
 - [x] Phase 12 Level 2 audit pass: review all 40 reaction tasks, verify conservation in 20 authored equations, and quarantine one phosphorus oxide notation issue from native selection
 - [x] Phase 13 Level 2 input foundation: add full-equation entry for reaction, mixing and ionic tasks; normalize formula subscripts, ion charge glyphs and arrows; validate every selectable Level 2 task and panel in Godot
 - [x] Phase 13 Level 2 playable pass: author four Blender/GLB stations, route all 39 reviewed Level 2 tasks to a five-task career round, unlock it after a completed Level 1 round, and verify round, save migration, physical station routes, multi-angle assets, 1440×900 site render and packaged macOS/Windows PCK round smokes
+- [x] Phase 12/13 Level 3 content and input foundation: independently recompute 24 numeric answers, check four ionic dissociations, review 12 choice tasks, clarify the pH approximation, and render/test numeric and equation controls for all 40 Level 3 tasks
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
@@ -30,7 +31,7 @@
 
 - [ ] Phase 9: complete adaptive mastery and expanded progression data for Levels 2–5; Level 1 now records mastery and schedules a related task two questions after a mistake
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
-- [ ] Phase 12 review: independently review the remaining Level 3–5 answers and explanations, resolve L2-050 with the target curriculum, and keep later levels out of production selection until their station mechanics pass gameplay QA
+- [ ] Phase 12 review: independently review the remaining Level 4–5 answers and explanations, resolve L2-050 with the target curriculum, and keep later levels out of production selection until their station mechanics pass gameplay QA; Level 3 has a first independent content pass
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Level 2 has a playable first pass, with contextual virtual-mixing/ionic interaction polish, human visual QA and Levels 3–5 still required
 - [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
 - [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test

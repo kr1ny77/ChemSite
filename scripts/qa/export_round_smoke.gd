@@ -105,10 +105,10 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 						button.pressed.emit()
 						return true
 		return false
-	if interaction in ["oxidation-state", "equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
+	if interaction in ["oxidation-state", "equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation", "dissociation", "numeric-calculation", "virtual-scales", "solution-preparation"]:
 		for child in panel_content.get_children():
 			if child is LineEdit:
-				child.text = str(task.correctAnswer)
+				child.text = str(task.correctAnswer.value) if task.correctAnswer is Dictionary else str(task.correctAnswer)
 				child.text_submitted.emit(child.text)
 				return true
 		return false

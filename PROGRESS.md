@@ -18,6 +18,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Authored four distinct Level 2 GLB stations in Blender with editable sources: reaction bench, twin-vessel mixer, ionic console and inspection desk. Blender Agent Studio fresh imports passed geometry inspection with 5,088–6,336 triangles and no issues; six-view sheets and the 1440×900 site render were reviewed. Godot physical walking routes reach all four stations.
 - Added Level 2 career entry after a completed five-task Level 1 round. Version-4 saves retain earlier progress and unlock Level 2 for prior saves with earned stars. A complete five-task Level 2 smoke visits four stations, accepts verified answers, reaches results and saves progress.
 - Refreshed the macOS and Windows release exports with the Level 2 route. The packaged macOS app and Windows PCK each pass the Level 2 five-task round through HUD answer controls. The Windows binary remains to be executed on a Windows host.
+- Audited all 40 Level 3 tasks: independently recomputed 24 numeric results, checked four dissociation equations for atom/charge conservation, and checked 12 choice tasks. Clarified the dilute-solution approximation in pH prompts and rules in the preserved TypeScript source, then re-exported the 200-task native bank. Added numeric and dissociation HUD controls and visually reviewed a 1440×900 numeric panel; fixed its station label.
 - Reviewed the oxidation-state panel at 1440×900 and replaced its answer-revealing placeholder with a neutral entry prompt.
 - Launched the refreshed macOS app directly, entered Career through its visible menu, and reviewed the live construction-site render and HUD at 1440×900.
 - Added an audio bus, a project-authored legacy music track and generated interaction/correct/incorrect cues.
@@ -49,15 +50,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest. Level 2 is now playable as a career round; its station-specific interaction and visual QA remain in progress.
+Complete visual QA for the expanded 40-task Level 1 bank and continue site, feedback and UI polish. Perform a complete exported-app round playtest. Level 2 is playable as a career round; its station-specific interaction and visual QA remain in progress. Level 3 content and input controls have an independent first pass while its playable station remains to be built.
 
 ## Next task
 
-Polish the Level 2 virtual-mixing and ionic interactions so they express each station's chemistry action, then playtest the five-task round in an exported app. Complete a human-driven exported-app round and listen to the audio mix on target speakers; then continue chemistry review for Levels 3–5.
+Build the Level 3 solution laboratory in Blender, route its reviewed task bank into a playable round, and test numeric answers through the actual HUD. Polish Level 2 virtual-mixing and ionic interactions, then playtest exported rounds. Continue chemistry review for Levels 4–5 and complete a human-driven exported-app/audio pass.
 
 ## Last verification
 
-2026-09-24: Godot 4.7.2 imported four new GLBs. Blender Agent Studio inspection passed all four with no reported issues, and six-view sheets plus the 1440×900 site were visually reviewed. Level 2 content smoke passed 39 tasks; the Level 2 five-task round smoke passed with four station types and persisted XP. Physical route smoke reached all four. Level 1 round, Practice, save migration and existing station routes passed. Refreshed macOS app and Windows PCK both passed a packaged five-task Level 2 HUD round; Windows EXE remains a PE32+ x86-64 GUI binary awaiting native execution.
+2026-09-24: Godot 4.7.2 imported four Level 2 GLBs. Blender Agent Studio inspection passed all four with no issues, and six-view sheets plus the 1440×900 site were reviewed. Level 2 content, full round, routes, packaged macOS and Windows PCK smokes passed. Level 3 independent chemistry audit passed 24 numeric calculations, four dissociations and 12 choices. The native bank still validates as 199 verified plus L2-050 in review; Level 3 HUD smoke passed 40 tasks. A 1440×900 numeric panel was reviewed. Native Windows execution remains pending.
 
 ## Known issues
 
@@ -65,4 +66,4 @@ Polish the Level 2 virtual-mixing and ionic interactions so they express each st
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Level 1 and Level 2 enter gameplay through separate career rounds. Level 2 needs human playtesting and interaction polish; Levels 3–5 remain pending.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Level 1 and Level 2 enter gameplay through separate career rounds. Level 3 content/input QA passed but its station and round are pending; Levels 4–5 need independent review. Level 2 still needs human playtesting and interaction polish.

@@ -46,7 +46,7 @@ static func _normalize(value: String, interaction: String) -> String:
 		normalized = normalized.replace(pair[0], pair[1])
 	if interaction == "formula-builder":
 		return normalized.replace(" ", "")
-	if interaction in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
+	if interaction in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation", "dissociation"]:
 		return normalized.replace("→", "->").replace("⟶", "->").replace("⇒", "->").replace("^", "").replace(" ", "").replace("\t", "").replace("\n", "")
 	if interaction == "ion-builder":
 		return normalized.replace("^", "").replace(" ", "")

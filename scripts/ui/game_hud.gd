@@ -107,7 +107,9 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
 		_show_short_input()
-	elif task.get("interactionType", "") in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation"]:
+	elif task.get("correctAnswer") is Dictionary:
+		_show_numeric_input(task)
+	elif task.get("interactionType", "") in ["equation-completion", "equation-balancing", "virtual-mixing", "ionic-equation", "dissociation"]:
 		_show_equation_input()
 	else:
 		var cards := GridContainer.new()
@@ -201,6 +203,25 @@ func _show_equation_input() -> void:
 	input.placeholder_text = "Реагенты -> продукты"
 	input.custom_minimum_size.y = 55
 	input.add_theme_font_size_override("font_size", 22)
+	input.caret_blink = true
+	_panel_content.add_child(input)
+	var submit := Button.new()
+	submit.text = "ПРОВЕРИТЬ  →"
+	submit.custom_minimum_size.y = 55
+	_style_button(submit)
+	submit.pressed.connect(func() -> void: answer_submitted.emit(input.text))
+	input.text_submitted.connect(func(_text: String) -> void: answer_submitted.emit(input.text))
+	_panel_content.add_child(submit)
+
+func _show_numeric_input(task: Dictionary) -> void:
+	var answer: Dictionary = task.correctAnswer
+	var unit := str(answer.get("unit", ""))
+	var instruction := "Введи число" if unit.is_empty() else "Введи число · единица: " + unit
+	_panel_content.add_child(_label(instruction, 18, Color("627679")))
+	var input := LineEdit.new()
+	input.placeholder_text = "Твой расчёт"
+	input.custom_minimum_size.y = 55
+	input.add_theme_font_size_override("font_size", 24)
 	input.caret_blink = true
 	_panel_content.add_child(input)
 	var submit := Button.new()
@@ -357,4 +378,5 @@ func _station_name(station_id: String) -> String:
 		"mixing-station": return "СМЕСИТЕЛЬНАЯ СТАНЦИЯ"
 		"ionic-reaction-station": return "ИОННАЯ ЛАБОРАТОРИЯ"
 		"inspection-station": return "КОНТРОЛЬ МАТЕРИАЛОВ"
+		"solution-laboratory": return "ЛАБОРАТОРИЯ РАСТВОРОВ"
 	return station_id

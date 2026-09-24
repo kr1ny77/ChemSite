@@ -3054,13 +3054,13 @@
     "difficulty": 2,
     "station": "solution-laboratory",
     "interactionType": "numeric-calculation",
-    "prompt": "[H⁺] = 10⁻⁴ mol/L. Найди pH.",
+    "prompt": "В учебном приближении для разбавленного раствора [H⁺] = 10⁻⁴ mol/L. Найди pH.",
     "correctAnswer": {
       "value": 4,
       "absoluteTolerance": 0.01
     },
     "explanation": "pH = −lg[H⁺] = −lg(10⁻⁴) = 4.",
-    "rule": "pH = −lg[H⁺].",
+    "rule": "Для разбавленного раствора в учебном приближении pH ≈ −lg[H⁺].",
     "example": "[H⁺] = 10⁻³ mol/L даёт pH 3.",
     "hint": "Знак показателя степени меняется при вычислении −lg.",
     "tags": [
@@ -3079,13 +3079,13 @@
     "difficulty": 2,
     "station": "solution-laboratory",
     "interactionType": "numeric-calculation",
-    "prompt": "[H⁺] = 10⁻² mol/L. Найди pH.",
+    "prompt": "В учебном приближении [H⁺] = 10⁻² mol/L. Найди pH.",
     "correctAnswer": {
       "value": 2,
       "absoluteTolerance": 0.01
     },
     "explanation": "pH = −lg(10⁻²) = 2, поэтому раствор кислый.",
-    "rule": "pH = −lg[H⁺].",
+    "rule": "Для разбавленного раствора в учебном приближении pH ≈ −lg[H⁺].",
     "example": "[H⁺] = 10⁻⁵ mol/L даёт pH 5.",
     "hint": "Возьми отрицательный десятичный логарифм.",
     "tags": [
@@ -3104,14 +3104,14 @@
     "difficulty": 2,
     "station": "solution-laboratory",
     "interactionType": "numeric-calculation",
-    "prompt": "pH = 5. Найди [H⁺] в mol/L.",
+    "prompt": "В учебном приближении pH = 5. Найди [H⁺] в mol/L.",
     "correctAnswer": {
       "value": 0.00001,
       "relativeTolerance": 0.01,
       "unit": "mol/L"
     },
     "explanation": "[H⁺] = 10⁻ᵖᴴ = 10⁻⁵ mol/L.",
-    "rule": "[H⁺] = 10⁻ᵖᴴ.",
+    "rule": "Для разбавленного раствора в учебном приближении [H⁺] ≈ 10⁻ᵖᴴ.",
     "example": "При pH 3 концентрация H⁺ равна 10⁻³ mol/L.",
     "hint": "Возведи 10 в степень −pH.",
     "tags": [
@@ -3157,14 +3157,14 @@
     "difficulty": 2,
     "station": "solution-laboratory",
     "interactionType": "numeric-calculation",
-    "prompt": "Во сколько раз [H⁺] при pH 3 выше, чем при pH 5?",
+    "prompt": "В учебном приближении во сколько раз [H⁺] при pH 3 выше, чем при pH 5?",
     "correctAnswer": {
       "value": 100,
       "absoluteTolerance": 0.1,
       "unit": "раз"
     },
     "explanation": "Разница в 2 единицы pH означает отношение 10² = 100.",
-    "rule": "Одна единица pH соответствует десятикратному изменению [H⁺].",
+    "rule": "В учебном приближении одна единица pH соответствует десятикратному изменению [H⁺].",
     "example": "Разница в 3 единицы даёт 1000 раз.",
     "hint": "Возведи 10 в степень разности pH.",
     "tags": [
