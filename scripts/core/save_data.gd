@@ -1,10 +1,10 @@
 extends RefCounted
 
 const SAVE_PATH := "user://progress.json"
-const VERSION := 1
+const VERSION := 2
 
 static func load_progress(path: String = SAVE_PATH) -> Dictionary:
-	var defaults := {"save_version": VERSION, "best_score": 0, "total_xp": 0, "completed_rounds": 0}
+	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0}
 	if not FileAccess.file_exists(path):
 		return defaults
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -14,16 +14,20 @@ static func load_progress(path: String = SAVE_PATH) -> Dictionary:
 	if parser.parse(file.get_as_text()) != OK:
 		return defaults
 	var parsed: Variant = parser.data
-	if not parsed is Dictionary or parsed.get("save_version", -1) != VERSION:
+	if not parsed is Dictionary or int(parsed.get("save_version", -1)) < 1 or int(parsed.get("save_version", -1)) > VERSION:
 		return defaults
 	for key in defaults.keys():
 		if not parsed.has(key):
 			parsed[key] = defaults[key]
+	parsed.save_version = VERSION
 	return parsed
 
 static func record_round(score: int, completed: int, path: String = SAVE_PATH) -> Error:
 	var progress := load_progress(path)
 	progress.best_score = maxi(int(progress.best_score), score)
+	if completed >= 5:
+		var stars := 3 if score >= 600 else (2 if score >= 400 else 1)
+		progress.best_stars = maxi(int(progress.best_stars), stars)
 	progress.total_xp = int(progress.total_xp) + completed * 50
 	progress.completed_rounds = int(progress.completed_rounds) + 1
 	var file := FileAccess.open(path, FileAccess.WRITE)

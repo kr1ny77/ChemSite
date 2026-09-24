@@ -8,6 +8,8 @@ var _objective: Label
 var _status: Label
 var _score_label: Label
 var _timer_label: Label
+var _combo_label: Label
+var _xp_label: Label
 var _prompt: Label
 var _panel: PanelContainer
 var _panel_content: VBoxContainer
@@ -41,7 +43,7 @@ func _ready() -> void:
 	round_panel.anchor_right = 1.0
 	round_panel.offset_top = 20
 	round_panel.offset_right = -24
-	round_panel.offset_bottom = 112
+	round_panel.offset_bottom = 154
 	round_panel.add_theme_stylebox_override("panel", _panel_style(Color("173744"), 13))
 	add_child(round_panel)
 	var round_content := VBoxContainer.new()
@@ -49,8 +51,12 @@ func _ready() -> void:
 	round_panel.add_child(round_content)
 	_score_label = _label("ОЧКИ  0", 21, Color("f3a846"))
 	_timer_label = _label("ВРЕМЯ  15:00", 19, Color("f7f4e7"))
+	_combo_label = _label("СЕРИЯ  0", 17, Color("8cdbbf"))
+	_xp_label = _label("ОПЫТ  +0", 17, Color("cfddd8"))
 	round_content.add_child(_score_label)
 	round_content.add_child(_timer_label)
+	round_content.add_child(_combo_label)
+	round_content.add_child(_xp_label)
 	_prompt = _label("", 22, Color("173744"))
 	_prompt.anchor_left = 0.21
 	_prompt.anchor_right = 0.79
@@ -71,11 +77,13 @@ func _ready() -> void:
 	_panel_content.add_theme_constant_override("separation", 13)
 	_panel.add_child(_panel_content)
 
-func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary) -> void:
+func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0) -> void:
 	_objective.text = "ЗАДАНИЕ %d/5  ·  %s" % [mini(completed + 1, 5), task.topic]
 	_status.text = "СТАНЦИЯ: %s" % _station_name(task.station)
 	_score_label.text = "ОЧКИ  %d" % score
 	_timer_label.text = "ВРЕМЯ  %02d:%02d" % [int(time_left) / 60, int(time_left) % 60]
+	_combo_label.text = "СЕРИЯ  %d  ·  x%s" % [streak, "2" if streak >= 5 else ("1.5" if streak >= 3 else "1")]
+	_xp_label.text = "ОПЫТ  +%d" % (completed * 50)
 	if nearest.is_empty():
 		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
 	elif nearest.id == task.station:
@@ -191,11 +199,13 @@ func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 	_panel_content.add_child(close)
 	close.grab_focus()
 
-func show_feedback(correct: bool, task: Dictionary) -> void:
+func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: int = 0) -> void:
 	_clear_panel()
 	_panel.visible = true
-	var title := "ВЕРНО  +100" if correct else "ПОПРОБУЙ ЕЩЁ"
+	var title := "ВЕРНО  +%d" % awarded if correct else "ПОПРОБУЙ ЕЩЁ"
 	_panel_content.add_child(_label(title, 29, Color("2c977b") if correct else Color("c66c47")))
+	if correct and streak >= 3:
+		_panel_content.add_child(_label("СЕРИЯ %d  ·  МНОЖИТЕЛЬ x%s" % [streak, "2" if streak >= 5 else "1.5"], 18, Color("2c977b")))
 	_panel_content.add_child(_label(task.explanation, 21, Color("243b43")))
 	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("627679")))
 	if not correct:
@@ -209,14 +219,23 @@ func show_feedback(correct: bool, task: Dictionary) -> void:
 
 func show_results(score: int, completed: int, time_left: float) -> void:
 	_clear_panel()
+	_objective.text = "СМЕНА ЗАВЕРШЕНА"
+	_status.text = "ИТОГИ УЧЕБНОЙ СМЕНЫ"
+	_prompt.text = ""
+	_panel.anchor_top = 0.24
+	_panel.anchor_bottom = 0.71
 	_panel.visible = true
 	_panel_content.add_child(_label("СМЕНА ЗАВЕРШЕНА", 31, Color("cf7729")))
 	_panel_content.add_child(_label("Выполнено задач: %d / 5" % completed, 23, Color("243b43")))
 	_panel_content.add_child(_label("Очки: %d" % score, 23, Color("243b43")))
+	var stars := 3 if score >= 600 and completed == 5 else (2 if score >= 400 and completed == 5 else (1 if completed == 5 else 0))
+	_panel_content.add_child(_label("ЗВЁЗДЫ: %s" % ("★".repeat(stars) + "☆".repeat(3 - stars)), 25, Color("cf7729")))
+	_panel_content.add_child(_label("ОПЫТ: +%d" % (completed * 50), 20, Color("243b43")))
 	_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
 	var menu := Button.new()
 	menu.text = "ГЛАВНОЕ МЕНЮ"
 	menu.custom_minimum_size.y = 55
+	_style_button(menu)
 	menu.pressed.connect(func() -> void: exit_requested.emit())
 	_panel_content.add_child(menu)
 	menu.grab_focus()

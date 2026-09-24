@@ -21,6 +21,7 @@ var _tasks: Array = []
 var _task_index: int = 0
 var _completed: int = 0
 var _score: int = 0
+var _streak: int = 0
 var _time_left: float = 900.0
 var _active_station: String = ""
 var _hud: Control
@@ -232,7 +233,7 @@ func _find_nearest_station() -> void:
 func _update_hud() -> void:
 	if _tasks.is_empty():
 		return
-	_hud.update_status(_tasks[_task_index], _completed, _score, _time_left, _nearest_station)
+	_hud.update_status(_tasks[_task_index], _completed, _score, _time_left, _nearest_station, _streak)
 
 func _submit_answer(answer: String) -> void:
 	if _round_done or _tasks.is_empty():
@@ -252,14 +253,18 @@ func _submit_answer(answer: String) -> void:
 			pulse.start(valid)
 			break
 	if valid:
-		_score += 100
+		_streak += 1
+		var multiplier := 2.0 if _streak >= 5 else (1.5 if _streak >= 3 else 1.0)
+		var awarded := int(roundi(float(task.get("points", 100)) * multiplier))
+		_score += awarded
 		_completed += 1
 		_player.play_reaction(true)
-		_hud.show_feedback(true, task)
+		_hud.show_feedback(true, task, awarded, _streak)
 		_task_index = (_task_index + 1) % _tasks.size()
 	else:
+		_streak = 0
 		_player.play_reaction(false)
-		_hud.show_feedback(false, task)
+		_hud.show_feedback(false, task, 0, _streak)
 	if _completed >= 5:
 		_finish_round()
 	else:
@@ -270,6 +275,7 @@ func _finish_round() -> void:
 		return
 	_round_done = true
 	_player.controls_enabled = false
+	_update_hud()
 	var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path)
 	if save_error != OK:
 		push_warning("Could not save round progress: %s" % error_string(save_error))

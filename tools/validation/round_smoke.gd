@@ -28,10 +28,10 @@ func _run() -> void:
 		assert(site._completed == i + 1, "Task did not complete")
 		if i < 4:
 			site._resume()
-	assert(site._round_done and site._score == 500, "Round results were not reached")
+	assert(site._round_done and site._score == 700 and site._streak == 5, "Round results or combo scoring are invalid")
 	assert(hud.is_panel_open() and not player.controls_enabled, "Result panel state is invalid")
 	var progress: Dictionary = SAVE_DATA.load_progress(TEST_PATH)
-	assert(progress.best_score == 500 and progress.total_xp == 250 and progress.completed_rounds == 1)
+	assert(progress.best_score == 700 and progress.best_stars == 3 and progress.total_xp == 250 and progress.completed_rounds == 1)
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(TEST_PATH))
 	print("CHEMSITE_ROUND_SMOKE_OK")
 	quit()

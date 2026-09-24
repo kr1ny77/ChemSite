@@ -56,7 +56,7 @@ func _ready() -> void:
 	content.add_child(description)
 	var progress: Dictionary = SAVE_DATA.load_progress()
 	var record := Label.new()
-	record.text = "ЛУЧШИЙ РЕЗУЛЬТАТ: %d  /  ОПЫТ: %d" % [progress.best_score, progress.total_xp]
+	record.text = "РЕКОРД: %d  /  ЗВЁЗДЫ: %d  /  ОПЫТ: %d" % [progress.best_score, progress.best_stars, progress.total_xp]
 	record.add_theme_color_override("font_color", Color("f3a846"))
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
