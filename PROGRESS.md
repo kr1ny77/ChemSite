@@ -50,19 +50,21 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added a complete five-task round smoke test that checks station interactions, results and saved progress using an isolated test save.
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Configured a Windows Desktop x86_64 release preset. The official Godot 4.7.2 Windows template produced `builds/windows/ChemSite.exe` and `ChemSite.pck`; the PE header identifies a 64-bit Windows GUI program. The PCK completed the packaged five-task round under the matching Godot runtime on macOS.
+- Added a data-driven Level 2 virtual mixing control: learners select a reagent pair and see the curated observation before entering an equation. Added a staged Level 5 mission readout that unlocks the answer after the inspection steps. All five mixing tasks and nine staged mission tasks passed interaction gates and answer checks; 1440×900 before/after panels were visually reviewed and preserved in `docs/screenshots/`.
+- Added a Windows GitHub Actions workflow that downloads official Godot 4.7.2 editor/templates, exports the native EXE, runs five career rounds plus the Level 5 mission round on Windows, and uploads the paired EXE/PCK artifact. Its first remote run is pending.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
 ## Current work
 
-Levels 1–5 are playable career rounds. The new Level 5 GLB, four physical station routes, all 40 HUD submissions, and refreshed macOS/Windows packaged five-task rounds passed automated QA. Contextual station interactions, human playtesting, accessibility, performance and release QA remain open.
+Levels 1–5 are playable career rounds. The Level 2 mixing and Level 5 inspection controls now provide contextual station interactions. All affected task controls and packaged Level 5 mission rounds passed automated QA. Human playtesting, accessibility, performance and release QA remain open.
 
 ## Next task
 
-Improve Level 2–5 station-specific interactions and run a human-driven exported-app/audio playtest. Profile the five-level site on a normal student laptop, run the Windows EXE on Windows, resolve L2-050 with the target curriculum, complete the subject-matter review, then publish the GitHub prerelease.
+Run the Windows CI workflow and extend station-specific interactions to Levels 3–4. Then run a human-driven exported-app/audio playtest, profile the site on a normal student laptop, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
 
 ## Last verification
 
-2026-09-28: Godot 4.7.2 editor import/parse passed the Level 5 GLB. Blender Agent Studio fresh-import inspection reported 7,684 triangles, 11 materials and no geometry issues; six views and a 1440×900 site view were visually reviewed. Level 5 station routes, Level 4→5 save unlock, all 40 Level 5 HUD submissions, a source five-task round and a rendered round passed. Refreshed macOS app and Windows PCK each passed five-task smokes for Levels 1–5; the packaged macOS Level 5 visual round was reviewed. The 1280×720 menu includes all five levels and controls. Native Windows EXE testing remains pending.
+2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck and Level 2 tests, 20 balanced Level 2 equation checks, Level 5 chemistry audit, all 39 Level 2 and 40 Level 5 HUD submissions, source five-task and mission rounds, and refreshed macOS app/Windows PCK mission rounds passed. Mixing and mission panels were reviewed at 1440×900. The earlier packaged Level 1–5 rounds passed on both targets. Native Windows EXE testing remains pending.
 
 ## Known issues
 

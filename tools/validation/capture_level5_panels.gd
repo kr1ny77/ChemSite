@@ -19,5 +19,12 @@ func _run() -> void:
 			await process_frame
 		var capture := root.get_viewport().get_texture().get_image()
 		assert(capture.save_png("res://artifacts/level5_%s.png" % identifier) == OK)
+		if identifier == "L5-200":
+			var stage: Control = hud.get("_mission_stage")
+			while not stage.is_complete():
+				(stage.get_node("NextButton") as Button).pressed.emit()
+			for frame in range(4):
+				await process_frame
+			assert(root.get_viewport().get_texture().get_image().save_png("res://artifacts/level5_L5-200_ready.png") == OK)
 	print("LEVEL5_VISUAL_CAPTURE_OK")
 	quit()

@@ -56,6 +56,9 @@ export type TaskDefinition = {
   parameters?: {
     formulaTokens?: string[]
     compound?: string
+    mixingReagents?: string[]
+    mixingOptions?: string[]
+    mixingObservation?: string
     missionSteps?: {
       title: string
       readout: string

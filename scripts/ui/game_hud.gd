@@ -4,6 +4,9 @@ signal answer_submitted(answer: String)
 signal resume_requested
 signal exit_requested
 
+const MISSION_STAGE_VIEW = preload("res://scripts/ui/mission_stage_view.gd")
+const REAGENT_MIX_VIEW = preload("res://scripts/ui/reagent_mix_view.gd")
+
 var _objective: Label
 var _status: Label
 var _score_label: Label
@@ -17,6 +20,8 @@ var _feedback: Label
 var _formula_buffer: String = ""
 var _formula_tokens: Array[String] = []
 var _formula_output: Label
+var _mission_stage: HBoxContainer
+var _mix_view: VBoxContainer
 
 func _ready() -> void:
 	var top := PanelContainer.new()
@@ -99,13 +104,30 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	var longest_option := 0
 	for option in task.get("options", []):
 		longest_option = maxi(longest_option, str(option).length())
-	_panel.anchor_top = 0.11 if longest_option > 80 else 0.19
-	_panel.anchor_bottom = 0.89 if longest_option > 80 else 0.81
+	var mission_steps: Array = task.get("parameters", {}).get("missionSteps", [])
+	_panel.anchor_top = 0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19)
+	_panel.anchor_bottom = 0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81)
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
 	_panel_content.add_child(_label(task.prompt, 27, Color("243b43")))
 	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 17, Color("627679")))
+	if not mission_steps.is_empty():
+		_mission_stage = MISSION_STAGE_VIEW.new()
+		_mission_stage.configure(mission_steps)
+		_mission_stage.inspected.connect(func() -> void:
+			_set_answer_enabled(true)
+			_focus_first_answer()
+		)
+		_panel_content.add_child(_mission_stage)
+	if task.get("interactionType", "") == "virtual-mixing" and task.get("parameters", {}).has("mixingReagents"):
+		_mix_view = REAGENT_MIX_VIEW.new()
+		_mix_view.configure(task.parameters)
+		_mix_view.mixed.connect(func() -> void:
+			_set_answer_enabled(true)
+			_focus_first_answer()
+		)
+		_panel_content.add_child(_mix_view)
 	if task.get("interactionType", "") == "formula-builder":
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
@@ -136,6 +158,14 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	_style_button(cancel, true)
 	cancel.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(cancel)
+	if _mission_stage != null:
+		_set_answer_enabled(false)
+		_mission_stage.focus_stage_button()
+		return
+	if _mix_view != null:
+		_set_answer_enabled(false)
+		_mix_view.focus_first()
+		return
 	var focus_target := _panel_content.get_child(3)
 	if focus_target is GridContainer and focus_target.get_child_count() > 0:
 		focus_target.get_child(0).grab_focus()
@@ -345,9 +375,31 @@ func is_panel_open() -> bool:
 	return _panel.visible
 
 func _clear_panel() -> void:
+	_mission_stage = null
+	_mix_view = null
 	for child in _panel_content.get_children():
 		_panel_content.remove_child(child)
 		child.queue_free()
+
+func _set_answer_enabled(enabled: bool) -> void:
+	for child in _panel_content.get_children():
+		if child is GridContainer:
+			for option in child.get_children():
+				if option is Button:
+					option.disabled = not enabled
+		elif child is LineEdit:
+			child.editable = enabled
+		elif child is Button and child.text.begins_with("ПРОВЕРИТЬ"):
+			child.disabled = not enabled
+
+func _focus_first_answer() -> void:
+	for child in _panel_content.get_children():
+		if child is LineEdit:
+			child.grab_focus()
+			return
+		if child is GridContainer and child.get_child_count() > 0:
+			(child.get_child(0) as Button).grab_focus()
+			return
 
 func _label(value: String, size: int, color: Color) -> Label:
 	var label := Label.new()

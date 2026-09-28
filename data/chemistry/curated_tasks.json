@@ -1545,7 +1545,18 @@
       "sulfate"
     ],
     "parameters": {
-      "compound": "BaSO4"
+      "compound": "BaSO4",
+      "mixingReagents": [
+        "BaCl₂",
+        "Na₂SO₄"
+      ],
+      "mixingOptions": [
+        "BaCl₂",
+        "Na₂SO₄",
+        "NaCl",
+        "H₂O"
+      ],
+      "mixingObservation": "Белый осадок BaSO₄"
     },
     "id": "L2-051",
     "level": 2,
@@ -1571,7 +1582,18 @@
       "chloride"
     ],
     "parameters": {
-      "compound": "AgCl"
+      "compound": "AgCl",
+      "mixingReagents": [
+        "AgNO₃",
+        "NaCl"
+      ],
+      "mixingOptions": [
+        "AgNO₃",
+        "NaCl",
+        "NaNO₃",
+        "H₂O"
+      ],
+      "mixingObservation": "Белый осадок AgCl"
     },
     "id": "L2-052",
     "level": 2,
@@ -1597,7 +1619,18 @@
       "hydroxide"
     ],
     "parameters": {
-      "compound": "Cu(OH)2"
+      "compound": "Cu(OH)2",
+      "mixingReagents": [
+        "CuSO₄",
+        "NaOH"
+      ],
+      "mixingOptions": [
+        "CuSO₄",
+        "NaOH",
+        "Na₂SO₄",
+        "H₂O"
+      ],
+      "mixingObservation": "Голубой осадок Cu(OH)₂"
     },
     "id": "L2-053",
     "level": 2,
@@ -1623,7 +1656,18 @@
       "iron"
     ],
     "parameters": {
-      "compound": "Fe(OH)3"
+      "compound": "Fe(OH)3",
+      "mixingReagents": [
+        "FeCl₃",
+        "NaOH"
+      ],
+      "mixingOptions": [
+        "FeCl₃",
+        "NaOH",
+        "NaCl",
+        "H₂O"
+      ],
+      "mixingObservation": "Бурый осадок Fe(OH)₃"
     },
     "id": "L2-054",
     "level": 2,
@@ -1649,7 +1693,18 @@
       "carbonate"
     ],
     "parameters": {
-      "compound": "CO2"
+      "compound": "CO2",
+      "mixingReagents": [
+        "Na₂CO₃",
+        "HCl"
+      ],
+      "mixingOptions": [
+        "Na₂CO₃",
+        "HCl",
+        "NaCl",
+        "H₂O"
+      ],
+      "mixingObservation": "Выделяется CO₂"
     },
     "id": "L2-055",
     "level": 2,

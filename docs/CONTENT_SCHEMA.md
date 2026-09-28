@@ -1,6 +1,6 @@
 # Chemistry Content Schema
 
-The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved browser schema and guides the remaining native content migration.
+The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved source schema used to export all 200 native tasks.
 
 All chemistry content must be stored as structured data.
 
@@ -86,7 +86,14 @@ export type TaskDefinition = {
 
   prompt: string
 
-  parameters?: Record<string, unknown>
+  parameters?: {
+    formulaTokens?: string[]
+    compound?: string
+    missionSteps?: { title: string; readout: string }[]
+    mixingReagents?: string[]
+    mixingOptions?: string[]
+    mixingObservation?: string
+  }
 
   correctAnswer: unknown
 
@@ -884,6 +891,6 @@ Chemistry content is data.
 
 Game mechanics interpret that data.
 
-React components render the result.
+Godot Control scenes render the result.
 
 These systems must remain separate.

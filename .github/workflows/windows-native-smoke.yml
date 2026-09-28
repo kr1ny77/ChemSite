@@ -1,0 +1,61 @@
+name: Windows native smoke
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export-and-play:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Install official Godot 4.7.2 editor and export templates
+        shell: pwsh
+        run: |
+          $version = '4.7.2-stable'
+          $base = "https://github.com/godotengine/godot/releases/download/$version"
+          Invoke-WebRequest "$base/Godot_v${version}_win64.exe.zip" -OutFile godot-editor.zip
+          Expand-Archive godot-editor.zip -DestinationPath godot-editor
+          $editor = Get-ChildItem godot-editor -Filter 'Godot_v4.7.2-stable_win64.exe' -Recurse | Select-Object -First 1
+          if ($null -eq $editor) { throw 'Official Windows editor missing from archive' }
+          "GODOT_EXE=$($editor.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
+          Invoke-WebRequest "$base/Godot_v${version}_export_templates.tpz" -OutFile godot-templates.zip
+          Expand-Archive godot-templates.zip -DestinationPath godot-templates
+          $templateDir = Join-Path $env:APPDATA 'Godot/export_templates/4.7.2.stable'
+          New-Item -ItemType Directory -Force -Path $templateDir | Out-Null
+          Copy-Item 'godot-templates/templates/*' $templateDir -Recurse -Force
+          if (-not (Test-Path (Join-Path $templateDir 'windows_release_x86_64.exe'))) { throw 'Windows export template missing' }
+      - name: Import and export Windows release
+        shell: pwsh
+        run: |
+          & $env:GODOT_EXE --headless --path . --editor --quit
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
+          & $env:GODOT_EXE --headless --path . --export-release 'Windows Desktop' 'builds/windows/ChemSite.exe'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path 'builds/windows/ChemSite.pck')) { throw 'Windows PCK missing' }
+      - name: Run native five-level gameplay smokes
+        shell: pwsh
+        run: |
+          foreach ($level in 1..5) {
+            $flag = if ($level -eq 1) { '--qa-round' } else { "--qa-level$level-round" }
+            & 'builds/windows/ChemSite.exe' --headless -- $flag
+            if ($LASTEXITCODE -ne 0) { throw "Level $level packaged smoke failed ($LASTEXITCODE)" }
+          }
+          & 'builds/windows/ChemSite.exe' --headless -- '--qa-level5-mission-round'
+          if ($LASTEXITCODE -ne 0) { throw "Level 5 mission smoke failed ($LASTEXITCODE)" }
+      - name: Upload verified Windows build
+        uses: actions/upload-artifact@v4
+        with:
+          name: ChemSite-Windows-x86_64
+          path: |
+            builds/windows/ChemSite.exe
+            builds/windows/ChemSite.pck
+          if-no-files-found: error

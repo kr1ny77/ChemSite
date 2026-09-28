@@ -2,9 +2,11 @@ extends RefCounted
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 
-static func run(main: Node, capture_visual: bool = false, level: int = 1) -> bool:
+static func run(main: Node, capture_visual: bool = false, level: int = 1, task_ids: Array[String] = []) -> bool:
 	var save_path := "user://export-round-smoke-progress.json"
 	var capture_dir := "user://qa-visual-round" if level == 1 else "user://qa-visual-level%d-round" % level
+	if not task_ids.is_empty():
+		capture_dir += "-mission"
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
 		var directory_error := DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(capture_dir))
@@ -18,6 +20,15 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1) -> boo
 	site.disconnect("station_used", audio.play_interact)
 	site.save_path = save_path
 	site._load_tasks()
+	if not task_ids.is_empty():
+		site._tasks.clear()
+		var bank := TASK_BANK.load_verified_tasks(level)
+		for identifier in task_ids:
+			var matches := bank.filter(func(task: Dictionary) -> bool: return task.id == identifier)
+			if matches.size() != 1:
+				push_error("Export smoke: mission task missing: " + identifier)
+				return false
+			site._tasks.append(matches[0])
 	site._update_hud()
 	await main.get_tree().process_frame
 	if site._tasks.size() < 5:
@@ -61,7 +72,7 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1) -> boo
 		await main.get_tree().process_frame
 		await main.get_tree().create_timer(0.8).timeout
 	if passed:
-		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else "CHEMSITE_EXPORT_LEVEL%d_ROUND_OK" % level)
+		print("CHEMSITE_EXPORT_VISUAL_ROUND_OK: " + ProjectSettings.globalize_path(capture_dir) if capture_visual else "CHEMSITE_EXPORT_LEVEL%d%s_ROUND_OK" % [level, "_MISSION" if not task_ids.is_empty() else ""])
 	else:
 		push_error("Export smoke: results or save are invalid")
 	return passed
@@ -78,6 +89,22 @@ static func _capture(main: Node, path: String) -> bool:
 
 static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 	var panel_content := hud.get("_panel_content") as VBoxContainer
+	for child in panel_content.get_children():
+		if child.has_method("is_complete") and child.has_method("reveal_next"):
+			while not child.is_complete():
+				(child.get_node("NextButton") as Button).pressed.emit()
+		if child.has_method("is_mixed") and not child.is_mixed():
+			for reagent in task.get("parameters", {}).get("mixingReagents", []):
+				var selected := false
+				for button in child.get_node("Choices").get_children():
+					if button is Button and button.text == str(reagent):
+						button.pressed.emit()
+						selected = true
+						break
+				if not selected:
+					return false
+			if not child.is_mixed():
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

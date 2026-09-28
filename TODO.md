@@ -23,6 +23,7 @@
 - [x] Phase 13 Level 4 playable pass: author electrochemistry and corrosion stations in Blender/GLB, reuse the reaction and inspection stations, unlock Level 4 after a completed Level 3 round, verify walking routes, HUD round, imported GLBs, and packaged macOS/Windows PCK results
 - [x] Phase 12 Level 5 content audit: check 40 answers and explanations, balance three lime equations, recompute hardness results, clarify inspection prompts, and render/test all native HUD controls
 - [x] Phase 13 Level 5 playable pass: author a Blender construction-materials station, route all 40 tasks through four accessible stations, unlock it after Level 4, and verify source, macOS app and Windows PCK rounds
+- [x] Phase 13 contextual interaction pass: add virtual reagent-pair selection and observed results to Level 2 mixing tasks; gate nine Level 5 inspection answers behind sequential mission readouts; verify all affected HUD submissions, source rounds, packaged mission round and 1440×900 panels
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
@@ -39,5 +40,5 @@
 - [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
 - [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
-- [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test
+- [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test; a Windows GitHub Actions export and native EXE smoke workflow is ready for its first remote run
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate
