@@ -3799,6 +3799,22 @@
     "station": "reaction-bench",
     "interactionType": "hess-puzzle",
     "prompt": "A → B: ΔH = +20 kJ; B → C: ΔH = −50 kJ. Найди ΔH для A → C.",
+    "parameters": {
+      "hessStart": "A",
+      "hessEnd": "C",
+      "hessEdges": [
+        {
+          "from": "A",
+          "to": "B",
+          "deltaH": 20
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "deltaH": -50
+        }
+      ]
+    },
     "correctAnswer": {
       "value": -30,
       "absoluteTolerance": 0.1,
@@ -3826,6 +3842,22 @@
     "station": "reaction-bench",
     "interactionType": "hess-puzzle",
     "prompt": "A → B: ΔH = −100 kJ; A → C: ΔH = −40 kJ. Найди ΔH для B → C.",
+    "parameters": {
+      "hessStart": "B",
+      "hessEnd": "C",
+      "hessEdges": [
+        {
+          "from": "A",
+          "to": "B",
+          "deltaH": -100
+        },
+        {
+          "from": "A",
+          "to": "C",
+          "deltaH": -40
+        }
+      ]
+    },
     "correctAnswer": {
       "value": 60,
       "absoluteTolerance": 0.1,

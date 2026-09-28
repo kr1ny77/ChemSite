@@ -25,6 +25,7 @@
 - [x] Phase 13 Level 5 playable pass: author a Blender construction-materials station, route all 40 tasks through four accessible stations, unlock it after Level 4, and verify source, macOS app and Windows PCK rounds
 - [x] Phase 13 contextual interaction pass: add virtual reagent-pair selection and observed results to Level 2 mixing tasks; gate nine Level 5 inspection answers behind sequential mission readouts; verify all affected HUD submissions, source rounds, packaged mission round and 1440×900 panels
 - [x] Phase 13 Level 3 scale pass: add a data-driven mass/mole measurement and formula-selection control for all five virtual-scale tasks; verify locked answers, wrong-formula recovery, five-task source and packaged rounds, and 1440×900 states
+- [x] Phase 13 Level 4 Hess pass: assemble directed enthalpy paths, reverse a step with its ΔH sign, lock numeric entry until the route reaches the target, and verify both calculations, a focused five-task source/package round and 1440×900 states
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 

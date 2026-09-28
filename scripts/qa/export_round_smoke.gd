@@ -114,6 +114,9 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 					break
 			if not child.is_ready():
 				return false
+		if child.has_method("choose_step") and not child.is_ready():
+			if not _complete_hess_route(child, task.get("parameters", {})):
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer
@@ -154,4 +157,37 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 				if button is Button and TASK_BANK.validate_choice(task, button.text):
 					button.pressed.emit()
 					return true
+	return false
+
+static func _complete_hess_route(view: Control, parameters: Dictionary) -> bool:
+	var edges: Array[Dictionary] = []
+	for source in parameters.get("hessEdges", []):
+		var edge: Dictionary = source
+		edges.append({"from": str(edge.from), "to": str(edge.to)})
+		edges.append({"from": str(edge.to), "to": str(edge.from)})
+	var queue: Array[Dictionary] = [{"node": str(parameters.get("hessStart", "")), "path": []}]
+	var visited := {}
+	var target := str(parameters.get("hessEnd", ""))
+	while not queue.is_empty():
+		var candidate: Dictionary = queue.pop_front()
+		var node: String = candidate.node
+		if node == target:
+			for step in candidate.path:
+				var pressed := false
+				for button in view.get_node("Choices").get_children():
+					if button is Button and not button.disabled and button.text.begins_with("%s → %s" % [step.from, step.to]):
+						button.pressed.emit()
+						pressed = true
+						break
+				if not pressed:
+					return false
+			return view.is_ready()
+		if visited.has(node):
+			continue
+		visited[node] = true
+		for edge in edges:
+			if edge.from == node and not visited.has(edge.to):
+				var path: Array = candidate.path.duplicate()
+				path.append(edge)
+				queue.append({"node": edge.to, "path": path})
 	return false

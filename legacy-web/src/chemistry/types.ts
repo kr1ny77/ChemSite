@@ -63,6 +63,9 @@ export type TaskDefinition = {
     sampleMass?: number
     sampleMoles?: number
     molarMass?: number
+    hessStart?: string
+    hessEnd?: string
+    hessEdges?: { from: string; to: string; deltaH: number }[]
     missionSteps?: {
       title: string
       readout: string

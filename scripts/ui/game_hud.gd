@@ -7,6 +7,7 @@ signal exit_requested
 const MISSION_STAGE_VIEW = preload("res://scripts/ui/mission_stage_view.gd")
 const REAGENT_MIX_VIEW = preload("res://scripts/ui/reagent_mix_view.gd")
 const VIRTUAL_SCALE_VIEW = preload("res://scripts/ui/virtual_scale_view.gd")
+const HESS_ROUTE_VIEW = preload("res://scripts/ui/hess_route_view.gd")
 
 var _objective: Label
 var _status: Label
@@ -24,6 +25,7 @@ var _formula_output: Label
 var _mission_stage: HBoxContainer
 var _mix_view: VBoxContainer
 var _scale_view: VBoxContainer
+var _hess_view: VBoxContainer
 
 func _ready() -> void:
 	var top := PanelContainer.new()
@@ -107,8 +109,9 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	for option in task.get("options", []):
 		longest_option = maxi(longest_option, str(option).length())
 	var mission_steps: Array = task.get("parameters", {}).get("missionSteps", [])
-	_panel.anchor_top = 0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19)
-	_panel.anchor_bottom = 0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81)
+	var hess_route: bool = task.get("interactionType", "") == "hess-puzzle" and task.get("parameters", {}).has("hessEdges")
+	_panel.anchor_top = 0.14 if hess_route else (0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19))
+	_panel.anchor_bottom = 0.88 if hess_route else (0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81))
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
@@ -138,6 +141,14 @@ func show_task(task: Dictionary, station_id: String) -> void:
 			_focus_first_answer()
 		)
 		_panel_content.add_child(_scale_view)
+	if hess_route:
+		_hess_view = HESS_ROUTE_VIEW.new()
+		_hess_view.configure(task.parameters)
+		_hess_view.route_completed.connect(func() -> void:
+			_set_answer_enabled(true)
+			_focus_first_answer()
+		)
+		_panel_content.add_child(_hess_view)
 	if task.get("interactionType", "") == "formula-builder":
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
@@ -179,6 +190,10 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	if _scale_view != null:
 		_set_answer_enabled(false)
 		_scale_view.focus_prepare()
+		return
+	if _hess_view != null:
+		_set_answer_enabled(false)
+		_hess_view.focus_first()
 		return
 	var focus_target := _panel_content.get_child(3)
 	if focus_target is GridContainer and focus_target.get_child_count() > 0:
@@ -392,6 +407,7 @@ func _clear_panel() -> void:
 	_mission_stage = null
 	_mix_view = null
 	_scale_view = null
+	_hess_view = null
 	for child in _panel_content.get_children():
 		_panel_content.remove_child(child)
 		child.queue_free()
