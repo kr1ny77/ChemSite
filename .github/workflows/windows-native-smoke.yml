@@ -53,6 +53,8 @@ jobs:
           }
           $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow
           if ($mission.ExitCode -ne 0) { throw "Level 5 mission smoke failed ($($mission.ExitCode))" }
+          $scales = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-scale-round') -Wait -PassThru -NoNewWindow
+          if ($scales.ExitCode -ne 0) { throw "Level 3 scale smoke failed ($($scales.ExitCode))" }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:

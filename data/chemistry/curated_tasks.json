@@ -2622,7 +2622,10 @@
       "water"
     ],
     "parameters": {
-      "compound": "H2O"
+      "compound": "H2O",
+      "scaleMode": "mass-to-moles",
+      "sampleMass": 18.02,
+      "molarMass": 18.02
     },
     "id": "L3-086",
     "level": 3,
@@ -2652,7 +2655,10 @@
       "sodium-hydroxide"
     ],
     "parameters": {
-      "compound": "NaOH"
+      "compound": "NaOH",
+      "scaleMode": "mass-to-moles",
+      "sampleMass": 20,
+      "molarMass": 40
     },
     "id": "L3-087",
     "level": 3,
@@ -2682,7 +2688,10 @@
       "carbon-dioxide"
     ],
     "parameters": {
-      "compound": "CO2"
+      "compound": "CO2",
+      "scaleMode": "moles-to-mass",
+      "sampleMoles": 2,
+      "molarMass": 44.01
     },
     "id": "L3-088",
     "level": 3,
@@ -2712,7 +2721,10 @@
       "sodium-chloride"
     ],
     "parameters": {
-      "compound": "NaCl"
+      "compound": "NaCl",
+      "scaleMode": "moles-to-mass",
+      "sampleMoles": 0.25,
+      "molarMass": 58.44
     },
     "id": "L3-089",
     "level": 3,
@@ -2743,7 +2755,10 @@
       "construction"
     ],
     "parameters": {
-      "compound": "CaCO3"
+      "compound": "CaCO3",
+      "scaleMode": "moles-to-mass",
+      "sampleMoles": 0.1,
+      "molarMass": 100.09
     },
     "id": "L3-090",
     "level": 3,

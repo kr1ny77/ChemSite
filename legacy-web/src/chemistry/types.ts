@@ -59,6 +59,10 @@ export type TaskDefinition = {
     mixingReagents?: string[]
     mixingOptions?: string[]
     mixingObservation?: string
+    scaleMode?: 'mass-to-moles' | 'moles-to-mass'
+    sampleMass?: number
+    sampleMoles?: number
+    molarMass?: number
     missionSteps?: {
       title: string
       readout: string

@@ -6,6 +6,7 @@ signal exit_requested
 
 const MISSION_STAGE_VIEW = preload("res://scripts/ui/mission_stage_view.gd")
 const REAGENT_MIX_VIEW = preload("res://scripts/ui/reagent_mix_view.gd")
+const VIRTUAL_SCALE_VIEW = preload("res://scripts/ui/virtual_scale_view.gd")
 
 var _objective: Label
 var _status: Label
@@ -22,6 +23,7 @@ var _formula_tokens: Array[String] = []
 var _formula_output: Label
 var _mission_stage: HBoxContainer
 var _mix_view: VBoxContainer
+var _scale_view: VBoxContainer
 
 func _ready() -> void:
 	var top := PanelContainer.new()
@@ -128,6 +130,14 @@ func show_task(task: Dictionary, station_id: String) -> void:
 			_focus_first_answer()
 		)
 		_panel_content.add_child(_mix_view)
+	if task.get("interactionType", "") == "virtual-scales" and task.get("parameters", {}).has("scaleMode"):
+		_scale_view = VIRTUAL_SCALE_VIEW.new()
+		_scale_view.configure(task.parameters)
+		_scale_view.prepared.connect(func() -> void:
+			_set_answer_enabled(true)
+			_focus_first_answer()
+		)
+		_panel_content.add_child(_scale_view)
 	if task.get("interactionType", "") == "formula-builder":
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
@@ -165,6 +175,10 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	if _mix_view != null:
 		_set_answer_enabled(false)
 		_mix_view.focus_first()
+		return
+	if _scale_view != null:
+		_set_answer_enabled(false)
+		_scale_view.focus_prepare()
 		return
 	var focus_target := _panel_content.get_child(3)
 	if focus_target is GridContainer and focus_target.get_child_count() > 0:
@@ -377,6 +391,7 @@ func is_panel_open() -> bool:
 func _clear_panel() -> void:
 	_mission_stage = null
 	_mix_view = null
+	_scale_view = null
 	for child in _panel_content.get_children():
 		_panel_content.remove_child(child)
 		child.queue_free()

@@ -105,6 +105,15 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 					return false
 			if not child.is_mixed():
 				return false
+		if child.has_method("is_ready") and child.has_method("prepare_sample") and not child.is_ready():
+			(child.get_node("PrepareButton") as Button).pressed.emit()
+			var formula := "n = m / M" if str(task.get("parameters", {}).get("scaleMode", "")) == "mass-to-moles" else "m = n · M"
+			for button in child.get_node("FormulaButtons").get_children():
+				if button is Button and button.text == formula:
+					button.pressed.emit()
+					break
+			if not child.is_ready():
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

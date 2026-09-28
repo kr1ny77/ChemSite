@@ -51,6 +51,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Configured a Windows Desktop x86_64 release preset. The official Godot 4.7.2 Windows template produced `builds/windows/ChemSite.exe` and `ChemSite.pck`; the PE header identifies a 64-bit Windows GUI program. The PCK completed the packaged five-task round under the matching Godot runtime on macOS.
 - Added a data-driven Level 2 virtual mixing control: learners select a reagent pair and see the curated observation before entering an equation. Added a staged Level 5 mission readout that unlocks the answer after the inspection steps. All five mixing tasks and nine staged mission tasks passed interaction gates and answer checks; 1440×900 before/after panels were visually reviewed and preserved in `docs/screenshots/`.
+- Added a Level 3 virtual scale panel for five curated mass/mole tasks. A preparation action reveals the given measurement and molar mass; the learner selects the applicable equation before numeric entry. The Level 3 content smoke rejects the wrong formula and checks the locked input; source, macOS app and Windows PCK five-task scale rounds passed. Both 1440×900 control states were visually reviewed.
 - Added a Windows GitHub Actions workflow that downloads official Godot 4.7.2 editor/templates, exports the native EXE, runs five career rounds plus the Level 5 mission round on Windows, and uploads the paired EXE/PCK artifact. Run 36444307931 passed all steps on a Windows runner.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
@@ -60,11 +61,11 @@ Levels 1–5 are playable career rounds. The Level 2 mixing and Level 5 inspecti
 
 ## Next task
 
-Extend station-specific interactions to Levels 3–4. Then run a human-driven exported-app/audio playtest, profile the site on a normal student laptop, complete visible Windows QA, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
+Extend contextual station interactions to Level 4 and the remaining Level 3 task families. Then run a human-driven exported-app/audio playtest, profile the site on a normal student laptop, complete visible Windows QA, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
 
 ## Last verification
 
-2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck and Level 2 tests, 20 balanced Level 2 equation checks, Level 5 chemistry audit, all 39 Level 2 and 40 Level 5 HUD submissions, source five-task and mission rounds, and refreshed macOS app/Windows PCK mission rounds passed. Mixing and mission panels were reviewed at 1440×900. Windows Actions run 36444307931 exported the native EXE, passed all five career rounds and the Level 5 mission round on Windows, and uploaded the paired build.
+2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck, Level 3 audit and all 40 Level 3 HUD submissions passed. Five scale tasks reject the wrong formula and keep numeric entry locked until prepared. Source, macOS app and Windows PCK five-task scale rounds passed; both panel states were reviewed at 1440×900. Windows Actions run 36444307931 previously passed native EXE rounds for Levels 1–5 and Level 5 missions; the new scale run is pending on CI.
 
 ## Known issues
 

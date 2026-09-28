@@ -14,6 +14,8 @@ func _ready() -> void:
 		call_deferred("_run_export_level_two_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level3-round"):
 		call_deferred("_run_export_level_three_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-level3-scale-round"):
+		call_deferred("_run_export_level_three_scale_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-round"):
 		call_deferred("_run_export_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level5-round"):
@@ -24,6 +26,8 @@ func _ready() -> void:
 		call_deferred("_run_export_visual_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level3-round"):
 		call_deferred("_run_export_visual_level_three_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-level3-scale-round"):
+		call_deferred("_run_export_visual_level_three_scale_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-round"):
 		call_deferred("_run_export_visual_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level5-round"):
@@ -41,6 +45,10 @@ func _run_export_level_two_smoke() -> void:
 
 func _run_export_level_three_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_level_three_scale_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-086", "L3-087", "L3-088", "L3-089", "L3-090"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_level_four_smoke() -> void:
@@ -61,6 +69,10 @@ func _run_export_visual_smoke() -> void:
 
 func _run_export_visual_level_three_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_level_three_scale_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-086", "L3-087", "L3-088", "L3-089", "L3-090"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_visual_level_four_smoke() -> void:
