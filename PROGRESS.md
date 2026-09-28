@@ -54,15 +54,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–4 are playable career rounds. Level 4's two new GLBs, station routes, full five-task HUD round and current macOS/Windows packages passed automated QA. Level 5 chemistry is audited; its station mechanics are next; broader human playtesting, interaction polish, accessibility, performance and release QA remain open.
+Levels 1–5 are playable career rounds. The new Level 5 GLB, four physical station routes, all 40 HUD submissions, and refreshed macOS/Windows packaged five-task rounds passed automated QA. Contextual station interactions, human playtesting, accessibility, performance and release QA remain open.
 
 ## Next task
 
-Implement Level 5 construction-materials station, route the audited bank through a playable round, and verify packaged builds. Continue Level 2–4 interaction polish, human exported-app and audio playtests, performance testing and native Windows QA.
+Improve Level 2–5 station-specific interactions and run a human-driven exported-app/audio playtest. Profile the five-level site on a normal student laptop, run the Windows EXE on Windows, resolve L2-050 with the target curriculum, complete the subject-matter review, then publish the GitHub prerelease.
 
 ## Last verification
 
-2026-09-28: Level 5 audit passed 40 tasks, three balanced lime equations, two independently recomputed hardness cases and all 40 native HUD controls; three representative 1440×900 panels were visually reviewed. Preserved TypeScript tests passed (3/3). Prior Level 4 verification on 2026-09-25: Godot 4.7.2 editor import/parse passed both Level 4 GLBs. Blender Agent Studio fresh-import geometry inspections passed with no issues; two six-view sheets were reviewed. Level 4 physical station routes, save unlock, source five-task HUD round and 1440×900 rendered five-task round passed. Refreshed macOS release app and Windows PCK each passed the packaged Level 4 round. Native Windows EXE testing remains pending.
+2026-09-28: Godot 4.7.2 editor import/parse passed the Level 5 GLB. Blender Agent Studio fresh-import inspection reported 7,684 triangles, 11 materials and no geometry issues; six views and a 1440×900 site view were visually reviewed. Level 5 station routes, Level 4→5 save unlock, all 40 Level 5 HUD submissions, a source five-task round and a rendered round passed. Refreshed macOS app and Windows PCK each passed five-task smokes for Levels 1–5; the packaged macOS Level 5 visual round was reviewed. The 1280×720 menu includes all five levels and controls. Native Windows EXE testing remains pending.
 
 ## Known issues
 
@@ -70,4 +70,4 @@ Implement Level 5 construction-materials station, route the audited bank through
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–4 enter gameplay through separate career rounds. Level 5 content is audited and needs station/round implementation. Levels 2–3 still need human playtesting and interaction polish.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–5 enter gameplay through separate career rounds. All five levels still need human playtesting and contextual interaction polish.

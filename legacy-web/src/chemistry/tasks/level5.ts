@@ -64,7 +64,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   }),
   makeTask(166, {
     topic: 'Известковые материалы', subtopic: 'Оксид кальция', difficulty: 1,
-    station: 'formula-board', interactionType: 'formula-builder',
+    station: 'construction-materials-station', interactionType: 'formula-builder',
     prompt: 'Собери формулу оксида кальция, используемого в известковом цикле.', correctAnswer: 'CaO',
     parameters: { formulaTokens: ['Ca', 'O'], compound: 'CaO' }, explanation: 'Катион Ca²⁺ и анион O²⁻ соединяются в отношении 1:1, образуя CaO.',
     rule: 'Суммарный заряд формульной единицы равен нулю.', example: 'CaO называют негашёной известью.',
@@ -88,7 +88,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   }),
   makeTask(169, {
     topic: 'Гипсовые материалы', subtopic: 'Природный гипс', difficulty: 1,
-    station: 'substance-storage', interactionType: 'formula-builder',
+    station: 'construction-materials-station', interactionType: 'formula-builder',
     prompt: 'Укажи формулу природного двуводного гипса.', correctAnswer: 'CaSO4·2H2O', acceptedAnswers: ['CaSO₄·2H₂O', 'CaSO4*2H2O'],
     parameters: { formulaTokens: ['Ca', 'SO4', '·', '2H2O'], compound: 'CaSO4·2H2O' },
     explanation: 'Природный гипс является дигидратом сульфата кальция и содержит две молекулы кристаллизационной воды.',
@@ -142,7 +142,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   }),
   makeTask(175, {
     topic: 'Силикаты', subtopic: 'Степень окисления', difficulty: 1,
-    station: 'formula-board', interactionType: 'oxidation-state',
+    station: 'construction-materials-station', interactionType: 'oxidation-state',
     prompt: 'Определи степень окисления кремния в SiO₂.', correctAnswer: '+4', acceptedAnswers: ['4+'],
     options: ['+4', '+2', '−4', '0'], explanation: 'Два атома кислорода дают суммарно −4, поэтому кремний в нейтральном SiO₂ имеет степень окисления +4.',
     rule: 'Сумма степеней окисления в нейтральном соединении равна нулю.', example: '+4 + 2·(−2) = 0.',

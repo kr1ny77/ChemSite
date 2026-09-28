@@ -35,11 +35,11 @@ func _ready() -> void:
 	var content := VBoxContainer.new()
 	content.anchor_left = 0.5
 	content.anchor_right = 0.5
-	content.anchor_top = 0.08
-	content.anchor_bottom = 0.08
+	content.anchor_top = 0.04
+	content.anchor_bottom = 0.04
 	content.offset_right = 600
 	content.custom_minimum_size = Vector2(600, 420)
-	content.add_theme_constant_override("separation", 12)
+	content.add_theme_constant_override("separation", 9)
 	add_child(content)
 	_menu_content = content
 	var eyebrow := Label.new()
@@ -50,12 +50,12 @@ func _ready() -> void:
 	var title := Label.new()
 	title.text = "CHEMSITE"
 	title.add_theme_color_override("font_color", Color("f6f0df"))
-	title.add_theme_font_size_override("font_size", 84)
+	title.add_theme_font_size_override("font_size", 72)
 	content.add_child(title)
 	var description := Label.new()
 	description.text = "Знания строят будущее.\nИсследуй площадку и решай химические задачи."
 	description.add_theme_color_override("font_color", Color("afc6c9"))
-	description.add_theme_font_size_override("font_size", 24)
+	description.add_theme_font_size_override("font_size", 21)
 	content.add_child(description)
 	var progress: Dictionary = SAVE_DATA.load_progress()
 	var record := Label.new()
@@ -64,7 +64,7 @@ func _ready() -> void:
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
 	var start := Button.new()
-	start.custom_minimum_size = Vector2(280, 68)
+	start.custom_minimum_size = Vector2(280, 60)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)
 	start.text = "КАРЬЕРА · УРОВЕНЬ 1   →"
@@ -74,7 +74,7 @@ func _ready() -> void:
 	var level_two := Button.new()
 	level_two.text = "УРОВЕНЬ 2 · РЕАКЦИИ   →" if int(progress.unlocked_level) >= 2 else "УРОВЕНЬ 2 · ЗАВЕРШИ УРОВЕНЬ 1"
 	level_two.disabled = int(progress.unlocked_level) < 2
-	level_two.custom_minimum_size = Vector2(350, 54)
+	level_two.custom_minimum_size = Vector2(350, 48)
 	level_two.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	level_two.add_theme_font_size_override("font_size", 20)
 	level_two.pressed.connect(func() -> void: start_requested.emit("career", "", 2))
@@ -82,7 +82,7 @@ func _ready() -> void:
 	var level_three := Button.new()
 	level_three.text = "УРОВЕНЬ 3 · РАСТВОРЫ   →" if int(progress.unlocked_level) >= 3 else "УРОВЕНЬ 3 · ЗАВЕРШИ УРОВЕНЬ 2"
 	level_three.disabled = int(progress.unlocked_level) < 3
-	level_three.custom_minimum_size = Vector2(350, 54)
+	level_three.custom_minimum_size = Vector2(350, 48)
 	level_three.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	level_three.add_theme_font_size_override("font_size", 20)
 	level_three.pressed.connect(func() -> void: start_requested.emit("career", "", 3))
@@ -90,21 +90,29 @@ func _ready() -> void:
 	var level_four := Button.new()
 	level_four.text = "УРОВЕНЬ 4 · ЭНЕРГИЯ И КОРРОЗИЯ   →" if int(progress.unlocked_level) >= 4 else "УРОВЕНЬ 4 · ЗАВЕРШИ УРОВЕНЬ 3"
 	level_four.disabled = int(progress.unlocked_level) < 4
-	level_four.custom_minimum_size = Vector2(350, 54)
+	level_four.custom_minimum_size = Vector2(350, 48)
 	level_four.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	level_four.add_theme_font_size_override("font_size", 20)
 	level_four.pressed.connect(func() -> void: start_requested.emit("career", "", 4))
 	content.add_child(level_four)
+	var level_five := Button.new()
+	level_five.text = "УРОВЕНЬ 5 · СТРОИТЕЛЬНАЯ ХИМИЯ   →" if int(progress.unlocked_level) >= 5 else "УРОВЕНЬ 5 · ЗАВЕРШИ УРОВЕНЬ 4"
+	level_five.disabled = int(progress.unlocked_level) < 5
+	level_five.custom_minimum_size = Vector2(350, 48)
+	level_five.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	level_five.add_theme_font_size_override("font_size", 20)
+	level_five.pressed.connect(func() -> void: start_requested.emit("career", "", 5))
+	content.add_child(level_five)
 	var practice_button := Button.new()
 	practice_button.text = "ПРАКТИКА"
-	practice_button.custom_minimum_size = Vector2(280, 48)
+	practice_button.custom_minimum_size = Vector2(280, 42)
 	practice_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	practice_button.add_theme_font_size_override("font_size", 19)
 	content.add_child(practice_button)
 	_practice_button = practice_button
 	var settings_button := Button.new()
 	settings_button.text = "НАСТРОЙКИ"
-	settings_button.custom_minimum_size = Vector2(280, 48)
+	settings_button.custom_minimum_size = Vector2(280, 42)
 	settings_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	settings_button.add_theme_font_size_override("font_size", 19)
 	content.add_child(settings_button)

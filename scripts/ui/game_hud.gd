@@ -387,4 +387,5 @@ func _station_name(station_id: String) -> String:
 		"solution-laboratory": return "ЛАБОРАТОРИЯ РАСТВОРОВ"
 		"electrochemistry-station": return "ЭЛЕКТРОХИМИЯ"
 		"corrosion-test-rig": return "ИСПЫТАНИЕ КОРРОЗИИ"
+		"construction-materials-station": return "ИСПЫТАНИЕ МАТЕРИАЛОВ"
 	return station_id

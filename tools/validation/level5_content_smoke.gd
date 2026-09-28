@@ -1,6 +1,7 @@
 extends SceneTree
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
+const ROUND_SMOKE = preload("res://scripts/qa/export_round_smoke.gd")
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -8,12 +9,16 @@ func _initialize() -> void:
 func _run() -> void:
 	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(5)
 	assert(tasks.size() == 40, "Level 5 task count changed")
+	var station_ids := ["construction-materials-station", "reaction-bench", "corrosion-test-rig", "inspection-station"]
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
+	var submitted: Array[String] = []
+	hud.answer_submitted.connect(func(answer: String) -> void: submitted.append(answer))
 	var equation_count := 0
 	var numeric_count := 0
 	var formula_count := 0
 	for task in tasks:
+		assert(station_ids.has(str(task.station)), "Level 5 task has no site station: " + str(task.id))
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
 		if task.correctAnswer is Dictionary:
@@ -36,6 +41,10 @@ func _run() -> void:
 				if TASK_BANK.validate_choice(task, str(option)):
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
+		assert(ROUND_SMOKE._submit_through_ui(hud, task), "HUD submission control failed: " + str(task.id))
+		assert(submitted.size() == 1, "HUD submission count failed: " + str(task.id))
+		assert(TASK_BANK.validate_choice(task, submitted[0]), "HUD emitted wrong answer: " + str(task.id))
+		submitted.clear()
 		await process_frame
 	assert(equation_count == 3 and numeric_count == 1 and formula_count == 2)
 	hud.queue_free()
