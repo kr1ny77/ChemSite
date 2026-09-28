@@ -51,7 +51,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Configured a Windows Desktop x86_64 release preset. The official Godot 4.7.2 Windows template produced `builds/windows/ChemSite.exe` and `ChemSite.pck`; the PE header identifies a 64-bit Windows GUI program. The PCK completed the packaged five-task round under the matching Godot runtime on macOS.
 - Added a data-driven Level 2 virtual mixing control: learners select a reagent pair and see the curated observation before entering an equation. Added a staged Level 5 mission readout that unlocks the answer after the inspection steps. All five mixing tasks and nine staged mission tasks passed interaction gates and answer checks; 1440×900 before/after panels were visually reviewed and preserved in `docs/screenshots/`.
-- Added a Windows GitHub Actions workflow that downloads official Godot 4.7.2 editor/templates, exports the native EXE, runs five career rounds plus the Level 5 mission round on Windows, and uploads the paired EXE/PCK artifact. Its first remote run is pending.
+- Added a Windows GitHub Actions workflow that downloads official Godot 4.7.2 editor/templates, exports the native EXE, runs five career rounds plus the Level 5 mission round on Windows, and uploads the paired EXE/PCK artifact. Run 36444307931 passed all steps on a Windows runner.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
 ## Current work
@@ -60,16 +60,16 @@ Levels 1–5 are playable career rounds. The Level 2 mixing and Level 5 inspecti
 
 ## Next task
 
-Run the Windows CI workflow and extend station-specific interactions to Levels 3–4. Then run a human-driven exported-app/audio playtest, profile the site on a normal student laptop, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
+Extend station-specific interactions to Levels 3–4. Then run a human-driven exported-app/audio playtest, profile the site on a normal student laptop, complete visible Windows QA, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
 
 ## Last verification
 
-2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck and Level 2 tests, 20 balanced Level 2 equation checks, Level 5 chemistry audit, all 39 Level 2 and 40 Level 5 HUD submissions, source five-task and mission rounds, and refreshed macOS app/Windows PCK mission rounds passed. Mixing and mission panels were reviewed at 1440×900. The earlier packaged Level 1–5 rounds passed on both targets. Native Windows EXE testing remains pending.
+2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck and Level 2 tests, 20 balanced Level 2 equation checks, Level 5 chemistry audit, all 39 Level 2 and 40 Level 5 HUD submissions, source five-task and mission rounds, and refreshed macOS app/Windows PCK mission rounds passed. Mixing and mission panels were reviewed at 1440×900. Windows Actions run 36444307931 exported the native EXE, passed all five career rounds and the Level 5 mission round on Windows, and uploaded the paired build.
 
 ## Known issues
 
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
-- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
+- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 EXE passed automated rounds on GitHub Actions; visible input, audio and save behavior on Windows remains to be reviewed.
 - Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–5 enter gameplay through separate career rounds. All five levels still need human playtesting and contextual interaction polish.
