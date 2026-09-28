@@ -35,11 +35,11 @@ jobs:
       - name: Import and export Windows release
         shell: pwsh
         run: |
-          & $env:GODOT_EXE --headless --path . --editor --quit
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $import = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--editor', '--quit') -Wait -PassThru -NoNewWindow
+          if ($import.ExitCode -ne 0) { throw "Godot import failed ($($import.ExitCode))" }
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
-          & $env:GODOT_EXE --headless --path . --export-release 'Windows Desktop' 'builds/windows/ChemSite.exe'
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $export = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--export-release', '"Windows Desktop"', 'builds/windows/ChemSite.exe') -Wait -PassThru -NoNewWindow
+          if ($export.ExitCode -ne 0) { throw "Godot export failed ($($export.ExitCode))" }
           Get-ChildItem 'builds/windows' | Select-Object Name,Length | Format-Table
           if (-not (Test-Path 'builds/windows/ChemSite.exe')) { throw 'Windows EXE missing' }
           if (-not (Test-Path 'builds/windows/ChemSite.pck')) { throw 'Windows PCK missing' }
@@ -48,11 +48,11 @@ jobs:
         run: |
           foreach ($level in 1..5) {
             $flag = if ($level -eq 1) { '--qa-round' } else { "--qa-level$level-round" }
-            & './builds/windows/ChemSite.exe' --headless -- $flag
-            if ($LASTEXITCODE -ne 0) { throw "Level $level packaged smoke failed ($LASTEXITCODE)" }
+            $round = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', $flag) -Wait -PassThru -NoNewWindow
+            if ($round.ExitCode -ne 0) { throw "Level $level packaged smoke failed ($($round.ExitCode))" }
           }
-          & './builds/windows/ChemSite.exe' --headless -- '--qa-level5-mission-round'
-          if ($LASTEXITCODE -ne 0) { throw "Level 5 mission smoke failed ($LASTEXITCODE)" }
+          $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow
+          if ($mission.ExitCode -ne 0) { throw "Level 5 mission smoke failed ($($mission.ExitCode))" }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:
