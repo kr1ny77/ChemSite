@@ -40,6 +40,8 @@ jobs:
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
           & $env:GODOT_EXE --headless --path . --export-release 'Windows Desktop' 'builds/windows/ChemSite.exe'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-ChildItem 'builds/windows' | Select-Object Name,Length | Format-Table
+          if (-not (Test-Path 'builds/windows/ChemSite.exe')) { throw 'Windows EXE missing' }
           if (-not (Test-Path 'builds/windows/ChemSite.pck')) { throw 'Windows PCK missing' }
       - name: Run native five-level gameplay smokes
         shell: pwsh
