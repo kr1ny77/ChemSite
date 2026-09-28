@@ -46,10 +46,10 @@ jobs:
         run: |
           foreach ($level in 1..5) {
             $flag = if ($level -eq 1) { '--qa-round' } else { "--qa-level$level-round" }
-            & 'builds/windows/ChemSite.exe' --headless -- $flag
+            & './builds/windows/ChemSite.exe' --headless -- $flag
             if ($LASTEXITCODE -ne 0) { throw "Level $level packaged smoke failed ($LASTEXITCODE)" }
           }
-          & 'builds/windows/ChemSite.exe' --headless -- '--qa-level5-mission-round'
+          & './builds/windows/ChemSite.exe' --headless -- '--qa-level5-mission-round'
           if ($LASTEXITCODE -ne 0) { throw "Level 5 mission smoke failed ($LASTEXITCODE)" }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
