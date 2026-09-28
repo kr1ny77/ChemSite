@@ -65,7 +65,7 @@ Extend contextual station interactions to Level 4 and the remaining Level 3 task
 
 ## Last verification
 
-2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck, Level 3 audit and all 40 Level 3 HUD submissions passed. Five scale tasks reject the wrong formula and keep numeric entry locked until prepared. Source, macOS app and Windows PCK five-task scale rounds passed; both panel states were reviewed at 1440×900. Windows Actions run 36444307931 previously passed native EXE rounds for Levels 1–5 and Level 5 missions; the new scale run is pending on CI.
+2026-09-28: Godot 4.7.2 import/parse, TypeScript typecheck, Level 3 audit and all 40 Level 3 HUD submissions passed. Five scale tasks reject the wrong formula and keep numeric entry locked until prepared. Source, macOS app and Windows PCK five-task scale rounds passed; both panel states were reviewed at 1440×900. Windows Actions run 36445330152 passed native EXE rounds for Levels 1–5, the Level 5 mission round and the focused Level 3 scale round, then uploaded the build.
 
 ## Known issues
 
