@@ -54,15 +54,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–4 are playable career rounds. Level 4's two new GLBs, station routes, full five-task HUD round and current macOS/Windows packages passed automated QA. Level 5 chemistry audit and station mechanics are next; broader human playtesting, interaction polish, accessibility, performance and release QA remain open.
+Levels 1–4 are playable career rounds. Level 4's two new GLBs, station routes, full five-task HUD round and current macOS/Windows packages passed automated QA. Level 5 chemistry is audited; its station mechanics are next; broader human playtesting, interaction polish, accessibility, performance and release QA remain open.
 
 ## Next task
 
-Independently audit all Level 5 answers and explanations, quarantine any ambiguity, then implement its stations and playable round. Continue Level 2–4 interaction polish, human exported-app and audio playtests, performance testing and native Windows QA.
+Implement Level 5 construction-materials station, route the audited bank through a playable round, and verify packaged builds. Continue Level 2–4 interaction polish, human exported-app and audio playtests, performance testing and native Windows QA.
 
 ## Last verification
 
-2026-09-25: Godot 4.7.2 editor import/parse passed both Level 4 GLBs. Blender Agent Studio fresh-import geometry inspections passed with no issues; two six-view sheets were reviewed. Level 4 physical station routes, save unlock, source five-task HUD round and 1440×900 rendered five-task round passed. Refreshed macOS release app and Windows PCK each passed the packaged Level 4 round. Native Windows EXE testing remains pending.
+2026-09-28: Level 5 audit passed 40 tasks, three balanced lime equations, two independently recomputed hardness cases and all 40 native HUD controls; three representative 1440×900 panels were visually reviewed. Preserved TypeScript tests passed (3/3). Prior Level 4 verification on 2026-09-25: Godot 4.7.2 editor import/parse passed both Level 4 GLBs. Blender Agent Studio fresh-import geometry inspections passed with no issues; two six-view sheets were reviewed. Level 4 physical station routes, save unlock, source five-task HUD round and 1440×900 rendered five-task round passed. Refreshed macOS release app and Windows PCK each passed the packaged Level 4 round. Native Windows EXE testing remains pending.
 
 ## Known issues
 
@@ -70,4 +70,4 @@ Independently audit all Level 5 answers and explanations, quarantine any ambigui
 - Station animations, chemistry-specific VFX and accessibility controls remain pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 build exists, but its executable still needs testing on Windows hardware or a Windows runner.
-- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–4 enter gameplay through separate career rounds. Level 5 needs independent review and implementation. Levels 2–3 still need human playtesting and interaction polish.
+- Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON; 199 are marked verified and L2-050 is excluded pending notation review. Levels 1–4 enter gameplay through separate career rounds. Level 5 content is audited and needs station/round implementation. Levels 2–3 still need human playtesting and interaction polish.

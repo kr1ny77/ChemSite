@@ -21,6 +21,7 @@
 - [x] Phase 13 Level 3 playable pass: author the solution laboratory in Blender/GLB, reuse ionic and inspection stations, unlock Level 3 after a completed Level 2 round, verify physical routes and five-task HUD round, and inspect packaged macOS visual/screens and Windows PCK results
 - [x] Phase 12 Level 4 content audit: independently verify two Hess calculations and 38 choices, specify constant-temperature compression/expansion in equilibrium prompts, and confirm all 40 Level 4 task panels and long-answer layouts in Godot
 - [x] Phase 13 Level 4 playable pass: author electrochemistry and corrosion stations in Blender/GLB, reuse the reaction and inspection stations, unlock Level 4 after a completed Level 3 round, verify walking routes, HUD round, imported GLBs, and packaged macOS/Windows PCK results
+- [x] Phase 12 Level 5 content audit: check 40 answers and explanations, balance three lime equations, recompute hardness results, clarify inspection prompts, and render/test all native HUD controls
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
@@ -34,8 +35,8 @@
 
 - [ ] Phase 9: complete adaptive mastery and expanded progression data for Levels 2–5; Level 1 now records mastery and schedules a related task two questions after a mistake
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
-- [ ] Phase 12 review: independently review the remaining Level 5 answers and explanations, resolve L2-050 with the target curriculum, and keep later levels out of production selection until their station mechanics pass gameplay QA; Levels 3–4 have independent content passes
-- [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–4 have playable first passes, with contextual station interactions, human visual QA and Level 5 still required
+- [ ] Phase 12 review: resolve L2-050 with the target curriculum and keep Level 5 out of career selection until its station mechanics pass gameplay QA; Levels 3–5 have independent content passes
+- [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–4 have playable first passes, with contextual station interactions, human visual QA and the Level 5 playable pass still required
 - [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
 - [ ] Phase 15: run the Windows x86_64 executable on a Windows host, verify input/audio/save/visuals and complete the five-task black-box test
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate

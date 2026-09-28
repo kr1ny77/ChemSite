@@ -73,7 +73,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(167, {
     topic: 'Известковые материалы', subtopic: 'Гашение извести', difficulty: 1,
     station: 'reaction-bench', interactionType: 'equation-completion',
-    prompt: 'Закончи уравнение гашения извести: CaO + H₂O → ?', correctAnswer: 'Ca(OH)2', acceptedAnswers: ['Ca(OH)₂'],
+    prompt: 'Запиши полное уравнение гашения извести: CaO + H₂O → ?', correctAnswer: 'CaO + H2O -> Ca(OH)2', acceptedAnswers: ['CaO + H₂O → Ca(OH)₂'],
     explanation: 'Оксид кальция взаимодействует с водой с образованием гидроксида кальция.',
     rule: 'Основный оксид активного металла с водой образует основание.', example: 'CaO + H₂O → Ca(OH)₂.',
     hint: 'Продукт содержит кальций и две гидроксогруппы.', tags: ['lime', 'hydration', 'reaction'], parameters: { compound: 'CaO' },
@@ -81,7 +81,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(168, {
     topic: 'Известковые материалы', subtopic: 'Карбонизация извести', difficulty: 2,
     station: 'reaction-bench', interactionType: 'equation-completion',
-    prompt: 'Закончи уравнение: Ca(OH)₂ + CO₂ → ?', correctAnswer: 'CaCO3 + H2O', acceptedAnswers: ['CaCO₃ + H₂O'],
+    prompt: 'Запиши полное уравнение карбонизации: Ca(OH)₂ + CO₂ → ?', correctAnswer: 'Ca(OH)2 + CO2 -> CaCO3 + H2O', acceptedAnswers: ['Ca(OH)₂ + CO₂ → CaCO₃ + H₂O'],
     explanation: 'Гидроксид кальция связывает углекислый газ с образованием карбоната кальция и воды.',
     rule: 'Основание и кислотный оксид могут образовывать соль и воду.', example: 'Эта реакция замыкает известковый цикл.',
     hint: 'Продукт соли содержит карбонат-ион.', tags: ['lime', 'carbonation', 'reaction'], parameters: { compound: 'Ca(OH)2' },
@@ -106,7 +106,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(171, {
     topic: 'Известковые материалы', subtopic: 'Обжиг известняка', difficulty: 1,
     station: 'reaction-bench', interactionType: 'equation-completion',
-    prompt: 'Закончи уравнение обжига известняка: CaCO₃ → ?', correctAnswer: 'CaO + CO2', acceptedAnswers: ['CaO + CO₂'],
+    prompt: 'Запиши полное уравнение обжига известняка: CaCO₃ → ?', correctAnswer: 'CaCO3 -> CaO + CO2', acceptedAnswers: ['CaCO₃ → CaO + CO₂'],
     explanation: 'При нагревании карбонат кальция разлагается на оксид кальция и углекислый газ.',
     rule: 'Термическое разложение CaCO₃: CaCO₃ → CaO + CO₂.', example: 'Процесс является стадией получения извести.',
     hint: 'Образуются оксид кальция и газ.', tags: ['limestone', 'lime', 'decomposition'], parameters: { compound: 'CaCO3' },
@@ -133,7 +133,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(174, {
     topic: 'Строительные материалы', subtopic: 'Минеральные вяжущие', difficulty: 2,
     station: 'construction-materials-station', interactionType: 'construction-material',
-    prompt: 'Сопоставь материал с игровой категорией: цемент, гипс и воздушная известь.',
+    prompt: 'Сопоставь вяжущие с их категорией: портландцемент, гипс и воздушная известь.',
     correctAnswer: 'цемент — гидравлическое; гипс — воздушное; воздушная известь — воздушное',
     options: ['цемент — гидравлическое; гипс — воздушное; воздушная известь — воздушное', 'все три — металлические', 'цемент — воздушное; гипс — гидравлическое; известь — полимерное', 'все три — заполнители'],
     explanation: 'Портландцемент способен твердеть и сохранять прочность в воде; гипсовое и воздушно-известковое вяжущие относят к воздушным.',
@@ -296,9 +296,9 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(190, {
     topic: 'Инспекция конструкций', subtopic: 'Источник проблемы', difficulty: 3,
     station: 'inspection-station', interactionType: 'construction-mission',
-    prompt: 'Проба воды имеет высокие Ca²⁺ и Mg²⁺, а на трубопроводе обнаружена карбонатная накипь. Выбери основной источник проблемы.',
-    correctAnswer: 'строительная вода', acceptedAnswers: ['вода'],
-    options: ['строительная вода', 'полимерный герметик', 'стальная арматура', 'кварцевый заполнитель'],
+    prompt: 'Проба воды из строительного контура имеет высокие Ca²⁺ и Mg²⁺, а на трубопроводе обнаружена карбонатная накипь. Какой исследованный компонент связан с отложениями?',
+    correctAnswer: 'вода строительного контура', acceptedAnswers: ['вода'],
+    options: ['вода строительного контура', 'полимерный герметик', 'стальная арматура', 'кварцевый заполнитель'],
     explanation: 'Повышенное содержание ионов жёсткости в воде согласуется с образованием карбонатных отложений в водном контуре.',
     rule: 'Источник диагностируют по согласованной цепочке измерение → процесс → проявление.', example: 'Ca²⁺ и Mg²⁺ являются главными ионами жёсткости.',
     hint: 'Сопоставь химический анализ пробы и тип отложений.', tags: ['inspection', 'water', 'hardness', 'scale'],
@@ -427,7 +427,7 @@ export const level5Tasks: readonly TaskDefinition[] = [
   makeTask(200, {
     topic: 'Строительная химия', subtopic: 'Итоговая инспекция', difficulty: 5,
     station: 'inspection-station', interactionType: 'construction-mission',
-    prompt: 'Финальная инспекция: выбери последовательность, связывающую формулу, реакцию, раствор, коррозию и строительный вывод.',
+    prompt: 'Финальная инспекция: в протоколе указаны обжиг известняка, низкий pH у арматуры и повреждённое покрытие. Выбери согласованную строку химических и строительных выводов.',
     correctAnswer: 'CaCO₃ → CaO + CO₂; pH снижен; Fe окисляется; защиту восстановить',
     acceptedAnswers: ['CaCO3 → CaO + CO2; pH снижен; Fe окисляется; защиту восстановить'],
     options: [
@@ -436,10 +436,10 @@ export const level5Tasks: readonly TaskDefinition[] = [
       'CaO → CaCO₃ + O₂; pH не измерять; Fe плавится; увеличить пористость',
       'CaCO₃ не реагирует; вода не влияет; коррозия невозможна; снять покрытие',
     ],
-    explanation: 'Проверенная цепочка объединяет разложение карбоната, потерю щёлочности у стали, анодное окисление железа и восстановление защитного барьера.',
-    rule: 'Итоговая миссия связывает данные предыдущих уровней в единую инженерную причинную цепь.',
+    explanation: 'Обжиг разлагает CaCO₃ на CaO и CO₂. Отдельное измерение низкого pH у стали указывает на риск утраты пассивности; Fe может окисляться, поэтому повреждённый защитный барьер требует восстановления.',
+    rule: 'Итоговая инспекция сопоставляет каждое наблюдение с отдельным химическим выводом и защитным действием.',
     example: 'Fe → Fe²⁺ + 2e⁻ является анодной стадией коррозии.',
-    hint: 'Проверь каждую часть цепочки отдельно: уравнение, pH, электродный процесс, защита.',
+    hint: 'Проверь каждый вывод отдельно: уравнение, pH, электродный процесс, защита.',
     tags: ['final-mission', 'adaptive', 'reaction', 'pH', 'corrosion', 'construction'],
     parameters: { missionSteps: [
       { title: 'Формула', readout: 'Известняк: CaCO₃' },
