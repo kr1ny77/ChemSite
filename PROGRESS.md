@@ -67,7 +67,7 @@ Extend contextual station interactions to Level 4 equilibrium and the remaining 
 
 ## Last verification
 
-2026-09-29: Godot 4.7.2 import/parse, TypeScript typecheck, Level 4 audit, all 40 Level 4 HUD submissions and six kinetics comparison gates passed. Focused source, macOS app and Windows PCK kinetics rounds passed. The longest before/after panels were reviewed at 1440×900. Windows Actions run 36446518724 previously passed the native EXE suite; the new kinetics run is pending on CI.
+2026-09-29: Godot 4.7.2 import/parse, TypeScript typecheck, Level 4 audit, all 40 Level 4 HUD submissions and six kinetics comparison gates passed. Focused source, macOS app and Windows PCK kinetics rounds passed. The longest before/after panels were reviewed at 1440×900. Windows Actions run 36560885373 passed the native EXE five-level suite plus the focused Level 3 scale, Level 4 Hess/kinetics and Level 5 mission rounds, then uploaded the paired build.
 
 ## Known issues
 
