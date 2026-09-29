@@ -69,7 +69,7 @@ Extend contextual station interactions to the remaining Level 3 task families an
 
 ## Last verification
 
-2026-09-29: Level 3 source content/audit/typecheck, focused round, exported macOS app and Windows PCK focused rounds passed. Solution setup panels inspected at 1440×900 and 1152×720. Native Windows CI pending.
+2026-09-29: Level 3 source content/audit/typecheck, focused round, exported macOS app and Windows PCK focused rounds passed. Solution setup panels inspected at 1440×900 and 1152×720. Native Windows CI run 36562839859 passed all five levels and the focused Level 3 solution round; EXE/PCK uploaded.
 
 2026-09-29: Godot 4.7.2 import/parse, TypeScript typecheck, Level 4 audit, all 40 Level 4 HUD submissions and sixteen comparison gates passed. Focused source, macOS app and Windows PCK equilibrium rounds passed. Dynamic and temperature panels were reviewed at 1440×900, with a 1152×720 temperature check. Windows Actions run 36561710110 passed the native EXE five-level suite plus Level 3 scale, Level 4 Hess/kinetics/equilibrium and Level 5 mission rounds, then uploaded the paired build.
 
