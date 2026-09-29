@@ -8,7 +8,9 @@ static func order_tasks(tasks: Array, mastery: Dictionary) -> Array:
 		var best_score := -INF
 		for index in range(remaining.size()):
 			var task: Dictionary = remaining[index]
-			var topic_record: Dictionary = mastery.get(str(task.get("topic", "")), {})
+			var topic := str(task.get("topic", ""))
+			var level := int(task.get("level", 1))
+			var topic_record: Dictionary = mastery.get("%d:%s" % [level, topic], mastery.get(topic, {}) if level == 1 else {})
 			var topic_mastery := clampf(float(topic_record.get("mastery", 0.5)), 0.0, 1.0)
 			var score := (0.5 - topic_mastery) * 4.0 - float(index) * 0.005
 			if not ordered.is_empty():

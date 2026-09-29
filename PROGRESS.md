@@ -51,6 +51,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Configured a universal macOS release preset and built `builds/macos/ChemSite.app`. Launched its arm64 release binary outside the editor and captured its menu.
 - Configured a Windows Desktop x86_64 release preset. The official Godot 4.7.2 Windows template produced `builds/windows/ChemSite.exe` and `ChemSite.pck`; the PE header identifies a 64-bit Windows GUI program. The PCK completed the packaged five-task round under the matching Godot runtime on macOS.
 - Added a data-driven Level 2 virtual mixing control: learners select a reagent pair and see the curated observation before entering an equation. Added a staged Level 5 mission readout that unlocks the answer after the inspection steps. All five mixing tasks and nine staged mission tasks passed interaction gates and answer checks; 1440×900 before/after panels were visually reviewed and preserved in `docs/screenshots/`.
+- Completed Phase 9 progression data: save version 5 keeps level-specific best score, stars, XP and round counts, while retaining global records and migrating older saves. Mastery keys include level and topic; legacy Level 1 mastery remains usable. The career menu displays each level’s record. Save/migration, learning, five-level scheduler, source-round and 1440×900/1152×720 menu checks passed.
 - Added a Level 3 virtual scale panel for five curated mass/mole tasks. A preparation action reveals the given measurement and molar mass; the learner selects the applicable equation before numeric entry. The Level 3 content smoke rejects the wrong formula and checks the locked input; source, macOS app and Windows PCK five-task scale rounds passed. Both 1440×900 control states were visually reviewed.
 - Added data-driven virtual solution setup to all three Level 3 preparation tasks. Learners convert target volume from mL to L, choose the mass or dilution relationship, then enter the numeric answer. The Level 3 content smoke checks wrong choices and locked input; the focused five-task round passes in source, exported macOS app and Windows PCK. Both modes fit 1440×900 and 1152×720 visual captures. Task hints no longer disclose the setup choice.
 - Added a Level 4 Hess route puzzle for both numeric calculations. Learners chain directed enthalpy steps; reversing a step flips its ΔH sign. Route completion unlocks the numeric entry. Content checks cover a backtrack/reset, the required signs, locked input and both accepted answers. Source, macOS app and Windows PCK focused five-task rounds passed, and both 1440×900 states were reviewed.
@@ -61,7 +62,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds. Level 2 mixing, Level 3 scales and solution preparation, Level 4 Hess, kinetics and equilibrium, and Level 5 inspection now have contextual controls. Their focused source and packaged rounds pass automated QA. Human playtesting, broader accessibility, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records. Level 2 mixing, Level 3 scales and solution preparation, Level 4 Hess, kinetics and equilibrium, and Level 5 inspection now have contextual controls. Their focused source and packaged rounds pass automated QA. Human playtesting, broader accessibility, performance and release QA remain open.
 
 ## Next task
 
@@ -69,7 +70,7 @@ Extend contextual station interactions to the remaining Level 3 task families an
 
 ## Last verification
 
-2026-09-29: Level 3 source content/audit/typecheck, focused round, exported macOS app and Windows PCK focused rounds passed. Solution setup panels inspected at 1440×900 and 1152×720. Native Windows CI run 36562839859 passed all five levels and the focused Level 3 solution round; EXE/PCK uploaded.
+2026-09-29: Save version 5 migration, level-scoped learning for all five levels, Level 1 and 2 source round smokes, five packaged macOS rounds, a Windows PCK Level 5 round, and 1440×900/1152×720 menu visuals passed. Native Windows CI pending. Level 3 source content/audit/typecheck, focused round, exported macOS app and Windows PCK focused rounds passed. Solution setup panels inspected at 1440×900 and 1152×720. Native Windows CI run 36562839859 passed all five levels and the focused Level 3 solution round; EXE/PCK uploaded.
 
 2026-09-29: Godot 4.7.2 import/parse, TypeScript typecheck, Level 4 audit, all 40 Level 4 HUD submissions and sixteen comparison gates passed. Focused source, macOS app and Windows PCK equilibrium rounds passed. Dynamic and temperature panels were reviewed at 1440×900, with a 1152×720 temperature check. Windows Actions run 36561710110 passed the native EXE five-level suite plus Level 3 scale, Level 4 Hess/kinetics/equilibrium and Level 5 mission rounds, then uploaded the paired build.
 

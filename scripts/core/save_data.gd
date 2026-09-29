@@ -1,10 +1,10 @@
 extends RefCounted
 
 const SAVE_PATH := "user://progress.json"
-const VERSION := 4
+const VERSION := 5
 
 static func load_progress(path: String = SAVE_PATH) -> Dictionary:
-	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": [], "unlocked_level": 1}
+	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": [], "unlocked_level": 1, "level_records": {}}
 	if not FileAccess.file_exists(path):
 		return defaults
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -26,13 +26,17 @@ static func load_progress(path: String = SAVE_PATH) -> Dictionary:
 		parsed.topic_mastery = {}
 	if not parsed.mistakes is Array:
 		parsed.mistakes = []
+	if not parsed.level_records is Dictionary:
+		parsed.level_records = {}
 	return parsed
 
 static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_PATH) -> Error:
 	var progress := load_progress(path)
 	var topic := str(task.get("topic", ""))
+	var level := int(task.get("level", 1))
+	var mastery_key := "%d:%s" % [level, topic]
 	var mastery: Dictionary = progress.topic_mastery
-	var saved_record: Variant = mastery.get(topic, {})
+	var saved_record: Variant = mastery.get(mastery_key, mastery.get(topic, {}) if level == 1 else {})
 	var record: Dictionary = saved_record if saved_record is Dictionary else {}
 	record.attempts = int(record.get("attempts", 0)) + 1
 	record.last_attempt_at = int(Time.get_unix_time_from_system())
@@ -50,15 +54,25 @@ static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_P
 		mistakes.append({"task_id": str(task.get("id", "")), "topic": topic, "subtopic": str(task.get("subtopic", "")), "at": record.last_attempt_at})
 		if mistakes.size() > 100:
 			mistakes.pop_front()
-	progress.topic_mastery[topic] = record
+	progress.topic_mastery[mastery_key] = record
 	return _write_progress(progress, path)
 
 static func record_round(score: int, completed: int, path: String = SAVE_PATH, level: int = 1) -> Error:
 	var progress := load_progress(path)
+	if level < 1 or level > 5:
+		return ERR_INVALID_PARAMETER
 	progress.best_score = maxi(int(progress.best_score), score)
+	var records: Dictionary = progress.level_records
+	var key := str(level)
+	var prior: Variant = records.get(key, {})
+	var record: Dictionary = prior if prior is Dictionary else {}
+	record.best_score = maxi(int(record.get("best_score", 0)), score)
+	record.rounds = int(record.get("rounds", 0)) + 1
+	record.best_stars = int(record.get("best_stars", 0))
 	if completed >= 5:
 		var stars := 3 if score >= 600 else (2 if score >= 400 else 1)
 		progress.best_stars = maxi(int(progress.best_stars), stars)
+		record.best_stars = maxi(int(record.best_stars), stars)
 		if level == 1:
 			progress.unlocked_level = maxi(int(progress.unlocked_level), 2)
 		elif level == 2:
@@ -69,6 +83,8 @@ static func record_round(score: int, completed: int, path: String = SAVE_PATH, l
 			progress.unlocked_level = maxi(int(progress.unlocked_level), 5)
 	progress.total_xp = int(progress.total_xp) + completed * 50
 	progress.completed_rounds = int(progress.completed_rounds) + 1
+	record.xp = int(record.get("xp", 0)) + completed * 50
+	progress.level_records[key] = record
 	return _write_progress(progress, path)
 
 static func _write_progress(progress: Dictionary, path: String) -> Error:

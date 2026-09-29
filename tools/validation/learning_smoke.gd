@@ -18,7 +18,7 @@ func _run() -> void:
 	assert(site._task_index == 1 and site._completed == 0 and site._streak == 0)
 	assert(site._tasks[3].topic == first.topic and site._tasks[3].id != first.id, "Related question was not scheduled after two intervening tasks")
 	var progress: Dictionary = SAVE_DATA.load_progress(TEST_PATH)
-	var mastery: Dictionary = progress.topic_mastery[first.topic]
+	var mastery: Dictionary = progress.topic_mastery["1:" + first.topic]
 	assert(mastery.attempts == 1 and mastery.incorrect == 1 and is_equal_approx(mastery.mastery, 0.38))
 	assert(progress.mistakes.size() == 1 and progress.mistakes[0].task_id == first.id)
 	for index in range(2):
@@ -36,6 +36,12 @@ func _run() -> void:
 	var bank: Array = load("res://scripts/chemistry/task_bank.gd").load_verified_tasks()
 	var periodic: Dictionary = bank.filter(func(task: Dictionary) -> bool: return task.topic == "Периодическая система")[0]
 	assert(SAVE_DATA.record_answer(periodic, false, weak_path) == OK)
+	var level_three: Dictionary = periodic.duplicate(true)
+	level_three.level = 3
+	assert(SAVE_DATA.record_answer(level_three, false, weak_path) == OK)
+	var separate: Dictionary = SAVE_DATA.load_progress(weak_path).topic_mastery
+	assert(separate.has("1:" + periodic.topic) and separate.has("3:" + level_three.topic), "Mastery did not stay level-scoped")
+	assert(separate["1:" + periodic.topic].attempts == 1 and separate["3:" + periodic.topic].attempts == 1, "Same-name topics shared attempts across levels")
 	var next_site := (load("res://scenes/levels/construction_site.tscn") as PackedScene).instantiate()
 	next_site.save_path = weak_path
 	root.add_child(next_site)

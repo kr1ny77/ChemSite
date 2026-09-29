@@ -6,6 +6,7 @@ signal settings_changed(settings: Dictionary)
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
+var save_path: String = SAVE_DATA.SAVE_PATH
 var _menu_content: VBoxContainer
 var _settings_panel: PanelContainer
 var _settings_button: Button
@@ -57,7 +58,7 @@ func _ready() -> void:
 	description.add_theme_color_override("font_color", Color("afc6c9"))
 	description.add_theme_font_size_override("font_size", 21)
 	content.add_child(description)
-	var progress: Dictionary = SAVE_DATA.load_progress()
+	var progress: Dictionary = SAVE_DATA.load_progress(save_path)
 	var record := Label.new()
 	record.text = "РЕКОРД: %d  /  ЗВЁЗДЫ: %d  /  ОПЫТ: %d" % [progress.best_score, progress.best_stars, progress.total_xp]
 	record.add_theme_color_override("font_color", Color("f3a846"))
@@ -67,12 +68,12 @@ func _ready() -> void:
 	start.custom_minimum_size = Vector2(280, 60)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)
-	start.text = "КАРЬЕРА · УРОВЕНЬ 1   →"
+	start.text = _career_label("КАРЬЕРА · УРОВЕНЬ 1", 1, progress)
 	start.pressed.connect(func() -> void: start_requested.emit("career", "", 1))
 	content.add_child(start)
 	start.grab_focus()
 	var level_two := Button.new()
-	level_two.text = "УРОВЕНЬ 2 · РЕАКЦИИ   →" if int(progress.unlocked_level) >= 2 else "УРОВЕНЬ 2 · ЗАВЕРШИ УРОВЕНЬ 1"
+	level_two.text = _career_label("УРОВЕНЬ 2 · РЕАКЦИИ", 2, progress) if int(progress.unlocked_level) >= 2 else "УРОВЕНЬ 2 · ЗАВЕРШИ УРОВЕНЬ 1"
 	level_two.disabled = int(progress.unlocked_level) < 2
 	level_two.custom_minimum_size = Vector2(350, 48)
 	level_two.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
@@ -80,7 +81,7 @@ func _ready() -> void:
 	level_two.pressed.connect(func() -> void: start_requested.emit("career", "", 2))
 	content.add_child(level_two)
 	var level_three := Button.new()
-	level_three.text = "УРОВЕНЬ 3 · РАСТВОРЫ   →" if int(progress.unlocked_level) >= 3 else "УРОВЕНЬ 3 · ЗАВЕРШИ УРОВЕНЬ 2"
+	level_three.text = _career_label("УРОВЕНЬ 3 · РАСТВОРЫ", 3, progress) if int(progress.unlocked_level) >= 3 else "УРОВЕНЬ 3 · ЗАВЕРШИ УРОВЕНЬ 2"
 	level_three.disabled = int(progress.unlocked_level) < 3
 	level_three.custom_minimum_size = Vector2(350, 48)
 	level_three.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
@@ -88,7 +89,7 @@ func _ready() -> void:
 	level_three.pressed.connect(func() -> void: start_requested.emit("career", "", 3))
 	content.add_child(level_three)
 	var level_four := Button.new()
-	level_four.text = "УРОВЕНЬ 4 · ЭНЕРГИЯ И КОРРОЗИЯ   →" if int(progress.unlocked_level) >= 4 else "УРОВЕНЬ 4 · ЗАВЕРШИ УРОВЕНЬ 3"
+	level_four.text = _career_label("УРОВЕНЬ 4 · ЭНЕРГИЯ И КОРРОЗИЯ", 4, progress) if int(progress.unlocked_level) >= 4 else "УРОВЕНЬ 4 · ЗАВЕРШИ УРОВЕНЬ 3"
 	level_four.disabled = int(progress.unlocked_level) < 4
 	level_four.custom_minimum_size = Vector2(350, 48)
 	level_four.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
@@ -96,7 +97,7 @@ func _ready() -> void:
 	level_four.pressed.connect(func() -> void: start_requested.emit("career", "", 4))
 	content.add_child(level_four)
 	var level_five := Button.new()
-	level_five.text = "УРОВЕНЬ 5 · СТРОИТЕЛЬНАЯ ХИМИЯ   →" if int(progress.unlocked_level) >= 5 else "УРОВЕНЬ 5 · ЗАВЕРШИ УРОВЕНЬ 4"
+	level_five.text = _career_label("УРОВЕНЬ 5 · СТРОИТЕЛЬНАЯ ХИМИЯ", 5, progress) if int(progress.unlocked_level) >= 5 else "УРОВЕНЬ 5 · ЗАВЕРШИ УРОВЕНЬ 4"
 	level_five.disabled = int(progress.unlocked_level) < 5
 	level_five.custom_minimum_size = Vector2(350, 48)
 	level_five.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
@@ -227,6 +228,13 @@ func _close_practice() -> void:
 
 func _start_practice(topic: String) -> void:
 	start_requested.emit("practice", topic, 1)
+
+func _career_label(title: String, level: int, progress: Dictionary) -> String:
+	var record: Dictionary = progress.get("level_records", {}).get(str(level), {})
+	if int(record.get("rounds", 0)) == 0:
+		return title + "   →"
+	var stars := int(record.get("best_stars", 0))
+	return "%s  ·  %s  ·  %d  →" % [title, "★".repeat(stars) + "☆".repeat(3 - stars), int(record.get("best_score", 0))]
 
 func _add_volume_slider(parent: VBoxContainer, title: String, key: String, settings: Dictionary) -> void:
 	var label := Label.new()

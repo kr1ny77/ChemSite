@@ -40,7 +40,7 @@
 
 ## Later phases
 
-- [ ] Phase 9: complete adaptive mastery and expanded progression data for Levels 2–5; Level 1 now records mastery and schedules a related task two questions after a mistake
+- [x] Phase 9: level-scoped adaptive mastery and related-task scheduling cover all five career levels; version-5 saves track each level’s best score, stars, XP and rounds, preserve legacy global records, and show level results in the menu
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
 - [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
