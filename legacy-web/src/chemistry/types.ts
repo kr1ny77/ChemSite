@@ -67,6 +67,11 @@ export type TaskDefinition = {
     hessEnd?: string
     hessEdges?: { from: string; to: string; deltaH: number }[]
     comparisonRuns?: { setting: string; observation: string }[]
+    solutionMode?: 'mass' | 'dilution'
+    targetVolumeMl?: number
+    targetConcentration?: number
+    stockConcentration?: number
+    solutionVolumeChoicesL?: number[]
     missionSteps?: {
       title: string
       readout: string

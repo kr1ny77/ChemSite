@@ -32,6 +32,17 @@ for identifier, expected in EXPECTED.items():
  tolerance = max(answer.get('absoluteTolerance', 0), abs(answer['value'])*answer.get('relativeTolerance', 0))
  assert abs(expected-answer['value']) <= tolerance, (identifier, expected, answer)
  assert answer['value'] > 0 and tolerance >= 0
+for identifier in ('L3-095', 'L3-096', 'L3-097'):
+ parameters = TASKS[identifier]['parameters']
+ volume_l = parameters['targetVolumeMl'] / 1000
+ assert sum(abs(choice-volume_l) < 1e-9 for choice in parameters['solutionVolumeChoicesL']) == 1, identifier
+ if parameters['solutionMode'] == 'mass':
+  result = parameters['targetConcentration'] * volume_l * parameters['molarMass']
+ else:
+  result = parameters['targetConcentration'] * parameters['targetVolumeMl'] / parameters['stockConcentration']
+ answer = TASKS[identifier]['correctAnswer']
+ tolerance = max(answer.get('absoluteTolerance', 0), abs(answer['value'])*answer.get('relativeTolerance', 0))
+ assert abs(result-answer['value']) <= tolerance, (identifier, result, answer)
 for identifier in ('L3-109','L3-110','L3-111','L3-112'):
  assert is_balanced(TASKS[identifier]['correctAnswer']), identifier
 for task in TASKS.values():

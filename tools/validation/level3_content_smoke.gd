@@ -13,13 +13,14 @@ func _run() -> void:
 	var numeric_count := 0
 	var equation_count := 0
 	var scale_count := 0
+	var solution_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
 		var answer: Variant = task.correctAnswer
 		if answer is Dictionary:
 			numeric_count += 1
-			var input: Control = hud._panel_content.get_child(5 if task.interactionType == "virtual-scales" else 4)
+			var input: Control = hud._panel_content.get_child(5 if task.interactionType in ["virtual-scales", "solution-preparation"] else 4)
 			assert(input is LineEdit, "Numeric input missing: " + str(task.id))
 			if task.interactionType == "virtual-scales":
 				scale_count += 1
@@ -32,6 +33,19 @@ func _run() -> void:
 				assert(not scale.is_ready() and not input.editable, "Wrong scale formula unlocked answer: " + str(task.id))
 				scale.select_formula("n = m / M" if task.parameters.scaleMode == "mass-to-moles" else "m = n · M")
 				assert(scale.is_ready() and input.editable, "Scale formula did not unlock answer: " + str(task.id))
+			if task.interactionType == "solution-preparation":
+				solution_count += 1
+				var setup: VBoxContainer = hud._solution_view
+				assert(setup != null and not setup.is_ready() and not input.editable, "Solution setup was skipped: " + str(task.id))
+				setup.select_volume(-1.0)
+				assert(not setup.is_ready() and not input.editable, "Wrong volume unlocked answer: " + str(task.id))
+				setup.select_volume(float(task.parameters.targetVolumeMl) / 1000.0)
+				assert(not setup.is_ready() and not input.editable, "Volume alone unlocked answer: " + str(task.id))
+				var mass_mode: bool = str(task.parameters.solutionMode) == "mass"
+				setup.select_formula("m = C / (V · M)" if mass_mode else "C₁ + V₁ = C₂ + V₂")
+				assert(not setup.is_ready() and not input.editable, "Wrong formula unlocked answer: " + str(task.id))
+				setup.select_formula("m = C · V · M" if mass_mode else "C₁V₁ = C₂V₂")
+				assert(setup.is_ready() and input.editable, "Solution setup did not unlock answer: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(answer.value)), "Numeric answer rejected: " + str(task.id))
 			assert(not TASK_BANK.validate_choice(task, "not a number"), "Invalid number accepted: " + str(task.id))
 		elif str(task.interactionType) == "dissociation":
@@ -45,8 +59,8 @@ func _run() -> void:
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5, "Level 3 interaction distribution changed")
+	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3, "Level 3 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 4 dissociation")
+	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 dissociation")
 	quit()

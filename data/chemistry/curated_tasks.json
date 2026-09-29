@@ -2885,14 +2885,23 @@
     "explanation": "n = 0.20·0.500 = 0.100 mol; m = 0.100·58.44 = 5.844 g.",
     "rule": "Для навески используй m = CVM.",
     "example": "Раствор готовят виртуально с доведением до конечного объёма.",
-    "hint": "Переведи 500 mL в 0.500 L.",
+    "hint": "1000 mL соответствуют 1 L.",
     "tags": [
       "solution-preparation",
       "molarity",
       "sodium-chloride"
     ],
     "parameters": {
-      "compound": "NaCl"
+      "compound": "NaCl",
+      "solutionMode": "mass",
+      "targetVolumeMl": 500,
+      "targetConcentration": 0.2,
+      "molarMass": 58.44,
+      "solutionVolumeChoicesL": [
+        5,
+        0.5,
+        0.05
+      ]
     },
     "id": "L3-095",
     "level": 3,
@@ -2915,14 +2924,23 @@
     "explanation": "n = 0.10·0.250 = 0.025 mol; m = 0.025·40.00 = 1.00 g.",
     "rule": "Для навески используй m = CVM.",
     "example": "Все операции в ChemSite являются виртуальными.",
-    "hint": "V = 0.250 L, M(NaOH) = 40.00 g/mol.",
+    "hint": "1000 mL соответствуют 1 L; молярная масса указана на панели.",
     "tags": [
       "solution-preparation",
       "molarity",
       "sodium-hydroxide"
     ],
     "parameters": {
-      "compound": "NaOH"
+      "compound": "NaOH",
+      "solutionMode": "mass",
+      "targetVolumeMl": 250,
+      "targetConcentration": 0.1,
+      "molarMass": 40,
+      "solutionVolumeChoicesL": [
+        0.025,
+        2.5,
+        0.25
+      ]
     },
     "id": "L3-096",
     "level": 3,
@@ -2945,11 +2963,22 @@
     "explanation": "V₁ = C₂V₂/C₁ = 0.20·500/1.0 = 100 mL.",
     "rule": "При разбавлении C₁V₁ = C₂V₂.",
     "example": "Остальной объём до 500 mL восполняет растворитель.",
-    "hint": "Используй C₁V₁ = C₂V₂.",
+    "hint": "Количество растворённого вещества при разбавлении сохраняется.",
     "tags": [
       "dilution",
       "volume"
     ],
+    "parameters": {
+      "solutionMode": "dilution",
+      "targetVolumeMl": 500,
+      "targetConcentration": 0.2,
+      "stockConcentration": 1,
+      "solutionVolumeChoicesL": [
+        0.5,
+        0.05,
+        5
+      ]
+    },
     "id": "L3-097",
     "level": 3,
     "points": 140,

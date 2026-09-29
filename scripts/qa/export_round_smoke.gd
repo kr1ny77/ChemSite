@@ -114,6 +114,23 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 					break
 			if not child.is_ready():
 				return false
+		if child.has_method("select_volume") and not child.is_ready():
+			var expected_volume: float = float(task.get("parameters", {}).get("targetVolumeMl", 0.0)) / 1000.0
+			var matched_volume := false
+			for button in child.get_node("VolumeButtons").get_children():
+				if button is Button and button.text == "%.3f л" % expected_volume:
+					button.pressed.emit()
+					matched_volume = true
+					break
+			if not matched_volume:
+				return false
+			var formula := "m = C · V · M" if str(task.get("parameters", {}).get("solutionMode", "")) == "mass" else "C₁V₁ = C₂V₂"
+			for button in child.get_node("FormulaButtons").get_children():
+				if button is Button and button.text == formula:
+					button.pressed.emit()
+					break
+			if not child.is_ready():
+				return false
 		if child.has_method("choose_step") and not child.is_ready():
 			if not _complete_hess_route(child, task.get("parameters", {})):
 				return false
