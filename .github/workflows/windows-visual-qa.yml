@@ -42,34 +42,38 @@ jobs:
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
           $export = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--export-release', '"Windows Desktop"', 'builds/windows/ChemSite.exe') -Wait -PassThru -NoNewWindow
           if ($export.ExitCode -ne 0) { throw "Windows export failed ($($export.ExitCode))" }
-      - name: Capture graphical five-task round
+      - name: Capture graphical five-task rounds for all levels
         shell: pwsh
         run: |
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
-          $game = Start-Process -FilePath $exe -ArgumentList @('--rendering-method', 'gl_compatibility', '--', '--qa-visual-round') -PassThru
-          try {
-            Wait-Process -Id $game.Id -Timeout 120 -ErrorAction Stop
-          } catch {
-            Stop-Process -Id $game.Id -Force -ErrorAction SilentlyContinue
-            throw 'Graphical QA round timed out'
+          foreach ($level in 1..5) {
+            $flag = if ($level -eq 1) { '--qa-visual-round' } else { "--qa-visual-level$level-round" }
+            $folder = if ($level -eq 1) { 'qa-visual-round' } else { "qa-visual-level$level-round" }
+            $game = Start-Process -FilePath $exe -ArgumentList @('--rendering-method', 'gl_compatibility', '--', $flag) -PassThru
+            try {
+              Wait-Process -Id $game.Id -Timeout 120 -ErrorAction Stop
+            } catch {
+              Stop-Process -Id $game.Id -Force -ErrorAction SilentlyContinue
+              throw "Level $level graphical QA round timed out"
+            }
+            $game.Refresh()
+            if ($game.ExitCode -ne 0) { throw "Level $level graphical QA round failed ($($game.ExitCode))" }
+            $captures = Get-ChildItem (Join-Path $env:APPDATA 'Godot/app_userdata') -Recurse -Filter 'task_01.png' -ErrorAction SilentlyContinue | Where-Object { $_.Directory.Name -eq $folder }
+            if (-not $captures) { throw "Level $level graphical QA screenshot missing" }
+            $destination = "artifacts/windows-visual/level$level"
+            New-Item -ItemType Directory -Force -Path $destination | Out-Null
+            Copy-Item (Join-Path $captures[0].DirectoryName '*.png') $destination
+            $screens = Get-ChildItem $destination -Filter '*.png'
+            if ($screens.Count -ne 11) { throw "Level $level expected 11 task/feedback/result screens, found $($screens.Count)" }
+            foreach ($screen in $screens) {
+              if ($screen.Length -lt 20000) { throw "Capture appears empty: $($screen.Name) ($($screen.Length) bytes)" }
+            }
+            Write-Host "Level $level captured $($screens.Count) screens"
           }
-          $game.Refresh()
-          if ($game.ExitCode -ne 0) { throw "Graphical QA round failed ($($game.ExitCode))" }
-          $captures = Get-ChildItem (Join-Path $env:APPDATA 'Godot/app_userdata') -Recurse -Filter 'task_01.png' -ErrorAction SilentlyContinue
-          if (-not $captures) { throw 'Graphical QA screenshot missing' }
-          $captureDir = $captures[0].DirectoryName
-          New-Item -ItemType Directory -Force -Path 'artifacts/windows-visual' | Out-Null
-          Copy-Item (Join-Path $captureDir '*.png') 'artifacts/windows-visual/'
-          $screens = Get-ChildItem 'artifacts/windows-visual' -Filter '*.png'
-          if ($screens.Count -ne 11) { throw "Expected 11 task/feedback/result screens, found $($screens.Count)" }
-          foreach ($screen in $screens) {
-            if ($screen.Length -lt 20000) { throw "Capture appears empty: $($screen.Name) ($($screen.Length) bytes)" }
-          }
-          $screens | Select-Object Name,Length | Format-Table
       - name: Upload Windows visual evidence
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: ChemSite-Windows-visual-QA
-          path: artifacts/windows-visual/*.png
+          path: artifacts/windows-visual/**/*.png
           if-no-files-found: warn
