@@ -27,6 +27,7 @@
 - [x] Phase 13 Level 3 scale pass: add a data-driven mass/mole measurement and formula-selection control for all five virtual-scale tasks; verify locked answers, wrong-formula recovery, five-task source and packaged rounds, and 1440×900 states
 - [x] Phase 13 Level 4 Hess pass: assemble directed enthalpy paths, reverse a step with its ΔH sign, lock numeric entry until the route reaches the target, and verify both calculations, a focused five-task source/package round and 1440×900 states
 - [x] Phase 13 Level 4 kinetics pass: add two virtual comparison runs to all six kinetics tasks, gate answer selection until both observations are read, verify all 40 Level 4 HUD tasks, a focused five-task source/package round and 1440×900 states
+- [x] Phase 13 Level 4 equilibrium pass: add two curated states to all ten equilibrium tasks, gate conclusions until both states are viewed, verify all 40 Level 4 HUD tasks, a focused source/package round and 1440×900 plus smaller-screen states
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 

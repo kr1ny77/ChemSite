@@ -4155,6 +4155,18 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Без катализатора",
+          "observation": "Равновесный состав устанавливается медленнее; конечное положение системы задано температурой."
+        },
+        {
+          "setting": "С катализатором",
+          "observation": "Тот же равновесный состав достигается быстрее."
+        }
+      ]
+    },
     "prompt": "Изменяет ли катализатор положение химического равновесия?",
     "correctAnswer": "нет",
     "options": [
@@ -4184,6 +4196,18 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Без катализатора",
+          "observation": "Прямая и обратная реакции идут по исходным путям."
+        },
+        {
+          "setting": "С катализатором",
+          "observation": "Оба направления ускоряются; равновесие устанавливается быстрее."
+        }
+      ]
+    },
     "prompt": "Как катализатор влияет на прямую и обратную реакции в обратимой системе?",
     "correctAnswer": "ускоряет обе реакции и позволяет быстрее достичь равновесия",
     "options": [
@@ -4259,6 +4283,18 @@
     "difficulty": 1,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Датчик прямой реакции",
+          "observation": "В состоянии равновесия прямая реакция продолжается с постоянной скоростью."
+        },
+        {
+          "setting": "Датчик обратной реакции",
+          "observation": "Обратная реакция продолжается с такой же скоростью; состав остаётся постоянным."
+        }
+      ]
+    },
     "prompt": "Что означает динамическое химическое равновесие?",
     "correctAnswer": "скорости прямой и обратной реакций равны, поэтому состав системы постоянен",
     "options": [
@@ -4287,6 +4323,18 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Исходное равновесие",
+          "observation": "Состав закрытой модельной системы постоянен до возмущения."
+        },
+        {
+          "setting": "Добавлен реагент",
+          "observation": "При новом равновесии часть добавленного реагента израсходована прямым направлением."
+        }
+      ]
+    },
     "prompt": "Что происходит с равновесием после увеличения концентрации одного из реагентов?",
     "correctAnswer": "смещается в сторону расходования добавленного реагента",
     "options": [
@@ -4316,6 +4364,19 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "compound": "NH3",
+      "comparisonRuns": [
+        {
+          "setting": "Исходный объём, T постоянна",
+          "observation": "N₂ + 3H₂ ⇌ 2NH₃: слева 4 mol газа, справа 2 mol газа по коэффициентам."
+        },
+        {
+          "setting": "Сжатый объём, T постоянна",
+          "observation": "Новая равновесная смесь имеет большую долю NH₃."
+        }
+      ]
+    },
     "prompt": "Для N₂ + 3H₂ ⇌ 2NH₃ при постоянной температуре сжали газовую смесь. Куда сместится равновесие?",
     "correctAnswer": "вправо, к NH₃",
     "acceptedAnswers": [
@@ -4340,9 +4401,6 @@
       "pressure",
       "ammonia"
     ],
-    "parameters": {
-      "compound": "NH3"
-    },
     "id": "L4-141",
     "level": 4,
     "points": 160,
@@ -4355,6 +4413,19 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "compound": "NH3",
+      "comparisonRuns": [
+        {
+          "setting": "Исходный объём, T постоянна",
+          "observation": "N₂ + 3H₂ ⇌ 2NH₃: слева 4 mol газа, справа 2 mol газа по коэффициентам."
+        },
+        {
+          "setting": "Расширенный объём, T постоянна",
+          "observation": "Новая равновесная смесь имеет меньшую долю NH₃."
+        }
+      ]
+    },
     "prompt": "Для N₂ + 3H₂ ⇌ 2NH₃ при постоянной температуре расширили сосуд. Куда сместится равновесие?",
     "correctAnswer": "влево, к N₂ и H₂",
     "acceptedAnswers": [
@@ -4378,9 +4449,6 @@
       "pressure",
       "ammonia"
     ],
-    "parameters": {
-      "compound": "NH3"
-    },
     "id": "L4-142",
     "level": 4,
     "points": 160,
@@ -4393,6 +4461,19 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "compound": "NH3",
+      "comparisonRuns": [
+        {
+          "setting": "Исходная температура",
+          "observation": "Прямое образование NH₃ экзотермично; тепло записано среди продуктов."
+        },
+        {
+          "setting": "Температура повышена",
+          "observation": "Новая равновесная смесь содержит меньшую долю NH₃."
+        }
+      ]
+    },
     "prompt": "Реакция N₂ + 3H₂ ⇌ 2NH₃ + Q экзотермическая. Что произойдёт при повышении температуры?",
     "correctAnswer": "равновесие сместится влево",
     "acceptedAnswers": [
@@ -4415,9 +4496,6 @@
       "temperature",
       "ammonia"
     ],
-    "parameters": {
-      "compound": "NH3"
-    },
     "id": "L4-143",
     "level": 4,
     "points": 160,
@@ -4430,6 +4508,19 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "compound": "NH3",
+      "comparisonRuns": [
+        {
+          "setting": "Исходная температура",
+          "observation": "Прямое образование NH₃ экзотермично; тепло записано среди продуктов."
+        },
+        {
+          "setting": "Температура понижена",
+          "observation": "Новая равновесная смесь содержит большую долю NH₃."
+        }
+      ]
+    },
     "prompt": "Для экзотермической реакции N₂ + 3H₂ ⇌ 2NH₃ + Q понизили температуру. Куда сместится равновесие?",
     "correctAnswer": "вправо, к NH₃",
     "acceptedAnswers": [
@@ -4453,9 +4544,6 @@
       "temperature",
       "ammonia"
     ],
-    "parameters": {
-      "compound": "NH3"
-    },
     "id": "L4-144",
     "level": 4,
     "points": 160,
@@ -4468,6 +4556,19 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "compound": "NH3",
+      "comparisonRuns": [
+        {
+          "setting": "NH₃ остаётся в системе",
+          "observation": "В закрытой модели состав достигнутого равновесия постоянен."
+        },
+        {
+          "setting": "NH₃ постоянно удаляется",
+          "observation": "Образование NH₃ прямой реакцией продолжается, восполняя удаляемый продукт."
+        }
+      ]
+    },
     "prompt": "Из системы N₂ + 3H₂ ⇌ 2NH₃ постоянно удаляют NH₃. Куда смещается равновесие?",
     "correctAnswer": "вправо, к образованию NH₃",
     "acceptedAnswers": [
@@ -4491,9 +4592,6 @@
       "concentration",
       "ammonia"
     ],
-    "parameters": {
-      "compound": "NH3"
-    },
     "id": "L4-145",
     "level": 4,
     "points": 160,
@@ -4506,6 +4604,18 @@
     "difficulty": 2,
     "station": "reaction-bench",
     "interactionType": "equilibrium-control",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Без катализатора",
+          "observation": "Равновесный состав достигается за исходное модельное время."
+        },
+        {
+          "setting": "С катализатором",
+          "observation": "Тот же равновесный состав достигается за меньшее модельное время."
+        }
+      ]
+    },
     "prompt": "Что произойдёт с положением равновесия после добавления катализатора?",
     "correctAnswer": "положение не изменится; равновесие установится быстрее",
     "options": [

@@ -22,6 +22,12 @@ for task in TASKS.values():
 for identifier,physical_change in [('L4-141','сжали'),('L4-142','расширили')]:
  prompt=TASKS[identifier]['prompt']
  assert 'постоянной температуре' in prompt and physical_change in prompt,identifier
+for task in TASKS.values():
+ if task['interactionType'] in {'kinetics-experiment','equilibrium-control'}:
+  runs=task.get('parameters',{}).get('comparisonRuns',[])
+  assert len(runs)==2,task['id']
+  assert len({run['setting'] for run in runs})==2,task['id']
+  assert all(run['observation'].strip() for run in runs),task['id']
 assert 'Zn → Zn²⁺ + 2e⁻' in TASKS['L4-149']['prompt']
 assert 'Cu²⁺ + 2e⁻ → Cu' in TASKS['L4-150']['prompt']
-print('LEVEL4_AUDIT_OK: 2 Hess calculations, 38 choice tasks, equilibrium conditions')
+print('LEVEL4_AUDIT_OK: 2 Hess calculations, 38 choice tasks, 16 comparisons, equilibrium conditions')

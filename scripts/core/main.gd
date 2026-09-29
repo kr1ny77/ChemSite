@@ -22,6 +22,8 @@ func _ready() -> void:
 		call_deferred("_run_export_level_four_hess_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-kinetics-round"):
 		call_deferred("_run_export_level_four_kinetics_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-level4-equilibrium-round"):
+		call_deferred("_run_export_level_four_equilibrium_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level5-round"):
 		call_deferred("_run_export_level_five_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level5-mission-round"):
@@ -38,6 +40,8 @@ func _ready() -> void:
 		call_deferred("_run_export_visual_level_four_hess_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-kinetics-round"):
 		call_deferred("_run_export_visual_level_four_kinetics_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-level4-equilibrium-round"):
+		call_deferred("_run_export_visual_level_four_equilibrium_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level5-round"):
 		call_deferred("_run_export_visual_level_five_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level5-mission-round"):
@@ -71,6 +75,10 @@ func _run_export_level_four_kinetics_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-131", "L4-133", "L4-134", "L4-135", "L4-138"])
 	get_tree().quit(0 if passed else 1)
 
+func _run_export_level_four_equilibrium_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-136", "L4-139", "L4-141", "L4-143", "L4-146"])
+	get_tree().quit(0 if passed else 1)
+
 func _run_export_level_five_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 5)
 	get_tree().quit(0 if passed else 1)
@@ -101,6 +109,10 @@ func _run_export_visual_level_four_hess_smoke() -> void:
 
 func _run_export_visual_level_four_kinetics_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-131", "L4-133", "L4-134", "L4-135", "L4-138"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_level_four_equilibrium_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-136", "L4-139", "L4-141", "L4-143", "L4-146"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_visual_level_five_smoke() -> void:

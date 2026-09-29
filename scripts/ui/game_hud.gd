@@ -112,7 +112,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		longest_option = maxi(longest_option, str(option).length())
 	var mission_steps: Array = task.get("parameters", {}).get("missionSteps", [])
 	var hess_route: bool = task.get("interactionType", "") == "hess-puzzle" and task.get("parameters", {}).has("hessEdges")
-	var comparison: bool = task.get("interactionType", "") == "kinetics-experiment" and task.get("parameters", {}).has("comparisonRuns")
+	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control"] and task.get("parameters", {}).has("comparisonRuns")
 	_panel.anchor_top = 0.14 if hess_route or comparison else (0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19))
 	_panel.anchor_bottom = 0.88 if hess_route else (0.94 if comparison else (0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81)))
 	_panel.visible = true
@@ -154,7 +154,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel_content.add_child(_hess_view)
 	if comparison:
 		_comparison_view = EXPERIMENT_COMPARISON_VIEW.new()
-		_comparison_view.configure(task.parameters)
+		_comparison_view.configure(task.parameters, task.interactionType == "equilibrium-control")
 		_comparison_view.comparison_completed.connect(func() -> void:
 			_set_answer_enabled(true)
 			_focus_first_answer()
