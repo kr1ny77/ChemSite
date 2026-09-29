@@ -44,6 +44,6 @@
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
 - [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
-- [ ] Phase 14: measure and optimize for a student laptop at approximately 60 FPS
+- [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
 - [ ] Phase 15: complete visible Windows input/audio/save QA; GitHub Actions now exports the native x86_64 EXE, passes Levels 1–5 and the Level 5 mission round on a Windows runner, and uploads the EXE/PCK artifact
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate
