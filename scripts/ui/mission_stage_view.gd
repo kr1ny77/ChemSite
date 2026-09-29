@@ -39,6 +39,8 @@ func _build() -> void:
 	_next.add_theme_stylebox_override("normal", button_style)
 	_next.add_theme_stylebox_override("hover", button_style)
 	_next.add_theme_color_override("font_color", Color("173744"))
+	_next.add_theme_color_override("font_focus_color", Color("173744"))
+	_next.add_theme_color_override("font_pressed_color", Color("173744"))
 	_next.pressed.connect(reveal_next)
 	add_child(_next)
 	_update_readout()

@@ -113,5 +113,7 @@ func _style_button(button: Button, color: Color) -> void:
 	button.add_theme_stylebox_override("pressed", hover)
 	button.add_theme_stylebox_override("disabled", disabled)
 	button.add_theme_color_override("font_color", Color("173744"))
+	button.add_theme_color_override("font_focus_color", Color("173744"))
 	button.add_theme_color_override("font_hover_color", Color("173744"))
+	button.add_theme_color_override("font_pressed_color", Color("173744"))
 	button.add_theme_color_override("font_disabled_color", Color("575c58"))

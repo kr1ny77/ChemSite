@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - .github/workflows/windows-visual-qa.yml
+      - scripts/ui/**
+      - data/chemistry/**
   workflow_dispatch:
 
 permissions:

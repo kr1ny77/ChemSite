@@ -491,7 +491,9 @@ func _style_button(button: Button, secondary: bool = false) -> void:
 	disabled.set_content_margin_all(9)
 	button.add_theme_stylebox_override("disabled", disabled)
 	button.add_theme_color_override("font_color", Color("173744"))
+	button.add_theme_color_override("font_focus_color", Color("173744"))
 	button.add_theme_color_override("font_hover_color", Color("173744"))
+	button.add_theme_color_override("font_pressed_color", Color("173744"))
 	button.add_theme_color_override("font_disabled_color", Color("4b5d60"))
 
 func _station_name(station_id: String) -> String:
