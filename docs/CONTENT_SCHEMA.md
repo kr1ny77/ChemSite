@@ -100,6 +100,7 @@ export type TaskDefinition = {
     hessStart?: string
     hessEnd?: string
     hessEdges?: { from: string; to: string; deltaH: number }[]
+    comparisonRuns?: { setting: string; observation: string }[]
   }
 
   correctAnswer: unknown

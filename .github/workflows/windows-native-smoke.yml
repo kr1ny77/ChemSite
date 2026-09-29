@@ -57,6 +57,8 @@ jobs:
           if ($scales.ExitCode -ne 0) { throw "Level 3 scale smoke failed ($($scales.ExitCode))" }
           $hess = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-hess-round') -Wait -PassThru -NoNewWindow
           if ($hess.ExitCode -ne 0) { throw "Level 4 Hess smoke failed ($($hess.ExitCode))" }
+          $kinetics = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-kinetics-round') -Wait -PassThru -NoNewWindow
+          if ($kinetics.ExitCode -ne 0) { throw "Level 4 kinetics smoke failed ($($kinetics.ExitCode))" }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:

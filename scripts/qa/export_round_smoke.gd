@@ -117,6 +117,11 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 		if child.has_method("choose_step") and not child.is_ready():
 			if not _complete_hess_route(child, task.get("parameters", {})):
 				return false
+		if child.has_method("inspect_run") and not child.is_complete():
+			for button in child.get_node("RunButtons").get_children():
+				(button as Button).pressed.emit()
+			if not child.is_complete():
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

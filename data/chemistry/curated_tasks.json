@@ -3943,6 +3943,19 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "Что быстрее реагирует с одной и той же кислотой: порошок CaCO₃ или крупный кусок той же массы?",
+    "parameters": {
+      "compound": "CaCO3",
+      "comparisonRuns": [
+        {
+          "setting": "Крупный кусок CaCO₃",
+          "observation": "Меньшая площадь контакта; относительная скорость ниже."
+        },
+        {
+          "setting": "Порошок CaCO₃",
+          "observation": "Большая площадь контакта; относительная скорость выше."
+        }
+      ]
+    },
     "correctAnswer": "порошок CaCO3",
     "acceptedAnswers": [
       "порошок",
@@ -3963,9 +3976,6 @@
       "surface-area",
       "carbonate"
     ],
-    "parameters": {
-      "compound": "CaCO3"
-    },
     "id": "L4-131",
     "level": 4,
     "points": 160,
@@ -3979,6 +3989,18 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "Почему порошок обычно реагирует быстрее крупного куска того же вещества?",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Крупный кусок",
+          "observation": "Граница контакта фаз меньше; модельный ход реакции медленнее."
+        },
+        {
+          "setting": "Порошок той же массы",
+          "observation": "Граница контакта фаз больше; модельный ход реакции быстрее."
+        }
+      ]
+    },
     "correctAnswer": "из-за большей площади поверхности контакта",
     "options": [
       "из-за большей площади поверхности контакта",
@@ -4007,6 +4029,18 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "Как повышение температуры обычно влияет на скорость большинства химических реакций?",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Ниже температура",
+          "observation": "Меньшая доля столкновений преодолевает энергетический барьер."
+        },
+        {
+          "setting": "Выше температура",
+          "observation": "Большая доля столкновений преодолевает энергетический барьер."
+        }
+      ]
+    },
     "correctAnswer": "увеличивает скорость",
     "acceptedAnswers": [
       "увеличивает"
@@ -4038,6 +4072,18 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "Как увеличение концентрации реагента обычно влияет на скорость реакции при прочих равных условиях?",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Ниже концентрация",
+          "observation": "В том же объёме столкновения реагирующих частиц реже."
+        },
+        {
+          "setting": "Выше концентрация",
+          "observation": "В том же объёме столкновения реагирующих частиц чаще."
+        }
+      ]
+    },
     "correctAnswer": "увеличивает скорость",
     "acceptedAnswers": [
       "увеличивает"
@@ -4069,6 +4115,18 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "Как катализатор влияет на энергию активации?",
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Без катализатора",
+          "observation": "Модельный энергетический барьер исходного пути выше."
+        },
+        {
+          "setting": "С катализатором",
+          "observation": "Альтернативный путь имеет более низкий энергетический барьер."
+        }
+      ]
+    },
     "correctAnswer": "предоставляет путь с меньшей энергией активации",
     "options": [
       "предоставляет путь с меньшей энергией активации",
@@ -4156,6 +4214,19 @@
     "station": "reaction-bench",
     "interactionType": "kinetics-experiment",
     "prompt": "В виртуальном опыте температура и концентрация фиксированы. Как ускорить реакцию куска CaCO₃ с кислотой изменением только формы твёрдого реагента?",
+    "parameters": {
+      "compound": "CaCO3",
+      "comparisonRuns": [
+        {
+          "setting": "Крупный кусок CaCO₃",
+          "observation": "При той же массе доступная поверхность меньше; модельный ход медленнее."
+        },
+        {
+          "setting": "Измельчённый CaCO₃",
+          "observation": "При той же массе доступная поверхность больше; модельный ход быстрее."
+        }
+      ]
+    },
     "correctAnswer": "измельчить CaCO3",
     "acceptedAnswers": [
       "измельчить карбонат кальция",
@@ -4176,9 +4247,6 @@
       "surface-area",
       "scenario"
     ],
-    "parameters": {
-      "compound": "CaCO3"
-    },
     "id": "L4-138",
     "level": 4,
     "points": 160,

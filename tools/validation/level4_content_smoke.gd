@@ -12,6 +12,7 @@ func _run() -> void:
 	root.add_child(hud)
 	var numeric_count := 0
 	var route_count := 0
+	var comparison_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
@@ -41,14 +42,24 @@ func _run() -> void:
 			assert(route.is_ready() and input.editable, "Hess route did not unlock answer: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(task.correctAnswer.value)), "Hess answer rejected: " + str(task.id))
 		else:
+			if task.interactionType == "kinetics-experiment":
+				comparison_count += 1
+				var comparison: VBoxContainer = hud._comparison_view
+				var cards: GridContainer = hud._panel_content.get_child(4)
+				assert(comparison != null and not comparison.is_complete(), "Kinetics comparison missing: " + str(task.id))
+				assert((cards.get_child(0) as Button).disabled, "Kinetics answer opened early: " + str(task.id))
+				comparison.inspect_run(1)
+				assert(not comparison.is_complete() and (cards.get_child(0) as Button).disabled, "Single run opened answer: " + str(task.id))
+				comparison.inspect_run(0)
+				assert(comparison.is_complete() and not (cards.get_child(0) as Button).disabled, "Two runs did not open answer: " + str(task.id))
 			var valid_option := false
 			for option in task.options:
 				if TASK_BANK.validate_choice(task, str(option)):
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 2 and route_count == 2, "Level 4 Hess task count changed")
+	assert(numeric_count == 2 and route_count == 2 and comparison_count == 6, "Level 4 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL4_CONTENT_OK: 40 tasks, 2 Hess routes and calculations")
+	print("CHEMSITE_LEVEL4_CONTENT_OK: 40 tasks, 2 Hess routes, 6 kinetics comparisons")
 	quit()
