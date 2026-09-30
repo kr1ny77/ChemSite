@@ -55,10 +55,21 @@ for identifier in ('L3-101', 'L3-102', 'L3-103', 'L3-107'):
   expected = min(samples, key=lambda sample: sample['value'])['label'].lower()
  assert task['correctAnswer'].lower() == expected, (identifier, task['correctAnswer'], expected)
  assert task['correctAnswer'] in task['options'], identifier
+IONIZATION_EXPECTED = {'L3-113': ('HCl', 'сильный электролит'), 'L3-114': ('NaOH', 'сильный электролит'), 'L3-115': ('CH₃COOH', 'слабый электролит')}
+for identifier, (label, answer) in IONIZATION_EXPECTED.items():
+ task = TASKS[identifier]
+ samples = task['parameters']['ionizationSamples']
+ assert len(samples) == 1 and samples[0]['label'] == label, identifier
+ assert task['correctAnswer'] == answer and 'ионами' in samples[0]['observation'], identifier
+samples = TASKS['L3-116']['parameters']['ionizationSamples']
+assert {sample['label'] for sample in samples} == set(TASKS['L3-116']['options']) == {'сахароза', 'NaCl', 'HCl', 'NaOH'}
+assert TASKS['L3-116']['correctAnswer'] == 'сахароза'
+assert 'молекулами' in next(sample['observation'] for sample in samples if sample['label'] == 'сахароза')
+assert all('ионами' in sample['observation'] for sample in samples if sample['label'] != 'сахароза')
 for identifier in ('L3-109','L3-110','L3-111','L3-112'):
  assert is_balanced(TASKS[identifier]['correctAnswer']), identifier
 for task in TASKS.values():
  if task.get('options'):
   accepted = [task['correctAnswer'], *task.get('acceptedAnswers', [])]
   assert any(answer in task['options'] for answer in accepted), task['id']
-print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings')
+print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings, 4 ion scans')

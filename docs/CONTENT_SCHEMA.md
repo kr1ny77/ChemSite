@@ -102,6 +102,7 @@ export type TaskDefinition = {
     hessEdges?: { from: string; to: string; deltaH: number }[]
     comparisonRuns?: { setting: string; observation: string }[]
     phSamples?: { label: string; value: number }[]
+    ionizationSamples?: { label: string; observation: string }[]
     solutionMode?: 'mass' | 'dilution'
     targetVolumeMl?: number
     targetConcentration?: number

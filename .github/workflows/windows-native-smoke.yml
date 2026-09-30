@@ -59,6 +59,8 @@ jobs:
           if ($solution.ExitCode -ne 0) { throw "Level 3 solution smoke failed ($($solution.ExitCode))" }
           $ph = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-ph-round') -Wait -PassThru -NoNewWindow
           if ($ph.ExitCode -ne 0) { throw "Level 3 pH smoke failed ($($ph.ExitCode))" }
+          $ions = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-ion-round') -Wait -PassThru -NoNewWindow
+          if ($ions.ExitCode -ne 0) { throw "Level 3 ion scan smoke failed ($($ions.ExitCode))" }
           $hess = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-hess-round') -Wait -PassThru -NoNewWindow
           if ($hess.ExitCode -ne 0) { throw "Level 4 Hess smoke failed ($($hess.ExitCode))" }
           $kinetics = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-kinetics-round') -Wait -PassThru -NoNewWindow

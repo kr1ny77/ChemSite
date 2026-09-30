@@ -144,6 +144,11 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 				(button as Button).pressed.emit()
 			if not child.is_complete():
 				return false
+		if child.has_method("scan_sample") and not child.is_complete():
+			for row in child.get_node("SampleRows").get_children():
+				(row.get_child(0) as Button).pressed.emit()
+			if not child.is_complete():
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

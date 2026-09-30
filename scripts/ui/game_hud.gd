@@ -11,6 +11,7 @@ const SOLUTION_SETUP_VIEW = preload("res://scripts/ui/solution_setup_view.gd")
 const HESS_ROUTE_VIEW = preload("res://scripts/ui/hess_route_view.gd")
 const EXPERIMENT_COMPARISON_VIEW = preload("res://scripts/ui/experiment_comparison_view.gd")
 const PH_TERMINAL_VIEW = preload("res://scripts/ui/ph_terminal_view.gd")
+const IONIZATION_SCAN_VIEW = preload("res://scripts/ui/ionization_scan_view.gd")
 
 var _objective: Label
 var _status: Label
@@ -32,6 +33,7 @@ var _solution_view: VBoxContainer
 var _hess_view: VBoxContainer
 var _comparison_view: VBoxContainer
 var _ph_view: VBoxContainer
+var _ionization_view: VBoxContainer
 
 func _ready() -> void:
 	var top := PanelContainer.new()
@@ -119,8 +121,13 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control"] and task.get("parameters", {}).has("comparisonRuns")
 	var solution_setup: bool = task.get("interactionType", "") == "solution-preparation" and task.get("parameters", {}).has("solutionMode")
 	var ph_reading: bool = task.get("interactionType", "") == "pH-terminal" and task.get("parameters", {}).has("phSamples")
+	var ion_scan: bool = task.get("interactionType", "") == "classification" and task.get("parameters", {}).has("ionizationSamples")
 	_panel.anchor_top = 0.14 if hess_route or comparison or solution_setup else (0.12 if ph_reading else (0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19)))
 	_panel.anchor_bottom = 0.92 if solution_setup else (0.88 if hess_route else (0.78 if ph_reading else (0.94 if comparison else (0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81)))))
+	if ion_scan:
+		var multiple_samples: bool = task.parameters.ionizationSamples.size() > 1
+		_panel.anchor_top = 0.07 if multiple_samples else 0.13
+		_panel.anchor_bottom = 0.94 if multiple_samples else 0.80
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
@@ -182,6 +189,14 @@ func show_task(task: Dictionary, station_id: String) -> void:
 			_focus_first_answer()
 		)
 		_panel_content.add_child(_ph_view)
+	if ion_scan:
+		_ionization_view = IONIZATION_SCAN_VIEW.new()
+		_ionization_view.configure(task.parameters)
+		_ionization_view.scans_completed.connect(func() -> void:
+			_set_answer_enabled(true)
+			_focus_first_answer()
+		)
+		_panel_content.add_child(_ionization_view)
 	if task.get("interactionType", "") == "formula-builder":
 		_show_formula_builder(task)
 	elif task.get("interactionType", "") == "oxidation-state":
@@ -239,6 +254,10 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	if _ph_view != null:
 		_set_answer_enabled(false)
 		_ph_view.focus_first()
+		return
+	if _ionization_view != null:
+		_set_answer_enabled(false)
+		_ionization_view.focus_first()
 		return
 	var focus_target := _panel_content.get_child(3)
 	if focus_target is GridContainer and focus_target.get_child_count() > 0:
@@ -456,6 +475,7 @@ func _clear_panel() -> void:
 	_hess_view = null
 	_comparison_view = null
 	_ph_view = null
+	_ionization_view = null
 	for child in _panel_content.get_children():
 		_panel_content.remove_child(child)
 		child.queue_free()
