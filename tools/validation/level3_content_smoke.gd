@@ -14,6 +14,7 @@ func _run() -> void:
 	var equation_count := 0
 	var scale_count := 0
 	var solution_count := 0
+	var ph_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
@@ -53,14 +54,24 @@ func _run() -> void:
 			assert(hud._panel_content.get_child(4) is LineEdit, "Dissociation input missing: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(answer).replace(" -> ", " → ")), "Dissociation arrow rejected: " + str(task.id))
 		elif task.has("options"):
+			if task.interactionType == "pH-terminal":
+				ph_count += 1
+				var meter: VBoxContainer = hud._ph_view
+				var cards: GridContainer = hud._panel_content.get_child(4)
+				assert(meter != null and not meter.is_complete() and (cards.get_child(0) as Button).disabled, "pH reading gate missing: " + str(task.id))
+				meter.read_sample(0)
+				if task.parameters.phSamples.size() == 2:
+					assert(not meter.is_complete() and (cards.get_child(0) as Button).disabled, "One pH reading unlocked comparison: " + str(task.id))
+					meter.read_sample(1)
+				assert(meter.is_complete() and not (cards.get_child(0) as Button).disabled, "pH reading did not unlock answer: " + str(task.id))
 			var valid_option := false
 			for option in task.options:
 				if TASK_BANK.validate_choice(task, str(option)):
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3, "Level 3 interaction distribution changed")
+	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3 and ph_count == 4, "Level 3 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 dissociation")
+	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 pH readings, 4 dissociation")
 	quit()

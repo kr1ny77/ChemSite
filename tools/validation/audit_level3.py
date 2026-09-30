@@ -43,10 +43,22 @@ for identifier in ('L3-095', 'L3-096', 'L3-097'):
  answer = TASKS[identifier]['correctAnswer']
  tolerance = max(answer.get('absoluteTolerance', 0), abs(answer['value'])*answer.get('relativeTolerance', 0))
  assert abs(result-answer['value']) <= tolerance, (identifier, result, answer)
+for identifier in ('L3-101', 'L3-102', 'L3-103', 'L3-107'):
+ task = TASKS[identifier]
+ samples = task['parameters']['phSamples']
+ assert 1 <= len(samples) <= 2, identifier
+ assert all(0 <= sample['value'] <= 14 for sample in samples), identifier
+ if len(samples) == 1:
+  value = samples[0]['value']
+  expected = 'кислая' if value < 7 else ('щелочная' if value > 7 else 'нейтральная')
+ else:
+  expected = min(samples, key=lambda sample: sample['value'])['label'].lower()
+ assert task['correctAnswer'].lower() == expected, (identifier, task['correctAnswer'], expected)
+ assert task['correctAnswer'] in task['options'], identifier
 for identifier in ('L3-109','L3-110','L3-111','L3-112'):
  assert is_balanced(TASKS[identifier]['correctAnswer']), identifier
 for task in TASKS.values():
  if task.get('options'):
   accepted = [task['correctAnswer'], *task.get('acceptedAnswers', [])]
   assert any(answer in task['options'] for answer in accepted), task['id']
-print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks')
+print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings')

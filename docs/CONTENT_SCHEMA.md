@@ -101,6 +101,7 @@ export type TaskDefinition = {
     hessEnd?: string
     hessEdges?: { from: string; to: string; deltaH: number }[]
     comparisonRuns?: { setting: string; observation: string }[]
+    phSamples?: { label: string; value: number }[]
     solutionMode?: 'mass' | 'dilution'
     targetVolumeMl?: number
     targetConcentration?: number

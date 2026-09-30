@@ -3069,7 +3069,7 @@
     "difficulty": 1,
     "station": "solution-laboratory",
     "interactionType": "pH-terminal",
-    "prompt": "Раствор имеет pH = 3. Какая среда?",
+    "prompt": "Измерь pH образца A. Какая среда?",
     "correctAnswer": "кислая",
     "options": [
       "кислая",
@@ -3084,6 +3084,14 @@
       "pH",
       "acidic"
     ],
+    "parameters": {
+      "phSamples": [
+        {
+          "label": "ОБРАЗЕЦ A",
+          "value": 3
+        }
+      ]
+    },
     "id": "L3-101",
     "level": 3,
     "points": 140,
@@ -3096,7 +3104,7 @@
     "difficulty": 1,
     "station": "solution-laboratory",
     "interactionType": "pH-terminal",
-    "prompt": "Раствор имеет pH = 7 при стандартных учебных условиях. Какая среда?",
+    "prompt": "Измерь pH образца B при 25 °C. Какая среда?",
     "correctAnswer": "нейтральная",
     "options": [
       "нейтральная",
@@ -3111,6 +3119,14 @@
       "pH",
       "neutral"
     ],
+    "parameters": {
+      "phSamples": [
+        {
+          "label": "ОБРАЗЕЦ B",
+          "value": 7
+        }
+      ]
+    },
     "id": "L3-102",
     "level": 3,
     "points": 140,
@@ -3123,7 +3139,7 @@
     "difficulty": 1,
     "station": "solution-laboratory",
     "interactionType": "pH-terminal",
-    "prompt": "Раствор имеет pH = 11. Какая среда?",
+    "prompt": "Измерь pH образца C. Какая среда?",
     "correctAnswer": "щелочная",
     "acceptedAnswers": [
       "основная"
@@ -3141,6 +3157,14 @@
       "pH",
       "basic"
     ],
+    "parameters": {
+      "phSamples": [
+        {
+          "label": "ОБРАЗЕЦ C",
+          "value": 11
+        }
+      ]
+    },
     "id": "L3-103",
     "level": 3,
     "points": 140,
@@ -3229,14 +3253,14 @@
     "difficulty": 1,
     "station": "solution-laboratory",
     "interactionType": "pH-terminal",
-    "prompt": "Какой раствор более кислый: pH 2 или pH 4?",
-    "correctAnswer": "pH 2",
+    "prompt": "Измерь оба образца. Какой раствор более кислый?",
+    "correctAnswer": "образец A",
     "options": [
-      "pH 2",
-      "pH 4",
+      "образец A",
+      "образец B",
       "одинаково"
     ],
-    "explanation": "Меньшее значение pH соответствует большей концентрации H⁺.",
+    "explanation": "Образец A имеет pH 2, образец B — pH 4. Меньшее pH соответствует большей концентрации H⁺.",
     "rule": "Шкала pH логарифмическая и обратна концентрации H⁺.",
     "example": "pH 3 кислее pH 5.",
     "hint": "Более кислый раствор имеет меньшее pH.",
@@ -3244,6 +3268,18 @@
       "pH",
       "comparison"
     ],
+    "parameters": {
+      "phSamples": [
+        {
+          "label": "ОБРАЗЕЦ A",
+          "value": 2
+        },
+        {
+          "label": "ОБРАЗЕЦ B",
+          "value": 4
+        }
+      ]
+    },
     "id": "L3-107",
     "level": 3,
     "points": 140,

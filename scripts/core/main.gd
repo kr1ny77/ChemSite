@@ -18,6 +18,8 @@ func _ready() -> void:
 		call_deferred("_run_export_level_three_scale_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level3-solution-round"):
 		call_deferred("_run_export_level_three_solution_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-level3-ph-round"):
+		call_deferred("_run_export_level_three_ph_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-round"):
 		call_deferred("_run_export_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-hess-round"):
@@ -38,6 +40,8 @@ func _ready() -> void:
 		call_deferred("_run_export_visual_level_three_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level3-scale-round"):
 		call_deferred("_run_export_visual_level_three_scale_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-level3-ph-round"):
+		call_deferred("_run_export_visual_level_three_ph_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-round"):
 		call_deferred("_run_export_visual_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-hess-round"):
@@ -69,6 +73,10 @@ func _run_export_level_three_scale_smoke() -> void:
 
 func _run_export_level_three_solution_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-095", "L3-096", "L3-097", "L3-098", "L3-099"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_level_three_ph_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-101", "L3-102", "L3-103", "L3-107", "L3-104"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_level_four_smoke() -> void:
@@ -109,6 +117,10 @@ func _run_export_visual_level_three_smoke() -> void:
 
 func _run_export_visual_level_three_scale_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-086", "L3-087", "L3-088", "L3-089", "L3-090"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_level_three_ph_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-101", "L3-102", "L3-103", "L3-107", "L3-104"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_visual_level_four_smoke() -> void:
