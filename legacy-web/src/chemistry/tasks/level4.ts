@@ -13,6 +13,10 @@ const makeTask = (number: number, definition: LevelFourInput): TaskDefinition =>
 
 const equilibriumRule = 'По принципу Ле Шателье система ослабляет действие внешнего воздействия.'
 const oxidationRule = 'Окисление происходит на аноде, восстановление — на катоде.'
+const zincCopperProbes = [
+  { setting: 'Цинковый электрод', observation: 'Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь.' },
+  { setting: 'Медный электрод', observation: 'Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи.' },
+]
 
 export const level4Tasks: readonly TaskDefinition[] = [
   makeTask(121, {
@@ -309,7 +313,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['на аноде', 'на катоде', 'в солевом мостике', 'на обоих без переноса электронов'],
     explanation: 'На аноде частицы отдают электроны, поэтому там протекает окисление.',
     rule: oxidationRule, example: 'Zn → Zn²⁺ + 2e⁻ — анодный процесс.',
-    hint: 'Свяжи анод с отдачей электронов.', tags: ['electrochemistry', 'anode', 'oxidation'],
+    hint: 'Свяжи анод с отдачей электронов.', tags: ['electrochemistry', 'anode', 'oxidation'], parameters: { comparisonRuns: zincCopperProbes },
   }),
   makeTask(148, {
     topic: 'Электрохимия', subtopic: 'Катод', difficulty: 1,
@@ -318,7 +322,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['на катоде', 'на аноде', 'в электролите без электрода', 'только в проводнике'],
     explanation: 'На катоде частицы принимают электроны, поэтому там протекает восстановление.',
     rule: oxidationRule, example: 'Cu²⁺ + 2e⁻ → Cu — катодный процесс.',
-    hint: 'Свяжи катод с принятием электронов.', tags: ['electrochemistry', 'cathode', 'reduction'],
+    hint: 'Свяжи катод с принятием электронов.', tags: ['electrochemistry', 'cathode', 'reduction'], parameters: { comparisonRuns: zincCopperProbes },
   }),
   makeTask(149, {
     topic: 'Электрохимия', subtopic: 'Электродный процесс', difficulty: 1,
@@ -327,7 +331,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['окисление', 'восстановление', 'нейтрализация', 'гидролиз'],
     explanation: 'Атом цинка отдаёт два электрона, а его степень окисления возрастает от 0 до +2.',
     rule: 'Отдача электронов означает окисление.', example: 'Этот процесс идёт на цинковом аноде.',
-    hint: 'Электроны находятся среди продуктов.', tags: ['electrochemistry', 'oxidation', 'zinc'], parameters: { compound: 'Zn' },
+    hint: 'Электроны находятся среди продуктов.', tags: ['electrochemistry', 'oxidation', 'zinc'], parameters: { compound: 'Zn', comparisonRuns: zincCopperProbes },
   }),
   makeTask(150, {
     topic: 'Электрохимия', subtopic: 'Электродный процесс', difficulty: 1,
@@ -336,7 +340,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['восстановление', 'окисление', 'диссоциация', 'разложение'],
     explanation: 'Ион меди принимает два электрона, а его степень окисления уменьшается от +2 до 0.',
     rule: 'Принятие электронов означает восстановление.', example: 'Этот процесс идёт на медном катоде.',
-    hint: 'Электроны находятся среди реагентов.', tags: ['electrochemistry', 'reduction', 'copper'], parameters: { compound: 'Cu' },
+    hint: 'Электроны находятся среди реагентов.', tags: ['electrochemistry', 'reduction', 'copper'], parameters: { compound: 'Cu', comparisonRuns: zincCopperProbes },
   }),
   makeTask(151, {
     topic: 'Электрохимия', subtopic: 'Гальванический элемент', difficulty: 2,
@@ -345,7 +349,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['цинк', 'медь', 'оба металла одновременно', 'ни один металл'],
     explanation: 'Более активный цинк отдаёт электроны и превращается в Zn²⁺ на аноде.',
     rule: 'В элементе Zn/Cu цинк служит анодом.', example: 'Zn → Zn²⁺ + 2e⁻.',
-    hint: 'Сравни активность Zn и Cu.', tags: ['electrochemistry', 'galvanic-cell', 'zinc', 'copper'],
+    hint: 'Сравни активность Zn и Cu.', tags: ['electrochemistry', 'galvanic-cell', 'zinc', 'copper'], parameters: { comparisonRuns: zincCopperProbes },
   }),
   makeTask(152, {
     topic: 'Электрохимия', subtopic: 'Гальванический элемент', difficulty: 2,
@@ -355,7 +359,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['от цинка к медному электроду', 'от меди к цинковому электроду', 'из раствора в солевой мостик', 'электроны не движутся'],
     explanation: 'Электроны образуются при окислении Zn на аноде и поступают к медному катоду, где идёт восстановление.',
     rule: 'Во внешней цепи электроны движутся от анода к катоду.', example: 'Zn-анод → проводник → Cu-катод.',
-    hint: 'Начни с электрода, где электроны образуются.', tags: ['electrochemistry', 'galvanic-cell', 'electron-flow'],
+    hint: 'Начни с электрода, где электроны образуются.', tags: ['electrochemistry', 'galvanic-cell', 'electron-flow'], parameters: { comparisonRuns: zincCopperProbes },
   }),
   makeTask(153, {
     topic: 'Коррозия', subtopic: 'Условия коррозии', difficulty: 1,

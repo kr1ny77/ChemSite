@@ -14,6 +14,7 @@ func _run() -> void:
 	var route_count := 0
 	var comparison_count := 0
 	var equilibrium_count := 0
+	var electrode_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
@@ -43,14 +44,16 @@ func _run() -> void:
 			assert(route.is_ready() and input.editable, "Hess route did not unlock answer: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(task.correctAnswer.value)), "Hess answer rejected: " + str(task.id))
 		else:
-			if task.interactionType in ["kinetics-experiment", "equilibrium-control"]:
+			if task.interactionType in ["kinetics-experiment", "equilibrium-control", "electrochemistry"]:
 				comparison_count += 1
 				if task.interactionType == "equilibrium-control":
 					equilibrium_count += 1
+				if task.interactionType == "electrochemistry":
+					electrode_count += 1
 				var comparison: VBoxContainer = hud._comparison_view
 				var cards: GridContainer = hud._panel_content.get_child(4)
-				assert(comparison != null and not comparison.is_complete(), "Kinetics comparison missing: " + str(task.id))
-				assert((cards.get_child(0) as Button).disabled, "Kinetics answer opened early: " + str(task.id))
+				assert(comparison != null and not comparison.is_complete(), "Comparison missing: " + str(task.id))
+				assert((cards.get_child(0) as Button).disabled, "Comparison answer opened early: " + str(task.id))
 				comparison.inspect_run(1)
 				assert(not comparison.is_complete() and (cards.get_child(0) as Button).disabled, "Single run opened answer: " + str(task.id))
 				comparison.inspect_run(0)
@@ -61,8 +64,8 @@ func _run() -> void:
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 2 and route_count == 2 and comparison_count == 16 and equilibrium_count == 10, "Level 4 interaction distribution changed")
+	assert(numeric_count == 2 and route_count == 2 and comparison_count == 22 and equilibrium_count == 10 and electrode_count == 6, "Level 4 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL4_CONTENT_OK: 40 tasks, 2 Hess routes, 6 kinetics and 10 equilibrium comparisons")
+	print("CHEMSITE_LEVEL4_CONTENT_OK: 40 tasks, 2 Hess routes, 6 kinetics, 10 equilibrium and 6 electrode comparisons")
 	quit()

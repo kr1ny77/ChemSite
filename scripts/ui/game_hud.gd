@@ -118,7 +118,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		longest_option = maxi(longest_option, str(option).length())
 	var mission_steps: Array = task.get("parameters", {}).get("missionSteps", [])
 	var hess_route: bool = task.get("interactionType", "") == "hess-puzzle" and task.get("parameters", {}).has("hessEdges")
-	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control"] and task.get("parameters", {}).has("comparisonRuns")
+	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control", "electrochemistry"] and task.get("parameters", {}).has("comparisonRuns")
 	var solution_setup: bool = task.get("interactionType", "") == "solution-preparation" and task.get("parameters", {}).has("solutionMode")
 	var ph_reading: bool = task.get("interactionType", "") == "pH-terminal" and task.get("parameters", {}).has("phSamples")
 	var ion_scan: bool = task.get("interactionType", "") == "classification" and task.get("parameters", {}).has("ionizationSamples")
@@ -175,7 +175,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel_content.add_child(_hess_view)
 	if comparison:
 		_comparison_view = EXPERIMENT_COMPARISON_VIEW.new()
-		_comparison_view.configure(task.parameters, task.interactionType == "equilibrium-control")
+		var comparison_mode := "electrode" if task.interactionType == "electrochemistry" else ("equilibrium" if task.interactionType == "equilibrium-control" else "kinetics")
+		_comparison_view.configure(task.parameters, comparison_mode)
 		_comparison_view.comparison_completed.connect(func() -> void:
 			_set_answer_enabled(true)
 			_focus_first_answer()

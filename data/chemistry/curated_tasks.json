@@ -4767,6 +4767,18 @@
       "anode",
       "oxidation"
     ],
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
+    },
     "id": "L4-147",
     "level": 4,
     "points": 160,
@@ -4799,6 +4811,18 @@
       "cathode",
       "reduction"
     ],
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
+    },
     "id": "L4-148",
     "level": 4,
     "points": 160,
@@ -4829,7 +4853,17 @@
       "zinc"
     ],
     "parameters": {
-      "compound": "Zn"
+      "compound": "Zn",
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
     },
     "id": "L4-149",
     "level": 4,
@@ -4861,7 +4895,17 @@
       "copper"
     ],
     "parameters": {
-      "compound": "Cu"
+      "compound": "Cu",
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
     },
     "id": "L4-150",
     "level": 4,
@@ -4896,6 +4940,18 @@
       "zinc",
       "copper"
     ],
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
+    },
     "id": "L4-151",
     "level": 4,
     "points": 160,
@@ -4929,6 +4985,18 @@
       "galvanic-cell",
       "electron-flow"
     ],
+    "parameters": {
+      "comparisonRuns": [
+        {
+          "setting": "Цинковый электрод",
+          "observation": "Zn → Zn²⁺ + 2e⁻; электроны поступают во внешнюю цепь."
+        },
+        {
+          "setting": "Медный электрод",
+          "observation": "Cu²⁺ + 2e⁻ → Cu; электроны приходят из внешней цепи."
+        }
+      ]
+    },
     "id": "L4-152",
     "level": 4,
     "points": 160,
