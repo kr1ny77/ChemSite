@@ -75,7 +75,7 @@ Extend contextual station interactions to the remaining Level 3 task families an
 
 ## Last verification
 
-2026-09-30: Level 3 pH data audit and 40-panel content smoke passed, including locked answer cards before readings and both readings in the comparison task. The focused five-task visual source round and refreshed exported macOS and Windows PCK focused rounds passed. Reviewed unread/read states at 1440×900 and 1152×720, then changed the comparison cards to sample labels and rechecked the 1440×900 unread panel. Native Windows EXE focused run is queued via the workflow update.
+2026-09-30: Level 3 pH data audit and 40-panel content smoke passed, including locked answer cards before readings and both readings in the comparison task. The focused five-task visual source round and refreshed exported macOS and Windows PCK focused rounds passed. Reviewed unread/read states at 1440×900 and 1152×720, then changed the comparison cards to sample labels and rechecked the 1440×900 unread panel. Native Windows EXE focused run awaits the GitHub push; GitHub connections timed out during this verification.
 
 2026-09-30: The Level 2 visual five-task route passed in the source Godot project and exported macOS app, ending with `CHEMSITE_EXPORT_VISUAL_ROUND_OK` and 11 rendered captures. The earlier five-level Windows graphical run 36565548306 captured Level 1, then timed out because the Level 2 CLI route was absent; the new route is ready for rerun.
 
