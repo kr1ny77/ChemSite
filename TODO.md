@@ -45,5 +45,5 @@
 - [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
-- [ ] Phase 15: complete visible Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 and focused interactions, and uploads the EXE/PCK; a separate graphical runner produced and uploaded 11 Level 1 screenshots
+- [ ] Phase 15: complete visible Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 and focused interactions, and uploads the EXE/PCK; a graphical runner captured Level 1 and now has a verified Level 2 visual QA entry point for the five-level rerun
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate

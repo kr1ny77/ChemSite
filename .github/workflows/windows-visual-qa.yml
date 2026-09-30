@@ -51,7 +51,7 @@ jobs:
             $folder = if ($level -eq 1) { 'qa-visual-round' } else { "qa-visual-level$level-round" }
             $game = Start-Process -FilePath $exe -ArgumentList @('--rendering-method', 'gl_compatibility', '--', $flag) -PassThru
             try {
-              Wait-Process -Id $game.Id -Timeout 120 -ErrorAction Stop
+              Wait-Process -Id $game.Id -Timeout 60 -ErrorAction Stop
             } catch {
               Stop-Process -Id $game.Id -Force -ErrorAction SilentlyContinue
               throw "Level $level graphical QA round timed out"
