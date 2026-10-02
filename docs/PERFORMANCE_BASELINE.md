@@ -12,3 +12,5 @@ On 2026-09-29, `tools/validation/profile_site.gd` sampled 360 rendered frames af
 The uncapped sample shows rendering headroom on this M4. The VSync frame interval includes display scheduling, so its p90 is slightly above the 16.67 ms budget even while the engine reports 60 FPS. Godot's process-time monitor was inconsistent with the measured wall intervals in the uncapped run and is excluded from the gate assessment.
 
 Remaining Phase 14 gate: capture the same states, a movement route and answer effects on a representative student laptop with a discrete or integrated Windows GPU; inspect frame-time spikes and memory there before optimizing. The current hardware baseline does not establish the target laptop result.
+
+On 2026-10-02, after the rear-left sample cart was added, the same 360-frame VSync source-project profile on Apple M4 reported 60 FPS median in exploration and task-panel states. Median draw calls were 560 and 615; static memory was 64.5 and 65.0 MB. This is a development-machine observation. The representative student-laptop gate remains open.
