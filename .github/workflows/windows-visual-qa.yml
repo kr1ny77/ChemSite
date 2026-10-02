@@ -49,6 +49,8 @@ jobs:
       - name: Capture graphical career and focused interaction rounds
         shell: pwsh
         run: |
+          $layout = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/all_hud_layout_smoke.gd') -Wait -PassThru -NoNewWindow
+          if ($layout.ExitCode -ne 0) { throw "All-task HUD layout check failed ($($layout.ExitCode))" }
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
           $rounds = @(
             @{ Name = 'level1'; Flag = '--qa-visual-round'; Folder = 'qa-visual-round' }

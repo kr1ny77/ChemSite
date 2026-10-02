@@ -36,6 +36,7 @@ var _comparison_view: VBoxContainer
 var _ph_view: VBoxContainer
 var _ionization_view: VBoxContainer
 var _dissociation_view: VBoxContainer
+var _task_panel_active := false
 
 func _ready() -> void:
 	var top := PanelContainer.new()
@@ -95,6 +96,7 @@ func _ready() -> void:
 	_panel_content = VBoxContainer.new()
 	_panel_content.add_theme_constant_override("separation", 13)
 	_panel.add_child(_panel_content)
+	_panel_content.minimum_size_changed.connect(_fit_task_panel.call_deferred)
 
 func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career") -> void:
 	_objective.text = "%s %d/%d  ·  %s" % ["ПРАКТИКА" if mode == "practice" else "ЗАДАНИЕ", mini(completed + 1, target_count), target_count, task.topic]
@@ -244,6 +246,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	_style_button(cancel, true)
 	cancel.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(cancel)
+	_task_panel_active = true
+	_fit_task_panel.call_deferred()
 	if _mission_stage != null:
 		_set_answer_enabled(false)
 		_mission_stage.focus_stage_button()
@@ -491,6 +495,7 @@ func is_panel_open() -> bool:
 	return _panel.visible
 
 func _clear_panel() -> void:
+	_task_panel_active = false
 	_mission_stage = null
 	_mix_view = null
 	_scale_view = null
@@ -503,6 +508,16 @@ func _clear_panel() -> void:
 	for child in _panel_content.get_children():
 		_panel_content.remove_child(child)
 		child.queue_free()
+
+func _fit_task_panel() -> void:
+	if not _task_panel_active or not _panel.visible:
+		return
+	var viewport_height := get_viewport_rect().size.y
+	var height := minf(_panel.get_combined_minimum_size().y + 12.0, viewport_height * 0.92)
+	_panel.anchor_top = 0.5
+	_panel.anchor_bottom = 0.5
+	_panel.offset_top = -height * 0.5
+	_panel.offset_bottom = height * 0.5
 
 func _set_answer_enabled(enabled: bool) -> void:
 	for child in _panel_content.get_children():

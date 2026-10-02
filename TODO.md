@@ -42,7 +42,7 @@
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
-- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place
+- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place, and all 199 verified task panels pass a 1028×642 layout gate in unread and expanded states
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay and visual QA findings; packaged macOS runs now capture and verify all five HUD interaction states and results
 
 ## Later phases
@@ -52,5 +52,5 @@
 - [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
-- [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; all 55 original graphical captures were reviewed, and a 154-screen career/focused Windows visual matrix is queued for review
+- [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 154-screen career/focused Windows visual matrix passed and was reviewed, and the new all-task native Windows layout gate awaits CI
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate
