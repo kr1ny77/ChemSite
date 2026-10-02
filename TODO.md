@@ -32,6 +32,7 @@
 - [x] Phase 13 Level 4 kinetics pass: add two virtual comparison runs to all six kinetics tasks, gate answer selection until both observations are read, verify all 40 Level 4 HUD tasks, a focused five-task source/package round and 1440×900 states
 - [x] Phase 13 Level 4 equilibrium pass: add two curated states to all ten equilibrium tasks, gate conclusions until both states are viewed, verify all 40 Level 4 HUD tasks, a focused source/package round and 1440×900 plus smaller-screen states
 - [x] Phase 13 Level 4 electrochemistry pass: compare the Zn and Cu electrode readouts before answering all six electrochemistry tasks; verify all 40 Level 4 panels, focused source/macOS/Windows PCK rounds, kinetics/equilibrium regression, and 1440×900 plus 1152×720 states
+- [x] Phase 13 Level 4 corrosion pass: compare two qualitative inspection readouts for all seven corrosion tasks; verify locked answers across all 40 Level 4 panels, a focused source/macOS/Windows PCK round, and the longest answer panel at 1440×900 plus 1152×720
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 

@@ -23,7 +23,7 @@ for identifier,physical_change in [('L4-141','сжали'),('L4-142','расши
  prompt=TASKS[identifier]['prompt']
  assert 'постоянной температуре' in prompt and physical_change in prompt,identifier
 for task in TASKS.values():
- if task['interactionType'] in {'kinetics-experiment','equilibrium-control','electrochemistry'}:
+ if task['interactionType'] in {'kinetics-experiment','equilibrium-control','electrochemistry','corrosion-inspection'}:
   runs=task.get('parameters',{}).get('comparisonRuns',[])
   assert len(runs)==2,task['id']
   assert len({run['setting'] for run in runs})==2,task['id']
@@ -35,4 +35,7 @@ for identifier in (f'L4-{number}' for number in range(147,153)):
  assert runs[0]['setting']=='Цинковый электрод' and runs[1]['setting']=='Медный электрод',identifier
  assert 'Zn → Zn²⁺ + 2e⁻' in runs[0]['observation'] and 'Cu²⁺ + 2e⁻ → Cu' in runs[1]['observation'],identifier
  assert 'поступают' in runs[0]['observation'] and 'приходят' in runs[1]['observation'],identifier
-print('LEVEL4_AUDIT_OK: 2 Hess calculations, 38 choice tasks, 22 comparisons, equilibrium conditions')
+for identifier in (f'L4-{number}' for number in range(153,160)):
+ runs=TASKS[identifier]['parameters']['comparisonRuns']
+ assert len(runs)==2 and all(run['observation'].strip() for run in runs),identifier
+print('LEVEL4_AUDIT_OK: 2 Hess calculations, 38 choice tasks, 29 comparisons, equilibrium conditions')

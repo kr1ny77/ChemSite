@@ -69,6 +69,8 @@ jobs:
           if ($equilibrium.ExitCode -ne 0) { throw "Level 4 equilibrium smoke failed ($($equilibrium.ExitCode))" }
           $electrodes = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-electrode-round') -Wait -PassThru -NoNewWindow
           if ($electrodes.ExitCode -ne 0) { throw "Level 4 electrode smoke failed ($($electrodes.ExitCode))" }
+          $corrosion = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-corrosion-round') -Wait -PassThru -NoNewWindow
+          if ($corrosion.ExitCode -ne 0) { throw "Level 4 corrosion smoke failed ($($corrosion.ExitCode))" }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:
