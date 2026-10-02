@@ -78,15 +78,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records. Contextual controls cover Level 2 mixing, Level 3 scales, solution preparation, pH readings, ionization scans, hydrolysis comparisons, dissociation boards and final solution inspection, Level 4 Hess, kinetics, equilibrium, electrode and corrosion comparison, and Level 5 inspection. The expanded 154-screen native Windows visual archive has been reviewed. The compact task-panel sizing and 199-task layout gate pass locally; native Windows CI for this final UI change is pending. Human playtesting, broader accessibility, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records. Contextual controls cover Level 2 mixing, Level 3 scales, solution preparation, pH readings, ionization scans, hydrolysis comparisons, dissociation boards and final solution inspection, Level 4 Hess, kinetics, equilibrium, electrode and corrosion comparison, and Level 5 inspection. The expanded 154-screen native Windows visual archive has been reviewed. The compact task-panel sizing and 199-task layout gate pass locally and on native Windows CI. Human playtesting, broader accessibility, performance and release QA remain open.
 
 ## Next task
 
-Verify the compact task panels and all-task layout gate on native Windows CI. Then run a human-driven exported-app/audio playtest, refine remaining art and accessibility, profile the site on a normal student laptop, complete physical Windows QA, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
+Run a human-driven exported-app/audio playtest, refine remaining art and accessibility, profile the site on a normal student laptop, complete physical Windows QA, resolve L2-050 with the target curriculum, complete subject-matter review, and publish the GitHub prerelease.
 
 ## Last verification
 
-2026-10-02: Windows visual run 37015765073 passed all 14 rounds and produced 154 PNGs. The downloaded archive digest matched GitHub metadata, and every round's contact sheet was reviewed. The 199-task layout smoke passes at 1028×642, 1152×720 and 1440×900 in unread and expanded states. A source graphical corrosion round passed at 1028×642; its compact panel was reviewed and saved under `docs/screenshots/`. Native Windows CI for the latest UI sizing awaits this push.
+2026-10-02: Native Windows visual run 37021029300 passed the 199-task layout gate and all 14 graphical rounds; native Windows smoke run 37021029112 also passed at commit 8c089fb. The latest 154-image Windows archive digest matched GitHub metadata, and the full-size compact corrosion panel was reviewed and saved under `docs/screenshots/`. The refreshed macOS release app passed the focused corrosion round at 1028×642 and showed the same compact panel. Earlier Windows visual run 37015765073 produced 154 PNGs; its downloaded digest matched GitHub metadata and every contact sheet was reviewed. The 199-task local layout smoke passes at 1028×642, 1152×720 and 1440×900 in unread and expanded states.
 
 2026-10-02: Blender 5.2.2 exported the sample cart from tracked Python and editable `.blend`; the fresh GLB inspection matched source bounds and 6,012 triangles with no reported import issue. Reviewed the exported six-view sheet and two Godot site resolutions. Godot import/parse, Level 1–5 station routes, collision smoke, refreshed macOS Level 1/5 rounds and Windows PCK Level 5 round passed. M4 VSync profile reported 60 FPS median with 560 exploration and 615 task-panel median draw calls. Native Windows EXE CI awaits this push.
 
