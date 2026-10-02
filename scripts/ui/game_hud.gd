@@ -118,12 +118,14 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		longest_option = maxi(longest_option, str(option).length())
 	var mission_steps: Array = task.get("parameters", {}).get("missionSteps", [])
 	var hess_route: bool = task.get("interactionType", "") == "hess-puzzle" and task.get("parameters", {}).has("hessEdges")
-	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control", "electrochemistry", "corrosion-inspection"] and task.get("parameters", {}).has("comparisonRuns")
+	var comparison: bool = task.get("interactionType", "") in ["kinetics-experiment", "equilibrium-control", "electrochemistry", "corrosion-inspection", "hydrolysis"] and task.get("parameters", {}).has("comparisonRuns")
 	var solution_setup: bool = task.get("interactionType", "") == "solution-preparation" and task.get("parameters", {}).has("solutionMode")
 	var ph_reading: bool = task.get("interactionType", "") == "pH-terminal" and task.get("parameters", {}).has("phSamples")
 	var ion_scan: bool = task.get("interactionType", "") == "classification" and task.get("parameters", {}).has("ionizationSamples")
 	_panel.anchor_top = 0.14 if hess_route or comparison or solution_setup else (0.12 if ph_reading else (0.07 if longest_option > 80 and not mission_steps.is_empty() else (0.11 if longest_option > 80 else 0.19)))
 	_panel.anchor_bottom = 0.92 if solution_setup else (0.88 if hess_route else (0.78 if ph_reading else (0.94 if comparison else (0.93 if longest_option > 80 and not mission_steps.is_empty() else (0.89 if longest_option > 80 else 0.81)))))
+	if task.get("interactionType", "") == "hydrolysis":
+		_panel.anchor_bottom = 0.79
 	if ion_scan:
 		var multiple_samples: bool = task.parameters.ionizationSamples.size() > 1
 		_panel.anchor_top = 0.07 if multiple_samples else 0.13
@@ -175,7 +177,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel_content.add_child(_hess_view)
 	if comparison:
 		_comparison_view = EXPERIMENT_COMPARISON_VIEW.new()
-		var comparison_mode := "corrosion" if task.interactionType == "corrosion-inspection" else ("electrode" if task.interactionType == "electrochemistry" else ("equilibrium" if task.interactionType == "equilibrium-control" else "kinetics"))
+		var comparison_mode := "salt" if task.interactionType == "hydrolysis" else ("corrosion" if task.interactionType == "corrosion-inspection" else ("electrode" if task.interactionType == "electrochemistry" else ("equilibrium" if task.interactionType == "equilibrium-control" else "kinetics")))
 		_comparison_view.configure(task.parameters, comparison_mode)
 		_comparison_view.comparison_completed.connect(func() -> void:
 			_set_answer_enabled(true)

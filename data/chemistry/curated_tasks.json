@@ -3599,7 +3599,17 @@
       "neutral-salt"
     ],
     "parameters": {
-      "compound": "NaCl"
+      "compound": "NaCl",
+      "comparisonRuns": [
+        {
+          "setting": "Анион Cl⁻",
+          "observation": "Cl⁻ — сопряжённое основание сильной кислоты HCl; в учебной модели значимый гидролиз отсутствует."
+        },
+        {
+          "setting": "Катион Na⁺",
+          "observation": "Na⁺ происходит от сильного основания NaOH; в учебной модели значимый гидролиз отсутствует."
+        }
+      ]
     },
     "id": "L3-117",
     "level": 3,
@@ -3633,7 +3643,17 @@
       "carbonate"
     ],
     "parameters": {
-      "compound": "Na2CO3"
+      "compound": "Na2CO3",
+      "comparisonRuns": [
+        {
+          "setting": "Анион CO₃²⁻",
+          "observation": "CO₃²⁻ — остаток слабой H₂CO₃; с водой образует HCO₃⁻ и OH⁻."
+        },
+        {
+          "setting": "Катион Na⁺",
+          "observation": "Na⁺ происходит от сильного основания NaOH; значимого гидролиза катиона нет."
+        }
+      ]
     },
     "id": "L3-118",
     "level": 3,
@@ -3664,7 +3684,17 @@
       "ammonium"
     ],
     "parameters": {
-      "compound": "NH4Cl"
+      "compound": "NH4Cl",
+      "comparisonRuns": [
+        {
+          "setting": "Анион Cl⁻",
+          "observation": "Cl⁻ происходит от сильной кислоты HCl; значимого гидролиза аниона нет."
+        },
+        {
+          "setting": "Катион NH₄⁺",
+          "observation": "NH₄⁺ — сопряжённая кислота слабого основания NH₃; с водой образует H₃O⁺."
+        }
+      ]
     },
     "id": "L3-119",
     "level": 3,

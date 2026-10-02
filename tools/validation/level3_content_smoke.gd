@@ -16,6 +16,7 @@ func _run() -> void:
 	var solution_count := 0
 	var ph_count := 0
 	var ion_scan_count := 0
+	var hydrolysis_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
@@ -55,6 +56,15 @@ func _run() -> void:
 			assert(hud._panel_content.get_child(4) is LineEdit, "Dissociation input missing: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(answer).replace(" -> ", " → ")), "Dissociation arrow rejected: " + str(task.id))
 		elif task.has("options"):
+			if task.interactionType == "hydrolysis":
+				hydrolysis_count += 1
+				var comparison: VBoxContainer = hud._comparison_view
+				var salt_cards: GridContainer = hud._panel_content.get_child(4)
+				assert(comparison != null and not comparison.is_complete() and (salt_cards.get_child(0) as Button).disabled, "Hydrolysis gate missing: " + str(task.id))
+				comparison.inspect_run(1)
+				assert(not comparison.is_complete() and (salt_cards.get_child(0) as Button).disabled, "One ion unlocked hydrolysis answer: " + str(task.id))
+				comparison.inspect_run(0)
+				assert(comparison.is_complete() and not (salt_cards.get_child(0) as Button).disabled, "Both ions did not unlock answer: " + str(task.id))
 			if task.get("parameters", {}).has("ionizationSamples"):
 				ion_scan_count += 1
 				var scanner: VBoxContainer = hud._ionization_view
@@ -82,8 +92,8 @@ func _run() -> void:
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3 and ph_count == 4 and ion_scan_count == 4, "Level 3 interaction distribution changed")
+	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3 and ph_count == 4 and ion_scan_count == 4 and hydrolysis_count == 3, "Level 3 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 pH readings, 4 ion scans, 4 dissociation")
+	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons, 4 dissociation")
 	quit()
