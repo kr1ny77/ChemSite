@@ -17,6 +17,7 @@ func _run() -> void:
 	var ph_count := 0
 	var ion_scan_count := 0
 	var hydrolysis_count := 0
+	var mission_count := 0
 	for task in tasks:
 		hud.show_task(task, str(task.station))
 		assert(hud.is_panel_open(), "Task panel did not open: " + str(task.id))
@@ -56,6 +57,16 @@ func _run() -> void:
 			assert(hud._panel_content.get_child(4) is LineEdit, "Dissociation input missing: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(answer).replace(" -> ", " → ")), "Dissociation arrow rejected: " + str(task.id))
 		elif task.has("options"):
+			if task.id == "L3-120":
+				mission_count += 1
+				var mission: HBoxContainer = hud._mission_stage
+				var mission_cards: GridContainer = hud._panel_content.get_child(4)
+				assert(mission != null and not mission.is_complete() and (mission_cards.get_child(0) as Button).disabled, "Solution mission gate missing")
+				for index in range(2):
+					mission.reveal_next()
+					assert(not mission.is_complete() and (mission_cards.get_child(0) as Button).disabled, "Solution mission opened early")
+				mission.reveal_next()
+				assert(mission.is_complete() and not (mission_cards.get_child(0) as Button).disabled, "Solution mission did not unlock")
 			if task.interactionType == "hydrolysis":
 				hydrolysis_count += 1
 				var comparison: VBoxContainer = hud._comparison_view
@@ -92,7 +103,7 @@ func _run() -> void:
 					valid_option = true
 			assert(valid_option, "Correct option unavailable: " + str(task.id))
 		await process_frame
-	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3 and ph_count == 4 and ion_scan_count == 4 and hydrolysis_count == 3, "Level 3 interaction distribution changed")
+	assert(numeric_count == 24 and equation_count == 4 and scale_count == 5 and solution_count == 3 and ph_count == 4 and ion_scan_count == 4 and hydrolysis_count == 3 and mission_count == 1, "Level 3 interaction distribution changed")
 	hud.queue_free()
 	await process_frame
 	print("CHEMSITE_LEVEL3_CONTENT_OK: 40 tasks, 24 numeric, 5 scales, 3 solutions, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons, 4 dissociation")

@@ -66,6 +66,9 @@ assert {sample['label'] for sample in samples} == set(TASKS['L3-116']['options']
 assert TASKS['L3-116']['correctAnswer'] == 'сахароза'
 assert 'молекулами' in next(sample['observation'] for sample in samples if sample['label'] == 'сахароза')
 assert all('ионами' in sample['observation'] for sample in samples if sample['label'] != 'сахароза')
+mission = TASKS['L3-120']
+assert len(mission['parameters']['missionSteps']) == 3 and mission['correctAnswer'] == 'NaCl'
+assert 'Na⁺' in mission['parameters']['missionSteps'][1]['readout'] and 'Cl⁻' in mission['parameters']['missionSteps'][1]['readout']
 HYDROLYSIS = {'L3-117': ('Cl⁻', 'Na⁺', 'практически нет'), 'L3-118': ('CO₃²⁻', 'Na⁺', 'щелочная'), 'L3-119': ('Cl⁻', 'NH₄⁺', 'кислая')}
 for identifier, (anion, cation, answer) in HYDROLYSIS.items():
  task = TASKS[identifier]
@@ -78,4 +81,4 @@ for task in TASKS.values():
  if task.get('options'):
   accepted = [task['correctAnswer'], *task.get('acceptedAnswers', [])]
   assert any(answer in task['options'] for answer in accepted), task['id']
-print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons')
+print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons, 1 solution mission')

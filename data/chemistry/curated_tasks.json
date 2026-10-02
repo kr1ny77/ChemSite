@@ -3708,7 +3708,7 @@
     "difficulty": 3,
     "station": "inspection-station",
     "interactionType": "construction-mission",
-    "prompt": "Неизвестный раствор имеет pH ≈ 7, содержит Na⁺ и Cl⁻ и не даёт осадка в заданных контрольных пробах. Определи вещество.",
+    "prompt": "Изучи показания неизвестного раствора и определи вещество.",
     "correctAnswer": "NaCl",
     "acceptedAnswers": [
       "хлорид натрия"
@@ -3729,7 +3729,21 @@
       "ions"
     ],
     "parameters": {
-      "compound": "NaCl"
+      "compound": "NaCl",
+      "missionSteps": [
+        {
+          "title": "pH-метр",
+          "readout": "В учебной модели pH ≈ 7."
+        },
+        {
+          "title": "Ионный сканер",
+          "readout": "Обнаружены Na⁺ и Cl⁻."
+        },
+        {
+          "title": "Контрольные пробы",
+          "readout": "В заданных пробах осадок не образуется."
+        }
+      ]
     },
     "id": "L3-120",
     "level": 3,
