@@ -77,8 +77,13 @@ for identifier, (anion, cation, answer) in HYDROLYSIS.items():
  assert all(run['observation'].strip() for run in runs) and task['correctAnswer'] == answer, identifier
 for identifier in ('L3-109','L3-110','L3-111','L3-112'):
  assert is_balanced(TASKS[identifier]['correctAnswer']), identifier
+ION_COUNTS = {'L3-109': (1, 1, 1, -1), 'L3-110': (1, 2, 2, -1), 'L3-111': (2, 1, 1, -2), 'L3-112': (1, 3, 3, -1)}
+for identifier, (cation_count, anion_count, cation_charge, anion_charge) in ION_COUNTS.items():
+ ions = TASKS[identifier]['parameters']['dissociationIons']
+ assert (ions['cation']['count'], ions['anion']['count'], ions['cation']['charge'], ions['anion']['charge']) == (cation_count, anion_count, cation_charge, anion_charge), identifier
+ assert cation_count*cation_charge + anion_count*anion_charge == 0, identifier
 for task in TASKS.values():
  if task.get('options'):
   accepted = [task['correctAnswer'], *task.get('acceptedAnswers', [])]
   assert any(answer in task['options'] for answer in accepted), task['id']
-print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociations, 12 choice tasks, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons, 1 solution mission')
+print('LEVEL3_AUDIT_OK: 24 calculated answers, 4 dissociation boards, 12 choice tasks, 4 pH readings, 4 ion scans, 3 hydrolysis comparisons, 1 solution mission')

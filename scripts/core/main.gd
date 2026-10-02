@@ -24,6 +24,8 @@ func _ready() -> void:
 		call_deferred("_run_export_level_three_ion_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level3-hydrolysis-round"):
 		call_deferred("_run_export_level_three_hydrolysis_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-level3-dissociation-round"):
+		call_deferred("_run_export_level_three_dissociation_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-round"):
 		call_deferred("_run_export_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-hess-round"):
@@ -54,6 +56,8 @@ func _ready() -> void:
 		call_deferred("_run_export_visual_level_three_ion_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level3-hydrolysis-round"):
 		call_deferred("_run_export_visual_level_three_hydrolysis_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-level3-dissociation-round"):
+		call_deferred("_run_export_visual_level_three_dissociation_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-round"):
 		call_deferred("_run_export_visual_level_four_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-hess-round"):
@@ -101,6 +105,10 @@ func _run_export_level_three_ion_smoke() -> void:
 
 func _run_export_level_three_hydrolysis_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-117", "L3-118", "L3-119", "L3-116", "L3-120"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_level_three_dissociation_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-109", "L3-110", "L3-111", "L3-112", "L3-120"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_level_four_smoke() -> void:
@@ -161,6 +169,10 @@ func _run_export_visual_level_three_ion_smoke() -> void:
 
 func _run_export_visual_level_three_hydrolysis_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-117", "L3-118", "L3-119", "L3-116", "L3-120"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_level_three_dissociation_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-109", "L3-110", "L3-111", "L3-112", "L3-120"])
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_visual_level_four_smoke() -> void:

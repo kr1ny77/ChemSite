@@ -149,6 +149,12 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 				(row.get_child(0) as Button).pressed.emit()
 			if not child.is_complete():
 				return false
+		if child.has_method("select_count") and not child.is_ready():
+			var ions: Dictionary = task.get("parameters", {}).get("dissociationIons", {})
+			child.select_count("cation", int(ions.cation.count))
+			child.select_count("anion", int(ions.anion.count))
+			if not child.is_ready():
+				return false
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

@@ -54,7 +54,14 @@ func _run() -> void:
 			assert(not TASK_BANK.validate_choice(task, "not a number"), "Invalid number accepted: " + str(task.id))
 		elif str(task.interactionType) == "dissociation":
 			equation_count += 1
-			assert(hud._panel_content.get_child(4) is LineEdit, "Dissociation input missing: " + str(task.id))
+			var board: VBoxContainer = hud._dissociation_view
+			var equation_input: LineEdit = hud._panel_content.get_child(5)
+			assert(board != null and not board.is_ready() and equation_input is LineEdit and not equation_input.editable, "Dissociation board or input missing: " + str(task.id))
+			board.select_count("cation", 3 if int(task.parameters.dissociationIons.cation.count) != 3 else 2)
+			board.select_count("anion", int(task.parameters.dissociationIons.anion.count))
+			assert(not board.is_ready() and not equation_input.editable, "Wrong ion count unlocked input: " + str(task.id))
+			board.select_count("cation", int(task.parameters.dissociationIons.cation.count))
+			assert(board.is_ready() and equation_input.editable, "Balanced ion count did not unlock input: " + str(task.id))
 			assert(TASK_BANK.validate_choice(task, str(answer).replace(" -> ", " → ")), "Dissociation arrow rejected: " + str(task.id))
 		elif task.has("options"):
 			if task.id == "L3-120":

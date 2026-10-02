@@ -3329,7 +3329,19 @@
       "salt"
     ],
     "parameters": {
-      "compound": "NaCl"
+      "compound": "NaCl",
+      "dissociationIons": {
+        "cation": {
+          "label": "Na⁺",
+          "count": 1,
+          "charge": 1
+        },
+        "anion": {
+          "label": "Cl⁻",
+          "count": 1,
+          "charge": -1
+        }
+      }
     },
     "id": "L3-109",
     "level": 3,
@@ -3355,7 +3367,19 @@
       "calcium"
     ],
     "parameters": {
-      "compound": "CaCl2"
+      "compound": "CaCl2",
+      "dissociationIons": {
+        "cation": {
+          "label": "Ca²⁺",
+          "count": 1,
+          "charge": 2
+        },
+        "anion": {
+          "label": "Cl⁻",
+          "count": 2,
+          "charge": -1
+        }
+      }
     },
     "id": "L3-110",
     "level": 3,
@@ -3381,7 +3405,19 @@
       "sulfate"
     ],
     "parameters": {
-      "compound": "Na2SO4"
+      "compound": "Na2SO4",
+      "dissociationIons": {
+        "cation": {
+          "label": "Na⁺",
+          "count": 2,
+          "charge": 1
+        },
+        "anion": {
+          "label": "SO₄²⁻",
+          "count": 1,
+          "charge": -2
+        }
+      }
     },
     "id": "L3-111",
     "level": 3,
@@ -3407,7 +3443,19 @@
       "aluminium"
     ],
     "parameters": {
-      "compound": "AlCl3"
+      "compound": "AlCl3",
+      "dissociationIons": {
+        "cation": {
+          "label": "Al³⁺",
+          "count": 1,
+          "charge": 3
+        },
+        "anion": {
+          "label": "Cl⁻",
+          "count": 3,
+          "charge": -1
+        }
+      }
     },
     "id": "L3-112",
     "level": 3,

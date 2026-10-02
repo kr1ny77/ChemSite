@@ -69,6 +69,7 @@ export type TaskDefinition = {
     comparisonRuns?: { setting: string; observation: string }[]
     phSamples?: { label: string; value: number }[]
     ionizationSamples?: { label: string; observation: string }[]
+    dissociationIons?: { cation: { label: string; count: number; charge: number }; anion: { label: string; count: number; charge: number } }
     solutionMode?: 'mass' | 'dilution'
     targetVolumeMl?: number
     targetConcentration?: number
