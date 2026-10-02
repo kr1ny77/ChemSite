@@ -42,7 +42,7 @@
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
-- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings and keyboard focus are in place, and all 199 verified task panels pass a 1028×642 layout gate in unread and expanded states
+- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 199 verified task panels pass a 1028×642 layout gate in unread and expanded states
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay and visual QA findings; packaged macOS runs now capture and verify all five HUD interaction states and results
 
 ## Later phases

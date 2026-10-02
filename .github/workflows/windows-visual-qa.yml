@@ -51,6 +51,10 @@ jobs:
         run: |
           $layout = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/all_hud_layout_smoke.gd') -Wait -PassThru -NoNewWindow
           if ($layout.ExitCode -ne 0) { throw "All-task HUD layout check failed ($($layout.ExitCode))" }
+          foreach ($check in @('settings_ui_smoke.gd', 'reduced_motion_smoke.gd')) {
+            $result = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', "tools/validation/$check") -Wait -PassThru -NoNewWindow
+            if ($result.ExitCode -ne 0) { throw "$check accessibility check failed ($($result.ExitCode))" }
+          }
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
           $rounds = @(
             @{ Name = 'level1'; Flag = '--qa-visual-round'; Folder = 'qa-visual-round' }

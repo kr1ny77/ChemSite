@@ -62,16 +62,24 @@ var _work_lights: Array[OmniLight3D] = []
 var _site_time: float = 0.0
 var _station_accent_materials: Dictionary = {}
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
+const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
 var save_path: String = SAVE_DATA.SAVE_PATH
+var settings_path: String = SETTINGS_DATA.SETTINGS_PATH
+var reduced_motion := false
 
 func _ready() -> void:
+	reduced_motion = bool(SETTINGS_DATA.load_settings(settings_path).reduced_motion)
+	_player.reduced_motion = reduced_motion
 	_camera.position = Vector3(10.0, 15.5, 19.0)
 	_camera.look_at(Vector3(0.0, 0.0, 0.0), Vector3.UP)
 	_load_tasks()
 	_player.footstep.connect(func() -> void: footstep.emit())
 	_build_world()
+	if reduced_motion:
+		for light in _work_lights:
+			light.light_energy = 0.72
 	_hud = preload("res://scenes/ui/game_hud.tscn").instantiate()
 	_hud_layer.add_child(_hud)
 	_hud.answer_submitted.connect(_submit_answer)
@@ -80,10 +88,11 @@ func _ready() -> void:
 	_update_hud()
 
 func _process(delta: float) -> void:
-	_site_time += delta
-	for index in range(_work_lights.size()):
-		_work_lights[index].light_energy = 0.72 + 0.14 * sin(_site_time * 1.5 + float(index) * 2.1)
-	_camera_rig.global_position = _camera_rig.global_position.lerp(_player.global_position * Vector3(0.6, 0.0, 0.6), 1.0 - exp(-3.0 * delta))
+	if not reduced_motion:
+		_site_time += delta
+		for index in range(_work_lights.size()):
+			_work_lights[index].light_energy = 0.72 + 0.14 * sin(_site_time * 1.5 + float(index) * 2.1)
+		_camera_rig.global_position = _camera_rig.global_position.lerp(_player.global_position * Vector3(0.6, 0.0, 0.6), 1.0 - exp(-3.0 * delta))
 	if _round_done or not _player.controls_enabled:
 		return
 	if mode == "career":
@@ -352,17 +361,18 @@ func _submit_answer(answer: String) -> void:
 		if learning_error != OK:
 			push_warning("Could not save topic mastery: %s" % error_string(learning_error))
 	feedback_given.emit(valid)
-	var burst := ANSWER_BURST.new() as GPUParticles3D
-	_world.add_child(burst)
-	burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
-	burst.start(valid)
-	for station in _stations():
-		if station.id == _active_station:
-			var pulse := STATION_PULSE.new() as Node3D
-			_world.add_child(pulse)
-			pulse.global_position = station.position + Vector3(0, 0.11, 0)
-			pulse.start(valid)
-			break
+	if not reduced_motion:
+		var burst := ANSWER_BURST.new() as GPUParticles3D
+		_world.add_child(burst)
+		burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
+		burst.start(valid)
+		for station in _stations():
+			if station.id == _active_station:
+				var pulse := STATION_PULSE.new() as Node3D
+				_world.add_child(pulse)
+				pulse.global_position = station.position + Vector3(0, 0.11, 0)
+				pulse.start(valid)
+				break
 	if valid:
 		_streak += 1
 		var multiplier := 2.0 if _streak >= 5 else (1.5 if _streak >= 3 else 1.0)

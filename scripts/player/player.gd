@@ -9,6 +9,7 @@ signal footstep
 
 @onready var visual: Node3D = $Visual
 var controls_enabled: bool = true
+var reduced_motion := false
 var _walk_phase: float = 0.0
 var _animation_tree: AnimationTree
 var _playback: AnimationNodeStateMachinePlayback
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		var target_yaw := atan2(direction.x, direction.z)
 		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(1.0, turn_speed * delta))
 		_walk_phase += delta * velocity.length() * 2.2
-		visual.position.y = sin(_walk_phase) * 0.035
+		visual.position.y = 0.0 if reduced_motion else sin(_walk_phase) * 0.035
 	else:
 		visual.position.y = move_toward(visual.position.y, 0.0, delta * 0.3)
 	if _reaction_state.is_empty():
@@ -55,10 +56,16 @@ func _physics_process(delta: float) -> void:
 		_travel(movement_state)
 
 func play_interact() -> void:
+	if reduced_motion:
+		return
 	_reaction_state = "Interact"
 	_travel(_reaction_state)
 
 func play_reaction(correct: bool) -> void:
+	if reduced_motion:
+		_reaction_state = ""
+		_travel("Idle")
+		return
 	_reaction_state = "Celebrate" if correct else "Failure"
 	_travel(_reaction_state)
 

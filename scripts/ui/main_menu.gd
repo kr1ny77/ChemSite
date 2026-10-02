@@ -7,6 +7,7 @@ const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 var save_path: String = SAVE_DATA.SAVE_PATH
+var settings_path: String = SETTINGS_DATA.SETTINGS_PATH
 var _menu_content: VBoxContainer
 var _settings_panel: PanelContainer
 var _settings_button: Button
@@ -118,12 +119,12 @@ func _ready() -> void:
 	settings_button.add_theme_font_size_override("font_size", 19)
 	content.add_child(settings_button)
 	_settings_button = settings_button
-	var settings: Dictionary = SETTINGS_DATA.load_settings()
+	var settings: Dictionary = SETTINGS_DATA.load_settings(settings_path)
 	var settings_panel := PanelContainer.new()
 	settings_panel.anchor_left = 0.55
 	settings_panel.anchor_right = 0.94
-	settings_panel.anchor_top = 0.18
-	settings_panel.anchor_bottom = 0.82
+	settings_panel.anchor_top = 0.11
+	settings_panel.anchor_bottom = 0.89
 	settings_panel.visible = false
 	var panel_style := StyleBoxFlat.new()
 	panel_style.bg_color = Color("1c3740")
@@ -182,15 +183,29 @@ func _ready() -> void:
 	)
 	close_practice.pressed.connect(_close_practice)
 	var settings_content := VBoxContainer.new()
-	settings_content.add_theme_constant_override("separation", 20)
+	settings_content.add_theme_constant_override("separation", 14)
 	settings_panel.add_child(settings_content)
 	var settings_title := Label.new()
-	settings_title.text = "НАСТРОЙКИ ЗВУКА"
+	settings_title.text = "НАСТРОЙКИ"
 	settings_title.add_theme_color_override("font_color", Color("f3a846"))
 	settings_title.add_theme_font_size_override("font_size", 30)
 	settings_content.add_child(settings_title)
 	_add_volume_slider(settings_content, "МУЗЫКА", "music_volume", settings)
 	_add_volume_slider(settings_content, "ЭФФЕКТЫ", "sfx_volume", settings)
+	var motion_toggle := Button.new()
+	motion_toggle.toggle_mode = true
+	motion_toggle.text = "МЕНЬШЕ ДВИЖЕНИЯ: %s" % ("ВКЛ" if settings.reduced_motion else "ВЫКЛ")
+	motion_toggle.button_pressed = bool(settings.reduced_motion)
+	motion_toggle.custom_minimum_size.y = 46
+	motion_toggle.add_theme_font_size_override("font_size", 18)
+	settings_content.add_child(motion_toggle)
+	motion_toggle.toggled.connect(func(enabled: bool) -> void:
+		settings.reduced_motion = enabled
+		motion_toggle.text = "МЕНЬШЕ ДВИЖЕНИЯ: %s" % ("ВКЛ" if enabled else "ВЫКЛ")
+		var save_error: Error = SETTINGS_DATA.save_settings(settings, settings_path)
+		if save_error != OK:
+			push_warning("Could not save accessibility settings: %s" % error_string(save_error))
+	)
 	var close_settings := Button.new()
 	close_settings.text = "НАЗАД  ←"
 	close_settings.custom_minimum_size.y = 54
@@ -256,7 +271,7 @@ func _add_volume_slider(parent: VBoxContainer, title: String, key: String, setti
 	slider.value_changed.connect(func(value: float) -> void:
 		settings[key] = value / 100.0
 		value_label.text = "%d%%" % int(value)
-		var save_error: Error = SETTINGS_DATA.save_settings(settings)
+		var save_error: Error = SETTINGS_DATA.save_settings(settings, settings_path)
 		if save_error != OK:
 			push_warning("Could not save audio settings: %s" % error_string(save_error))
 		settings_changed.emit(settings)

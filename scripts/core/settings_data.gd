@@ -4,7 +4,7 @@ const SETTINGS_PATH := "user://settings.json"
 const VERSION := 1
 
 static func load_settings(path: String = SETTINGS_PATH) -> Dictionary:
-	var defaults := {"save_version": VERSION, "music_volume": 0.7, "sfx_volume": 0.8}
+	var defaults := {"save_version": VERSION, "music_volume": 0.7, "sfx_volume": 0.8, "reduced_motion": false}
 	if not FileAccess.file_exists(path):
 		return defaults
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -19,6 +19,7 @@ static func load_settings(path: String = SETTINGS_PATH) -> Dictionary:
 	for key in ["music_volume", "sfx_volume"]:
 		var value: Variant = parsed.get(key, defaults[key])
 		parsed[key] = clampf(float(value) if value is float or value is int else defaults[key], 0.0, 1.0)
+	parsed["reduced_motion"] = parsed.get("reduced_motion", false) == true
 	return parsed
 
 static func save_settings(settings: Dictionary, path: String = SETTINGS_PATH) -> Error:
@@ -29,6 +30,7 @@ static func save_settings(settings: Dictionary, path: String = SETTINGS_PATH) ->
 		"save_version": VERSION,
 		"music_volume": clampf(float(settings.get("music_volume", 0.7)), 0.0, 1.0),
 		"sfx_volume": clampf(float(settings.get("sfx_volume", 0.8)), 0.0, 1.0),
+		"reduced_motion": settings.get("reduced_motion", false) == true,
 	}
 	file.store_string(JSON.stringify(clean))
 	return OK
