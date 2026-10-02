@@ -140,6 +140,7 @@ func _build_world() -> void:
 	_block("Foundation", Vector3(0, -0.32, 0), Vector3(19, 0.6, 14), Color("d7c9ad"), true)
 	_block("CentralPath", Vector3(0, 0.01, 0.2), Vector3(3.6, 0.03, 12.5), Color("bbc7bc"), false)
 	_block("RearPath", Vector3(0, 0.015, -3.4), Vector3(14, 0.03, 2.5), Color("bbc7bc"), false)
+	_build_path_markings()
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
 	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
@@ -232,6 +233,27 @@ func _block(label: String, pos: Vector3, dimensions: Vector3, color: Color, soli
 		shape.shape = box
 		body.add_child(shape)
 		_world.add_child(body)
+
+func _build_path_markings() -> void:
+	var dash := BoxMesh.new()
+	dash.size = Vector3(0.12, 0.012, 0.58)
+	var material := StandardMaterial3D.new()
+	material.albedo_color = Color("eee2bd")
+	material.roughness = 0.9
+	var markings := MultiMesh.new()
+	markings.transform_format = MultiMesh.TRANSFORM_3D
+	markings.mesh = dash
+	markings.instance_count = 19
+	for index in range(9):
+		markings.set_instance_transform(index, Transform3D(Basis(), Vector3(0.0, 0.044, -2.1 + float(index) * 0.9)))
+	var across := Basis(Vector3.UP, PI * 0.5)
+	for index in range(10):
+		markings.set_instance_transform(9 + index, Transform3D(across, Vector3(-5.2 + float(index) * 1.1, 0.049, -3.4)))
+	var visual := MultiMeshInstance3D.new()
+	visual.name = "Walkway markings"
+	visual.multimesh = markings
+	visual.material_override = material
+	_world.add_child(visual)
 
 func _prop(asset_name: String, pos: Vector3, scale_value: float, yaw: float) -> void:
 	var scene := load("res://assets/models/construction/%s.glb" % asset_name) as PackedScene
