@@ -82,7 +82,7 @@ Verify the Level 3 dissociation and solution-analysis round in the native Window
 
 ## Last verification
 
-2026-10-02: Level 3 audit and all 40 HUD panels passed with four charge-balanced dissociation boards. Wrong ion counts kept equation entry locked and correct neutral counts unlocked it. The focused source and graphical round, refreshed macOS app and Windows PCK round passed. Reviewed AlCl₃ board before and after balancing at 1440×900 and 1152×720. The native Windows EXE check awaits source push.
+2026-10-02: Level 3 audit and all 40 HUD panels passed with four charge-balanced dissociation boards. Wrong ion counts kept equation entry locked and correct neutral counts unlocked it. The focused source and graphical round, refreshed macOS app and Windows PCK round passed. Reviewed AlCl₃ board before and after balancing at 1440×900 and 1152×720. Native Windows Actions run 37012600320 passed the exported EXE and focused dissociation round at commit 2744d28.
 
 2026-10-02: Level 3 audit and all 40 HUD panels passed after adding the three-step solution-analysis mission. A focused source, refreshed macOS app and Windows PCK round passed, including the final mission. Reviewed its unread/read states at 1440×900 and 1152×720. Native Windows EXE validation awaits the latest push.
 
