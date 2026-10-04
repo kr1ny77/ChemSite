@@ -12,7 +12,7 @@ Distribution:
 
 These tasks are curated seed content for ChemSite.
 
-The browser prototype converted these seeds into structured TypeScript data under `legacy-web/`. All 200 tasks have been exported to `data/chemistry/curated_tasks.json`; 199 currently retain verified status, while L2-050 is held for notation review. The native game selects all 40 Level 1 tasks; their supported interactions are checked by `tools/validation/level1_content_smoke.gd`. Levels 2–5 remain outside normal selection while their station mechanics and chemistry review are completed. `data/chemistry/vertical_slice_tasks.json` is retained as a reference for the first ten-task slice.
+The browser prototype converted these seeds into structured TypeScript data under `legacy-web/`. All 200 tasks have been exported to `data/chemistry/curated_tasks.json` and marked verified after independent content checks. Each level has 40 selectable tasks and a native content smoke. Course-specific instructor review remains a release gate. `data/chemistry/vertical_slice_tasks.json` is retained as a reference for the first ten-task slice.
 
 ## General Rules
 
@@ -469,8 +469,8 @@ Focus:
 ## Task 050
 
 **Type:** Equation Balancing  
-**Prompt:** Расставь коэффициенты: `P + O2 -> P2O5`.  
-**Correct answer:** `4P + 5O2 -> 2P2O5`.
+**Prompt:** Расставь коэффициенты в молекулярной записи: `P4 + O2 -> P4O10`.
+**Correct answer:** `P4 + 5O2 -> P4O10`.
 
 ---
 

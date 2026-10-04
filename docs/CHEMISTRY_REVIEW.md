@@ -27,17 +27,17 @@ OPEN / VERIFIED / REJECTED
 
 ### L2-050
 
-Question: Balance `P + O₂ → P₂O₅`.
+Question: Balance the molecular equation `P₄ + O₂ → P₄O₁₀`.
 
-Proposed answer: `4P + 5O₂ → 2P₂O₅`.
+Verified answer: `P₄ + 5O₂ → P₄O₁₀`.
 
-Reason for review: P₂O₅ is a common empirical formula, while the molecular form of phosphorus(V) oxide is P₄O₁₀. The equation is atom-balanced but the notation choice should match the target first-year course.
+Reason for review: The original prompt used P₂O₅, a common empirical formula, without specifying the intended formula convention.
 
-Possible ambiguity: `P₄ + 5O₂ → P₄O₁₀` represents molecular species; the current answer uses conventional empirical notation.
+Possible ambiguity: The original `4P + 5O₂ → 2P₂O₅` is atom-balanced in empirical notation, while `P₄ + 5O₂ → P₄O₁₀` uses molecular formulas.
 
-Resolution: Pending curriculum review. The task is excluded from native verified selection through `data/chemistry/review_overrides.json`.
+Resolution: The production prompt now explicitly asks for the molecular equation. [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Phosphorus-Pentoxide) identifies P₄O₁₀ as the molecular formula and P₂O₅ as the commonly used empirical formula. [OpenStax Chemistry 2e, Chapter 18 summary](https://openstax.org/books/chemistry-2e/pages/18-summary) uses P₄O₁₀ for phosphorus(V) oxide. Four P and ten O atoms appear on each side of the revised answer. The review override was removed and the task returned to the verified production pool. Target-course instructor review remains a separate curriculum gate.
 
-Status: OPEN
+Status: VERIFIED (2026-10-02)
 
 ## Level 2 audit
 

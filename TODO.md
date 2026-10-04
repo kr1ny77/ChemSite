@@ -42,14 +42,14 @@
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
-- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 199 verified task panels pass a 1028×642 layout gate in unread and expanded states
+- [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
 
 ## Later phases
 
 - [x] Phase 9: level-scoped adaptive mastery and related-task scheduling cover all five career levels; version-5 saves track each level’s best score, stars, XP and rounds, preserve legacy global records, and show level results in the menu
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
-- [ ] Phase 12 review: resolve L2-050 with the target curriculum and conduct a course-specific subject-matter review of Levels 1–5; all Level 5 tasks passed the independent content and native interaction checks
+- [ ] Phase 12 review: conduct a course-specific subject-matter review of Levels 1–5 against the target syllabus; all 200 tasks are verified by independent content checks, and L2-050 now uses an explicit molecular formula
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
 - [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 154-screen career/focused Windows visual matrix and all-task native Windows layout gate pass

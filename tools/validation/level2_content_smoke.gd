@@ -9,7 +9,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(2)
-	assert(tasks.size() == 39, "Level 2 verified task count changed")
+	assert(tasks.size() == 40, "Level 2 verified task count changed")
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
 	var submitted: Array[String] = []
@@ -54,11 +54,14 @@ func _run() -> void:
 		assert(submitted.size() == 1 and TASK_BANK.validate_choice(task, submitted[0]), "HUD emitted invalid answer: " + str(task.id))
 		submitted.clear()
 		await process_frame
-	assert(equation_count == 19 and mixing_count == 5, "Equation or mixing task count changed")
+	assert(equation_count == 20 and mixing_count == 5, "Equation or mixing task count changed")
 	var first := tasks[0]
 	assert(TASK_BANK.validate_choice(first, "CaO + H₂O → Ca(OH)₂"), "Subscript notation rejected")
-	assert(not TASK_BANK.load_verified_tasks(2).any(func(task: Dictionary) -> bool: return task.id == "L2-050"), "Review task entered production")
+	var phosphorus_tasks := tasks.filter(func(task: Dictionary) -> bool: return task.id == "L2-050")
+	assert(phosphorus_tasks.size() == 1, "Molecular phosphorus task missing")
+	assert(TASK_BANK.validate_choice(phosphorus_tasks[0], "P₄ + 5O₂ → P₄O₁₀"), "Molecular phosphorus equation rejected")
+	assert(not TASK_BANK.validate_choice(phosphorus_tasks[0], "4P + 5O₂ → 2P₂O₅"), "Empirical equation accepted for a molecular prompt")
 	hud.queue_free()
 	await process_frame
-	print("CHEMSITE_LEVEL2_CONTENT_OK: 39 tasks, 19 equations")
+	print("CHEMSITE_LEVEL2_CONTENT_OK: 40 tasks, 20 equations")
 	quit()
