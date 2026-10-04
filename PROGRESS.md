@@ -89,7 +89,7 @@ Author a continuous deforming worker mesh; review front, profile, three-quarter,
 
 ## Last verification
 
-2026-10-04: Godot 4.7.2 editor import/parse, the 200-task HUD layout gate at 1028×642, station route and collision smokes passed after the movement, camera, yard, font and task-card changes. Reviewed 1440×900 live site and question captures and a locomotion frame. Blender 5.2.2 exported the revised editable character; Blender Agent Studio fresh-imported all nine actions and four camera views. The character remains stylized and the asset inspection reports 64 degenerate faces/zero-length edges. macOS/Windows release exports await this visual pass.
+2026-10-04: Godot 4.7.2 editor import/parse, the 200-task HUD layout gate at 1028×642, station route and collision smokes passed after the movement, camera, yard, font and task-card changes. Reviewed 1440×900 live site and question captures and a locomotion frame. Blender 5.2.2 exported the revised editable character; Blender Agent Studio fresh-imported all nine actions and four camera views. The refreshed macOS release export passed its packaged Level 1 round. Source commit 4e6cf6b was pushed. The character remains stylized and the asset inspection reports 64 degenerate faces/zero-length edges; native Windows and further art QA await this visual pass.
 
 2026-10-04: The revised L2-050 molecular equation passed an independent atom/charge conservation audit and 40-task Godot Level 2 content smoke. The exported native bank contains 200 verified tasks, all 200 HUD panels fit at 1028×642, and the preserved TypeScript bank typechecks. Visual overhaul work is next.
 
