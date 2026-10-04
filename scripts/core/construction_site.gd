@@ -92,7 +92,11 @@ func _process(delta: float) -> void:
 		_site_time += delta
 		for index in range(_work_lights.size()):
 			_work_lights[index].light_energy = 0.72 + 0.14 * sin(_site_time * 1.5 + float(index) * 2.1)
-		_camera_rig.global_position = _camera_rig.global_position.lerp(_player.global_position * Vector3(0.6, 0.0, 0.6), 1.0 - exp(-3.0 * delta))
+	var follow_target := _player.global_position * Vector3(0.6, 0.0, 0.6)
+	if reduced_motion:
+		_camera_rig.global_position = follow_target
+	else:
+		_camera_rig.global_position = _camera_rig.global_position.lerp(follow_target, 1.0 - exp(-3.0 * delta))
 	if _round_done or not _player.controls_enabled:
 		return
 	if mode == "career":

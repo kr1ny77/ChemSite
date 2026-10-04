@@ -8,6 +8,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 - Built a separate MPFB 2.0.17 human candidate using official CC0 MakeHuman assets, with a continuous mesh, 53-bone game-engine rig, workwear and an authored hardhat. A four-view render exposed planar vest panels; removed that prototype and confirmed the cleaner human silhouette. Recorded asset provenance and reproducible Blender build steps in `tools/blender/character_reference_notes.md`.
 - Replaced the shipped segmented character with the MPFB human. Authored all nine actions on the 53-bone skeleton, replaced the stock camouflage shader with solid blue workwear, and kept an editable Blender source. Fresh Blender and Godot imports, six key-pose reviews, and live isometric locomotion captures confirm the playable integration.
+- Moved the isometric camera closer to the playable site and captured its initial and four edge views. Corrected reduced-motion camera tracking so the player remains framed without camera easing.
 - Tied Walk and Run animation playback rate to actual horizontal player speed so locomotion cadence follows acceleration and braking. Godot editor import/parse and locomotion capture passed; foot contact and the candidate's missing actions remain open.
 - Inspected 270 project-local skills, the installed Blender Agent Studio MCP tools, the repository, existing curriculum and task bank, Git remote, Godot, Blender and Git LFS.
 - Preserved the browser application, its tests, asset bundle and 200 curated task seeds in `legacy-web/`; moved the design and chemistry reference documents to `docs/`.
@@ -88,9 +89,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Improve clothing detail and planted foot contact on the integrated worker, then dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Dress the broad empty apron with readable, useful construction areas and perimeter context; improve clothing detail and planted foot contact, then continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-04: The tighter camera framing was visually reviewed at 1440×900 and 1028×642. Four edge captures in normal and reduced-motion modes verified camera travel. The reduced-motion camera rig followed the player to x±9 and z±7; capture now waits for a completed render frame. Godot editor import/parse and refreshed macOS release export passed, followed by `CHEMSITE_EXPORT_LEVEL1_ROUND_OK`. The larger view keeps the worker and stations readable; the surrounding yard still needs meaningful dressing.
 
 2026-10-04: Blender 5.2.2 exported the human with nine skeletal actions. Blender Agent Studio fresh GLB import found 53 bones, nine actions, and no reported geometry issues. Reviewed neutral four-view and Walk, Run, Interact, PickUp and Celebrate key poses from front/profile. Godot 4.7.2 import saw all nine actions and 53 bones; live locomotion at multiple frames was visually reviewed. Source station routes, collision and five-task round passed. Refreshed exported macOS release app passed `CHEMSITE_EXPORT_LEVEL1_ROUND_OK`. Windows native smoke and visual QA runs 37212746964/37212746943 passed commit a4627c0. A measured Walk foot-clearance correction lowered the stance boot from 0.041 m above ground to 0.006 m at the mid-stride key pose, and a fresh Godot locomotion capture passed. Remaining visual findings: smooth clothing lacks seams/safety details, and motion needs a human playtest.
 
