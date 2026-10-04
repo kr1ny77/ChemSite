@@ -6,6 +6,8 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Completed work
 
+- Built a separate MPFB 2.0.17 human candidate using official CC0 MakeHuman assets, with a continuous mesh, 53-bone game-engine rig, workwear and an authored hardhat. A four-view render exposed planar vest panels; removed that prototype and confirmed the cleaner human silhouette. Recorded asset provenance and reproducible Blender build steps in `tools/blender/character_reference_notes.md`.
+- Tied Walk and Run animation playback rate to actual horizontal player speed so locomotion cadence follows acceleration and braking. Godot editor import/parse and locomotion capture passed; foot contact and the candidate's missing actions remain open.
 - Inspected 270 project-local skills, the installed Blender Agent Studio MCP tools, the repository, existing curriculum and task bank, Git remote, Godot, Blender and Git LFS.
 - Preserved the browser application, its tests, asset bundle and 200 curated task seeds in `legacy-web/`; moved the design and chemistry reference documents to `docs/`.
 - Built a Godot 4.7 Forward+ root project with native menu, level, player, HUD, deterministic task data, scoring, results and versioned best-score/XP save.
@@ -81,13 +83,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The first visual overhaul pass improved movement, expanded the visible and walkable yard, enlarged task controls, bundled a Cyrillic Onest font and revised character proportions. The Blender mesh still reads as a segmented stylized figure; a continuous deforming body, stronger locomotion and yard dressing remain current work. Human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The first visual overhaul pass improved movement, expanded the visible and walkable yard, enlarged task controls, and bundled a Cyrillic Onest font. A separate continuous human candidate with a 53-bone rig has passed multiview geometry inspection. Its outfit and animations need completion before replacing the shipped character. Yard dressing, human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Author a continuous deforming worker mesh; review front, profile, three-quarter, neutral and moving poses, then fresh-import the GLB and verify the packaged build. Dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Refine the MPFB worker's clothing, author nine animations, review front, profile, three-quarter and moving poses, then fresh-import the GLB and verify the packaged build. Dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-04: Blender 5.2.2 rebuilt the human candidate and Blender Agent Studio inspected its GLB: 53 bones, 27,696 triangles, seven materials, zero degenerate or zero-length faces and zero reported issues. Four-view render reviewed after removing the faulty vest. Godot 4.7.2 editor import/parse passed, and the graphical locomotion capture ended with `LOCOMOTION_CAPTURE_OK` after playback-rate scaling. The candidate has zero actions and remains outside the shipped game; animation and outfit review are the next acceptance gates.
 
 2026-10-04: Godot 4.7.2 editor import/parse, the 200-task HUD layout gate at 1028×642, station route and collision smokes passed after the movement, camera, yard, font and task-card changes. Reviewed 1440×900 live site and question captures and a locomotion frame. Blender 5.2.2 exported the revised editable character; Blender Agent Studio fresh-imported all nine actions and four camera views. The refreshed macOS release export passed its packaged Level 1 round. Source commit 4e6cf6b was pushed. The character remains stylized and the asset inspection reports 64 degenerate faces/zero-length edges; native Windows and further art QA await this visual pass.
 
@@ -127,6 +131,7 @@ Author a continuous deforming worker mesh; review front, profile, three-quarter,
 
 ## Known issues
 
+- The MPFB candidate is still separate from the shipped game. Its blue camouflage suit needs art direction, and its 53-bone skeleton needs the nine production animations and in-game deformation review before integration.
 - The updated character still has rigid limb assemblies, seven bones and visibly stylized anatomy. It does not yet meet the requested realistic character quality. Blender fresh-import inspection reports 64 degenerate faces/zero-length edges from the current beveled geometry; the final mesh pass should resolve these.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.

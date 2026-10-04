@@ -41,6 +41,8 @@
 
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.
 - [ ] Replace the remaining segmented mannequin anatomy with a continuous, fully deforming realistic worker mesh and improve locomotion foot contact; the current Blender asset remains visibly stylized in multiview and gameplay inspection.
+  - [x] Build and inspect an MPFB human candidate with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
+  - [ ] Rework the blue camouflage workwear into convincing construction clothing, author/export all nine actions, inspect deformation and foot contact, then integrate the verified GLB in Godot.
 - [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera

@@ -54,6 +54,9 @@ func _physics_process(delta: float) -> void:
 		if speed > 0.18:
 			movement_state = "Run" if speed > 3.5 else "Walk"
 		_travel(movement_state)
+		if _animation_tree != null:
+			_animation_tree.set("parameters/Walk/TimeScale/scale", clampf(speed / 1.25, 0.5, 2.4))
+			_animation_tree.set("parameters/Run/TimeScale/scale", clampf(speed / 2.6, 0.5, 2.4))
 
 func play_interact() -> void:
 	if reduced_motion:
@@ -86,7 +89,15 @@ func _setup_animation(model: Node) -> void:
 			continue
 		var animation := AnimationNodeAnimation.new()
 		animation.animation = state_name
-		machine.add_node(state_name, animation)
+		if state_name in ["Walk", "Run"]:
+			var blend := AnimationNodeBlendTree.new()
+			blend.add_node("Animation", animation)
+			blend.add_node("TimeScale", AnimationNodeTimeScale.new())
+			blend.connect_node("TimeScale", 0, "Animation")
+			blend.connect_node("output", 0, "TimeScale")
+			machine.add_node(state_name, blend)
+		else:
+			machine.add_node(state_name, animation)
 	for from_state in states:
 		for to_state in states:
 			if from_state == to_state or not machine.has_node(from_state) or not machine.has_node(to_state):
