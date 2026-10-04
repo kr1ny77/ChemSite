@@ -1,6 +1,6 @@
 # Native asset selection
 
-The Godot vertical slice starts from the CC0 Kenney Factory Kit 3.0 and Building Kit 1.0 used by the browser prototype. The selected 18 GLBs total about 353 kB before Git LFS storage. Blender sources generate the original rigged player and three station GLBs.
+The Godot vertical slice starts from the CC0 Kenney Factory Kit 3.0 and Building Kit 1.0 used by the browser prototype. The selected 18 GLBs total about 353 kB before Git LFS storage. Blender sources generate the human player and station GLBs.
 
 | Source pack/file | Native destination | Purpose | Planned treatment |
 | --- | --- | --- | --- |
@@ -21,6 +21,6 @@ The browser's merged GLB libraries remain in `legacy-web/public/assets/models/` 
 
 Standardized six-view reviews are saved at `docs/screenshots/site-cabin-contact-sheet.png`, `docs/screenshots/material-cache-contact-sheet.png`, `docs/screenshots/safety-point-contact-sheet.png`, `docs/screenshots/site-mixer-contact-sheet.png` and `docs/screenshots/rebar-bay-contact-sheet.png`.
 
-Character and station reviews are saved at `docs/screenshots/chemist-contact-sheet.png`, `docs/screenshots/chemist-celebrate-frames.png`, `docs/screenshots/chemist-celebrate-godot.png`, `docs/screenshots/substance-storage-contact-sheet.png`, `docs/screenshots/formula-board-contact-sheet.png` and `docs/screenshots/periodic-terminal-contact-sheet.png`.
+The human worker's updated four-view review is saved at `docs/screenshots/chemist-human-contact-sheet.png`; its isometric locomotion capture is `docs/screenshots/chemist-human-gameplay.png`. Earlier character and station reviews remain at `docs/screenshots/chemist-contact-sheet.png`, `docs/screenshots/chemist-celebrate-frames.png`, `docs/screenshots/chemist-celebrate-godot.png`, `docs/screenshots/substance-storage-contact-sheet.png`, `docs/screenshots/formula-board-contact-sheet.png` and `docs/screenshots/periodic-terminal-contact-sheet.png`.
 
 Additional action contact sheets cover Walk, Turn, PickUp and UseStation under `docs/screenshots/chemist-*-frames.png`.

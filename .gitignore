@@ -14,3 +14,5 @@ artifacts/
 *.blend1
 *.blend2
 __pycache__/
+assets/models/character/chemist_*.png
+assets/models/character/chemist_*.png.import

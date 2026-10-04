@@ -7,6 +7,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 ## Completed work
 
 - Built a separate MPFB 2.0.17 human candidate using official CC0 MakeHuman assets, with a continuous mesh, 53-bone game-engine rig, workwear and an authored hardhat. A four-view render exposed planar vest panels; removed that prototype and confirmed the cleaner human silhouette. Recorded asset provenance and reproducible Blender build steps in `tools/blender/character_reference_notes.md`.
+- Replaced the shipped segmented character with the MPFB human. Authored all nine actions on the 53-bone skeleton, replaced the stock camouflage shader with solid blue workwear, and kept an editable Blender source. Fresh Blender and Godot imports, six key-pose reviews, and live isometric locomotion captures confirm the playable integration.
 - Tied Walk and Run animation playback rate to actual horizontal player speed so locomotion cadence follows acceleration and braking. Godot editor import/parse and locomotion capture passed; foot contact and the candidate's missing actions remain open.
 - Inspected 270 project-local skills, the installed Blender Agent Studio MCP tools, the repository, existing curriculum and task bank, Git remote, Godot, Blender and Git LFS.
 - Preserved the browser application, its tests, asset bundle and 200 curated task seeds in `legacy-web/`; moved the design and chemistry reference documents to `docs/`.
@@ -83,13 +84,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The first visual overhaul pass improved movement, expanded the visible and walkable yard, enlarged task controls, and bundled a Cyrillic Onest font. A separate continuous human candidate with a 53-bone rig has passed multiview geometry inspection. Its outfit and animations need completion before replacing the shipped character. Yard dressing, human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, expanded the visible and walkable yard, enlarged task controls, and bundled a Cyrillic Onest font. The shipped human worker has a continuous mesh, 53 bones and nine imported animations. Clothing detail, joint deformation and foot contact need polish. Yard dressing, human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Refine the MPFB worker's clothing, author nine animations, review front, profile, three-quarter and moving poses, then fresh-import the GLB and verify the packaged build. Dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Improve clothing detail and planted foot contact on the integrated worker, then dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-04: Blender 5.2.2 exported the human with nine skeletal actions. Blender Agent Studio fresh GLB import found 53 bones, nine actions, and no reported geometry issues. Reviewed neutral four-view and Walk, Run, Interact, PickUp and Celebrate key poses from front/profile. Godot 4.7.2 import saw all nine actions and 53 bones; live locomotion at multiple frames was visually reviewed. Source station routes, collision and five-task round passed. Refreshed exported macOS release app passed `CHEMSITE_EXPORT_LEVEL1_ROUND_OK`. Remaining visual findings: smooth clothing lacks seams/safety details, and foot contact still needs a grounded-motion review. Native Windows CI follows source push.
 
 2026-10-04: Blender 5.2.2 rebuilt the human candidate and Blender Agent Studio inspected its GLB: 53 bones, 27,696 triangles, seven materials, zero degenerate or zero-length faces and zero reported issues. Four-view render reviewed after removing the faulty vest. Godot 4.7.2 editor import/parse passed, and the graphical locomotion capture ended with `LOCOMOTION_CAPTURE_OK` after playback-rate scaling. The candidate has zero actions and remains outside the shipped game; animation and outfit review are the next acceptance gates.
 
@@ -131,7 +134,7 @@ Refine the MPFB worker's clothing, author nine animations, review front, profile
 
 ## Known issues
 
-- The MPFB candidate is still separate from the shipped game. Its blue camouflage suit needs art direction, and its 53-bone skeleton needs the nine production animations and in-game deformation review before integration.
+- The integrated MPFB character has nine actions and visibly improved anatomy. The solid workwear still lacks seams and safety details. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The updated character still has rigid limb assemblies, seven bones and visibly stylized anatomy. It does not yet meet the requested realistic character quality. Blender fresh-import inspection reports 64 degenerate faces/zero-length edges from the current beveled geometry; the final mesh pass should resolve these.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.

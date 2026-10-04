@@ -6,6 +6,8 @@ MakeHuman system assets documented in character_reference_notes.md.
 
 import bpy
 import math
+import shutil
+from mathutils import Quaternion, Vector
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -78,6 +80,19 @@ ExportService.bake_modifiers_remove_helpers(
     export_body, bake_masks=True, bake_subdiv=False, remove_helpers=True, also_proxy=True
 )
 
+# The stock worksuit bitmap has a military camouflage pattern. Assign plain
+# workwear fabrics by garment region while retaining the fitted clothing mesh.
+suit = next(obj for obj in ObjectService.get_list_of_children(export_rig)
+            if "male_worksuit01" in obj.name)
+denim = material("Construction workwear blue", (0.065, 0.19, 0.29), 0.86)
+shirt = material("Cotton work shirt", (0.70, 0.73, 0.68), 0.91)
+suit.data.materials.clear()
+suit.data.materials.append(denim)
+suit.data.materials.append(shirt)
+for polygon in suit.data.polygons:
+    center = sum((suit.data.vertices[i].co for i in polygon.vertices), Vector()) / len(polygon.vertices)
+    polygon.material_index = 1 if center.z > 1.12 and abs(center.x) > 0.23 else 0
+
 helmet_yellow = material("Hardhat polymer", (0.92, 0.60, 0.10), 0.38)
 helmet_dark = material("Hardhat gasket", (0.08, 0.11, 0.12), 0.68)
 
@@ -118,15 +133,109 @@ stripe = [(0.0, -0.18, 1.66), (0.0, -0.143, 1.73),
           (0.012, -0.143, 1.73), (0.012, -0.18, 1.66)]
 weighted_mesh("Hardhat raised ridge", stripe, [(0, 1, 2, 3)], helmet_dark, "head")
 
+
+def key_pose(frame, turns):
+    """Key anatomical rotations about stable world axes in the bind pose."""
+    for name, (pitch, yaw, roll) in turns.items():
+        if name not in export_rig.pose.bones:
+            raise KeyError(f"Missing game-engine bone: {name}")
+        pose_bone = export_rig.pose.bones[name]
+        rest = pose_bone.bone.matrix_local.to_quaternion()
+        rotation = (Quaternion(Vector((0, 0, 1)), yaw)
+                    @ Quaternion(Vector((0, 1, 0)), roll)
+                    @ Quaternion(Vector((1, 0, 0)), pitch))
+        pose_bone.rotation_mode = "QUATERNION"
+        pose_bone.rotation_quaternion = rest.inverted() @ rotation @ rest
+        pose_bone.keyframe_insert(data_path="rotation_quaternion", frame=frame, group=name)
+
+
+def action(name, frames):
+    if export_rig.animation_data is None:
+        export_rig.animation_data_create()
+    clip = bpy.data.actions.new(name)
+    export_rig.animation_data.action = clip
+    for frame, turns in frames:
+        key_pose(frame, turns)
+    clip.use_fake_user = True
+    export_rig.animation_data.action = None
+    track = export_rig.animation_data.nla_tracks.new()
+    track.name = name
+    track.strips.new(name, frames[0][0], clip)
+    track.mute = True
+
+
+def walk_pose(phase, running=False):
+    stride = 0.53 if running else 0.36
+    arm_swing = 0.34 if running else 0.25
+    left = math.sin(phase)
+    right = -left
+    left_knee = max(0.0, -left) * (0.75 if running else 0.55)
+    right_knee = max(0.0, -right) * (0.75 if running else 0.55)
+    return {
+        "pelvis": (0.025 * math.sin(phase * 2), 0.0, 0.024 * math.sin(phase)),
+        "spine_03": (-0.07 if running else -0.025, 0.0, -0.022 * math.sin(phase)),
+        "thigh_l": (-stride * left, 0.0, 0.0),
+        "thigh_r": (-stride * right, 0.0, 0.0),
+        "calf_l": (left_knee, 0.0, 0.0),
+        "calf_r": (right_knee, 0.0, 0.0),
+        "foot_l": (stride * left - left_knee * 0.8, 0.0, 0.0),
+        "foot_r": (stride * right - right_knee * 0.8, 0.0, 0.0),
+        "upperarm_l": (arm_swing * left, 0.0, 0.0),
+        "upperarm_r": (arm_swing * right, 0.0, 0.0),
+        "lowerarm_l": (-0.18 if running else -0.06, 0.0, 0.0),
+        "lowerarm_r": (-0.18 if running else -0.06, 0.0, 0.0),
+    }
+
+
+action("Idle", [(1, {"spine_03": (0, 0, 0)}),
+                (20, {"spine_03": (-0.012, 0, 0)}),
+                (40, {"spine_03": (0, 0, 0)})])
+for clip_name, half_cycle in [("Walk", 13), ("Run", 10)]:
+    action(clip_name, [(1, walk_pose(0, clip_name == "Run")),
+                       (1 + half_cycle // 2, walk_pose(math.pi / 2, clip_name == "Run")),
+                       (1 + half_cycle, walk_pose(math.pi, clip_name == "Run")),
+                       (1 + half_cycle + half_cycle // 2,
+                        walk_pose(3 * math.pi / 2, clip_name == "Run")),
+                       (1 + 2 * half_cycle, walk_pose(2 * math.pi, clip_name == "Run"))])
+action("Turn", [(1, {"pelvis": (0, -0.15, 0)}),
+                (9, {"pelvis": (0, 0.15, 0), "head": (0, -0.16, 0)}),
+                (17, {"pelvis": (0, 0, 0), "head": (0, 0, 0)})])
+action("Interact", [(1, {"upperarm_r": (0, 0, 0)}),
+                    (10, {"upperarm_r": (-0.6, 0, 0), "lowerarm_r": (-0.45, 0, 0)}),
+                    (20, {"upperarm_r": (0, 0, 0), "lowerarm_r": (0, 0, 0)})])
+action("PickUp", [(1, {"pelvis": (0, 0, 0)}),
+                  (12, {"pelvis": (0.42, 0, 0), "thigh_l": (-0.27, 0, 0),
+                        "thigh_r": (-0.27, 0, 0), "upperarm_l": (-0.65, 0, 0),
+                        "upperarm_r": (-0.65, 0, 0)}),
+                  (26, {"pelvis": (0, 0, 0), "thigh_l": (0, 0, 0),
+                        "thigh_r": (0, 0, 0), "upperarm_l": (0, 0, 0),
+                        "upperarm_r": (0, 0, 0)})])
+action("UseStation", [(1, {"upperarm_r": (-0.45, 0, 0)}),
+                      (10, {"upperarm_r": (-0.75, 0, 0), "lowerarm_r": (-0.35, 0, 0)}),
+                      (20, {"upperarm_r": (-0.45, 0, 0), "lowerarm_r": (0, 0, 0)})])
+action("Celebrate", [(1, {"upperarm_l": (0, 0, 0), "upperarm_r": (0, 0, 0)}),
+                     (12, {"upperarm_l": (-0.7, 0, -0.8),
+                           "upperarm_r": (-0.7, 0, 0.8), "spine_03": (-0.08, 0, 0)}),
+                     (30, {"upperarm_l": (-0.55, 0, -0.7),
+                           "upperarm_r": (-0.55, 0, 0.7), "spine_03": (0, 0, 0)})])
+action("Failure", [(1, {"head": (0, 0, 0)}),
+                   (14, {"head": (0.18, 0, 0), "spine_03": (0.12, 0, 0),
+                         "upperarm_l": (0.18, 0, 0), "upperarm_r": (0.18, 0, 0)}),
+                   (28, {"head": (0, 0, 0), "spine_03": (0, 0, 0),
+                         "upperarm_l": (0, 0, 0), "upperarm_r": (0, 0, 0)})])
+
 bpy.ops.object.select_all(action="DESELECT")
 export_rig.select_set(True)
 for child in ObjectService.get_list_of_children(export_rig):
     child.select_set(True)
 bpy.context.view_layer.objects.active = export_rig
 bpy.ops.file.pack_all()
-bpy.ops.wm.save_as_mainfile(filepath=str(OUT / "chemist_candidate.blend"))
+source = ROOT / "tools" / "blender" / "source"
+source.mkdir(parents=True, exist_ok=True)
+bpy.ops.wm.save_as_mainfile(filepath=str(source / "realistic_chemist.blend"))
 bpy.ops.export_scene.gltf(
     filepath=str(OUT / "chemist_candidate.glb"),
-    export_format="GLB", use_selection=True, export_animations=False,
+    export_format="GLB", use_selection=True, export_animation_mode="NLA_TRACKS",
 )
+shutil.copyfile(OUT / "chemist_candidate.glb", ROOT / "assets/models/character/chemist.glb")
 print("CHEMSITE_CHARACTER_CANDIDATE", OUT / "chemist_candidate.glb")
