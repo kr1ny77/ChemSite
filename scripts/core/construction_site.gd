@@ -146,7 +146,11 @@ func _build_world() -> void:
 	settings.ssao_intensity = 1.25
 	environment.environment = settings
 	_world.add_child(environment)
-	_block("Foundation", Vector3(0, -0.32, 0), Vector3(19, 0.6, 14), Color("d7c9ad"), true)
+	# Keep ground beneath every camera position so the site reads as part of a yard.
+	_block("Construction yard", Vector3(0, -0.62, 0), Vector3(90, 0.12, 90), Color("b9b9a8"), true)
+	_block("Service apron", Vector3(0, -0.595, -17), Vector3(90, 0.025, 8), Color("929d93"), false)
+	_block("Foundation", Vector3(0, -0.32, 0), Vector3(90, 0.6, 90), Color("d7c9ad"), true)
+	_block("Work zone surface", Vector3(0, 0.005, 0), Vector3(19, 0.01, 14), Color("d5c7ab"), false)
 	_block("CentralPath", Vector3(0, 0.01, 0.2), Vector3(3.6, 0.03, 12.5), Color("bbc7bc"), false)
 	_block("RearPath", Vector3(0, 0.015, -3.4), Vector3(14, 0.03, 2.5), Color("bbc7bc"), false)
 	_build_path_markings()
@@ -154,10 +158,10 @@ func _build_world() -> void:
 	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
 	_block("Rebar bay collision", Vector3(-2.5, 1.34, 4.0), Vector3(2.35, 2.4, 1.26), Color(0, 0, 0, 0), true)
-	for x in [-8.7, 8.7]:
-		_block("Perimeter", Vector3(x, 0.62, 0), Vector3(0.25, 1.2, 14), Color("304c57"), true)
-	for z in [-6.8, 6.8]:
-		_block("Perimeter", Vector3(0, 0.62, z), Vector3(17.5, 1.2, 0.25), Color("304c57"), true)
+	for x in [-44.7, 44.7]:
+		_block("Perimeter", Vector3(x, 0.62, 0), Vector3(0.25, 1.2, 90), Color("304c57"), true)
+	for z in [-44.7, 44.7]:
+		_block("Perimeter", Vector3(0, 0.62, z), Vector3(89.5, 1.2, 0.25), Color("304c57"), true)
 	_environment_prop("site_cabin", Vector3(0.0, 0.0, -5.65))
 	_block("Site laboratory cabin collision", Vector3(0.0, 1.15, -5.65), Vector3(3.85, 2.3, 1.8), Color(0, 0, 0, 0), true)
 	_environment_prop("sample_cart", Vector3(-6.15, 0.0, -5.2))

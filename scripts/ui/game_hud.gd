@@ -39,6 +39,9 @@ var _dissociation_view: VBoxContainer
 var _task_panel_active := false
 
 func _ready() -> void:
+	var hud_theme := Theme.new()
+	hud_theme.default_font = load("res://assets/fonts/Onest-Variable.ttf") as Font
+	theme = hud_theme
 	var top := PanelContainer.new()
 	top.anchor_right = 0.58
 	top.offset_left = 24
@@ -77,16 +80,20 @@ func _ready() -> void:
 	round_content.add_child(_timer_label)
 	round_content.add_child(_combo_label)
 	round_content.add_child(_xp_label)
-	_prompt = _label("", 22, Color("173744"))
-	_prompt.anchor_left = 0.21
-	_prompt.anchor_right = 0.79
-	_prompt.anchor_top = 0.84
-	_prompt.anchor_bottom = 0.93
+	var prompt_panel := PanelContainer.new()
+	prompt_panel.anchor_left = 0.20
+	prompt_panel.anchor_right = 0.80
+	prompt_panel.anchor_top = 0.84
+	prompt_panel.anchor_bottom = 0.93
+	prompt_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	prompt_panel.add_theme_stylebox_override("panel", _panel_style(Color("173744"), 12))
+	add_child(prompt_panel)
+	_prompt = _label("", 22, Color("f7f4e7"))
 	_prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	add_child(_prompt)
+	prompt_panel.add_child(_prompt)
 	_panel = PanelContainer.new()
-	_panel.anchor_left = 0.26
-	_panel.anchor_right = 0.74
+	_panel.anchor_left = 0.18
+	_panel.anchor_right = 0.82
 	_panel.anchor_top = 0.19
 	_panel.anchor_bottom = 0.81
 	_panel.visible = false
@@ -94,7 +101,7 @@ func _ready() -> void:
 	_panel.add_theme_stylebox_override("panel", _panel_style(Color("f3efe1"), 16))
 	add_child(_panel)
 	_panel_content = VBoxContainer.new()
-	_panel_content.add_theme_constant_override("separation", 13)
+	_panel_content.add_theme_constant_override("separation", 15)
 	_panel.add_child(_panel_content)
 	_panel_content.minimum_size_changed.connect(_fit_task_panel.call_deferred)
 
@@ -141,8 +148,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
 	_panel_content.add_child(eyebrow)
-	_panel_content.add_child(_label(task.prompt, 27, Color("243b43")))
-	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 17, Color("627679")))
+	_panel_content.add_child(_label(task.prompt, 30, Color("243b43")))
+	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 19, Color("52666c")))
 	if not mission_steps.is_empty():
 		_mission_stage = MISSION_STAGE_VIEW.new()
 		_mission_stage.configure(mission_steps)
@@ -236,8 +243,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 			button.text = option
 			button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-			button.custom_minimum_size = Vector2(0, 124 if longest_option > 80 else (95 if longest_option > 45 else 67))
-			button.add_theme_font_size_override("font_size", 17 if longest_option > 80 else (18 if longest_option > 45 else 20))
+			button.custom_minimum_size = Vector2(0, 132 if longest_option > 80 else (106 if longest_option > 45 else 78))
+			button.add_theme_font_size_override("font_size", 19 if longest_option > 80 else (21 if longest_option > 45 else 23))
 			_style_button(button)
 			button.pressed.connect(_submit_option.bind(option))
 			cards.add_child(button)

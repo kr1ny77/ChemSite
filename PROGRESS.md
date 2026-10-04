@@ -74,20 +74,22 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Added a saved keyboard-accessible reduced-motion control to the settings panel. When enabled, gameplay uses a stationary camera and work-light intensity, omits answer particles and station pulses, and removes character bob and reaction flourishes; text and audio feedback remain. Settings migration defaults older files to the standard motion state. The menu and reduced-motion site were visually reviewed at 1028×642/1152×720. Isolated persistence, UI toggle and gameplay-effect checks pass locally and on native Windows CI.
 - Measured duration, mean level and peak level of all seven shipped audio clips with FFmpeg. Every decoded clip peak is below 0 dBFS; runtime Music/SFX routing and default slider gains were cross-checked. Recorded the objective measurements and exported-app listening path in `docs/AUDIO_QA.md`; physical headphone/speaker balance remains pending.
 - Resolved the L2-050 formula ambiguity by asking for a molecular P₄O₁₀ equation, supported by PubChem and OpenStax. Removed its review override and regenerated the native bank. All 200 tasks now carry verified status; 20 Level 2 equations conserve atoms and charge, and the Level 2 content smoke opens and submits all 40 panels. A target-course instructor review remains open.
-- Cross-checked the public MGSU 08.03.01 chemistry course against ChemSite’s atomic structure, bonding, thermodynamics, kinetics and equilibrium modules. Recorded the source and the remaining detailed syllabus/reviewer gap in `docs/CHEMISTRY_CURRICULUM.md`; L2-050 remains quarantined.
+- Cross-checked the public MGSU 08.03.01 chemistry course against ChemSite’s atomic structure, bonding, thermodynamics, kinetics and equilibrium modules. Recorded the source and the remaining detailed syllabus/reviewer gap in `docs/CHEMISTRY_CURRICULUM.md`; L2-050 was later revised and verified.
 - Established a 1440×900 performance baseline on Apple M4 with 360 rendered frames per state after warmup. Exploration and task panels both reported 60 FPS with VSync; uncapped p90 frame intervals were 9.04 ms and 9.32 ms. Median draw calls were 537 and 568. The target student-laptop gate remains open; details and limits are in `docs/PERFORMANCE_BASELINE.md`.
 - Added a Windows GitHub Actions workflow that downloads official Godot 4.7.2 editor/templates, exports the native EXE, runs five career rounds plus the Level 5 mission round on Windows, and uploads the paired EXE/PCK artifact. Run 36444307931 passed all steps on a Windows runner.
 - Captured and visually reviewed the menu, site, station panel, formula builder and exported release menu under `artifacts/`.
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records. All 200 native chemistry tasks are now verified, with L2-050 explicitly using a molecular equation. Contextual controls cover Level 2 mixing, Level 3 scales, solution preparation, pH readings, ionization scans, hydrolysis comparisons, dissociation boards and final solution inspection, Level 4 Hess, kinetics, equilibrium, electrode and corrosion comparison, and Level 5 inspection. The expanded 154-screen native Windows visual archive has been reviewed. The 200-task layout gate and reduced motion pass locally; earlier 199-task checks passed native Windows CI. The refreshed macOS app passes a packaged round. The requested character, animation, environment and UI quality overhaul is current work; human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The first visual overhaul pass improved movement, expanded the visible and walkable yard, enlarged task controls, bundled a Cyrillic Onest font and revised character proportions. The Blender mesh still reads as a segmented stylized figure; a continuous deforming body, stronger locomotion and yard dressing remain current work. Human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Improve the character model and motion, camera framing, continuous site environment, task-panel scale and typography per the latest user direction. Then run human exported-app/audio playtesting, profile a student laptop, complete physical Windows QA and target-course subject-matter review, and publish the GitHub prerelease.
+Author a continuous deforming worker mesh; review front, profile, three-quarter, neutral and moving poses, then fresh-import the GLB and verify the packaged build. Dress the expanded yard and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-04: Godot 4.7.2 editor import/parse, the 200-task HUD layout gate at 1028×642, station route and collision smokes passed after the movement, camera, yard, font and task-card changes. Reviewed 1440×900 live site and question captures and a locomotion frame. Blender 5.2.2 exported the revised editable character; Blender Agent Studio fresh-imported all nine actions and four camera views. The character remains stylized and the asset inspection reports 64 degenerate faces/zero-length edges. macOS/Windows release exports await this visual pass.
 
 2026-10-04: The revised L2-050 molecular equation passed an independent atom/charge conservation audit and 40-task Godot Level 2 content smoke. The exported native bank contains 200 verified tasks, all 200 HUD panels fit at 1028×642, and the preserved TypeScript bank typechecks. Visual overhaul work is next.
 
@@ -125,6 +127,7 @@ Improve the character model and motion, camera framing, continuous site environm
 
 ## Known issues
 
+- The updated character still has rigid limb assemblies, seven bones and visibly stylized anatomy. It does not yet meet the requested realistic character quality. Blender fresh-import inspection reports 64 degenerate faces/zero-length edges from the current beveled geometry; the final mesh pass should resolve these.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.

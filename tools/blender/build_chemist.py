@@ -52,44 +52,44 @@ def cyl(name,loc,radius,depth,material,vertices=32):
     o.modifiers.new('Weighted normals','WEIGHTED_NORMAL')
     return o
 
-# The original browser character is the silhouette reference: helmet widest,
-# short torso, large gloves/boots, reflective vest, clear face from elevated view.
-uv('Pelvis', (0,0,.81),(.29,.21,.23),navy)
+# Human-scaled field technician: fitted workwear, smaller head and equipment.
+uv('Pelvis', (0,0,.89),(.245,.175,.20),navy)
 for side in (-1,1):
-    x=side*.16
-    uv(f'Trouser {side}',(x,0,.48),(.14,.145,.31),navy)
-    box(f'Boot {side}',(x,-.095,.16),(.30,.39,.24),boots,.07)
-    box(f'Boot cap {side}',(x,-.23,.17),(.28,.12,.12),black,.035)
-uv('Torso', (0,0,1.12),(.39,.24,.39),orange)
-box('Vest front seam',(0,-.242,1.12),(.04,.03,.56),navy,.01)
+    x=side*.145
+    uv(f'Trouser {side}',(x,0,.50),(.115,.125,.34),navy)
+    uv(f'Boot {side}',(x,-.075,.14),(.14,.185,.135),boots)
+    box(f'Boot sole {side}',(x,-.085,.052),(.265,.39,.055),black,.017)
+    box(f'Boot toe {side}',(x,-.215,.12),(.25,.12,.08),boots,.028)
+uv('Torso', (0,0,1.28),(.305,.205,.39),orange)
+box('Vest front seam',(0,-.205,1.26),(.022,.022,.55),navy,.006)
+box('Work belt',(0,-.18,.98),(.47,.05,.055),boots,.014)
 for side in (-1,1):
-    x=side*.24
-    box(f'Reflective shoulder {side}',(x,-.22,1.39),(.095,.045,.19),reflect,.016)
-    box(f'Reflective hem {side}',(x,-.23,.97),(.14,.045,.07),reflect,.016)
-    uv(f'Sleeve {side}',(side*.42,0,1.29),(.16,.16,.19),navy)
-    uv(f'Arm {side}',(side*.50,0,1.08),(.13,.13,.24),navy)
-    uv(f'Glove {side}',(side*.53,-.015,.86),(.15,.14,.14),glove)
-    box(f'Glove cuff {side}',(side*.53,0,.94),(.25,.24,.065),black,.025)
-uv('Neck',(0,-.015,1.47),(.15,.14,.14),skin)
-uv('Head',(0,-.02,1.68),(.31,.275,.32),skin,32)
-uv('Nose',(0,-.31,1.66),(.085,.09,.075),skin)
+    x=side*.19
+    box(f'Reflective shoulder {side}',(x,-.177,1.47),(.06,.025,.20),reflect,.009)
+    box(f'Reflective hem {side}',(x,-.188,1.08),(.12,.025,.04),reflect,.008)
+    box(f'Vest pocket {side}',(x,-.205,1.19),(.105,.025,.115),orange,.012)
+    uv(f'Sleeve {side}',(side*.34,0,1.45),(.12,.135,.19),navy)
+    uv(f'Arm {side}',(side*.405,0,1.13),(.095,.105,.27),navy)
+    uv(f'Glove {side}',(side*.42,-.015,.89),(.095,.105,.115),glove)
+    box(f'Glove cuff {side}',(side*.42,0,.97),(.17,.18,.042),black,.012)
+uv('Neck',(0,-.01,1.68),(.105,.10,.105),skin)
+uv('Head',(0,-.02,1.83),(.205,.18,.235),skin,32)
+uv('Nose',(0,-.207,1.80),(.052,.058,.055),skin)
 for side in (-1,1):
-    uv(f'Ear {side}',(side*.30,-.02,1.64),(.075,.055,.10),skin)
-    uv(f'Eye white {side}',(side*.12,-.265,1.74),(.085,.045,.085),white)
-    uv(f'Pupil {side}',(side*.12,-.305,1.73),(.032,.023,.045),black)
-    box(f'Eyebrow {side}',(side*.12,-.275,1.84),(.12,.025,.025),black,.01)
-uv('Smile',(0,-.293,1.53),(.105,.022,.026),black)
-# Hardhat cap has several curved layers so the silhouette reads at gameplay scale.
-uv('Helmet crown',(0,0,1.93),(.365,.33,.19),yellow,32)
-cyl('Helmet rim',(0,-.004,1.88),.39,.07,yellow)
-box('Helmet brim',(0,-.25,1.86),(.67,.33,.045),yellow,.009)
-box('Helmet ridge',(0,-.02,2.075),(.07,.47,.04),yellow,.008)
-box('Helmet cyan decal',(0,-.445,1.89),(.17,.015,.045),cyan,.002)
-# Small backpack and chemistry badge add identity from a 3/4 gameplay camera.
-box('Chemistry pack',(0,.23,1.11),(.52,.19,.55),cyan,.10)
-box('Pack lid',(0,.33,1.40),(.48,.19,.11),black,.035)
-box('Vest badge',(.19,-.252,1.20),(.10,.025,.13),cyan,.012)
-box('Badge symbol',(.19,-.27,1.20),(.025,.02,.08),reflect,.006)
+    uv(f'Ear {side}',(side*.204,-.015,1.81),(.046,.042,.075),skin)
+    uv(f'Eye white {side}',(side*.082,-.177,1.86),(.042,.018,.032),white)
+    uv(f'Pupil {side}',(side*.082,-.193,1.86),(.021,.012,.023),black)
+    box(f'Eyebrow {side}',(side*.082,-.181,1.91),(.073,.012,.013),black,.004)
+uv('Smile',(0,-.184,1.71),(.065,.013,.014),black)
+uv('Helmet crown',(0,0,2.02),(.248,.235,.115),yellow,32)
+cyl('Helmet rim',(0,-.004,1.986),.258,.038,yellow)
+uv('Helmet brim',(0,-.16,1.975),(.245,.15,.019),yellow)
+box('Helmet ridge',(0,-.02,2.128),(.04,.33,.025),yellow,.006)
+box('Helmet cyan decal',(0,-.256,1.997),(.10,.01,.035),cyan,.002)
+box('Chemistry pack',(0,.20,1.29),(.32,.12,.38),cyan,.05)
+box('Pack lid',(0,.26,1.49),(.31,.11,.06),black,.014)
+box('Vest badge',(.15,-.210,1.35),(.07,.018,.09),cyan,.008)
+box('Badge symbol',(.15,-.227,1.35),(.018,.012,.055),reflect,.004)
 
 for obj in bpy.data.objects:
     if obj.type=='MESH':
@@ -108,13 +108,13 @@ def bone(name,head,tail,parent=None):
  b=arm.edit_bones.new(name);b.head=head;b.tail=tail
  if parent:b.parent=arm.edit_bones[parent]
  return b
-bone('Root',(0,0,.05),(0,0,.80))
-bone('Torso',(0,0,.80),(0,0,1.48),'Root')
-bone('Head',(0,0,1.48),(0,0,1.94),'Torso')
-bone('Arm_L',(-.38,0,1.40),(-.54,0,.87),'Torso')
-bone('Arm_R',(.38,0,1.40),(.54,0,.87),'Torso')
-bone('Leg_L',(-.16,0,.76),(-.16,0,.18),'Root')
-bone('Leg_R',(.16,0,.76),(.16,0,.18),'Root')
+bone('Root',(0,0,.05),(0,0,.93))
+bone('Torso',(0,0,.93),(0,0,1.69),'Root')
+bone('Head',(0,0,1.69),(0,0,2.04),'Torso')
+bone('Arm_L',(-.31,0,1.55),(-.43,0,.88),'Torso')
+bone('Arm_R',(.31,0,1.55),(.43,0,.88),'Torso')
+bone('Leg_L',(-.145,0,.91),(-.145,0,.16),'Root')
+bone('Leg_R',(.145,0,.91),(.145,0,.16),'Root')
 bpy.ops.object.mode_set(mode='OBJECT')
 
 def group_for(name):

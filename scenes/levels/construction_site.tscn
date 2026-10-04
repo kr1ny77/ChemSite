@@ -17,7 +17,7 @@ position = Vector3(0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="CameraRig"]
 transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 9, 14, 18)
 projection = 1
-size = 20.0
+size = 15.8
 near = 0.1
 far = 100.0
 current = true

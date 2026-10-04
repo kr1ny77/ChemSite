@@ -15,6 +15,9 @@ var _practice_panel: PanelContainer
 var _practice_button: Button
 
 func _ready() -> void:
+	var menu_theme := Theme.new()
+	menu_theme.default_font = load("res://assets/fonts/Onest-Variable.ttf") as Font
+	theme = menu_theme
 	var background := ColorRect.new()
 	background.color = Color("142531")
 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)

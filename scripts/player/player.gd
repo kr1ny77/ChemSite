@@ -3,14 +3,13 @@ extends CharacterBody3D
 signal footstep
 
 @export var run_speed: float = 5.2
-@export var acceleration: float = 17.0
-@export var deceleration: float = 23.0
-@export var turn_speed: float = 11.0
+@export var acceleration: float = 14.0
+@export var deceleration: float = 19.0
+@export var turn_speed: float = 9.0
 
 @onready var visual: Node3D = $Visual
 var controls_enabled: bool = true
 var reduced_motion := false
-var _walk_phase: float = 0.0
 var _animation_tree: AnimationTree
 var _playback: AnimationNodeStateMachinePlayback
 var _current_animation: String = ""
@@ -30,9 +29,12 @@ func _physics_process(delta: float) -> void:
 		input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction := Vector3(input.x, 0.0, input.y)
 	var target := direction * run_speed
+	var horizontal := Vector2(velocity.x, velocity.z)
+	var desired := Vector2(target.x, target.z)
 	var rate := acceleration if direction.length_squared() > 0.001 else deceleration
-	velocity.x = move_toward(velocity.x, target.x, rate * delta)
-	velocity.z = move_toward(velocity.z, target.z, rate * delta)
+	horizontal = horizontal.move_toward(desired, rate * delta)
+	velocity.x = horizontal.x
+	velocity.z = horizontal.y
 	velocity.y -= 20.0 * delta
 	move_and_slide()
 	if is_on_floor() and controls_enabled and direction.length_squared() > 0.001:
@@ -42,17 +44,15 @@ func _physics_process(delta: float) -> void:
 			footstep.emit()
 	else:
 		_step_distance = 0.7
-	if direction.length_squared() > 0.001:
-		var target_yaw := atan2(direction.x, direction.z)
-		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(1.0, turn_speed * delta))
-		_walk_phase += delta * velocity.length() * 2.2
-		visual.position.y = 0.0 if reduced_motion else sin(_walk_phase) * 0.035
-	else:
-		visual.position.y = move_toward(visual.position.y, 0.0, delta * 0.3)
+	var speed := horizontal.length()
+	if speed > 0.08:
+		var target_yaw := atan2(horizontal.x, horizontal.y)
+		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, 1.0 - exp(-turn_speed * delta))
+	visual.position.y = 0.0
 	if _reaction_state.is_empty():
 		var movement_state := "Idle"
-		if direction.length_squared() > 0.001:
-			movement_state = "Run" if velocity.length() > 3.5 else "Walk"
+		if speed > 0.18:
+			movement_state = "Run" if speed > 3.5 else "Walk"
 		_travel(movement_state)
 
 func play_interact() -> void:
@@ -92,7 +92,7 @@ func _setup_animation(model: Node) -> void:
 			if from_state == to_state or not machine.has_node(from_state) or not machine.has_node(to_state):
 				continue
 			var transition := AnimationNodeStateMachineTransition.new()
-			transition.xfade_time = 0.12
+			transition.xfade_time = 0.2
 			machine.add_transition(from_state, to_state, transition)
 	_animation_tree = AnimationTree.new()
 	visual.add_child(_animation_tree)
