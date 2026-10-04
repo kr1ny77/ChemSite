@@ -149,13 +149,17 @@ def key_pose(frame, turns):
         pose_bone.keyframe_insert(data_path="rotation_quaternion", frame=frame, group=name)
 
 
-def action(name, frames):
+def action(name, frames, pelvis_drops=None):
     if export_rig.animation_data is None:
         export_rig.animation_data_create()
     clip = bpy.data.actions.new(name)
     export_rig.animation_data.action = clip
     for frame, turns in frames:
         key_pose(frame, turns)
+        pelvis = export_rig.pose.bones["pelvis"]
+        drop = (pelvis_drops or {}).get(frame, 0.0)
+        pelvis.location = pelvis.bone.matrix_local.to_quaternion().inverted() @ Vector((0, 0, -drop))
+        pelvis.keyframe_insert(data_path="location", frame=frame, group="pelvis")
     clip.use_fake_user = True
     export_rig.animation_data.action = None
     track = export_rig.animation_data.nla_tracks.new()
@@ -196,7 +200,9 @@ for clip_name, half_cycle in [("Walk", 13), ("Run", 10)]:
                        (1 + half_cycle, walk_pose(math.pi, clip_name == "Run")),
                        (1 + half_cycle + half_cycle // 2,
                         walk_pose(3 * math.pi / 2, clip_name == "Run")),
-                       (1 + 2 * half_cycle, walk_pose(2 * math.pi, clip_name == "Run"))])
+                       (1 + 2 * half_cycle, walk_pose(2 * math.pi, clip_name == "Run"))],
+           {1 + half_cycle // 2: 0.035,
+            1 + half_cycle + half_cycle // 2: 0.035} if clip_name == "Walk" else {})
 action("Turn", [(1, {"pelvis": (0, -0.15, 0)}),
                 (9, {"pelvis": (0, 0.15, 0), "head": (0, -0.16, 0)}),
                 (17, {"pelvis": (0, 0, 0), "head": (0, 0, 0)})])

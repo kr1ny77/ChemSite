@@ -20,7 +20,10 @@ actions: Idle, Walk, Run, Turn, Interact, PickUp, UseStation, Celebrate and
 Failure. Fresh Blender and Godot imports report all nine. Front, side, rear,
 three-quarter and six key action poses have been visually reviewed. Godot
 isometric locomotion captures confirm the new mesh and actions play in game.
-Foot contact and clothing detail require more motion and art review.
+Walk stance-boot clearance at the middle of the stride was reduced from 41 mm
+to 6 mm using a small pelvis drop, measured after a fresh GLB import with
+`measure_foot_contact.py`. Foot sliding across a full traveled cycle and
+clothing detail still require human motion and art review.
 
 The stock worksuit bitmap has a blue camouflage pattern. The build assigns
 plain blue workwear and a light sleeve fabric to the fitted mesh. The first
