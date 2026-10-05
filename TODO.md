@@ -42,6 +42,7 @@
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.
 - [ ] Replace the segmented mannequin with a continuous, fully deforming worker mesh and improve locomotion foot contact.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
+  - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
   - [x] Replace the blue camouflage material, author/export nine actions, inspect key poses, and integrate the GLB in Godot; source gameplay capture shows the new worker in motion.
   - [ ] Improve cloth tailoring, safety detail, joint deformation and planted foot contact; review the final mesh and motion from gameplay and close-up angles.
 - [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.

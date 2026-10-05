@@ -26,3 +26,5 @@ The fence asset and enclosed yard are shown at `docs/screenshots/site-fence-cont
 The human worker's updated four-view review is saved at `docs/screenshots/chemist-human-contact-sheet.png`; its isometric locomotion capture is `docs/screenshots/chemist-human-gameplay.png`. Earlier character and station reviews remain at `docs/screenshots/chemist-contact-sheet.png`, `docs/screenshots/chemist-celebrate-frames.png`, `docs/screenshots/chemist-celebrate-godot.png`, `docs/screenshots/substance-storage-contact-sheet.png`, `docs/screenshots/formula-board-contact-sheet.png` and `docs/screenshots/periodic-terminal-contact-sheet.png`.
 
 Additional action contact sheets cover Walk, Turn, PickUp and UseStation under `docs/screenshots/chemist-*-frames.png`.
+
+The fitted coverall detail pass is reviewed in `docs/screenshots/chemist-workwear-contact-sheet.png`, `chemist-workwear-walk.png` and `chemist-workwear-gameplay.png`. Reflective layers follow garment geometry and share its bone weights; 11 final meshes keep the tape batched by material.

@@ -7,10 +7,13 @@ MakeHuman system assets documented in character_reference_notes.md.
 import bpy
 import math
 import shutil
+import sys
 from mathutils import Quaternion, Vector
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from fit_garment_detail import garment_detail
 OUT = ROOT / "artifacts" / "character-candidate"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -84,14 +87,42 @@ ExportService.bake_modifiers_remove_helpers(
 # workwear fabrics by garment region while retaining the fitted clothing mesh.
 suit = next(obj for obj in ObjectService.get_list_of_children(export_rig)
             if "male_worksuit01" in obj.name)
-denim = material("Construction workwear blue", (0.065, 0.19, 0.29), 0.86)
-shirt = material("Cotton work shirt", (0.70, 0.73, 0.68), 0.91)
+denim = material("Construction workwear navy", (0.026, 0.075, 0.13), 0.86)
 suit.data.materials.clear()
 suit.data.materials.append(denim)
-suit.data.materials.append(shirt)
 for polygon in suit.data.polygons:
-    center = sum((suit.data.vertices[i].co for i in polygon.vertices), Vector()) / len(polygon.vertices)
-    polygon.material_index = 1 if center.z > 1.12 and abs(center.x) > 0.23 else 0
+    polygon.material_index = 0
+
+# Fitted industrial coverall detail: circumferential calf/waist tape and
+# shoulder runs copied from the cloth surface with interpolated skin weights.
+# Reference observations and the local repair contract are in character_reference_notes.md.
+tape_border = material("Safety tape yellow edging", (0.76, 0.65, 0.075), 0.64)
+tape = material("Silver reflective cloth", (0.62, 0.68, 0.69), 0.38, 0.3)
+stitch = material("Tailoring seam", (0.012, 0.026, 0.035), 0.88)
+for label, height in (("Calf", 0.43), ("Waist", 1.055)):
+    garment_detail(suit, label + " tape edging", [(2, height - 0.033, height + 0.033)], tape_border, 0.0015)
+    garment_detail(suit, label + " reflective tape", [(2, height - 0.020, height + 0.020)], tape, 0.0024)
+for side in (-1, 1):
+    center = side * 0.105
+    for facing in (-1, 1):
+        label = ("Left" if side < 0 else "Right") + (" front" if facing < 0 else " back")
+        garment_detail(suit, label + " shoulder edging", [(0, center - 0.030, center + 0.030), (2, 1.085, 1.44)], tape_border, 0.0015, facing)
+        garment_detail(suit, label + " shoulder reflector", [(0, center - 0.018, center + 0.018), (2, 1.085, 1.44)], tape, 0.0024, facing)
+garment_detail(suit, "Concealed front fastening", [(0, -0.005, 0.005), (2, 1.10, 1.40)], stitch, 0.0017, -1)
+for side in (-1, 1):
+    center = side * 0.047
+    garment_detail(suit, ("Left" if side < 0 else "Right") + " pocket flap seam", [(0, center - 0.024, center + 0.024), (2, 1.295, 1.299)], stitch, 0.002, -1)
+
+# Batch the fitted layers by material; shared vertex-group names retain weights.
+for detail_material in (tape_border, tape, stitch):
+    members = [obj for obj in bpy.data.objects if obj.type == "MESH"
+               and obj.data.materials and obj.data.materials[0] == detail_material]
+    bpy.ops.object.select_all(action="DESELECT")
+    for obj in members:
+        obj.select_set(True)
+    bpy.context.view_layer.objects.active = members[0]
+    bpy.ops.object.join()
+    members[0].name = detail_material.name
 
 helmet_yellow = material("Hardhat polymer", (0.92, 0.60, 0.10), 0.38)
 helmet_dark = material("Hardhat gasket", (0.08, 0.11, 0.12), 0.68)

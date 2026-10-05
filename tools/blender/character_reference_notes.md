@@ -30,3 +30,28 @@ plain blue workwear and a light sleeve fabric to the fitted mesh. The first
 safety vest prototype produced planar and jagged panels, so it was removed.
 The solid fabric currently looks too smooth up close and needs tailoring,
 seams and convincing safety detail in a later art pass.
+
+## Fitted workwear repair — 2026-10-05
+
+Contract: retain the accepted human proportions, fitted continuous coverall,
+53-bone rig and nine actions. Add circumferential calf/waist reflective tape,
+front/rear shoulder runs, a concealed fastening line and chest-pocket seams.
+Preserve cloth fit in Walk, UseStation and Celebrate. Export GLB plus editable
+source; inspect front/profile/back and moving poses. Smooth finish, desktop
+Forward+, keep the complete character below 35,000 triangles. No clothing
+certification or protection rating is implied by this visual costume.
+
+Reference inspected in the browser: the front/back product image of
+[Portwest FR511](https://www.safetyvestsandmore.com/cdn/shop/files/Portwest-FR511-Navy_512x512.webp?v=1738685444).
+The tape follows the fabric's wrinkles, shoulder runs join a waist band, and
+calf bands encircle each leg. The reference has long sleeves and an X back;
+ChemSite keeps the accepted short-sleeve mesh and parallel rear bands. Product
+imagery informs placement only and is excluded from redistributed assets.
+
+The repair clips overlays directly from the garment polygons and interpolates
+their smooth normals and bone weights. Yellow edging sits 1.5 mm above cloth;
+silver centers sit 2.4 mm above it. Geometry receives up to four normalized
+influences. A darker navy fabric replaces the light sleeve patches. The helper
+is `fit_garment_detail.py`; it keeps detail attached across body deformation.
+
+Final fitted-layer fresh import: 32,585 triangles, 11 skinned meshes, 10 materials, 53 bones and nine actions; zero degenerate faces/zero-length edges and no inspection issues. Neutral and Walk/UseStation/Celebrate front/profile/back evidence was opened; tape remains attached in those sampled poses. Live Godot locomotion was inspected. Full-cycle foot sliding, more relaxed arm carriage, fabric microdetail and footwear still require refinement.
