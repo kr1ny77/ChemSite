@@ -229,6 +229,33 @@ def walk_pose(phase, running=False):
     }
 
 
+def ground_walk(clip_name):
+    """Bake a supporting sole onto the bind sole plane through the full cycle."""
+    shoes = next(obj for obj in ObjectService.get_list_of_children(export_rig)
+                 if "shoes06" in obj.name)
+    clip = bpy.data.actions[clip_name]
+    export_rig.animation_data.action = clip
+    pelvis = export_rig.pose.bones["pelvis"]
+    inverse_rest = pelvis.bone.matrix_local.to_quaternion().inverted()
+    # The retained MakeHuman shoe sole is below the skeleton's asset origin.
+    # Player's model offset accounts for this plane and its capsule's lower tip.
+    target_sole = -0.017899
+    samples = []
+    first, last = (int(value) for value in clip.frame_range)
+    for frame in range(first, last + 1):
+        bpy.context.scene.frame_set(frame)
+        evaluated = shoes.evaluated_get(bpy.context.evaluated_depsgraph_get())
+        mesh = evaluated.to_mesh()
+        minimum = min((evaluated.matrix_world @ v.co).z for v in mesh.vertices)
+        evaluated.to_mesh_clear()
+        correction = inverse_rest @ Vector((0, 0, target_sole - minimum))
+        samples.append((frame, pelvis.location.copy() + correction))
+    for frame, location in samples:
+        pelvis.location = location
+        pelvis.keyframe_insert(data_path="location", frame=frame, group="pelvis")
+    export_rig.animation_data.action = None
+
+
 action("Idle", [(1, {"spine_03": (0, 0, 0)}),
                 (20, {"spine_03": (-0.012, 0, 0)}),
                 (40, {"spine_03": (0, 0, 0)})])
@@ -241,6 +268,7 @@ for clip_name, half_cycle in [("Walk", 13), ("Run", 10)]:
                        (1 + 2 * half_cycle, walk_pose(2 * math.pi, clip_name == "Run"))],
            {1 + half_cycle // 2: 0.035,
             1 + half_cycle + half_cycle // 2: 0.035} if clip_name == "Walk" else {})
+ground_walk("Walk")
 action("Turn", [(1, {"pelvis": (0, -0.15, 0)}),
                 (9, {"pelvis": (0, 0.15, 0), "head": (0, -0.16, 0)}),
                 (17, {"pelvis": (0, 0, 0), "head": (0, 0, 0)})])

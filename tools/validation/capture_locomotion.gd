@@ -12,12 +12,15 @@ func _run() -> void:
 	camera.look_at(Vector3(0, 1.0, 0), Vector3.UP)
 	camera.size = 7.0
 	var player := site.get_node("Player") as CharacterBody3D
-	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://artifacts/locomotion-frames"))
-	Input.action_press("move_right")
+	var walking := OS.get_cmdline_user_args().has("--walk")
+	var folder := "res://artifacts/walk-grounding-frames" if walking else "res://artifacts/locomotion-frames"
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
+	Input.action_press("move_right", 0.3 if walking else 1.0)
 	for frame in range(72):
 		await physics_frame
 		if frame > 0 and frame % 8 == 0:
 			await process_frame
+			await RenderingServer.frame_post_draw
 			var image := root.get_viewport().get_texture().get_image()
 			var center := camera.unproject_position(player.global_position + Vector3(0, 1.0, 0))
 			var origin := Vector2i(
@@ -25,7 +28,7 @@ func _run() -> void:
 				clampi(int(center.y) - 300, 0, image.get_height() - 600)
 			)
 			var detail := image.get_region(Rect2i(origin, Vector2i(520, 600)))
-			var path := "res://artifacts/locomotion-frames/frame-%02d.png" % frame
+			var path := folder + "/frame-%02d.png" % frame
 			assert(detail.save_png(path) == OK, "Locomotion frame capture failed")
 	Input.action_release("move_right")
 	print("LOCOMOTION_CAPTURE_OK")

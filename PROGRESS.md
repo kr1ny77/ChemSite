@@ -6,6 +6,8 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Completed work
 
+- Calibrated the imported shoe sole/capsule offset and physical floor at y=0, reduced visual path offsets to 1–3 mm, and baked vertical Walk support across every authored frame. Blender quarter-frame samples and actual Godot skinned vertices verify the supporting sole throughout the cycle.
+
 - Relaxed upper-arm carriage by 0.52 rad from the source A pose for idle, locomotion and station use. Every action keys all bones, preventing inherited rotations from preceding authored poses. Movement animation and footsteps now use collision-resolved velocity; all four fence directions verify a stationary Idle state while input remains held.
 
 - Fitted yellow/silver safety tape and tailoring lines directly to the continuous coverall, preserving interpolated skin weights. Reviewed front/profile/back in neutral, Walk, UseStation and Celebrate plus live Godot locomotion. Fresh final GLB inspection reports 32,585 triangles, 53 bones, nine actions and no geometry issues.
@@ -95,9 +97,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Calibrate the boot sole against the player collider and visible ground, review planted foot contact across the full locomotion cycle, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Review horizontal planted-foot drift across the full locomotion cycle, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Blender quarter-frame fresh-GLB sampling covers 157 Idle, 105 Walk and 81 Run samples; maximum Walk supporting-plane error is 1.53 mm and Run retains its flight phase. Godot actual skinned-vertex evaluation against a physical floor ray reports maximum Idle/Walk errors of 0.18/1.40 mm across 105 samples per clip. Editor import/parse, all five level station routes, general/four-side fence collisions and source round passed. Native 1440×900 walk/run captures were opened. Rebuilt macOS release Level 1 and graphical site-inspection smokes passed cleanly. Windows source grounding gate was added; verification of this commit follows push.
 
 2026-10-05: Godot import/parse, four fence collisions including stationary animation assertions, source Level 1 round and refreshed macOS release Level 1 round passed after the arm/collision polish. Fresh Blender GLB inspection retained 32,585 triangles, 53 bones, nine actions and no issues. Front/profile/back samples for all nine actions and live Godot locomotion were visually reviewed; the PickUp action still reads as a forward bend and full-cycle foot contact remains open.
 
@@ -151,7 +155,7 @@ Calibrate the boot sole against the player collider and visible ground, review p
 
 ## Known issues
 
-- Fresh imported foot-contact sampling reports the bind/Idle shoe minimum at −18 mm relative to the asset origin and Walk minima from −22 to +6 mm for the supporting side. Calibrate these values against the player capsule and visible paths before accepting ground contact.
+- Vertical sole calibration now passes in Blender and Godot. Horizontal planted-foot drift and the naturalness of the full gait cycle remain open.
 - The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.

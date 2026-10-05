@@ -2,6 +2,9 @@ extends CharacterBody3D
 
 signal footstep
 
+# The imported bind sole is at -17.899 mm; the capsule lower tip is at +5 mm.
+const MODEL_GROUND_OFFSET := 0.022899
+
 @export var run_speed: float = 5.2
 @export var acceleration: float = 14.0
 @export var deceleration: float = 19.0
@@ -20,6 +23,7 @@ func _ready() -> void:
 	var model_scene := load("res://assets/models/character/chemist.glb") as PackedScene
 	if model_scene:
 		var model := model_scene.instantiate()
+		model.position.y = MODEL_GROUND_OFFSET
 		visual.add_child(model)
 		_setup_animation(model)
 

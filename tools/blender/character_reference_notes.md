@@ -57,3 +57,23 @@ is `fit_garment_detail.py`; it keeps detail attached across body deformation.
 Final fitted-layer fresh import: 32,585 triangles, 11 skinned meshes, 10 materials, 53 bones and nine actions; zero degenerate faces/zero-length edges and no inspection issues. Neutral and Walk/UseStation/Celebrate front/profile/back evidence was opened; tape remains attached in those sampled poses. Live Godot locomotion was inspected. Full-cycle foot sliding, more relaxed arm carriage, fabric microdetail and footwear still require refinement.
 
 The subsequent arm-carriage repair rotates upper arms 0.52 rad toward the torso when explicit abduction is absent. Every key pose now keys all 53 bones, making clips independent of authoring order. Fresh-import samples for all nine actions were rendered in front/profile/back views and opened. Live Godot running confirms relaxed carriage. The PickUp sample still needs a bent-knee reach; full-cycle ground contact remains open.
+
+## Ground calibration — 2026-10-05
+
+The retained shoe bind sole is at z=-0.017899 m. The player capsule's lower
+point is y=+0.005 m, so its imported model sits at +0.022899 m. The physical
+foundation now ends at y=0; visual work-area/path layers end at 1–3 mm above
+it, and batched markings lie immediately above the paths. The raised building
+pad retains its own physical plane.
+
+`ground_walk` samples the unmodified evaluated shoe mesh before inserting any
+correction, then bakes pelvis height per authored frame onto the bind sole
+plane. This vertical correction preserves leg rotations, skin weights and
+swing-foot clearance. Quarter-frame fresh-export samples report maximum Walk
+support error 1.53 mm. Godot independently evaluates every skinned shoe vertex
+through the imported skin and bone transforms, then compares its lowest point
+with a physics floor ray: Idle 0.18 mm, Walk 1.40 mm at 105 samples each.
+
+Walk/run native crops were inspected at 1440×900. Horizontal foot drift across
+traveled cycles still needs a separate gait refinement; vertical support alone
+does not establish a fully planted locomotion cycle.

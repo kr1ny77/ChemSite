@@ -162,10 +162,11 @@ func _build_world() -> void:
 	# Keep ground beneath every camera position so the site reads as part of a yard.
 	_block("Construction yard", Vector3(0, -0.62, 0), Vector3(90, 0.12, 90), Color("b9b9a8"), true)
 	_block("Service apron", Vector3(0, -0.595, -17), Vector3(90, 0.025, 8), Color("929d93"), false)
-	_block("Foundation", Vector3(0, -0.32, 0), Vector3(90, 0.6, 90), Color("d7c9ad"), true)
-	_block("Work zone surface", Vector3(0, 0.005, 0), Vector3(19, 0.01, 14), Color("d5c7ab"), false)
-	_block("CentralPath", Vector3(0, 0.01, 0.2), Vector3(3.6, 0.03, 12.5), Color("bbc7bc"), false)
-	_block("RearPath", Vector3(0, 0.015, -3.4), Vector3(14, 0.03, 2.5), Color("bbc7bc"), false)
+	_block("Foundation", Vector3(0, -0.30, 0), Vector3(90, 0.6, 90), Color("d7c9ad"), true)
+	# Visual overlays sit 1–3 mm above the same physical walking plane.
+	_block("Work zone surface", Vector3(0, -0.004, 0), Vector3(19, 0.01, 14), Color("d5c7ab"), false)
+	_block("CentralPath", Vector3(0, -0.0035, 0.2), Vector3(3.6, 0.012, 12.5), Color("bbc7bc"), false)
+	_block("RearPath", Vector3(0, -0.003, -3.4), Vector3(14, 0.012, 2.5), Color("bbc7bc"), false)
 	_build_path_markings()
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
 	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
@@ -274,7 +275,7 @@ func _block(label: String, pos: Vector3, dimensions: Vector3, color: Color, soli
 
 func _build_path_markings() -> void:
 	var dash := BoxMesh.new()
-	dash.size = Vector3(0.12, 0.012, 0.58)
+	dash.size = Vector3(0.12, 0.002, 0.58)
 	var material := StandardMaterial3D.new()
 	material.albedo_color = Color("eee2bd")
 	material.roughness = 0.9
@@ -283,10 +284,10 @@ func _build_path_markings() -> void:
 	markings.mesh = dash
 	markings.instance_count = 19
 	for index in range(9):
-		markings.set_instance_transform(index, Transform3D(Basis(), Vector3(0.0, 0.044, -2.1 + float(index) * 0.9)))
+		markings.set_instance_transform(index, Transform3D(Basis(), Vector3(0.0, 0.0036, -2.1 + float(index) * 0.9)))
 	var across := Basis(Vector3.UP, PI * 0.5)
 	for index in range(10):
-		markings.set_instance_transform(9 + index, Transform3D(across, Vector3(-5.2 + float(index) * 1.1, 0.049, -3.4)))
+		markings.set_instance_transform(9 + index, Transform3D(across, Vector3(-5.2 + float(index) * 1.1, 0.0041, -3.4)))
 	var visual := MultiMeshInstance3D.new()
 	visual.name = "Walkway markings"
 	visual.multimesh = markings
