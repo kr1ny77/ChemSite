@@ -95,7 +95,7 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Fill the open bays with readable, useful construction activity; improve clothing detail and planted foot contact, then continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Calibrate the boot sole against the player collider and visible ground, review planted foot contact across the full locomotion cycle, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
 
@@ -151,6 +151,7 @@ Fill the open bays with readable, useful construction activity; improve clothing
 
 ## Known issues
 
+- Fresh imported foot-contact sampling reports the bind/Idle shoe minimum at −18 mm relative to the asset origin and Walk minima from −22 to +6 mm for the supporting side. Calibrate these values against the player capsule and visible paths before accepting ground contact.
 - The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
