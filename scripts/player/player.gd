@@ -10,7 +10,8 @@ const RUN_NOMINAL_SPEED := 2.934206
 @export var run_speed: float = 5.2
 @export var acceleration: float = 14.0
 @export var deceleration: float = 19.0
-@export var turn_speed: float = 9.0
+@export var turn_speed: float = 16.0
+@export var max_turn_rate: float = TAU * 2.0
 
 @onready var visual: Node3D = $Visual
 var controls_enabled: bool = true
@@ -22,6 +23,7 @@ var _reaction_state: String = ""
 var _step_state: String = ""
 var _step_phase: float = 0.0
 var _clip_lengths: Dictionary = {}
+var _yaw_velocity: float = 0.0
 
 func _ready() -> void:
 	var model_scene := load("res://assets/models/character/chemist.glb") as PackedScene
@@ -51,7 +53,9 @@ func _physics_process(delta: float) -> void:
 	_update_footstep(speed)
 	if speed > 0.08:
 		var target_yaw := atan2(horizontal.x, horizontal.y)
-		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, 1.0 - exp(-turn_speed * delta))
+		_update_heading(target_yaw, delta)
+	else:
+		_yaw_velocity = 0.0
 	visual.position.y = 0.0
 	if _reaction_state.is_empty():
 		var movement_state := "Idle"
@@ -62,6 +66,16 @@ func _physics_process(delta: float) -> void:
 		if _animation_tree != null:
 			_set_animation_rate("Walk", clampf(speed / WALK_NOMINAL_SPEED, 0.5, 3.3))
 			_set_animation_rate("Run", clampf(speed / RUN_NOMINAL_SPEED, 0.5, 2.4))
+
+func _update_heading(target_yaw: float, delta: float) -> void:
+	# Critically damped angular response starts and settles with gentle motion.
+	var error := wrapf(visual.rotation.y - target_yaw, -PI, PI)
+	var change := (_yaw_velocity + turn_speed * error) * delta
+	var decay := exp(-turn_speed * delta)
+	var next_yaw := target_yaw + (error + change) * decay
+	var step := clampf(wrapf(next_yaw - visual.rotation.y, -PI, PI), -max_turn_rate * delta, max_turn_rate * delta)
+	visual.rotation.y += step
+	_yaw_velocity = clampf((_yaw_velocity - turn_speed * change) * decay, -max_turn_rate, max_turn_rate)
 
 func _update_footstep(speed: float) -> void:
 	if _playback == null or not controls_enabled or not is_on_floor() or speed <= 0.18:

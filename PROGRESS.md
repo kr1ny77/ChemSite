@@ -97,9 +97,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Verify latest Windows motion/HUD CI, polish turns and PickUp, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Polish PickUp and contact during tight turns, then fill open bays, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Replaced heading interpolation with a critically damped angular response and 720°/s limit. Baseline 180° reversal jumped 25.073° in one 60 Hz frame; the new maximum is 12.000°. Native 90° turn settles within 0.001° after its full test interval. At 30/60/120 Hz the 0.6-second final error is 0.243/0.247/0.248°, with maximum rate bounded at 720°/s. Reviewed reversal and corner poses and opened the 2.5-second native turn movie with audio. Phase transfer, contact audio, collision and source round regressions pass. Editor import, refreshed macOS export and packaged round/graphical optional inspections pass. Windows source checks now require named success markers and bounded completion, including the turn gate. Windows native/visual runs 37345959532/37345959560 passed 968e671, including the enlarged feedback layout gate. Downloaded 154-image archive hash afe080df922ed426c9a4620d2e76a05090a057b22afe02d0e6d9b7bf0160758f matches GitHub metadata; full-size corrected corrosion feedback and Level 5 results were reviewed. Current turn change CI follows push.
 
 2026-10-05: Reset panel offsets during HUD content changes and apply content fitting to feedback, results, inspection and pause. Corrected feedback retains its heading and explanation in a compact centered panel. Numeric wrong-answer feedback displays value and unit rather than validation fields. All 200 task panels, 400 correct/wrong feedback panels, career/practice results and pause pass at 1028×642, 1152×720 and 1440×900 (the final numeric formatting rechecked at 1028×642). Corrected numeric feedback and exported macOS corrosion feedback were visually reviewed; the refreshed packaged five-task visual corrosion round passed with 11 captures. Windows repair artifact SHA-256 ef4a319d3318eb49db5f3a25e46bd4727bf4987744c729398f51344b07e328ad matched GitHub; its graphical runner uses ANGLE software graphics and dummy audio fallback, so physical Windows audio/Forward+ review remains open. Updated motion/HUD CI follows push.
 
@@ -165,7 +167,7 @@ Verify latest Windows motion/HUD CI, polish turns and PickUp, then fill open bay
 
 ## Known issues
 
-- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Steady Run now also passes sole support and stance gates. Walk/Run phase transfer and contact-aligned footstep signals now pass native checks. Turning, acceleration/deceleration feel, transition contact under changing direction and natural PickUp motion remain open.
+- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Steady Run now also passes sole support and stance gates. Walk/Run phase transfer and contact-aligned footstep signals now pass native checks. Heading rotation now has a damped response and angular speed limit. Acceleration/deceleration feel, contact during tight turns and natural PickUp motion remain open.
 - The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Steady Walk/Run foot plants have numeric and visual checks; transitions and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.

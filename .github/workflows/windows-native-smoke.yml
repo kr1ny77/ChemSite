@@ -37,12 +37,28 @@ jobs:
         run: |
           $import = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--editor', '--quit') -Wait -PassThru -NoNewWindow
           if ($import.ExitCode -ne 0) { throw "Godot import failed ($($import.ExitCode))" }
-          $grounding = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', 'tools/validation/player_grounding_smoke.gd') -Wait -PassThru -NoNewWindow
-          if ($grounding.ExitCode -ne 0) { throw "Skinned player grounding failed ($($grounding.ExitCode))" }
-          $locomotion = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', 'tools/validation/locomotion_transition_smoke.gd') -Wait -PassThru -NoNewWindow
-          if ($locomotion.ExitCode -ne 0) { throw "Locomotion transitions failed ($($locomotion.ExitCode))" }
-          $footsteps = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', 'tools/validation/footstep_timing_smoke.gd') -Wait -PassThru -NoNewWindow
-          if ($footsteps.ExitCode -ne 0) { throw "Footstep timing failed ($($footsteps.ExitCode))" }
+          New-Item -ItemType Directory -Force -Path 'artifacts/native-qa' | Out-Null
+          $checks = @(
+            @{ Script = 'player_grounding_smoke'; Marker = 'PLAYER_GROUNDING_SMOKE_OK' }
+            @{ Script = 'locomotion_transition_smoke'; Marker = 'LOCOMOTION_TRANSITION_SMOKE_OK' }
+            @{ Script = 'footstep_timing_smoke'; Marker = 'FOOTSTEP_TIMING_SMOKE_OK' }
+            @{ Script = 'turn_response_smoke'; Marker = 'TURN_RESPONSE_SMOKE_OK' }
+          )
+          foreach ($check in $checks) {
+            $log = "artifacts/native-qa/$($check.Script).log"
+            $test = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', "tools/validation/$($check.Script).gd", '--log-file', $log) -PassThru -NoNewWindow
+            if (-not $test.WaitForExit(240000)) {
+              Stop-Process -Id $test.Id -Force -ErrorAction SilentlyContinue
+              throw "$($check.Script) timed out"
+            }
+            $test.Refresh()
+            if (-not (Test-Path $log)) { throw "$($check.Script) log missing" }
+            $text = Get-Content $log -Raw
+            Write-Host $text
+            if ($test.ExitCode -ne 0 -or $text -notmatch ([regex]::Escape($check.Marker))) {
+              throw "$($check.Script) failed or did not reach its success marker ($($test.ExitCode))"
+            }
+          }
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
           $export = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--export-release', '"Windows Desktop"', 'builds/windows/ChemSite.exe') -Wait -PassThru -NoNewWindow
           if ($export.ExitCode -ne 0) { throw "Godot export failed ($($export.ExitCode))" }
