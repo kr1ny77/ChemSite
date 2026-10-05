@@ -105,12 +105,12 @@ func _ready() -> void:
 	_panel.add_child(_panel_content)
 	_panel_content.minimum_size_changed.connect(_fit_task_panel.call_deferred)
 
-func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career") -> void:
+func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career", inspection: Dictionary = {}) -> void:
 	_objective.text = "%s %d/%d  ·  %s" % ["ПРАКТИКА" if mode == "practice" else "ЗАДАНИЕ", mini(completed + 1, target_count), target_count, task.topic]
 	_status.text = "СТАНЦИЯ: %s" % _station_name(task.station)
 	update_round_stats(completed, score, time_left, streak, mode)
 	if nearest.is_empty():
-		_prompt.text = "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
+		_prompt.text = "[ E ]  ОСМОТРЕТЬ: %s" % inspection.name if not inspection.is_empty() else "ИДИ К СТАНЦИИ: %s" % _station_name(task.station)
 	elif nearest.id == task.station:
 		_prompt.text = "[ E ]  %s" % nearest.name
 	else:
@@ -426,6 +426,21 @@ func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 	_panel_content.add_child(_label("Для текущего задания нужна станция: " + _station_name(task.station), 19, Color("627679")))
 	var close := Button.new()
 	close.text = "ВЕРНУТЬСЯ НА ПЛОЩАДКУ"
+	close.pressed.connect(func() -> void: resume_requested.emit())
+	_panel_content.add_child(close)
+	close.grab_focus()
+
+func show_site_note(note: Dictionary) -> void:
+	_clear_panel()
+	_panel.anchor_top = 0.35
+	_panel.anchor_bottom = 0.62
+	_panel.visible = true
+	_panel_content.add_child(_label("ОСМОТР  /  " + str(note.name), 25, Color("cf7729")))
+	_panel_content.add_child(_label(str(note.text), 21, Color("243b43")))
+	var close := Button.new()
+	close.text = "ВЕРНУТЬСЯ НА ПЛОЩАДКУ"
+	close.custom_minimum_size.y = 52
+	_style_button(close, true)
 	close.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(close)
 	close.grab_focus()

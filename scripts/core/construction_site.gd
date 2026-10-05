@@ -7,6 +7,7 @@ signal footstep
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 const TASK_SCHEDULER = preload("res://scripts/chemistry/task_scheduler.gd")
+const SITE_INSPECTIONS = preload("res://scripts/world/site_inspections.gd")
 const STATION_CONFIG := [
 	{"id": "substance-storage", "name": "СКЛАД ВЕЩЕСТВ", "position": Vector3(-3.3, 0.0, -3.5), "model": "substance_storage"},
 	{"id": "formula-board", "name": "ДОСКА ФОРМУЛ", "position": Vector3(5.7, 0.0, -3.4), "model": "formula_board"},
@@ -51,6 +52,8 @@ var _time_left: float = 900.0
 var _active_station: String = ""
 var _hud: Control
 var _nearest_station: Dictionary = {}
+var _nearest_inspection: Dictionary = {}
+var _site_inspections: Array[Dictionary] = []
 var _round_done: bool = false
 var _round_complete_pending: bool = false
 var mode: String = "career"
@@ -75,6 +78,7 @@ func _ready() -> void:
 	_camera.position = Vector3(10.0, 15.5, 19.0)
 	_camera.look_at(Vector3(0.0, 0.0, 0.0), Vector3.UP)
 	_load_tasks()
+	_site_inspections = SITE_INSPECTIONS.load_entries()
 	_player.footstep.connect(func() -> void: footstep.emit())
 	_build_world()
 	if reduced_motion:
@@ -115,15 +119,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			_player.controls_enabled = false
 			_hud.show_pause()
-	elif event.is_action_pressed("interact") and not event.is_echo() and _player.controls_enabled and not _nearest_station.is_empty():
-		_active_station = _nearest_station.id
-		_player.controls_enabled = false
-		_player.play_interact()
-		station_used.emit()
-		if _active_station == _tasks[_task_index].station:
-			_hud.show_task(_tasks[_task_index], _active_station)
-		else:
-			_hud.show_wrong_station(_tasks[_task_index], _nearest_station)
+	elif event.is_action_pressed("interact") and not event.is_echo() and _player.controls_enabled:
+		if not _nearest_station.is_empty():
+			_active_station = _nearest_station.id
+			_player.controls_enabled = false
+			_player.play_interact()
+			station_used.emit()
+			if _active_station == _tasks[_task_index].station:
+				_hud.show_task(_tasks[_task_index], _active_station)
+			else:
+				_hud.show_wrong_station(_tasks[_task_index], _nearest_station)
+		elif not _nearest_inspection.is_empty():
+			_player.controls_enabled = false
+			_player.play_interact()
+			_hud.show_site_note(_nearest_inspection)
 
 func _load_tasks() -> void:
 	_tasks = TASK_BANK.load_verified_tasks(level)
@@ -202,6 +211,8 @@ func _build_world() -> void:
 		task_light.omni_range = 3.4
 		_world.add_child(task_light)
 		_work_lights.append(task_light)
+	for entry in _site_inspections:
+		_block("Inspection marker", entry.position + Vector3(0, 0.025, 0), Vector3(0.42, 0.018, 0.42), Color("48a7ad"), false)
 
 func _build_perimeter() -> void:
 	# A bounded, readable site replaces the broad empty walkable apron.
@@ -356,17 +367,29 @@ func _environment_prop(asset_name: String, pos: Vector3, yaw: float = 0.0) -> vo
 
 func _find_nearest_station() -> void:
 	_nearest_station = {}
+	_nearest_inspection = {}
 	var nearest_distance := 2.6
 	for station in _stations():
 		var distance := _player.global_position.distance_to(station.position)
 		if distance < nearest_distance:
 			nearest_distance = distance
 			_nearest_station = station
+	var nearest_inspection_distance := 1.9
+	for entry in _site_inspections:
+		var distance := _player.global_position.distance_to(entry.position)
+		if distance < nearest_inspection_distance:
+			nearest_inspection_distance = distance
+			_nearest_inspection = entry
+	if not _nearest_station.is_empty() and not _nearest_inspection.is_empty():
+		if nearest_inspection_distance + 0.4 < nearest_distance:
+			_nearest_station = {}
+		else:
+			_nearest_inspection = {}
 
 func _update_hud() -> void:
 	if _tasks.is_empty():
 		return
-	_hud.update_status(_tasks[mini(_task_index, _tasks.size() - 1)], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode)
+	_hud.update_status(_tasks[mini(_task_index, _tasks.size() - 1)], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode, _nearest_inspection)
 
 func _submit_answer(answer: String) -> void:
 	if _round_done or _tasks.is_empty():

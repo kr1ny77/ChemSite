@@ -100,6 +100,11 @@ Questions are selected from a much larger bank.
 10. Construction Materials Station
 11. Inspection / Submission Station
 
+Six optional inspection points make the concrete frame, sample cart, field lab,
+safety post, mixer and material cache explorable. They show short curated notes
+without advancing or scoring the five-task round. Main chemistry stations remain
+the route for every required task.
+
 ## Interaction styles
 
 Avoid turning the game into a normal quiz website.

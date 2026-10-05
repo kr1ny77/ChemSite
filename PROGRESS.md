@@ -10,6 +10,7 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 - Replaced the shipped segmented character with the MPFB human. Authored all nine actions on the 53-bone skeleton, replaced the stock camouflage shader with solid blue workwear, and kept an editable Blender source. Fresh Blender and Godot imports, six key-pose reviews, and live isometric locomotion captures confirm the playable integration.
 - Moved the isometric camera closer to the playable site and captured its initial and four edge views. Corrected reduced-motion camera tracking so the player remains framed without camera easing.
 - Authored a repeatable Blender/GLB temporary construction fence and enclosed the active yard with physical collision. Reviewed the four-view asset and game camera, walked routes to all five levels' stations, and tested all four fence sides. The Apple M4 uncapped baseline remains above 60 FPS at 1440×900.
+- Added six data-driven, optional site inspections at the frame, cart, field lab, safety point, mixer and materials cache. Their prompt and panel use the native HUD; observations leave task score and progress unchanged. Cement and mixing claims were checked against ACI and American Cement Association references.
 - Tied Walk and Run animation playback rate to actual horizontal player speed so locomotion cadence follows acceleration and braking. Godot editor import/parse and locomotion capture passed; full-cycle foot contact polish remains open.
 - Inspected 270 project-local skills, the installed Blender Agent Studio MCP tools, the repository, existing curriculum and task bank, Git remote, Godot, Blender and Git LFS.
 - Preserved the browser application, its tests, asset bundle and 200 curated task seeds in `legacy-web/`; moved the design and chemistry reference documents to `docs/`.
@@ -86,13 +87,15 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, and enclosed the closer-framed yard with modeled fencing. The shipped human worker has a continuous mesh, 53 bones and nine imported animations. Clothing detail, joint deformation, foot contact and open-bay dressing need polish. Human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made six surrounding props inspectable. The shipped human worker has a continuous mesh, 53 bones and nine imported animations. Clothing detail, joint deformation, foot contact and open-bay dressing need polish. Human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
 Fill the open bays with readable, useful construction activity; improve clothing detail and planted foot contact, then continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Godot 4.7.2 import/parse, all six optional inspection interactions, unchanged task progress, Level 1 source round, station routes and collision smokes passed. All 200 task panels passed the 1028×642 layout smoke. The first and longest inspection panels were visually reviewed at 1028×642; the rebuilt graphical macOS inspection run passed cleanly after exit cleanup. Refreshed macOS release export passed both `CHEMSITE_EXPORT_SITE_INSPECTIONS_OK` and `CHEMSITE_EXPORT_LEVEL1_ROUND_OK`. Windows workflow now includes packaged inspection QA; its next run follows the source push. The earlier fence commit's Windows native smoke passed; its visual QA was still running at last check.
 
 2026-10-05: Blender 5.2.2 exported an editable five-material temporary fence; Blender Agent Studio fresh-imported 2,480 triangles with no issues and produced four-view evidence. Godot 4.7.2 import/parse passed. Reviewed 1440×900 and 1028×642 site captures plus a right-edge camera view. Station-route smokes for Levels 1–5, general collision and four-side fence collision all passed. Apple M4 uncapped 1440×900 source profile reported exploration/task p90 frame intervals of 7.33/7.40 ms and median draw calls of 570/583. The refreshed macOS release app passed a packaged Level 1 round and an 11-capture visual round; its first task panel was inspected. Student-laptop performance and native Windows CI for this change remain open.
 
@@ -141,7 +144,6 @@ Fill the open bays with readable, useful construction activity; improve clothing
 ## Known issues
 
 - The integrated MPFB character has nine actions and visibly improved anatomy. The solid workwear still lacks seams and safety details. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
-- The updated character still has rigid limb assemblies, seven bones and visibly stylized anatomy. It does not yet meet the requested realistic character quality. Blender fresh-import inspection reports 64 degenerate faces/zero-length edges from the current beveled geometry; the final mesh pass should resolve these.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.

@@ -901,6 +901,10 @@ Write tests for:
 
 ---
 
+## Optional site observations
+
+`data/chemistry/site_inspections.json` contains optional, unscored site observations. Each entry has a stable `id`, a visible `name`, a three-number world `position`, and a short `text`. The world loader converts positions to `Vector3`; the HUD displays the text without treating it as a chemistry answer. Scientific claims receive a source check in `docs/CHEMISTRY_REVIEW.md`.
+
 ## Core rule
 
 Chemistry content is data.

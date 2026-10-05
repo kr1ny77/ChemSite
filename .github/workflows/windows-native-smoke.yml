@@ -53,6 +53,8 @@ jobs:
           }
           $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow
           if ($mission.ExitCode -ne 0) { throw "Level 5 mission smoke failed ($($mission.ExitCode))" }
+          $inspections = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-site-inspections') -Wait -PassThru -NoNewWindow
+          if ($inspections.ExitCode -ne 0) { throw "Site inspection smoke failed ($($inspections.ExitCode))" }
           $scales = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-scale-round') -Wait -PassThru -NoNewWindow
           if ($scales.ExitCode -ne 0) { throw "Level 3 scale smoke failed ($($scales.ExitCode))" }
           $solution = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-solution-round') -Wait -PassThru -NoNewWindow

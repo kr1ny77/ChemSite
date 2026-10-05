@@ -3,6 +3,7 @@ extends Node
 const SITE_SCENE: PackedScene = preload("res://scenes/levels/construction_site.tscn")
 const MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
 const EXPORT_ROUND_SMOKE = preload("res://scripts/qa/export_round_smoke.gd")
+const EXPORT_SITE_INSPECTION_SMOKE = preload("res://scripts/qa/export_site_inspection_smoke.gd")
 
 var _current: Node
 
@@ -10,6 +11,10 @@ func _ready() -> void:
 	show_menu()
 	if OS.get_cmdline_user_args().has("--qa-round"):
 		call_deferred("_run_export_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-site-inspections"):
+		call_deferred("_run_export_site_inspections")
+	elif OS.get_cmdline_user_args().has("--qa-visual-site-inspections"):
+		call_deferred("_run_export_visual_site_inspections")
 	elif OS.get_cmdline_user_args().has("--qa-level2-round"):
 		call_deferred("_run_export_level_two_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level3-round"):
@@ -77,6 +82,14 @@ func _ready() -> void:
 
 func _run_export_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_site_inspections() -> void:
+	var passed: bool = await EXPORT_SITE_INSPECTION_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_site_inspections() -> void:
+	var passed: bool = await EXPORT_SITE_INSPECTION_SMOKE.run(self, true)
 	get_tree().quit(0 if passed else 1)
 
 func _run_export_level_two_smoke() -> void:
