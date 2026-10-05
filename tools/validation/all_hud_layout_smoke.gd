@@ -36,6 +36,24 @@ func _run() -> void:
 			if expanded:
 				await process_frame
 				_check_panel(hud, str(task.id), "read", failures)
+	var feedback_checked := 0
+	for level in range(1, 6):
+		for task in TASK_BANK.load_verified_tasks(level):
+			for correct in [true, false]:
+				hud.show_feedback(correct, task, 200, 5)
+				await process_frame
+				await process_frame
+				_check_panel(hud, str(task.id), "feedback_correct" if correct else "feedback_wrong", failures)
+				feedback_checked += 1
+	for mode in ["career", "practice"]:
+		hud.show_results(700, 5, 600.0, 5, mode)
+		await process_frame
+		await process_frame
+		_check_panel(hud, mode, "results", failures)
+	hud.show_pause()
+	await process_frame
+	await process_frame
+	_check_panel(hud, "pause", "pause", failures)
 	hud.queue_free()
 	await process_frame
 	for failure in failures:
@@ -44,6 +62,7 @@ func _run() -> void:
 		quit(1)
 		return
 	print("CHEMSITE_HUD_LAYOUT_OK: %d verified task panels at %dx%d" % [checked, root.get_viewport().size.x, root.get_viewport().size.y])
+	print("CHEMSITE_FEEDBACK_LAYOUT_OK: %d correct/wrong panels and career/practice results" % feedback_checked)
 	quit()
 
 func _check_panel(hud: Control, identifier: String, phase: String, failures: Array[String]) -> void:

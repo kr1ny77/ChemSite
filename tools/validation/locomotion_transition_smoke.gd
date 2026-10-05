@@ -32,6 +32,23 @@ func _run() -> void:
 		return
 	if not _check(Vector2(player.velocity.x, player.velocity.z).length() < 0.01, "Player kept drifting after release"):
 		return
+	player.set_physics_process(false)
+	player._animation_tree.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+	for states in [["Walk", "Run"], ["Run", "Walk"]]:
+		for phase in [0.12, 0.35, 0.62, 0.89]:
+			player._set_animation_rate(states[0], 1.3)
+			player._set_animation_rate(states[1], 1.8)
+			player._playback.start(states[0])
+			player._current_animation = states[0]
+			player._animation_tree.advance(0.0)
+			player._animation_tree.set("parameters/%s/TimeSeek/seek_request" % states[0], phase * float(player._clip_lengths[states[0]]))
+			player._animation_tree.advance(0.0)
+			player._travel(states[1])
+			player._animation_tree.advance(0.0)
+			var actual: float = player._playback.get_current_play_position() / float(player._clip_lengths[states[1]])
+			if not _check(absf(actual - phase) < 0.001, "Locomotion phase lost: %s -> %s, %.3f -> %.3f" % [states[0], states[1], phase, actual]):
+				return
+	print("LOCOMOTION_PHASE_TRANSFER_OK")
 	print("LOCOMOTION_TRANSITION_SMOKE_OK")
 	quit()
 

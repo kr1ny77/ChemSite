@@ -39,7 +39,7 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
-- [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Renewed native Windows graphical acceptance follows the source push.
+- [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Windows native/graphical runs 37343958767/37343958751 passed the repair; all 154 screenshot dimensions and archive digest were verified. A feedback placement issue discovered in the artifact is covered by the next gate.
 
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.
 - [ ] Replace the segmented mannequin with a continuous, fully deforming worker mesh and improve locomotion foot contact.
@@ -48,7 +48,8 @@
   - [x] Relax arm carriage in idle/locomotion/station poses, key every bone explicitly to isolate actions, and base locomotion on collision-resolved velocity; nine sampled action poses, four blocked-movement directions and source/exported round pass.
   - [x] Calibrate the imported sole against the capsule and level plane, bake full-cycle vertical Walk support, inspect native walk/run frames, and verify actual skinned vertex heights in Godot; steady Walk stance is covered by the following gate.
   - [x] Correct steady Walk stance trajectory, rigid sole skinning, exact clip timing and cyclic Godot import; validate both supporting soles and repeated playback. Run, turning and transitions remain open.
-  - [x] Rebuild Run with alternating 35% support and short 70 mm flight arcs, calibrate playback speed to stance travel, inspect contact/flight poses and native video, and verify Run soles. Add hysteresis and a native threshold/stop transition gate. Phase alignment, turns and footstep timing remain open.
+  - [x] Rebuild Run with alternating 35% support and short 70 mm flight arcs, calibrate playback speed to stance travel, inspect contact/flight poses and native video, and verify Run soles. Add hysteresis and a native threshold/stop transition gate. Phase transfer and contact audio are covered by the following gate; turns remain open.
+  - [x] Preserve normalized Walk/Run phase through TimeSeek, check eight transfers at different playback rates, and emit footsteps on quarter/three-quarter contacts. Verify silence while stationary or controls are disabled, native transition video with audio, source collisions/round and refreshed macOS release.
   - [x] Replace the blue camouflage material, author/export nine actions, inspect key poses, and integrate the GLB in Godot; source gameplay capture shows the new worker in motion.
   - [ ] Improve cloth tailoring, safety detail, joint deformation and planted foot contact; review the final mesh and motion from gameplay and close-up angles.
 - [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.
@@ -60,6 +61,7 @@
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
+- [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
 

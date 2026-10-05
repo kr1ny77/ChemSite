@@ -19,7 +19,9 @@ var _animation_tree: AnimationTree
 var _playback: AnimationNodeStateMachinePlayback
 var _current_animation: String = ""
 var _reaction_state: String = ""
-var _step_distance: float = 0.0
+var _step_state: String = ""
+var _step_phase: float = 0.0
+var _clip_lengths: Dictionary = {}
 
 func _ready() -> void:
 	var model_scene := load("res://assets/models/character/chemist.glb") as PackedScene
@@ -45,14 +47,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	# Collision response supplies the speed that is actually visible on screen.
 	horizontal = Vector2(velocity.x, velocity.z)
-	if is_on_floor() and controls_enabled and direction.length_squared() > 0.001:
-		_step_distance += Vector2(velocity.x, velocity.z).length() * delta
-		if _step_distance >= 1.5:
-			_step_distance -= 1.5
-			footstep.emit()
-	else:
-		_step_distance = 0.7
 	var speed := horizontal.length()
+	_update_footstep(speed)
 	if speed > 0.08:
 		var target_yaw := atan2(horizontal.x, horizontal.y)
 		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, 1.0 - exp(-turn_speed * delta))
@@ -66,6 +62,25 @@ func _physics_process(delta: float) -> void:
 		if _animation_tree != null:
 			_set_animation_rate("Walk", clampf(speed / WALK_NOMINAL_SPEED, 0.5, 3.3))
 			_set_animation_rate("Run", clampf(speed / RUN_NOMINAL_SPEED, 0.5, 2.4))
+
+func _update_footstep(speed: float) -> void:
+	if _playback == null or not controls_enabled or not is_on_floor() or speed <= 0.18:
+		_step_state = ""
+		return
+	var state := str(_playback.get_current_node())
+	if state not in ["Walk", "Run"]:
+		_step_state = ""
+		return
+	var phase := fposmod(_playback.get_current_play_position() / float(_clip_lengths[state]), 1.0)
+	if state == _step_state:
+		for contact in [0.25, 0.75]:
+			var crossed: bool = contact > _step_phase and contact <= phase
+			if phase < _step_phase:
+				crossed = contact > _step_phase or contact <= phase
+			if crossed:
+				footstep.emit()
+	_step_state = state
+	_step_phase = phase
 
 func _set_animation_rate(state: String, rate: float) -> void:
 	var parameter := "parameters/%s/TimeScale/scale" % state
@@ -103,11 +118,14 @@ func _setup_animation(model: Node) -> void:
 			continue
 		var animation := AnimationNodeAnimation.new()
 		animation.animation = state_name
+		_clip_lengths[state_name] = player.get_animation(state_name).length
 		if state_name in ["Walk", "Run"]:
 			var blend := AnimationNodeBlendTree.new()
 			blend.add_node("Animation", animation)
 			blend.add_node("TimeScale", AnimationNodeTimeScale.new())
-			blend.connect_node("TimeScale", 0, "Animation")
+			blend.add_node("TimeSeek", AnimationNodeTimeSeek.new())
+			blend.connect_node("TimeSeek", 0, "Animation")
+			blend.connect_node("TimeScale", 0, "TimeSeek")
 			blend.connect_node("output", 0, "TimeScale")
 			machine.add_node(state_name, blend)
 		else:
@@ -118,6 +136,8 @@ func _setup_animation(model: Node) -> void:
 				continue
 			var transition := AnimationNodeStateMachineTransition.new()
 			transition.xfade_time = 0.2
+			if from_state in ["Walk", "Run"] and to_state in ["Walk", "Run"]:
+				transition.reset = false
 			machine.add_transition(from_state, to_state, transition)
 	_animation_tree = AnimationTree.new()
 	visual.add_child(_animation_tree)
@@ -130,5 +150,9 @@ func _setup_animation(model: Node) -> void:
 func _travel(state_name: String) -> void:
 	if _playback == null or state_name == _current_animation:
 		return
+	if _current_animation in ["Walk", "Run"] and state_name in ["Walk", "Run"]:
+		# Preserve which boot is supporting, despite different cycle durations.
+		var phase := fposmod(_playback.get_current_play_position() / float(_clip_lengths[_current_animation]), 1.0)
+		_animation_tree.set("parameters/%s/TimeSeek/seek_request" % state_name, phase * float(_clip_lengths[state_name]))
 	_playback.travel(state_name)
 	_current_animation = state_name

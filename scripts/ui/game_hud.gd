@@ -36,7 +36,7 @@ var _comparison_view: VBoxContainer
 var _ph_view: VBoxContainer
 var _ionization_view: VBoxContainer
 var _dissociation_view: VBoxContainer
-var _task_panel_active := false
+var _panel_fit_active := false
 
 func _ready() -> void:
 	var hud_theme := Theme.new()
@@ -103,7 +103,7 @@ func _ready() -> void:
 	_panel_content = VBoxContainer.new()
 	_panel_content.add_theme_constant_override("separation", 15)
 	_panel.add_child(_panel_content)
-	_panel_content.minimum_size_changed.connect(_fit_task_panel.call_deferred)
+	_panel_content.minimum_size_changed.connect(_fit_panel.call_deferred)
 
 func update_status(task: Dictionary, completed: int, score: int, time_left: float, nearest: Dictionary, streak: int = 0, target_count: int = 5, mode: String = "career", inspection: Dictionary = {}) -> void:
 	_objective.text = "%s %d/%d  ·  %s" % ["ПРАКТИКА" if mode == "practice" else "ЗАДАНИЕ", mini(completed + 1, target_count), target_count, task.topic]
@@ -253,8 +253,8 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	_style_button(cancel, true)
 	cancel.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(cancel)
-	_task_panel_active = true
-	_fit_task_panel.call_deferred()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()
 	if _mission_stage != null:
 		_set_answer_enabled(false)
 		_mission_stage.focus_stage_button()
@@ -444,6 +444,8 @@ func show_site_note(note: Dictionary) -> void:
 	close.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(close)
 	close.grab_focus()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()
 
 func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: int = 0) -> void:
 	_clear_panel()
@@ -457,7 +459,14 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	_panel_content.add_child(_label(task.explanation, 21, Color("243b43")))
 	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("627679")))
 	if not correct:
-		_panel_content.add_child(_label("ОТВЕТ: " + str(task.correctAnswer), 19, Color("243b43")))
+		var answer: Variant = task.correctAnswer
+		var answer_text := str(answer)
+		if answer is Dictionary:
+			answer_text = str(answer.get("value", ""))
+			var unit := str(answer.get("unit", ""))
+			if not unit.is_empty():
+				answer_text += " " + unit
+		_panel_content.add_child(_label("ОТВЕТ: " + answer_text, 19, Color("243b43")))
 		if not str(task.get("example", "")).is_empty():
 			_panel_content.add_child(_label("ПРИМЕР: " + str(task.example), 18, Color("627679")))
 	var next := Button.new()
@@ -466,6 +475,8 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	next.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(next)
 	next.grab_focus()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()
 
 func show_results(score: int, completed: int, time_left: float, target_count: int = 5, mode: String = "career") -> void:
 	_clear_panel()
@@ -492,6 +503,8 @@ func show_results(score: int, completed: int, time_left: float, target_count: in
 	menu.pressed.connect(func() -> void: exit_requested.emit())
 	_panel_content.add_child(menu)
 	menu.grab_focus()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()
 
 func show_pause() -> void:
 	_clear_panel()
@@ -509,6 +522,8 @@ func show_pause() -> void:
 	menu.pressed.connect(func() -> void: exit_requested.emit())
 	_panel_content.add_child(menu)
 	resume.grab_focus()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()
 
 func close_panel() -> void:
 	_panel.visible = false
@@ -517,7 +532,9 @@ func is_panel_open() -> bool:
 	return _panel.visible
 
 func _clear_panel() -> void:
-	_task_panel_active = false
+	_panel_fit_active = false
+	_panel.offset_top = 0.0
+	_panel.offset_bottom = 0.0
 	_mission_stage = null
 	_mix_view = null
 	_scale_view = null
@@ -531,8 +548,8 @@ func _clear_panel() -> void:
 		_panel_content.remove_child(child)
 		child.queue_free()
 
-func _fit_task_panel() -> void:
-	if not _task_panel_active or not _panel.visible:
+func _fit_panel() -> void:
+	if not _panel_fit_active or not _panel.visible:
 		return
 	var viewport_height := get_viewport_rect().size.y
 	var height := minf(_panel.get_combined_minimum_size().y + 12.0, viewport_height * 0.92)
