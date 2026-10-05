@@ -97,7 +97,7 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Polish PickUp and contact during tight turns, then fill open bays, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Polish PickUp and contact during tight turns, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
 
