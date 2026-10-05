@@ -39,6 +39,8 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
+- [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Renewed native Windows graphical acceptance follows the source push.
+
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.
 - [ ] Replace the segmented mannequin with a continuous, fully deforming worker mesh and improve locomotion foot contact.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.

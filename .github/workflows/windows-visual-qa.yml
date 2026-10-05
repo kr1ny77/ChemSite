@@ -7,6 +7,8 @@ on:
       - scripts/ui/**
       - scripts/core/**
       - scripts/qa/**
+      - scripts/player/**
+      - tools/validation/**
       - scenes/**
       - assets/models/**
       - data/chemistry/**
@@ -49,11 +51,25 @@ jobs:
       - name: Capture graphical career and focused interaction rounds
         shell: pwsh
         run: |
-          $layout = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/all_hud_layout_smoke.gd') -Wait -PassThru -NoNewWindow
-          if ($layout.ExitCode -ne 0) { throw "All-task HUD layout check failed ($($layout.ExitCode))" }
+          New-Item -ItemType Directory -Force -Path 'artifacts/windows-visual/logs' | Out-Null
+          function Invoke-VisualCheck([string]$name, [string]$executable, [string[]]$arguments, [int]$timeoutSeconds = 180) {
+            Write-Host "Starting graphical QA: $name"
+            $stdout = "artifacts/windows-visual/logs/$name.stdout.log"
+            $stderr = "artifacts/windows-visual/logs/$name.stderr.log"
+            $process = Start-Process -FilePath $executable -ArgumentList $arguments -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+            if (-not $process.WaitForExit($timeoutSeconds * 1000)) {
+              Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+              Get-Content $stdout, $stderr -ErrorAction SilentlyContinue | Write-Host
+              throw "$name graphical QA timed out after $timeoutSeconds seconds"
+            }
+            $process.Refresh()
+            Get-Content $stdout, $stderr -ErrorAction SilentlyContinue | Write-Host
+            if ($process.ExitCode -ne 0) { throw "$name graphical QA failed ($($process.ExitCode))" }
+            Write-Host "Completed graphical QA: $name"
+          }
+          Invoke-VisualCheck 'all-hud-layouts' $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/all_hud_layout_smoke.gd')
           foreach ($check in @('settings_ui_smoke.gd', 'reduced_motion_smoke.gd')) {
-            $result = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', "tools/validation/$check") -Wait -PassThru -NoNewWindow
-            if ($result.ExitCode -ne 0) { throw "$check accessibility check failed ($($result.ExitCode))" }
+            Invoke-VisualCheck $check $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', "tools/validation/$check")
           }
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
           $rounds = @(
@@ -73,15 +89,7 @@ jobs:
             @{ Name = 'level4-corrosion'; Flag = '--qa-visual-level4-corrosion-round'; Folder = 'qa-visual-level4-round-mission' }
           )
           foreach ($round in $rounds) {
-            $game = Start-Process -FilePath $exe -ArgumentList @('--rendering-method', 'gl_compatibility', '--', $round.Flag) -PassThru
-            try {
-              Wait-Process -Id $game.Id -Timeout 90 -ErrorAction Stop
-            } catch {
-              Stop-Process -Id $game.Id -Force -ErrorAction SilentlyContinue
-              throw "$($round.Name) graphical QA round timed out"
-            }
-            $game.Refresh()
-            if ($game.ExitCode -ne 0) { throw "$($round.Name) graphical QA round failed ($($game.ExitCode))" }
+            Invoke-VisualCheck $round.Name $exe @('--rendering-method', 'gl_compatibility', '--', $round.Flag) 90
             $captures = Get-ChildItem (Join-Path $env:APPDATA 'Godot/app_userdata') -Recurse -Filter 'task_01.png' -ErrorAction SilentlyContinue | Where-Object { $_.Directory.Name -eq $round.Folder }
             if (-not $captures) { throw "$($round.Name) graphical QA screenshot missing" }
             $destination = "artifacts/windows-visual/$($round.Name)"
@@ -101,5 +109,5 @@ jobs:
         if: always()
         with:
           name: ChemSite-Windows-visual-QA
-          path: artifacts/windows-visual/**/*.png
+          path: artifacts/windows-visual/**/*
           if-no-files-found: warn

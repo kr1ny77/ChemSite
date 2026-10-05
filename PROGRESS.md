@@ -97,9 +97,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Align Walk/Run phase and footstep timing, polish turns and PickUp, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Verify the repaired Windows graphical run, align Walk/Run phase and footstep timing, polish turns and PickUp, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Reproduced the Windows graphical timeout's stale reduced-motion assertion locally: the test expected a stationary camera after the camera had changed to immediate follow, then remained running after assertion failure. Updated the test to verify immediate follow at all four yard edges, static lights, suppressed feedback effects and settings propagation. Every failure now returns exit 1; an injected failure verifies prompt termination. Graphical reduced-motion, settings UI and all 200 HUD panels at 1028×642 pass locally. Windows workflow retains all 14 rounds/154 PNGs and adds bounded named process checks plus uploaded stdout/stderr logs. YAML parses. Windows native runs 37343417768 (38882d9) and 37343467591 (3b37af6) passed; graphical run 37343417944 was live before the repair push. Current graphical acceptance remains pending.
 
 2026-10-05: Alternating Run support and flight are rebuilt in Blender and calibrated to 2.934206 m/s. Fresh GLB inspection retains 32,585 triangles, 53 bones, nine actions and no issues. Dense source support/flight error is 1.986 mm; native sole profile error is 2.244 mm and both supporting soles drift at most 3.037 mm over 105 stance samples. Final contact/flight multiviews and native run frames were reviewed; a 1.6-second native movie is saved. Editor import/parse, transition-threshold/release gate, collisions and source round pass. Refreshed macOS release round and graphical optional inspections pass. M4 1440×900 profile with --uncapped reports median 60 FPS, exploration/task p90 17.72/17.64 ms and 66.0/66.6 MB static memory; this sample does not establish student-laptop performance. Windows CI now includes the transition gate; verification of this change follows push. Prior Windows native run 37314667945 passed 9ce4456; visual run 37314668068 ended cancelled. Investigate repeated graphical-run cancellation before claiming current Windows visual acceptance.
 
