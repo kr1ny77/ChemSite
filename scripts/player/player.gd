@@ -37,6 +37,8 @@ func _physics_process(delta: float) -> void:
 	velocity.z = horizontal.y
 	velocity.y -= 20.0 * delta
 	move_and_slide()
+	# Collision response supplies the speed that is actually visible on screen.
+	horizontal = Vector2(velocity.x, velocity.z)
 	if is_on_floor() and controls_enabled and direction.length_squared() > 0.001:
 		_step_distance += Vector2(velocity.x, velocity.z).length() * delta
 		if _step_distance >= 1.5:
@@ -55,8 +57,13 @@ func _physics_process(delta: float) -> void:
 			movement_state = "Run" if speed > 3.5 else "Walk"
 		_travel(movement_state)
 		if _animation_tree != null:
-			_animation_tree.set("parameters/Walk/TimeScale/scale", clampf(speed / 1.25, 0.5, 2.4))
-			_animation_tree.set("parameters/Run/TimeScale/scale", clampf(speed / 2.6, 0.5, 2.4))
+			_set_animation_rate("Walk", clampf(speed / 1.25, 0.5, 2.4))
+			_set_animation_rate("Run", clampf(speed / 2.6, 0.5, 2.4))
+
+func _set_animation_rate(state: String, rate: float) -> void:
+	var parameter := "parameters/%s/TimeScale/scale" % state
+	if not is_equal_approx(float(_animation_tree.get(parameter)), rate):
+		_animation_tree.set(parameter, rate)
 
 func play_interact() -> void:
 	if reduced_motion:

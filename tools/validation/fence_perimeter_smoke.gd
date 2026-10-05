@@ -20,6 +20,8 @@ func _run() -> void:
 		Input.action_press(check.action)
 		for frame in range(90):
 			await physics_frame
+		assert(Vector2(player.velocity.x, player.velocity.z).length() < 0.08, "Player should stop against the fence")
+		assert(player._current_animation == "Idle", "Blocked movement should use the stationary animation")
 		Input.action_release(check.action)
 		var coordinate: float = player.global_position.x if check.axis == "x" else player.global_position.z
 		if check.positive:

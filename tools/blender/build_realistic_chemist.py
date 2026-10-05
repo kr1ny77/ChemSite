@@ -167,10 +167,17 @@ weighted_mesh("Hardhat raised ridge", stripe, [(0, 1, 2, 3)], helmet_dark, "head
 
 def key_pose(frame, turns):
     """Key anatomical rotations about stable world axes in the bind pose."""
-    for name, (pitch, yaw, roll) in turns.items():
-        if name not in export_rig.pose.bones:
-            raise KeyError(f"Missing game-engine bone: {name}")
-        pose_bone = export_rig.pose.bones[name]
+    missing = set(turns) - set(export_rig.pose.bones.keys())
+    if missing:
+        raise KeyError(f"Missing game-engine bones: {missing}")
+    for pose_bone in export_rig.pose.bones:
+        name = pose_bone.name
+        pitch, yaw, roll = turns.get(name, (0.0, 0.0, 0.0))
+        # The source bind pose spreads the upper arms by about 41 degrees.
+        # Relax them alongside the torso for idle, locomotion and station use.
+        # Explicit celebration abduction keeps its authored raised-arm pose.
+        if name in ("upperarm_l", "upperarm_r") and roll == 0.0:
+            roll = 0.52 if name.endswith("_l") else -0.52
         rest = pose_bone.bone.matrix_local.to_quaternion()
         rotation = (Quaternion(Vector((0, 0, 1)), yaw)
                     @ Quaternion(Vector((0, 1, 0)), roll)

@@ -6,6 +6,8 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Completed work
 
+- Relaxed upper-arm carriage by 0.52 rad from the source A pose for idle, locomotion and station use. Every action keys all bones, preventing inherited rotations from preceding authored poses. Movement animation and footsteps now use collision-resolved velocity; all four fence directions verify a stationary Idle state while input remains held.
+
 - Fitted yellow/silver safety tape and tailoring lines directly to the continuous coverall, preserving interpolated skin weights. Reviewed front/profile/back in neutral, Walk, UseStation and Celebrate plus live Godot locomotion. Fresh final GLB inspection reports 32,585 triangles, 53 bones, nine actions and no geometry issues.
 
 - Built a separate MPFB 2.0.17 human candidate using official CC0 MakeHuman assets, with a continuous mesh, 53-bone game-engine rig, workwear and an authored hardhat. A four-view render exposed planar vest panels; removed that prototype and confirmed the cleaner human silhouette. Recorded asset provenance and reproducible Blender build steps in `tools/blender/character_reference_notes.md`.
@@ -96,6 +98,8 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 Fill the open bays with readable, useful construction activity; improve clothing detail and planted foot contact, then continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Godot import/parse, four fence collisions including stationary animation assertions, source Level 1 round and refreshed macOS release Level 1 round passed after the arm/collision polish. Fresh Blender GLB inspection retained 32,585 triangles, 53 bones, nine actions and no issues. Front/profile/back samples for all nine actions and live Godot locomotion were visually reviewed; the PickUp action still reads as a forward bend and full-cycle foot contact remains open.
 
 2026-10-05: Blender 5.2.2 rebuilt the fitted workwear; final fresh-import inspection reports 11 skinned meshes, 32,585 triangles, 53 bones, nine actions and no issues. Four-view neutral/Walk/UseStation/Celebrate evidence and a live Godot locomotion crop were reviewed. Godot editor import/parse, source Level 1 round and rebuilt macOS release Level 1/optional-inspection rounds passed. The M4 profile reported exploration median 60 FPS with p90 17.42 ms and task-panel p90 7.32 ms; representative hardware remains open. Windows native run 37303680041 passed commit 5a4ad7d including packaged optional inspections; visual run 37303680048 remains live.
 

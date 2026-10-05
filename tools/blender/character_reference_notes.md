@@ -55,3 +55,5 @@ influences. A darker navy fabric replaces the light sleeve patches. The helper
 is `fit_garment_detail.py`; it keeps detail attached across body deformation.
 
 Final fitted-layer fresh import: 32,585 triangles, 11 skinned meshes, 10 materials, 53 bones and nine actions; zero degenerate faces/zero-length edges and no inspection issues. Neutral and Walk/UseStation/Celebrate front/profile/back evidence was opened; tape remains attached in those sampled poses. Live Godot locomotion was inspected. Full-cycle foot sliding, more relaxed arm carriage, fabric microdetail and footwear still require refinement.
+
+The subsequent arm-carriage repair rotates upper arms 0.52 rad toward the torso when explicit abduction is absent. Every key pose now keys all 53 bones, making clips independent of authoring order. Fresh-import samples for all nine actions were rendered in front/profile/back views and opened. Live Godot running confirms relaxed carriage. The PickUp sample still needs a bent-knee reach; full-cycle ground contact remains open.
