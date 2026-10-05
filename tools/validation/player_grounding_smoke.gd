@@ -28,7 +28,7 @@ func _run() -> void:
 	var hit := player.get_world_3d().direct_space_state.intersect_ray(query)
 	assert(not hit.is_empty(), "Physical walking surface missing")
 	var ground: float = hit.position.y
-	for clip in ["Idle", "Walk"]:
+	for clip in ["Idle", "Walk", "Run"]:
 		animations.play(clip)
 		var duration := animations.get_animation(clip).length
 		var maximum_error := 0.0
@@ -36,34 +36,42 @@ func _run() -> void:
 			animations.seek(duration * float(sample) / 416.0, true)
 			skeleton.force_update_all_bone_transforms()
 			var sole := _minimum_skinned_height(shoes, skeleton)
-			maximum_error = maxf(maximum_error, absf(sole - ground))
+			var height := 0.0
+			if clip == "Run":
+				var phase := fposmod(float(sample) / 416.0, 0.5)
+				if phase > 0.1 and phase < 0.25:
+					height = 0.07 * pow(sin(PI * (phase - 0.1) / 0.15), 2)
+			maximum_error = maxf(maximum_error, absf(sole - ground - height))
 		if maximum_error >= 0.003:
 			push_error("%s sole differs from physical floor by %.4f m" % [clip, maximum_error])
 			quit(1)
 			return
 		print("PLAYER_GROUNDING ", clip, " maximum_error_m=", maximum_error)
-	animations.play("Walk")
+	for clip in ["Walk", "Run"]:
+		animations.play(clip)
+		var duration := animations.get_animation(clip).length
+		var stance_length := 0.5 if clip == "Walk" else 0.35
+		var nominal_speed: float = player.WALK_NOMINAL_SPEED if clip == "Walk" else player.RUN_NOMINAL_SPEED
+		for side in [-1, 1]:
+			var vertex := _sole_vertex(shoes, side)
+			var start := 0.25 if side > 0 else 0.75
+			var first_point := Vector3.ZERO
+			var maximum_drift := 0.0
+			for sample in range(105):
+				var phase := start + stance_length * float(sample) / 104.0
+				animations.seek(fposmod(phase, 1.0) * duration, true)
+				skeleton.force_update_all_bone_transforms()
+				var point := _skinned_vertex(shoes, skeleton, vertex)
+				point.z += nominal_speed * (phase - start) * duration
+				if sample == 0:
+					first_point = point
+				maximum_drift = maxf(maximum_drift, Vector2(point.x - first_point.x, point.z - first_point.z).length())
+			if maximum_drift >= 0.004:
+				push_error("Steady %s sole vertex drifts by %.4f m" % [clip, maximum_drift])
+				quit(1)
+				return
+			print("PLAYER_STANCE ", clip, " side=", side, " maximum_drift_m=", maximum_drift)
 	var duration := animations.get_animation("Walk").length
-	print("PLAYER_WALK_DURATION ", duration)
-	for side in [-1, 1]:
-		var vertex := _sole_vertex(shoes, side)
-		var start := 0.25 if side > 0 else 0.75
-		var first_point := Vector3.ZERO
-		var maximum_drift := 0.0
-		for sample in range(105):
-			var phase := start + 0.5 * float(sample) / 104.0
-			animations.seek(fposmod(phase, 1.0) * duration, true)
-			skeleton.force_update_all_bone_transforms()
-			var point := _skinned_vertex(shoes, skeleton, vertex)
-			point.z += player.WALK_NOMINAL_SPEED * (phase - start) * duration
-			if sample == 0:
-				first_point = point
-			maximum_drift = maxf(maximum_drift, Vector2(point.x - first_point.x, point.z - first_point.z).length())
-		if maximum_drift >= 0.004:
-			push_error("Steady Walk sole vertex drifts by %.4f m" % maximum_drift)
-			quit(1)
-			return
-		print("PLAYER_STANCE side=", side, " maximum_drift_m=", maximum_drift)
 	animations.stop()
 	animations.play("Walk")
 	animations.advance(duration * 2.37)

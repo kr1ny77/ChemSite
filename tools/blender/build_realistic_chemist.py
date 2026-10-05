@@ -248,8 +248,23 @@ def walk_pose(phase, running=False):
         right_stride = -left_stride
         left_knee = max(0.0, math.cos(phase)) * 0.55
         right_knee = max(0.0, -math.cos(phase)) * 0.55
+    if running:
+        # Each boot supports 35% of the cycle; the intervening 15% is flight.
+        # Straight-leg stance translates uniformly while swing folds the knee.
+        def run_leg(cycle):
+            stance = ((cycle - 0.25) % 1.0)
+            if stance <= 0.35:
+                travel = 1.0 - 2.0 * stance / 0.35
+                knee = 0.0
+            else:
+                swing = (stance - 0.35) / 0.65
+                travel = -math.cos(math.pi * swing)
+                knee = math.sin(math.pi * swing) ** 2 * 1.05
+            return math.asin(math.sin(stride) * travel), knee
+        left_stride, left_knee = run_leg(phase / (2.0 * math.pi))
+        right_stride, right_knee = run_leg(phase / (2.0 * math.pi) - 0.5)
     return {
-        "pelvis": (0.025 * math.sin(phase * 2), 0.0, 0.024 * math.sin(phase)) if running else (0.0, 0.0, 0.0),
+        "pelvis": (0.0, 0.0, 0.0),
         "spine_03": (-0.07 if running else -0.025, 0.0, -0.022 * math.sin(phase)),
         "thigh_l": (-left_stride, 0.0, 0.0),
         "thigh_r": (-right_stride, 0.0, 0.0),
@@ -259,8 +274,8 @@ def walk_pose(phase, running=False):
         "foot_r": (right_stride - right_knee * 0.8, 0.0, 0.0),
         "upperarm_l": (arm_swing * left, 0.0, 0.0),
         "upperarm_r": (arm_swing * right, 0.0, 0.0),
-        "lowerarm_l": (-0.18 if running else -0.06, 0.0, 0.0),
-        "lowerarm_r": (-0.18 if running else -0.06, 0.0, 0.0),
+        "lowerarm_l": (-0.65 if running else -0.06, 0.0, 0.0),
+        "lowerarm_r": (-0.65 if running else -0.06, 0.0, 0.0),
     }
 
 
@@ -283,7 +298,12 @@ def ground_walk(clip_name):
         mesh = evaluated.to_mesh()
         minimum = min((evaluated.matrix_world @ v.co).z for v in mesh.vertices)
         evaluated.to_mesh_clear()
-        correction = inverse_rest @ Vector((0, 0, target_sole - minimum))
+        flight_height = 0.0
+        if clip_name == "Run":
+            phase = ((frame - first) / (last - first)) % 0.5
+            if 0.1 < phase < 0.25:
+                flight_height = 0.07 * math.sin(math.pi * (phase - 0.1) / 0.15) ** 2
+        correction = inverse_rest @ Vector((0, 0, target_sole + flight_height - minimum))
         samples.append((frame, pelvis.location.copy() + correction))
     for frame, location in samples:
         pelvis.location = location
@@ -295,19 +315,10 @@ action("Idle", [(1, {"spine_03": (0, 0, 0)}),
                 (20, {"spine_03": (-0.012, 0, 0)}),
                 (40, {"spine_03": (0, 0, 0)})])
 for clip_name, half_cycle in [("Walk", 13), ("Run", 10)]:
-    if clip_name == "Walk":
-        action(clip_name, [(1 + tick / 4.0, walk_pose(math.pi * tick / (4 * half_cycle)))
-                          for tick in range(8 * half_cycle + 1)])
-        continue
-    action(clip_name, [(1, walk_pose(0, clip_name == "Run")),
-                       (1 + half_cycle // 2, walk_pose(math.pi / 2, clip_name == "Run")),
-                       (1 + half_cycle, walk_pose(math.pi, clip_name == "Run")),
-                       (1 + half_cycle + half_cycle // 2,
-                        walk_pose(3 * math.pi / 2, clip_name == "Run")),
-                       (1 + 2 * half_cycle, walk_pose(2 * math.pi, clip_name == "Run"))],
-           {1 + half_cycle // 2: 0.035,
-            1 + half_cycle + half_cycle // 2: 0.035} if clip_name == "Walk" else {})
-ground_walk("Walk")
+    action(clip_name, [(1 + tick / 4.0,
+                       walk_pose(math.pi * tick / (4 * half_cycle), clip_name == "Run"))
+                      for tick in range(8 * half_cycle + 1)])
+    ground_walk(clip_name)
 action("Turn", [(1, {"pelvis": (0, -0.15, 0)}),
                 (9, {"pelvis": (0, 0.15, 0), "head": (0, -0.16, 0)}),
                 (17, {"pelvis": (0, 0, 0), "head": (0, 0, 0)})])

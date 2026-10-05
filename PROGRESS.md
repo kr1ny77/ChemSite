@@ -97,9 +97,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Polish Run stance, turning and locomotion transitions, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Align Walk/Run phase and footstep timing, polish turns and PickUp, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Alternating Run support and flight are rebuilt in Blender and calibrated to 2.934206 m/s. Fresh GLB inspection retains 32,585 triangles, 53 bones, nine actions and no issues. Dense source support/flight error is 1.986 mm; native sole profile error is 2.244 mm and both supporting soles drift at most 3.037 mm over 105 stance samples. Final contact/flight multiviews and native run frames were reviewed; a 1.6-second native movie is saved. Editor import/parse, transition-threshold/release gate, collisions and source round pass. Refreshed macOS release round and graphical optional inspections pass. M4 1440×900 profile with --uncapped reports median 60 FPS, exploration/task p90 17.72/17.64 ms and 66.0/66.6 MB static memory; this sample does not establish student-laptop performance. Windows CI now includes the transition gate; verification of this change follows push.
 
 2026-10-05: Corrected Walk stance trajectory and lower-sole skin weights; exported zero-start clips at 96 Hz, disabled animation optimization and enabled Idle/Walk/Run/UseStation loops. Fresh Blender inspection reports 32,585 triangles, 53 bones, nine actions and no issues. Dense source sampling passes (Walk height error 0.621 mm; both ankle stance ranges 1.419 mm). Godot actual sole validation passes 417 vertical and 105 stance samples with 0.804 mm maximum Walk height error and 1.419 mm horizontal sole drift; sustained playback wraps correctly after two cycles. A four-second native walking movie and early/middle/late poses were reviewed after moving the capture onto the clear central lane; the representative gameplay frame is in docs/screenshots/chemist-steady-walk.png. Editor import/parse, rebuilt macOS Level 1 round and graphical optional-inspection checks pass. M4 uncapped 1440×900 exploration/task median FPS 85/145, p90 intervals 17.00/7.56 ms; representative laptop performance remains open. Windows native run 37307766426 passed c78af27; visual run 37307766455 ended cancelled and needs renewed evidence for the latest source.
 
@@ -157,8 +159,8 @@ Polish Run stance, turning and locomotion transitions, then fill open bays with 
 
 ## Known issues
 
-- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Run stance, turning, acceleration/deceleration transitions and natural PickUp motion remain open.
-- The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
+- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Steady Run now also passes sole support and stance gates. Walk/Run phase alignment, turning, footstep timing, acceleration/deceleration transitions and natural PickUp motion remain open.
+- The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Steady Walk/Run foot plants have numeric and visual checks; transitions and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.

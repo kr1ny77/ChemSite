@@ -16,10 +16,13 @@ func _run() -> void:
 	if walking:
 		camera.size = 4.5
 		player.global_position = Vector3(-5.0, 0.04, 0.0)
+	else:
+		player.global_position = Vector3(0.0, 0.04, 5.0)
 	var folder := "res://artifacts/walk-grounding-frames" if walking else "res://artifacts/locomotion-frames"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
-	Input.action_press("move_right", 0.3 if walking else 1.0)
-	for frame in range(240 if walking else 72):
+	var movement := "move_right" if walking else "move_forward"
+	Input.action_press(movement, 0.3 if walking else 1.0)
+	for frame in range(240 if walking else 96):
 		await physics_frame
 		if frame > 0 and frame % 8 == 0:
 			await process_frame
@@ -33,6 +36,6 @@ func _run() -> void:
 			var detail := image.get_region(Rect2i(origin, Vector2i(520, 600)))
 			var path := folder + "/frame-%02d.png" % frame
 			assert(detail.save_png(path) == OK, "Locomotion frame capture failed")
-	Input.action_release("move_right")
+	Input.action_release(movement)
 	print("LOCOMOTION_CAPTURE_OK")
 	quit()

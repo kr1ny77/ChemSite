@@ -39,6 +39,8 @@ jobs:
           if ($import.ExitCode -ne 0) { throw "Godot import failed ($($import.ExitCode))" }
           $grounding = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', 'tools/validation/player_grounding_smoke.gd') -Wait -PassThru -NoNewWindow
           if ($grounding.ExitCode -ne 0) { throw "Skinned player grounding failed ($($grounding.ExitCode))" }
+          $locomotion = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--script', 'tools/validation/locomotion_transition_smoke.gd') -Wait -PassThru -NoNewWindow
+          if ($locomotion.ExitCode -ne 0) { throw "Locomotion transitions failed ($($locomotion.ExitCode))" }
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
           $export = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--export-release', '"Windows Desktop"', 'builds/windows/ChemSite.exe') -Wait -PassThru -NoNewWindow
           if ($export.ExitCode -ne 0) { throw "Godot export failed ($($export.ExitCode))" }

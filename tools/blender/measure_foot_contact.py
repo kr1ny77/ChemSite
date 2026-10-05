@@ -5,6 +5,7 @@ Usage: blender -b --python tools/blender/measure_foot_contact.py
 
 from pathlib import Path
 import json
+import math
 
 import bpy
 
@@ -38,6 +39,15 @@ for name in ("Idle", "Walk", "Run"):
           "min", round(min(support), 6), "max", round(max(support), 6),
           "support_error", round(error, 6))
     assert min(support) >= -0.019899, f"{name}: shoe penetrates bind sole plane"
+    if name == "Run":
+        profile_errors = []
+        for frame, left, right in samples:
+            phase = ((frame - first) / (last - first)) % 0.5
+            height = 0.07 * math.sin(math.pi * (phase - 0.1) / 0.15) ** 2 if 0.1 < phase < 0.25 else 0.0
+            profile_errors.append(abs(min(left, right) + 0.017899 - height))
+        report[name]["profile_error"] = max(profile_errors)
+        print("RUN_SUPPORT_PROFILE_ERROR", max(profile_errors))
+        assert max(profile_errors) < 0.002, "Run support/flight differs from authored contact profile"
     if name in ("Idle", "Walk"):
         assert error < 0.002, f"{name}: supporting shoe floats above sole plane"
 output = root / "artifacts/character-candidate/foot-contact-report.json"
