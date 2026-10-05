@@ -97,9 +97,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Review horizontal planted-foot drift across the full locomotion cycle, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Polish Run stance, turning and locomotion transitions, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-05: Corrected Walk stance trajectory and lower-sole skin weights; exported zero-start clips at 96 Hz, disabled animation optimization and enabled Idle/Walk/Run/UseStation loops. Fresh Blender inspection reports 32,585 triangles, 53 bones, nine actions and no issues. Dense source sampling passes (Walk height error 0.621 mm; both ankle stance ranges 1.419 mm). Godot actual sole validation passes 417 vertical and 105 stance samples with 0.804 mm maximum Walk height error and 1.419 mm horizontal sole drift; sustained playback wraps correctly after two cycles. A four-second native walking movie and early/middle/late poses were reviewed after moving the capture onto the clear central lane; the representative gameplay frame is in docs/screenshots/chemist-steady-walk.png. Editor import/parse, rebuilt macOS Level 1 round and graphical optional-inspection checks pass. M4 uncapped 1440×900 exploration/task median FPS 85/145, p90 intervals 17.00/7.56 ms; representative laptop performance remains open. Windows native run 37307766426 passed c78af27; visual run 37307766455 ended cancelled and needs renewed evidence for the latest source.
 
 2026-10-05: Blender quarter-frame fresh-GLB sampling covers 157 Idle, 105 Walk and 81 Run samples; maximum Walk supporting-plane error is 1.53 mm and Run retains its flight phase. Godot actual skinned-vertex evaluation against a physical floor ray reports maximum Idle/Walk errors of 0.18/1.40 mm across 105 samples per clip. Editor import/parse, all five level station routes, general/four-side fence collisions and source round passed. Native 1440×900 walk/run captures were opened. Rebuilt macOS release Level 1 and graphical site-inspection smokes passed cleanly. Windows source grounding gate was added; verification of this commit follows push.
 
@@ -155,7 +157,7 @@ Review horizontal planted-foot drift across the full locomotion cycle, then fill
 
 ## Known issues
 
-- Vertical sole calibration now passes in Blender and Godot. Horizontal planted-foot drift and the naturalness of the full gait cycle remain open.
+- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Run stance, turning, acceleration/deceleration transitions and natural PickUp motion remain open.
 - The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Walk/run foot plants and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.

@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fit_garment_detail import garment_detail
 OUT = ROOT / "artifacts" / "character-candidate"
 OUT.mkdir(parents=True, exist_ok=True)
+bpy.context.scene.render.fps = 96
 
 bpy.ops.object.select_all(action="SELECT")
 bpy.ops.object.delete(use_global=False)
@@ -124,6 +125,27 @@ for detail_material in (tape_border, tape, stitch):
     bpy.ops.object.join()
     members[0].name = detail_material.name
 
+# A manufactured sole keeps its shape as the ankle turns. The stock shoe
+# distributes some tread weight to the calf, which bends and slides the sole.
+# Blend the fitted upper/cuff back to its original weights above 55–110 mm.
+shoes = next(obj for obj in ObjectService.get_list_of_children(export_rig)
+             if "shoes06" in obj.name)
+for vertex in shoes.data.vertices:
+    blend = max(0.0, min(1.0, (0.11 - vertex.co.z) / 0.055))
+    if blend == 0:
+        continue
+    original = {group.group: group.weight for group in vertex.groups}
+    foot = shoes.vertex_groups["foot_l" if vertex.co.x > 0 else "foot_r"].index
+    weights = {group: weight * (1 - blend) for group, weight in original.items()}
+    weights[foot] = weights.get(foot, 0) + blend
+    for group in original:
+        shoes.vertex_groups[group].remove([vertex.index])
+    influences = sorted(weights.items(), key=lambda item: item[1], reverse=True)[:4]
+    total = sum(weight for _, weight in influences)
+    for group, weight in influences:
+        if weight > 1e-7:
+            shoes.vertex_groups[group].add([vertex.index], weight / total, "REPLACE")
+
 helmet_yellow = material("Hardhat polymer", (0.92, 0.60, 0.10), 0.38)
 helmet_dark = material("Hardhat gasket", (0.08, 0.11, 0.12), 0.68)
 
@@ -188,6 +210,9 @@ def key_pose(frame, turns):
 
 
 def action(name, frames, pelvis_drops=None):
+    # Preserve clip duration while sampling deformation at 96 Hz for GLB.
+    frames = [(1 + (frame - 1) * 4, turns) for frame, turns in frames]
+    pelvis_drops = {1 + (frame - 1) * 4: drop for frame, drop in (pelvis_drops or {}).items()}
     if export_rig.animation_data is None:
         export_rig.animation_data_create()
     clip = bpy.data.actions.new(name)
@@ -202,7 +227,7 @@ def action(name, frames, pelvis_drops=None):
     export_rig.animation_data.action = None
     track = export_rig.animation_data.nla_tracks.new()
     track.name = name
-    track.strips.new(name, frames[0][0], clip)
+    track.strips.new(name, int(frames[0][0]), clip)
     track.mute = True
 
 
@@ -211,17 +236,27 @@ def walk_pose(phase, running=False):
     arm_swing = 0.34 if running else 0.25
     left = math.sin(phase)
     right = -left
-    left_knee = max(0.0, -left) * (0.75 if running else 0.55)
-    right_knee = max(0.0, -right) * (0.75 if running else 0.55)
+    left_stride = stride * left
+    right_stride = stride * right
+    left_knee = max(0.0, -left) * 0.75
+    right_knee = max(0.0, -right) * 0.75
+    if not running:
+        # Stance travels from front to back; knee lift belongs to the forward
+        # swing. An inverse-sine hip angle keeps straight-leg travel linear.
+        triangle = 2.0 / math.pi * math.asin(math.sin(phase))
+        left_stride = math.asin(math.sin(stride) * triangle)
+        right_stride = -left_stride
+        left_knee = max(0.0, math.cos(phase)) * 0.55
+        right_knee = max(0.0, -math.cos(phase)) * 0.55
     return {
-        "pelvis": (0.025 * math.sin(phase * 2), 0.0, 0.024 * math.sin(phase)),
+        "pelvis": (0.025 * math.sin(phase * 2), 0.0, 0.024 * math.sin(phase)) if running else (0.0, 0.0, 0.0),
         "spine_03": (-0.07 if running else -0.025, 0.0, -0.022 * math.sin(phase)),
-        "thigh_l": (-stride * left, 0.0, 0.0),
-        "thigh_r": (-stride * right, 0.0, 0.0),
+        "thigh_l": (-left_stride, 0.0, 0.0),
+        "thigh_r": (-right_stride, 0.0, 0.0),
         "calf_l": (left_knee, 0.0, 0.0),
         "calf_r": (right_knee, 0.0, 0.0),
-        "foot_l": (stride * left - left_knee * 0.8, 0.0, 0.0),
-        "foot_r": (stride * right - right_knee * 0.8, 0.0, 0.0),
+        "foot_l": (left_stride - left_knee * 0.8, 0.0, 0.0),
+        "foot_r": (right_stride - right_knee * 0.8, 0.0, 0.0),
         "upperarm_l": (arm_swing * left, 0.0, 0.0),
         "upperarm_r": (arm_swing * right, 0.0, 0.0),
         "lowerarm_l": (-0.18 if running else -0.06, 0.0, 0.0),
@@ -260,6 +295,10 @@ action("Idle", [(1, {"spine_03": (0, 0, 0)}),
                 (20, {"spine_03": (-0.012, 0, 0)}),
                 (40, {"spine_03": (0, 0, 0)})])
 for clip_name, half_cycle in [("Walk", 13), ("Run", 10)]:
+    if clip_name == "Walk":
+        action(clip_name, [(1 + tick / 4.0, walk_pose(math.pi * tick / (4 * half_cycle)))
+                          for tick in range(8 * half_cycle + 1)])
+        continue
     action(clip_name, [(1, walk_pose(0, clip_name == "Run")),
                        (1 + half_cycle // 2, walk_pose(math.pi / 2, clip_name == "Run")),
                        (1 + half_cycle, walk_pose(math.pi, clip_name == "Run")),
@@ -308,6 +347,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(source / "realistic_chemist.blend"))
 bpy.ops.export_scene.gltf(
     filepath=str(OUT / "chemist_candidate.glb"),
     export_format="GLB", use_selection=True, export_animation_mode="NLA_TRACKS",
+    export_anim_slide_to_zero=True,
 )
 shutil.copyfile(OUT / "chemist_candidate.glb", ROOT / "assets/models/character/chemist.glb")
 print("CHEMSITE_CHARACTER_CANDIDATE", OUT / "chemist_candidate.glb")

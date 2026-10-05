@@ -9,7 +9,7 @@ from pathlib import Path
 import bpy
 
 root = Path(__file__).resolve().parents[2]
-asset = root / "artifacts/character-candidate/chemist_candidate.glb"
+asset = root / "assets/models/character/chemist.glb"
 clip_name, frame_text = sys.argv[sys.argv.index("--") + 1:]
 frame = int(frame_text)
 

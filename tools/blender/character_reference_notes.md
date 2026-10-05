@@ -77,3 +77,9 @@ with a physics floor ray: Idle 0.18 mm, Walk 1.40 mm at 105 samples each.
 Walk/run native crops were inspected at 1440×900. Horizontal foot drift across
 traveled cycles still needs a separate gait refinement; vertical support alone
 does not establish a fully planted locomotion cycle.
+
+## Steady Walk stance calibration (2026-10-05)
+
+Walk uses linear supporting-leg travel through an inverse-sine hip curve, swing-phase knee flexion and a baked vertical pelvis correction. Lower boot soles use rigid foot weights, blending back to the original cuff weights between 55 and 110 mm. The source exports at 96 Hz with each action beginning at zero; the Walk cycle is 1.083333 seconds and nominal travel speed 1.100972 m/s. Godot imports at 96 Hz with optimization disabled and Idle/Walk/Run/UseStation loop mode enabled. This preserves stance keys and sustained playback.
+
+`measure_walk_stride.py` evaluates both stance ankle trajectories after fresh GLB import: 1.419 mm range, compared with the original 234 mm baseline at the previous nominal speed. `measure_foot_contact.py` samples 417 Walk positions and finds maximum supporting-plane error 0.621 mm. Native `player_grounding_smoke.gd` evaluates actual skin vertices and a physics floor: Walk height error 0.804 mm and both stance-sole horizontal ranges 1.419 mm. It also checks cyclic import properties and playback across two cycles. These gates cover steady straight walking on a flat plane. Run, turning, acceleration/deceleration and natural PickUp remain separate acceptance work.

@@ -19,8 +19,8 @@ for name in ("Idle", "Walk", "Run"):
     rig.animation_data.action = clip
     first, last = (int(value) for value in clip.frame_range)
     samples = []
-    for tick in range(first * 4, last * 4 + 1):
-        frame = tick / 4.0
+    for tick in range(first * 16, last * 16 + 1):
+        frame = tick / 16.0
         bpy.context.scene.frame_set(int(frame), subframe=frame % 1.0)
         depsgraph = bpy.context.evaluated_depsgraph_get()
         evaluated = shoes.evaluated_get(depsgraph)

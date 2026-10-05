@@ -45,6 +45,7 @@
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
   - [x] Relax arm carriage in idle/locomotion/station poses, key every bone explicitly to isolate actions, and base locomotion on collision-resolved velocity; nine sampled action poses, four blocked-movement directions and source/exported round pass.
   - [x] Calibrate the imported sole against the capsule and level plane, bake full-cycle vertical Walk support, inspect native walk/run frames, and verify actual skinned vertex heights in Godot; horizontal planted-foot drift remains open.
+  - [x] Correct steady Walk stance trajectory, rigid sole skinning, exact clip timing and cyclic Godot import; validate both supporting soles and repeated playback. Run, turning and transitions remain open.
   - [x] Replace the blue camouflage material, author/export nine actions, inspect key poses, and integrate the GLB in Godot; source gameplay capture shows the new worker in motion.
   - [ ] Improve cloth tailoring, safety detail, joint deformation and planted foot contact; review the final mesh and motion from gameplay and close-up angles.
 - [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.

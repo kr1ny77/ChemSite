@@ -13,10 +13,13 @@ func _run() -> void:
 	camera.size = 7.0
 	var player := site.get_node("Player") as CharacterBody3D
 	var walking := OS.get_cmdline_user_args().has("--walk")
+	if walking:
+		camera.size = 4.5
+		player.global_position = Vector3(-5.0, 0.04, 0.0)
 	var folder := "res://artifacts/walk-grounding-frames" if walking else "res://artifacts/locomotion-frames"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	Input.action_press("move_right", 0.3 if walking else 1.0)
-	for frame in range(72):
+	for frame in range(240 if walking else 72):
 		await physics_frame
 		if frame > 0 and frame % 8 == 0:
 			await process_frame

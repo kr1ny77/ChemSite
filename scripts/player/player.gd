@@ -4,6 +4,7 @@ signal footstep
 
 # The imported bind sole is at -17.899 mm; the capsule lower tip is at +5 mm.
 const MODEL_GROUND_OFFSET := 0.022899
+const WALK_NOMINAL_SPEED := 1.100972
 
 @export var run_speed: float = 5.2
 @export var acceleration: float = 14.0
@@ -61,7 +62,7 @@ func _physics_process(delta: float) -> void:
 			movement_state = "Run" if speed > 3.5 else "Walk"
 		_travel(movement_state)
 		if _animation_tree != null:
-			_set_animation_rate("Walk", clampf(speed / 1.25, 0.5, 2.4))
+			_set_animation_rate("Walk", clampf(speed / WALK_NOMINAL_SPEED, 0.5, 3.3))
 			_set_animation_rate("Run", clampf(speed / 2.6, 0.5, 2.4))
 
 func _set_animation_rate(state: String, rate: float) -> void:
