@@ -47,7 +47,8 @@
 - [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.
   - [x] Tighten the isometric framing for larger on-screen player and stations; verify initial 1440×900 and 1028×642 views and camera travel to four active-yard edges.
   - [x] Keep camera follow active with reduced motion using immediate tracking; capture all four edge views in normal and reduced-motion modes.
-  - [ ] Replace the broad empty apron with believable work zones and visible perimeter context while preserving station approach routes.
+  - [x] Replace the broad empty walkable apron with a modeled temporary fence and physical boundary; verify game-camera views, all five levels' station routes and four-side collision.
+  - [ ] Fill the remaining open bays with meaningful construction work zones and environmental story while preserving station approach routes.
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration

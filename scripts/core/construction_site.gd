@@ -162,10 +162,7 @@ func _build_world() -> void:
 	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
 	_block("Rebar bay collision", Vector3(-2.5, 1.34, 4.0), Vector3(2.35, 2.4, 1.26), Color(0, 0, 0, 0), true)
-	for x in [-44.7, 44.7]:
-		_block("Perimeter", Vector3(x, 0.62, 0), Vector3(0.25, 1.2, 90), Color("304c57"), true)
-	for z in [-44.7, 44.7]:
-		_block("Perimeter", Vector3(0, 0.62, z), Vector3(89.5, 1.2, 0.25), Color("304c57"), true)
+	_build_perimeter()
 	_environment_prop("site_cabin", Vector3(0.0, 0.0, -5.65))
 	_block("Site laboratory cabin collision", Vector3(0.0, 1.15, -5.65), Vector3(3.85, 2.3, 1.8), Color(0, 0, 0, 0), true)
 	_environment_prop("sample_cart", Vector3(-6.15, 0.0, -5.2))
@@ -205,6 +202,17 @@ func _build_world() -> void:
 		task_light.omni_range = 3.4
 		_world.add_child(task_light)
 		_work_lights.append(task_light)
+
+func _build_perimeter() -> void:
+	# A bounded, readable site replaces the broad empty walkable apron.
+	for z in [-9.5, 9.5]:
+		for index in range(7):
+			_environment_prop("site_fence", Vector3(-10.5 + float(index) * 3.5, 0, z))
+		_block("Fence boundary", Vector3(0, 1.0, z), Vector3(24.5, 2.0, 0.16), Color(0, 0, 0, 0), true)
+	for x in [-12.25, 12.25]:
+		for index in range(5):
+			_environment_prop("site_fence", Vector3(x, 0, -7.0 + float(index) * 3.5), PI * 0.5)
+		_block("Fence boundary", Vector3(x, 1.0, 0), Vector3(0.16, 2.0, 19.0), Color(0, 0, 0, 0), true)
 
 func _add_machinery_ambience(position: Vector3) -> void:
 	var stream := load("res://assets/audio/machinery_loop.wav") as AudioStreamWAV
@@ -336,13 +344,14 @@ func _station_prop(asset_name: String, pos: Vector3) -> void:
 				mesh.material_override = _station_accent_materials[key]
 	_world.add_child(prop)
 
-func _environment_prop(asset_name: String, pos: Vector3) -> void:
+func _environment_prop(asset_name: String, pos: Vector3, yaw: float = 0.0) -> void:
 	var scene := load("res://assets/models/environment/%s.glb" % asset_name) as PackedScene
 	if scene == null:
 		push_error("Environment asset missing: " + asset_name)
 		return
 	var prop := scene.instantiate() as Node3D
 	prop.position = pos
+	prop.rotation.y = yaw
 	_world.add_child(prop)
 
 func _find_nearest_station() -> void:

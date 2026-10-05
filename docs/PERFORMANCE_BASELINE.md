@@ -14,3 +14,5 @@ The uncapped sample shows rendering headroom on this M4. The VSync frame interva
 Remaining Phase 14 gate: capture the same states, a movement route and answer effects on a representative student laptop with a discrete or integrated Windows GPU; inspect frame-time spikes and memory there before optimizing. The current hardware baseline does not establish the target laptop result.
 
 On 2026-10-02, after the rear-left sample cart was added, the same 360-frame VSync source-project profile on Apple M4 reported 60 FPS median in exploration and task-panel states. Median draw calls were 560 and 615; static memory was 64.5 and 65.0 MB. This is a development-machine observation. The representative student-laptop gate remains open.
+
+On 2026-10-05, after adding 24 modeled fence panels and four physical boundary strips, the uncapped 1440×900 source-project profile on the same Apple M4 reported 7.33 ms exploration and 7.40 ms task-panel p90 frame intervals, with median draw calls of 570 and 583. The benchmark does not establish frame pacing on a representative student laptop.
