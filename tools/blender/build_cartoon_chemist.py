@@ -45,7 +45,7 @@ def rounded(name,loc,size,mat,radius):
     obj=bpy.context.object; obj.name=name; obj.dimensions=size
     bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
     obj.data.materials.append(mat)
-    bevel=obj.modifiers.new('Rounded silhouette','BEVEL'); bevel.width=radius; bevel.segments=6
+    bevel=obj.modifiers.new('Rounded silhouette','BEVEL'); bevel.width=min(radius,min(size)*.3) if name.startswith('Tool belt') else radius; bevel.segments=3 if name.startswith('Tool belt') else 6
     bpy.ops.object.modifier_apply(modifier=bevel.name)
     for face in obj.data.polygons: face.use_smooth=True
     normal=obj.modifiers.new('Surface normals','WEIGHTED_NORMAL')
@@ -208,6 +208,45 @@ for side in (-1,1):
         rounded('Hardhat vent '+str(side)+' '+str(i),(x,y,1.44),(.012,.025,.010),cloth_edge,.003)
 rounded('Hardhat front badge',(0,-.331,1.449),(.11,.014,.052),navy,.004)
 curve('Hardhat badge mark',[(0,-.345,1.462),(0,-.345,1.439),(.027,-.345,1.439)],.005,cream)
+# Construction equipment is fitted around the back of the waist, outside arm travel.
+leather=material('Tool belt warm leather',(.26,.105,.035),.75)
+curve('Tool belt waist',[(.307*math.cos(2*math.pi*i/96),.228*math.sin(2*math.pi*i/96),.447) for i in range(97)],.016,leather)
+rounded('Tool belt buckle',(0,-.248,.447),(.074,.023,.046),steel,.008)
+rounded('Tool belt buckle inset',(0,-.261,.447),(.042,.007,.023),dark,.004)
+# Tapered pouch has a shaped mouth, gussets, flap and riveted attachment.
+vertices=[];faces=[]
+for z,rx,ry in [(.307,.065,.035),(.35,.079,.047),(.438,.088,.045)]:
+    for i in range(16):
+        a=2*math.pi*i/16
+        vertices.append((-.31+rx*math.cos(a),.165+ry*math.sin(a),z))
+for row in range(2):
+    for i in range(16):
+        k=row*16+i;n=row*16+(i+1)%16;faces.append((k,n,n+16,k+16))
+faces.append(tuple(reversed(range(16))))
+mesh=bpy.data.meshes.new('Shaped pouch shell');mesh.from_pydata(vertices,[],faces);mesh.update()
+pouch=bpy.data.objects.new('Tool belt pouch',mesh);bpy.context.collection.objects.link(pouch);pouch.data.materials.append(leather)
+bpy.context.view_layer.objects.active=pouch
+solid=pouch.modifiers.new('Pouch wall','SOLIDIFY');solid.thickness=.005
+bpy.ops.object.modifier_apply(modifier=solid.name)
+for face in pouch.data.polygons:face.use_smooth=True
+parts.append(pouch)
+curve('Tool belt pouch lip',[(-.31+.088*math.cos(2*math.pi*i/32),.165+.045*math.sin(2*math.pi*i/32),.438) for i in range(33)],.005,cloth_edge)
+rounded('Tool belt pouch flap',(-.31,.216,.413),(.12,.012,.052),leather,.012)
+for x in (-.352,-.268):
+    rounded('Tool belt rivet',(x,.225,.424),(.014,.008,.014),steel,.004)
+curve('Tool belt pouch stitching',[(-.362,.217,.392),(-.354,.209,.329),(-.273,.209,.329),(-.26,.217,.392)],.0025,cream)
+# Short mallet stays behind the right sleeve; all pieces follow the pelvis.
+rounded('Tool belt hammer handle',(.313,.175,.356),(.025,.029,.20),leather,.009)
+rounded('Tool belt hammer head',(.313,.175,.468),(.14,.046,.05),steel,.012)
+rounded('Tool belt hammer loop',(.313,.175,.401),(.058,.058,.025),dark,.008)
+rounded('Tool belt tape case',(.16,.233,.424),(.098,.047,.088),yellow,.018)
+rounded('Tool belt tape face',(.16,.261,.424),(.063,.009,.054),dark,.014)
+rounded('Tool belt tape clip',(.16,.269,.424),(.015,.007,.025),steel,.003)
+# Back seam and fitted shoulder bands make the reverse view deliberately authored.
+curve('Vest back seam',[(0,-front_surface(0,z,.015),z) for z in [.56,.62,.70,.78,.84]],.003,cloth_edge)
+for side in (-1,1):
+    curve('Reflective back shoulder '+str(side),[(side*.15,-front_surface(side*.15,z,.017),z) for z in [.55,.64,.72,.80]],.012,cream)
+
 # Semantic joints retain stable names for native animation integration.
 bpy.ops.object.select_all(action='DESELECT')
 bpy.ops.object.armature_add(enter_editmode=True)
@@ -239,6 +278,7 @@ for obj in parts:
         co=obj.matrix_world @ v.co
         side='l' if co.x>0 else 'r'
         if obj.name.startswith(head_prefix): weights={'head':1}
+        elif obj.name.startswith('Tool belt'):weights={'pelvis':1}
         elif obj.name.startswith(('Boot','Sole')):weights={'foot_'+side:1}
         elif obj.name.startswith(('Hand','Thumb')):weights={'hand_'+side:1}
         elif obj.name.startswith(('Safety vest','Reflective','Shoulder')):weights={'spine_03':1}

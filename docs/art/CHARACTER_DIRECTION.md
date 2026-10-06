@@ -39,3 +39,13 @@ Final controller playtesting, Windows build verification and broader site polish
 continue.
 The earlier MPFB human and its contact measurements are historical production
 work. The shipped model now follows this cartoon contract.
+
+## Equipment refinement, 2026-10-06
+
+Original stylized equipment follows the existing compact body: a fitted leather
+waist belt, tapered open pouch with gussets/flap/rivets/stitching, a short secured
+mallet and a yellow tape-measure case. Equipment stays behind the sleeves, follows
+the pelvis rigidly, and keeps the 1.620 m body/helmet silhouette and sole geometry.
+The back receives a garment seam and fitted reflective shoulder strips. Material
+budget increases from twelve to thirteen; target stays below 45,000 triangles.
+Review front/back/profile neutral, Run and upright reach plus native game camera.

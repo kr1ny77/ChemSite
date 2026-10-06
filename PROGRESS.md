@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Construction equipment refinement — 2026-10-06
+
+Added a fitted leather belt and buckle, tapered open pouch with gussets/flap,
+rivets/stitching, secured short mallet, tape measure, rear garment seam and
+reflective strips. Equipment follows the pelvis; cartoon body and sole dimensions
+stay consistent. Corrected small-fastener bevel limits after inspection detected
+degenerate faces. Final fresh GLB: 43,912 triangles, thirteen materials, fifteen
+bones, nine actions and zero inspection issues. Reviewed four-view Run/upright
+reach and native front/rear captures. Blender six-action contact, native sole and
+phase-transition checks, source five-task round, import/parse and refreshed macOS
+export/packaged round pass. Native 120-process-frame rear Run capture passed after replacing waits on a fresh draw signal with completed-buffer reads. Earlier MovieMaker attempts timed out; those partial movies are historical and excluded from delivery. Windows cc3922a native/visual runs 37462555125/37462555134 both passed; archive review remains open. Full release gates remain in TODO.md.
+
+
 ## Cartoon production integration — 2026-10-06
 
 Replaced the production GLB and retained tools/blender/source/cartoon_chemist.blend.
@@ -15,7 +28,7 @@ beam occlusion; the subsequent camera visibility change resolves that path.
 Clean Apple M4 Forward+ profile at 1440×900: median 60 FPS, wall-frame p90
 17.32/17.36 ms exploration/task panel, static memory 67.8/68.5 MB. This measures
 the local M4; student-laptop profiling remains open. Windows native run 37461607374 passed cartoon source 9e1df3f; graphical run
-37461607453 was still live at the last check. Visibility changes await their push. Full production release,
+37461607453 completed successfully; archive review remains open. Visibility commit cc3922a was pushed. Full production release,
 human playtesting, course review and student-laptop performance remain open.
 
 ## Construction visibility — 2026-10-06
@@ -184,6 +197,8 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 Verify the integrated cartoon character on Windows, review movement transitions and tight-turn contact, and refine remaining character details from gameplay evidence. Then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Equipment GLB inspection and six-action contact checks passed. Native import/parse, grounding, phase transition, source round and refreshed packaged macOS round passed. Native front/rear and Run/reach multiview evidence reviewed.
 
 2026-10-05: Replaced heading interpolation with a critically damped angular response and 720°/s limit. Baseline 180° reversal jumped 25.073° in one 60 Hz frame; the new maximum is 12.000°. Native 90° turn settles within 0.001° after its full test interval. At 30/60/120 Hz the 0.6-second final error is 0.243/0.247/0.248°, with maximum rate bounded at 720°/s. Reviewed reversal and corner poses and opened the 2.5-second native turn movie with audio. Phase transfer, contact audio, collision and source round regressions pass. Editor import, refreshed macOS export and packaged round/graphical optional inspections pass. Windows source checks now require named success markers and bounded completion, including the turn gate. Windows native/visual runs 37345959532/37345959560 passed 968e671, including the enlarged feedback layout gate. Downloaded 154-image archive hash afe080df922ed426c9a4620d2e76a05090a057b22afe02d0e6d9b7bf0160758f matches GitHub metadata; full-size corrected corrosion feedback and Level 5 results were reviewed. Current turn change CI follows push.
 

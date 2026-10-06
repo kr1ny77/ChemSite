@@ -5,7 +5,7 @@ below. The shipped `assets/models/character/chemist.glb` now uses the original
 cartoon model from `tools/blender/source/cartoon_chemist.blend`. Authoring script:
 `tools/blender/build_cartoon_chemist.py`; candidate outputs go to
 `artifacts/cartoon-character/`. Blender 5.2.2; original geometry and solid-color
-materials, 39,400 triangles, 15 bones and nine actions. Four user-supplied
+materials, 43,912 triangles, 15 bones and nine actions. Four user-supplied
 Overcooked images guide rounded proportions and readable cartoon surfaces.
 Contract: `docs/art/CHARACTER_DIRECTION.md`. Geometry and textures from those
 reference games are absent from the authored asset.
@@ -18,6 +18,19 @@ support-edge interpolation accurate. Nominal Walk speed is 0.499512 m/s, Run
 50%, Run stance 20%. Upright PickUp/Interact preserve stationary soles. Native
 physics/controller gates use the actual imported skinned soles, preserve phase,
 check contact-aligned sound events and verify stopped animation against fences.
+
+## Equipment refinement, 2026-10-06
+
+Reused the supplied front/three-quarter cartoon references and accepted fitted
+workwear. Original equipment assumes a back-mounted compact tool belt: shaped
+pouch mouth/gussets/flap with rivets, a short mallet held in a loop and a yellow
+tape measure. Belt and equipment use rigid pelvis weights, clear the sleeves,
+and preserve the existing head/body/sole proportions. Added rear cloth seam and
+reflective strips. Neutral/Run/upright reach four-view evidence opened; fresh
+GLB has thirteen materials, fifteen bones, nine actions and zero inspection
+issues. Final folders: equipment-final-review, equipment-run-review,
+equipment-interact-review. Early equipment-review contains historical geometry
+before the small-fastener bevel correction. Native front/rear views reviewed.
 
 ## Historical human development evidence
 

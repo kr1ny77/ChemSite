@@ -52,6 +52,7 @@
   - [x] Add fitted vest tailoring/pockets/collar, sculpted hairline, hardhat ribs/vents/badge and boot detailing; inspect neutral/Run/Interact and native gameplay scale. Optimize to 39,400 triangles with clean GLB inspection.
   - [x] Promote the detailed cartoon GLB and editable source; recalibrate speed/cadence/ground tests, verify five walking routes, native movement gates and fresh packaged macOS round/visual round.
   - [x] Fade construction parts that obscure the player, restore opacity on exit and support instant reduced-motion feedback; verify native image, movement, collisions and macOS export.
+  - [x] Fit a shaped tool-belt pouch, mallet/loop, tape measure and rear garment details; verify fresh GLB, Run/upright reach views, native contact and packaged macOS round.
   - [ ] Review Windows cartoon graphical evidence and refine tight-turn/acceleration feel.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
