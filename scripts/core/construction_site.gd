@@ -98,6 +98,14 @@ func _ready() -> void:
 	_hud.resume_requested.connect(_resume)
 	_hud.exit_requested.connect(func() -> void: exit_requested.emit())
 	_update_hud()
+	get_window().focus_exited.connect(_pause_on_focus_loss)
+
+func _pause_on_focus_loss() -> void:
+	if _round_done or _hud == null or not _player.controls_enabled or _hud.is_panel_open():
+		return
+	_player.controls_enabled = false
+	_hud.show_pause()
+	_update_wayfinder()
 
 func _process(delta: float) -> void:
 	if not reduced_motion:

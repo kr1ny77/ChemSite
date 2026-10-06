@@ -86,6 +86,7 @@
 - [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
   - [x] Enlarge measured pH cards and add exact-value scale markers; verify four tasks across three window sizes and both motion settings, native capture and packaged pH round.
+- [x] Automatically pause exploration on desktop focus loss; freeze timer/movement, preserve open panels and require explicit resume. Verify native image and movement regressions.
 - [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
 

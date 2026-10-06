@@ -43,7 +43,11 @@ func _physics_process(delta: float) -> void:
 	var horizontal := Vector2(velocity.x, velocity.z)
 	var desired := Vector2(target.x, target.z)
 	var response := acceleration_response if direction.length_squared() > 0.001 else deceleration_response
-	horizontal = _smooth_velocity(horizontal, desired, response, delta)
+	if controls_enabled:
+		horizontal = _smooth_velocity(horizontal, desired, response, delta)
+	else:
+		horizontal = Vector2.ZERO
+		_motion_acceleration = Vector2.ZERO
 	if desired.is_zero_approx() and horizontal.length() < 0.01:
 		horizontal = Vector2.ZERO
 		_motion_acceleration = Vector2.ZERO

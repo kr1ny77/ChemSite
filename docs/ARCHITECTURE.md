@@ -53,3 +53,14 @@ uses a static marker. The card retains the exact numeric reading as primary evid
 The illustrative 0–14 scale clamps marker placement only; task values and validation
 remain unchanged. `ph_scale_smoke.gd` covers all four pH tasks at three window sizes
 in normal and reduced-motion modes.
+
+### Desktop focus and pause
+
+ConstructionSite listens to Window.focus_exited after HUD initialization. During
+active exploration it opens the existing pause UI, disables player controls and
+hides the target pointer. Existing task, feedback and result panels retain their
+state. The timer stays frozen while controls are disabled; the player clears
+horizontal velocity and its acceleration derivative at the next physics tick.
+Window focus return leaves the pause visible until the player resumes.
+The engine signal contract is documented at
+https://docs.godotengine.org/en/stable/classes/class_window.html#class-window-signal-focus-exited.

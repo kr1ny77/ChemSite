@@ -50,6 +50,7 @@ jobs:
             @{ Script = 'station_wayfinder_smoke'; Marker = 'STATION_WAYFINDER_SMOKE_OK' }
             @{ Script = 'mixing_visual_smoke'; Marker = 'MIXING_VISUAL_SMOKE_OK' }
             @{ Script = 'ph_scale_smoke'; Marker = 'PH_SCALE_SMOKE_OK' }
+            @{ Script = 'focus_pause_smoke'; Marker = 'FOCUS_PAUSE_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
