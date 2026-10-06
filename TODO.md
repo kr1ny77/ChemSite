@@ -55,7 +55,8 @@
   - [x] Fit a shaped tool-belt pouch, mallet/loop, tape measure and rear garment details; verify fresh GLB, Run/upright reach views, native contact and packaged macOS round.
   - [x] Add shaped knee reinforcements and outer trouser seams; refine bend topology, inspect neutral/Run/upright reach, verify native contact and macOS package.
   - [x] Review the cartoon Windows cc3922a graphical archive: verified digest, 154 dimensions, fourteen round sheets and full-size long panel; Compatibility render/audio limitations recorded.
-  - [ ] Collect latest Windows equipment/bench evidence and refine tight-turn/acceleration feel.
+  - [x] Review 9d5cc4a Windows evidence: verified SHA-256/size, 154 dimensions and fourteen round sheets.
+  - [ ] Refine tight-turn contact and complete the exported movement playtest.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
@@ -85,6 +86,7 @@
 - [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
   - [x] Enlarge measured pH cards and add exact-value scale markers; verify four tasks across three window sizes and both motion settings, native capture and packaged pH round.
+- [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
 
 ## Later phases

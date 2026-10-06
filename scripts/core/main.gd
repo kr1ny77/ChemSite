@@ -5,9 +5,17 @@ const MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
 const EXPORT_ROUND_SMOKE = preload("res://scripts/qa/export_round_smoke.gd")
 const EXPORT_SITE_INSPECTION_SMOKE = preload("res://scripts/qa/export_site_inspection_smoke.gd")
 
+const QA_PLAYTEST_SAVE := "user://qa_playtest_progress.json"
+const QA_PLAYTEST_SETTINGS := "user://qa_playtest_settings.json"
+
 var _current: Node
+var _manual_playtest := false
 
 func _ready() -> void:
+	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest")
+	if _manual_playtest:
+		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
+		print("CHEMSITE_MANUAL_PLAYTEST_ISOLATED")
 	show_menu()
 	if OS.get_cmdline_user_args().has("--qa-round"):
 		call_deferred("_run_export_smoke")
@@ -232,6 +240,7 @@ func start_game(mode: String = "career", topic: String = "", level: int = 1) -> 
 	_current.mode = mode
 	_current.practice_topic = topic
 	_current.level = level
+	_configure_playtest_paths()
 	add_child(_current)
 	_current.exit_requested.connect(show_menu)
 	_current.feedback_given.connect($AudioController.play_feedback)
@@ -242,4 +251,10 @@ func _replace(scene: PackedScene) -> void:
 	if is_instance_valid(_current):
 		_current.queue_free()
 	_current = scene.instantiate()
+	_configure_playtest_paths()
 	add_child(_current)
+
+func _configure_playtest_paths() -> void:
+	if _manual_playtest:
+		_current.save_path = QA_PLAYTEST_SAVE
+		_current.settings_path = QA_PLAYTEST_SETTINGS

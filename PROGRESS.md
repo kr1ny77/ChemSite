@@ -281,9 +281,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Collect the latest Windows graphical evidence, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Continue isolated exported keyboard playtesting, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Reviewed all fourteen Windows 9d5cc4a sheets (154 PNGs at 1028×642) after exact archive size/SHA-256 verification. Added persistent isolated `--qa-playtest` paths and passed menu/career/answer/menu isolation with unchanged standard progress/settings hashes. Godot import/parse and fresh macOS export succeeded. Native keyboard activation entered Level 1; CUA capture/window instability prevented completing movement/pause acceptance. Full keyboard/human playtest remains open; details in docs/PLAYTEST.md.
 
 2026-10-06: pH measurement cards now use larger text and native scale markers. All four pH tasks pass 24 size/motion cases; Godot import/parse, Level 3 content checks and refreshed macOS packaged pH round pass. Native comparison panel visually reviewed at 1028×642. Windows 9d5cc4a native/visual runs 37472305525/37472305531 passed; downloaded visual evidence review remains open.
 
