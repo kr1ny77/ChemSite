@@ -8,7 +8,7 @@ Career selects verified tasks deterministically through `task_scheduler.gd`, fav
 
 The browser architecture that preceded this migration is preserved by Git history and `legacy-web/`.
 
-Player geometry uses a documented 22.899 mm model offset to align the imported bind sole with the capsule lower tip. The foundation physical plane is y=0; visual path overlays sit 1–3 mm above it. Walk vertical support is baked in Blender; `tools/validation/player_grounding_smoke.gd` evaluates imported skinned shoe vertices against a physics floor ray.
+Player geometry uses a 5 mm cartoon-model offset to align the imported bind sole with the capsule lower tip. The foundation physical plane is y=0; visual path overlays sit 1–3 mm above it. Walk vertical support is baked in Blender; `tools/validation/player_grounding_smoke.gd` evaluates imported skinned shoe vertices against a physics floor ray.
 
 Walk and Run retain normalized gait phase when switching via a TimeSeek inside each state, before TimeScale. Footstep signals cross quarter/three-quarter contact phases from the active AnimationTree state and are suppressed when stationary, airborne or controls are disabled. Animation timing belongs to Player; the signal keeps audio playback in the existing audio system. Native transition and footstep gates cover phase transport and contact event timing.
 

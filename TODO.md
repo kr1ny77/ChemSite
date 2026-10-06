@@ -67,15 +67,16 @@
   - [x] Smooth heading with a critically damped angular response and 720°/s limit; test 180° reversal, 90° turn and settling at 30/60/120 Hz, review the native turn movie, and verify source/export regressions. Contact during tight turns and human movement feel remain open.
   - [x] Replace the blue camouflage material, author/export nine actions, inspect key poses, and integrate the GLB in Godot; source gameplay capture shows the new worker in motion.
   - [ ] Improve cloth tailoring, safety detail, joint deformation and planted foot contact; review the final mesh and motion from gameplay and close-up angles.
-- [ ] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.
+- [x] Dress the expanded playable yard so routes and useful areas remain legible across the full viewport, including camera travel at the perimeter.
   - [x] Tighten the isometric framing for larger on-screen player and stations; verify initial 1440×900 and 1028×642 views and camera travel to four active-yard edges.
   - [x] Keep camera follow active with reduced motion using immediate tracking; capture all four edge views in normal and reduced-motion modes.
   - [x] Replace the broad empty walkable apron with a modeled temporary fence and physical boundary; verify game-camera views, all five levels' station routes and four-side collision.
   - [x] Add six optional, data-driven inspections at construction props; verify the visible prompt, panel, close behavior, unchanged task progress and packaged macOS round.
   - [x] Build an inspectable Blender sample workbench in the left bay; verify seven notes, physical approach, five-level routes, native camera/UI and macOS export.
   - [x] Build the original pipe/tank/pump display in the right bay; inspect five views, verify eight source/package notes, collision contact, all five station routes and native camera/UI.
-  - [ ] Fill the remaining open bays with meaningful construction work zones and environmental story while preserving station approach routes.
+  - [x] Fill the remaining open bays with meaningful construction work zones and environmental story while preserving station approach routes; the sample bench and pipe display have curated observations, physical proxies and five-level route checks.
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
+- [x] Balance warm-neutral sun/cool ambient lighting and distinguish gray pedestrian lanes from sand work zones; review two resolutions, all four perimeter views in both motion settings and post-dressing performance.
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
 - [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.

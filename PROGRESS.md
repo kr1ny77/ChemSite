@@ -1,5 +1,21 @@
 # ChemSite progress
 
+## Site lighting and traversal hierarchy — 2026-10-06
+
+Balanced the sun toward warm-neutral and ambient toward cool blue. Gray pedestrian
+lanes now separate from sand work zones while the cream lane marks, teal stations
+and orange/yellow safety accents retain their role. Reviewed 1440×900 and 1028×642
+Level 5 views and all four perimeter views with standard/reduced motion. Both
+side bays provide inspectable construction activity and all five station routes
+passed the preceding final-layout gate. World-dressing checkpoint is complete.
+
+Post-dressing Apple M4 source profile: 60 FPS median/p10 in exploration and task
+panel; frame p90 17.44/17.34 ms, 772/755 draw calls and 68.8/69.5 MB static memory.
+The requested uncapped run still paced near 60 Hz; representative student-laptop
+movement/effects profiling remains open. Editor import/parse and refreshed macOS
+export and packaged Level 1 round pass. Previous fec0550 Windows native run 37468944122 passed; graphical
+run 37468943831 was verified live. This lighting revision follows push.
+
 ## Tailored trousers and right pipe work bay — 2026-10-06
 
 Added curved tapered knee reinforcements and outer trouser seams to the cartoon
@@ -223,13 +239,15 @@ contact results below describe that historical model.
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made eight surrounding props inspectable. The shipped player is now the detailed cartoon construction student with 15 bones and nine imported animations. Tailored knee panels and outer seams complement the belt equipment. Both side work bays now contain inspectable authored assets. Final human movement review, tight-turn contact and overall material hierarchy need polish. Human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made eight surrounding props inspectable. The shipped player is now the detailed cartoon construction student with 15 bones and nine imported animations. Tailored knee panels and outer seams complement the belt equipment. Both side work bays now contain inspectable authored assets. Pedestrian lanes, work zones and balanced daylight have been reviewed across the camera perimeter. Final human movement review, tight-turn contact and overall material hierarchy need polish. Human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Collect the latest Windows tailored-character/pipe-bay evidence, refine material hierarchy and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Collect the latest Windows graphical evidence, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Lighting/path palette reviewed at two resolutions and eight perimeter states. Source import/parse, refreshed macOS export/packaged Level 1 round and M4 two-state performance profile pass. Windows fec0550 native run 37468944122 passed; graphical run 37468943831 remains live at last poll.
 
 2026-10-06: Final tailored character and pipe display passed fresh Blender geometry inspection, multiview review, native contact/phase checks, eight inspection notes, all five routes and macOS source/package checks. Native turning/walking movies contain 151/241 frames at 60 FPS and completion markers; chronological sheets reviewed. Current Windows revision follows push.
 

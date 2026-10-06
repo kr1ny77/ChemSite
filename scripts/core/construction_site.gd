@@ -152,8 +152,8 @@ func _build_world() -> void:
 	settings.background_mode = Environment.BG_COLOR
 	settings.background_color = Color("a7cbd0")
 	settings.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	settings.ambient_light_color = Color("b8d2cd")
-	settings.ambient_light_energy = 0.32
+	settings.ambient_light_color = Color("b7cbe4")
+	settings.ambient_light_energy = 0.38
 	settings.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	settings.ssao_enabled = true
 	settings.ssao_radius = 0.9
@@ -165,9 +165,9 @@ func _build_world() -> void:
 	_block("Service apron", Vector3(0, -0.595, -17), Vector3(90, 0.025, 8), Color("929d93"), false)
 	_block("Foundation", Vector3(0, -0.30, 0), Vector3(90, 0.6, 90), Color("d7c9ad"), true)
 	# Visual overlays sit 1–3 mm above the same physical walking plane.
-	_block("Work zone surface", Vector3(0, -0.004, 0), Vector3(19, 0.01, 14), Color("d5c7ab"), false)
-	_block("CentralPath", Vector3(0, -0.0035, 0.2), Vector3(3.6, 0.012, 12.5), Color("bbc7bc"), false)
-	_block("RearPath", Vector3(0, -0.003, -3.4), Vector3(14, 0.012, 2.5), Color("bbc7bc"), false)
+	_block("Work zone surface", Vector3(0, -0.004, 0), Vector3(19, 0.01, 14), Color("c7b8a0"), false)
+	_block("CentralPath", Vector3(0, -0.0035, 0.2), Vector3(3.6, 0.012, 12.5), Color("9daeb7"), false)
+	_block("RearPath", Vector3(0, -0.003, -3.4), Vector3(14, 0.012, 2.5), Color("9daeb7"), false)
 	_build_path_markings()
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
 	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))

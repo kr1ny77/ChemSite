@@ -26,7 +26,7 @@ current = true
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-50, -38, 0)
-light_color = Color(1, 0.88, 0.7, 1)
+light_color = Color(1, 0.95, 0.86, 1)
 light_energy = 0.82
 shadow_enabled = true
 
