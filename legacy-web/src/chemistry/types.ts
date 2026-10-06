@@ -59,6 +59,7 @@ export type TaskDefinition = {
     mixingReagents?: string[]
     mixingOptions?: string[]
     mixingObservation?: string
+    mixingVisual?: { kind: 'precipitate' | 'gas'; color: string }
     scaleMode?: 'mass-to-moles' | 'moles-to-mass'
     sampleMass?: number
     sampleMoles?: number

@@ -2,6 +2,10 @@ extends VBoxContainer
 
 signal mixed
 
+const OBSERVATION_VIEW = preload("res://scripts/ui/mixing_observation_view.gd")
+var _visual: Dictionary = {}
+var reduced_motion := false
+
 var _reagents: Array[String] = []
 var _selected: Array[String] = []
 var _observation: String = ""
@@ -9,7 +13,9 @@ var _status: Label
 var _choices: GridContainer
 var _mixed: bool = false
 
-func configure(parameters: Dictionary) -> void:
+func configure(parameters: Dictionary, static_motion: bool = false) -> void:
+	reduced_motion = static_motion
+	_visual = parameters.get("mixingVisual", {})
 	_reagents.clear()
 	for reagent in parameters.get("mixingReagents", []):
 		_reagents.append(str(reagent))
@@ -60,6 +66,11 @@ func _select(reagent: String) -> void:
 		_mixed = true
 		_status.text = "НАБЛЮДЕНИЕ: " + _observation + " · ЗАПИШИ УРАВНЕНИЕ"
 		_choices.hide()
+		if not _visual.is_empty():
+			var observation := OBSERVATION_VIEW.new() as Control
+			observation.name = "ObservationVisual"
+			observation.configure(_visual, reduced_motion)
+			add_child(observation)
 		mixed.emit()
 	else:
 		_status.text = "ЭТА ПАРА НЕ СООТВЕТСТВУЕТ ЗАДАНИЮ · ВЫБЕРИ СНОВА"

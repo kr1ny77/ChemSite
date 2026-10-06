@@ -14,6 +14,8 @@ const PH_TERMINAL_VIEW = preload("res://scripts/ui/ph_terminal_view.gd")
 const IONIZATION_SCAN_VIEW = preload("res://scripts/ui/ionization_scan_view.gd")
 const DISSOCIATION_SETUP_VIEW = preload("res://scripts/ui/dissociation_setup_view.gd")
 
+var reduced_motion := false
+
 var _objective: Label
 var _status: Label
 var _score_label: Label
@@ -160,7 +162,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel_content.add_child(_mission_stage)
 	if task.get("interactionType", "") == "virtual-mixing" and task.get("parameters", {}).has("mixingReagents"):
 		_mix_view = REAGENT_MIX_VIEW.new()
-		_mix_view.configure(task.parameters)
+		_mix_view.configure(task.parameters, reduced_motion)
 		_mix_view.mixed.connect(func() -> void:
 			_set_answer_enabled(true)
 			_focus_first_answer()

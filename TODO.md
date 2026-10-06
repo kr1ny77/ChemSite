@@ -80,6 +80,8 @@
 - [x] Balance warm-neutral sun/cool ambient lighting and distinguish gray pedestrian lanes from sand work zones; review two resolutions, all four perimeter views in both motion settings and post-dressing performance.
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
+  - [x] Show data-driven precipitate/gas observations after the five Level 2 reagent-pair interactions; verify 30 normal/reduced cases at three sizes, final motion capture and packaged Level 2 round.
+
 - [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks

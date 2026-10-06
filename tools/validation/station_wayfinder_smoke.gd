@@ -18,6 +18,10 @@ func _run() -> void:
 				quit(1)
 				return
 			count += 1
+		site._hud.show_pause()
+		site._update_wayfinder()
+		assert(not site._wayfinder._arrow.visible, "Modal HUD must hide arrow independently of controls")
+		site._hud.close_panel()
 		site._player.controls_enabled = false
 		site._update_wayfinder()
 		if site._wayfinder._arrow.visible or site._wayfinder._ring.visible:

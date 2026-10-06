@@ -914,3 +914,7 @@ Game mechanics interpret that data.
 Godot Control scenes render the result.
 
 These systems must remain separate.
+
+## Curated mixing visual
+
+The five Level 2 virtual-mixing tasks optionally contain `parameters.mixingVisual`: `kind` is `precipitate` or `gas`, and `color` is a reviewed six-digit RGB value for the schematic observation. This metadata accompanies the existing `mixingObservation`; answer validation stays deterministic and independent. The illustration appears after the required pair is selected. Animation is schematic, has no measured rate/quantity, settles after 1.2 seconds, and is static with reduced motion.

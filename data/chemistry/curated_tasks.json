@@ -1555,7 +1555,11 @@
         "NaCl",
         "H₂O"
       ],
-      "mixingObservation": "Белый осадок BaSO₄"
+      "mixingObservation": "Белый осадок BaSO₄",
+      "mixingVisual": {
+        "kind": "precipitate",
+        "color": "f8f7ed"
+      }
     },
     "id": "L2-051",
     "level": 2,
@@ -1592,7 +1596,11 @@
         "NaNO₃",
         "H₂O"
       ],
-      "mixingObservation": "Белый осадок AgCl"
+      "mixingObservation": "Белый осадок AgCl",
+      "mixingVisual": {
+        "kind": "precipitate",
+        "color": "f8f7ed"
+      }
     },
     "id": "L2-052",
     "level": 2,
@@ -1629,7 +1637,11 @@
         "Na₂SO₄",
         "H₂O"
       ],
-      "mixingObservation": "Голубой осадок Cu(OH)₂"
+      "mixingObservation": "Голубой осадок Cu(OH)₂",
+      "mixingVisual": {
+        "kind": "precipitate",
+        "color": "62b4d9"
+      }
     },
     "id": "L2-053",
     "level": 2,
@@ -1666,7 +1678,11 @@
         "NaCl",
         "H₂O"
       ],
-      "mixingObservation": "Бурый осадок Fe(OH)₃"
+      "mixingObservation": "Бурый осадок Fe(OH)₃",
+      "mixingVisual": {
+        "kind": "precipitate",
+        "color": "9b5935"
+      }
     },
     "id": "L2-054",
     "level": 2,
@@ -1703,7 +1719,11 @@
         "NaCl",
         "H₂O"
       ],
-      "mixingObservation": "Выделяется CO₂"
+      "mixingObservation": "Выделяется CO₂",
+      "mixingVisual": {
+        "kind": "gas",
+        "color": "ffffff"
+      }
     },
     "id": "L2-055",
     "level": 2,

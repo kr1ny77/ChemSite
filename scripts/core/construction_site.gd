@@ -92,6 +92,7 @@ func _ready() -> void:
 		for light in _work_lights:
 			light.light_energy = 0.72
 	_hud = preload("res://scenes/ui/game_hud.tscn").instantiate()
+	_hud.reduced_motion = reduced_motion
 	_hud_layer.add_child(_hud)
 	_hud.answer_submitted.connect(_submit_answer)
 	_hud.resume_requested.connect(_resume)
@@ -411,7 +412,7 @@ func _update_wayfinder() -> void:
 		if entry.id == task.station:
 			station = entry
 			break
-	_wayfinder.show_station(station, _camera, _player.controls_enabled and not _round_done)
+	_wayfinder.show_station(station, _camera, _player.controls_enabled and not _round_done and (_hud == null or not _hud.is_panel_open()))
 
 func _update_hud() -> void:
 	_update_wayfinder()

@@ -1,5 +1,24 @@
 # ChemSite progress
 
+## Curated mixing observation visuals — 2026-10-06
+
+Added schematic precipitate settling and gas bubbles to the five verified Level 2
+virtual-mixing tasks. Visual metadata comes from the curated content, matching
+white BaSO₄/AgCl, blue Cu(OH)₂, brown Fe(OH)₃ and CO₂ observations. Updated the
+preserved source bank/schema and regenerated all 200 native tasks. Illustrations
+appear only after the expected pair, accompany text, declare schematic timing,
+and settle after 1.2 seconds. Reduced motion is static; fixed process enabling in
+`_ready` after the first gate exposed Godot's automatic processing behavior.
+
+All 30 observation cases (five tasks × three sizes × two motion settings), Level 2
+40-task content, modal pointer guard and 200 station targets pass. Viewed all five
+panels and the final 400-frame animation sheet at 60 FPS with completion marker. Source editor import and refreshed macOS
+export/packaged Level 2 round pass. A capture script initially accessed missing
+parameters on unrelated tasks and was repaired; the earlier movie is excluded.
+Windows 993eb6d native/visual runs 37470851021/37470850903 passed. Current visual
+revision follows push. Further station-specific VFX, human motion/playtesting,
+Windows archive/physical device review, course review and prerelease remain open.
+
 ## Smooth movement and required-station pointer — 2026-10-06
 
 Replaced constant-step velocity changes with an exact damped response: continuous
@@ -265,6 +284,8 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 Collect the latest Windows graphical evidence, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Five mixing visual controls pass 30 size/motion cases, Level 2 content and packaged round. Five static panels and final animation evidence reviewed; source-bank export deterministically regenerates 200 tasks. Pointer modal guard covers direct HUD panels with controls still enabled. Windows 993eb6d native/visual runs both passed; current revision follows push.
 
 2026-10-06: Eased movement, transitions, turns, collision/fences and all five routes pass; station pointer covers 200 tasks and modal/reduced-motion states. Native two-size views and full turn capture reviewed. Refreshed macOS package round/eight-inspection checks pass. Windows 35ed196 native/visual runs 37469784956/37469784958 and fec0550 graphical run 37468943831 passed. Current revision follows push.
 
