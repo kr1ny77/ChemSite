@@ -203,7 +203,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel_content.add_child(_comparison_view)
 	if ph_reading:
 		_ph_view = PH_TERMINAL_VIEW.new()
-		_ph_view.configure(task.parameters)
+		_ph_view.configure(task.parameters, reduced_motion)
 		_ph_view.readings_completed.connect(func() -> void:
 			_set_answer_enabled(true)
 			_focus_first_answer()

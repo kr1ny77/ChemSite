@@ -285,6 +285,8 @@ Collect the latest Windows graphical evidence, improve chemistry-specific VFX an
 
 ## Last verification
 
+2026-10-06: pH measurement cards now use larger text and native scale markers. All four pH tasks pass 24 size/motion cases; Godot import/parse, Level 3 content checks and refreshed macOS packaged pH round pass. Native comparison panel visually reviewed at 1028×642. Windows 9d5cc4a native/visual runs 37472305525/37472305531 passed; downloaded visual evidence review remains open.
+
 2026-10-06: Five mixing visual controls pass 30 size/motion cases, Level 2 content and packaged round. Five static panels and final animation evidence reviewed; source-bank export deterministically regenerates 200 tasks. Pointer modal guard covers direct HUD panels with controls still enabled. Windows 993eb6d native/visual runs both passed; current revision follows push.
 
 2026-10-06: Eased movement, transitions, turns, collision/fences and all five routes pass; station pointer covers 200 tasks and modal/reduced-motion states. Native two-size views and full turn capture reviewed. Refreshed macOS package round/eight-inspection checks pass. Windows 35ed196 native/visual runs 37469784956/37469784958 and fec0550 graphical run 37468943831 passed. Current revision follows push.

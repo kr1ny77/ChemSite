@@ -2,13 +2,17 @@ extends VBoxContainer
 
 signal readings_completed
 
+const SCALE_VIEW = preload("res://scripts/ui/ph_scale_view.gd")
+var reduced_motion := false
+
 var _samples: Array[Dictionary] = []
 var _read: Array[bool] = []
 var _buttons: HBoxContainer
 var _readouts: HBoxContainer
 var _status: Label
 
-func configure(parameters: Dictionary) -> void:
+func configure(parameters: Dictionary, static_motion: bool = false) -> void:
+	reduced_motion = static_motion
 	for entry in parameters.get("phSamples", []):
 		_samples.append(entry)
 		_read.append(false)
@@ -28,8 +32,14 @@ func read_sample(index: int) -> void:
 	var button := _buttons.get_child(index) as Button
 	button.disabled = true
 	var sample: Dictionary = _samples[index]
-	var output := _readouts.get_child(index) as Label
-	output.text = "%s  ·  pH %s" % [str(sample.label), str(sample.value)]
+	var output := _readouts.get_child(index) as PanelContainer
+	var content := output.get_child(0) as VBoxContainer
+	var label := content.get_child(0) as Label
+	label.text = "%s  ·  pH %s" % [str(sample.label), str(sample.value)]
+	var scale_view := SCALE_VIEW.new() as Control
+	scale_view.name = "MeasurementScale"
+	scale_view.configure(float(sample.value), reduced_motion)
+	content.add_child(scale_view)
 	output.show()
 	if is_complete():
 		_status.text = "ИЗМЕРЕНИЯ ГОТОВЫ · ВЫБЕРИ ВЫВОД"
@@ -61,10 +71,20 @@ func _build() -> void:
 		_style_button(button)
 		button.pressed.connect(read_sample.bind(index))
 		_buttons.add_child(button)
-		var readout := Label.new()
+		var readout := PanelContainer.new()
 		readout.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		readout.add_theme_font_size_override("font_size", 19)
-		readout.add_theme_color_override("font_color", Color("173744"))
+		var style := StyleBoxFlat.new()
+		style.bg_color = Color("e1ece6")
+		style.set_corner_radius_all(8)
+		style.set_content_margin_all(8)
+		readout.add_theme_stylebox_override("panel", style)
+		var content := VBoxContainer.new()
+		content.add_theme_constant_override("separation", 2)
+		readout.add_child(content)
+		var label := Label.new()
+		label.add_theme_font_size_override("font_size", 23)
+		label.add_theme_color_override("font_color", Color("173744"))
+		content.add_child(label)
 		readout.hide()
 		_readouts.add_child(readout)
 

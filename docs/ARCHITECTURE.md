@@ -43,3 +43,13 @@ state. One unshaded ground outline and a projected native Control arrow mark the
 target. Its CanvasLayer stays behind the modal HUD; the arrow ignores mouse input.
 Panels/pause/results hide both visuals. Reduced motion retains a static arrow.
 The target refreshes when the task advances and covers all five career levels.
+
+### pH measurement feedback
+
+`ph_terminal_view.gd` reveals measured sample cards after the existing read action.
+`ph_scale_view.gd` draws a native Control scale and places its marker directly from
+the curated reading. Its brief highlight settles after 0.35 seconds; reduced motion
+uses a static marker. The card retains the exact numeric reading as primary evidence.
+The illustrative 0–14 scale clamps marker placement only; task values and validation
+remain unchanged. `ph_scale_smoke.gd` covers all four pH tasks at three window sizes
+in normal and reduced-motion modes.
