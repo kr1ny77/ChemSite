@@ -9,7 +9,7 @@ static func run(main: Node, capture_visual: bool = false) -> bool:
 	var interact := InputEventAction.new()
 	interact.action = "interact"
 	interact.pressed = true
-	if site._site_inspections.size() != 6:
+	if site._site_inspections.size() != 7:
 		push_error("Packaged site inspection data missing")
 		return false
 	if capture_visual:

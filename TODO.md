@@ -53,7 +53,8 @@
   - [x] Promote the detailed cartoon GLB and editable source; recalibrate speed/cadence/ground tests, verify five walking routes, native movement gates and fresh packaged macOS round/visual round.
   - [x] Fade construction parts that obscure the player, restore opacity on exit and support instant reduced-motion feedback; verify native image, movement, collisions and macOS export.
   - [x] Fit a shaped tool-belt pouch, mallet/loop, tape measure and rear garment details; verify fresh GLB, Run/upright reach views, native contact and packaged macOS round.
-  - [ ] Review Windows cartoon graphical evidence and refine tight-turn/acceleration feel.
+  - [x] Review the cartoon Windows cc3922a graphical archive: verified digest, 154 dimensions, fourteen round sheets and full-size long panel; Compatibility render/audio limitations recorded.
+  - [ ] Collect latest Windows equipment/bench evidence and refine tight-turn/acceleration feel.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
@@ -70,6 +71,7 @@
   - [x] Keep camera follow active with reduced motion using immediate tracking; capture all four edge views in normal and reduced-motion modes.
   - [x] Replace the broad empty walkable apron with a modeled temporary fence and physical boundary; verify game-camera views, all five levels' station routes and four-side collision.
   - [x] Add six optional, data-driven inspections at construction props; verify the visible prompt, panel, close behavior, unchanged task progress and packaged macOS round.
+  - [x] Build an inspectable Blender sample workbench in the left bay; verify seven notes, physical approach, five-level routes, native camera/UI and macOS export.
   - [ ] Fill the remaining open bays with meaningful construction work zones and environmental story while preserving station approach routes.
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera

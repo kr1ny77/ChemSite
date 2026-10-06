@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Left sample work bay — 2026-10-06
+
+Authored the original sample workbench in Blender with supported worktop/shelf,
+casters, split mould and clamps, six concrete sample cubes, clipboard and chart.
+Fresh GLB: 8,172 triangles, seven batched material meshes and zero inspection
+issues. Reviewed five final Blender views, native opposite-side detail, gameplay
+site view and 1028×642 inspection panel. Physical approach stops at z=1.345 m;
+seven optional inspections and all five station walking routes pass. Godot
+import/parse, source round, refreshed macOS export and packaged seven-inspection
+round pass. The right work bay and overall material/lighting hierarchy remain
+open. Windows equipment commit d23ab1b native/visual runs 37464367223/37464367411 passed. Windows bench verification follows push; its native workflow now includes physical approach.
+
 ## Construction equipment refinement — 2026-10-06
 
 Added a fitted leather belt and buckle, tapered open pouch with gussets/flap,
@@ -194,9 +206,11 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 ## Next task
 
-Verify the integrated cartoon character on Windows, review movement transitions and tight-turn contact, and refine remaining character details from gameplay evidence. Then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Fill the right work bay with useful construction activity, collect the latest Windows equipment/bench runs, and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Reviewed Windows cc3922a archive SHA-256 ba7bf2cede7e16a169ea19902309274e011445c55f633d6e82ed09526cfdbe3b, matching GitHub metadata. All 154 PNGs are 1028×642; opened fourteen career/focused contact sheets and the full-size long corrosion panel. Panels/feedback/results retain their bounds. Runner WASAPI initialization errors fall back to dummy audio; no script errors were found. Compatibility output supports UI review, while physical Windows Forward+/audio remain open. New bench fresh GLB/source import, seven source/package inspections, bench physical contact, five station routes, source and packaged Level 1 round pass. Reviewed 1440×900 and 1028×642 site plus inspection views.
 
 2026-10-06: Equipment GLB inspection and six-action contact checks passed. Native import/parse, grounding, phase transition, source round and refreshed packaged macOS round passed. Native front/rear and Run/reach multiview evidence reviewed.
 

@@ -187,6 +187,8 @@ func _build_world() -> void:
 	_environment_prop("site_mixer", Vector3(7.55, 0.0, -1.35))
 	_add_machinery_ambience(Vector3(7.55, 1.0, -1.35))
 	_block("Site mixer collision", Vector3(7.55, 0.77, -1.35), Vector3(1.8, 1.55, 1.75), Color(0, 0, 0, 0), true)
+	_environment_prop("sample_bench", Vector3(-9.6, 0.0, 0.4))
+	_block("Sample bench collision", Vector3(-9.6, 0.82, 0.4), Vector3(2.2, 1.64, 1.25), Color(0, 0, 0, 0), true)
 	_environment_prop("material_cache", Vector3(4.7, 0.0, 0.1))
 	_block("Material cache collision", Vector3(4.7, 0.65, 0.1), Vector3(3.8, 1.3, 1.55), Color(0, 0, 0, 0), true)
 	for i in range(3):
