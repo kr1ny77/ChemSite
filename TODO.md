@@ -53,6 +53,7 @@
   - [x] Promote the detailed cartoon GLB and editable source; recalibrate speed/cadence/ground tests, verify five walking routes, native movement gates and fresh packaged macOS round/visual round.
   - [x] Fade construction parts that obscure the player, restore opacity on exit and support instant reduced-motion feedback; verify native image, movement, collisions and macOS export.
   - [x] Fit a shaped tool-belt pouch, mallet/loop, tape measure and rear garment details; verify fresh GLB, Run/upright reach views, native contact and packaged macOS round.
+  - [x] Add shaped knee reinforcements and outer trouser seams; refine bend topology, inspect neutral/Run/upright reach, verify native contact and macOS package.
   - [x] Review the cartoon Windows cc3922a graphical archive: verified digest, 154 dimensions, fourteen round sheets and full-size long panel; Compatibility render/audio limitations recorded.
   - [ ] Collect latest Windows equipment/bench evidence and refine tight-turn/acceleration feel.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
@@ -72,6 +73,7 @@
   - [x] Replace the broad empty walkable apron with a modeled temporary fence and physical boundary; verify game-camera views, all five levels' station routes and four-side collision.
   - [x] Add six optional, data-driven inspections at construction props; verify the visible prompt, panel, close behavior, unchanged task progress and packaged macOS round.
   - [x] Build an inspectable Blender sample workbench in the left bay; verify seven notes, physical approach, five-level routes, native camera/UI and macOS export.
+  - [x] Build the original pipe/tank/pump display in the right bay; inspect five views, verify eight source/package notes, collision contact, all five station routes and native camera/UI.
   - [ ] Fill the remaining open bays with meaningful construction work zones and environmental story while preserving station approach routes.
 - [ ] Author denser chemistry clusters with coherent landmarks, paths and collision proxies; the Blender laboratory cabin, sample cart, material cache, safety point, mixer, rebar bay and concrete-frame shell define the construction site, and batched floor markings trace the central and rear traversal lanes
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera

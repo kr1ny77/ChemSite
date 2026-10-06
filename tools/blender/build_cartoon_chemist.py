@@ -181,6 +181,36 @@ for side in (-1,1):
         curve('Boot lace '+str(side)+' '+str(row),[(side*.17-.037,-.08-row*.023,.177-row*.006),(side*.17+.037,-.08-row*.023,.177-row*.006)],.004,cream)
     curve('Hand crease '+str(side),[(side*.405+side*.055,-.103,.443),(side*.405+side*.045,-.11,.427)],.003,cloth_edge)
     curve('Ear inner rim '+str(side),[(side*.392,-.074,1.10),(side*.41,-.08,1.14),(side*.394,-.074,1.17)],.007,cloth_edge)
+# Reinforced knee panels follow the trouser surface, with tapered corners.
+for side in (-1,1):
+    vertices=[];faces=[]
+    for row in range(7):
+        t=row/6
+        z=.205+.11*t
+        width=.045+.005*t+.014*math.sin(math.pi*t)
+        for column in range(7):
+            dx=width*(column/3-1)
+            y=-.15*math.sqrt(max(0,1-(dx/.14)**2-((z-.30)/.24)**2))-.006
+            vertices.append((side*.17+dx,y,z))
+    for row in range(6):
+        for column in range(6):
+            k=row*7+column;faces.append((k,k+7,k+8,k+1))
+    mesh=bpy.data.meshes.new('Tailored knee reinforcement');mesh.from_pydata(vertices,[],faces);mesh.update()
+    obj=bpy.data.objects.new('Trouser knee panel '+str(side),mesh)
+    bpy.context.collection.objects.link(obj);obj.data.materials.append(bootmat)
+    bpy.context.view_layer.objects.active=obj
+    solid=obj.modifiers.new('Sewn reinforcement','SOLIDIFY');solid.thickness=.004
+    bpy.ops.object.modifier_apply(modifier=solid.name)
+    for face in obj.data.polygons:face.use_smooth=True
+    parts.append(obj)
+    # Outside seam is inset toward the front where it remains readable from the game camera.
+    points=[]
+    for z in (.19,.245,.30,.35,.395):
+        dx=side*.092
+        y=-.15*math.sqrt(max(0,1-(dx/.14)**2-((z-.30)/.24)**2))-.006
+        points.append((side*.17+dx,y,z))
+    curve('Trouser outer seam '+str(side),points,.003,sole_edge)
+
 # A fitted hair shell with an intentional uneven hairline and temple points.
 vertices=[];faces=[]
 for row in range(5):

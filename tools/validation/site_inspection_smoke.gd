@@ -12,7 +12,7 @@ func _run() -> void:
 	var interact := InputEventAction.new()
 	interact.action = "interact"
 	interact.pressed = true
-	assert(site._site_inspections.size() == 7, "Expected seven curated site observations")
+	assert(site._site_inspections.size() == 8, "Expected eight curated site observations")
 	for entry in site._site_inspections:
 		player.global_position = entry.position + Vector3(0, 0.05, 0)
 		player.velocity = Vector3.ZERO

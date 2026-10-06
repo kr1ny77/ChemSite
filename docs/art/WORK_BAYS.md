@@ -37,3 +37,31 @@ the actual gameplay camera is covered by the full-site and inspection captures.
 Source bench contact stops the player at z=1.345 m with the inspection still
 available. All five station routes and all seven source/package inspections pass.
 Source/exported five-task progression remains covered by the existing round gate.
+
+## Water and pipe display — 2026-10-06
+
+Intention: an inspectable connected pipe workspace fills the right perimeter bay
+and gives a purposeful destination beyond the chemistry stations.
+Placement (9.7, 0, 3.0), front approach (9.7, 0, 4.5). Footprint below 2.2 × 1.3 m,
+height below 1.8 m; 12,000-triangle/eight-material ceilings, static batched GLB.
+Keep routes to the mixer (7.55, 0, -1.35), material cache and right task station
+clear. Required relationships: grounded frame/feet, supported tank with fitted
+straps/lid/outlet, fixed curved pipe loop with unions/brackets, front-facing dial,
+open reservoir, pivoted manual pump lever and attached hose.
+
+Visual reference inspected at the manufacturer page:
+https://rothenberger.com/in-en/products/water-pressure-testing/rp50-test-pump-0-25-bar-61002
+The photo and its front/three-quarter thumbnails show a low rectangular open
+reservoir, pump assembly on one end, upward angled lever pivot, circular gauge
+and attached black hose. This informs functional assembly only. The original
+blue tank, frame, pipe loop, proportions, palette and schematic label are game
+art assumptions. Published asset uses original geometry and materials; reference
+photos and branding remain outside the game. Inspection note names visible
+parts and virtual observations; it supplies no physical pressure values or
+practical operating procedure.
+
+Review fresh GLB front/back/profile/top/perspective, contacts/clearances, native
+camera at two sizes, eight source/package notes, physical approach and five-level
+station routes. Broader material hierarchy, animation/VFX and human QA continue.
+
+Final pipe-display GLB uses 11,932 triangles and seven batched materials. Reduced small-fastener density, tank radial sections and thin retaining-ring sampling preserved the five-view shape while meeting the 12,000-triangle budget. Fresh inspection reports zero issues. Physical approach stops at z=3.885 m and the optional inspection is reachable.

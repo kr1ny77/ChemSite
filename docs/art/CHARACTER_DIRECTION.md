@@ -49,3 +49,7 @@ the pelvis rigidly, and keeps the 1.620 m body/helmet silhouette and sole geomet
 The back receives a garment seam and fitted reflective shoulder strips. Material
 budget increases from twelve to thirteen; target stays below 45,000 triangles.
 Review front/back/profile neutral, Run and upright reach plus native game camera.
+
+## Tailored trousers, 2026-10-06
+
+Added tapered reinforcement panels at the knees and outer trouser seams following the garment surface. Seven-row panels preserve their shape across the knee bend; the initial coarse grid pinched during Run and was refined before integration. Fresh GLB: 44,424 triangles, thirteen materials, fifteen bones and nine actions; zero inspection issues. Neutral, Run and upright reach multiviews were opened, plus the native Forward+ front capture. Foot contact and phase-transfer gates retain their previous tolerances. Final 151-frame controller-turn and 241-frame Walk movies at 60 FPS complete successfully; chronological sheets were opened. Human movement acceptance and tight-turn planted-foot polish remain open.

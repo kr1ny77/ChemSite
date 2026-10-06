@@ -10,6 +10,8 @@ func _run() -> void:
 	var entry: Dictionary = site._site_inspections[2] if longest else site._site_inspections[0]
 	if OS.get_cmdline_user_args().has("--sample-bench"):
 		entry = site._site_inspections[6]
+	if OS.get_cmdline_user_args().has("--water-bay"):
+		entry = site._site_inspections[7]
 	var player := site.get_node("Player") as CharacterBody3D
 	player.global_position = entry.position + Vector3(0, 0.05, 0)
 	site._find_nearest_station()
@@ -24,6 +26,8 @@ func _run() -> void:
 	var path := "res://artifacts/site-inspection-long.png" if longest else "res://artifacts/site-inspection.png"
 	if entry.id == "sample_bench":
 		path = "res://artifacts/sample-bench/inspection-native.png"
+	if entry.id == "water_bay":
+		path = "res://artifacts/water-bay/inspection-native.png"
 	assert(root.get_viewport().get_texture().get_image().save_png(path) == OK)
 	print("SITE_INSPECTION_CAPTURE_OK")
 	quit()

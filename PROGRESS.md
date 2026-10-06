@@ -1,5 +1,26 @@
 # ChemSite progress
 
+## Tailored trousers and right pipe work bay — 2026-10-06
+
+Added curved tapered knee reinforcements and outer trouser seams to the cartoon
+construction student. Refined the panel bend grid after the first Run review.
+Final fresh character GLB: 44,424 triangles, thirteen materials, fifteen bones,
+nine actions and zero inspection issues. Opened final neutral/Run/upright reach
+multiviews and native Forward+ front detail. Native sole error stays below
+0.191 mm; Walk/Run stance residual stays below 0.870 mm. Phase transition and
+source round pass. Reviewed complete native recordings: 151 turning frames and 241 walking frames at 60 FPS, both with the completion marker.
+
+Finished the original right pipe display with bolted brackets, tank lid/straps,
+pump reservoir/lever, connected hose and gauge. Final GLB: 11,932 triangles,
+seven batched material meshes and zero inspection issues. Five fresh-export
+views, native front detail and the 1028×642 inspection panel were opened.
+Physical approach stops at z=3.885 m with the note reachable. All eight source
+and packaged inspections, all five station routes, editor import/parse, refreshed
+macOS export and packaged Level 1 round pass. Windows water collision gate added.
+Bench commit 615bf58 native/visual runs 37466052289/37466052334 passed. Current
+revision's Windows evidence follows push. Material/lighting hierarchy, human
+movement/playtesting, physical Windows audio/Forward+ and release gates remain open.
+
 ## Left sample work bay — 2026-10-06
 
 Authored the original sample workbench in Blender with supported worktop/shelf,
@@ -202,13 +223,15 @@ contact results below describe that historical model.
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made six surrounding props inspectable. The shipped player is now the detailed cartoon construction student with 15 bones and nine imported animations. Final human movement review, tight-turn contact and open-bay dressing need polish. Human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made eight surrounding props inspectable. The shipped player is now the detailed cartoon construction student with 15 bones and nine imported animations. Tailored knee panels and outer seams complement the belt equipment. Both side work bays now contain inspectable authored assets. Final human movement review, tight-turn contact and overall material hierarchy need polish. Human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Fill the right work bay with useful construction activity, collect the latest Windows equipment/bench runs, and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Collect the latest Windows tailored-character/pipe-bay evidence, refine material hierarchy and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Final tailored character and pipe display passed fresh Blender geometry inspection, multiview review, native contact/phase checks, eight inspection notes, all five routes and macOS source/package checks. Native turning/walking movies contain 151/241 frames at 60 FPS and completion markers; chronological sheets reviewed. Current Windows revision follows push.
 
 2026-10-06: Reviewed Windows cc3922a archive SHA-256 ba7bf2cede7e16a169ea19902309274e011445c55f633d6e82ed09526cfdbe3b, matching GitHub metadata. All 154 PNGs are 1028×642; opened fourteen career/focused contact sheets and the full-size long corrosion panel. Panels/feedback/results retain their bounds. Runner WASAPI initialization errors fall back to dummy audio; no script errors were found. Compatibility output supports UI review, while physical Windows Forward+/audio remain open. New bench fresh GLB/source import, seven source/package inspections, bench physical contact, five station routes, source and packaged Level 1 round pass. Reviewed 1440×900 and 1028×642 site plus inspection views.
 

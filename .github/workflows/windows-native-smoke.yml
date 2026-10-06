@@ -45,6 +45,7 @@ jobs:
             @{ Script = 'turn_response_smoke'; Marker = 'TURN_RESPONSE_SMOKE_OK' }
             @{ Script = 'player_visibility_smoke'; Marker = 'PLAYER_VISIBILITY_SMOKE_OK' }
             @{ Script = 'sample_bench_smoke'; Marker = 'SAMPLE_BENCH_SMOKE_OK' }
+            @{ Script = 'water_bay_smoke'; Marker = 'WATER_BAY_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
