@@ -12,16 +12,16 @@ func _run() -> void:
 	await _frames(60)
 	if not _check(player._current_animation == "Run", "Full movement did not enter Run"):
 		return
-	for strength in [0.73, 0.76, 0.74, 0.75]:
+	for strength in [0.44, 0.46, 0.45, 0.455]:
 		Input.action_press("move_right", strength)
 		await _frames(20)
 		if not _check(player._current_animation == "Run", "Run flickered near the transition threshold"):
 			return
-	Input.action_press("move_right", 0.68)
+	Input.action_press("move_right", 0.42)
 	await _frames(30)
 	if not _check(player._current_animation == "Walk", "Slower movement did not enter Walk"):
 		return
-	for strength in [0.73, 0.76, 0.74, 0.75]:
+	for strength in [0.44, 0.46, 0.45, 0.455]:
 		Input.action_press("move_right", strength)
 		await _frames(20)
 		if not _check(player._current_animation == "Walk", "Walk flickered near the transition threshold"):

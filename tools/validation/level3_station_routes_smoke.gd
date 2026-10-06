@@ -2,8 +2,8 @@ extends SceneTree
 
 const ROUTES := [
 	{"station": "solution-laboratory", "steps": [["move_left", -3.3, "x"], ["move_forward", -1.7, "z"]]},
-	{"station": "ionic-reaction-station", "steps": [["move_forward", -3.4, "z"], ["move_right", 4.0, "x"]]},
-	{"station": "inspection-station", "steps": [["move_back", 4.5, "z"], ["move_right", 3.7, "x"]]},
+	{"station": "ionic-reaction-station", "steps": [["move_forward", -3.4, "z"], ["move_right", 4.35, "x"]]},
+	{"station": "inspection-station", "steps": [["move_back", 4.5, "z"], ["move_right", 4.0, "x"]]},
 ]
 
 func _initialize() -> void:
@@ -28,10 +28,16 @@ func _run() -> void:
 					reached = true
 					break
 			Input.action_release(step[0])
-			assert(reached, "Route blocked toward %s at %s" % [route.station, step[0]])
+			if not reached:
+				push_error("Route blocked toward %s at %s" % [route.station, step[0]])
+				quit(1)
+				return
 			for frame in range(18):
 				await physics_frame
 		site._find_nearest_station()
-		assert(site._nearest_station.get("id", "") == route.station, "Station unreachable: " + route.station)
+		if site._nearest_station.get("id", "") != route.station:
+			push_error("Station unreachable: " + route.station)
+			quit(1)
+			return
 	print("CHEMSITE_LEVEL3_STATION_ROUTES_OK")
 	quit()

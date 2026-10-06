@@ -2,12 +2,12 @@ extends CharacterBody3D
 
 signal footstep
 
-# The imported bind sole is at -17.899 mm; the capsule lower tip is at +5 mm.
-const MODEL_GROUND_OFFSET := 0.022899
-const WALK_NOMINAL_SPEED := 1.100972
-const RUN_NOMINAL_SPEED := 2.934206
+# Cartoon sole is at the model origin; the capsule lower tip is at +5 mm.
+const MODEL_GROUND_OFFSET := 0.005
+const WALK_NOMINAL_SPEED := 0.499512
+const RUN_NOMINAL_SPEED := 2.086957
 
-@export var run_speed: float = 5.2
+@export var run_speed: float = 3.5
 @export var acceleration: float = 14.0
 @export var deceleration: float = 19.0
 @export var turn_speed: float = 16.0
@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 	if _reaction_state.is_empty():
 		var movement_state := "Idle"
 		if speed > 0.18:
-			var run_threshold := 3.25 if _current_animation == "Run" else 3.7
+			var run_threshold := 1.0 if _current_animation == "Run" else 1.15
 			movement_state = "Run" if speed > run_threshold else "Walk"
 		_travel(movement_state)
 		if _animation_tree != null:

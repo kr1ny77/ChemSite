@@ -1,8 +1,79 @@
 # ChemSite progress
 
+## Cartoon production integration — 2026-10-06
+
+Replaced the production GLB and retained tools/blender/source/cartoon_chemist.blend.
+Recalibrated ground offset (5 mm), Walk/Run nominal rates, default speed (3.5 m/s)
+and state hysteresis for the compact cartoon rig. Godot import/parse, actual
+skinned-sole grounding (maximum 0.191 mm), stance (maximum 0.870 mm), phase
+transfer, footsteps, turn response and fence collision gates pass. Five level
+walking-route gates pass with stop points independent of the former long coast;
+failed checks now terminate explicitly. Source Level 1 round and fresh macOS
+release automated/graphical rounds pass. Reviewed chronological integrated Walk
+and turn captures plus the packaged 1028×642 task panel. Walk frames 16/40 expose
+occlusion behind the construction beam: record for camera/environment polish.
+Clean Apple M4 Forward+ profile at 1440×900: median 60 FPS, wall-frame p90
+17.32/17.36 ms exploration/task panel, static memory 67.8/68.5 MB. This measures
+the local M4; student-laptop profiling remains open. Windows export/native
+validation awaits the source push. Full production release,
+human playtesting, course review and student-laptop performance remain open.
+
 ## Current phase
 
 Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the first native vertical slice.
+
+## Character detail pass — 2026-10-05
+
+Added surface-fitted vest pockets, flaps, buttons, fastening and collar; a shaped
+hairline, hardhat ribs/vents/badge, ear and palm creases, boot welt/toe seams/laces.
+Blender front/profile/back/three-quarter detail views opened. Run and upright
+Interact poses reviewed from front/profile/three-quarter; visible attachments
+stay with the garment in those poses. Final candidate optimization reaches 39,400
+triangles, 15 bones, nine actions; fresh GLB inspection reports zero issues.
+Six-action fresh-export contact/stance gate passes after detail changes. Native
+Godot Forward+ close-camera capture passes and was opened; pockets, collar,
+hair and helmet ribs read at gameplay scale. Final full-cycle detail motion and
+production controller integration remain next. Earlier previews represent the
+previous revision. Source: tools/blender/build_cartoon_chemist.py. Evidence:
+artifacts/cartoon-character/detail-review and detail-run/interact-review.
+
+## Latest direction — 2026-10-05
+
+The human user supplied four Overcooked references and requested a cartoon
+construction student with smooth quick movement and upright interactions.
+Preserved references and recorded docs/art/CHARACTER_DIRECTION.md. Current work:
+Blender cartoon replacement and locomotion timing. Next task: author and inspect
+the rounded silhouette and continuous workwear, then rig and verify native motion.
+Last verification for this direction: Blender 5.2.2 candidate build and GLB export
+passed. Blender Agent Studio rendered front/profile/back/three-quarter views;
+opened both revisions and corrected vest penetration by fitting its shell outside
+the continuous workwear. Candidate height 1.620 m; upright static form only.
+Source: tools/blender/build_cartoon_chemist.py. Evidence:
+artifacts/cartoon-character/form-review/contact_sheet.png. A 15-bone candidate rig and all nine actions now export successfully; fresh
+GLB inspection confirms 28 weighted meshes and eight materials. Reviewed a Walk
+contact pose in front/profile/three-quarter views. Refined continuous trouser weights, lowered the sole plane and compensated
+locomotion root height. Fresh-export contact gate evaluates 193 positions in each
+of Idle/Walk/Run/PickUp/Interact/UseStation: maximum support error 0.048 mm.
+Reduced candidate from 57,896 to 48,674 triangles; final fresh inspection has
+15 bones, nine actions, 28 weighted meshes and zero issues. Reviewed revised
+Walk contact in three views. Rendered and encoded six full fresh-export motion previews (Walk/Run two seconds
+each; Interact one second; front and three-quarter). Opened Walk video in the app
+(queued) and reviewed 16 chronological frames: current stride is too small and
+body carriage too static for the requested quick cartoon motion. Motion revision 2 increases Walk swing to 55 mm, Run swing to 65 mm and
+arm accompaniment to 0.36 rad. Run support is 20% per boot with controlled
+18 mm body flight. A 384 Hz bake fixes the 10 mm contact-edge interpolation
+error: fresh-export stance residuals are 0.657 mm Walk / 0.871 mm Run; maximum
+per-foot height-profile error is 0.028 mm. Nominal speeds: Walk 0.499512 m/s,
+Run 2.086957 m/s. Recorded 160 native Forward+ frames and encoded native-run-v2.mp4;
+reviewed 12 chronological gameplay frames. First capture stalled after frame 60
+and was terminated; changing its capture loop to process frames plus a bounded
+watchdog produced a successful complete run. App video opening is queued; frame
+review is complete. Walk native motion and controller integration remain next. A separate GLTFDocument candidate capture passed in Godot 4.7.2
+Forward+; opened its close-camera image and verified face/vest/hardhat readability.
+Production replacement, movement and exports still await motion acceptance.
+Windows graphical run 37347270093 for f6dee33 completed successfully. Known issue: the shipped
+MPFB model still reflects the prior realistic direction. Earlier anatomy and
+contact results below describe that historical model.
 
 ## Completed work
 
@@ -93,11 +164,11 @@ Phases 3, 7 and 8 — environment, UI, visual and audio quality pass for the fir
 
 ## Current work
 
-Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made six surrounding props inspectable. The shipped human worker has a continuous mesh, 53 bones and nine imported animations. Clothing detail, joint deformation, foot contact and open-bay dressing need polish. Human playtesting, target-course review, performance and release QA remain open.
+Levels 1–5 are playable career rounds with level-specific progression records and 200 verified native tasks. The visual overhaul improved movement, enlarged task controls, bundled a Cyrillic Onest font, enclosed the closer-framed yard, and made six surrounding props inspectable. The shipped player is now the detailed cartoon construction student with 15 bones and nine imported animations. Final human movement review, tight-turn contact and open-bay dressing need polish. Human playtesting, target-course review, performance and release QA remain open.
 
 ## Next task
 
-Polish PickUp and contact during tight turns, then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
+Verify the integrated cartoon character on Windows, review movement transitions and tight-turn contact, and refine remaining character details from gameplay evidence. Then fill open bays with useful construction activity and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
 
@@ -167,8 +238,8 @@ Polish PickUp and contact during tight turns, then fill open bays with useful co
 
 ## Known issues
 
-- Steady flat-ground Walk passes vertical and horizontal sole gates, including repeated playback. Steady Run now also passes sole support and stance gates. Walk/Run phase transfer and contact-aligned footstep signals now pass native checks. Heading rotation now has a damped response and angular speed limit. Acceleration/deceleration feel, contact during tight turns and natural PickUp motion remain open.
-- The integrated MPFB character has nine actions and visibly improved anatomy. Fitted reflective tape, fastening and pocket seams now improve the workwear; cloth microdetail and footwear refinement remain open. Steady Walk/Run foot plants have numeric and visual checks; transitions and close-up joint deformation need further review; the PickUp pose currently reads as a forward bend.
+- Cartoon Walk/Run pass flat-floor sole and stance gates, phase transfer, repeated playback and contact-aligned footstep signals. Heading has a damped response and angular speed limit. Human acceleration/deceleration feel and tight-turn contact remain open.
+- The detailed cartoon character now replaces the MPFB player. Steady Walk/Run soles, phase transfer, upright actions, contact-aligned footsteps and turn response have numeric checks. Human movement feel and contact through acceleration/tight turns remain open.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.

@@ -1,3 +1,26 @@
+# Current ChemSite cartoon construction student
+
+The 2026-10-05 human direction supersedes the historical MPFB character described
+below. The shipped `assets/models/character/chemist.glb` now uses the original
+cartoon model from `tools/blender/source/cartoon_chemist.blend`. Authoring script:
+`tools/blender/build_cartoon_chemist.py`; candidate outputs go to
+`artifacts/cartoon-character/`. Blender 5.2.2; original geometry and solid-color
+materials, 39,400 triangles, 15 bones and nine actions. Four user-supplied
+Overcooked images guide rounded proportions and readable cartoon surfaces.
+Contract: `docs/art/CHARACTER_DIRECTION.md`. Geometry and textures from those
+reference games are absent from the authored asset.
+
+Rebuild with Blender background mode and the authoring script, run
+`measure_cartoon_contact.py`, inspect/render the candidate, then copy the reviewed
+candidate GLB and source into the shipped paths. The 384 Hz animation import keeps
+support-edge interpolation accurate. Nominal Walk speed is 0.499512 m/s, Run
+2.086957 m/s. Boot support starts at normalized phase 0.25/0.75; Walk stance is
+50%, Run stance 20%. Upright PickUp/Interact preserve stationary soles. Native
+physics/controller gates use the actual imported skinned soles, preserve phase,
+check contact-aligned sound events and verify stopped animation against fences.
+
+## Historical human development evidence
+
 # ChemSite human character
 
 The editable `tools/blender/source/realistic_chemist.blend` and production

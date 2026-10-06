@@ -8,7 +8,7 @@ The visual language uses:
 
 - fixed isometric camera
 - compact readable level
-- small stylized character
+- compact cartoon construction student with an oversized head and rounded forms
 - colorful construction environment
 - stations around the map
 - task cards at the top
@@ -16,6 +16,13 @@ The visual language uses:
 - short interactions
 
 The visual reference may take inspiration from readable cooperative cooking games while all characters, environments, assets, UI and animations remain original.
+
+## Current character direction
+
+The 2026-10-05 supplied Overcooked references define cartoon proportions, warm
+saturated surfaces and quick readable movement. The player wears a construction
+hardhat and reflective workwear. Interactions stay upright. The authoring and
+verification contract is `docs/art/CHARACTER_DIRECTION.md`.
 
 ## Setting
 

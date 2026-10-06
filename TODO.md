@@ -42,7 +42,17 @@
 - [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Windows native/graphical runs 37343958767/37343958751 passed the repair; all 154 screenshot dimensions and archive digest were verified. A feedback placement issue discovered in the artifact is covered by the next gate.
 
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.
-- [ ] Replace the segmented mannequin with a continuous, fully deforming worker mesh and improve locomotion foot contact.
+- [ ] Replace the current MPFB player with an original rounded cartoon construction student following the 2026-10-05 Overcooked references; verify quick smooth locomotion and upright interactions.
+  - [x] Preserve the supplied references and record the current character direction in docs/art/CHARACTER_DIRECTION.md.
+  - [x] Build the first rounded cartoon silhouette and continuous workwear in Blender; inspect four views and correct vest penetration.
+  - [x] Author a 15-bone cartoon candidate rig and nine actions; fresh-import and inspect a Walk contact pose.
+  - [x] Smooth candidate hip weights, correct stance height and eyebrow geometry, and verify fresh GLB contact across six actions; initial geometry optimization reaches 48,674 triangles with zero inspection issues.
+  - [x] Render six fresh-export motion previews and capture the candidate in native Godot Forward+; chronological Walk review identifies undersized stride and static body carriage.
+  - [x] Increase cartoon stride/arm swing, author Run support/flight, and bake at 384 Hz; fresh GLB stance drift stays below 0.9 mm and a complete native Run recording passes.
+  - [x] Add fitted vest tailoring/pockets/collar, sculpted hairline, hardhat ribs/vents/badge and boot detailing; inspect neutral/Run/Interact and native gameplay scale. Optimize to 39,400 triangles with clean GLB inspection.
+  - [x] Promote the detailed cartoon GLB and editable source; recalibrate speed/cadence/ground tests, verify five walking routes, native movement gates and fresh packaged macOS round/visual round.
+  - [ ] Verify cartoon Windows builds and refine tight-turn/acceleration feel; resolve construction-beam player occlusion.
+  - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
   - [x] Relax arm carriage in idle/locomotion/station poses, key every bone explicitly to isolate actions, and base locomotion on collision-resolved velocity; nine sampled action poses, four blocked-movement directions and source/exported round pass.

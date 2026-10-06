@@ -26,13 +26,16 @@ func _run() -> void:
 		for frame in range(120):
 			player._animation_tree.advance(1.0 / 60.0)
 			player._update_footstep(1.0)
-		var expected := 4 if state == "Walk" else 5
+		var duration: float = player._clip_lengths[state]
+		var expected := 0
+		for contact in [0.25, 0.75]:
+			expected += maxi(0, floori(2.0 / duration - contact) + 1)
 		if not _check(events.size() == expected, "%s contact count: %d" % [state, events.size()]):
 			return
 		for event in events:
 			var phase := fposmod(event, 1.0)
 			var error := minf(absf(phase - 0.25), absf(phase - 0.75))
-			if not _check(error < 0.025, "%s footstep missed contact: %.3f" % [state, phase]):
+			if not _check(error < 1.0 / (60.0 * duration) + 0.0001, "%s footstep missed contact: %.3f" % [state, phase]):
 				return
 		var count := events.size()
 		for frame in range(60):
