@@ -28,3 +28,18 @@ The production Forward+ renderer supports GeometryInstance3D transparency.
 Compatibility CI tests the logic/property transitions; its graphical renderer
 ignores this property. Physical Windows Forward+ visual acceptance remains open.
 Engine contract: https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-transparency.
+
+## Movement response and station navigation
+
+Player horizontal velocity uses an exact critically damped response with separate
+acceleration/braking frequencies (18/24 s⁻¹). The velocity derivative carries between
+physics frames; collision-blocked components reset to prevent retained spring energy.
+Settled release snaps below 0.01 m/s to zero. Animation and footsteps continue to
+follow collision-resolved speed and phase; yaw has the existing bounded response.
+
+`StationWayfinder` owns navigation rendering separately from chemistry and physics.
+ConstructionSite supplies the current curated task's station and active controls
+state. One unshaded ground outline and a projected native Control arrow mark the
+target. Its CanvasLayer stays behind the modal HUD; the arrow ignores mouse input.
+Panels/pause/results hide both visuals. Reduced motion retains a static arrow.
+The target refreshes when the task advances and covers all five career levels.

@@ -8,8 +8,8 @@ const WALK_NOMINAL_SPEED := 0.499512
 const RUN_NOMINAL_SPEED := 2.086957
 
 @export var run_speed: float = 3.5
-@export var acceleration: float = 14.0
-@export var deceleration: float = 19.0
+@export var acceleration_response: float = 18.0
+@export var deceleration_response: float = 24.0
 @export var turn_speed: float = 16.0
 @export var max_turn_rate: float = TAU * 2.0
 
@@ -24,6 +24,7 @@ var _step_state: String = ""
 var _step_phase: float = 0.0
 var _clip_lengths: Dictionary = {}
 var _yaw_velocity: float = 0.0
+var _motion_acceleration := Vector2.ZERO
 
 func _ready() -> void:
 	var model_scene := load("res://assets/models/character/chemist.glb") as PackedScene
@@ -41,14 +42,23 @@ func _physics_process(delta: float) -> void:
 	var target := direction * run_speed
 	var horizontal := Vector2(velocity.x, velocity.z)
 	var desired := Vector2(target.x, target.z)
-	var rate := acceleration if direction.length_squared() > 0.001 else deceleration
-	horizontal = horizontal.move_toward(desired, rate * delta)
+	var response := acceleration_response if direction.length_squared() > 0.001 else deceleration_response
+	horizontal = _smooth_velocity(horizontal, desired, response, delta)
+	if desired.is_zero_approx() and horizontal.length() < 0.01:
+		horizontal = Vector2.ZERO
+		_motion_acceleration = Vector2.ZERO
 	velocity.x = horizontal.x
 	velocity.z = horizontal.y
 	velocity.y -= 20.0 * delta
 	move_and_slide()
 	# Collision response supplies the speed that is actually visible on screen.
-	horizontal = Vector2(velocity.x, velocity.z)
+	var resolved := Vector2(velocity.x, velocity.z)
+	# Discard spring energy along collision-blocked axes so walls cannot store a launch.
+	if absf(resolved.x - horizontal.x) > 0.001:
+		_motion_acceleration.x = 0.0
+	if absf(resolved.y - horizontal.y) > 0.001:
+		_motion_acceleration.y = 0.0
+	horizontal = resolved
 	var speed := horizontal.length()
 	_update_footstep(speed)
 	if speed > 0.08:
@@ -66,6 +76,14 @@ func _physics_process(delta: float) -> void:
 		if _animation_tree != null:
 			_set_animation_rate("Walk", clampf(speed / WALK_NOMINAL_SPEED, 0.5, 3.3))
 			_set_animation_rate("Run", clampf(speed / RUN_NOMINAL_SPEED, 0.5, 2.4))
+
+func _smooth_velocity(current: Vector2, target: Vector2, response: float, delta: float) -> Vector2:
+	# Exact critically damped velocity response: continuous acceleration and stable timestep behavior.
+	var error := current - target
+	var change := (_motion_acceleration + response * error) * delta
+	var decay := exp(-response * delta)
+	_motion_acceleration = (_motion_acceleration - response * change) * decay
+	return target + (error + change) * decay
 
 func _update_heading(target_yaw: float, delta: float) -> void:
 	# Critically damped angular response starts and settles with gentle motion.

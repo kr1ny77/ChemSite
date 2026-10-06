@@ -68,6 +68,8 @@ const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
 const ANSWER_BURST = preload("res://scripts/effects/answer_burst.gd")
 const STATION_PULSE = preload("res://scripts/effects/station_pulse.gd")
+const STATION_WAYFINDER = preload("res://scripts/effects/station_wayfinder.gd")
+var _wayfinder: Node3D
 var save_path: String = SAVE_DATA.SAVE_PATH
 var settings_path: String = SETTINGS_DATA.SETTINGS_PATH
 var reduced_motion := false
@@ -82,6 +84,10 @@ func _ready() -> void:
 	_site_inspections = SITE_INSPECTIONS.load_entries()
 	_player.footstep.connect(func() -> void: footstep.emit())
 	_build_world()
+	_wayfinder = STATION_WAYFINDER.new()
+	_wayfinder.name = "StationWayfinder"
+	_world.add_child(_wayfinder)
+	_wayfinder.reduced_motion = reduced_motion
 	if reduced_motion:
 		for light in _work_lights:
 			light.light_energy = 0.72
@@ -103,6 +109,7 @@ func _process(delta: float) -> void:
 	else:
 		_camera_rig.global_position = _camera_rig.global_position.lerp(follow_target, 1.0 - exp(-3.0 * delta))
 	if _round_done or not _player.controls_enabled:
+		_update_wayfinder()
 		return
 	if mode == "career":
 		_time_left = maxf(0.0, _time_left - delta)
@@ -395,7 +402,19 @@ func _find_nearest_station() -> void:
 		else:
 			_nearest_inspection = {}
 
+func _update_wayfinder() -> void:
+	if _wayfinder == null or _tasks.is_empty():
+		return
+	var task: Dictionary = _tasks[mini(_task_index, _tasks.size() - 1)]
+	var station: Dictionary = {}
+	for entry in _stations():
+		if entry.id == task.station:
+			station = entry
+			break
+	_wayfinder.show_station(station, _camera, _player.controls_enabled and not _round_done)
+
 func _update_hud() -> void:
+	_update_wayfinder()
 	if _tasks.is_empty():
 		return
 	_hud.update_status(_tasks[mini(_task_index, _tasks.size() - 1)], _completed, _score, _time_left, _nearest_station, _streak, _target_count, mode, _nearest_inspection)

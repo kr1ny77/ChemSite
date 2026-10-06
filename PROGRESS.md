@@ -1,5 +1,24 @@
 # ChemSite progress
 
+## Smooth movement and required-station pointer — 2026-10-06
+
+Replaced constant-step velocity changes with an exact damped response: continuous
+acceleration, responsive braking, sub-0.01 m/s settling and collision-axis spring
+reset. Existing phase-synchronized gait/audio and bounded heading remain intact.
+Verified monotonic acceleration, no speed overshoot, settling and identical 400 ms
+response at 30/60/120 Hz. Native transition, turn, fence and world collision gates
+and all five career station routes pass. Complete 151-frame 60 FPS turn recording
+and chronological sheet were reviewed; human feel/tight-turn foot polish remains open.
+
+Added a golden overhead arrow with dark outline and a ground ring at the required
+station. Both follow the active curated task and hide during modal interactions.
+Reduced motion freezes the hover. The gate covers all 200 task targets plus hidden
+modal state and static reduced motion. Native 1440×900/1028×642 views, import/parse,
+refreshed macOS export, packaged Level 1 round and eight inspections pass.
+Windows fec0550 and 35ed196 native/visual runs passed; current movement/navigation
+revision follows push with both new gates added to native CI. Archive image review,
+chemistry VFX, final human/platform checks and prerelease remain open.
+
 ## Site lighting and traversal hierarchy — 2026-10-06
 
 Balanced the sun toward warm-neutral and ambient toward cool blue. Gray pedestrian
@@ -246,6 +265,8 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 Collect the latest Windows graphical evidence, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
 ## Last verification
+
+2026-10-06: Eased movement, transitions, turns, collision/fences and all five routes pass; station pointer covers 200 tasks and modal/reduced-motion states. Native two-size views and full turn capture reviewed. Refreshed macOS package round/eight-inspection checks pass. Windows 35ed196 native/visual runs 37469784956/37469784958 and fec0550 graphical run 37468943831 passed. Current revision follows push.
 
 2026-10-06: Lighting/path palette reviewed at two resolutions and eight perimeter states. Source import/parse, refreshed macOS export/packaged Level 1 round and M4 two-state performance profile pass. Windows fec0550 native run 37468944122 passed; graphical run 37468943831 remains live at last poll.
 
