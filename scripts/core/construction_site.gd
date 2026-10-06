@@ -75,6 +75,7 @@ var reduced_motion := false
 func _ready() -> void:
 	reduced_motion = bool(SETTINGS_DATA.load_settings(settings_path).reduced_motion)
 	_player.reduced_motion = reduced_motion
+	get_node("CameraRig/PlayerVisibility").reduced_motion = reduced_motion
 	_camera.position = Vector3(10.0, 15.5, 19.0)
 	_camera.look_at(Vector3(0.0, 0.0, 0.0), Vector3.UP)
 	_load_tasks()
@@ -365,6 +366,9 @@ func _environment_prop(asset_name: String, pos: Vector3, yaw: float = 0.0) -> vo
 	prop.position = pos
 	prop.rotation.y = yaw
 	_world.add_child(prop)
+	if asset_name in ["construction_shell", "site_cabin", "rebar_bay"]:
+		for mesh in prop.find_children("*", "MeshInstance3D", true, false):
+			mesh.add_to_group("player_camera_occluder")
 
 func _find_nearest_station() -> void:
 	_nearest_station = {}

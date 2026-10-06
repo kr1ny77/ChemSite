@@ -10,13 +10,26 @@ transfer, footsteps, turn response and fence collision gates pass. Five level
 walking-route gates pass with stop points independent of the former long coast;
 failed checks now terminate explicitly. Source Level 1 round and fresh macOS
 release automated/graphical rounds pass. Reviewed chronological integrated Walk
-and turn captures plus the packaged 1028×642 task panel. Walk frames 16/40 expose
-occlusion behind the construction beam: record for camera/environment polish.
+and turn captures plus the packaged 1028×642 task panel. Walk frames 16/40 exposed
+beam occlusion; the subsequent camera visibility change resolves that path.
 Clean Apple M4 Forward+ profile at 1440×900: median 60 FPS, wall-frame p90
 17.32/17.36 ms exploration/task panel, static memory 67.8/68.5 MB. This measures
-the local M4; student-laptop profiling remains open. Windows export/native
-validation awaits the source push. Full production release,
+the local M4; student-laptop profiling remains open. Windows native run 37461607374 passed cartoon source 9e1df3f; graphical run
+37461607453 was still live at the last check. Visibility changes await their push. Full production release,
 human playtesting, course review and student-laptop performance remain open.
+
+## Construction visibility — 2026-10-06
+
+Added a separate camera visibility node for grouped construction-shell, cabin and
+rebar meshes. Orthographic silhouette segments detect obstruction in local mesh
+bounds. Parts ease to 82% transparency and restore opacity after the player exits;
+reduced motion switches directly. Opened the formerly occluded Walk frame 16:
+face, vest and body now remain visible through the beam. Native 240-frame Walk
+recording passed. Gate verifies six faded parts, restoration, instant reduced
+motion and opaque player meshes. Import/parse, reduced-motion, collision and
+source round gates pass; fresh macOS export and packaged Level 1 round passed. Added the visibility gate
+to Windows native CI. Compatibility screenshots provide logic/UI evidence;
+physical Windows Forward+ opacity rendering remains a release gate.
 
 ## Current phase
 

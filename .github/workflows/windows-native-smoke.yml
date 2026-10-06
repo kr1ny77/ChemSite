@@ -43,6 +43,7 @@ jobs:
             @{ Script = 'locomotion_transition_smoke'; Marker = 'LOCOMOTION_TRANSITION_SMOKE_OK' }
             @{ Script = 'footstep_timing_smoke'; Marker = 'FOOTSTEP_TIMING_SMOKE_OK' }
             @{ Script = 'turn_response_smoke'; Marker = 'TURN_RESPONSE_SMOKE_OK' }
+            @{ Script = 'player_visibility_smoke'; Marker = 'PLAYER_VISIBILITY_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"

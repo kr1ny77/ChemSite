@@ -13,3 +13,18 @@ Player geometry uses a documented 22.899 mm model offset to align the imported b
 Walk and Run retain normalized gait phase when switching via a TimeSeek inside each state, before TimeScale. Footstep signals cross quarter/three-quarter contact phases from the active AnimationTree state and are suppressed when stationary, airborne or controls are disabled. Animation timing belongs to Player; the signal keeps audio playback in the existing audio system. Native transition and footstep gates cover phase transport and contact event timing.
 
 Player heading uses a critically damped angular response after collision resolution. A 720°/s limit bounds per-frame rotation; angular velocity resets when movement settles. `turn_response_smoke.gd` checks reversal, corner response and fixed-target settling at three frame rates.
+
+## Player visibility through construction frames
+
+`CameraRig/PlayerVisibility` owns render-only obstruction feedback. Tall static
+construction-shell, cabin and rebar meshes join `player_camera_occluder` during
+world assembly. Nine orthographic camera segments sample the player's torso and
+head width against each mesh's local bounds, retaining rotated/scaled mesh space.
+Intersecting parts ease to 82% transparency; clear parts restore full opacity.
+Reduced motion switches directly. Physics, station selection, chemistry and
+player materials retain their independent ownership.
+
+The production Forward+ renderer supports GeometryInstance3D transparency.
+Compatibility CI tests the logic/property transitions; its graphical renderer
+ignores this property. Physical Windows Forward+ visual acceptance remains open.
+Engine contract: https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-transparency.

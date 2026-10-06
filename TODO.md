@@ -51,7 +51,8 @@
   - [x] Increase cartoon stride/arm swing, author Run support/flight, and bake at 384 Hz; fresh GLB stance drift stays below 0.9 mm and a complete native Run recording passes.
   - [x] Add fitted vest tailoring/pockets/collar, sculpted hairline, hardhat ribs/vents/badge and boot detailing; inspect neutral/Run/Interact and native gameplay scale. Optimize to 39,400 triangles with clean GLB inspection.
   - [x] Promote the detailed cartoon GLB and editable source; recalibrate speed/cadence/ground tests, verify five walking routes, native movement gates and fresh packaged macOS round/visual round.
-  - [ ] Verify cartoon Windows builds and refine tight-turn/acceleration feel; resolve construction-beam player occlusion.
+  - [x] Fade construction parts that obscure the player, restore opacity on exit and support instant reduced-motion feedback; verify native image, movement, collisions and macOS export.
+  - [ ] Review Windows cartoon graphical evidence and refine tight-turn/acceleration feel.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
