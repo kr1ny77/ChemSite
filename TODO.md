@@ -88,6 +88,7 @@
   - [x] Enlarge measured pH cards and add exact-value scale markers; verify four tasks across three window sizes and both motion settings, native capture and packaged pH round.
 - [x] Automatically pause exploration on desktop focus loss; freeze timer/movement, preserve open panels and require explicit resume. Verify native image and movement regressions.
 - [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
+- [x] Exercise a complete Level 1 round through raw keyboard events, collision-based walking, Tab/Space controls, formula assembly, pause, save/unlock and menu return; review native captures and run the macOS package.
 - [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
 
 ## Later phases

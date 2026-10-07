@@ -3,6 +3,7 @@ extends Node
 const SITE_SCENE: PackedScene = preload("res://scenes/levels/construction_site.tscn")
 const MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
 const EXPORT_ROUND_SMOKE = preload("res://scripts/qa/export_round_smoke.gd")
+const KEYBOARD_ROUND_SMOKE = preload("res://scripts/qa/keyboard_round_smoke.gd")
 const EXPORT_SITE_INSPECTION_SMOKE = preload("res://scripts/qa/export_site_inspection_smoke.gd")
 
 const QA_PLAYTEST_SAVE := "user://qa_playtest_progress.json"
@@ -12,12 +13,14 @@ var _current: Node
 var _manual_playtest := false
 
 func _ready() -> void:
-	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest")
+	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest") or OS.get_cmdline_user_args().has("--qa-keyboard-round")
 	if _manual_playtest:
 		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
 		print("CHEMSITE_MANUAL_PLAYTEST_ISOLATED")
 	show_menu()
-	if OS.get_cmdline_user_args().has("--qa-round"):
+	if OS.get_cmdline_user_args().has("--qa-keyboard-round"):
+		call_deferred("_run_keyboard_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-round"):
 		call_deferred("_run_export_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-site-inspections"):
 		call_deferred("_run_export_site_inspections")
@@ -256,5 +259,10 @@ func _replace(scene: PackedScene) -> void:
 
 func _configure_playtest_paths() -> void:
 	if _manual_playtest:
-		_current.save_path = QA_PLAYTEST_SAVE
+		_current.save_path = KEYBOARD_ROUND_SMOKE.SAVE_PATH if OS.get_cmdline_user_args().has("--qa-keyboard-round") else QA_PLAYTEST_SAVE
 		_current.settings_path = QA_PLAYTEST_SETTINGS
+
+func _run_keyboard_smoke() -> void:
+	get_tree().create_timer(120).timeout.connect(func(): get_tree().quit(1))
+	var passed: bool = await KEYBOARD_ROUND_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)

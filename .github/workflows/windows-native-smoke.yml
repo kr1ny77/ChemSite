@@ -107,6 +107,21 @@ jobs:
           if ($electrodes.ExitCode -ne 0) { throw "Level 4 electrode smoke failed ($($electrodes.ExitCode))" }
           $corrosion = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-corrosion-round') -Wait -PassThru -NoNewWindow
           if ($corrosion.ExitCode -ne 0) { throw "Level 4 corrosion smoke failed ($($corrosion.ExitCode))" }
+      - name: Verify packaged keyboard event round
+        shell: pwsh
+        run: |
+          $log = 'artifacts/native-qa/keyboard-round.log'
+          $keyboard = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', $log, '--', '--qa-keyboard-round') -PassThru -NoNewWindow
+          if (-not $keyboard.WaitForExit(150000)) {
+            Stop-Process -Id $keyboard.Id -Force -ErrorAction SilentlyContinue
+            throw 'Packaged keyboard round timed out'
+          }
+          $keyboard.Refresh()
+          $text = Get-Content $log -Raw
+          Write-Host $text
+          if ($keyboard.ExitCode -ne 0 -or $text -notmatch 'KEYBOARD_ROUND_SMOKE_OK' -or $text -match 'SCRIPT ERROR') {
+            throw 'Packaged keyboard event round failed'
+          }
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:

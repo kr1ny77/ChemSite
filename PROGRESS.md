@@ -285,6 +285,8 @@ Continue isolated exported keyboard playtesting, improve chemistry-specific VFX 
 
 ## Last verification
 
+2026-10-06: Full Level 1 raw keyboard-event round passed source/headless and native Forward+: physical WASD routes, E station opening, Tab/Space answer and formula controls, Escape/Space pause, five correct answers, 700 points, Level 2 unlock and menu return. Eleven 1027×642 native screenshots reviewed with clean final shutdown. The graphical scenario explicitly resumes focus-loss pause. Standard progress hash stays unchanged. The final packaged macOS repeat passed with 700 points/three stars and clean verbose shutdown. Explicit conditions preserve every check in release builds. Windows CI follows push.
+
 2026-10-06: Desktop focus-loss auto-pause passed headless/native Forward+ checks: timer freeze, immediate disabled-control horizontal stop, focused resume and preserved task/results state. Native 1028×642 pause panel visually reviewed. Locomotion transition/phase, footsteps and eased response regressions pass; Godot import/parse is clean.
 
 2026-10-06: Reviewed all fourteen Windows 9d5cc4a sheets (154 PNGs at 1028×642) after exact archive size/SHA-256 verification. Added persistent isolated `--qa-playtest` paths and passed menu/career/answer/menu isolation with unchanged standard progress/settings hashes. Godot import/parse and fresh macOS export succeeded. Native keyboard activation entered Level 1; CUA capture/window instability prevented completing movement/pause acceptance. Full keyboard/human playtest remains open; details in docs/PLAYTEST.md.

@@ -41,3 +41,35 @@ The focus-pause gate passed headless and native Forward+ with a reviewed
 1028×642 screenshot. It covers moving-player stop, frozen timer, focused resume
 button, explicit resumption and preservation of task/results states. Locomotion
 phase transfer, transition, footsteps and acceleration response regressions pass.
+
+## Keyboard event regression — 2026-10-06
+
+The packaged `--qa-keyboard-round` route sends raw `InputEventKey` events through
+`Input.parse_input_event()`. It starts Career from menu focus, holds physical
+WASD keys through each collision-tested route, opens stations with E, traverses
+answer/formula controls with Tab and activates them with Space. Escape opens
+pause; Space resumes. Five correct submissions produce 700 points, three stars
+and the Level 2 unlock in a dedicated `qa-keyboard-progress.json` file. The menu
+return also uses Space. The standard progress hash is checked before/after.
+
+The source headless round and native Forward+ graphical round passed. All eleven
+1027×642 native screenshots were reviewed (five tasks, five feedback panels,
+results). Initial failures identified test-side canonical/display ion spelling
+and the new focus-loss pause. Answer selection now uses the production validator;
+the graphical scenario explicitly resumes focus pauses through its focused button.
+Final native shutdown is clean. This verifies the engine's keyboard event path;
+physical hardware and the complete human/audio acceptance path remain open.
+
+```sh
+builds/macos/ChemSite.app/Contents/MacOS/ChemSite --headless -- --qa-keyboard-round
+```
+
+Windows CI runs the same packaged route with a 150-second process bound and checks
+its success marker, exit status and script errors. The engine's internal bound
+is 120 seconds. Native captures are stored in `user://qa-keyboard-round/`; reviewed
+source evidence is copied to `artifacts/keyboard-round/`.
+
+2026-10-07: The release macOS repeat passed with five completed tasks, 700 points
+and three stars. Final verbose log has no script/resource errors or leak warnings.
+All packaged QA conditions use explicit branches; release builds elide assertions.
+The initial assertion-based packaged result is excluded from acceptance evidence.
