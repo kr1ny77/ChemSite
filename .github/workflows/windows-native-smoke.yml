@@ -51,6 +51,7 @@ jobs:
             @{ Script = 'mixing_visual_smoke'; Marker = 'MIXING_VISUAL_SMOKE_OK' }
             @{ Script = 'ph_scale_smoke'; Marker = 'PH_SCALE_SMOKE_OK' }
             @{ Script = 'comparison_visual_smoke'; Marker = 'COMPARISON_VISUAL_SMOKE_OK' }
+            @{ Script = 'mixer_motion_smoke'; Marker = 'CHEMSITE_MIXER_MOTION_OK' }
             @{ Script = 'focus_pause_smoke'; Marker = 'FOCUS_PAUSE_SMOKE_OK' }
           )
           foreach ($check in $checks) {

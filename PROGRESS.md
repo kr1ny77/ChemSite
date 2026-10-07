@@ -1,5 +1,34 @@
 # ChemSite progress
 
+## Authored mixer motion — 2026-10-07
+
+Current phase: Phase 3/7/8 production quality. Added three shaped drum ribs and
+separate fixed tilted axis/animated rotor in the editable Blender source. Fresh
+GLB has 3,194 triangles, seven mesh batches, six materials and DrumRotate. Source
+rigid-axis sampling covers 10,064 vertices/frames with 0.00025 mm maximum residual.
+The first Euler-only assembly failed its invariant and was replaced by a fixed
+axis parent plus rotor. Imported Godot geometry passes 80 axis samples, fixed
+chassis, full-clip seam, pause/resume phase and static reduced-motion checks.
+
+A separate presentation controller pauses during modal UI, disabled controls and
+results. Collision geometry remains the existing fixed proxy. Viewed Blender
+quarter-cycle sheet and two native Forward+ quarter poses; captured all five
+native quarter/loop poses from two cameras and six neutral asset views. Recorded
+the complete native cycle: 1,203 AVI frames at 60 FPS; encoded MP4 has 1,204
+frames/20.067 seconds after FFmpeg timestamp conversion. Reviewed its chronological
+two-second samples. Editor import/parse, source collision and five-task
+round pass. macOS export and packaged Level 1 round pass. Final controller also pauses the
+spatial machinery stream during panels/results. Headless audio verification
+explicitly starts playback and allows 0.8 seconds for clean shutdown.
+Windows visual run 37624893932 completed successfully for 45c8378; archive review
+remains open. Added the mixer gate to Windows native CI, pending push.
+
+Current work: heating observations and construction visual progression. Next
+task: review the latest Windows visual archive and continue station VFX. Known
+issues: latest Windows image inspection, physical device
+and instructor review, student-laptop performance and prerelease remain open.
+
+
 ## Curated mixing observation visuals — 2026-10-06
 
 Added schematic precipitate settling and gas bubbles to the five verified Level 2

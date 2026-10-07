@@ -63,6 +63,7 @@ var _target_count: int = 5
 var _machinery_player: AudioStreamPlayer3D
 var _work_lights: Array[OmniLight3D] = []
 var _site_time: float = 0.0
+var _mixer_motion: Node
 var _station_accent_materials: Dictionary = {}
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
 const SETTINGS_DATA = preload("res://scripts/core/settings_data.gd")
@@ -108,6 +109,11 @@ func _pause_on_focus_loss() -> void:
 	_update_wayfinder()
 
 func _process(delta: float) -> void:
+	var exploring: bool = not _round_done and _player.controls_enabled and (_hud == null or not _hud.is_panel_open())
+	if _mixer_motion != null:
+		_mixer_motion.set_running(exploring)
+	if is_instance_valid(_machinery_player):
+		_machinery_player.stream_paused = not exploring
 	if not reduced_motion:
 		_site_time += delta
 		for index in range(_work_lights.size()):
@@ -386,6 +392,11 @@ func _environment_prop(asset_name: String, pos: Vector3, yaw: float = 0.0) -> vo
 	prop.position = pos
 	prop.rotation.y = yaw
 	_world.add_child(prop)
+	if asset_name == "site_mixer":
+		_mixer_motion = preload("res://scripts/world/site_mixer_motion.gd").new()
+		_mixer_motion.name = "MixerMotion"
+		_world.add_child(_mixer_motion)
+		_mixer_motion.configure(prop, reduced_motion)
 	if asset_name in ["construction_shell", "site_cabin", "rebar_bay"]:
 		for mesh in prop.find_children("*", "MeshInstance3D", true, false):
 			mesh.add_to_group("player_camera_occluder")

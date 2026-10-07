@@ -127,6 +127,28 @@ bpy.ops.mesh.primitive_torus_add(major_segments=32, minor_segments=8, location=d
 bpy.context.object.name = "reinforced pouring lip"
 bpy.context.object.data.materials.append(yellow)
 
+# Three shallow ribs make the otherwise rotationally symmetric drum readable
+# in motion. Their profile follows the authored vessel and remains rigid.
+moving_names = {"tilted mixing drum", "recessed drum interior", "shadowed vessel floor", "reinforced pouring lip"}
+for rib_index in range(3):
+    theta = 2 * pi * rib_index / 3
+    rib_vertices = []
+    for height, radius in RINGS[1:]:
+        for depth in (0.007, 0.026):
+            for edge in (-0.026, 0.026):
+                rib_vertices.append(drum_point(radius + depth, theta + edge, height))
+    rib_faces = [(0, 1, 3, 2), (12, 14, 15, 13)]
+    for segment in range(3):
+        a, b = segment * 4, (segment + 1) * 4
+        rib_faces.extend([(a, b, b+1, a+1), (a+2, a+3, b+3, b+2), (a, a+2, b+2, b), (a+1, b+1, b+3, a+3)])
+    rib_mesh = bpy.data.meshes.new("formed drum rib")
+    rib_mesh.from_pydata(rib_vertices, [], rib_faces)
+    rib_mesh.update()
+    rib = bpy.data.objects.new(f"drum reinforcement rib {rib_index+1}", rib_mesh)
+    bpy.context.collection.objects.link(rib)
+    rib.data.materials.append(yellow)
+    moving_names.add(rib.name)
+
 # Opposed steel side supports and a steering wheel explain the tilt mechanism.
 for x in (-0.69, 0.69):
     cylinder("drum pivot housing", (x, -0.10, 1.24), 0.16, 0.09, metal, rotation=(0, pi / 2, 0))
@@ -142,18 +164,63 @@ for obj in bpy.data.objects:
             bpy.context.view_layer.objects.active = obj
             bpy.ops.object.modifier_apply(modifier=modifier.name)
 
-bpy.ops.wm.save_as_mainfile(filepath=str(SOURCE / "site_mixer.blend"))
-for surface in (orange, yellow, steel, metal, rubber, recess):
-    pieces = [
-        obj for obj in bpy.data.objects
-        if obj.type == "MESH" and obj.data.materials and obj.data.materials[0] == surface
-    ]
-    bpy.ops.object.select_all(action="DESELECT")
-    for piece in pieces:
-        piece.select_set(True)
-    bpy.context.view_layer.objects.active = pieces[0]
-    if len(pieces) > 1:
-        bpy.ops.object.join()
+axis = bpy.data.objects.new("Drum axis", None)
+bpy.context.collection.objects.link(axis)
+axis.location = PIVOT
+axis.rotation_euler = (TILT, 0, 0)
+rotor = bpy.data.objects.new("Drum rotor", None)
+bpy.context.collection.objects.link(rotor)
+rotor.parent = axis
+bpy.context.view_layer.update()
+for name in moving_names:
+    piece = bpy.data.objects[name]
+    world = piece.matrix_world.copy()
+    piece.parent = rotor
+    piece.matrix_world = world
 
-bpy.ops.export_scene.gltf(filepath=str(OUTPUT / "site_mixer.glb"), export_format="GLB", export_apply=True)
+scene = bpy.context.scene
+scene.render.fps = 24
+scene.frame_start, scene.frame_end = 1, 481
+for frame, angle in [(1, 0.0), (481, 2*pi)]:
+    rotor.rotation_euler.z = angle
+    rotor.keyframe_insert(data_path="rotation_euler", frame=frame)
+rotor.animation_data.action.name = "DrumRotate"
+for curve in rotor.animation_data.action.layers[0].strips[0].channelbag(rotor.animation_data.action_slot).fcurves:
+    for key in curve.keyframe_points:
+        key.interpolation = "LINEAR"
+scene.frame_set(1)
+
+# A rigid local-axis rotation must preserve every vertex's axial coordinate
+# and radius. Fixed supports retain their authored world transforms.
+fixed = {obj.name: obj.matrix_world.copy() for obj in bpy.data.objects if obj.type == "MESH" and obj.parent is None}
+inverse = rotor.matrix_world.inverted()
+samples = [(obj, vertex.index, inverse @ (obj.matrix_world @ vertex.co)) for obj in rotor.children for vertex in obj.data.vertices]
+max_residual = 0.0
+for frame in range(1, 482, 30):
+    scene.frame_set(frame)
+    for obj, index, baseline in samples:
+        point = inverse @ (obj.matrix_world @ obj.data.vertices[index].co)
+        max_residual = max(max_residual, abs(point.z-baseline.z), abs(point.xy.length-baseline.xy.length))
+    for name, transform in fixed.items():
+        assert max(abs(bpy.data.objects[name].matrix_world[row][column]-transform[row][column]) for row in range(4) for column in range(4)) < 1e-6
+assert max_residual < 1e-5, max_residual
+print("MIXER_RIGID_AXIS_OK", max_residual, "samples", len(samples)*17)
+scene.frame_set(1)
+bpy.ops.wm.save_as_mainfile(filepath=str(SOURCE / "site_mixer.blend"))
+
+# Batch only within each motion assembly so shared paint cannot merge a
+# spinning rim with the fixed motor warning stripe.
+for owner in (None, rotor):
+    for surface in (orange, yellow, steel, metal, rubber, recess):
+        pieces = [obj for obj in bpy.data.objects if obj.type == "MESH" and obj.parent == owner and obj.data.materials and obj.data.materials[0] == surface]
+        if not pieces:
+            continue
+        bpy.ops.object.select_all(action="DESELECT")
+        for piece in pieces:
+            piece.select_set(True)
+        bpy.context.view_layer.objects.active = pieces[0]
+        if len(pieces) > 1:
+            bpy.ops.object.join()
+
+bpy.ops.export_scene.gltf(filepath=str(OUTPUT / "site_mixer.glb"), export_format="GLB", export_apply=True, export_animations=True, export_frame_range=True, export_animation_mode="ACTIONS", export_force_sampling=True)
 print("SITE_MIXER_EXPORT", OUTPUT / "site_mixer.glb")
