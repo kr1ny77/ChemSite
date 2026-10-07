@@ -56,7 +56,7 @@ jobs:
             Write-Host "Starting graphical QA: $name"
             $stdout = "artifacts/windows-visual/logs/$name.stdout.log"
             $stderr = "artifacts/windows-visual/logs/$name.stderr.log"
-            $process = Start-Process -FilePath $executable -ArgumentList $arguments -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+            $process = Start-Process -FilePath $executable -ArgumentList (@('--audio-driver', 'Dummy') + $arguments) -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
             if (-not $process.WaitForExit($timeoutSeconds * 1000)) {
               Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
               Get-Content $stdout, $stderr -ErrorAction SilentlyContinue | Write-Host
@@ -64,6 +64,7 @@ jobs:
             }
             $process.Refresh()
             Get-Content $stdout, $stderr -ErrorAction SilentlyContinue | Write-Host
+            if (Select-String -Path $stdout, $stderr -Pattern 'SCRIPT ERROR:|(^|\s)ERROR:' -Quiet) { throw "$name graphical QA reported an engine/script error" }
             if ($process.ExitCode -ne 0) { throw "$name graphical QA failed ($($process.ExitCode))" }
             Write-Host "Completed graphical QA: $name"
           }
@@ -87,6 +88,7 @@ jobs:
             @{ Name = 'level4-equilibrium'; Flag = '--qa-visual-level4-equilibrium-round'; Folder = 'qa-visual-level4-round-mission' }
             @{ Name = 'level4-electrode'; Flag = '--qa-visual-level4-electrode-round'; Folder = 'qa-visual-level4-round-mission' }
             @{ Name = 'level4-corrosion'; Flag = '--qa-visual-level4-corrosion-round'; Folder = 'qa-visual-level4-round-mission' }
+            @{ Name = 'level4-thermal'; Flag = '--qa-visual-level4-thermal-round'; Folder = 'qa-visual-level4-round-mission' }
             @{ Name = 'level4-surface'; Flag = '--qa-visual-level4-surface-round'; Folder = 'qa-visual-level4-round-mission' }
           )
           foreach ($round in $rounds) {
@@ -100,7 +102,7 @@ jobs:
             $baseScreens = @($screens | Where-Object { $_.Name -match '^(task|feedback)_\d{2}\.png$|^results\.png$' })
             if ($baseScreens.Count -ne 11) { throw "$($round.Name) expected 11 task/feedback/result screens, found $($screens.Count)" }
             $observations = @($screens | Where-Object { $_.Name -like 'observation_*.png' })
-            $expectedObservations = switch ($round.Name) { 'level4' { 1 }; 'level4-electrode' { 5 }; 'level4-corrosion' { 1 }; 'level4-surface' { 3 }; default { 0 } }
+            $expectedObservations = switch ($round.Name) { 'level4' { 1 }; 'level4-electrode' { 5 }; 'level4-corrosion' { 1 }; 'level4-surface' { 3 }; 'level4-kinetics' { 1 }; 'level4-equilibrium' { 1 }; 'level4-thermal' { 3 }; default { 0 } }
             if ($observations.Count -ne $expectedObservations) { throw "$($round.Name) observation captures missing ($($observations.Count) / $expectedObservations)" }
             foreach ($screen in $screens) {
               if ($screen.Length -lt 20000) { throw "Capture appears empty: $($screen.Name) ($($screen.Length) bytes)" }

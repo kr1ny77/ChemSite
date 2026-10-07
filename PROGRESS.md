@@ -1,5 +1,42 @@
 # ChemSite progress
 
+## Thermal observation feedback and Windows archive review — 2026-10-07
+
+Current phase: Phase 3/7/8 production quality. Added qualitative low/reference/high
+temperature diagrams to L4-133/143/144 through curated comparison metadata.
+Captions match the ordered settings. The closed system icon, thermometer level,
+warm waves and cooling direction are schematic; existing answers/readouts stay
+unchanged. Native bank regenerated with all 200 tasks. The content audit checks
+three thermal mappings, two Hess calculations and 38 choice answers. TypeScript
+passes. All 72 reveal/size/motion cases and native 200-task/400-feedback layouts at
+1028×642 pass. The new idle gate exposed Godot's automatic _process activation;
+_ready now preserves inactive hidden diagrams. Repaired final gate passes.
+
+Captured all eighteen unread/partial/read thermal states in normal/reduced modes.
+Viewed the native chronological motion sheet and final full-size cooling panel,
+and all three exported observation panels. The finite recording has 563 frames
+at 60 FPS with a completion marker. Source thermal round, editor import/parse,
+refreshed macOS export and final packaged thermal round pass; exported graphical
+round supplies fourteen PNGs including all three observations.
+
+Downloaded 45c8378 Windows artifact 11484735604: 103,771,227 bytes, SHA-256
+c6999674d2f1d6bc1adb8ccc2bf2a814240768468b80dedbefea4469dd17df8e. It matches
+GitHub metadata. All 175 images are 1028×642 and the fifteen round/count contracts
+pass. Opened all fifteen chronological sheets and seven full-size observation/
+input examples. No new UI clipping found. Logs have 36 WASAPI initialization
+errors across eighteen checks, followed by DummyAudio fallback; no script error.
+Next workflow explicitly selects DummyAudio and rejects engine/script errors.
+The new temperature route extends the preserved Windows matrix to 191 PNGs.
+
+Last platform verification: mixer 8f8dfcd native run 37627220433 and visual run
+37627220384 completed successfully. Thermal/error-gate CI awaits this push.
+Current work: construction visual progression and broader station/material polish.
+Next task: implement persistent construction stage rendering with authored assets,
+then inspect the new Windows thermal run. Known issues: physical Windows/device
+and instructor review, student-laptop performance, human movement/audio acceptance,
+final visual quality and GitHub prerelease remain open. Goal remains active.
+
+
 ## Authored mixer motion — 2026-10-07
 
 Current phase: Phase 3/7/8 production quality. Added three shaped drum ribs and
@@ -442,7 +479,7 @@ observation captures: 175 PNGs expected. New Windows verification follows push.
 - Cartoon Walk/Run pass flat-floor sole and stance gates, phase transfer, repeated playback and contact-aligned footstep signals. Heading has a damped response and angular speed limit. Human acceleration/deceleration feel and tight-turn contact remain open.
 - The detailed cartoon character now replaces the MPFB player. Steady Walk/Run soles, phase transfer, upright actions, contact-aligned footsteps and turn response have numeric checks. Human movement feel and contact through acceleration/tight turns remain open.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
-- Station animations, chemistry-specific VFX and broader accessibility controls remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
+- Further station animations, chemistry VFX coverage and human accessibility review remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
 - The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 EXE passed automated rounds and a graphical five-task capture on GitHub Actions. Physical keyboard, audio listening and save behavior on a Windows user desktop remain to be reviewed.
 - Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON and marked verified; a target-course instructor review remains open. Levels 1–5 enter gameplay through separate career rounds. All five levels still need human playtesting and contextual interaction polish.

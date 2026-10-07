@@ -1,7 +1,7 @@
 extends SceneTree
 
 const BANK = preload("res://scripts/chemistry/task_bank.gd")
-const EXPECTED := {"L4-155": ["intact-coating", "damaged-coating"], "L4-157": ["bare-surface", "passive-film"], "L4-158": ["dry-surface", "electrolyte-film"]}
+const EXPECTED := {"L4-133": ["thermal-low", "thermal-high"], "L4-143": ["thermal-reference", "thermal-high"], "L4-144": ["thermal-reference", "thermal-low"], "L4-155": ["intact-coating", "damaged-coating"], "L4-157": ["bare-surface", "passive-film"], "L4-158": ["dry-surface", "electrolyte-film"]}
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -11,7 +11,7 @@ func _run() -> void:
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
 	var tasks: Array[Dictionary] = BANK.load_verified_tasks(4).filter(func(task): return task.get("parameters", {}).has("comparisonVisuals"))
-	if not _check(tasks.size() == 9, "Expected six electrodes and three corrosion comparisons"): return
+	if not _check(tasks.size() == 12, "Expected six electrodes, three corrosion and three thermal comparisons"): return
 	var cases := 0
 	for viewport_size in [Vector2i(1028, 642), Vector2i(1152, 720), Vector2i(1440, 900)]:
 		root.size = viewport_size
@@ -21,12 +21,15 @@ func _run() -> void:
 				if task.interactionType == "electrochemistry":
 					for index in range(2):
 						if not _check(task.parameters.comparisonVisuals[index].caption == str(task.parameters.comparisonRuns[index].observation).get_slice(";", 0), task.id + " schematic half-equation differs from curated readout"): return
+				if task.id in ["L4-133", "L4-143", "L4-144"]:
+					for index in range(2):
+						if not _check(task.parameters.comparisonVisuals[index].caption == task.parameters.comparisonRuns[index].setting, task.id + " thermal caption differs from curated setting"): return
 				hud.show_task(task, task.station)
 				var comparison: VBoxContainer = hud._comparison_view
 				var visual: Control = comparison.get_node("ObservationVisual")
 				var expected: Array = EXPECTED.get(task.id, ["metal-oxidation", "metal-reduction"])
 				if not _check(visual.kinds == expected and visual.reduced_motion == static_motion, task.id + " visual mapping"): return
-				if not _check(not visual.visible and not comparison.is_complete(), task.id + " premature observation"): return
+				if not _check(not visual.visible and not visual.is_processing() and not comparison.is_complete(), task.id + " premature observation"): return
 				var completed := [0]
 				comparison.comparison_completed.connect(func(): completed[0] += 1)
 				comparison.inspect_run(1)

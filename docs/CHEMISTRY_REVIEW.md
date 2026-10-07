@@ -96,3 +96,13 @@ colors, dimensions and timing are schematic. No new answer, corrosion rate,
 experiment quantity or practical procedure is introduced. Existing Level 4 audit
 passes; all 54 layout/motion/reveal cases pass. Target-course instructor review
 remains open.
+
+2026-10-07: Thermal diagrams for L4-133/143/144 reuse the reviewed qualitative
+temperature settings and observations. The content audit independently checks
+ordered low/reference/high states and exact captions. The existing temperature
+trend and exothermic equilibrium statements were rechecked against
+[OpenStax §12.2](https://openstax.org/books/chemistry-2e/pages/12-2-factors-affecting-reaction-rates)
+and [§13.3](https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle).
+The drawing identifies a closed schematic system and carries no numeric reading,
+physical phase, boiling, gas production or measured kinetic/equilibrium result.
+Existing answers and readouts remain unchanged. Target-course review stays open.

@@ -30,3 +30,30 @@ Expected evidence is 175 PNGs: fifteen rounds × eleven task/feedback/result sta
 plus ten observed panels (one default Level 4, five electrode, one corrosion,
 three surface). Empty/read field styles and diagrams need Windows image review
 from the new run after push. Compatibility/Dummy Audio limits remain as above.
+
+## Reviewed 175-screen observation archive — 45c8378
+
+Runs 37624893895 (native) and 37624893932 (graphical) completed successfully.
+Artifact 11484735604 is 103,771,227 bytes with SHA-256
+`c6999674d2f1d6bc1adb8ccc2bf2a814240768468b80dedbefea4469dd17df8e`.
+The downloaded archive matches the GitHub digest. All 175 PNGs are 1028×642 and
+exceed 20 KB; fifteen rounds each contain the eleven baseline screens, with ten
+additional observations distributed exactly as the workflow specifies.
+
+Opened all fifteen chronological sheets plus full-size electrode reduction/
+electron-direction, coating, passivation, electrolyte-film, equation-field and
+locked Hess-field panels. The reviewed UI is enclosed and readable with Onest,
+light input fields, distinct focus and balanced half-equations. Local evidence:
+`artifacts/windows-45c8378/evidence`, `sheets` and `verified-manifest.json`.
+
+Logs contain 36 WASAPI initialization errors across eighteen graphical checks,
+followed by documented DummyAudio fallback. No script error was found. Audio
+listening remains a physical-device gate. The next workflow explicitly selects
+DummyAudio and rejects engine/script error lines instead of accepting the audio
+fallback errors. ANGLE software rendering/TAA warnings remain expected CI limits.
+
+Mixer commit 8f8dfcd passed native run 37627220433 and graphical run 37627220384.
+Its new native gate covers exported rotor axis, loop seam, pause/resume and
+reduced motion. Its image archive has yet to be inspected. Thermal comparisons
+add one focused round and observations in kinetics/equilibrium; the new expected
+matrix is 191 PNGs (sixteen baseline rounds × eleven plus fifteen observations).

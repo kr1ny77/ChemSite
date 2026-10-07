@@ -11,11 +11,12 @@ func _run() -> void:
 	site.save_path = "user://capture-comparison-visual-progress.json"
 	root.add_child(site)
 	site._player.controls_enabled = false
-	var directory := "res://artifacts/comparison-vfx"
+	var thermal := OS.get_cmdline_user_args().has("--thermal")
+	var directory := "res://artifacts/thermal-vfx" if thermal else "res://artifacts/comparison-vfx"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory))
 	var tasks: Array[Dictionary] = BANK.load_verified_tasks(4)
 	for static_motion in [false, true]:
-		for identifier in ["L4-147", "L4-155", "L4-157", "L4-158"]:
+		for identifier in (["L4-133", "L4-143", "L4-144"] if thermal else ["L4-147", "L4-155", "L4-157", "L4-158"]):
 			var task: Dictionary = tasks.filter(func(value): return value.id == identifier)[0]
 			site._tasks = [task]
 			site._task_index = 0

@@ -38,4 +38,16 @@ for identifier in (f'L4-{number}' for number in range(147,153)):
 for identifier in (f'L4-{number}' for number in range(153,160)):
  runs=TASKS[identifier]['parameters']['comparisonRuns']
  assert len(runs)==2 and all(run['observation'].strip() for run in runs),identifier
+# Readout captions and ordered thermal states are curated independently of the
+# renderer. The illustrations contain no numeric thermometer readings.
+for identifier,kinds in {
+ 'L4-133':['thermal-low','thermal-high'],
+ 'L4-143':['thermal-reference','thermal-high'],
+ 'L4-144':['thermal-reference','thermal-low'],
+}.items():
+ parameters=TASKS[identifier]['parameters']
+ visuals=parameters['comparisonVisuals']
+ assert [visual['kind'] for visual in visuals]==kinds,identifier
+ assert [visual['caption'] for visual in visuals]==[run['setting'] for run in parameters['comparisonRuns']],identifier
+ assert all(set(visual)=={'kind','caption'} for visual in visuals),identifier
 print('LEVEL4_AUDIT_OK: 2 Hess calculations, 38 choice tasks, 29 comparisons, equilibrium conditions')

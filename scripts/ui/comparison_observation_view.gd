@@ -2,7 +2,7 @@ extends Control
 
 # Qualitative diagrams illustrate the curated observation. Motion duration and
 # geometry are presentation values; chemistry quantities/rates are never inferred.
-const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film"]
+const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high"]
 var kinds: Array[String] = []
 var _captions: Array[String] = []
 var _colors: Array[Color] = []
@@ -10,6 +10,10 @@ var observed: Array[bool] = [false, false]
 var reduced_motion := false
 var _elapsed: Array[float] = [0.0, 0.0]
 var _background: StyleBoxFlat
+
+func _ready() -> void:
+	# Godot enables an overridden _process on tree entry. Preserve the reveal gate.
+	set_process(observed.has(true) and not reduced_motion)
 
 func configure(visuals: Array, static_motion: bool) -> void:
 	reduced_motion = static_motion
@@ -54,6 +58,8 @@ func _draw() -> void:
 		var progress := smoothstep(0.0, 1.0, _elapsed[index] / 1.2)
 		if kinds[index] in ["metal-oxidation", "metal-reduction"]:
 			_electrode(offset, kinds[index], progress, _captions[index], _colors[index])
+		elif kinds[index].begins_with("thermal-"):
+			_thermal(offset, kinds[index], progress, _captions[index])
 		else:
 			_surface(offset, kinds[index], progress)
 		var label := "%d · СХЕМА · МАСШТАБ УСЛОВНЫЙ" % (index + 1)
@@ -110,3 +116,35 @@ func _arrow(from: Vector2, to: Vector2, color: Color) -> void:
 	var direction := (to - from).normalized()
 	var normal := Vector2(-direction.y, direction.x)
 	draw_colored_polygon(PackedVector2Array([to, to - direction * 7 + normal * 4, to - direction * 7 - normal * 4]), color)
+
+func _thermal(offset: Vector2, kind: String, progress: float, caption: String) -> void:
+	# Qualitative temperature icon. No temperature, concentration, reaction rate
+	# or gas formation is inferred from the illustrated level or heat-wave timing.
+	var ink := Color("3f6470")
+	var hot := kind == "thermal-high"
+	var cold := kind == "thermal-low"
+	var tint := Color("ce7939") if hot else (Color("4296b4") if cold else Color("789c94"))
+	var level := 28.0 if hot else (10.0 if cold else 19.0)
+	draw_string(get_theme_default_font(), offset + Vector2(12, 21), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x * .5 - 24, 16, ink)
+	var bulb := offset + Vector2(31, 56)
+	draw_circle(bulb, 8, ink)
+	draw_rect(Rect2(offset + Vector2(27, 28), Vector2(8, 27)), ink)
+	draw_circle(bulb, 5.5, tint)
+	draw_rect(Rect2(offset + Vector2(29, 56 - level * progress), Vector2(4, level * progress)), tint)
+	for tick in range(4):
+		draw_line(offset + Vector2(39, 30 + tick * 8), offset + Vector2(45, 30 + tick * 8), ink, 1)
+	var sample := Rect2(offset + Vector2(73, 32), Vector2(76, 27))
+	var surface := Color("d9e5df").lerp(tint.lightened(.5), progress)
+	draw_rect(sample, surface)
+	draw_rect(sample, ink, false, 2)
+	draw_string(get_theme_default_font(), offset + Vector2(78, 50), "СИСТЕМА", HORIZONTAL_ALIGNMENT_LEFT, 66, 11, ink)
+	if hot:
+		for wave in range(3):
+			var points := PackedVector2Array()
+			for step in range(12):
+				var y := 54.0 - step * 2.0
+				points.append(offset + Vector2(169 + wave * 12 + sin(step * .7 + progress * TAU) * 2.5, y))
+			draw_polyline(points, Color(tint, progress), 2, true)
+	elif cold:
+		_arrow(offset + Vector2(178, 31), offset + Vector2(178, 56), Color(tint, progress))
+		draw_string(get_theme_default_font(), offset + Vector2(190, 47), "T", HORIZONTAL_ALIGNMENT_LEFT, -1, 19, tint)

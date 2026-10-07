@@ -146,7 +146,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     topic: 'Химическая кинетика', subtopic: 'Температура', difficulty: 1,
     station: 'reaction-bench', interactionType: 'kinetics-experiment',
     prompt: 'Как повышение температуры обычно влияет на скорость большинства химических реакций?',
-    parameters: { comparisonRuns: [
+    parameters: { comparisonVisuals: [{ kind: 'thermal-low', caption: 'Ниже температура' }, { kind: 'thermal-high', caption: 'Выше температура' }], comparisonRuns: [
       { setting: 'Ниже температура', observation: 'Меньшая доля столкновений преодолевает энергетический барьер.' },
       { setting: 'Выше температура', observation: 'Большая доля столкновений преодолевает энергетический барьер.' },
     ] },
@@ -265,7 +265,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
   makeTask(143, {
     topic: 'Химическое равновесие', subtopic: 'Температура', difficulty: 2,
     station: 'reaction-bench', interactionType: 'equilibrium-control',
-    parameters: { compound: 'NH3', comparisonRuns: [{ setting: "Исходная температура", observation: "Прямое образование NH₃ экзотермично; тепло записано среди продуктов." }, { setting: "Температура повышена", observation: "Новая равновесная смесь содержит меньшую долю NH₃." }] },
+    parameters: { compound: 'NH3', comparisonVisuals: [{ kind: 'thermal-reference', caption: 'Исходная температура' }, { kind: 'thermal-high', caption: 'Температура повышена' }], comparisonRuns: [{ setting: "Исходная температура", observation: "Прямое образование NH₃ экзотермично; тепло записано среди продуктов." }, { setting: "Температура повышена", observation: "Новая равновесная смесь содержит меньшую долю NH₃." }] },
     prompt: 'Реакция N₂ + 3H₂ ⇌ 2NH₃ + Q экзотермическая. Что произойдёт при повышении температуры?',
     correctAnswer: 'равновесие сместится влево', acceptedAnswers: ['влево', 'к реагентам'],
     options: ['равновесие сместится влево', 'равновесие сместится вправо', 'равновесие исчезнет', 'температура не влияет'],
@@ -276,7 +276,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
   makeTask(144, {
     topic: 'Химическое равновесие', subtopic: 'Температура', difficulty: 2,
     station: 'reaction-bench', interactionType: 'equilibrium-control',
-    parameters: { compound: 'NH3', comparisonRuns: [{ setting: "Исходная температура", observation: "Прямое образование NH₃ экзотермично; тепло записано среди продуктов." }, { setting: "Температура понижена", observation: "Новая равновесная смесь содержит большую долю NH₃." }] },
+    parameters: { compound: 'NH3', comparisonVisuals: [{ kind: 'thermal-reference', caption: 'Исходная температура' }, { kind: 'thermal-low', caption: 'Температура понижена' }], comparisonRuns: [{ setting: "Исходная температура", observation: "Прямое образование NH₃ экзотермично; тепло записано среди продуктов." }, { setting: "Температура понижена", observation: "Новая равновесная смесь содержит большую долю NH₃." }] },
     prompt: 'Для экзотермической реакции N₂ + 3H₂ ⇌ 2NH₃ + Q понизили температуру. Куда сместится равновесие?',
     correctAnswer: 'вправо, к NH₃', acceptedAnswers: ['вправо', 'к NH3', 'к продуктам'],
     options: ['вправо, к NH₃', 'влево, к N₂ и H₂', 'положение всегда сохраняется', 'реакция становится необратимой'],

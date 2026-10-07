@@ -4244,6 +4244,16 @@
     "interactionType": "kinetics-experiment",
     "prompt": "Как повышение температуры обычно влияет на скорость большинства химических реакций?",
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "thermal-low",
+          "caption": "Ниже температура"
+        },
+        {
+          "kind": "thermal-high",
+          "caption": "Выше температура"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Ниже температура",
@@ -4677,6 +4687,16 @@
     "interactionType": "equilibrium-control",
     "parameters": {
       "compound": "NH3",
+      "comparisonVisuals": [
+        {
+          "kind": "thermal-reference",
+          "caption": "Исходная температура"
+        },
+        {
+          "kind": "thermal-high",
+          "caption": "Температура повышена"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Исходная температура",
@@ -4724,6 +4744,16 @@
     "interactionType": "equilibrium-control",
     "parameters": {
       "compound": "NH3",
+      "comparisonVisuals": [
+        {
+          "kind": "thermal-reference",
+          "caption": "Исходная температура"
+        },
+        {
+          "kind": "thermal-low",
+          "caption": "Температура понижена"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Исходная температура",

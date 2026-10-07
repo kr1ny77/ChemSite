@@ -103,6 +103,8 @@ jobs:
           if ($hess.ExitCode -ne 0) { throw "Level 4 Hess smoke failed ($($hess.ExitCode))" }
           $kinetics = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-kinetics-round') -Wait -PassThru -NoNewWindow
           if ($kinetics.ExitCode -ne 0) { throw "Level 4 kinetics smoke failed ($($kinetics.ExitCode))" }
+          $thermal = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-thermal-round') -Wait -PassThru -NoNewWindow
+          if ($thermal.ExitCode -ne 0) { throw 'Level 4 thermal round failed' }
           $equilibrium = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-equilibrium-round') -Wait -PassThru -NoNewWindow
           if ($equilibrium.ExitCode -ne 0) { throw "Level 4 equilibrium smoke failed ($($equilibrium.ExitCode))" }
           $electrodes = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-electrode-round') -Wait -PassThru -NoNewWindow

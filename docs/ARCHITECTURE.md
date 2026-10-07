@@ -87,3 +87,13 @@ QA captures explicitly redraw through main-thread `RenderingServer.force_draw`
 before reading the viewport. This avoids an unbounded post-draw signal wait in
 static reduced-motion scenes. Exported visual QA now captures settled observation
 states before submission, preserving task/feedback/result evidence.
+
+### Authored environment motion
+
+`SiteMixerMotion` drives the imported `DrumRotate` AnimationPlayer clip. The GLB
+contains a fixed tilted axis parent and a local rotor; source material batches
+retain that ownership. Collision remains in the world’s fixed proxy. The world
+supplies active exploration state, pausing animation and spatial machinery audio
+during panels, pause and results. Reduced motion keeps the initial rotor pose.
+An explicit `_ready` gate on comparison diagrams also preserves their inactive
+process state when Godot enables overridden callbacks during tree entry.

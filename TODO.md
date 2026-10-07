@@ -84,6 +84,8 @@
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
   - [x] Author a separate rigid mixer rotor in Blender and integrate its imported clip with modal/pause/reduced-motion controls; 80 native axis samples, full loop and pause/resume pass, quarter poses from two cameras, six asset views and full-cycle recording reviewed; source collision/round and macOS package pass. Windows CI follows push.
+  - [x] Add qualitative heating/cooling diagrams to three reviewed temperature comparisons; verify 72 reveal/layout/motion cases, 200-task/400-feedback native layout, finite movie and macOS thermal round. New 191-screen Windows gate follows push.
+  - [x] Inspect the digest-verified 175-screen Windows observation archive across fifteen chronological sheets and full-size diagrams/input fields; record WASAPI fallback and make DummyAudio/error rejection explicit for the next run.
   - [x] Add data-driven electrode and surface-condition diagrams to nine Level 4 tasks; verify 54 reveal/motion/size cases, balanced readout captions, native 24-state capture and finite motion recording.
   - [x] Show data-driven precipitate/gas observations after the five Level 2 reagent-pair interactions; verify 30 normal/reduced cases at three sizes, final motion capture and packaged Level 2 round.
 

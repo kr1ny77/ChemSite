@@ -931,3 +931,12 @@ of answer validation. Each diagram appears only after its probe is inspected;
 its partner remains unrevealed. Motion is illustrative, eases over 1.2 seconds
 and then stops. Reduced motion presents the final state immediately. Film
 thickness, metal dimensions and particle counts carry no measured quantities.
+
+### Thermal comparison states
+
+L4-133, L4-143 and L4-144 use the additional comparison visual kinds
+`thermal-low`, `thermal-reference` and `thermal-high`. Each `caption` is exactly
+its ordered `comparisonRuns.setting`. The qualitative thermometer and closed
+system icon use schematic levels/colors; heat waves represent the warmer state.
+No numeric temperature, phase, reaction rate or equilibrium composition is
+calculated from the drawing. Existing textual observations determine the answer.
