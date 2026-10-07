@@ -6,7 +6,8 @@ const MUSIC_PATH := "res://assets/audio/lofi-1.mp3"
 const SUCCESS_PATH := "res://assets/audio/correct.wav"
 const ERROR_PATH := "res://assets/audio/incorrect.wav"
 const INTERACT_PATH := "res://assets/audio/interact.wav"
-const STEP_PATHS := ["res://assets/audio/step_a.wav", "res://assets/audio/step_b.wav"]
+const STEP_PATHS := ["res://assets/audio/step_a.wav", "res://assets/audio/step_b.wav", "res://assets/audio/step_c.wav", "res://assets/audio/step_d.wav"]
+const STEP_PITCHES := [1.0, 0.99, 1.015, 0.985, 1.005, 1.01, 0.995, 1.0]
 
 var _music: AudioStreamPlayer
 var _effects: AudioStreamPlayer
@@ -32,7 +33,7 @@ func _ready() -> void:
 	for path in STEP_PATHS:
 		var step := AudioStreamPlayer.new()
 		step.bus = "SFX"
-		step.volume_db = -12.0
+		step.volume_db = -14.0
 		step.stream = load(path) as AudioStream
 		add_child(step)
 		_steps.append(step)
@@ -54,7 +55,7 @@ func play_interact() -> void:
 
 func play_footstep() -> void:
 	var step := _steps[_step_index % _steps.size()]
-	step.pitch_scale = 0.97 if _step_index % 2 == 0 else 1.03
+	step.pitch_scale = STEP_PITCHES[_step_index % STEP_PITCHES.size()]
 	step.play()
 	_step_index += 1
 

@@ -1,5 +1,18 @@
 # ChemSite audio QA
 
+## Footstep revision (2026-10-07)
+
+Human feedback identified the walking sound as unpleasant. Replaced the two sharp synthetic contacts with four original rounded boot contacts. The generator uses two cascaded low-pass stages (700–865 Hz), an 8 ms smooth attack and a 25 ms tail fade. Removed the click layer. Clips last 160 ms and start/end at zero PCM amplitude. Runtime gain is −14 dB with a small eight-step pitch pattern (0.985–1.015), routed through the existing SFX slider. Animation contact timing is preserved.
+
+| Clip | Mean | Peak |
+| --- | ---: | ---: |
+| `step_a.wav` | −33.6 dBFS | −16.8 dBFS |
+| `step_b.wav` | −33.5 dBFS | −16.1 dBFS |
+| `step_c.wav` | −32.1 dBFS | −14.3 dBFS |
+| `step_d.wav` | −31.8 dBFS | −14.8 dBFS |
+
+Measurements are decoded PCM RMS/peak. Source and native Forward+ audio smokes, Godot import/parse, fresh macOS export and its five-task keyboard round pass. Footstep timing smoke passes: walking triggers playback; stationary/disabled movement emits zero contacts. `artifacts/soft-footsteps-preview.wav` demonstrates sustained cadence at the default SFX slider and runtime gain. Headphone/speaker listening acceptance remains open.
+
 ## Objective source check (2026-10-02)
 
 The seven shipped audio clips were decoded with FFmpeg `volumedetect`. Peaks are below digital full scale. These are source-file measurements; an exported-game listening pass on headphones and laptop speakers remains the release gate for balance and spatial placement.

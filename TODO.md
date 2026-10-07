@@ -39,6 +39,8 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
+- [x] Soften walking audio after user feedback: rounded filtered boot contacts, four variations, lower gain; audio and animation-contact checks.
+
 - [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Windows native/graphical runs 37343958767/37343958751 passed the repair; all 154 screenshot dimensions and archive digest were verified. A feedback placement issue discovered in the artifact is covered by the next gate.
 
 - [x] First visual overhaul pass: smooth horizontal movement and turns, remove procedural body bob, enlarge the walkable construction yard and camera framing, add a larger task card and answer targets with the bundled Cyrillic Onest font, and revise the Blender chemist's proportions. Godot import, 200-task layout, station routes, collision and rendered site/task/locomotion checks pass.

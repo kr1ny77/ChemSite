@@ -283,6 +283,12 @@ Levels 1–5 are playable career rounds with level-specific progression records 
 
 Continue isolated exported keyboard playtesting, improve chemistry-specific VFX and review movement transitions/tight-turn contact and continue human playtesting, student-laptop profiling, physical Windows QA, course review and GitHub prerelease.
 
+## Walking audio correction — 2026-10-07
+
+Completed: replaced sharp two-sample steps with four original filtered, rounded boot contacts; 8 ms attack, smooth tail, −14 dB player gain, restrained pitch variation. Audio playback and Walk/Run contact timing smokes pass. Default-gain cadence preview saved in artifacts/soft-footsteps-preview.wav. Godot import/parse, native Forward+ audio smoke, fresh macOS export and packaged keyboard Level 1 round pass (five tasks, 700 points). Current work: remaining keyboard QA and production polish. Next: diagnose Windows keyboard run with retained logs. Human headphone/speaker acceptance remains open.
+
+The extended keyboard scenarios pass source/headless for Levels 2–5 and native Levels 2–3. Native Level 4 terminated with exit −6 during the fourth task; its graphical verification and Level 5 remain open. Windows run 37619005559 failed the added keyboard scenario after ordinary packaged career rounds passed; diagnostic logging is being added. These results do not close the five-level keyboard gate.
+
 ## Last verification
 
 2026-10-06: Full Level 1 raw keyboard-event round passed source/headless and native Forward+: physical WASD routes, E station opening, Tab/Space answer and formula controls, Escape/Space pause, five correct answers, 700 points, Level 2 unlock and menu return. Eleven 1027×642 native screenshots reviewed with clean final shutdown. The graphical scenario explicitly resumes focus-loss pause. Standard progress hash stays unchanged. The final packaged macOS repeat passed with 700 points/three stars and clean verbose shutdown. Explicit conditions preserve every check in release builds. Windows CI follows push.

@@ -26,18 +26,28 @@ render('interact.wav',[(587.33,0,.4),(880,.065,.3)],.22)
 def render_step(name, seed, weight):
  rng=random.Random(seed)
  samples=[]
- for i in range(int(RATE*.18)):
+ duration=.16
+ # Rounded boot contact: band-limited sole texture, a short low body and
+ # smooth endpoints. Filtering the noise removes the former sharp grit/click.
+ alpha=1-math.exp(-2*math.pi*(700+weight*55)/RATE)
+ low_a=low_b=0.0
+ for i in range(int(RATE*duration)):
   t=i/RATE
-  body=math.exp(-38*t)*math.sin(2*math.pi*(82+weight*12)*t)
-  grit=(rng.random()*2-1)*math.exp(-27*t)
-  click=(rng.random()*2-1)*math.exp(-140*t)
-  value=max(-1,min(1,(body*.38+grit*.2+click*.13)*.55))
+  low_a+=alpha*(rng.uniform(-1,1)-low_a)
+  low_b+=alpha*(low_a-low_b)
+  attack=math.sin(min(1,t/.008)*math.pi/2)**2
+  tail=min(1,(duration-t)/.025)**2
+  body=math.sin(2*math.pi*((105+weight*3)*t-125*t*t))*math.exp(-65*t)
+  texture=low_b*math.exp(-30*t)
+  value=(body*.16+texture*.48)*attack*tail
   samples.append(struct.pack('<h',int(value*32767)))
  with wave.open(str(ROOT/name),'wb') as file:
   file.setnchannels(1);file.setsampwidth(2);file.setframerate(RATE);file.writeframes(b''.join(samples))
 
 render_step('step_a.wav',11,0)
 render_step('step_b.wav',29,1)
+render_step('step_c.wav',43,2)
+render_step('step_d.wav',67,3)
 
 def render_machinery():
  rng=random.Random(51)
