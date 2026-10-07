@@ -57,3 +57,9 @@ Its new native gate covers exported rotor axis, loop seam, pause/resume and
 reduced motion. Its image archive has yet to be inspected. Thermal comparisons
 add one focused round and observations in kinetics/equilibrium; the new expected
 matrix is 191 PNGs (sixteen baseline rounds × eleven plus fifteen observations).
+
+2026-10-07: fb0d62c native run 37628826888 succeeded. Visual run 37628826860
+passed every individual graphical round and captured 191 PNGs, then failed the
+old final 175-image assertion. The repair derives the final expected total from
+the round matrix and each round's observation requirement. DummyAudio and engine
+error rejection stayed enabled. Artifact 11486011385 awaits image review.

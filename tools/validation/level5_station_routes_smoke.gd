@@ -15,6 +15,7 @@ func _run() -> void:
 	site.level = 5
 	root.add_child(site)
 	await physics_frame
+	site._construction_view.set_stage(5)
 	var player := site.get_node("Player") as CharacterBody3D
 	for route in ROUTES:
 		player.global_position = Vector3(0, 0.05, 0)

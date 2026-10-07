@@ -1,5 +1,32 @@
 # ChemSite progress
 
+## Earned construction stages — 2026-10-07
+
+Current phase: Phase 3/7/8 production quality.
+Completed work: authored an editable Blender expansion of the accepted concrete
+shell with five earned additions: rear slab, front slab, rear window wall, side
+window wall and supported seam roof. GLB contains 32,440 triangles, 28 batched
+meshes and eleven materials; Blender inspection passes with zero reported issues.
+Static Resource supplies the asset and six stage titles. Existing version-five
+career records determine consecutive completed levels. Legacy global stars map
+to stage one only when level records are empty. Failed rounds and replay preserve
+prior stages; practice preserves the save. Temporary formwork retires at stage two,
+rear rail at stage three. Hidden future meshes skip camera visibility work.
+Last verification: editor import/parse, stage/save/replay/gap/corrupt-record and
+practice integration smoke, source career round, collision smoke, twelve native
+Forward+ stage views, smallest-window reward capture, macOS export and packaged
+career round passed. Native stage contact sheet and reward panel inspected.
+Final-stage Level 5 approach routes pass for all four stations.
+Current work: platform regression and broader station materials.
+Next task: run updated Windows CI, review its 191 thermal screenshots, continue
+station materials and human/device QA.
+Known issues: physical Windows input/audio/save review, representative student
+laptop performance and instructor review remain open. Latest thermal native CI
+37628826888 passed; visual run 37628826860 completed all sixteen rounds and captured
+191 screenshots, then failed a stale total assertion expecting 175. The total is
+now derived from the round matrix and observation counts. Repair awaits push.
+
+
 ## Thermal observation feedback and Windows archive review — 2026-10-07
 
 Current phase: Phase 3/7/8 production quality. Added qualitative low/reference/high

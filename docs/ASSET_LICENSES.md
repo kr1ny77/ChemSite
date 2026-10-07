@@ -17,3 +17,7 @@
 | Interaction and answer cues | ChemSite project-authored synthesis | Original project assets | `tools/audio/render_cues.py` | `assets/audio/*.wav` | Generated WAV files |
 
 Local license files: `assets-source/kenney/kenney_factory-kit_3.0/License.txt` and `assets-source/kenney/kenney_building-kit/License.txt`. The browser asset manifest remains in `legacy-web/` documentation history and Git history.
+
+- `construction_stages.glb` and editable `construction_stages.blend`: original
+  ChemSite production geometry, extending the project's original concrete shell;
+  no external texture or character assets used in this expansion.

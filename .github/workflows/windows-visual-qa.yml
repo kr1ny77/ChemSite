@@ -91,6 +91,7 @@ jobs:
             @{ Name = 'level4-thermal'; Flag = '--qa-visual-level4-thermal-round'; Folder = 'qa-visual-level4-round-mission' }
             @{ Name = 'level4-surface'; Flag = '--qa-visual-level4-surface-round'; Folder = 'qa-visual-level4-round-mission' }
           )
+          $expectedTotal = 0
           foreach ($round in $rounds) {
             Invoke-VisualCheck $round.Name $exe @('--rendering-method', 'gl_compatibility', '--', $round.Flag) 90
             $captures = Get-ChildItem (Join-Path $env:APPDATA 'Godot/app_userdata') -Recurse -Filter 'task_01.png' -ErrorAction SilentlyContinue | Where-Object { $_.Directory.Name -eq $round.Folder }
@@ -103,6 +104,7 @@ jobs:
             if ($baseScreens.Count -ne 11) { throw "$($round.Name) expected 11 task/feedback/result screens, found $($screens.Count)" }
             $observations = @($screens | Where-Object { $_.Name -like 'observation_*.png' })
             $expectedObservations = switch ($round.Name) { 'level4' { 1 }; 'level4-electrode' { 5 }; 'level4-corrosion' { 1 }; 'level4-surface' { 3 }; 'level4-kinetics' { 1 }; 'level4-equilibrium' { 1 }; 'level4-thermal' { 3 }; default { 0 } }
+            $expectedTotal += 11 + $expectedObservations
             if ($observations.Count -ne $expectedObservations) { throw "$($round.Name) observation captures missing ($($observations.Count) / $expectedObservations)" }
             foreach ($screen in $screens) {
               if ($screen.Length -lt 20000) { throw "Capture appears empty: $($screen.Name) ($($screen.Length) bytes)" }
@@ -110,7 +112,7 @@ jobs:
             Write-Host "$($round.Name) captured $($screens.Count) screens"
           }
           $allScreens = @(Get-ChildItem 'artifacts/windows-visual' -Recurse -Filter '*.png')
-          if ($allScreens.Count -ne 175) { throw "Expected 175 graphical QA screens, found $($allScreens.Count)" }
+          if ($allScreens.Count -ne $expectedTotal) { throw "Expected $expectedTotal graphical QA screens, found $($allScreens.Count)" }
       - name: Upload Windows visual evidence
         uses: actions/upload-artifact@v4
         if: always()

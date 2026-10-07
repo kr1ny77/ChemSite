@@ -63,6 +63,9 @@ var _target_count: int = 5
 var _machinery_player: AudioStreamPlayer3D
 var _work_lights: Array[OmniLight3D] = []
 var _site_time: float = 0.0
+var _construction_stage := 0
+var _construction_view: Node
+const CONSTRUCTION_PROGRESS = preload("res://scripts/core/construction_progress.gd")
 var _mixer_motion: Node
 var _station_accent_materials: Dictionary = {}
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
@@ -84,6 +87,7 @@ func _ready() -> void:
 	_load_tasks()
 	_site_inspections = SITE_INSPECTIONS.load_entries()
 	_player.footstep.connect(func() -> void: footstep.emit())
+	_construction_stage = CONSTRUCTION_PROGRESS.stage_from_progress(SAVE_DATA.load_progress(save_path))
 	_build_world()
 	_wayfinder = STATION_WAYFINDER.new()
 	_wayfinder.name = "StationWayfinder"
@@ -192,7 +196,7 @@ func _build_world() -> void:
 	_block("RearPath", Vector3(0, -0.003, -3.4), Vector3(14, 0.012, 2.5), Color("9daeb7"), false)
 	_build_path_markings()
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
-	_environment_prop("construction_shell", Vector3(-5.6, 0.14, 4.1))
+	_environment_prop("construction_stages", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))
 	_block("Rebar bay collision", Vector3(-2.5, 1.34, 4.0), Vector3(2.35, 2.4, 1.26), Color(0, 0, 0, 0), true)
 	_build_perimeter()
@@ -392,12 +396,17 @@ func _environment_prop(asset_name: String, pos: Vector3, yaw: float = 0.0) -> vo
 	prop.position = pos
 	prop.rotation.y = yaw
 	_world.add_child(prop)
+	if asset_name == "construction_stages":
+		_construction_view = preload("res://scripts/world/construction_stage_view.gd").new()
+		_construction_view.name = "ConstructionProgress"
+		_world.add_child(_construction_view)
+		_construction_view.configure(prop, _construction_stage)
 	if asset_name == "site_mixer":
 		_mixer_motion = preload("res://scripts/world/site_mixer_motion.gd").new()
 		_mixer_motion.name = "MixerMotion"
 		_world.add_child(_mixer_motion)
 		_mixer_motion.configure(prop, reduced_motion)
-	if asset_name in ["construction_shell", "site_cabin", "rebar_bay"]:
+	if asset_name in ["construction_shell", "construction_stages", "site_cabin", "rebar_bay"]:
 		for mesh in prop.find_children("*", "MeshInstance3D", true, false):
 			mesh.add_to_group("player_camera_occluder")
 
@@ -487,11 +496,18 @@ func _finish_round() -> void:
 	_round_done = true
 	_player.controls_enabled = false
 	_update_hud()
+	var construction_reward := ""
 	if mode == "career":
+		var prior_stage := _construction_stage
 		var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path, level)
 		if save_error != OK:
 			push_warning("Could not save round progress: %s" % error_string(save_error))
-	_hud.show_results(_score, _completed, _time_left, _target_count, mode)
+		else:
+			_construction_stage = CONSTRUCTION_PROGRESS.stage_from_progress(SAVE_DATA.load_progress(save_path))
+			_construction_view.set_stage(_construction_stage)
+			if _construction_stage > prior_stage:
+				construction_reward = CONSTRUCTION_PROGRESS.stage_title(_construction_stage)
+	_hud.show_results(_score, _completed, _time_left, _target_count, mode, construction_reward)
 
 func _resume() -> void:
 	if _round_done:

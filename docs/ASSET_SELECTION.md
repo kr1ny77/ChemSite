@@ -28,3 +28,21 @@ The human worker's updated four-view review is saved at `docs/screenshots/chemis
 Additional action contact sheets cover Walk, Turn, PickUp and UseStation under `docs/screenshots/chemist-*-frames.png`.
 
 The fitted coverall detail pass is reviewed in `docs/screenshots/chemist-workwear-contact-sheet.png`, `chemist-workwear-walk.png` and `chemist-workwear-gameplay.png`. Reflective layers follow garment geometry and share its bone weights; 11 final meshes keep the tape batched by material.
+
+## Earned shell expansion — construction_stages
+
+Original ChemSite Blender asset extends the accepted construction_shell source.
+Contract: preserve the six-column concrete grid and ground station approaches;
+add bevelled slab sections, staggered warm masonry, recessed mortar, fitted ivory
+window jambs/sills/mullions, opaque blue glazing and a supported teal seam roof.
+Upper teaching section stays open on its front/east side for gameplay readability.
+Editable source: tools/blender/source/construction_stages.blend; rebuild script:
+tools/blender/build_construction_stages.py. Six named stage roots and two temporary
+subgroups provide deterministic rendering. Export batches by owning stage/material.
+Inspection: 32,440 triangles, 28 mesh objects, eleven materials, UVs on every mesh;
+zero invalid vertices, degenerate faces, missing material faces or reported issues.
+GLB split-normal boundary counts represent export seams, not a watertight claim.
+Six Blender asset views and twelve native stage/yard views captured; native close
+contact sheet inspected with actual retired formwork/rail visibility. Native reward,
+collision, saved progress and final-stage Level 5 routes pass. Broader performance
+on a representative student laptop remains a release gate.

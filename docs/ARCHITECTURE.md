@@ -97,3 +97,15 @@ supplies active exploration state, pausing animation and spatial machinery audio
 during panels, pause and results. Reduced motion keeps the initial rotor pose.
 An explicit `_ready` gate on comparison diagrams also preserves their inactive
 process state when Godot enables overridden callbacks during tree entry.
+
+## Earned construction rendering
+
+`construction_progress.gd` derives stages zero through five from consecutive
+career level records with earned stars. The version-five save format is retained;
+legacy global stars apply only to an empty level-record map. The static Resource
+`data/progression/construction_stages.tres` holds model path and stage captions.
+`construction_stage_view.gd` controls GLB Stage0–Stage5 groups and retires temporary
+formwork/rails. The world reloads the stage only after successful career save.
+Practice displays the current stage and preserves its saved records. Results show
+the newly earned stage. Future geometry remains hidden and skipped by visibility
+queries; added walls/roof occupy the inaccessible upper floor.

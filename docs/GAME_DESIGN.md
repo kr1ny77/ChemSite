@@ -312,3 +312,10 @@ Provide:
 - adjustable sound
 - adjustable camera shake/effects
 - optional reduced motion
+
+## Visible career construction
+
+Completing consecutive career levels adds rear and front upper-floor slabs,
+rear and side walls with windows, then a supported roof over the teaching section.
+The ground-level station paths remain accessible. Replays retain earned work;
+practice uses the saved construction view. Results announce a newly earned stage.

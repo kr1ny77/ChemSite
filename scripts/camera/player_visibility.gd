@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 			rays.append(_camera.project_ray_origin(_camera.unproject_position(target)))
 			rays.append(target)
 	for mesh in _occluders:
-		if not is_instance_valid(mesh):
+		if not is_instance_valid(mesh) or not mesh.is_visible_in_tree():
 			continue
 		var inverse := mesh.global_transform.affine_inverse()
 		var bounds := mesh.get_aabb().grow(0.025)

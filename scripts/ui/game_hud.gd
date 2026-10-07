@@ -476,7 +476,7 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	_panel_fit_active = true
 	_fit_panel.call_deferred()
 
-func show_results(score: int, completed: int, time_left: float, target_count: int = 5, mode: String = "career") -> void:
+func show_results(score: int, completed: int, time_left: float, target_count: int = 5, mode: String = "career", construction_reward: String = "") -> void:
 	_clear_panel()
 	_objective.text = "ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА"
 	_status.text = "ИТОГИ ТРЕНИРОВКИ" if mode == "practice" else "ИТОГИ УЧЕБНОЙ СМЕНЫ"
@@ -494,6 +494,8 @@ func show_results(score: int, completed: int, time_left: float, target_count: in
 		_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
 	else:
 		_panel_content.add_child(_label("Тема пройдена без таймера", 20, Color("627679")))
+	if not construction_reward.is_empty():
+		_panel_content.add_child(_label("СТРОЙКА · " + construction_reward, 20, Color("287565")))
 	var menu := Button.new()
 	menu.text = "ГЛАВНОЕ МЕНЮ"
 	menu.custom_minimum_size.y = 55
