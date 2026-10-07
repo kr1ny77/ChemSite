@@ -1,0 +1,75 @@
+[gd_resource type="Theme" load_steps=6 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/Onest-Variable.ttf" id="1_font"]
+
+[sub_resource type="StyleBoxFlat" id="InputNormal"]
+content_margin_left = 14.0
+content_margin_top = 9.0
+content_margin_right = 14.0
+content_margin_bottom = 9.0
+bg_color = Color(0.9882353, 0.9803922, 0.9411765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3882353, 0.4901961, 0.5176471, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_left = 9
+corner_radius_bottom_right = 9
+
+[sub_resource type="StyleBoxFlat" id="InputReadOnly"]
+content_margin_left = 14.0
+content_margin_top = 9.0
+content_margin_right = 14.0
+content_margin_bottom = 9.0
+bg_color = Color(0.8941176, 0.9098039, 0.8901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5607843, 0.6274510, 0.6156863, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_left = 9
+corner_radius_bottom_right = 9
+
+[sub_resource type="StyleBoxFlat" id="InputFocus"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0901961, 0.2156863, 0.2666667, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_left = 9
+corner_radius_bottom_right = 9
+
+[sub_resource type="StyleBoxFlat" id="ButtonFocus"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0901961, 0.2156863, 0.2666667, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_left = 9
+corner_radius_bottom_right = 9
+
+[resource]
+default_font = ExtResource("1_font")
+Button/styles/focus = SubResource("ButtonFocus")
+LineEdit/colors/font_color = Color(0.0901961, 0.2156863, 0.2666667, 1)
+LineEdit/colors/font_placeholder_color = Color(0.2941176, 0.3647059, 0.3764706, 1)
+LineEdit/colors/font_uneditable_color = Color(0.2941176, 0.3647059, 0.3764706, 1)
+LineEdit/colors/caret_color = Color(0.0901961, 0.2156863, 0.2666667, 1)
+LineEdit/colors/selection_color = Color(0.7607843, 0.8470588, 0.8196078, 1)
+LineEdit/colors/font_selected_color = Color(0.0901961, 0.2156863, 0.2666667, 1)
+LineEdit/constants/caret_width = 2
+LineEdit/styles/normal = SubResource("InputNormal")
+LineEdit/styles/read_only = SubResource("InputReadOnly")
+LineEdit/styles/focus = SubResource("InputFocus")

@@ -110,11 +110,13 @@ jobs:
       - name: Verify packaged keyboard event rounds
         shell: pwsh
         run: |
+          $qaRoot = (Resolve-Path 'artifacts/native-qa').Path
           foreach ($level in 1..5) {
-            $log = "artifacts/native-qa/keyboard-level$level.log"
+            $log = Join-Path $qaRoot "keyboard-level$level.log"
             $stdout = "artifacts/native-qa/keyboard-level$level.stdout.log"
             $stderr = "artifacts/native-qa/keyboard-level$level.stderr.log"
-            $keyboard = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--verbose', '--headless', '--log-file', $log, '--', '--qa-keyboard-round', "--qa-keyboard-level=$level") -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+            $logArgument = '"' + $log + '"'
+            $keyboard = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--verbose', '--headless', '--log-file', $logArgument, '--', '--qa-keyboard-round', "--qa-keyboard-level=$level") -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
             if (-not $keyboard.WaitForExit(150000)) {
               Stop-Process -Id $keyboard.Id -Force -ErrorAction SilentlyContinue
               throw "Packaged keyboard level $level timed out"
@@ -123,7 +125,7 @@ jobs:
             $text = @($log, $stdout, $stderr) | Where-Object { Test-Path $_ } | ForEach-Object { Get-Content $_ -Raw }
             $text = $text -join "`n"
             Write-Host $text
-            if ($keyboard.ExitCode -ne 0 -or $text -notmatch "KEYBOARD_ROUND_SMOKE_OK level=$level" -or $text -match 'SCRIPT ERROR') {
+            if ($keyboard.ExitCode -ne 0 -or $text -notmatch "KEYBOARD_ROUND_SMOKE_OK level=$level" -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') {
               throw "Packaged keyboard level $level failed (exit $($keyboard.ExitCode))"
             }
           }

@@ -41,9 +41,7 @@ var _dissociation_view: VBoxContainer
 var _panel_fit_active := false
 
 func _ready() -> void:
-	var hud_theme := Theme.new()
-	hud_theme.default_font = load("res://assets/fonts/Onest-Variable.ttf") as Font
-	theme = hud_theme
+	theme = preload("res://assets/ui/hud_theme.tres")
 	var top := PanelContainer.new()
 	top.anchor_right = 0.58
 	top.offset_left = 24
@@ -366,8 +364,6 @@ func _show_equation_input() -> void:
 	input.placeholder_text = "Реагенты -> продукты"
 	input.custom_minimum_size.y = 55
 	input.add_theme_font_size_override("font_size", 22)
-	input.add_theme_color_override("font_color", Color("f7f4e7"))
-	input.add_theme_color_override("font_placeholder_color", Color("cbd8d7"))
 	input.caret_blink = true
 	_panel_content.add_child(input)
 	var submit := Button.new()

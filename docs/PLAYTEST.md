@@ -87,7 +87,18 @@ its separate focused round remains part of the existing suite.
 
 Levels 2–5 passed source/headless and the current macOS release binary with scores
 840/980/1120/1260, three stars, saved unlocks and unchanged standard progress.
-Native Levels 2–3 passed. A first Level 4 native run crashed with signal 11 during
-an AppKit termination notification; Levels 4–5 graphical acceptance remains open
-pending a separate repeat. Windows CI retains its per-level stdout/stderr/engine
-logs even on failure. Human hardware/audio acceptance remains open.
+Native Levels 2–3 passed at 1027×642. Levels 4–5 passed in the exported app
+launched through LaunchServices at 1440×900. All 44 new screenshots were reviewed.
+Two direct editor-executable Level 4 attempts crashed with signal 11 in an AppKit
+termination notification; the packaged application repeats completed cleanly.
+This direct editor-launch issue remains recorded separately from release evidence.
+
+Windows run 37620885338 at fc9a5a1 completed successfully. The 19,843-byte retained
+log archive matched SHA-256 39a66ab28bae9aa094702aecb3c6b093820c52fefba09d786b2c82dde160de3d.
+All five stdout logs contain the exact expected scores and completion markers.
+Their stderr logs identified a relative engine-log path error: the packaged app
+resolves its log path beneath its executable directory. CI now passes an absolute
+path and rejects engine ERROR lines as well as script errors. Clean CI verification
+of this repair follows push. The earlier single-round job required its missing
+engine log and therefore failed the logging gate; the retained stdout in the new
+five-round job proves gameplay completion. Human hardware/audio acceptance remains open.

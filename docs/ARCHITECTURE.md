@@ -64,3 +64,13 @@ horizontal velocity and its acceleration derivative at the next physics tick.
 Window focus return leaves the pause visible until the player resumes.
 The engine signal contract is documented at
 https://docs.godotengine.org/en/stable/classes/class_window.html#class-window-signal-focus-exited.
+
+### Native answer field theme
+
+`assets/ui/hud_theme.tres` supplies the HUD's Onest font, shared light LineEdit
+normal/read-only surfaces, dark text/placeholder/caret, selection colors and a
+three-pixel keyboard focus outline for inputs and all inherited Buttons.
+GameHud retains local semantic button backgrounds and input font sizes. Answer
+parsing, observation gates and keyboard event handling remain in their existing
+systems. Native 1027×642 captures cover empty/entered inputs and locked numeric
+entry; the 200-task/400-feedback layout gate passes at 1028×642.
