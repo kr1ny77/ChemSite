@@ -107,21 +107,33 @@ jobs:
           if ($electrodes.ExitCode -ne 0) { throw "Level 4 electrode smoke failed ($($electrodes.ExitCode))" }
           $corrosion = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-corrosion-round') -Wait -PassThru -NoNewWindow
           if ($corrosion.ExitCode -ne 0) { throw "Level 4 corrosion smoke failed ($($corrosion.ExitCode))" }
-      - name: Verify packaged keyboard event round
+      - name: Verify packaged keyboard event rounds
         shell: pwsh
         run: |
-          $log = 'artifacts/native-qa/keyboard-round.log'
-          $keyboard = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', $log, '--', '--qa-keyboard-round') -PassThru -NoNewWindow
-          if (-not $keyboard.WaitForExit(150000)) {
-            Stop-Process -Id $keyboard.Id -Force -ErrorAction SilentlyContinue
-            throw 'Packaged keyboard round timed out'
+          foreach ($level in 1..5) {
+            $log = "artifacts/native-qa/keyboard-level$level.log"
+            $stdout = "artifacts/native-qa/keyboard-level$level.stdout.log"
+            $stderr = "artifacts/native-qa/keyboard-level$level.stderr.log"
+            $keyboard = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--verbose', '--headless', '--log-file', $log, '--', '--qa-keyboard-round', "--qa-keyboard-level=$level") -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+            if (-not $keyboard.WaitForExit(150000)) {
+              Stop-Process -Id $keyboard.Id -Force -ErrorAction SilentlyContinue
+              throw "Packaged keyboard level $level timed out"
+            }
+            $keyboard.Refresh()
+            $text = @($log, $stdout, $stderr) | Where-Object { Test-Path $_ } | ForEach-Object { Get-Content $_ -Raw }
+            $text = $text -join "`n"
+            Write-Host $text
+            if ($keyboard.ExitCode -ne 0 -or $text -notmatch "KEYBOARD_ROUND_SMOKE_OK level=$level" -or $text -match 'SCRIPT ERROR') {
+              throw "Packaged keyboard level $level failed (exit $($keyboard.ExitCode))"
+            }
           }
-          $keyboard.Refresh()
-          $text = Get-Content $log -Raw
-          Write-Host $text
-          if ($keyboard.ExitCode -ne 0 -or $text -notmatch 'KEYBOARD_ROUND_SMOKE_OK' -or $text -match 'SCRIPT ERROR') {
-            throw 'Packaged keyboard event round failed'
-          }
+      - name: Upload native QA diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ChemSite-Windows-native-QA-logs
+          path: artifacts/native-qa/
+          if-no-files-found: warn
       - name: Upload verified Windows build
         uses: actions/upload-artifact@v4
         with:

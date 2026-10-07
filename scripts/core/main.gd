@@ -259,7 +259,7 @@ func _replace(scene: PackedScene) -> void:
 
 func _configure_playtest_paths() -> void:
 	if _manual_playtest:
-		_current.save_path = KEYBOARD_ROUND_SMOKE.SAVE_PATH if OS.get_cmdline_user_args().has("--qa-keyboard-round") else QA_PLAYTEST_SAVE
+		_current.save_path = KEYBOARD_ROUND_SMOKE.save_path() if OS.get_cmdline_user_args().has("--qa-keyboard-round") else QA_PLAYTEST_SAVE
 		_current.settings_path = QA_PLAYTEST_SETTINGS
 
 func _run_keyboard_smoke() -> void:
