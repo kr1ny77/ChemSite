@@ -83,6 +83,7 @@
 - [x] Balance warm-neutral sun/cool ambient lighting and distinguish gray pedestrian lanes from sand work zones; review two resolutions, all four perimeter views in both motion settings and post-dressing performance.
 - [ ] Refine station and character materials, scale, readability, rig deformation and animation timing from multiple camera angles; authored station accents now emit softly, all nine character actions and sustained locomotion have visual reviews, and the storage rack is visible from the game camera
 - [ ] Add chemistry VFX and restrained environment motion; answer feedback pulses at the active station, work lights breathe subtly, and footsteps/spatial mixer ambience play during movement and exploration
+  - [x] Add data-driven electrode and surface-condition diagrams to nine Level 4 tasks; verify 54 reveal/motion/size cases, balanced readout captions, native 24-state capture and finite motion recording.
   - [x] Show data-driven precipitate/gas observations after the five Level 2 reagent-pair interactions; verify 30 normal/reduced cases at three sizes, final motion capture and packaged Level 2 round.
 
 - [x] Reset inherited panel offsets and fit feedback, results, inspections and pause to their content; verify all 200 task/400 correct-wrong panels at three resolutions and inspect corrected exported feedback. Display numeric answer values and units clearly.

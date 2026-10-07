@@ -102,3 +102,31 @@ path and rejects engine ERROR lines as well as script errors. Clean CI verificat
 of this repair follows push. The earlier single-round job required its missing
 engine log and therefore failed the logging gate; the retained stdout in the new
 five-round job proves gameplay completion. Human hardware/audio acceptance remains open.
+
+### Clean Windows repeat — 2026-10-07
+
+Run 37621970913 at 62f0391 passed the Windows EXE suite, including all five raw
+keyboard rounds, source locomotion/visibility/station gates and focused career
+interactions. Exact scores are 700/840/980/1120/1260 with five completed tasks in
+each level. The retained 34,479-byte diagnostic ZIP matches SHA-256
+e3032a5307aaba480b8f22176b8b358affdc029f332b00a9b35607e31938f606.
+Both engine and stdout logs contain each completion marker. All keyboard stderr
+logs and engine logs are free of ERROR/SCRIPT ERROR lines. The absolute log path
+repair is verified. The Windows EXE/PCK artifact is 46,493,991 bytes.
+
+The shared light input Theme passed native 1028×642 layout validation for all 200
+task panels and 400 correct/wrong feedback panels. Seven 1027×642 native captures
+show empty/entered oxidation, full equation, numeric and locked solution controls.
+Fresh macOS export and its keyboard Level 3 round passed with 980 points and a
+clean verbose shutdown. Windows graphical run 37621971072 remains live at the
+last observation; image review of its changed answer fields follows completion.
+
+2026-10-07: Static capture requests now use main-thread explicit redraw instead
+of an unbounded frame-post-draw wait. A reduced-motion movie stall was reproduced
+and its partial file excluded. Final capture completes with 337 encoded frames,
+and the previously crashing direct source Level 4 keyboard run completes cleanly
+with five tasks and 1120 points. The exported surface/corrosion visual rounds
+capture three/one settled observations before answers, and retain all eleven
+original task/feedback/result states. Exact folder totals (14/12) confirm old
+observation images are cleared before reusing the focused QA directory. Physical
+human input/audio acceptance remains open.

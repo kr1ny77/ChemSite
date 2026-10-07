@@ -50,6 +50,7 @@ jobs:
             @{ Script = 'station_wayfinder_smoke'; Marker = 'STATION_WAYFINDER_SMOKE_OK' }
             @{ Script = 'mixing_visual_smoke'; Marker = 'MIXING_VISUAL_SMOKE_OK' }
             @{ Script = 'ph_scale_smoke'; Marker = 'PH_SCALE_SMOKE_OK' }
+            @{ Script = 'comparison_visual_smoke'; Marker = 'COMPARISON_VISUAL_SMOKE_OK' }
             @{ Script = 'focus_pause_smoke'; Marker = 'FOCUS_PAUSE_SMOKE_OK' }
           )
           foreach ($check in $checks) {
@@ -63,7 +64,7 @@ jobs:
             if (-not (Test-Path $log)) { throw "$($check.Script) log missing" }
             $text = Get-Content $log -Raw
             Write-Host $text
-            if ($test.ExitCode -ne 0 -or $text -notmatch ([regex]::Escape($check.Marker))) {
+            if ($test.ExitCode -ne 0 -or $text -notmatch ([regex]::Escape($check.Marker)) -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') {
               throw "$($check.Script) failed or did not reach its success marker ($($test.ExitCode))"
             }
           }

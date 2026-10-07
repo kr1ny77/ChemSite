@@ -54,6 +54,8 @@ func _ready() -> void:
 		call_deferred("_run_export_level_four_electrode_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level4-corrosion-round"):
 		call_deferred("_run_export_level_four_corrosion_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-level4-surface-round"):
+		call_deferred("_run_export_level_four_surface_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level5-round"):
 		call_deferred("_run_export_level_five_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-level5-mission-round"):
@@ -86,6 +88,8 @@ func _ready() -> void:
 		call_deferred("_run_export_visual_level_four_electrode_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level4-corrosion-round"):
 		call_deferred("_run_export_visual_level_four_corrosion_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-visual-level4-surface-round"):
+		call_deferred("_run_export_visual_level_four_surface_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level5-round"):
 		call_deferred("_run_export_visual_level_five_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-visual-level5-mission-round"):
@@ -265,4 +269,12 @@ func _configure_playtest_paths() -> void:
 func _run_keyboard_smoke() -> void:
 	get_tree().create_timer(120).timeout.connect(func(): get_tree().quit(1))
 	var passed: bool = await KEYBOARD_ROUND_SMOKE.run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_level_four_surface_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-155", "L4-157", "L4-158", "L4-153", "L4-156"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_export_visual_level_four_surface_smoke() -> void:
+	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-155", "L4-157", "L4-158", "L4-153", "L4-156"])
 	get_tree().quit(0 if passed else 1)

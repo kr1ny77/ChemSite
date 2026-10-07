@@ -200,7 +200,7 @@ static func _capture(main: Node, name: String, level: int) -> bool:
 	var directory := "user://qa-keyboard-level%d-round" % level
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory))
 	for frame in range(4): await main.get_tree().process_frame
-	await RenderingServer.frame_post_draw
+	RenderingServer.force_draw(false)
 	if not (main.get_viewport().get_texture().get_image().save_png(directory + "/" + name + ".png") == OK):
 		push_error("Keyboard round check failed at step %d" % 123)
 		return false

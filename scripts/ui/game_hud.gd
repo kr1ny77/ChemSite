@@ -193,7 +193,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 	if comparison:
 		_comparison_view = EXPERIMENT_COMPARISON_VIEW.new()
 		var comparison_mode := "salt" if task.interactionType == "hydrolysis" else ("corrosion" if task.interactionType == "corrosion-inspection" else ("electrode" if task.interactionType == "electrochemistry" else ("equilibrium" if task.interactionType == "equilibrium-control" else "kinetics")))
-		_comparison_view.configure(task.parameters, comparison_mode)
+		_comparison_view.configure(task.parameters, comparison_mode, reduced_motion)
 		_comparison_view.comparison_completed.connect(func() -> void:
 			_set_answer_enabled(true)
 			_focus_first_answer()

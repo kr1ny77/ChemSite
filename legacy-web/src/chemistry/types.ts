@@ -68,6 +68,7 @@ export type TaskDefinition = {
     hessEnd?: string
     hessEdges?: { from: string; to: string; deltaH: number }[]
     comparisonRuns?: { setting: string; observation: string }[]
+    comparisonVisuals?: { kind: 'metal-oxidation' | 'metal-reduction' | 'intact-coating' | 'damaged-coating' | 'bare-surface' | 'passive-film' | 'dry-surface' | 'electrolyte-film'; caption?: string; color?: string }[]
     phSamples?: { label: string; value: number }[]
     ionizationSamples?: { label: string; observation: string }[]
     dissociationIons?: { cation: { label: string; count: number; charge: number }; anion: { label: string; count: number; charge: number } }

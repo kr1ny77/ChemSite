@@ -313,7 +313,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['на аноде', 'на катоде', 'в солевом мостике', 'на обоих без переноса электронов'],
     explanation: 'На аноде частицы отдают электроны, поэтому там протекает окисление.',
     rule: oxidationRule, example: 'Zn → Zn²⁺ + 2e⁻ — анодный процесс.',
-    hint: 'Свяжи анод с отдачей электронов.', tags: ['electrochemistry', 'anode', 'oxidation'], parameters: { comparisonRuns: zincCopperProbes },
+    hint: 'Свяжи анод с отдачей электронов.', tags: ['electrochemistry', 'anode', 'oxidation'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  comparisonRuns: zincCopperProbes },
   }),
   makeTask(148, {
     topic: 'Электрохимия', subtopic: 'Катод', difficulty: 1,
@@ -322,7 +322,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['на катоде', 'на аноде', 'в электролите без электрода', 'только в проводнике'],
     explanation: 'На катоде частицы принимают электроны, поэтому там протекает восстановление.',
     rule: oxidationRule, example: 'Cu²⁺ + 2e⁻ → Cu — катодный процесс.',
-    hint: 'Свяжи катод с принятием электронов.', tags: ['electrochemistry', 'cathode', 'reduction'], parameters: { comparisonRuns: zincCopperProbes },
+    hint: 'Свяжи катод с принятием электронов.', tags: ['electrochemistry', 'cathode', 'reduction'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  comparisonRuns: zincCopperProbes },
   }),
   makeTask(149, {
     topic: 'Электрохимия', subtopic: 'Электродный процесс', difficulty: 1,
@@ -331,7 +331,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['окисление', 'восстановление', 'нейтрализация', 'гидролиз'],
     explanation: 'Атом цинка отдаёт два электрона, а его степень окисления возрастает от 0 до +2.',
     rule: 'Отдача электронов означает окисление.', example: 'Этот процесс идёт на цинковом аноде.',
-    hint: 'Электроны находятся среди продуктов.', tags: ['electrochemistry', 'oxidation', 'zinc'], parameters: { compound: 'Zn', comparisonRuns: zincCopperProbes },
+    hint: 'Электроны находятся среди продуктов.', tags: ['electrochemistry', 'oxidation', 'zinc'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  compound: 'Zn', comparisonRuns: zincCopperProbes },
   }),
   makeTask(150, {
     topic: 'Электрохимия', subtopic: 'Электродный процесс', difficulty: 1,
@@ -340,7 +340,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['восстановление', 'окисление', 'диссоциация', 'разложение'],
     explanation: 'Ион меди принимает два электрона, а его степень окисления уменьшается от +2 до 0.',
     rule: 'Принятие электронов означает восстановление.', example: 'Этот процесс идёт на медном катоде.',
-    hint: 'Электроны находятся среди реагентов.', tags: ['electrochemistry', 'reduction', 'copper'], parameters: { compound: 'Cu', comparisonRuns: zincCopperProbes },
+    hint: 'Электроны находятся среди реагентов.', tags: ['electrochemistry', 'reduction', 'copper'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  compound: 'Cu', comparisonRuns: zincCopperProbes },
   }),
   makeTask(151, {
     topic: 'Электрохимия', subtopic: 'Гальванический элемент', difficulty: 2,
@@ -349,7 +349,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['цинк', 'медь', 'оба металла одновременно', 'ни один металл'],
     explanation: 'Более активный цинк отдаёт электроны и превращается в Zn²⁺ на аноде.',
     rule: 'В элементе Zn/Cu цинк служит анодом.', example: 'Zn → Zn²⁺ + 2e⁻.',
-    hint: 'Сравни активность Zn и Cu.', tags: ['electrochemistry', 'galvanic-cell', 'zinc', 'copper'], parameters: { comparisonRuns: zincCopperProbes },
+    hint: 'Сравни активность Zn и Cu.', tags: ['electrochemistry', 'galvanic-cell', 'zinc', 'copper'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  comparisonRuns: zincCopperProbes },
   }),
   makeTask(152, {
     topic: 'Электрохимия', subtopic: 'Гальванический элемент', difficulty: 2,
@@ -359,7 +359,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['от цинка к медному электроду', 'от меди к цинковому электроду', 'из раствора в солевой мостик', 'электроны не движутся'],
     explanation: 'Электроны образуются при окислении Zn на аноде и поступают к медному катоду, где идёт восстановление.',
     rule: 'Во внешней цепи электроны движутся от анода к катоду.', example: 'Zn-анод → проводник → Cu-катод.',
-    hint: 'Начни с электрода, где электроны образуются.', tags: ['electrochemistry', 'galvanic-cell', 'electron-flow'], parameters: { comparisonRuns: zincCopperProbes },
+    hint: 'Начни с электрода, где электроны образуются.', tags: ['electrochemistry', 'galvanic-cell', 'electron-flow'], parameters: { comparisonVisuals: [{ kind: 'metal-oxidation', caption: 'Zn → Zn²⁺ + 2e⁻', color: '8eaaaf' }, { kind: 'metal-reduction', caption: 'Cu²⁺ + 2e⁻ → Cu', color: 'c98550' }],  comparisonRuns: zincCopperProbes },
   }),
   makeTask(153, {
     topic: 'Коррозия', subtopic: 'Условия коррозии', difficulty: 1,
@@ -388,7 +388,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['уменьшает контакт металла с агрессивной средой', 'ускоряет доступ воды и кислорода', 'повышает электропроводность электролита', 'превращает железо в более активный металл'],
     explanation: 'Неповреждённое покрытие отделяет поверхность металла от воды, кислорода и растворённых агрессивных веществ.',
     rule: 'Эффективность барьерной защиты зависит от целостности покрытия.', example: 'Защитная лакокрасочная система снижает контакт стали со средой.',
-    hint: 'Покрытие создаёт физическую границу.', tags: ['corrosion', 'protection', 'coating'], parameters: { comparisonRuns: [{ setting: 'Сплошное покрытие', observation: 'Покрытие отделяет сталь от воды, кислорода и растворённых веществ.' }, { setting: 'Повреждённый участок', observation: 'В месте дефекта поверхность стали снова контактирует со средой.' }] },
+    hint: 'Покрытие создаёт физическую границу.', tags: ['corrosion', 'protection', 'coating'], parameters: { comparisonVisuals: [{ kind: 'intact-coating' }, { kind: 'damaged-coating' }],  comparisonRuns: [{ setting: 'Сплошное покрытие', observation: 'Покрытие отделяет сталь от воды, кислорода и растворённых веществ.' }, { setting: 'Повреждённый участок', observation: 'В месте дефекта поверхность стали снова контактирует со средой.' }] },
   }),
   makeTask(156, {
     topic: 'Коррозия', subtopic: 'Протекторная защита', difficulty: 2,
@@ -408,7 +408,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['образование защитной поверхностной плёнки, снижающей скорость коррозии', 'полное растворение металла', 'увеличение площади активной поверхности', 'механическое разрушение покрытия'],
     explanation: 'Плотная поверхностная плёнка затрудняет дальнейший перенос веществ и электрохимические процессы на металле.',
     rule: 'Пассивное состояние уменьшает скорость коррозии.', example: 'Щелочная среда бетона помогает сохранять пассивность арматуры.',
-    hint: 'Речь идёт о защитном состоянии поверхности.', tags: ['corrosion', 'passivation', 'protection'], constructionContext: 'Пассивная плёнка важна для стальной арматуры.', parameters: { comparisonRuns: [{ setting: 'Активная поверхность', observation: 'Поверхность открыта для контакта с окружающей средой.' }, { setting: 'Пассивная поверхность', observation: 'Плотная защитная плёнка затрудняет перенос веществ и снижает скорость коррозии.' }] },
+    hint: 'Речь идёт о защитном состоянии поверхности.', tags: ['corrosion', 'passivation', 'protection'], constructionContext: 'Пассивная плёнка важна для стальной арматуры.', parameters: { comparisonVisuals: [{ kind: 'bare-surface' }, { kind: 'passive-film' }],  comparisonRuns: [{ setting: 'Активная поверхность', observation: 'Поверхность открыта для контакта с окружающей средой.' }, { setting: 'Пассивная поверхность', observation: 'Плотная защитная плёнка затрудняет перенос веществ и снижает скорость коррозии.' }] },
   }),
   makeTask(158, {
     topic: 'Коррозия', subtopic: 'Влияние среды', difficulty: 1,
@@ -418,7 +418,7 @@ export const level4Tasks: readonly TaskDefinition[] = [
     options: ['влажная среда с растворённым электролитом', 'сухой воздух', 'сухая инертная атмосфера', 'вакуум'],
     explanation: 'Вода с растворёнными ионами обеспечивает ионную проводимость и облегчает работу коррозионных микроэлементов.',
     rule: 'Влага и электролиты обычно повышают риск электрохимической коррозии.', example: 'Растворённые соли увеличивают проводимость водной плёнки.',
-    hint: 'Выбери среду с хорошим ионным переносом.', tags: ['corrosion', 'environment', 'electrolyte', 'moisture'], parameters: { comparisonRuns: [{ setting: 'Сухой воздух', observation: 'На стали нет водной плёнки, обеспечивающей перенос ионов.' }, { setting: 'Влажная солевая плёнка', observation: 'Растворённые ионы проводят заряд в водной плёнке и поддерживают коррозионные микроэлементы.' }] },
+    hint: 'Выбери среду с хорошим ионным переносом.', tags: ['corrosion', 'environment', 'electrolyte', 'moisture'], parameters: { comparisonVisuals: [{ kind: 'dry-surface' }, { kind: 'electrolyte-film' }],  comparisonRuns: [{ setting: 'Сухой воздух', observation: 'На стали нет водной плёнки, обеспечивающей перенос ионов.' }, { setting: 'Влажная солевая плёнка', observation: 'Растворённые ионы проводят заряд в водной плёнке и поддерживают коррозионные микроэлементы.' }] },
   }),
   makeTask(159, {
     topic: 'Коррозия', subtopic: 'Гальваническая пара', difficulty: 3,

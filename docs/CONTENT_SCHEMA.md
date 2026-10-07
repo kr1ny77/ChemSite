@@ -918,3 +918,16 @@ These systems must remain separate.
 ## Curated mixing visual
 
 The five Level 2 virtual-mixing tasks optionally contain `parameters.mixingVisual`: `kind` is `precipitate` or `gas`, and `color` is a reviewed six-digit RGB value for the schematic observation. This metadata accompanies the existing `mixingObservation`; answer validation stays deterministic and independent. The illustration appears after the required pair is selected. Animation is schematic, has no measured rate/quantity, settles after 1.2 seconds, and is static with reduced motion.
+
+## Curated comparison visuals
+
+Nine Level 4 tasks optionally contain two ordered `parameters.comparisonVisuals`
+entries corresponding to `comparisonRuns`. Supported `kind` values are
+`metal-oxidation`, `metal-reduction`, `intact-coating`, `damaged-coating`,
+`bare-surface`, `passive-film`, `dry-surface` and `electrolyte-film`. Electrode
+entries provide a curated `caption` (the balanced half-equation already in the
+readout) and six-digit RGB `color`. Renderers consume these values independently
+of answer validation. Each diagram appears only after its probe is inspected;
+its partner remains unrevealed. Motion is illustrative, eases over 1.2 seconds
+and then stops. Reduced motion presents the final state immediately. Film
+thickness, metal dimensions and particle counts carry no measured quantities.

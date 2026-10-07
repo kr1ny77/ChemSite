@@ -4879,6 +4879,18 @@
       "oxidation"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Цинковый электрод",
@@ -4923,6 +4935,18 @@
       "reduction"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Цинковый электрод",
@@ -4964,6 +4988,18 @@
       "zinc"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "compound": "Zn",
       "comparisonRuns": [
         {
@@ -5006,6 +5042,18 @@
       "copper"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "compound": "Cu",
       "comparisonRuns": [
         {
@@ -5052,6 +5100,18 @@
       "copper"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Цинковый электрод",
@@ -5097,6 +5157,18 @@
       "electron-flow"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Zn → Zn²⁺ + 2e⁻",
+          "color": "8eaaaf"
+        },
+        {
+          "kind": "metal-reduction",
+          "caption": "Cu²⁺ + 2e⁻ → Cu",
+          "color": "c98550"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Цинковый электрод",
@@ -5231,6 +5303,14 @@
       "coating"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "intact-coating"
+        },
+        {
+          "kind": "damaged-coating"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Сплошное покрытие",
@@ -5314,6 +5394,14 @@
     ],
     "constructionContext": "Пассивная плёнка важна для стальной арматуры.",
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "bare-surface"
+        },
+        {
+          "kind": "passive-film"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Активная поверхность",
@@ -5356,6 +5444,14 @@
       "moisture"
     ],
     "parameters": {
+      "comparisonVisuals": [
+        {
+          "kind": "dry-surface"
+        },
+        {
+          "kind": "electrolyte-film"
+        }
+      ],
       "comparisonRuns": [
         {
           "setting": "Сухой воздух",

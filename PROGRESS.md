@@ -289,9 +289,40 @@ Completed: replaced sharp two-sample steps with four original filtered, rounded 
 
 The extended keyboard scenarios pass source/headless and macOS package for Levels 2–5 (840/980/1120/1260 points). Native Levels 2–3 passed at 1027×642; packaged graphical Levels 4–5 passed at 1440×900. Reviewed all 44 captures. Two direct source editor launches crashed during an AppKit termination callback; the release app completed both repeats. Windows fc9a5a1 run 37620885338 passed all five packaged keyboard rounds. Its digest-verified logs showed relative engine-log path errors despite correct gameplay completion; an absolute-path repair and stricter ERROR rejection now await CI verification.
 
-UI readability: added a shared native HUD Theme with light answer fields, dark placeholder/input/caret, read-only styles and three-pixel keyboard focus for buttons and inputs. All 200 task/400 feedback layouts pass at 1028×642. Seven native screenshots of oxidation/equation/numeric entry and locked solution calculation reviewed. Rebuilt macOS keyboard Level 3 passes with five tasks, 980 points and clean verbose shutdown. Current work: native small-window layout matrix and Windows clean logging. Next: chemistry-specific visual feedback and remaining production quality gates.
+UI readability: added a shared native HUD Theme with light answer fields, dark placeholder/input/caret, read-only styles and three-pixel keyboard focus for buttons and inputs. All 200 task/400 feedback layouts pass at 1028×642. Seven native screenshots of oxidation/equation/numeric entry and locked solution calculation reviewed. Rebuilt macOS keyboard Level 3 passes with five tasks, 980 points and clean verbose shutdown. Native 1028×642 layout matrix and clean Windows logging are verified. Current work: Windows changed-field image review. Next: chemistry-specific visual feedback and remaining production quality gates.
+
+## Electrochemistry and surface observation polish — 2026-10-07
+
+Completed: nine curated comparison tasks now reveal separate schematic states
+for Zn/Cu electrode transfer, coating defects, passive film and electrolyte film.
+Captions match the balanced curated half-equations; question answers are intact.
+Finite eased motion settles after 1.2 seconds, with immediate reduced-motion
+states. Fifty-four combinations pass reveal ordering, duplicate-probe locking,
+completion, finite processing and layout checks. Level 4 chemistry audit and
+source-bank TypeScript check pass. All 200 task/400 feedback native layouts pass
+at 1028×642. Reviewed 24 normal/reduced unread/partial/read captures and sampled
+the final native recording (337 encoded frames at 60 FPS). Source and macOS
+packaged surface/electrode rounds pass. Packaged graphical surface/corrosion rounds pass with exactly 14/12 images
+(three/one settled observations); viewed the exported coating, passivity and
+electrolyte diagrams. Current work: expanded Windows evidence. Next: remaining chemistry
+VFX/environment motion and production gates.
+
+Found a static capture stall: the movie kept recording while a reduced-motion
+capture waited for an idle post-draw signal. Terminated that owned partial
+recording and excluded it. Capture helpers now request an explicit redraw through
+the documented main-thread API. Final movie completes cleanly, and the previously
+failing direct native Level 4 keyboard repeat now passes (1120 points). Prior
+termination crashes remain historical evidence; hardware playtesting is open.
+
+Windows 62f0391 visual run 37621971072 completed successfully; its 93,710,265-byte
+archive digest is 557c577a8660ba6cae6bae7501680811e2af8ad2d77211198b58da631b9461c7.
+Changed-field image review is still pending. The new visual workflow preserves
+all fourteen existing rounds and adds one surface round plus ten settled
+observation captures: 175 PNGs expected. New Windows verification follows push.
 
 ## Last verification
+
+2026-10-07: Shared light input Theme passes native 1028×642 all-200-task/400-feedback layout validation; seven native empty/entered/locked field captures reviewed. Godot import/parse and macOS export pass; packaged keyboard Level 3 finishes five tasks with 980 points and clean shutdown. All five macOS package keyboard rounds and native round captures are verified. Windows native run 37621970913 at 62f0391 passes all five EXE keyboard rounds with exact expected scores and clean engine/stderr logs. The 34,479-byte diagnostic archive digest was verified (e3032a5307aaba480b8f22176b8b358affdc029f332b00a9b35607e31938f606). Graphical Windows run 37621971072 remains live; changed-field capture review follows completion. Next production work: electrochemistry/corrosion visual feedback. Human hardware/audio, target laptop, course review and final release gates remain open.
 
 2026-10-06: Full Level 1 raw keyboard-event round passed source/headless and native Forward+: physical WASD routes, E station opening, Tab/Space answer and formula controls, Escape/Space pause, five correct answers, 700 points, Level 2 unlock and menu return. Eleven 1027×642 native screenshots reviewed with clean final shutdown. The graphical scenario explicitly resumes focus-loss pause. Standard progress hash stays unchanged. The final packaged macOS repeat passed with 700 points/three stars and clean verbose shutdown. Explicit conditions preserve every check in release builds. Windows CI follows push.
 

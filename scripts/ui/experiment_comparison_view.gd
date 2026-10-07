@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+const OBSERVATION_VISUAL = preload("res://scripts/ui/comparison_observation_view.gd")
+
 signal comparison_completed
 
 var _runs: Array[Dictionary] = []
@@ -8,13 +10,20 @@ var _status: Label
 var _buttons: HBoxContainer
 var _observations: Array[Label] = []
 var _mode := "kinetics"
+var _visual: Control
 
-func configure(parameters: Dictionary, mode: String = "kinetics") -> void:
+func configure(parameters: Dictionary, mode: String = "kinetics", static_motion: bool = false) -> void:
 	_mode = mode
 	for run in parameters.get("comparisonRuns", []):
 		_runs.append(run)
 	assert(_runs.size() == 2)
 	_build()
+	if parameters.has("comparisonVisuals"):
+		_visual = OBSERVATION_VISUAL.new()
+		_visual.name = "ObservationVisual"
+		_visual.configure(parameters.comparisonVisuals, static_motion)
+		add_child(_visual)
+		move_child(_visual, 2)
 
 func is_complete() -> bool:
 	return _observed[0] and _observed[1]
@@ -26,6 +35,8 @@ func inspect_run(index: int) -> void:
 	if index < 0 or index >= _runs.size() or _observed[index]:
 		return
 	_observed[index] = true
+	if _visual != null:
+		_visual.reveal(index)
 	var button := _buttons.get_child(index) as Button
 	button.disabled = true
 	_observations[index].text = "%d · %s" % [index + 1, str(_runs[index].observation)]

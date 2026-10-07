@@ -86,3 +86,13 @@ Eight optional site descriptions are curated in `data/chemistry/site_inspections
 2026-10-06: The pipe-display note identifies the modeled tank, pipe brackets, manual pump and gauge. It describes virtual inspection only, with no physical pressure values or practical operating procedure. All eight notes are covered by the source and packaged inspection gates.
 
 2026-10-06: Added schematic visual metadata to L2-051–055: white BaSO₄/AgCl, blue Cu(OH)₂, brown Fe(OH)₃ precipitates and CO₂ bubbles, matching the existing curated observations. Geometry, quantity and timing are explicitly illustrative. The text remains authoritative; no new chemical answer or practical procedure is introduced. Source-bank/native JSON regeneration and all five observation controls are verified. Target-course instructor review remains open.
+
+2026-10-07: Added qualitative comparison diagrams to L4-147–152 (Zn oxidation and
+Cu²⁺ reduction), L4-155 (intact/damaged barrier coating), L4-157 (bare/passive
+surface) and L4-158 (dry steel/electrolyte film). Both displayed half-equations
+match the already reviewed balanced readouts exactly. Illustrations show ion
+transfer, electron direction, exposed coating defects and film coverage. Their
+colors, dimensions and timing are schematic. No new answer, corrosion rate,
+experiment quantity or practical procedure is introduced. Existing Level 4 audit
+passes; all 54 layout/motion/reveal cases pass. Target-course instructor review
+remains open.

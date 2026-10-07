@@ -13,6 +13,11 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 		if directory_error != OK:
 			push_error("Export visual smoke: could not create capture directory")
 			return false
+		for filename in DirAccess.get_files_at(capture_dir):
+			if filename.ends_with(".png") and (filename.begins_with("task_") or filename.begins_with("feedback_") or filename.begins_with("observation_") or filename == "results.png"):
+				if DirAccess.remove_absolute(ProjectSettings.globalize_path(capture_dir.path_join(filename))) != OK:
+					push_error("Export visual smoke: could not clear prior QA capture")
+					return false
 	main.start_game("career", "", level)
 	var site: Node3D = main._current
 	var audio: Node = main.get_node("AudioController")
@@ -50,7 +55,14 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 			return false
 		if capture_visual and not await _capture(main, "%s/task_%02d.png" % [capture_dir, index + 1]):
 			return false
-		if not _submit_through_ui(hud, task):
+		if not _prepare_through_ui(hud, task):
+			push_error("Export smoke: observation preparation failed at task %d" % index)
+			return false
+		if capture_visual and task.get("parameters", {}).has("comparisonVisuals"):
+			await main.get_tree().create_timer(1.3).timeout
+			if not await _capture(main, "%s/observation_%02d.png" % [capture_dir, index + 1]):
+				return false
+		if not _answer_through_ui(hud, task):
 			push_error("Export smoke: UI answer submission failed at task %d" % index)
 			return false
 		if site._completed != index + 1:
@@ -80,6 +92,7 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 static func _capture(main: Node, path: String) -> bool:
 	for frame in range(4):
 		await main.get_tree().process_frame
+	RenderingServer.force_draw(false)
 	var screenshot := main.get_viewport().get_texture().get_image()
 	var capture_error := screenshot.save_png(path)
 	if capture_error != OK:
@@ -88,6 +101,9 @@ static func _capture(main: Node, path: String) -> bool:
 	return true
 
 static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
+	return _prepare_through_ui(hud, task) and _answer_through_ui(hud, task)
+
+static func _prepare_through_ui(hud: Control, task: Dictionary) -> bool:
 	var panel_content := hud.get("_panel_content") as VBoxContainer
 	for child in panel_content.get_children():
 		if child.has_method("is_complete") and child.has_method("reveal_next"):
@@ -155,6 +171,10 @@ static func _submit_through_ui(hud: Control, task: Dictionary) -> bool:
 			child.select_count("anion", int(ions.anion.count))
 			if not child.is_ready():
 				return false
+	return true
+
+static func _answer_through_ui(hud: Control, task: Dictionary) -> bool:
+	var panel_content := hud.get("_panel_content") as VBoxContainer
 	var interaction := str(task.get("interactionType", ""))
 	if interaction == "formula-builder":
 		var tile_grid: GridContainer

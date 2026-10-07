@@ -21,3 +21,12 @@ logic under CI. Physical Windows keyboard, listening, save/restart and Forward+
 obstruction rendering remain separate acceptance gates.
 
 Local evidence: `artifacts/windows-qa-9d5cc4a/evidence/` and `sheets/`.
+
+## Observation-state extension — 2026-10-07
+
+The workflow preserves the original fourteen career/focused rounds, adds a
+surface-condition round and captures settled observation panels before answers.
+Expected evidence is 175 PNGs: fifteen rounds × eleven task/feedback/result states
+plus ten observed panels (one default Level 4, five electrode, one corrosion,
+three surface). Empty/read field styles and diagrams need Windows image review
+from the new run after push. Compatibility/Dummy Audio limits remain as above.

@@ -74,3 +74,16 @@ GameHud retains local semantic button backgrounds and input font sizes. Answer
 parsing, observation gates and keyboard event handling remain in their existing
 systems. Native 1027×642 captures cover empty/entered inputs and locked numeric
 entry; the 200-task/400-feedback layout gate passes at 1028×642.
+
+### Comparison observation diagrams
+
+`ComparisonObservationView` renders curated visual metadata after each
+`ExperimentComparisonView` probe is inspected. Observation state gates the two
+halves separately; answer unlocking still requires both existing text readouts.
+A finite eased process updates visible diagrams for 1.2 seconds, then disables
+processing. Reduced motion skips the animation. All chemistry captions and
+visual kinds come from the task bank; UI rendering owns geometry and timing.
+QA captures explicitly redraw through main-thread `RenderingServer.force_draw`
+before reading the viewport. This avoids an unbounded post-draw signal wait in
+static reduced-motion scenes. Exported visual QA now captures settled observation
+states before submission, preserving task/feedback/result evidence.
