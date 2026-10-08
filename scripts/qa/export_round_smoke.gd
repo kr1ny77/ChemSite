@@ -1,5 +1,8 @@
 extends RefCounted
 
+const SAVE = preload("res://scripts/core/save_data.gd")
+const CONSTRUCTION = preload("res://scripts/core/construction_progress.gd")
+
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 
 static func run(main: Node, capture_visual: bool = false, level: int = 1, task_ids: Array[String] = []) -> bool:
@@ -7,7 +10,15 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 	var capture_dir := "user://qa-visual-round" if level == 1 else "user://qa-visual-level%d-round" % level
 	if not task_ids.is_empty():
 		capture_dir += "-mission"
+	if CONSTRUCTION.DEFINITION.stage_names.size() != 6 or CONSTRUCTION.DEFINITION.stage_names.any(func(title: String): return title.is_empty()):
+		push_error("Export smoke: construction stage titles failed serialization")
+		return false
+	var user_hash := FileAccess.get_sha256(ProjectSettings.globalize_path(SAVE.SAVE_PATH))
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
+	for prior_level in range(1, level):
+		if SAVE.record_round(700, 5, save_path, prior_level) != OK:
+			push_error("Export smoke: prior career fixture failed")
+			return false
 	if capture_visual:
 		var directory_error := DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(capture_dir))
 		if directory_error != OK:
@@ -18,13 +29,14 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 				if DirAccess.remove_absolute(ProjectSettings.globalize_path(capture_dir.path_join(filename))) != OK:
 					push_error("Export visual smoke: could not clear prior QA capture")
 					return false
-	main.start_game("career", "", level)
+	main.start_game("career", "", level, save_path)
 	var site: Node3D = main._current
 	var audio: Node = main.get_node("AudioController")
 	site.disconnect("feedback_given", audio.play_feedback)
 	site.disconnect("station_used", audio.play_interact)
-	site.save_path = save_path
-	site._load_tasks()
+	if site._construction_stage != level - 1:
+		push_error("Export smoke: initial saved construction stage differs")
+		return false
 	if not task_ids.is_empty():
 		site._tasks.clear()
 		var bank := TASK_BANK.load_verified_tasks(level)
@@ -71,11 +83,21 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 		if capture_visual and not await _capture(main, "%s/feedback_%02d.png" % [capture_dir, index + 1]):
 			return false
 		site._resume()
+	var reward_visible := false
+	for child in hud._panel_content.get_children():
+		if child is Label and child.text == "СТРОЙКА · " + CONSTRUCTION.stage_title(level):
+			reward_visible = true
+	if not reward_visible:
+		print("CONSTRUCTION_QA_AFTER_RESULTS stage=", site._construction_stage, " mode=", site.mode)
+		for child in hud._panel_content.get_children():
+			if child is Label: print("CONSTRUCTION_QA_LABEL ", child.text)
+		push_error("Export smoke: newly earned construction reward missing from results")
+		return false
 	if capture_visual and not await _capture(main, capture_dir + "/results.png"):
 		return false
 	var progress: Dictionary = load("res://scripts/core/save_data.gd").load_progress(save_path)
 	var expected_score := int({1: 700, 2: 840, 3: 980, 4: 1120, 5: 1260}.get(level, -1))
-	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == 1
+	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == level and CONSTRUCTION.stage_from_progress(progress) == level and site._construction_view.stage == level and FileAccess.get_sha256(ProjectSettings.globalize_path(SAVE.SAVE_PATH)) == user_hash
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:
 		site.queue_free()

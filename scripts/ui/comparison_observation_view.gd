@@ -62,7 +62,7 @@ func _draw() -> void:
 			_thermal(offset, kinds[index], progress, _captions[index])
 		else:
 			_surface(offset, kinds[index], progress)
-		var label := "%d · СХЕМА · МАСШТАБ УСЛОВНЫЙ" % (index + 1)
+		var label := "%d · МАСШТАБ УСЛОВНЫЙ" % (index + 1)
 		draw_string(font, offset + Vector2(12, 79), label, HORIZONTAL_ALIGNMENT_LEFT, half - 20, 13, Color("52666c"))
 	draw_line(Vector2(half, 8), Vector2(half, size.y - 8), Color("bdcfc8"), 1)
 

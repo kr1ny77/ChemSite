@@ -109,3 +109,9 @@ formwork/rails. The world reloads the stage only after successful career save.
 Practice displays the current stage and preserves its saved records. Results show
 the newly earned stage. Future geometry remains hidden and skipped by visibility
 queries; added walls/roof occupy the inaccessible upper floor.
+
+Construction titles use typed Array[String]. The native release PCK converted the
+previous PackedStringArray property to an empty array. Packaged round checks now
+validate six nonempty titles, initial/earned stages, visible reward text and the
+unchanged normal-user save hash. QA supplies its save path before scene tree
+entry and seeds consecutive prior levels through the existing save service.

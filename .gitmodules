@@ -1,0 +1,9 @@
+[submodule "assets-source/KayKit/kaykit-city"]
+	path = assets-source/KayKit/kaykit-city
+	url = https://github.com/KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0.git
+[submodule "assets-source/KayKit/kaykit-furniture"]
+	path = assets-source/KayKit/kaykit-furniture
+	url = https://github.com/KayKit-Game-Assets/KayKit-Furniture-Bits-1.0.git
+[submodule "assets-source/KayKit/kaykit-prototype"]
+	path = assets-source/KayKit/kaykit-prototype
+	url = https://github.com/KayKit-Game-Assets/KayKit-Prototype-Bits-1.0.git

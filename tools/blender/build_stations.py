@@ -1,10 +1,14 @@
 import bpy, math
 from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from station_material_profiles import profile_values
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'assets/models/stations'
 OUT.mkdir(parents=True,exist_ok=True)
 
 def material(name,rgb,metal=0,rough=.55):
+ metal,rough=profile_values(name,metal,rough)
  m=bpy.data.materials.get(name) or bpy.data.materials.new(name)
  m.diffuse_color=(*rgb,1);m.use_nodes=True
  bs=m.node_tree.nodes.get('Principled BSDF')

@@ -9,6 +9,8 @@ func _run() -> void:
 		Engine.max_fps = 0
 	var site := (load("res://scenes/levels/construction_site.tscn") as PackedScene).instantiate()
 	root.add_child(site)
+	if OS.get_cmdline_user_args().has("--completed-site"):
+		site._construction_view.set_stage(5)
 	await _measure("exploration")
 	var task: Dictionary = site._tasks[0]
 	var station: Dictionary = site.STATION_CONFIG.filter(func(entry: Dictionary) -> bool: return entry.id == task.station)[0]

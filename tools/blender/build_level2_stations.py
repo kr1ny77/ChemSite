@@ -1,11 +1,15 @@
 """Reproducible Level 2 chemistry station set; metres, +Z up in Blender."""
 import bpy, math
 from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from station_material_profiles import profile_values
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'assets/models/stations'; OUT.mkdir(parents=True,exist_ok=True)
 SRC=ROOT/'tools/blender/source'; SRC.mkdir(parents=True,exist_ok=True)
 
 def mat(name,rgb,metal=0,rough=.55):
+ metal,rough=profile_values(name,metal,rough)
  m=bpy.data.materials.new(name);m.diffuse_color=(*rgb,1);m.use_nodes=True
  bs=m.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(*rgb,1);bs.inputs['Metallic'].default_value=metal;bs.inputs['Roughness'].default_value=rough
  return m

@@ -177,6 +177,8 @@ func _build_world() -> void:
 	var settings := Environment.new()
 	settings.background_mode = Environment.BG_COLOR
 	settings.background_color = Color("a7cbd0")
+	settings.sky = preload("res://data/rendering/site_reflection_sky.tres")
+	settings.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
 	settings.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	settings.ambient_light_color = Color("b7cbe4")
 	settings.ambient_light_energy = 0.38

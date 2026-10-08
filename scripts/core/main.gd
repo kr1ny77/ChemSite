@@ -244,7 +244,7 @@ func show_menu() -> void:
 	_current.start_requested.connect(start_game)
 	_current.settings_changed.connect($AudioController.apply_settings)
 
-func start_game(mode: String = "career", topic: String = "", level: int = 1) -> void:
+func start_game(mode: String = "career", topic: String = "", level: int = 1, progress_path: String = "") -> void:
 	if is_instance_valid(_current):
 		_current.queue_free()
 	_current = SITE_SCENE.instantiate()
@@ -252,6 +252,8 @@ func start_game(mode: String = "career", topic: String = "", level: int = 1) -> 
 	_current.practice_topic = topic
 	_current.level = level
 	_configure_playtest_paths()
+	if not progress_path.is_empty():
+		_current.save_path = progress_path
 	add_child(_current)
 	_current.exit_requested.connect(show_menu)
 	_current.feedback_given.connect($AudioController.play_feedback)

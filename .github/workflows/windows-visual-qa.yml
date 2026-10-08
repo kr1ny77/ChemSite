@@ -43,8 +43,12 @@ jobs:
       - name: Export Windows release
         shell: pwsh
         run: |
-          $import = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--editor', '--quit') -Wait -PassThru -NoNewWindow
-          if ($import.ExitCode -ne 0) { throw "Godot import failed ($($import.ExitCode))" }
+          New-Item -ItemType Directory -Force -Path 'artifacts/native-qa' | Out-Null
+          $importOut = 'artifacts/native-qa/editor-import.stdout.log'
+          $importErr = 'artifacts/native-qa/editor-import.stderr.log'
+          $import = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--editor', '--import') -Wait -PassThru -RedirectStandardOutput $importOut -RedirectStandardError $importErr
+          Get-Content $importOut, $importErr | Write-Host
+          if ($import.ExitCode -ne 0 -or (Select-String -Path $importOut, $importErr -Pattern 'SCRIPT ERROR:|(^|\s)ERROR:' -Quiet)) { throw "Godot import failed or reported an engine/script error ($($import.ExitCode))" }
           New-Item -ItemType Directory -Force -Path 'builds/windows' | Out-Null
           $export = Start-Process -FilePath $env:GODOT_EXE -ArgumentList @('--headless', '--path', '.', '--export-release', '"Windows Desktop"', 'builds/windows/ChemSite.exe') -Wait -PassThru -NoNewWindow
           if ($export.ExitCode -ne 0) { throw "Windows export failed ($($export.ExitCode))" }

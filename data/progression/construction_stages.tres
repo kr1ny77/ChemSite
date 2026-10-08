@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ConstructionProgressDefinition" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://scripts/core/construction_progress_definition.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
 model_path = "res://assets/models/environment/construction_stages.glb"
-stage_names = PackedStringArray("Бетонный каркас", "Готова задняя секция перекрытия", "Завершено перекрытие", "Установлена задняя стена", "Установлена боковая стена", "Готова кровля учебной секции")
+stage_names = Array[String](["Бетонный каркас", "Готова задняя секция перекрытия", "Завершено перекрытие", "Установлена задняя стена", "Установлена боковая стена", "Готова кровля учебной секции"])

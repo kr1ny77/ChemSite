@@ -1,5 +1,33 @@
 # ChemSite progress
 
+## Material and resource production pass — 2026-10-08
+
+Current phase: production polish and release regression. Completed work: eleven
+station material sources/GLBs refined with shared profiles and static sky
+reflections. Twenty-two native after views and eleven before/after sheets reviewed;
+three Blender inspections pass. Geometry/hierarchy invariants pass for all eleven.
+Embedded correct source-specific Kenney palettes in eighteen selected construction
+GLBs; independent dependency/geometry audit and fresh import pass. Both Windows
+workflows now reject import errors. Added metadata for three existing KayKit Git
+links. Fixed clipped diagram scale text; 72 comparison cases and native image pass.
+Windows 82bf816 native 37631043176 and visual 37631043287 completed successfully.
+Both 191-image archive SHA/dimension checks pass; fb0d62c sixteen sheets/thermal
+full-size panels and 82bf816 results reviewed.
+Current work: strict Windows regression and remaining production quality gates.
+Last verification: source five-level rounds, isolated profile hash preservation,
+clean native import/export, material captures and M4 final-stage profile. Fixed
+exported construction reward: PackedStringArray titles became empty in the release
+PCK; typed Array[String] retains all six. Explicit packaged checks validate title
+count/nonempty captions, initial/earned stage, reward label and unchanged user
+save hash. macOS Level 5 result at 1440×900 and Level 1 at 1028×642 pass; both
+reward panels inspected. Isolation test now awaits answer-cue audio teardown and
+exits cleanly. Source construction/save/practice smoke and palette audit pass.
+Next task: push this production pass, inspect strict Windows import/export and
+all five rewards, continue movement/audio/accessibility and release gates.
+Known issues: human movement/audio/accessibility, physical
+Windows input/audio/save, student-laptop FPS and instructor review remain open.
+
+
 ## Earned construction stages — 2026-10-07
 
 Current phase: Phase 3/7/8 production quality.

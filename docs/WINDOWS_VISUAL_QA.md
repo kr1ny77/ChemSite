@@ -63,3 +63,12 @@ passed every individual graphical round and captured 191 PNGs, then failed the
 old final 175-image assertion. The repair derives the final expected total from
 the round matrix and each round's observation requirement. DummyAudio and engine
 error rejection stayed enabled. Artifact 11486011385 awaits image review.
+
+82bf816: native run 37631043176 and visual run 37631043287 succeeded. Artifact
+11486074040 contains 191 PNGs, 113396892 bytes, SHA-256
+140617732400d5f8fd6c35fce995682fba25b622da9bc5cf4793a7fcccccda9a.
+Digest, sizes/dimensions and Level 1/5 results inspected. Absent reward text led
+to the release Resource serialization fix. The updated package gate requires
+the earned reward label for every career/focused round. Native import logs also
+exposed eighteen missing Kenney palette references; source-specific PNG embedding
+repairs dependencies and both workflows now reject import engine/script errors.

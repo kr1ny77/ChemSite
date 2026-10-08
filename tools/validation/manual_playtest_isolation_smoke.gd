@@ -30,5 +30,6 @@ func _run() -> void:
 	main.queue_free()
 	for frame in range(5):
 		await process_frame
+	await create_timer(0.8).timeout
 	print("MANUAL_PLAYTEST_ISOLATION_OK")
 	quit()

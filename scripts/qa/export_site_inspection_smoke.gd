@@ -1,7 +1,7 @@
 extends RefCounted
 
 static func run(main: Node, capture_visual: bool = false) -> bool:
-	main.start_game("career", "", 1)
+	main.start_game("career", "", 1, "user://export-site-inspection-progress.json")
 	var site: Node3D = main._current
 	await main.get_tree().process_frame
 	var player: CharacterBody3D = site.get_node("Player")

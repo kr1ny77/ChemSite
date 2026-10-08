@@ -2,6 +2,9 @@
 import bpy
 from pathlib import Path
 from mathutils import Vector
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from station_material_profiles import profile_values
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'assets/models/stations'; SRC=ROOT/'tools/blender/source'
 OUT.mkdir(parents=True,exist_ok=True);SRC.mkdir(parents=True,exist_ok=True)
@@ -10,6 +13,7 @@ def clear():
  bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 
 def material(name,rgb,metal=0,rough=.55):
+ metal,rough=profile_values(name,metal,rough)
  m=bpy.data.materials.new(name);m.diffuse_color=(*rgb,1);m.use_nodes=True
  p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*rgb,1);p.inputs['Metallic'].default_value=metal;p.inputs['Roughness'].default_value=rough
  return m

@@ -44,6 +44,9 @@ func _run() -> void:
 				for frame in range(3): await process_frame
 				if not _check(hud._panel.get_global_rect().encloses(visual.get_global_rect()), task.id + " diagram outside panel"): return
 				if not _check(hud._panel.get_combined_minimum_size().y <= hud._panel.size.y + 1, task.id + " content overflow"): return
+				var font: Font = visual.get_theme_default_font()
+				var disclaimer_width: float = font.get_string_size("2 · МАСШТАБ УСЛОВНЫЙ", HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x
+				if not _check(disclaimer_width <= visual.size.x * .5 - 20, task.id + " scale disclaimer clipped"): return
 				cases += 1
 	hud.queue_free()
 	await process_frame
