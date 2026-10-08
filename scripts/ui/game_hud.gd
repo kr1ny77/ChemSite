@@ -481,6 +481,7 @@ func show_results(score: int, completed: int, time_left: float, target_count: in
 	_objective.text = "ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА"
 	_status.text = "ИТОГИ ТРЕНИРОВКИ" if mode == "practice" else "ИТОГИ УЧЕБНОЙ СМЕНЫ"
 	_prompt.text = ""
+	(_prompt.get_parent() as Control).hide()
 	_panel.anchor_top = 0.24
 	_panel.anchor_bottom = 0.71
 	_panel.visible = true

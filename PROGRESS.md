@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Result-screen cleanup — 2026-10-08
+
+Current phase: UI quality pass. Completed work: hid the empty lower navigation
+prompt container on results, discovered in the five reviewed 808b656 Windows
+career images. Added visibility validation to the shared exported round check.
+Current work: remaining movement and release gates. Last verification: all five
+source career rounds, clean import/export and packaged macOS Level 5 visual round
+at 1028×642 (actual 1027×642) pass. Final result image reviewed; reward and menu
+button remain visible. Next task: refine tight-turn contact. Known issues: human
+movement/audio, physical Windows hardware, laptop FPS and instructor review
+remain open. New Windows regression follows push.
+
+
 ## Locomotion clock and contact diagnostic — 2026-10-08
 
 Current phase: character movement polish. Completed work: synchronized AnimationTree

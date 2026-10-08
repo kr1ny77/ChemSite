@@ -72,3 +72,13 @@ to the release Resource serialization fix. The updated package gate requires
 the earned reward label for every career/focused round. Native import logs also
 exposed eighteen missing Kenney palette references; source-specific PNG embedding
 repairs dependencies and both workflows now reject import engine/script errors.
+
+
+808b656: native run 37769896387 and visual run 37769896590 succeeded.
+Native job 113286609521 logs show clean strict import, construction progression
+and all five exported reward gates. Artifact 11547400825: 112139641 bytes,
+SHA-256 c3a95e4ff2d1c1683c7cd2676f6a959bebaa9618297f17b97835e647b562e8a3.
+All 191 PNG dimensions are 1028×642. All five full-size career result images
+were inspected: earned slab/wall/roof captions fit and match the five stages.
+This review identified the empty lower navigation prompt on results, repaired
+by hiding its container and checking visibility in every exported career round.

@@ -83,6 +83,9 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 		if capture_visual and not await _capture(main, "%s/feedback_%02d.png" % [capture_dir, index + 1]):
 			return false
 		site._resume()
+	if (hud._prompt.get_parent() as Control).is_visible_in_tree():
+		push_error("Export smoke: navigation prompt remains visible on results")
+		return false
 	var reward_visible := false
 	for child in hud._panel_content.get_children():
 		if child is Label and child.text == "СТРОЙКА · " + CONSTRUCTION.stage_title(level):
