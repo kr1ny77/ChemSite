@@ -103,3 +103,23 @@ displacement; human movement acceptance remains open.
 Clean macOS release export and packaged keyboard round pass: five station routes,
 five tasks, 700 points. `KEYBOARD_FOOT_PLANT_OK corrected_ticks=359` confirms the
 exported modifier ran and retained all correction, rotation and pose bounds.
+
+
+## Upright actions and Windows confirmation — 2026-10-08
+
+`capture_upright_actions.gd` captures Interact, PickUp and UseStation in front and
+side views, with the tall props hidden and level camera tracking disabled for
+inspection. A persistent process callback accepts each physics tick once and
+forces a draw before saving; this avoids repeated same-tick coroutine resumes
+and stale rendered poses. The six sequences cover 82/82/87 distinct ticks per
+view at 60 Hz, including Idle before each action. All pass. Reviewed thirty
+chronological poses in `artifacts/upright-actions-review-verified.png`; the
+62 PNG sequence is in `artifacts/upright-action-frames-final/`. Upright torso,
+stable planted boots and arm gestures are visible. The movie writer recorded
+only six main-loop frames despite forced rendering, so its AVI is excluded from
+full-duration evidence. Earlier incomplete captures are superseded.
+
+Windows d6a658d native run 37779353465 and visual run 37779353513 succeeded.
+Native job 113318216853 confirms all five keyboard rounds and active correction
+bounds (387/364/384/372/347 corrections), plus the moving-sole gate. Current
+Windows screenshot archive review and physical Windows acceptance remain open.

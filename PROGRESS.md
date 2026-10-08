@@ -1,5 +1,21 @@
 # ChemSite progress
 
+## Upright action review and Windows planting gate — 2026-10-08
+
+Current phase: character QA. Completed work: added native Interact/PickUp/
+UseStation capture from front and side. The capture advances on distinct physics
+ticks, forces rendering and checks Idle before each action. Six sequences cover
+82/82/87 ticks per view; 62 PNG captures and a 30-pose sheet show upright stance,
+arm gestures and stable knees/boots. Earlier coroutine captures and sparse movie
+output were rejected as duration evidence. Current work: full Walk/Run integration
+audit. Last verification: final native six-action-view gate and Idle checks pass.
+Windows d6a658d native 37779353465 and visual 37779353513 succeeded; native job
+113318216853 logs confirm moving-sole gate plus all five packaged keyboard rounds
+with active bounded planting (387/364/384/372/347 corrections). Next task: complete
+current-character full-cycle audit, then remaining station feedback and release
+requirements. Known issues: human movement/audio acceptance, residual turn drift,
+physical Windows/laptop tests, instructor review and music provenance remain open.
+
 ## Bounded turn-contact refinement — 2026-10-08
 
 Current phase: movement polish. Completed work: physics foot modifier with bounded
