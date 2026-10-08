@@ -1,6 +1,20 @@
 # ChemSite audio QA
 
-## Footstep revision (2026-10-07)
+## Padded footstep refinement (2026-10-08)
+
+Replaced the remaining pitched body with a dry filtered-noise sole contact.
+Four deterministic variations use 460–535 Hz cascaded low-pass filtering,
+65 Hz low-frequency removal, a 12 ms rounded attack and 35 ms tail fade.
+Duration is 120 ms; both PCM endpoints are zero. Player gain is now −18 dB.
+Source peaks range from −22.81 to −20.53 dBFS; RMS from −37.80 to −36.00 dBFS.
+Existing SFX settings and animation contact timing apply.
+
+Editor import/parse, footstep timing, native Forward+ audio smoke, macOS export
+and packaged five-task Level 1 round pass.
+`artifacts/padded-footsteps-preview.wav` contains sixteen contacts at runtime gain.
+Headphone/speaker listening acceptance remains open.
+
+## Earlier footstep revision (2026-10-07)
 
 Human feedback identified the walking sound as unpleasant. Replaced the two sharp synthetic contacts with four original rounded boot contacts. The generator uses two cascaded low-pass stages (700–865 Hz), an 8 ms smooth attack and a 25 ms tail fade. Removed the click layer. Clips last 160 ms and start/end at zero PCM amplitude. Runtime gain is −14 dB with a small eight-step pitch pattern (0.985–1.015), routed through the existing SFX slider. Animation contact timing is preserved.
 

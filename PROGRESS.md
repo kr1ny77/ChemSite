@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Padded footstep refinement — 2026-10-08
+
+Current phase: production audio polish. Completed work: four original dry padded
+sole contacts replace the pitched body; 120 ms clips, rounded endpoints, lower
+−18 dB runtime gain. Current work: remaining movement and release quality gates.
+Last verification: clean editor import/parse, footstep contact timing and native
+Forward+ audio playback, clean macOS export and packaged five-task Level 1 round pass. Sixteen-contact preview and PCM measurements saved
+in artifacts/padded-footsteps-*. Next task: continue tight-turn contact and
+remaining release gates. Known issues: human headphone/speaker
+acceptance and the previously recorded hardware/course review gates remain open.
+
+
 ## Material and resource production pass — 2026-10-08
 
 Current phase: production polish and release regression. Completed work: eleven

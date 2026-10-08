@@ -39,6 +39,8 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
+- [x] Refine padded footsteps: remove pitched body, use short dry sole texture and −18 dB gain; import, contact timing and native audio playback pass. Listening acceptance remains open.
+
 - [x] Soften walking audio after user feedback: rounded filtered boot contacts, four variations, lower gain; audio and animation-contact checks.
 
 - [x] Repair the reduced-motion QA camera contract and explicit failure exit; bound and log every Windows graphical check while preserving the 200-panel and 154-screen matrix. Windows native/graphical runs 37343958767/37343958751 passed the repair; all 154 screenshot dimensions and archive digest were verified. A feedback placement issue discovered in the artifact is covered by the next gate.

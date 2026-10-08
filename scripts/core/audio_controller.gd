@@ -33,7 +33,7 @@ func _ready() -> void:
 	for path in STEP_PATHS:
 		var step := AudioStreamPlayer.new()
 		step.bus = "SFX"
-		step.volume_db = -14.0
+		step.volume_db = -18.0
 		step.stream = load(path) as AudioStream
 		add_child(step)
 		_steps.append(step)
