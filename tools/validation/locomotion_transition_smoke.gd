@@ -48,6 +48,21 @@ func _run() -> void:
 			var actual: float = player._playback.get_current_play_position() / float(player._clip_lengths[states[1]])
 			if not _check(absf(actual - phase) < 0.001, "Locomotion phase lost: %s -> %s, %.3f -> %.3f" % [states[0], states[1], phase, actual]):
 				return
+	# A reversal can request a new state while the preceding blend is pending.
+	# Phase belongs to the playback clip, even when the requested state differs.
+	for states in [["Walk", "Run"], ["Run", "Walk"]]:
+		var phase := 0.35
+		player._playback.start(states[0])
+		player._animation_tree.advance(0.0)
+		player._animation_tree.set("parameters/%s/TimeSeek/seek_request" % states[0], phase * float(player._clip_lengths[states[0]]))
+		player._animation_tree.advance(0.0)
+		player._current_animation = states[1]
+		player._travel(states[0])
+		player._animation_tree.advance(0.0)
+		var actual: float = player._playback.get_current_play_position() / float(player._clip_lengths[states[0]])
+		if not _check(absf(actual - phase) < 0.001, "Pending transition used the requested clip's duration"):
+			return
+	print("LOCOMOTION_PENDING_PHASE_OK")
 	print("LOCOMOTION_PHASE_TRANSFER_OK")
 	print("LOCOMOTION_TRANSITION_SMOKE_OK")
 	quit()

@@ -61,6 +61,7 @@
   - [x] Review the cartoon Windows cc3922a graphical archive: verified digest, 154 dimensions, fourteen round sheets and full-size long panel; Compatibility render/audio limitations recorded.
   - [x] Review 9d5cc4a Windows evidence: verified SHA-256/size, 154 dimensions and fourteen round sheets.
   - [x] Synchronize AnimationTree with physics; measure actual moving sole contact in four sequences at 30/60/120 Hz, retain an idle-clock baseline and add Windows regression. Native chronological turn captures reviewed.
+  - [x] Repair phase transfer during pending Walk/Run blends and reduce their duration to 80 ms; old-controller negative control, 30/60/120 Hz comparisons, dense native poses and packaged keyboard round pass. Reversal drift decreases 16–24%; directional planting remains open.
   - [ ] Refine tight-turn contact and complete the exported movement playtest.
   - [x] Hide the empty lower navigation prompt on results screens; all five source career rounds and packaged macOS Level 5 at 1028×642 pass the visibility gate; result image reviewed.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.

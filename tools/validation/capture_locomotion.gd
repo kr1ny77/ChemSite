@@ -17,6 +17,7 @@ func _run() -> void:
 	var walking := OS.get_cmdline_user_args().has("--walk")
 	var transitions := OS.get_cmdline_user_args().has("--transitions")
 	var turning := OS.get_cmdline_user_args().has("--turns")
+	var dense := OS.get_cmdline_user_args().has("--dense")
 	if walking:
 		camera.size = 4.5
 		player.global_position = Vector3(-5.0, 0.04, 0.0)
@@ -27,6 +28,8 @@ func _run() -> void:
 		folder = "res://artifacts/locomotion-transition-frames"
 	if turning:
 		folder = "res://artifacts/locomotion-turn-frames"
+	if dense:
+		folder += "-dense"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	var movement := "move_right" if walking else "move_forward"
 	Input.action_press(movement, 0.68 if transitions else (0.3 if walking else 1.0))
@@ -47,7 +50,7 @@ func _run() -> void:
 				Input.action_release(movement)
 		await physics_frame
 		assert(player.controls_enabled, "Capture unexpectedly paused player controls")
-		if frame > 0 and frame % 8 == 0:
+		if frame > 0 and frame % (2 if dense else 8) == 0:
 			await process_frame
 			await RenderingServer.frame_post_draw
 			var image := root.get_viewport().get_texture().get_image()

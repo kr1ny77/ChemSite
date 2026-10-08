@@ -173,6 +173,7 @@ func _setup_animation(model: Node) -> void:
 			var transition := AnimationNodeStateMachineTransition.new()
 			transition.xfade_time = 0.2
 			if from_state in ["Walk", "Run"] and to_state in ["Walk", "Run"]:
+				transition.xfade_time = 0.08
 				transition.reset = false
 			machine.add_transition(from_state, to_state, transition)
 	_animation_tree = AnimationTree.new()
@@ -188,9 +189,10 @@ func _setup_animation(model: Node) -> void:
 func _travel(state_name: String) -> void:
 	if _playback == null or state_name == _current_animation:
 		return
-	if _current_animation in ["Walk", "Run"] and state_name in ["Walk", "Run"]:
-		# Preserve which boot is supporting, despite different cycle durations.
-		var phase := fposmod(_playback.get_current_play_position() / float(_clip_lengths[_current_animation]), 1.0)
+	var playing_state := str(_playback.get_current_node())
+	if playing_state in ["Walk", "Run"] and state_name in ["Walk", "Run"]:
+		# Read the clip that is actually playing while a previous blend completes.
+		var phase := fposmod(_playback.get_current_play_position() / float(_clip_lengths[playing_state]), 1.0)
 		_animation_tree.set("parameters/%s/TimeSeek/seek_request" % state_name, phase * float(_clip_lengths[state_name]))
 	_playback.travel(state_name)
 	_current_animation = state_name

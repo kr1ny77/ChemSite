@@ -1,5 +1,23 @@
 # ChemSite progress
 
+## Reversal transition repair — 2026-10-08
+
+Current phase: movement polish. Completed work: pending Walk/Run phase transfer
+uses the actual playing clip; locomotion blending shortened to 80 ms. Reversal
+peak support motion decreases 16–24% across equal-duration 30/60/120 Hz sequences.
+Added pending-state regressions and a 95 mm/tick 60 Hz reversal gate. Previous
+controller fails the new phase regression. Dense native turn recording and twenty
+chronological poses reviewed. Current work: remaining directional foot planting.
+Last verification: twelve steady cases, phase transfer, footsteps, clean import/
+export and packaged macOS keyboard round (five tasks, five routes, 700 points)
+pass. Windows 34c6ba6 native 37771555258 and visual 37771555259 succeeded; native
+logs confirm moving-sole diagnostic and all five exported result/prompt gates.
+Next task: bounded turn-contact refinement with joint deformation review. Known
+issues: residual turn support drift, human movement/audio acceptance, physical
+Windows/laptop verification and instructor review remain open. Updated Windows
+regression follows push.
+
+
 ## Result-screen cleanup — 2026-10-08
 
 Current phase: UI quality pass. Completed work: hid the empty lower navigation

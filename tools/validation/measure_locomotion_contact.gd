@@ -37,15 +37,15 @@ func _run() -> void:
 		var skipped_pairs := 0
 		var action := "move_right"
 		Input.action_press(action, 0.3 if scenario == "start_stop_walk" else 1.0)
-		for frame in range(180):
-			if frame == 75:
+		for frame in range(physics_hz * 3):
+			if frame == roundi(physics_hz * 1.25):
 				if scenario in ["corner_run", "reverse_run"]:
 					Input.action_release(action)
 					action = "move_forward" if scenario == "corner_run" else "move_left"
 					Input.action_press(action)
 				elif scenario == "start_stop_walk":
 					Input.action_release(action)
-			if frame == 120 and scenario == "start_stop_walk":
+			if frame == physics_hz * 2 and scenario == "start_stop_walk":
 				Input.action_press(action, 0.3)
 			await physics_frame
 			await process_frame
@@ -68,22 +68,26 @@ func _run() -> void:
 							previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 							continue
 						var drift := Vector2(point.x - last.point.x, point.z - last.point.z).length()
-						samples.append({"frame": frame, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y})
+						samples.append({"frame": frame, "time_s": float(frame) / physics_hz, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y})
 				previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 		Input.action_release(action)
 		var maximum := 0.0
 		var turn_maximum := 0.0
 		var steady_maximum := 0.0
 		var steady_count := 0
+		var steady_soles: Dictionary = {}
 		for sample in samples:
 			maximum = maxf(maximum, sample.drift_m)
-			if sample.frame >= 55 and sample.frame < 74:
+			if sample.time_s >= 0.4 and sample.time_s < 1.2:
 				steady_maximum = maxf(steady_maximum, sample.drift_m)
 				steady_count += 1
-			if sample.frame >= 75 and sample.frame < 105:
+				steady_soles[sample.sole] = true
+			if sample.time_s >= 1.25 and sample.time_s < 1.75:
 				turn_maximum = maxf(turn_maximum, sample.drift_m)
-		if steady_count < 5:
-			push_error("Insufficient consecutive steady contact samples")
+		# Run support lasts about 57 ms: at 30 Hz some contacts span one tick.
+		var minimum_samples := 3 if physics_hz == 30 else 5
+		if steady_count < minimum_samples or steady_soles.size() != 2:
+			push_error("Insufficient consecutive steady contact samples: %s count=%d soles=%d" % [scenario, steady_count, steady_soles.size()])
 			quit(1)
 			return
 		if not baseline:
@@ -91,6 +95,10 @@ func _run() -> void:
 				push_error("Steady sole motion exceeds 1 mm per physics tick: " + scenario)
 				quit(1)
 				return
+		if not baseline and physics_hz == 60 and scenario == "reverse_run" and turn_maximum >= 0.095:
+			push_error("Reversal contact exceeds 95 mm per tick at 60 Hz")
+			quit(1)
+			return
 		var report := {"physics_hz": physics_hz, "idle_animation_baseline": baseline, "steady_maximum_m": steady_maximum, "steady_samples": steady_count, "skipped_pairs": skipped_pairs, "scenario": scenario, "maximum_support_frame_drift_m": maximum, "turn_window_maximum_m": turn_maximum, "samples": samples}
 		reports.append(report)
 		print("CONTACT_DIAGNOSTIC ", scenario, " maximum_m=", maximum, " turn_window_m=", turn_maximum, " steady_m=", steady_maximum)
