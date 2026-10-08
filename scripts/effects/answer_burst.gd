@@ -33,7 +33,9 @@ func start(success: bool) -> void:
 	bead.radial_segments = 8
 	bead.rings = 4
 	var finish := StandardMaterial3D.new()
-	finish.albedo_color = tint
+	finish.albedo_color = Color.WHITE
+	finish.vertex_color_use_as_albedo = true
+	finish.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	finish.emission_enabled = true
 	finish.emission = tint
 	finish.emission_energy_multiplier = 1.35

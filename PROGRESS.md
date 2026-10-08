@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Answer-particle fade repair — 2026-10-08
+
+Current phase: station feedback polish. Completed work: repaired lifetime alpha
+rendering in answer burst draw material, enabling vertex color and transparency.
+Ten native correct/wrong before/after images reviewed; candidate fades gradually,
+opaque baseline remains bright until expiry. Both variants free their nodes by
+1.5 seconds. Current work: broader chemistry feedback and remaining release gates.
+Last verification: native Forward+ candidate/baseline capture and cleanup pass;
+clean macOS release export and packaged five-station keyboard round pass (700
+points, bounded planting active). Next task: audit remaining chemistry-specific
+feedback coverage and HUD/accessibility requirements. Known issues: human audio/
+movement/accessibility acceptance, physical Windows/student laptop, residual
+turn drift and instructor review remain open. Updated Windows gates follow push.
+
 ## Music source provenance resolved — 2026-10-08
 
 Current phase: release asset audit. Completed work: located the original offline
