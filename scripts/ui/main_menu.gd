@@ -15,9 +15,7 @@ var _practice_panel: PanelContainer
 var _practice_button: Button
 
 func _ready() -> void:
-	var menu_theme := Theme.new()
-	menu_theme.default_font = load("res://assets/fonts/Onest-Variable.ttf") as Font
-	theme = menu_theme
+	theme = preload("res://scripts/ui/menu_theme.gd").create()
 	var background := ColorRect.new()
 	background.color = Color("142531")
 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -69,6 +67,7 @@ func _ready() -> void:
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
 	var start := Button.new()
+	start.theme_type_variation = "PrimaryMenuButton"
 	start.custom_minimum_size = Vector2(280, 60)
 	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	start.add_theme_font_size_override("font_size", 24)

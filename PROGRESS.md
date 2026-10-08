@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Menu theme and keyboard accessibility — 2026-10-08
+
+Current phase: UI accessibility polish. Completed work: coherent menu theme with
+primary gold action, secondary blue-gray controls, explicit state colors and
+3 px focus borders. Menu, settings and practice pass 57 label/button-state checks.
+Raw-key settings/practice entry, saved volume adjustment, reduced-motion toggle,
+Escape exit and focus restoration pass using isolated paths. Three native small
+window screenshots reviewed. Current work: remaining control and release audits.
+Last verification: native Forward+ 1028x642 gate, clean macOS export and packaged
+five-station keyboard round pass (700 points; 355 bounded plant corrections).
+Windows 86d6f07 native 37783038924 succeeded; visual 37783038916 remains running.
+Added menu regression to Windows graphical workflow; updated runs follow push.
+Next task: audit remaining release requirements against current evidence. Known
+issues: human readability/movement/audio, physical Windows/student laptop tests,
+slider focus visibility acceptance, instructor review and residual turn drift
+remain open. Details: docs/UI_ACCESSIBILITY_QA.md.
+
 ## HUD contrast and action styling — 2026-10-08
 
 Current phase: UI accessibility polish. Completed work: darkened four HUD text

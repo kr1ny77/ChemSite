@@ -44,3 +44,29 @@ claim of complete accessibility conformance.
 
 Clean macOS release export and packaged five-station keyboard round pass: five
 tasks, 700 points and active bounded planting (340 corrections).
+
+
+## Menu, settings and practice theme — 2026-10-08
+
+Main-menu controls now share a native menu theme: a gold primary career action,
+blue-gray secondary buttons, explicit normal/hover/pressed/disabled colors and
+3 px focus borders. Primary focus uses dark ink on gold; secondary focus uses
+gold on blue-gray. The Onest font remains shared with gameplay. Existing control
+minimum heights, routing and saved setting values remain in place.
+
+`menu_accessibility_smoke.gd` uses isolated progress/settings paths and validates
+57 visible-label/button-state color checks across menu, settings and practice.
+Enabled button text exceeds 4.5:1; focus borders exceed 3:1 against every active
+button fill. Disabled button text is also checked for readability. Raw key events
+open settings and practice, adjust and persist music volume, toggle/persist reduced
+motion, close with Escape and restore focus to the respective entry button.
+Failures propagate to a nonzero exit without reaching the success marker.
+
+Native Forward+ run at 1028x642 passes. Three current screenshots in
+`artifacts/menu-accessibility/` were reviewed (actual macOS drawable 1027x642).
+The Windows graphical workflow now includes this menu gate. Sliders' physical
+focus visibility and human accessibility acceptance remain open alongside the
+other requirements above.
+
+Clean macOS export and packaged keyboard career round pass with the new menu:
+five station approaches, five tasks/700 points and return to the menu.

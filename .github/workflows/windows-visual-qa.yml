@@ -74,7 +74,7 @@ jobs:
           }
           Invoke-VisualCheck 'all-hud-layouts' $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/all_hud_layout_smoke.gd')
           Invoke-VisualCheck 'hud-text-contrast' $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/hud_text_contrast_smoke.gd')
-          foreach ($check in @('settings_ui_smoke.gd', 'reduced_motion_smoke.gd')) {
+          foreach ($check in @('settings_ui_smoke.gd', 'reduced_motion_smoke.gd', 'menu_accessibility_smoke.gd')) {
             Invoke-VisualCheck $check $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', "tools/validation/$check")
           }
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path

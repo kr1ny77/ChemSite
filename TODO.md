@@ -104,6 +104,7 @@
   - [x] Replace default dark answer fields with a shared light theme and visible keyboard focus; inspect empty/entered/locked oxidation, equation and numeric controls and verify all 200 layouts.
   - [x] Enlarge measured pH cards and add exact-value scale markers; verify four tasks across three window sizes and both motion settings, native capture and packaged pH round.
   - [x] Repair HUD text contrast and four unstyled actions; fix pressed/hover text in six chemistry control families. Native 1028×642 matrix passes 7,089 label/button-state checks; five screenshots reviewed. Windows contrast regression added.
+  - [x] Apply a coherent native menu/settings/practice theme; verify 57 label/button-state checks, 3 px focus contrast, raw-key volume/motion persistence and Escape focus restoration; three native screenshots reviewed and Windows regression added.
 - [x] Automatically pause exploration on desktop focus loss; freeze timer/movement, preserve open panels and require explicit resume. Verify native image and movement regressions.
 - [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
 - [x] Exercise all five default career rounds through raw keyboard events, collision-based walking, Tab/Space preparations, equation/numeric/formula input, pause, save/unlock and menu return; review native captures, run the macOS package and Windows EXE CI. Physical human playtesting remains a separate gate.
