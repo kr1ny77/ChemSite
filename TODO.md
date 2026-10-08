@@ -116,3 +116,5 @@
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
 - [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 154-screen career/focused Windows visual matrix and all-task native Windows layout gate pass
 - [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate
+
+- [x] Resolve production music provenance: existing original synthesis source reproduces native track 1 byte-for-byte in an isolated directory; source, size and SHA-256 recorded in docs/ASSET_LICENSES.md.

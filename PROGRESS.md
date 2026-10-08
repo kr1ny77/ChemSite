@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Music source provenance resolved — 2026-10-08
+
+Current phase: release asset audit. Completed work: located the original offline
+composition/synthesis generator in legacy-web/scripts/render-lofi.mjs, reviewed
+its four arrangements and generated output in an isolated temporary directory.
+Regenerated track 1, preserved browser MP3 and production MP3 match exactly:
+1,317,243 bytes, SHA-256 af3f2e358c88af1568ef5b0eb5a025b3ddc6b8a57076d7d1e1839908cbd2d529.
+Updated ASSET_LICENSES.md with the authored source and reproducibility evidence.
+Current work: remaining station feedback, HUD/accessibility and release gates.
+Last verification: isolated generator completed all four tracks; native track 1
+hash matches. Next task: audit chemistry station feedback coverage. Known issues:
+human movement/audio/accessibility acceptance, physical Windows/student laptop
+checks, residual turn drift and instructor review remain open. Music assets and
+production playback unchanged.
+
 ## Complete gait integration review — 2026-10-08
 
 Current phase: character QA. Completed work: native complete-gait capture uses
