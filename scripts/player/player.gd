@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 signal footstep
 
+const FOOT_PLANT = preload("res://scripts/player/foot_plant.gd")
+
 # Cartoon sole is at the model origin; the capsule lower tip is at +5 mm.
 const MODEL_GROUND_OFFSET := 0.005
 const WALK_NOMINAL_SPEED := 0.499512
@@ -16,6 +18,7 @@ const RUN_NOMINAL_SPEED := 2.086957
 @onready var visual: Node3D = $Visual
 var controls_enabled: bool = true
 var reduced_motion := false
+var _foot_plant: SkeletonModifier3D
 var _animation_tree: AnimationTree
 var _playback: AnimationNodeStateMachinePlayback
 var _current_animation: String = ""
@@ -33,6 +36,7 @@ func _ready() -> void:
 		model.position.y = MODEL_GROUND_OFFSET
 		visual.add_child(model)
 		_setup_animation(model)
+		_setup_foot_plant(model)
 
 func _physics_process(delta: float) -> void:
 	var input := Vector2.ZERO
@@ -196,3 +200,13 @@ func _travel(state_name: String) -> void:
 		_animation_tree.set("parameters/%s/TimeSeek/seek_request" % state_name, phase * float(_clip_lengths[state_name]))
 	_playback.travel(state_name)
 	_current_animation = state_name
+
+func _setup_foot_plant(model: Node) -> void:
+	var skeletons := model.find_children("*", "Skeleton3D", true, false)
+	if skeletons.is_empty() or _animation_tree == null:
+		return
+	var skeleton := skeletons[0] as Skeleton3D
+	skeleton.modifier_callback_mode_process = Skeleton3D.MODIFIER_CALLBACK_MODE_PROCESS_PHYSICS
+	_foot_plant = FOOT_PLANT.new()
+	_foot_plant.player = self
+	skeleton.add_child(_foot_plant)

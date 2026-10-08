@@ -64,3 +64,42 @@ All twelve steady scenarios pass. Dense native reversal poses (every two frames)
 and a full 150-frame turn recording were captured; twenty chronological reversal
 poses were reviewed. Fresh import/export and a packaged macOS keyboard round with
 five walking station approaches pass. Human movement acceptance remains open.
+
+
+## Bounded foot planting — 2026-10-08
+
+A physics SkeletonModifier3D corrects horizontal ankle displacement during the
+existing authored support interval. Correction is bounded to 65 mm, boot rotation
+to 65 degrees, and release blends over 65 ms. The analytic two-bone solve preserves
+leg lengths and authored ankle height. Idle crossfades skip correction. Controls,
+reactions, airborne movement and inactive AnimationTree release the support.
+Release tests first establish a measured active lock above 5 mm.
+
+The diagnostic now caches skinned vertices on Skeleton3D.skeleton_updated, after
+all modifiers. It independently checks final evaluated leg lengths. The prior
+out-of-callback bone query observes authored poses and cannot validate this pass.
+Same-harness disabled-modifier comparisons are in
+`artifacts/foot-plant-comparison.json`.
+
+| Physics frequency | Corner before / after | Reversal before / after |
+| --- | ---: | ---: |
+| 30 Hz | 138.92 / 88.97 mm | 219.91 / 130.31 mm |
+| 60 Hz | 54.57 / 32.09 mm | 85.89 / 61.84 mm |
+| 120 Hz | 30.38 / 12.89 mm | 49.21 / 21.68 mm |
+
+Values are peak support displacement per physics tick within the turn window;
+comparisons apply within each frequency. All twelve steady cases retain the
+1 mm/tick gate. Final evaluated length error stays below 0.1 mm. Four active-lock
+release cases pass at all three frequencies. Grounding, phase transitions,
+footstep timing and focus-pause regressions pass.
+
+Reviewed eighteen chronological main-camera turn poses and eighteen unobscured
+side poses. The isolated side capture hides tall yard props for joint inspection.
+Evidence: `artifacts/foot-plant-final.mp4`, `foot-plant-review.png`,
+`foot-plant-review-side-clear.png`. Native torso remains upright. The initial side
+capture was occluded and superseded. Bounded correction retains residual turn
+displacement; human movement acceptance remains open.
+
+Clean macOS release export and packaged keyboard round pass: five station routes,
+five tasks, 700 points. `KEYBOARD_FOOT_PLANT_OK corrected_ticks=359` confirms the
+exported modifier ran and retained all correction, rotation and pose bounds.

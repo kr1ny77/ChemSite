@@ -13,7 +13,17 @@ func _run() -> void:
 	camera.position = Vector3(4.0, 5.0, 7.0)
 	camera.look_at(Vector3(0, 1.0, 0), Vector3.UP)
 	camera.size = 7.0
+	if OS.get_cmdline_user_args().has("--side-view"):
+		camera.position = Vector3(7.5, 3.5, 2.0)
+		camera.look_at(Vector3(0, 1.0, 3.0), Vector3.UP)
+	if OS.get_cmdline_user_args().has("--isolated"):
+		for mesh in site.get_node("World").find_children("*", "MeshInstance3D", true, false):
+			var bounds: AABB = mesh.global_transform * mesh.get_aabb()
+			if bounds.size.y > 0.12:
+				mesh.visible = false
 	var player := site.get_node("Player") as CharacterBody3D
+	if OS.get_cmdline_user_args().has("--no-plant"):
+		player._foot_plant.active = false
 	var walking := OS.get_cmdline_user_args().has("--walk")
 	var transitions := OS.get_cmdline_user_args().has("--transitions")
 	var turning := OS.get_cmdline_user_args().has("--turns")
@@ -30,6 +40,12 @@ func _run() -> void:
 		folder = "res://artifacts/locomotion-turn-frames"
 	if dense:
 		folder += "-dense"
+	if OS.get_cmdline_user_args().has("--no-plant"):
+		folder += "-unplanted"
+	if OS.get_cmdline_user_args().has("--side-view"):
+		folder += "-side"
+	if OS.get_cmdline_user_args().has("--isolated"):
+		folder += "-isolated"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	var movement := "move_right" if walking else "move_forward"
 	Input.action_press(movement, 0.68 if transitions else (0.3 if walking else 1.0))
@@ -63,5 +79,6 @@ func _run() -> void:
 			var path := folder + "/frame-%02d.png" % frame
 			assert(detail.save_png(path) == OK, "Locomotion frame capture failed")
 	Input.action_release(movement)
+	print("LOCOMOTION_PLANT_BOUNDS correction_m=", player._foot_plant.maximum_correction, " boot_twist_deg=", rad_to_deg(player._foot_plant.maximum_boot_twist))
 	print("LOCOMOTION_CAPTURE_OK")
 	quit()

@@ -62,6 +62,7 @@
   - [x] Review 9d5cc4a Windows evidence: verified SHA-256/size, 154 dimensions and fourteen round sheets.
   - [x] Synchronize AnimationTree with physics; measure actual moving sole contact in four sequences at 30/60/120 Hz, retain an idle-clock baseline and add Windows regression. Native chronological turn captures reviewed.
   - [x] Repair phase transfer during pending Walk/Run blends and reduce their duration to 80 ms; old-controller negative control, 30/60/120 Hz comparisons, dense native poses and packaged keyboard round pass. Reversal drift decreases 16–24%; directional planting remains open.
+  - [x] Add bounded horizontal foot planting with 65 ms release; final skinned-pose comparison at 30/60/120 Hz, independent leg-length checks, four active-lock release cases and two native camera reviews pass.
   - [ ] Refine tight-turn contact and complete the exported movement playtest.
   - [x] Hide the empty lower navigation prompt on results screens; all five source career rounds and packaged macOS Level 5 at 1028×642 pass the visibility gate; result image reviewed.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.

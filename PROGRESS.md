@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Bounded turn-contact refinement — 2026-10-08
+
+Current phase: movement polish. Completed work: physics foot modifier with bounded
+65 mm horizontal correction, 65 degree boot twist and 65 ms release. Independent
+final skinned-pose measurements show lower corner/reversal support displacement
+at 30/60/120 Hz. All twelve steady cases, four active-lock release cases at each
+frequency, grounding, phase, footstep and focus-pause checks pass. Main-camera and
+unobscured side pose sheets reviewed. Current work: remaining character/action
+integration and release gates. Last verification: clean macOS export and packaged
+keyboard round, five tasks/700 points; exported modifier applied 359 corrections
+within pose bounds. Windows 752a489 native 37772709898 and visual 37772709870
+succeeded; updated Windows run follows push. Next task: finish upright action and
+full-cycle integration audit. Known issues: residual bounded turn displacement,
+human movement/audio acceptance, physical Windows/student laptop and instructor
+review remain open. Footstep replacement d7a28a1 remains the current quieter dry
+padded mix; human headphone/speaker listening remains open.
+
 ## Reversal transition repair — 2026-10-08
 
 Current phase: movement polish. Completed work: pending Walk/Run phase transfer

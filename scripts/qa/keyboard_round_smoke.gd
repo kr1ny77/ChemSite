@@ -126,6 +126,11 @@ static func run(main: Node) -> bool:
 	if not (site._round_done):
 		push_error("Keyboard round check failed at step %d" % 60)
 		return false
+	var plant = player._foot_plant
+	if plant == null or plant.corrected_ticks == 0 or plant.maximum_correction > .06501 or plant.maximum_length_error > .0001 or plant.maximum_height_error > .0001 or plant.maximum_boot_twist > deg_to_rad(65.01):
+		push_error("Packaged foot planting was absent or exceeded pose bounds")
+		return false
+	print("KEYBOARD_FOOT_PLANT_OK corrected_ticks=", plant.corrected_ticks)
 	if not (await _capture(main, "results", level)):
 		push_error("Keyboard round check failed at step %d" % 61)
 		return false
