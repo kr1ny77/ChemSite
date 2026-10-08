@@ -65,7 +65,7 @@ func _build() -> void:
 	_readout.text = "ШАГ 1 · ПЕРЕВЕДИ ОБЪЁМ В ЛИТРЫ"
 	_readout.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_readout.add_theme_font_size_override("font_size", 16)
-	_readout.add_theme_color_override("font_color", Color("627679"))
+	_readout.add_theme_color_override("font_color", Color("52666c"))
 	add_child(_readout)
 	_volume_buttons = HBoxContainer.new()
 	_volume_buttons.name = "VolumeButtons"
@@ -82,7 +82,7 @@ func _build() -> void:
 	var formula_label := Label.new()
 	formula_label.text = "ШАГ 2 · ВЫБЕРИ СООТНОШЕНИЕ"
 	formula_label.add_theme_font_size_override("font_size", 16)
-	formula_label.add_theme_color_override("font_color", Color("627679"))
+	formula_label.add_theme_color_override("font_color", Color("52666c"))
 	add_child(formula_label)
 	_formula_buttons = HBoxContainer.new()
 	_formula_buttons.name = "FormulaButtons"

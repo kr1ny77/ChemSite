@@ -103,6 +103,7 @@
 - [ ] Complete production HUD hierarchy, formula typography and accessibility; Career and topic-specific Practice modes, score, XP, combo, stars, audio settings, keyboard focus and a saved reduced-motion setting are in place, and all 200 verified task panels pass a 1028×642 layout gate in unread and expanded states
   - [x] Replace default dark answer fields with a shared light theme and visible keyboard focus; inspect empty/entered/locked oxidation, equation and numeric controls and verify all 200 layouts.
   - [x] Enlarge measured pH cards and add exact-value scale markers; verify four tasks across three window sizes and both motion settings, native capture and packaged pH round.
+  - [x] Repair HUD text contrast and four unstyled actions; fix pressed/hover text in six chemistry control families. Native 1028×642 matrix passes 7,089 label/button-state checks; five screenshots reviewed. Windows contrast regression added.
 - [x] Automatically pause exploration on desktop focus loss; freeze timer/movement, preserve open panels and require explicit resume. Verify native image and movement regressions.
 - [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
 - [x] Exercise all five default career rounds through raw keyboard events, collision-based walking, Tab/Space preparations, equation/numeric/formula input, pause, save/unlock and menu return; review native captures, run the macOS package and Windows EXE CI. Physical human playtesting remains a separate gate.

@@ -146,7 +146,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel.anchor_top = 0.16
 		_panel.anchor_bottom = 0.82
 	_panel.visible = true
-	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("cf7729"))
+	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("975013"))
 	_panel_content.add_child(eyebrow)
 	_panel_content.add_child(_label(task.prompt, 30, Color("243b43")))
 	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 19, Color("52666c")))
@@ -358,7 +358,7 @@ func _show_short_input() -> void:
 	_panel_content.add_child(submit)
 
 func _show_equation_input() -> void:
-	var guide := _label("Введи полное уравнение. Используй -> для стрелки и ^ для заряда иона.", 17, Color("627679"))
+	var guide := _label("Введи полное уравнение. Используй -> для стрелки и ^ для заряда иона.", 17, Color("52666c"))
 	_panel_content.add_child(guide)
 	var input := LineEdit.new()
 	input.placeholder_text = "Реагенты -> продукты"
@@ -378,7 +378,7 @@ func _show_numeric_input(task: Dictionary) -> void:
 	var answer: Dictionary = task.correctAnswer
 	var unit := str(answer.get("unit", ""))
 	var instruction := "Введи число" if unit.is_empty() else "Введи число · единица: " + unit
-	_panel_content.add_child(_label(instruction, 18, Color("627679")))
+	_panel_content.add_child(_label(instruction, 18, Color("52666c")))
 	var input := LineEdit.new()
 	input.placeholder_text = "Твой расчёт"
 	input.custom_minimum_size.y = 55
@@ -419,11 +419,14 @@ func show_wrong_station(task: Dictionary, station: Dictionary) -> void:
 	_panel.anchor_top = 0.27
 	_panel.anchor_bottom = 0.71
 	_panel.visible = true
-	_panel_content.add_child(_label("ДРУГАЯ СТАНЦИЯ", 28, Color("c66c47")))
+	_panel_content.add_child(_label("ДРУГАЯ СТАНЦИЯ", 28, Color("a34b2c")))
 	_panel_content.add_child(_label("Здесь: " + station.name, 21, Color("243b43")))
-	_panel_content.add_child(_label("Для текущего задания нужна станция: " + _station_name(task.station), 19, Color("627679")))
+	_panel_content.add_child(_label("Для текущего задания нужна станция: " + _station_name(task.station), 19, Color("52666c")))
 	var close := Button.new()
 	close.text = "ВЕРНУТЬСЯ НА ПЛОЩАДКУ"
+	close.custom_minimum_size.y = 55
+	_style_button(close, true)
+	close.add_theme_font_size_override("font_size", 23)
 	close.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(close)
 	close.grab_focus()
@@ -433,7 +436,7 @@ func show_site_note(note: Dictionary) -> void:
 	_panel.anchor_top = 0.35
 	_panel.anchor_bottom = 0.62
 	_panel.visible = true
-	_panel_content.add_child(_label("ОСМОТР  /  " + str(note.name), 25, Color("cf7729")))
+	_panel_content.add_child(_label("ОСМОТР  /  " + str(note.name), 25, Color("975013")))
 	_panel_content.add_child(_label(str(note.text), 21, Color("243b43")))
 	var close := Button.new()
 	close.text = "ВЕРНУТЬСЯ НА ПЛОЩАДКУ"
@@ -451,11 +454,11 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 	_panel.anchor_bottom = 0.70 if not correct and not str(task.get("example", "")).is_empty() else 0.62
 	_panel.visible = true
 	var title := "ВЕРНО  +%d" % awarded if correct else "РАЗБЕРИ ОШИБКУ"
-	_panel_content.add_child(_label(title, 29, Color("2c977b") if correct else Color("c66c47")))
+	_panel_content.add_child(_label(title, 29, Color("20705b") if correct else Color("a34b2c")))
 	if correct and streak >= 3:
-		_panel_content.add_child(_label("СЕРИЯ %d  ·  МНОЖИТЕЛЬ x%s" % [streak, "2" if streak >= 5 else "1.5"], 18, Color("2c977b")))
+		_panel_content.add_child(_label("СЕРИЯ %d  ·  МНОЖИТЕЛЬ x%s" % [streak, "2" if streak >= 5 else "1.5"], 18, Color("20705b")))
 	_panel_content.add_child(_label(task.explanation, 21, Color("243b43")))
-	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("627679")))
+	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("52666c")))
 	if not correct:
 		var answer: Variant = task.correctAnswer
 		var answer_text := str(answer)
@@ -466,10 +469,12 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 				answer_text += " " + unit
 		_panel_content.add_child(_label("ОТВЕТ: " + answer_text, 19, Color("243b43")))
 		if not str(task.get("example", "")).is_empty():
-			_panel_content.add_child(_label("ПРИМЕР: " + str(task.example), 18, Color("627679")))
+			_panel_content.add_child(_label("ПРИМЕР: " + str(task.example), 18, Color("52666c")))
 	var next := Button.new()
 	next.text = "СЛЕДУЮЩЕЕ ЗАДАНИЕ  →" if not correct else "ПРОДОЛЖИТЬ  →"
 	next.custom_minimum_size.y = 55
+	_style_button(next)
+	next.add_theme_font_size_override("font_size", 23)
 	next.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(next)
 	next.grab_focus()
@@ -485,16 +490,16 @@ func show_results(score: int, completed: int, time_left: float, target_count: in
 	_panel.anchor_top = 0.24
 	_panel.anchor_bottom = 0.71
 	_panel.visible = true
-	_panel_content.add_child(_label("ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА", 31, Color("cf7729")))
+	_panel_content.add_child(_label("ПРАКТИКА ЗАВЕРШЕНА" if mode == "practice" else "СМЕНА ЗАВЕРШЕНА", 31, Color("975013")))
 	_panel_content.add_child(_label("Выполнено задач: %d / %d" % [completed, target_count], 23, Color("243b43")))
 	_panel_content.add_child(_label("Очки: %d" % score, 23, Color("243b43")))
 	if mode == "career":
 		var stars := 3 if score >= 600 and completed == 5 else (2 if score >= 400 and completed == 5 else (1 if completed == 5 else 0))
-		_panel_content.add_child(_label("ЗВЁЗДЫ: %s" % ("★".repeat(stars) + "☆".repeat(3 - stars)), 25, Color("cf7729")))
+		_panel_content.add_child(_label("ЗВЁЗДЫ: %s" % ("★".repeat(stars) + "☆".repeat(3 - stars)), 25, Color("975013")))
 		_panel_content.add_child(_label("ОПЫТ: +%d" % (completed * 50), 20, Color("243b43")))
-		_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("627679")))
+		_panel_content.add_child(_label("Осталось времени: %02d:%02d" % [int(time_left) / 60, int(time_left) % 60], 18, Color("52666c")))
 	else:
-		_panel_content.add_child(_label("Тема пройдена без таймера", 20, Color("627679")))
+		_panel_content.add_child(_label("Тема пройдена без таймера", 20, Color("52666c")))
 	if not construction_reward.is_empty():
 		_panel_content.add_child(_label("СТРОЙКА · " + construction_reward, 20, Color("287565")))
 	var menu := Button.new()
@@ -516,10 +521,15 @@ func show_pause() -> void:
 	var resume := Button.new()
 	resume.text = "ПРОДОЛЖИТЬ"
 	resume.custom_minimum_size.y = 55
+	_style_button(resume)
+	resume.add_theme_font_size_override("font_size", 23)
 	resume.pressed.connect(func() -> void: resume_requested.emit())
 	_panel_content.add_child(resume)
 	var menu := Button.new()
 	menu.text = "ГЛАВНОЕ МЕНЮ"
+	menu.custom_minimum_size.y = 55
+	_style_button(menu, true)
+	menu.add_theme_font_size_override("font_size", 23)
 	menu.pressed.connect(func() -> void: exit_requested.emit())
 	_panel_content.add_child(menu)
 	resume.grab_focus()

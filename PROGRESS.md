@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## HUD contrast and action styling — 2026-10-08
+
+Current phase: UI accessibility polish. Completed work: darkened four HUD text
+roles; styled wrong-station return, feedback continuation and both pause actions;
+fixed active hover/pressed text in pH, ionization, dissociation, Hess, comparison
+and mission controls. Runtime contrast harness checks actual Labels and enabled
+Button states across the existing 200-task/400-feedback matrix. Initial palette
+and button-state baselines fail; final native 1028x642 run passes 7,089 checks and
+all layouts. Five screenshots reviewed. Current work: broader accessibility and
+release requirements. Last verification: clean macOS export and packaged keyboard
+round pass, five stations/700 points, bounded planting active. Added Windows
+contrast regression; updated runs follow push. Next task: audit menu/settings and
+remaining control families. Known issues: human readability/movement/audio,
+physical Windows/student laptop tests, instructor review and residual turn drift
+remain open. This bounded audit provides no complete accessibility conformance
+claim. Details: docs/UI_ACCESSIBILITY_QA.md.
+
 ## Answer-particle fade repair — 2026-10-08
 
 Current phase: station feedback polish. Completed work: repaired lifetime alpha
