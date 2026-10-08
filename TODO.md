@@ -65,8 +65,8 @@
   - [x] Add bounded horizontal foot planting with 65 ms release; final skinned-pose comparison at 30/60/120 Hz, independent leg-length checks, four active-lock release cases and two native camera reviews pass.
   - [ ] Refine tight-turn contact and complete the exported movement playtest.
   - [x] Hide the empty lower navigation prompt on results screens; all five source career rounds and packaged macOS Level 5 at 1028×642 pass the visibility gate; result image reviewed.
-  - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
-  - [x] Review complete Interact/PickUp/UseStation sequences in native Godot from front and side; 62 forced-render captures, distinct physics tick guards and Idle return checks pass. Full Walk/Run integration audit remains open.
+  - [x] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot; 48 native phase captures cover two cycles and twelve bins per gait/view, plus the six upright action/view sequences. Human movement acceptance remains open.
+  - [x] Review complete Interact/PickUp/UseStation sequences in native Godot from front and side; 62 forced-render captures, distinct physics tick guards and Idle return checks pass. Complete Walk/Run audit is covered by the preceding item.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.
   - [x] Relax arm carriage in idle/locomotion/station poses, key every bone explicitly to isolate actions, and base locomotion on collision-resolved velocity; nine sampled action poses, four blocked-movement directions and source/exported round pass.

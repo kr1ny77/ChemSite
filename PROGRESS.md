@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Complete gait integration review — 2026-10-08
+
+Current phase: character QA. Completed work: native complete-gait capture uses
+actual AnimationTree playback phase, input-driven movement and distinct physics
+ticks. Two wraps and all twelve phase bins pass for Walk/Run from front and
+three-quarter cameras (97/49/103/49 ticks). All 48 poses reviewed in two sheets;
+upright torso, alternating support/swing and arm counter-swing remain legible.
+Together with the six upright station-action/view sequences, the current GLB
+integration review checkpoint is complete. Current work: remaining station
+feedback, HUD/accessibility and release requirements. Last verification: four
+native full-cycle captures and clean editor import/parse pass. Next task: audit
+remaining production feedback and resolve music asset provenance. Known issues:
+human movement/audio acceptance, bounded reversal drift, physical Windows/laptop
+checks and instructor review remain open. Gameplay and character assets unchanged.
+
 ## Upright action review and Windows planting gate — 2026-10-08
 
 Current phase: character QA. Completed work: added native Interact/PickUp/

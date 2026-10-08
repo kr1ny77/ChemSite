@@ -123,3 +123,18 @@ Windows d6a658d native run 37779353465 and visual run 37779353513 succeeded.
 Native job 113318216853 confirms all five keyboard rounds and active correction
 bounds (387/364/384/372/347 corrections), plus the moving-sole gate. Current
 Windows screenshot archive review and physical Windows acceptance remain open.
+
+
+## Complete current-character gait integration — 2026-10-08
+
+`capture_complete_gaits.gd` drives input through the actual controller and reads
+AnimationTree playback phase at distinct physics ticks. Each gait/view must
+complete two wraps and capture at least ten of twelve phase bins; all four cases
+captured twelve. Walk/Run take 97/49 ticks in the three-quarter view and 103/49 in
+the frontal view, including warmup. The camera follows the character; tall props
+are hidden for silhouette inspection. All 48 PNG poses in
+`artifacts/complete-gait-frames-final/` were reviewed in even/odd phase sheets
+`artifacts/complete-gait-review-{0,1}.png`. Upright body carriage, support/swing,
+boots and arm counter-swing remain readable. This completes the native integration
+review together with the upright station-action pass. Human movement feel and
+exported manual acceptance remain separate open requirements.
