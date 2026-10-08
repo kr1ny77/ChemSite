@@ -179,6 +179,8 @@ func _setup_animation(model: Node) -> void:
 	visual.add_child(_animation_tree)
 	_animation_tree.anim_player = _animation_tree.get_path_to(player)
 	_animation_tree.tree_root = machine
+	# Keep sole poses and collision-resolved displacement on the same clock.
+	_animation_tree.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS
 	_animation_tree.active = true
 	_playback = _animation_tree.get("parameters/playback") as AnimationNodeStateMachinePlayback
 	_travel("Idle")

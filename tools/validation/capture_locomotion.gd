@@ -6,6 +6,8 @@ func _initialize() -> void:
 func _run() -> void:
 	var site := (load("res://scenes/levels/construction_site.tscn") as PackedScene).instantiate()
 	root.add_child(site)
+	# Automated capture owns focus; desktop focus-loss behavior has its own gate.
+	root.focus_exited.disconnect(site._pause_on_focus_loss)
 	site.get_node("CanvasLayer").visible = false
 	var camera := site.get_node("CameraRig/Camera3D") as Camera3D
 	camera.position = Vector3(4.0, 5.0, 7.0)
@@ -44,6 +46,7 @@ func _run() -> void:
 			elif frame == 90:
 				Input.action_release(movement)
 		await physics_frame
+		assert(player.controls_enabled, "Capture unexpectedly paused player controls")
 		if frame > 0 and frame % 8 == 0:
 			await process_frame
 			await RenderingServer.frame_post_draw

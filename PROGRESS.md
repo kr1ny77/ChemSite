@@ -1,5 +1,24 @@
 # ChemSite progress
 
+## Locomotion clock and contact diagnostic — 2026-10-08
+
+Current phase: character movement polish. Completed work: synchronized AnimationTree
+with physics, added actual skinned-sole measurement across straight travel, corners,
+reversals and Walk start/stop. Twelve scenarios at 30/60/120 Hz pass the steady
+1 mm/tick gate. Idle-clock baseline exposes roughly 14.6 mm steady Run displacement
+per sample at 60 Hz. Native turn contact sheet reviewed; automated capture now
+retains controls across focus changes. Windows native 37769896387 and visual
+37769896590 for 808b656 both succeeded. Native logs confirm strict clean import and
+all five exported construction rewards. Current work: reversal contact and remaining release quality gates.
+Last verification: clean editor import/export, packaged macOS five-task round,
+locomotion phase, footstep and heading gates pass. Windows archive 11547400825
+SHA-256/size and all 191 image dimensions verified; all five full-size career
+results inspected and earned construction captions fit. Next task: refine reversal contact and finish
+exported movement playtest. Known issues: reversal support drift reaches about
+113 mm/tick at 60 Hz; an empty lower prompt panel remains visible on result
+screens. Human movement/audio/hardware/course review remain open.
+
+
 ## Padded footstep refinement — 2026-10-08
 
 Current phase: production audio polish. Completed work: four original dry padded

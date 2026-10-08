@@ -60,7 +60,9 @@
   - [x] Add shaped knee reinforcements and outer trouser seams; refine bend topology, inspect neutral/Run/upright reach, verify native contact and macOS package.
   - [x] Review the cartoon Windows cc3922a graphical archive: verified digest, 154 dimensions, fourteen round sheets and full-size long panel; Compatibility render/audio limitations recorded.
   - [x] Review 9d5cc4a Windows evidence: verified SHA-256/size, 154 dimensions and fourteen round sheets.
+  - [x] Synchronize AnimationTree with physics; measure actual moving sole contact in four sequences at 30/60/120 Hz, retain an idle-clock baseline and add Windows regression. Native chronological turn captures reviewed.
   - [ ] Refine tight-turn contact and complete the exported movement playtest.
+  - [ ] Hide the empty lower navigation prompt on results screens; identified in all five 808b656 Windows result captures.
   - [ ] Integrate the new GLB and review complete Walk/Run cycles and upright station interactions in Godot.
   - [x] Build and inspect an MPFB human with a 53-bone rig, CC0 skin, workwear and a custom hardhat; remove the first vest prototype after the multiview fit review.
   - [x] Fit reflective waist/calf/shoulder tape, front fastening and pocket seam detail to the skinned coverall; fresh GLB inspection and neutral/Walk/UseStation/Celebrate multiviews plus live Godot locomotion pass.

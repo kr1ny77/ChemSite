@@ -47,6 +47,7 @@ jobs:
             @{ Script = 'locomotion_transition_smoke'; Marker = 'LOCOMOTION_TRANSITION_SMOKE_OK' }
             @{ Script = 'footstep_timing_smoke'; Marker = 'FOOTSTEP_TIMING_SMOKE_OK' }
             @{ Script = 'turn_response_smoke'; Marker = 'TURN_RESPONSE_SMOKE_OK' }
+            @{ Script = 'measure_locomotion_contact'; Marker = 'LOCOMOTION_CONTACT_DIAGNOSTIC_OK' }
             @{ Script = 'player_visibility_smoke'; Marker = 'PLAYER_VISIBILITY_SMOKE_OK' }
             @{ Script = 'sample_bench_smoke'; Marker = 'SAMPLE_BENCH_SMOKE_OK' }
             @{ Script = 'water_bay_smoke'; Marker = 'WATER_BAY_SMOKE_OK' }

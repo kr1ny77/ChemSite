@@ -115,3 +115,7 @@ previous PackedStringArray property to an empty array. Packaged round checks now
 validate six nonempty titles, initial/earned stages, visible reward text and the
 unchanged normal-user save hash. QA supplies its save path before scene tree
 entry and seeds consecutive prior levels through the existing save service.
+
+Player AnimationTree uses the physics callback to match controller displacement.
+`docs/LOCOMOTION_CONTACT_QA.md` records actual skinned-sole diagnostics and the
+remaining reversal-contact issue.
