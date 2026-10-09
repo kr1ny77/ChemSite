@@ -196,3 +196,31 @@ change no pose. Next step: correlate clamped solves with support/contact
 phase before choosing an authored directional gait or release treatment.
 Evidence: /tmp/chemsite-sole-centre-{30,60,120}.log and
 /tmp/chemsite-reach-diagnostic.log.
+
+## Gait-bound support anchor repair — 2026-10-09
+
+Per-sample support phase, correction length and reach loss showed that the
+largest 60 Hz reversal jump occurred at the 65 mm correction bound with
+zero reach loss. Earlier reach-clamp counts alone did not identify that
+peak's cause. A 90 mm candidate failed the 60 Hz corner gate and was
+reverted. The useful repair resets support ownership when AnimationTree
+changes Walk/Run, recapturing each foot in its new gait interval. Disabled
+controls/reactions/airborne/Idle still clear ownership. Bounds remain
+65 mm correction, 65° rotation and 65 ms release.
+
+| Frequency | Prior reversal peak | Repaired reversal peak |
+| --- | ---: | ---: |
+| 30 Hz | 130.31 mm | 66.38 mm |
+| 60 Hz | 61.84 mm | 40.35 mm |
+| 120 Hz | 21.68 mm | 21.68 mm |
+
+Corner and steady cases remain unchanged. Final length/height, twelve
+release cases, phase/pending-transition and contact audio gates pass.
+The 60 Hz reversal regression bound is tightened to 50 mm, rejecting the
+recorded former 61.84 mm case. Thirteen chronological isolated native
+side poses were reviewed; upright carriage and boot deformation remain
+readable. Clean export and five-task packaged macOS keyboard round pass.
+Human movement acceptance and residual turn displacement remain open.
+Evidence: docs/screenshots/gait-anchor-reset-review.jpg;
+/tmp/chemsite-gait-anchor-reset.log, /tmp/chemsite-anchor-reset-{30,120}.log,
+/tmp/chemsite-anchor-reset-{transitions,steps,package}.log.

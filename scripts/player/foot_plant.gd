@@ -14,11 +14,12 @@ var reach_clamped_ticks := 0
 var maximum_reach_loss := 0.0
 var player: CharacterBody3D
 var _feet: Array[Dictionary] = []
+var _support_state := ""
 
 func _ready() -> void:
 	var skeleton := get_skeleton()
 	for side in ["l", "r"]:
-		_feet.append({"hip": skeleton.find_bone("thigh_" + side), "knee": skeleton.find_bone("calf_" + side), "foot": skeleton.find_bone("foot_" + side), "shift": 0.0 if side == "l" else 0.5, "support": false, "anchor": Transform3D.IDENTITY, "offset": Vector3.ZERO, "release": RELEASE_SECONDS})
+		_feet.append({"hip": skeleton.find_bone("thigh_" + side), "knee": skeleton.find_bone("calf_" + side), "foot": skeleton.find_bone("foot_" + side), "shift": 0.0 if side == "l" else 0.5, "reach_loss": 0.0, "support": false, "anchor": Transform3D.IDENTITY, "offset": Vector3.ZERO, "release": RELEASE_SECONDS})
 
 func _process_modification_with_delta(delta: float) -> void:
 	if player == null or _feet.is_empty():
@@ -29,14 +30,20 @@ func _process_modification_with_delta(delta: float) -> void:
 	var state := str(player._playback.get_current_node())
 	enabled = enabled and str(player._playback.get_fading_from_node()) != "Idle" and state in ["Walk", "Run"] and Vector2(player.velocity.x, player.velocity.z).length() > 0.18
 	if not enabled:
+		_support_state = ""
 		for foot in _feet:
 			foot.support = false
 			foot.offset = Vector3.ZERO
 			foot.release = RELEASE_SECONDS
 		return
+	# Each gait owns its support interval; recapture anchors after a gait change.
+	if state != _support_state:
+		for foot in _feet: foot.support = false
+		_support_state = state
 	var phase := fposmod(player._playback.get_current_play_position() / float(player._clip_lengths[state]), 1.0)
 	var world := skeleton.global_transform
 	for foot in _feet:
+		foot.reach_loss = 0.0
 		var pose := skeleton.get_bone_global_pose(foot.foot)
 		var authored := world * pose
 		var support_phase := fposmod(phase - 0.25 + float(foot.shift), 1.0)
@@ -81,6 +88,7 @@ func _solve_leg(skeleton: Skeleton3D, foot: Dictionary, target: Transform3D) -> 
 	var requested_horizontal := horizontal
 	horizontal = horizontal.limit_length(sqrt(maxf(0.0, reach * reach - vertical * vertical)))
 	var reach_loss := requested_horizontal.distance_to(horizontal)
+	foot.reach_loss = reach_loss
 	if reach_loss > 0.0001: reach_clamped_ticks += 1
 	maximum_reach_loss = maxf(maximum_reach_loss, reach_loss)
 	target.origin.x = hip.origin.x + horizontal.x

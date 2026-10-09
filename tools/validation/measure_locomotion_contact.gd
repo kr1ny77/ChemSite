@@ -82,7 +82,7 @@ func _run() -> void:
 							previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 							continue
 						var drift := Vector2(point.x - last.point.x, point.z - last.point.z).length()
-						samples.append({"frame": frame, "time_s": float(frame) / physics_hz, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y})
+						samples.append({"frame": frame, "time_s": float(frame) / physics_hz, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y, "phase": phase, "support_phase": shifted, "reach_loss_m": plant._feet[1 if "-1" in sole.name else 0].reach_loss, "plant_offset_m": plant._feet[1 if "-1" in sole.name else 0].offset.length()})
 				previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 		Input.action_release(action)
 		var maximum := 0.0
@@ -119,7 +119,7 @@ func _run() -> void:
 			quit(1)
 			return
 		if plant != null and plant.active:
-			if physics_hz == 60 and ((scenario == "reverse_run" and turn_maximum >= 0.07) or (scenario == "corner_run" and turn_maximum >= 0.04)):
+			if physics_hz == 60 and ((scenario == "reverse_run" and turn_maximum >= 0.05) or (scenario == "corner_run" and turn_maximum >= 0.04)):
 				push_error("Planted turn contact exceeds its displacement gate")
 				quit(1)
 				return

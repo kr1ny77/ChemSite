@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Gait support anchor repair — 2026-10-09
+
+Current phase: movement polish. Completed work: correlated per-sample
+reach, correction and support phase; reset support anchors on Walk/Run
+changes. Last verification: reversal peak 130.31→66.38 mm at 30 Hz,
+61.84→40.35 mm at 60 Hz; 120 Hz remains 21.68 mm. Corners/steady travel
+unchanged; length/height/release bounds, phase transfer/contact audio and
+packaged macOS five-task keyboard round pass. Thirteen native side poses
+reviewed; 50 mm reversal regression gate replaces 70 mm. Current work:
+push repair for Windows. Next task: inspect b0b1a80 graphical artifact,
+whose download is still running; its workflow succeeded. Known issues:
+residual turn displacement and human/hardware/instructor acceptance remain
+open. Published prerelease remains unchanged.
+
+
 ## Sole anchor investigation and Windows native evidence — 2026-10-09
 
 Current phase: movement polish and cross-platform QA. Completed work:
