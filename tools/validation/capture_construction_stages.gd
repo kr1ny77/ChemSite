@@ -6,7 +6,13 @@ func _run() -> void:
  site.save_path="user://construction-capture-isolated.json"
  root.add_child(site)
  await process_frame
+ site.get_window().focus_exited.disconnect(site._pause_on_focus_loss)
  site.set_process(false)
+ site._player.set_physics_process(false)
+ site.get_node("CameraRig/PlayerVisibility").set_process(false)
+ for mesh in get_nodes_in_group("player_camera_occluder"):
+  if mesh is MeshInstance3D: mesh.transparency=0.0
+ site._wayfinder.show_station({},site._camera,false)
  site.get_node("CanvasLayer").visible=false
  var camera := site.get_node("CameraRig/Camera3D") as Camera3D
  var initial_position := camera.global_position
@@ -27,8 +33,11 @@ func _run() -> void:
     camera.look_at(target)
     camera.size=7.8
    await process_frame
-   RenderingServer.force_draw(false)
-   assert(root.get_texture().get_image().save_png(folder+"/stage-%d-%s.png" % [stage,"close" if close else "yard"])==OK)
+   RenderingServer.force_draw()
+   if root.get_texture().get_image().save_png(folder+"/stage-%d-%s.png" % [stage,"close" if close else "yard"]) != OK:
+    push_error("Construction capture write failed")
+    quit(1)
+    return
  site.queue_free()
  await process_frame
  print("CHEMSITE_CONSTRUCTION_CAPTURE_OK")

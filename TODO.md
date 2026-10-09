@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Review six construction stages in twelve native yard/close captures; isolate static capture from navigation, focus and camera-occlusion effects. Progression/persistence gate passes; evidence in docs/CONSTRUCTION_VISUAL_QA.md.
+
 - [x] Correct offscreen station guidance: rotate edge arrow toward target and reserve top/bottom HUD space; all 200 tasks, 2,000 camera/motion cases, native edge captures and packaged macOS keyboard round pass.
 
 - [x] Soften footsteps after user feedback: 65 ms padded contacts, three-stage 190–220 Hz low-pass and additional 6 dB attenuation; native audio/contact checks and macOS export pass. Listening acceptance remains open.

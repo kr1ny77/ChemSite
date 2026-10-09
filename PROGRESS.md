@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Construction composition review — 2026-10-09
+
+Current phase: post-prerelease visual QA. Completed work: reviewed twelve native
+1440×900 views of six earned building stages, including full-size final roof,
+walls and posts. Central lane, player and station pads remain distinct. Capture
+now freezes player/camera motion, hides navigation/HUD and resets/disables
+occlusion transparency; focus loss is isolated from static capture. Evidence:
+docs/CONSTRUCTION_VISUAL_QA.md and retained twelve-view contact sheet.
+Last verification: CHEMSITE_CONSTRUCTION_CAPTURE_OK and
+CHEMSITE_CONSTRUCTION_PROGRESS_OK, including contiguous unlocks, temporary
+parts, saved progress and practice preservation. Current work: Windows native
+37928896513 and visual 37928896645 for 105d4c3 are running. Next task: review
+current Windows results and contextual Level 2–5 composition. Known issues:
+human listening/movement/accessibility, physical Windows, representative
+laptop performance and instructor review remain open.
+
+
 ## Screen-edge station guidance — 2026-10-09
 
 Current phase: post-prerelease navigation polish. Completed work: offscreen

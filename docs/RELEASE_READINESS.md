@@ -9,11 +9,11 @@ acceptance work. The full production objective remains active.
 | --- | --- | --- |
 | Godot desktop game; one player | Native scenes, CharacterBody3D, Forward+; packaged rounds | Physical Windows desktop |
 | Cartoon construction character and upright interactions | Original Blender rig/GLB; complete gait/action captures, contact gates in LOCOMOTION_CONTACT_QA.md | Human acceleration, reversal and tight-turn feel; residual bounded drift |
-| Readable enclosed construction site, landmarks and navigation | Authored shell/fence/props, eight inspections, all-level station routes, target arrow/ground outline | Human scene composition/readability and contextual Level 2–5 playtest |
+| Readable enclosed construction site, landmarks and navigation | Authored shell/fence/props, eight inspections, all-level station routes, 2,000 target-pointer cases, six-stage native composition review (CONSTRUCTION_VISUAL_QA.md) | Human scene composition/readability and contextual Level 2–5 playtest |
 | Five career levels and chemistry mechanics | 200 verified curated tasks; five-level source/package/Windows rounds; focused station gates | Target-course instructor review and contextual human chemistry QA |
 | Adaptive learning and persistence | Version-five migration, level-scoped mastery, scheduling and isolated package saves | Physical Windows save/relaunch acceptance |
 | Practice | All 44 level/topic bindings; five timer-free package rounds; unchanged career file hashes | Human topic browsing |
-| HUD, menus and accessibility | 200 task/400 feedback layout matrix, 7,089 HUD and 170 menu contrast/state checks; keyboard rounds; reduced motion | Human readability; slider focus visibility; full accessibility acceptance |
+| HUD, menus and accessibility | 200 task/400 feedback layout matrix, 7,089 HUD and 172 menu contrast/state checks; keyboard rounds; reduced motion | Human readability and full accessibility acceptance |
 | Chemistry feedback and environment motion | Curated mixing/comparison/thermal views, finite/reduced-motion gates, mixer loop, repaired particle fade | Broader VFX coverage/readability audit |
 | Audio | Original music reproducibility, four soft sole contacts, contact timing, native playback/settings gates | Headphone/laptop-speaker mix acceptance, physical Windows audio |
 | Performance | M4 source profiles documented in PERFORMANCE_BASELINE.md | Approximately 60 FPS on representative student laptop |
