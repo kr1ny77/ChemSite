@@ -19,6 +19,7 @@ static func create() -> Theme:
 	result.set_stylebox("focus", "PrimaryMenuButton", _focus(Color("173744")))
 	for state in ["font_color", "font_hover_color", "font_pressed_color", "font_focus_color"]:
 		result.set_color(state, "PrimaryMenuButton", Color("173744"))
+	result.set_stylebox("focus", "HSlider", _focus(Color("f3a846")))
 	return result
 
 static func _box(color: Color) -> StyleBoxFlat:

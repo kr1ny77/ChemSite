@@ -77,3 +77,16 @@ The expanded 44-topic menu passes 170 native label/button-state contrast checks.
 Long topic labels wrap within a vertical-only scroll container. Focus follows
 keyboard selection, including the final Level 5 topic; first/last views reviewed
 at 1028×642. Settings volume/motion persistence and Escape focus restoration pass.
+
+## Post-release volume focus — 2026-10-09
+
+The v0.1.0 baseline changed only the tiny slider grabber on keyboard focus.
+Current source uses a reusable HSlider subclass to draw a cached theme-owned
+three-pixel gold outline. It redraws on focus/size/theme changes, with no animation
+or per-frame processing. Outline contrast against the actual settings panel is
+6.29:1. Reviewed baseline, focused music and focused effects at 1028×642.
+The existing menu gate now passes 172 checks, Tab movement between both sliders,
+keyboard Music/SFX persistence, motion toggle and Escape focus restoration.
+Clean import/parse, macOS release export and its five-task keyboard round pass.
+Screenshot: screenshots/settings-keyboard-focus.png. Human accessibility
+acceptance remains open; the published v0.1.0 archives retain their original bytes.

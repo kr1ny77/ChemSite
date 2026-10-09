@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Add explicit keyboard focus outlines to both audio sliders; review native before/after and focus transfer, verify 172 menu checks and separate Music/SFX persistence.
+
 - [x] Collect original distribution notices and hash manifest; create requirement/evidence readiness ledger and native archive packaging tool. macOS ZIP CRC, fourteen extracted file hashes, executable permissions and extracted five-level practice run pass; Windows artifact digest, x86_64 PE, ZIP CRC and ten extracted file hashes pass; ac41d28 native/visual CI both succeeded.
 
 - [x] Expose all 44 practice topics across five levels; verify selection bindings, timer-free completion, career save isolation and compact wrapped/focus-following menu in source and macOS package.

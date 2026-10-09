@@ -24,10 +24,21 @@ func _run() -> void:
 	if not _capture("settings"): return
 	var slider: HSlider = menu.find_children("*", "HSlider", true, false)[0]
 	slider.grab_focus()
+	await process_frame
+	if not _capture("settings-music-focus"): return
 	var before := slider.value
 	await _key(KEY_LEFT)
 	if slider.value >= before or float(SETTINGS.load_settings(SETTINGS_PATH).music_volume) >= before / 100.0:
 		return _fail("Keyboard volume adjustment was not saved")
+	var effects_slider: HSlider = menu.find_children("*", "HSlider", true, false)[1]
+	await _key(KEY_TAB)
+	if menu.get_viewport().gui_get_focus_owner() != effects_slider:
+		return _fail("Tab did not move from music to effects slider")
+	if not _capture("settings-effects-focus"): return
+	var effects_before := effects_slider.value
+	await _key(KEY_RIGHT)
+	if effects_slider.value <= effects_before or float(SETTINGS.load_settings(SETTINGS_PATH).sfx_volume) <= effects_before / 100.0:
+		return _fail("Keyboard effects adjustment was not saved")
 	for button in menu.find_children("*", "Button", true, false):
 		if button.text.begins_with("МЕНЬШЕ ДВИЖЕНИЯ"):
 			button.grab_focus()
@@ -95,6 +106,14 @@ func _check(menu: Control) -> bool:
 				_fail("Menu focus contrast failed: " + button.text)
 				return false
 
+	for slider in menu.find_children("*", "HSlider", true, false):
+		if not slider.is_visible_in_tree(): continue
+		var focus: StyleBox = slider.get_theme_stylebox("focus", "HSlider")
+		var background: Color = menu._settings_panel.get_theme_stylebox("panel").bg_color
+		if not focus is StyleBoxFlat or focus.border_width_left < 3 or _ratio(focus.border_color, background) < 3.0:
+			_fail("Volume slider focus outline is absent or has low contrast")
+			return false
+		checks += 1
 	return true
 
 func _capture(name: String) -> bool:

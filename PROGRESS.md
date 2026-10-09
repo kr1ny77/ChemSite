@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Audio slider keyboard focus — 2026-10-09
+
+Current phase: post-prerelease accessibility polish. Completed work: reusable
+HSlider draws a cached theme-owned three-pixel gold focus outline (6.29:1 against
+the settings panel). Baseline and both focused slider views reviewed at 1028×642.
+Native menu passes 172 checks, Tab music/effects transfer, independent volume
+persistence, motion toggle and Escape focus restoration. Last verification:
+clean import/parse and macOS release export pass; packaged keyboard round
+completes five stations with 700 points and bounded planting active. Current
+work: Windows regression after source push. Next task: contextual scene readability and remaining
+production QA. Known issues: human movement/audio/accessibility, physical Windows,
+representative student-laptop and instructor gates remain open. Published v0.1.0
+archives retain their verified bytes; this source fix follows that release.
+Details: docs/UI_ACCESSIBILITY_QA.md.
+
 ## Published native prerelease — 2026-10-09
 
 Current phase: post-prerelease production QA. Completed work: v0.1.0 published

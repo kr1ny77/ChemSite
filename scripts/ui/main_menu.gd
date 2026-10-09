@@ -270,7 +270,7 @@ func _add_volume_slider(parent: VBoxContainer, title: String, key: String, setti
 	label.add_theme_color_override("font_color", Color("e2ece6"))
 	label.add_theme_font_size_override("font_size", 20)
 	parent.add_child(label)
-	var slider := HSlider.new()
+	var slider := preload("res://scripts/ui/volume_slider.gd").new()
 	slider.min_value = 0
 	slider.max_value = 100
 	slider.step = 1
