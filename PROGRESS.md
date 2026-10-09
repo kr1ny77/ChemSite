@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Distribution packaging — 2026-10-09
+
+Current phase: prerelease preparation. Completed work: readiness ledger maps
+production requirements to evidence and remaining acceptance. Packaging tool
+checks native log markers, original notice hashes, archive CRC and output SHA-256;
+it includes install instructions, known issues, revision metadata and permissions.
+Current work: verify macOS archive and updated Windows CI at 78a8e04.
+Last verification: updated macOS practice and keyboard career round pass; source
+78a8e04 pushed. Next task: inspect extracted build, collect matching Windows
+artifact and prepare prerelease. Known issues: human/hardware/instructor gates
+listed in docs/RELEASE_READINESS.md remain open.
+
 ## Five-level practice and compact menu — 2026-10-09
 
 Current phase: release preparation. Completed work: practice menu exposes all

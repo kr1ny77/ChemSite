@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Collect original distribution notices and hash manifest; create requirement/evidence readiness ledger and native archive packaging tool. Archive verification remains in progress.
+
 - [x] Expose all 44 practice topics across five levels; verify selection bindings, timer-free completion, career save isolation and compact wrapped/focus-following menu in source and macOS package.
 
 - [x] Phase 0: inspect the repository, local skills and tools; preserve the browser runtime and all 200 curated tasks in `legacy-web/`; establish Godot as the root project
