@@ -153,26 +153,37 @@ func _ready() -> void:
 	practice_title.add_theme_font_size_override("font_size", 30)
 	practice_content.add_child(practice_title)
 	var topic_scroll := ScrollContainer.new()
+	topic_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	topic_scroll.follow_focus = true
 	topic_scroll.custom_minimum_size.y = 350
 	practice_content.add_child(topic_scroll)
 	var topic_list := VBoxContainer.new()
 	topic_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	topic_list.add_theme_constant_override("separation", 12)
 	topic_scroll.add_child(topic_list)
-	var topics: Array[String] = []
-	for task in TASK_BANK.load_verified_tasks(1):
-		var topic := str(task.topic)
-		if not topics.has(topic):
-			topics.append(topic)
 	var first_topic_button: Button
-	for topic in topics:
-		var topic_button := Button.new()
-		topic_button.text = topic.to_upper()
-		topic_button.custom_minimum_size.y = 58
-		topic_button.pressed.connect(_start_practice.bind(topic))
-		topic_list.add_child(topic_button)
-		if first_topic_button == null:
-			first_topic_button = topic_button
+	var level_titles := ["ОСНОВЫ", "РЕАКЦИИ", "РАСТВОРЫ", "ЭНЕРГИЯ И КОРРОЗИЯ", "СТРОИТЕЛЬНАЯ ХИМИЯ"]
+	for practice_level in range(1, 6):
+		var heading := Label.new()
+		heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		heading.text = "УРОВЕНЬ %d · %s" % [practice_level, level_titles[practice_level - 1]]
+		heading.add_theme_color_override("font_color", Color("f3a846"))
+		heading.add_theme_font_size_override("font_size", 18)
+		topic_list.add_child(heading)
+		var topics: Array[String] = []
+		for task in TASK_BANK.load_verified_tasks(practice_level):
+			var topic := str(task.topic)
+			if not topics.has(topic): topics.append(topic)
+		for topic in topics:
+			var topic_button := Button.new()
+			topic_button.text = topic.to_upper()
+			topic_button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			topic_button.custom_minimum_size.y = 58
+			topic_button.set_meta("practice_level", practice_level)
+			topic_button.set_meta("practice_topic", topic)
+			topic_button.pressed.connect(_start_practice.bind(topic, practice_level))
+			topic_list.add_child(topic_button)
+			if first_topic_button == null: first_topic_button = topic_button
 	var close_practice := Button.new()
 	close_practice.text = "НАЗАД  ←"
 	close_practice.custom_minimum_size.y = 54
@@ -243,8 +254,8 @@ func _close_practice() -> void:
 	_menu_content.visible = true
 	_practice_button.grab_focus()
 
-func _start_practice(topic: String) -> void:
-	start_requested.emit("practice", topic, 1)
+func _start_practice(topic: String, level: int = 1) -> void:
+	start_requested.emit("practice", topic, level)
 
 func _career_label(title: String, level: int, progress: Dictionary) -> String:
 	var record: Dictionary = progress.get("level_records", {}).get(str(level), {})

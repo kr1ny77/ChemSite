@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Expose all 44 practice topics across five levels; verify selection bindings, timer-free completion, career save isolation and compact wrapped/focus-following menu in source and macOS package.
+
 - [x] Phase 0: inspect the repository, local skills and tools; preserve the browser runtime and all 200 curated tasks in `legacy-web/`; establish Godot as the root project
 - [x] Phase 1: create the Godot 4.7 Forward+ project, main menu, native scenes and selected CC0 GLB imports
 - [x] Phase 2: implement CharacterBody3D movement, collision, camera follow and station proximity
@@ -39,6 +41,7 @@
 
 ## Current phase — Phase 3/7/8: vertical-slice quality pass
 
+- [x] Further soften walking sound: 100 ms contacts, 20 ms attack, 340–394 Hz filtering and −22 dB gain; PCM, timing and native playback checks pass.
 - [x] Refine padded footsteps: remove pitched body, use short dry sole texture and −18 dB gain; import, contact timing and native audio playback pass. Listening acceptance remains open.
 
 - [x] Soften walking audio after user feedback: rounded filtered boot contacts, four variations, lower gain; audio and animation-contact checks.

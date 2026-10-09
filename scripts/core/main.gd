@@ -20,6 +20,8 @@ func _ready() -> void:
 	show_menu()
 	if OS.get_cmdline_user_args().has("--qa-keyboard-round"):
 		call_deferred("_run_keyboard_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-practice-levels"):
+		call_deferred("_run_practice_levels_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-round"):
 		call_deferred("_run_export_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-site-inspections"):
@@ -287,4 +289,8 @@ func _run_export_visual_level_four_surface_smoke() -> void:
 
 func _run_export_level_four_thermal_smoke(capture_visual: bool = false) -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, capture_visual, 4, ["L4-133", "L4-143", "L4-144", "L4-129", "L4-130"])
+	get_tree().quit(0 if passed else 1)
+
+func _run_practice_levels_smoke() -> void:
+	var passed: bool = await preload("res://scripts/qa/practice_levels_smoke.gd").run(self)
 	get_tree().quit(0 if passed else 1)

@@ -1,0 +1,27 @@
+[
+  {
+    "file": "Godot-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/LICENSE.txt",
+    "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+  },
+  {
+    "file": "Godot-COPYRIGHT.txt",
+    "source": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/COPYRIGHT.txt",
+    "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+  },
+  {
+    "file": "Onest-OFL.txt",
+    "source": "assets/fonts/OFL.txt",
+    "sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc"
+  },
+  {
+    "file": "Kenney-Factory-CC0.txt",
+    "source": "assets-source/kenney/kenney_factory-kit_3.0/License.txt",
+    "sha256": "61e86565dd297e143ad631594980eda0a17fc81a4cd7c6d71acf2f5e0cad30b6"
+  },
+  {
+    "file": "Kenney-Building-CC0.txt",
+    "source": "assets-source/kenney/kenney_building-kit/License.txt",
+    "sha256": "60a07f9108f5a3fc5f9429fd1faa5b168c05cc085354f78ed48180ef32ec6209"
+  }
+]

@@ -41,6 +41,18 @@ func _run() -> void:
 	if not menu._practice_panel.visible: return _fail("Keyboard practice entry failed")
 	if not _check(menu): return
 	if not _capture("practice"): return
+	var last_topic: Button
+	for button in menu.find_children("*", "Button", true, false):
+		if button.has_meta("practice_level"): last_topic = button
+	last_topic.grab_focus()
+	await process_frame
+	await process_frame
+	var scroll := last_topic.get_parent().get_parent() as ScrollContainer
+	if scroll.scroll_horizontal != 0 or last_topic.get_global_rect().end.x > scroll.get_global_rect().end.x + 1.0:
+		return _fail("Long practice topic overflows horizontally")
+	if not scroll.get_global_rect().intersects(last_topic.get_global_rect()):
+		return _fail("Focused final practice topic is outside scroll viewport")
+	if not _capture("practice-level5"): return
 	await _key(KEY_ESCAPE)
 	if not menu._menu_content.visible or menu.get_viewport().gui_get_focus_owner() != menu._practice_button:
 		return _fail("Practice exit did not restore focus")

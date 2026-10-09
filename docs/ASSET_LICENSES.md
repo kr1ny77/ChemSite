@@ -14,6 +14,7 @@
 | Rebar and formwork bay | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_rebar_bay.py` | `assets/models/environment/rebar_bay.glb` | Blender 5.2.2 export |
 | Temporary construction fence | ChemSite project-authored Blender script | Original project asset | `tools/blender/build_site_fence.py` | `assets/models/environment/site_fence.glb` | Blender 5.2.2 export; visual dimensions informed by temporary panel reference linked in script |
 | Menu illustration | ChemSite project-authored SVG | Original project asset | `assets/ui/menu_illustration.svg` | `assets/ui/menu_illustration.svg` | Native Godot UI |
+| Onest font | The Onest Project Authors | SIL Open Font License 1.1 | `assets/fonts/OFL.txt` | `assets/fonts/Onest-Variable.ttf` | Bundled variable font |
 | Music track | ChemSite original deterministic composition and offline synthesis | Original project asset | `legacy-web/scripts/render-lofi.mjs` → `legacy-web/public/assets/audio/lofi-1.mp3` | `assets/audio/lofi-1.mp3` | Byte-identical native copy; isolated regeneration verified 2026-10-08 |
 | Interaction and answer cues | ChemSite project-authored synthesis | Original project assets | `tools/audio/render_cues.py` | `assets/audio/*.wav` | Generated WAV files |
 
@@ -43,3 +44,9 @@ and the production native copy: 1,317,243 bytes; SHA-256
 Evidence: `artifacts/music-provenance-proof.json`. The native track and current
 mix retain their existing bytes. This resolves the earlier unspecified music
 source entry; human mix listening remains an open audio acceptance requirement.
+
+## Distribution notices
+
+`docs/release/notices/` preserves Godot 4.7.2 MIT and bundled third-party
+notices, Onest OFL and both Kenney CC0 notices. `manifest.json` records exact
+source URLs/paths and SHA-256 values for packaging verification.

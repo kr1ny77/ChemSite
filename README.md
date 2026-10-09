@@ -1,65 +1,106 @@
 # ChemSite
 
-ChemSite is a single-player desktop chemistry game for first-year Construction and Civil Engineering students. The production runtime is a Godot 4.7 Forward+ project. The completed browser prototype, its 200 curated task seeds, tests, and assets are preserved in [`legacy-web/`](legacy-web/).
+A single-player 3D chemistry game for first-year Construction and Civil Engineering students. Explore a cartoon construction yard, follow the required-station marker and solve chemistry tasks at interactive workstations.
 
-## Current native build
+Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experiments are virtual. Gameplay and interface text are in Russian.
 
-The playable native slice has an original rigged character with nine actions, an elevated construction-site camera, three Blender-authored chemistry stations, ten verified Level 1 tasks, a timed five-task round, answer feedback, audio cues, and a versioned local save. A universal macOS release app builds and launches. The environment, UI, effects and gameplay polish are active work.
+## Playable features
+
+- **200 curated tasks**, 40 per level, with deterministic answer validation and explanations.
+- Five career levels: foundations; reactions; solutions; energy and corrosion; construction chemistry.
+- Topic practice across all five levels, with an untimed round of up to five tasks.
+- Formula assembly, equations, calculations, virtual measurement, observations and comparisons.
+- A detailed cartoon builder with nine skeletal actions, smooth heading and bounded foot planting.
+- An enclosed construction yard, eight optional inspections, station guidance and earned construction stages.
+- Local progression, topic learning, score, combo, stars and per-level records.
+- Keyboard navigation, separate music/effects volume, reduced motion and focus-loss pause.
 
 ## Screenshots
 
-![Native Godot construction site](docs/screenshots/vertical-slice-site.png)
+![Construction yard and required-station marker](docs/screenshots/vertical-slice-site.png)
 
-![Native macOS release menu](docs/screenshots/mac-release-menu.png)
+![Native main menu](docs/screenshots/mac-release-menu.png)
 
-![Correct-answer particle feedback](docs/screenshots/answer-feedback.png)
+![Native audio and motion settings](docs/screenshots/audio-settings.png)
 
-![Native audio settings](docs/screenshots/audio-settings.png)
+## Status
 
-## Run
+The native macOS app and Windows x86_64 EXE have automated gameplay and export checks. Current verification and unfinished checkpoints are recorded in [PROGRESS.md](PROGRESS.md) and [TODO.md](TODO.md).
 
-Install Godot 4.7.2, then open `project.godot` in the editor and press F5, or run:
+Human movement/audio/accessibility acceptance, a representative student-laptop performance test, physical Windows input/audio/save checks and target-course instructor review remain open. The macOS build is unsigned and unnotarized. A preliminary release should carry these limitations in its release notes.
 
-```bash
+## Run from source
+
+Install Godot 4.7.2, open `project.godot` and press F5, or run:
+
+```sh
 godot --path .
 ```
 
-Controls: WASD or arrow keys move, E interacts near a station, Esc opens or closes the pause/settings panel. Use the mouse or keyboard focus to select an answer. The formula board assembles formulas from tokens. The menu stores separate music and effects volume settings.
+For a complete checkout including Git LFS assets and reference submodules:
 
-## Desktop build
+```sh
+git clone --recurse-submodules https://github.com/kr1ny77/ChemSite.git
+cd ChemSite
+git lfs pull
+```
 
-Install the matching Godot 4.7.2 macOS export template and run:
+| Control | Action |
+| --- | --- |
+| WASD / arrows | Move |
+| E | Interact with a nearby station or inspection |
+| Tab / Shift+Tab | Move keyboard focus |
+| Space / Enter | Activate the focused control |
+| Escape | Pause, close settings or leave topic selection |
 
-```bash
+## Desktop export
+
+Install matching Godot export templates. Build outputs are ignored by Git.
+
+```sh
 godot --headless --path . --export-release macOS builds/macos/ChemSite.app
+godot --headless --path . --export-release "Windows Desktop" builds/windows/ChemSite.exe
 ```
 
-The generated universal app is under `builds/macos/`, which Git ignores. It is currently unsigned and intended for local testing. Windows x86_64 packaging follows the vertical-slice QA gate.
+Keep `ChemSite.exe` and `ChemSite.pck` together. Planned download archive names are `ChemSite-macOS.zip` and `ChemSite-Windows.zip`; publish them with checksums, third-party notices and known issues.
 
-## Validate
+[PLAYTEST.md](docs/PLAYTEST.md) describes an isolated exported test profile and the acceptance route. It preserves ordinary player progress and settings.
 
-```bash
+## Verification
+
+Core source checks:
+
+```sh
 godot --headless --path . --import
-godot --headless --path . --script res://tools/validation/smoke.gd
-godot --headless --path . --script res://tools/validation/gameplay_smoke.gd
-godot --headless --path . --script res://tools/validation/collision_smoke.gd
-godot --headless --path . --script res://tools/validation/round_smoke.gd
-godot --headless --path . --script res://tools/validation/save_smoke.gd
-godot --headless --path . --script res://tools/validation/settings_smoke.gd
-godot --headless --path . --script res://tools/validation/audio_smoke.gd
-python3 tools/validation/check_tasks.py
+godot --headless --path . --script tools/validation/gameplay_smoke.gd
+godot --headless --path . --script tools/validation/collision_smoke.gd
+godot --headless --path . --script tools/validation/save_smoke.gd
+godot --headless --path . --script tools/validation/practice_levels_smoke.gd
 ```
 
-`tools/validation/capture.gd` writes a graphical screenshot to `artifacts/godot-site.png` when run with a graphics-capable Godot instance.
+Run graphical UI checks with a working display:
 
-## Project organization
+```sh
+godot --path . --resolution 1028x642 --script tools/validation/hud_text_contrast_smoke.gd
+godot --path . --resolution 1028x642 --script tools/validation/menu_accessibility_smoke.gd
+```
 
-- `scenes/`, `scripts/`: native Godot game
-- `assets/`: selected runtime models, UI art and audio
-- `data/chemistry/`: structured native task data
-- `tools/blender/`: reproducible Blender character and station sources
-- `docs/`: design, curriculum, chemistry review, and asset provenance
-- `legacy-web/`: previous browser game and all 200 curated tasks
-- `TODO.md`, `PROGRESS.md`: current production checkpoint
+The Windows workflows in [`.github/workflows/`](.github/workflows/) export the EXE/PCK, exercise all five career rounds and focused station interactions, and run graphical layout/accessibility checks. Logs and artifacts provide build-specific evidence. See [UI accessibility QA](docs/UI_ACCESSIBILITY_QA.md), [movement QA](docs/LOCOMOTION_CONTACT_QA.md), [audio QA](docs/AUDIO_QA.md) and [chemistry review](docs/CHEMISTRY_REVIEW.md) for scope and remaining checks.
 
-The 200-task curriculum is preserved in the browser archive; the first ten verified tasks power the native slice. Career/Practice modes and later levels remain in production. All experiments are virtual. The game is single-player.
+## Project structure
+
+| Path | Contents |
+| --- | --- |
+| `scenes/`, `scripts/` | Native Godot game |
+| `data/chemistry/` | Curated structured tasks and inspection content |
+| `assets/` | Runtime models, fonts, UI and audio |
+| `tools/blender/` | Editable Blender sources and reproducible asset workflows |
+| `tools/validation/` | Source checks and visual capture tools |
+| `docs/` | Design, architecture, curriculum, QA and provenance |
+| `legacy-web/` | Preserved browser prototype and content history |
+
+## Assets and licenses
+
+Original project assets include the cartoon builder, authored stations/environment additions, UI illustration and deterministic synthesized audio. Selected construction props use Kenney CC0 assets. Onest is distributed under the SIL Open Font License; its license is included at [`assets/fonts/OFL.txt`](assets/fonts/OFL.txt).
+
+See [ASSET_LICENSES.md](docs/ASSET_LICENSES.md) for source paths, modifications and license files. The Godot runtime has its own license and third-party notices, which should accompany downloadable builds.

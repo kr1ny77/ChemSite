@@ -26,10 +26,10 @@ render('interact.wav',[(587.33,0,.4),(880,.065,.3)],.22)
 def render_step(name, seed, weight):
  rng=random.Random(seed)
  samples=[]
- duration=.12
+ duration=.10
  # Dry padded sole contact: filtered noise only, with a rounded pressure
  # envelope. Avoid a pitched oscillator that reads as a rubbery musical hit.
- alpha=1-math.exp(-2*math.pi*(460+weight*25)/RATE)
+ alpha=1-math.exp(-2*math.pi*(340+weight*18)/RATE)
  bass_alpha=1-math.exp(-2*math.pi*65/RATE)
  low_a=low_b=bass=0.0
  for i in range(int(RATE*duration)):
@@ -37,9 +37,9 @@ def render_step(name, seed, weight):
   low_a+=alpha*(rng.uniform(-1,1)-low_a)
   low_b+=alpha*(low_a-low_b)
   bass+=bass_alpha*(low_b-bass)
-  attack=math.sin(min(1,t/.012)*math.pi/2)**2
-  tail=min(1,(duration-t)/.035)**2
-  envelope=math.exp(-36*t)*attack*tail
+  attack=math.sin(min(1,t/.020)*math.pi/2)**2
+  tail=min(1,(duration-t)/.040)**2
+  envelope=math.exp(-40*t)*attack*tail
   value=(low_b-bass)*.8*envelope
   samples.append(struct.pack('<h',int(value*32767)))
  with wave.open(str(ROOT/name),'wb') as file:

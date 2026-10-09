@@ -1,5 +1,33 @@
 # ChemSite progress
 
+## Five-level practice and compact menu — 2026-10-09
+
+Current phase: release preparation. Completed work: practice menu exposes all
+44 verified level/topic pairs across five levels; selected practice level reaches
+the existing timer-free round. Horizontal overflow is repaired with wrapped
+labels/buttons; keyboard focus scrolls to the selected topic. Last verification:
+native menu passes 170 contrast/state checks, volume/motion persistence and Escape
+focus restoration; first and last practice views reviewed at 1028×642. Packaged
+macOS practice completes all five levels and preserves career saves. Previous
+commit bc8ab7b Windows native 37783855950 and visual 37783855934 both succeeded.
+Packaged keyboard career round also passes five stations/700 points.
+Distribution notices collected with source URLs and SHA-256 manifest.
+Current work: commit/push and verify updated Windows builds. Next task: prepare
+release archives, notices and readiness ledger. Known issues: human movement/audio/
+accessibility acceptance, physical Windows/student laptop and instructor review
+remain open. README/screenshots and Onest license attribution refreshed.
+
+## Quieter walking contacts — 2026-10-08
+
+Current phase: audio polish. Completed work: four 100 ms sole contacts with
+20 ms rounded attacks, 340–394 Hz filtering and −22 dB runtime gain.
+Last verification: zero PCM endpoints, clean import/parse, footstep timing
+and native Forward+ audio smoke pass. Refreshed macOS export passes.
+Current work: remaining production and release checkpoints.
+Next task: continue production checkpoints and release audit. Known issues:
+human headphone/speaker acceptance and other recorded hardware gates remain open.
+Preview: artifacts/quiet-footsteps-preview.wav.
+
 ## Menu theme and keyboard accessibility — 2026-10-08
 
 Current phase: UI accessibility polish. Completed work: coherent menu theme with

@@ -70,3 +70,10 @@ other requirements above.
 
 Clean macOS export and packaged keyboard career round pass with the new menu:
 five station approaches, five tasks/700 points and return to the menu.
+
+## Five-level practice menu — 2026-10-09
+
+The expanded 44-topic menu passes 170 native label/button-state contrast checks.
+Long topic labels wrap within a vertical-only scroll container. Focus follows
+keyboard selection, including the final Level 5 topic; first/last views reviewed
+at 1028×642. Settings volume/motion persistence and Escape focus restoration pass.

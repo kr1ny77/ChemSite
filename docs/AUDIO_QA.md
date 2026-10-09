@@ -1,5 +1,17 @@
 # ChemSite audio QA
 
+## Quiet sole refinement (2026-10-08)
+
+Follow-up walking-sound feedback: four contacts now last 100 ms, with
+340–394 Hz cascaded low-pass filtering, a 20 ms rounded attack and 40 ms
+tail fade. Runtime step gain is −22 dB (4 dB below the previous version).
+Source peaks: −28.10 to −24.54 dBFS; RMS: −41.72 to −39.45 dBFS.
+Both PCM endpoints are zero. Existing contact timing and SFX settings apply.
+Import/parse, contact timing, native Forward+ audio playback and refreshed
+macOS release export pass.
+Preview: `artifacts/quiet-footsteps-preview.wav`, sixteen contacts at default
+SFX volume and runtime gain. Human headphone/speaker acceptance remains open.
+
 ## Padded footstep refinement (2026-10-08)
 
 Replaced the remaining pitched body with a dry filtered-noise sole contact.
