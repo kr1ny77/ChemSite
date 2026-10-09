@@ -2,7 +2,7 @@
   "date": "2026-10-09",
   "task_count": 200,
   "comparison_count": 32,
-  "visualized_comparisons": 15,
+  "visualized_comparisons": 19,
   "visualized_mixing": 5,
   "covered": [
     {
@@ -41,11 +41,67 @@
       ]
     },
     {
+      "id": "L3-117",
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-spectator",
+        "hydrolysis-spectator"
+      ]
+    },
+    {
+      "id": "L3-118",
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-base",
+        "hydrolysis-spectator"
+      ]
+    },
+    {
+      "id": "L3-119",
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-spectator",
+        "hydrolysis-acid"
+      ]
+    },
+    {
+      "id": "L4-131",
+      "family": "comparison",
+      "kinds": [
+        "kinetic-coarse",
+        "kinetic-fine"
+      ]
+    },
+    {
+      "id": "L4-132",
+      "family": "comparison",
+      "kinds": [
+        "kinetic-coarse",
+        "kinetic-fine"
+      ]
+    },
+    {
       "id": "L4-133",
       "family": "comparison",
       "kinds": [
         "thermal-low",
         "thermal-high"
+      ]
+    },
+    {
+      "id": "L4-134",
+      "family": "comparison",
+      "kinds": [
+        "kinetic-dilute",
+        "kinetic-concentrated"
+      ]
+    },
+    {
+      "id": "L4-135",
+      "family": "comparison",
+      "kinds": [
+        "kinetic-barrier-high",
+        "kinetic-barrier-low"
       ]
     },
     {
@@ -135,65 +191,9 @@
         "dry-surface",
         "electrolyte-film"
       ]
-    },
-    {
-      "id": "L3-117",
-      "family": "comparison",
-      "kinds": [
-        "hydrolysis-spectator",
-        "hydrolysis-spectator"
-      ]
-    },
-    {
-      "id": "L3-118",
-      "family": "comparison",
-      "kinds": [
-        "hydrolysis-base",
-        "hydrolysis-spectator"
-      ]
-    },
-    {
-      "id": "L3-119",
-      "family": "comparison",
-      "kinds": [
-        "hydrolysis-spectator",
-        "hydrolysis-acid"
-      ]
     }
   ],
   "comparisons_without_diagrams": [
-    {
-      "id": "L4-131",
-      "interaction": "kinetics-experiment",
-      "settings": [
-        "Крупный кусок CaCO₃",
-        "Порошок CaCO₃"
-      ]
-    },
-    {
-      "id": "L4-132",
-      "interaction": "kinetics-experiment",
-      "settings": [
-        "Крупный кусок",
-        "Порошок той же массы"
-      ]
-    },
-    {
-      "id": "L4-134",
-      "interaction": "kinetics-experiment",
-      "settings": [
-        "Ниже концентрация",
-        "Выше концентрация"
-      ]
-    },
-    {
-      "id": "L4-135",
-      "interaction": "kinetics-experiment",
-      "settings": [
-        "Без катализатора",
-        "С катализатором"
-      ]
-    },
     {
       "id": "L4-136",
       "interaction": "equilibrium-control",
@@ -300,8 +300,8 @@
     }
   ],
   "source_sha256": {
-    "data/chemistry/curated_tasks.json": "264e9d18dc00b718e58424eb1a5c5c2b1bb72e9c6c949f01d7f39c35fbded990",
-    "scripts/ui/comparison_observation_view.gd": "8bf7435ad2d47a331bc1472fdc2048c0515a10237ac3e5adf084d3541277d22d",
+    "data/chemistry/curated_tasks.json": "a34fd90c36484edd6f4e1119ddb3eaeb24de370fa6841afeab41828d9c2abf72",
+    "scripts/ui/comparison_observation_view.gd": "96ffaad643699d28cd441c5db57b42d47560be693a7c1b35f4132141d54c0b80",
     "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5"
   },
   "scope": "Data/render-kind audit; native visual acceptance is separate."

@@ -12,12 +12,23 @@ func _run() -> void:
 	site.save_path = "user://capture-comparison-visual-progress.json"
 	root.add_child(site)
 	site._player.controls_enabled = false
+	var kinetics := OS.get_cmdline_user_args().has("--kinetics")
 	var thermal := OS.get_cmdline_user_args().has("--thermal")
-	var directory := "res://artifacts/hydrolysis-vfx" if hydrolysis else ("res://artifacts/thermal-vfx" if thermal else "res://artifacts/comparison-vfx")
+	var directory := "res://artifacts/comparison-vfx"
+	var identifiers := ["L4-147", "L4-155", "L4-157", "L4-158"]
+	if kinetics:
+		directory = "res://artifacts/kinetics-vfx"
+		identifiers = ["L4-131", "L4-132", "L4-134", "L4-135"]
+	elif hydrolysis:
+		directory = "res://artifacts/hydrolysis-vfx"
+		identifiers = ["L3-117", "L3-118", "L3-119"]
+	elif thermal:
+		directory = "res://artifacts/thermal-vfx"
+		identifiers = ["L4-133", "L4-143", "L4-144"]
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory))
 	var tasks: Array[Dictionary] = BANK.load_verified_tasks(site.level)
 	for static_motion in [false, true]:
-		for identifier in (["L3-117", "L3-118", "L3-119"] if hydrolysis else ["L4-133", "L4-143", "L4-144"] if thermal else ["L4-147", "L4-155", "L4-157", "L4-158"]):
+		for identifier in identifiers:
 			var task: Dictionary = tasks.filter(func(value): return value.id == identifier)[0]
 			site._tasks = [task]
 			site._task_index = 0

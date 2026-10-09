@@ -4198,6 +4198,16 @@
           "setting": "Порошок CaCO₃",
           "observation": "Большая площадь контакта; относительная скорость выше."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "kinetic-coarse",
+          "caption": "Крупный кусок CaCO₃"
+        },
+        {
+          "kind": "kinetic-fine",
+          "caption": "Порошок CaCO₃"
+        }
       ]
     },
     "correctAnswer": "порошок CaCO3",
@@ -4242,6 +4252,16 @@
         {
           "setting": "Порошок той же массы",
           "observation": "Граница контакта фаз больше; модельный ход реакции быстрее."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "kinetic-coarse",
+          "caption": "Крупный кусок"
+        },
+        {
+          "kind": "kinetic-fine",
+          "caption": "Порошок той же массы"
         }
       ]
     },
@@ -4336,6 +4356,16 @@
           "setting": "Выше концентрация",
           "observation": "В том же объёме столкновения реагирующих частиц чаще."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "kinetic-dilute",
+          "caption": "Ниже концентрация"
+        },
+        {
+          "kind": "kinetic-concentrated",
+          "caption": "Выше концентрация"
+        }
       ]
     },
     "correctAnswer": "увеличивает скорость",
@@ -4378,6 +4408,16 @@
         {
           "setting": "С катализатором",
           "observation": "Альтернативный путь имеет более низкий энергетический барьер."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "kinetic-barrier-high",
+          "caption": "Без катализатора"
+        },
+        {
+          "kind": "kinetic-barrier-low",
+          "caption": "С катализатором"
         }
       ]
     },

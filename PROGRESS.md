@@ -1,5 +1,26 @@
 # ChemSite progress
 
+## Kinetics comparison diagrams — 2026-10-09
+
+Current phase: post-prerelease chemistry visualization. Completed work:
+L4-131/132/134/135 display coarse/fine solid, equal-volume particle density
+and activation-barrier diagrams. Captions equal curated settings. Equal drawn
+solid area is an amount cue; dot speeds match; activation bars carry qualitative
+scale with no inferred enthalpy, rate law or numerical energy. Last verification:
+114 comparison cases, 24 native unread/partial/read views in two motion modes
+reviewed, full-size catalyst panel reviewed. Level 4 content and preservation
+of all 200 original answers/explanations/observations pass. Clean import/export
+and packaged five-task kinetics-focused round pass (131/133/134/135/138;
+132 covered by source/native visual gates). Current work: push diagrams for
+Windows regression. 6eded98 native and visual checks succeeded; 1c25590 native
+succeeded, visual remained running; f6c05bd native/visual remained running.
+Next task: 13 remaining comparison diagrams, starting equilibrium composition
+and catalyst/time observations. Known issues: broader VFX coverage, human
+audio/movement/accessibility, physical Windows, student-laptop performance and
+instructor acceptance remain open. Evidence: docs/OBSERVATION_VISUAL_COVERAGE.json
+(19/32 comparisons), docs/CHEMISTRY_REVIEW.md and retained kinetics screenshots.
+
+
 ## Hydrolysis observation diagrams — 2026-10-09
 
 Current phase: post-prerelease chemistry visualization. Completed work:

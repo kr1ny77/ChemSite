@@ -2,7 +2,7 @@ extends Control
 
 # Qualitative diagrams illustrate the curated observation. Motion duration and
 # geometry are presentation values; chemistry quantities/rates are never inferred.
-const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid"]
+const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid", "kinetic-coarse", "kinetic-fine", "kinetic-dilute", "kinetic-concentrated", "kinetic-barrier-high", "kinetic-barrier-low"]
 var kinds: Array[String] = []
 var _captions: Array[String] = []
 var _colors: Array[Color] = []
@@ -58,6 +58,8 @@ func _draw() -> void:
 		var progress := smoothstep(0.0, 1.0, _elapsed[index] / 1.2)
 		if kinds[index] in ["metal-oxidation", "metal-reduction"]:
 			_electrode(offset, kinds[index], progress, _captions[index], _colors[index])
+		elif kinds[index].begins_with("kinetic-"):
+			_kinetic(offset, kinds[index], progress, _captions[index])
 		elif kinds[index].begins_with("hydrolysis-"):
 			_hydrolysis(offset, kinds[index], progress, _captions[index])
 		elif kinds[index].begins_with("thermal-"):
@@ -170,3 +172,35 @@ func _hydrolysis(offset: Vector2, kind: String, progress: float, caption: String
 		_arrow(left + Vector2(43, 0), left + Vector2(74, 0), Color(ink, progress))
 		draw_arc(left + Vector2(91, 0), 6, 0, TAU, 20, Color(ink, progress), 2, true)
 		draw_circle(left + Vector2(118, 0), 5 * progress, tint)
+
+func _kinetic(offset: Vector2, kind: String, progress: float, caption: String) -> void:
+	# Qualitative geometry: no rate, concentration or energy value is calculated.
+	var ink := Color("3f6470")
+	draw_string(get_theme_default_font(), offset + Vector2(12, 21), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x * .5 - 24, 15, ink)
+	if kind in ["kinetic-coarse", "kinetic-fine"]:
+		var fine := kind == "kinetic-fine"
+		var side := 32.0 / 3.0 if fine else 32.0
+		var count := 3 if fine else 1
+		# Equal total area is a visual amount cue, not a 3D surface calculation.
+		for row in range(count):
+			for column in range(count):
+				var gap := 4.0 * progress if fine else 0.0
+				var origin := offset + Vector2(24 + column * (side + gap), 29 + row * (side + gap))
+				draw_rect(Rect2(origin, Vector2(side, side)), Color("d9e5df"))
+				draw_rect(Rect2(origin, Vector2(side, side)), Color("3b9b83"), false, 2)
+	elif kind in ["kinetic-dilute", "kinetic-concentrated"]:
+		var bounds := Rect2(offset + Vector2(24, 29), Vector2(160, 36))
+		draw_rect(bounds, Color("d4e7ed"))
+		draw_rect(bounds, ink, false, 1.5)
+		var count := 12 if kind == "kinetic-concentrated" else 4
+		for index in range(count):
+			var point := offset + Vector2(38 + (index % 6) * 26, 39 + floorf(float(index) / 6.0) * 15)
+			point.x += sin(progress * PI + float(index)) * 2.0
+			draw_circle(point, 3.2, ink)
+	else:
+		var height := 30.0 if kind == "kinetic-barrier-high" else 15.0
+		var base := offset + Vector2(30, 64)
+		draw_line(base - Vector2(8, 0), base + Vector2(125, 0), ink, 1.5)
+		draw_rect(Rect2(base - Vector2(0, height * progress), Vector2(76, height * progress)), Color("80becb"))
+		_arrow(base + Vector2(94, 0), base + Vector2(94, -height * progress), ink)
+		draw_string(get_theme_default_font(), base + Vector2(106, -9), "Eₐ", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, ink)

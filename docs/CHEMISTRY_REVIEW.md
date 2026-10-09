@@ -123,3 +123,20 @@ and weak-acid conjugate-base hydrolysis. Carbonate equation is the existing
 verified L3-118 example. Rendered dots/distances are qualitative with a scale
 disclaimer. Status: VERIFIED presentation consistency; target-course instructor
 acceptance remains open.
+
+## Kinetics presentation review — 2026-10-09
+
+L4-131/132/134/135 retain their verified questions, answers and readouts.
+Diagram captions exactly reproduce comparison settings. Coarse/fine geometry
+retains equal total drawn area as a qualitative amount cue; subdivided pieces
+show more exposed boundaries. Equal-sized concentration containers show more
+identical dots in the concentrated condition. Dot speed remains the same.
+Catalyst diagrams compare activation barriers from a shared baseline without
+assigning reaction enthalpy, numerical activation energy or a rate law.
+
+[OpenStax §12.2](https://openstax.org/books/chemistry-2e/pages/12-2-factors-affecting-reaction-rates)
+supports the surface/contact and concentration relationships.
+[OpenStax §12.7](https://openstax.org/books/chemistry-2e/pages/12-7-catalysis)
+supports an alternative pathway with a lower activation barrier. Original
+geometry retains the existing qualitative scale disclaimer. Status: VERIFIED
+presentation consistency; target-course instructor acceptance remains open.

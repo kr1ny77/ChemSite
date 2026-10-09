@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Add four kinetics comparison diagrams: coarse/fine contact, concentration and activation barrier. 114 comparison cases, 24 native capture states, Level 4 content, unchanged 200-task content and packaged focused round pass; observation audit now 19/32 comparisons.
+
 - [x] Add three hydrolysis comparison diagrams with curated formulas; 90 comparison cases, 18 native unread/partial/read captures, Level 3 content and packaged focused round pass. Observation audit now covers 15/32 comparisons; 17 remain for visual coverage review.
 
 - [x] Cover camera/effects/world/audio/font/rendering dependencies in Windows visual workflow triggers; YAML parses and ten dependency-family examples match, manual dispatch remains available. Audit all 200 tasks: 12/32 comparison tasks and all five mixing tasks have supported visual metadata; 20 comparison tasks require visual coverage review (docs/OBSERVATION_VISUAL_COVERAGE.json).
