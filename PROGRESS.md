@@ -1,5 +1,25 @@
 # ChemSite progress
 
+## Visual CI dependency coverage and observation audit — 2026-10-09
+
+Current phase: post-prerelease QA coverage. Completed work: Windows visual
+workflow now watches all native scripts, assets and data, plus project, audio
+bus and export configuration. Previous filters missed camera/effects/world and
+audio/font/rendering changes; 6eded98 visual run was dispatched manually.
+Last verification: YAML parsed with system parser; ten dependency examples
+match, manual dispatch preserved, documentation-only example excluded.
+Data audit covers 200 curated tasks: 32 comparisons, 12 comparison diagrams,
+five mixing diagrams; all existing kinds/colors and run counts match renderer
+support. Twenty comparisons have text-only observation coverage. Audit source
+hashes and task IDs: docs/OBSERVATION_VISUAL_COVERAGE.json. Current work:
+Windows 6eded98 native 37930056857 and visual 37930080414 are running;
+590e2ad native/visual were also running at last observation. Next task:
+review the 20 comparison gaps, starting with three hydrolysis tasks; retain
+verified chemistry and explicit reveal gates. Known issues: broader VFX,
+human movement/audio/accessibility, physical Windows, representative laptop
+and instructor acceptance remain open.
+
+
 ## Layered player occlusion refinement — 2026-10-09
 
 Current phase: post-prerelease visual polish. Completed work: identified

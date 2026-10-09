@@ -4,14 +4,14 @@ on:
   push:
     paths:
       - .github/workflows/windows-visual-qa.yml
-      - scripts/ui/**
-      - scripts/core/**
-      - scripts/qa/**
-      - scripts/player/**
+      - scripts/**
       - tools/validation/**
       - scenes/**
-      - assets/models/**
-      - data/chemistry/**
+      - assets/**
+      - data/**
+      - project.godot
+      - default_bus_layout.tres
+      - export_presets.cfg
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-09",
+  "task_count": 200,
+  "comparison_count": 32,
+  "visualized_comparisons": 12,
+  "visualized_mixing": 5,
+  "covered": [
+    {
+      "id": "L2-051",
+      "family": "mixing",
+      "kinds": [
+        "precipitate"
+      ]
+    },
+    {
+      "id": "L2-052",
+      "family": "mixing",
+      "kinds": [
+        "precipitate"
+      ]
+    },
+    {
+      "id": "L2-053",
+      "family": "mixing",
+      "kinds": [
+        "precipitate"
+      ]
+    },
+    {
+      "id": "L2-054",
+      "family": "mixing",
+      "kinds": [
+        "precipitate"
+      ]
+    },
+    {
+      "id": "L2-055",
+      "family": "mixing",
+      "kinds": [
+        "gas"
+      ]
+    },
+    {
+      "id": "L4-133",
+      "family": "comparison",
+      "kinds": [
+        "thermal-low",
+        "thermal-high"
+      ]
+    },
+    {
+      "id": "L4-143",
+      "family": "comparison",
+      "kinds": [
+        "thermal-reference",
+        "thermal-high"
+      ]
+    },
+    {
+      "id": "L4-144",
+      "family": "comparison",
+      "kinds": [
+        "thermal-reference",
+        "thermal-low"
+      ]
+    },
+    {
+      "id": "L4-147",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-148",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-149",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-150",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-151",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-152",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "metal-reduction"
+      ]
+    },
+    {
+      "id": "L4-155",
+      "family": "comparison",
+      "kinds": [
+        "intact-coating",
+        "damaged-coating"
+      ]
+    },
+    {
+      "id": "L4-157",
+      "family": "comparison",
+      "kinds": [
+        "bare-surface",
+        "passive-film"
+      ]
+    },
+    {
+      "id": "L4-158",
+      "family": "comparison",
+      "kinds": [
+        "dry-surface",
+        "electrolyte-film"
+      ]
+    }
+  ],
+  "comparisons_without_diagrams": [
+    {
+      "id": "L3-117",
+      "interaction": "hydrolysis",
+      "settings": [
+        "Анион Cl⁻",
+        "Катион Na⁺"
+      ]
+    },
+    {
+      "id": "L3-118",
+      "interaction": "hydrolysis",
+      "settings": [
+        "Анион CO₃²⁻",
+        "Катион Na⁺"
+      ]
+    },
+    {
+      "id": "L3-119",
+      "interaction": "hydrolysis",
+      "settings": [
+        "Анион Cl⁻",
+        "Катион NH₄⁺"
+      ]
+    },
+    {
+      "id": "L4-131",
+      "interaction": "kinetics-experiment",
+      "settings": [
+        "Крупный кусок CaCO₃",
+        "Порошок CaCO₃"
+      ]
+    },
+    {
+      "id": "L4-132",
+      "interaction": "kinetics-experiment",
+      "settings": [
+        "Крупный кусок",
+        "Порошок той же массы"
+      ]
+    },
+    {
+      "id": "L4-134",
+      "interaction": "kinetics-experiment",
+      "settings": [
+        "Ниже концентрация",
+        "Выше концентрация"
+      ]
+    },
+    {
+      "id": "L4-135",
+      "interaction": "kinetics-experiment",
+      "settings": [
+        "Без катализатора",
+        "С катализатором"
+      ]
+    },
+    {
+      "id": "L4-136",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Без катализатора",
+        "С катализатором"
+      ]
+    },
+    {
+      "id": "L4-137",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Без катализатора",
+        "С катализатором"
+      ]
+    },
+    {
+      "id": "L4-138",
+      "interaction": "kinetics-experiment",
+      "settings": [
+        "Крупный кусок CaCO₃",
+        "Измельчённый CaCO₃"
+      ]
+    },
+    {
+      "id": "L4-139",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Датчик прямой реакции",
+        "Датчик обратной реакции"
+      ]
+    },
+    {
+      "id": "L4-140",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Исходное равновесие",
+        "Добавлен реагент"
+      ]
+    },
+    {
+      "id": "L4-141",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Исходный объём, T постоянна",
+        "Сжатый объём, T постоянна"
+      ]
+    },
+    {
+      "id": "L4-142",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Исходный объём, T постоянна",
+        "Расширенный объём, T постоянна"
+      ]
+    },
+    {
+      "id": "L4-145",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "NH₃ остаётся в системе",
+        "NH₃ постоянно удаляется"
+      ]
+    },
+    {
+      "id": "L4-146",
+      "interaction": "equilibrium-control",
+      "settings": [
+        "Без катализатора",
+        "С катализатором"
+      ]
+    },
+    {
+      "id": "L4-153",
+      "interaction": "corrosion-inspection",
+      "settings": [
+        "Сухой участок балки",
+        "Влажный участок балки"
+      ]
+    },
+    {
+      "id": "L4-154",
+      "interaction": "corrosion-inspection",
+      "settings": [
+        "Анодный участок",
+        "Катодный участок"
+      ]
+    },
+    {
+      "id": "L4-156",
+      "interaction": "corrosion-inspection",
+      "settings": [
+        "Активный протектор",
+        "Защищаемая сталь"
+      ]
+    },
+    {
+      "id": "L4-159",
+      "interaction": "corrosion-inspection",
+      "settings": [
+        "Электрический контакт",
+        "Общая влажная среда"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "data/chemistry/curated_tasks.json": "9bee874ae2c1508fbacf854fd5e6d41924dee4cc1627bb3da7b5d5dfe5260337",
+    "scripts/ui/comparison_observation_view.gd": "ae621f56bd0f40ca781277c17ffdd1f589ef8229566dc3745441465dab278bb2",
+    "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5"
+  },
+  "scope": "Data/render-kind audit; native visual acceptance is separate."
+}
