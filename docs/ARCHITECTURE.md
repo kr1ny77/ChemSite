@@ -20,7 +20,7 @@ Player heading uses a critically damped angular response after collision resolut
 construction-shell, cabin, rebar and station meshes join `player_camera_occluder` during
 world assembly. Nine orthographic camera segments sample the player's torso and
 head width against each mesh's local bounds, retaining rotated/scaled mesh space.
-Intersecting parts ease to 82% transparency; clear parts restore full opacity.
+Intersecting parts ease to 94% transparency; clear parts restore full opacity.
 Reduced motion switches directly. Physics, station selection, chemistry and
 player materials retain their independent ownership.
 

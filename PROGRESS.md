@@ -1,5 +1,24 @@
 # ChemSite progress
 
+## Layered player occlusion refinement — 2026-10-09
+
+Current phase: post-prerelease visual polish. Completed work: identified
+cumulative density from several intersecting meshes at inspection. Lower-body
+probe found zero additional missed meshes; existing fade tuned from 82% to
+94% transparency. Native full-size before/after reviewed: helmet, face and
+vest retain less obstruction tint. Easing, restoration and reduced-motion
+policy retain existing behavior. Last verification: all 18 contexts recaptured,
+building/player-material and three-level station fade/restore gates pass;
+clean import/export and packaged keyboard round complete five tasks for 700
+points with bounded planting. Current work: push refinement for Windows
+regression; previous 590e2ad native 37929763453 and visual 37929763445 were
+running at last observation. Next task: broader chemistry VFX coverage and
+current Windows results. Known issues: adjacent rebar can still overlap the
+body; human movement/audio/accessibility, physical Windows Forward+, student
+laptop performance and instructor review remain open. Evidence:
+docs/STATION_CONTEXT_QA.md; retained density before/after screenshots.
+
+
 ## Five-level station context and occlusion — 2026-10-09
 
 Current phase: post-prerelease contextual visual QA. Completed work: all 18

@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Reduce cumulative obstruction tint at the inspection approach: 94% fade, native full-size before/after reviewed, 18 contexts recaptured, original/contextual restoration gates and packaged macOS round pass.
+
 - [x] Review 18 contextual station approaches across all five levels; repair inspection monitor/player occlusion with existing fade system. Negative control and three-level fade/restore gate pass; native capture, clean import/export and packaged keyboard round pass.
 
 - [x] Review six construction stages in twelve native yard/close captures; isolate static capture from navigation, focus and camera-occlusion effects. Progression/persistence gate passes; evidence in docs/CONSTRUCTION_VISUAL_QA.md.

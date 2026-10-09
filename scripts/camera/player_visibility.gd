@@ -2,7 +2,7 @@ extends Node
 
 @export var camera_path: NodePath = NodePath("../Camera3D")
 @export var player_path: NodePath = NodePath("../../Player")
-@export_range(0.0, 0.95) var obscured_transparency: float = 0.82
+@export_range(0.0, 0.95) var obscured_transparency: float = 0.94
 @export var response: float = 12.0
 var reduced_motion := false
 var _occluders: Array[MeshInstance3D] = []

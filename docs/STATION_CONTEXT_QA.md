@@ -43,3 +43,17 @@ acceptance remains open.
   completes five tasks for 700 points with bounded foot planting.
 - Physical Windows Forward+ acceptance remains open: hosted Compatibility
   rendering ignores geometry-instance transparency.
+
+## Layered occlusion refinement
+
+The native inspection approach revealed cumulative tint from several faded
+objects. A lower-body ray probe found zero additional missed objects; broadening
+the ray bundle would not address this case. Existing intersecting parts now fade
+to 94% transparency (6% residual opacity), retaining the same 12 s⁻¹ response,
+clear-object restoration and reduced-motion behavior. Native full-size before/
+after density captures were inspected and retained as
+`inspection-density-before.png` / `inspection-density-after.png`.
+The helmet, face and orange vest have less obstruction tint in the candidate.
+All 18 contexts were recaptured; the existing three-level station fade/restore
+and original building/player-material checks pass. Whole-body visibility around
+unfaded adjacent rebar still needs human acceptance.
