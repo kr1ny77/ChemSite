@@ -51,6 +51,12 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 	if site._tasks.size() < 5:
 		push_error("Export smoke: task data did not load")
 		return false
+	if capture_visual:
+		var expected_observations := 0
+		for index in range(5):
+			if site._tasks[index].get("parameters", {}).has("comparisonVisuals"):
+				expected_observations += 1
+		print("EXPORT_VISUAL_EXPECTED_OBSERVATIONS count=", expected_observations)
 	var hud: Control = site.get_node("CanvasLayer/GameHud")
 	var player: CharacterBody3D = site.get_node("Player")
 	var interact := InputEventAction.new()

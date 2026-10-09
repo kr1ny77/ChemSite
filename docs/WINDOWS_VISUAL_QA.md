@@ -94,3 +94,20 @@ checks report 7,089 HUD and 170 menu checks. No new blocking layout finding.
 Hosted Compatibility rendering remains brighter than native macOS Forward+;
 physical Windows Forward+ and human audio/input/save acceptance remain open.
 Archive and extracted-file checks recorded in artifacts/release-package-proof.json.
+
+## Content-derived observation counts — 2026-10-09
+
+Run 37930879312 (f6c05bd), job 113820991766, stopped because Level 3
+produced one newly added hydrolysis observation capture while the workflow
+still expected zero. Native/export scripts reported no engine failure at this
+step. The fixed workflow reads exactly one declared count from the graphical
+round's stdout. The round derives that declaration from the actual five
+selected tasks' comparisonVisuals metadata before capturing. Missing/duplicate
+count declarations fail; missing/excess observation files still fail; eleven
+base task/feedback/result files and final aggregate count remain checked.
+
+Native Forward+ source rounds verify declaration/files: normal Level 3 1/1,
+hydrolysis 3/3 and kinetics 4/4. The kinetics round has fifteen total PNGs.
+The YAML parses. Superseded 908301d visual run 37931301985 was cancelled after
+the deterministic inherited count mismatch was identified; a new source push
+runs the corrected check. Published v0.1.0 evidence counts remain historical.

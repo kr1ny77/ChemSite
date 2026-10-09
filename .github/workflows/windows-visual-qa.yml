@@ -108,7 +108,9 @@ jobs:
             $baseScreens = @($screens | Where-Object { $_.Name -match '^(task|feedback)_\d{2}\.png$|^results\.png$' })
             if ($baseScreens.Count -ne 11) { throw "$($round.Name) expected 11 task/feedback/result screens, found $($screens.Count)" }
             $observations = @($screens | Where-Object { $_.Name -like 'observation_*.png' })
-            $expectedObservations = switch ($round.Name) { 'level4' { 1 }; 'level4-electrode' { 5 }; 'level4-corrosion' { 1 }; 'level4-surface' { 3 }; 'level4-kinetics' { 1 }; 'level4-equilibrium' { 1 }; 'level4-thermal' { 3 }; default { 0 } }
+            $declarations = @(Select-String -Path "artifacts/windows-visual/logs/$($round.Name).stdout.log" -Pattern '^EXPORT_VISUAL_EXPECTED_OBSERVATIONS count=([0-5])$')
+            if ($declarations.Count -ne 1) { throw "$($round.Name) expected one content-derived observation count" }
+            $expectedObservations = [int]$declarations[0].Matches[0].Groups[1].Value
             $expectedTotal += 11 + $expectedObservations
             if ($observations.Count -ne $expectedObservations) { throw "$($round.Name) observation captures missing ($($observations.Count) / $expectedObservations)" }
             foreach ($screen in $screens) {

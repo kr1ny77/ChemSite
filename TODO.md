@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Repair Windows visual observation counts after new diagrams: derive expectation from actual five selected tasks, retain strict declaration/file/aggregate checks; native Level 3, hydrolysis and kinetics declarations match 1/3/4 captured observations.
+
 - [x] Add four kinetics comparison diagrams: coarse/fine contact, concentration and activation barrier. 114 comparison cases, 24 native capture states, Level 4 content, unchanged 200-task content and packaged focused round pass; observation audit now 19/32 comparisons.
 
 - [x] Add three hydrolysis comparison diagrams with curated formulas; 90 comparison cases, 18 native unread/partial/read captures, Level 3 content and packaged focused round pass. Observation audit now covers 15/32 comparisons; 17 remain for visual coverage review.

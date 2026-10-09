@@ -1,5 +1,21 @@
 # ChemSite progress
 
+## Windows visual observation count repair — 2026-10-09
+
+Current phase: post-prerelease cross-platform QA. Completed work: investigated
+f6c05bd visual run 37930879312 failure; job 113820991766 found Level 3
+observation count 1 versus stale expected 0. Round now declares expected
+count from the actual first five task metadata records. Workflow requires one
+valid declaration and checks observation/base/aggregate file counts. Last
+verification: native graphical Level 3 1/1, hydrolysis 3/3 and kinetics 4/4
+counts match; kinetics total fifteen PNGs. YAML parses. Superseded 908301d
+visual 37931301985 cancelled; native build retained. Current work: push corrected
+QA for Windows. Next task: current Windows results and thirteen remaining
+comparison diagrams. Known issues: broader VFX/human/hardware/instructor gates
+remain open; correction has native evidence, Windows result pending. Details:
+docs/WINDOWS_VISUAL_QA.md.
+
+
 ## Kinetics comparison diagrams — 2026-10-09
 
 Current phase: post-prerelease chemistry visualization. Completed work:
