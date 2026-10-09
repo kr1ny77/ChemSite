@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Correct offscreen station guidance: rotate edge arrow toward target and reserve top/bottom HUD space; all 200 tasks, 2,000 camera/motion cases, native edge captures and packaged macOS keyboard round pass.
+
 - [x] Soften footsteps after user feedback: 65 ms padded contacts, three-stage 190–220 Hz low-pass and additional 6 dB attenuation; native audio/contact checks and macOS export pass. Listening acceptance remains open.
 
 - [x] Add explicit keyboard focus outlines to both audio sliders; review native before/after and focus transfer, verify 172 menu checks and separate Music/SFX persistence.

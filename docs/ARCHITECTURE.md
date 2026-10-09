@@ -43,6 +43,11 @@ state. One unshaded ground outline and a projected native Control arrow mark the
 target. Its CanvasLayer stays behind the modal HUD; the arrow ignores mouse input.
 Panels/pause/results hide both visuals. Reduced motion retains a static arrow.
 The target refreshes when the task advances and covers all five career levels.
+Targets outside the usable world viewport use a rotated screen-edge arrow whose
+heading follows the projected station position. Visible targets retain the
+downward marker. The edge inset reserves space for the top HUD and bottom
+interaction prompt, including rotated corners. Reduced motion keeps edge
+indicators static. The wayfinder gate covers 2,000 camera/target/motion cases.
 
 ### pH measurement feedback
 

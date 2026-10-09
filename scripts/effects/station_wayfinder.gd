@@ -8,6 +8,7 @@ var _arrow: Control
 var _ring: MeshInstance3D
 var _time := 0.0
 var _enabled := false
+var offscreen_target := false
 
 func _ready() -> void:
 	_ring = MeshInstance3D.new()
@@ -60,5 +61,19 @@ func _position_arrow() -> void:
 	_arrow.show()
 	var point := _camera.unproject_position(anchor)
 	var viewport_size := get_viewport().get_visible_rect().size
+	var floor_point := _camera.unproject_position(global_position)
+	var world_area := Rect2(Vector2(8, 112), viewport_size - Vector2(16, 292))
+	offscreen_target = not world_area.has_point(floor_point)
+	if offscreen_target:
+		# Keep every rotated corner inside the viewport and below the HUD.
+		var safe_area := Rect2(Vector2(48, 152), viewport_size - Vector2(96, 352))
+		var center := safe_area.get_center()
+		var direction := floor_point - center
+		var half_size := safe_area.size * 0.5
+		var edge_scale := maxf(absf(direction.x) / half_size.x, absf(direction.y) / half_size.y)
+		_arrow.position = center + direction / maxf(edge_scale, 1.0) - _arrow.size * 0.5
+		_arrow.rotation = direction.angle() - PI * 0.5
+		return
+	_arrow.rotation = 0.0
 	var hover := 0.0 if reduced_motion else sin(_time * 2.6) * 4.0
 	_arrow.position = Vector2(clampf(point.x - 28.0, 8.0, viewport_size.x - 64.0), clampf(point.y - 52.0 + hover, 112.0, viewport_size.y - 60.0))

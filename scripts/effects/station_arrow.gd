@@ -4,6 +4,7 @@ func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	custom_minimum_size = Vector2(56, 52)
 	size = custom_minimum_size
+	pivot_offset = size * 0.5
 
 func _draw() -> void:
 	var outline := PackedVector2Array([Vector2(16, 2), Vector2(40, 2), Vector2(40, 23), Vector2(53, 23), Vector2(28, 49), Vector2(3, 23), Vector2(16, 23)])

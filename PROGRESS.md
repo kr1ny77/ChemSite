@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Screen-edge station guidance — 2026-10-09
+
+Current phase: post-prerelease navigation polish. Completed work: offscreen
+station pointers rotate toward the projected target; visible targets retain
+the downward arrow. Rotated corners reserve space below the top HUD and above
+the interaction prompt. Last verification: all 200 curated tasks and 2,000
+camera/motion cases pass (440 offscreen); modal suppression and static reduced
+motion pass. Native Forward+ baseline/candidate right/top/bottom/visible views
+reviewed; bottom prompt overlap found and repaired. Import/export pass and
+packaged macOS keyboard round completes five tasks, 700 points, bounded planting.
+Windows c37c608 native 37927654071 and visual 37927653811 succeeded.
+Current work: push current audio/navigation changes for Windows regression.
+Next task: remaining contextual scene and visual QA. Known issues: human
+listening/movement/accessibility, physical Windows, representative laptop and
+instructor review gates remain open. Published archives retain verified bytes.
+
+
 ## Softer footsteps — 2026-10-09
 
 Current phase: post-prerelease audio polish. Completed work: four deterministic
