@@ -106,3 +106,20 @@ and [§13.3](https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilib
 The drawing identifies a closed schematic system and carries no numeric reading,
 physical phase, boiling, gas production or measured kinetic/equilibrium result.
 Existing answers and readouts remain unchanged. Target-course review stays open.
+
+## Hydrolysis presentation review — 2026-10-09
+
+L3-117/118/119 retain their verified prompts, answer variants, explanations and
+observation readouts. New schematic metadata identifies spectator, basic-anion
+and acidic-cation hydrolysis. Carbonate and ammonium captions reproduce the
+existing curated example equations exactly, retaining equilibrium arrows.
+Carbonate equation conserves C/H/O and charge −2 on each side; ammonium equation
+conserves N/H/O and charge +1 on each side. Spectator captions state negligible
+hydrolysis in the existing basic instructional model. No pH or extent is inferred.
+
+[OpenStax, Hydrolysis of Salts](https://openstax.org/books/chemistry-atoms-first-2e/pages/14-4-hydrolysis-of-salts)
+supports negligible chloride/sodium hydrolysis, ammonium formation of hydronium,
+and weak-acid conjugate-base hydrolysis. Carbonate equation is the existing
+verified L3-118 example. Rendered dots/distances are qualitative with a scale
+disclaimer. Status: VERIFIED presentation consistency; target-course instructor
+acceptance remains open.

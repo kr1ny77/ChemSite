@@ -7,16 +7,17 @@ func _initialize() -> void:
 
 func _run() -> void:
 	var site := (load("res://scenes/levels/construction_site.tscn") as PackedScene).instantiate()
-	site.level = 4
+	var hydrolysis := OS.get_cmdline_user_args().has("--hydrolysis")
+	site.level = 3 if hydrolysis else 4
 	site.save_path = "user://capture-comparison-visual-progress.json"
 	root.add_child(site)
 	site._player.controls_enabled = false
 	var thermal := OS.get_cmdline_user_args().has("--thermal")
-	var directory := "res://artifacts/thermal-vfx" if thermal else "res://artifacts/comparison-vfx"
+	var directory := "res://artifacts/hydrolysis-vfx" if hydrolysis else ("res://artifacts/thermal-vfx" if thermal else "res://artifacts/comparison-vfx")
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory))
-	var tasks: Array[Dictionary] = BANK.load_verified_tasks(4)
+	var tasks: Array[Dictionary] = BANK.load_verified_tasks(site.level)
 	for static_motion in [false, true]:
-		for identifier in (["L4-133", "L4-143", "L4-144"] if thermal else ["L4-147", "L4-155", "L4-157", "L4-158"]):
+		for identifier in (["L3-117", "L3-118", "L3-119"] if hydrolysis else ["L4-133", "L4-143", "L4-144"] if thermal else ["L4-147", "L4-155", "L4-157", "L4-158"]):
 			var task: Dictionary = tasks.filter(func(value): return value.id == identifier)[0]
 			site._tasks = [task]
 			site._task_index = 0
@@ -38,7 +39,7 @@ func _run() -> void:
 
 func _capture(path: String) -> bool:
 	for frame in range(5): await process_frame
-	RenderingServer.force_draw(false)
+	RenderingServer.force_draw()
 	if root.get_texture().get_image().save_png(path) != OK:
 		quit(1)
 		return false

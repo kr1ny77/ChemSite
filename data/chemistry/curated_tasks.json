@@ -3248,7 +3248,7 @@
     "interactionType": "numeric-calculation",
     "prompt": "В учебном приближении pH = 5. Найди [H⁺] в mol/L.",
     "correctAnswer": {
-      "value": 0.00001,
+      "value": 1e-05,
       "relativeTolerance": 0.01,
       "unit": "mol/L"
     },
@@ -3676,6 +3676,16 @@
           "setting": "Катион Na⁺",
           "observation": "Na⁺ происходит от сильного основания NaOH; в учебной модели значимый гидролиз отсутствует."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "hydrolysis-spectator",
+          "caption": "Cl⁻ в воде\nГидролиз пренебрежимо мал"
+        },
+        {
+          "kind": "hydrolysis-spectator",
+          "caption": "Na⁺ в воде\nГидролиз пренебрежимо мал"
+        }
       ]
     },
     "id": "L3-117",
@@ -3720,6 +3730,16 @@
           "setting": "Катион Na⁺",
           "observation": "Na⁺ происходит от сильного основания NaOH; значимого гидролиза катиона нет."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "hydrolysis-base",
+          "caption": "CO₃²⁻ + H₂O ⇌\nHCO₃⁻ + OH⁻"
+        },
+        {
+          "kind": "hydrolysis-spectator",
+          "caption": "Na⁺ в воде\nГидролиз пренебрежимо мал"
+        }
       ]
     },
     "id": "L3-118",
@@ -3760,6 +3780,16 @@
         {
           "setting": "Катион NH₄⁺",
           "observation": "NH₄⁺ — сопряжённая кислота слабого основания NH₃; с водой образует H₃O⁺."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "hydrolysis-spectator",
+          "caption": "Cl⁻ в воде\nГидролиз пренебрежимо мал"
+        },
+        {
+          "kind": "hydrolysis-acid",
+          "caption": "NH₄⁺ + H₂O ⇌\nNH₃ + H₃O⁺"
         }
       ]
     },

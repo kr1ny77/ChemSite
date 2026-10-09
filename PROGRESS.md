@@ -1,5 +1,26 @@
 # ChemSite progress
 
+## Hydrolysis observation diagrams — 2026-10-09
+
+Current phase: post-prerelease chemistry visualization. Completed work:
+L3-117/118/119 now have curated spectator/basic-anion/acidic-cation schematics.
+Formulas remain in content metadata; carbonate/ammonium captions exactly match
+verified examples. Reveals follow each existing inspection; animation settles
+in 1.2 seconds and reduced motion is static. Last verification: 90 comparison
+cases across three windows/two motion modes, 18 native unread/partial/read
+views reviewed, full-size carbonate panel reviewed, Level 3 content gate and
+200-task answer/explanation/observation preservation pass. Clean import/export
+and packaged five-task hydrolysis round pass, including all three tasks.
+Chemistry source and conservation notes: docs/CHEMISTRY_REVIEW.md. Current
+work: push current diagrams for Windows regression. Next task: remaining
+17 comparison diagrams, beginning kinetics surface/concentration/catalyst
+observations. Known issues: broader VFX coverage, human audio/movement/UI,
+physical Windows, representative laptop and instructor acceptance remain open.
+Audit: docs/OBSERVATION_VISUAL_COVERAGE.json (15/32 comparisons, five mixing).
+Evidence: docs/screenshots/hydrolysis-diagrams-review.jpg and
+hydrolysis-carbonate-diagram.png.
+
+
 ## Visual CI dependency coverage and observation audit — 2026-10-09
 
 Current phase: post-prerelease QA coverage. Completed work: Windows visual

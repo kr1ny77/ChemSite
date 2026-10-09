@@ -2,7 +2,7 @@
   "date": "2026-10-09",
   "task_count": 200,
   "comparison_count": 32,
-  "visualized_comparisons": 12,
+  "visualized_comparisons": 15,
   "visualized_mixing": 5,
   "covered": [
     {
@@ -135,33 +135,33 @@
         "dry-surface",
         "electrolyte-film"
       ]
-    }
-  ],
-  "comparisons_without_diagrams": [
+    },
     {
       "id": "L3-117",
-      "interaction": "hydrolysis",
-      "settings": [
-        "Анион Cl⁻",
-        "Катион Na⁺"
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-spectator",
+        "hydrolysis-spectator"
       ]
     },
     {
       "id": "L3-118",
-      "interaction": "hydrolysis",
-      "settings": [
-        "Анион CO₃²⁻",
-        "Катион Na⁺"
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-base",
+        "hydrolysis-spectator"
       ]
     },
     {
       "id": "L3-119",
-      "interaction": "hydrolysis",
-      "settings": [
-        "Анион Cl⁻",
-        "Катион NH₄⁺"
+      "family": "comparison",
+      "kinds": [
+        "hydrolysis-spectator",
+        "hydrolysis-acid"
       ]
-    },
+    }
+  ],
+  "comparisons_without_diagrams": [
     {
       "id": "L4-131",
       "interaction": "kinetics-experiment",
@@ -300,8 +300,8 @@
     }
   ],
   "source_sha256": {
-    "data/chemistry/curated_tasks.json": "9bee874ae2c1508fbacf854fd5e6d41924dee4cc1627bb3da7b5d5dfe5260337",
-    "scripts/ui/comparison_observation_view.gd": "ae621f56bd0f40ca781277c17ffdd1f589ef8229566dc3745441465dab278bb2",
+    "data/chemistry/curated_tasks.json": "264e9d18dc00b718e58424eb1a5c5c2b1bb72e9c6c949f01d7f39c35fbded990",
+    "scripts/ui/comparison_observation_view.gd": "8bf7435ad2d47a331bc1472fdc2048c0515a10237ac3e5adf084d3541277d22d",
     "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5"
   },
   "scope": "Data/render-kind audit; native visual acceptance is separate."

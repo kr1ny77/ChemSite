@@ -2,7 +2,7 @@ extends Control
 
 # Qualitative diagrams illustrate the curated observation. Motion duration and
 # geometry are presentation values; chemistry quantities/rates are never inferred.
-const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high"]
+const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid"]
 var kinds: Array[String] = []
 var _captions: Array[String] = []
 var _colors: Array[Color] = []
@@ -58,6 +58,8 @@ func _draw() -> void:
 		var progress := smoothstep(0.0, 1.0, _elapsed[index] / 1.2)
 		if kinds[index] in ["metal-oxidation", "metal-reduction"]:
 			_electrode(offset, kinds[index], progress, _captions[index], _colors[index])
+		elif kinds[index].begins_with("hydrolysis-"):
+			_hydrolysis(offset, kinds[index], progress, _captions[index])
 		elif kinds[index].begins_with("thermal-"):
 			_thermal(offset, kinds[index], progress, _captions[index])
 		else:
@@ -148,3 +150,23 @@ func _thermal(offset: Vector2, kind: String, progress: float, caption: String) -
 	elif cold:
 		_arrow(offset + Vector2(178, 31), offset + Vector2(178, 56), Color(tint, progress))
 		draw_string(get_theme_default_font(), offset + Vector2(190, 47), "T", HORIZONTAL_ALIGNMENT_LEFT, -1, 19, tint)
+
+func _hydrolysis(offset: Vector2, kind: String, progress: float, caption: String) -> void:
+	# Caption is curated chemistry. Dots and travel distances are qualitative.
+	var ink := Color("3f6470")
+	var font := get_theme_default_font()
+	var width := size.x * .5 - 24
+	var lines := caption.split("\n")
+	for index in range(lines.size()):
+		draw_string(font, offset + Vector2(12, 20 + index * 19), lines[index], HORIZONTAL_ALIGNMENT_LEFT, width, 15, ink)
+	var spectator := kind == "hydrolysis-spectator"
+	var tint := Color("3b9b83") if kind == "hydrolysis-base" else Color("c57839")
+	var left := offset + Vector2(30, 59)
+	draw_circle(left, 6, ink)
+	draw_circle(left + Vector2(24, 0), 5, Color("80becb"))
+	draw_circle(left + Vector2(20, -5), 2.5, Color("c4dfe5"))
+	draw_circle(left + Vector2(29, -3), 2.5, Color("c4dfe5"))
+	if not spectator:
+		_arrow(left + Vector2(43, 0), left + Vector2(74, 0), Color(ink, progress))
+		draw_arc(left + Vector2(91, 0), 6, 0, TAU, 20, Color(ink, progress), 2, true)
+		draw_circle(left + Vector2(118, 0), 5 * progress, tint)
