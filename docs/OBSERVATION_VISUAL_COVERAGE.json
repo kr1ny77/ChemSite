@@ -2,7 +2,7 @@
   "date": "2026-10-09",
   "task_count": 200,
   "comparison_count": 32,
-  "visualized_comparisons": 19,
+  "visualized_comparisons": 24,
   "visualized_mixing": 5,
   "covered": [
     {
@@ -105,6 +105,14 @@
       ]
     },
     {
+      "id": "L4-138",
+      "family": "comparison",
+      "kinds": [
+        "kinetic-coarse",
+        "kinetic-fine"
+      ]
+    },
+    {
       "id": "L4-143",
       "family": "comparison",
       "kinds": [
@@ -169,11 +177,35 @@
       ]
     },
     {
+      "id": "L4-153",
+      "family": "comparison",
+      "kinds": [
+        "dry-surface",
+        "electrolyte-film"
+      ]
+    },
+    {
+      "id": "L4-154",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "electron-acceptor"
+      ]
+    },
+    {
       "id": "L4-155",
       "family": "comparison",
       "kinds": [
         "intact-coating",
         "damaged-coating"
+      ]
+    },
+    {
+      "id": "L4-156",
+      "family": "comparison",
+      "kinds": [
+        "metal-oxidation",
+        "electron-acceptor"
       ]
     },
     {
@@ -189,6 +221,14 @@
       "family": "comparison",
       "kinds": [
         "dry-surface",
+        "electrolyte-film"
+      ]
+    },
+    {
+      "id": "L4-159",
+      "family": "comparison",
+      "kinds": [
+        "galvanic-contact",
         "electrolyte-film"
       ]
     }
@@ -208,14 +248,6 @@
       "settings": [
         "Без катализатора",
         "С катализатором"
-      ]
-    },
-    {
-      "id": "L4-138",
-      "interaction": "kinetics-experiment",
-      "settings": [
-        "Крупный кусок CaCO₃",
-        "Измельчённый CaCO₃"
       ]
     },
     {
@@ -265,43 +297,11 @@
         "Без катализатора",
         "С катализатором"
       ]
-    },
-    {
-      "id": "L4-153",
-      "interaction": "corrosion-inspection",
-      "settings": [
-        "Сухой участок балки",
-        "Влажный участок балки"
-      ]
-    },
-    {
-      "id": "L4-154",
-      "interaction": "corrosion-inspection",
-      "settings": [
-        "Анодный участок",
-        "Катодный участок"
-      ]
-    },
-    {
-      "id": "L4-156",
-      "interaction": "corrosion-inspection",
-      "settings": [
-        "Активный протектор",
-        "Защищаемая сталь"
-      ]
-    },
-    {
-      "id": "L4-159",
-      "interaction": "corrosion-inspection",
-      "settings": [
-        "Электрический контакт",
-        "Общая влажная среда"
-      ]
     }
   ],
   "source_sha256": {
-    "data/chemistry/curated_tasks.json": "a34fd90c36484edd6f4e1119ddb3eaeb24de370fa6841afeab41828d9c2abf72",
-    "scripts/ui/comparison_observation_view.gd": "96ffaad643699d28cd441c5db57b42d47560be693a7c1b35f4132141d54c0b80",
+    "data/chemistry/curated_tasks.json": "2df36f8cb4aeb9c1bb1a2d68758bcd4826ae3d0a3422ef7987f2c7b1f5030661",
+    "scripts/ui/comparison_observation_view.gd": "65038ab9ee8ff4f00d1ea360e502c5d6d8588706e560364ec42d3f91ecdec46c",
     "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5"
   },
   "scope": "Data/render-kind audit; native visual acceptance is separate."

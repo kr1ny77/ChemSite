@@ -26,11 +26,11 @@ render('interact.wav',[(587.33,0,.4),(880,.065,.3)],.22)
 def render_step(name, seed, weight):
  rng=random.Random(seed)
  samples=[]
- duration=.065
- # Short felt-like sole contact, with a smooth attack and steep low-pass.
+ duration=.090
+ # Soft fabric/sole brush with a rounded attack and suppressed bass impact.
  # Four seeded takes retain contact variation at a quiet mix level.
- alpha=1-math.exp(-2*math.pi*(190+weight*10)/RATE)
- bass_alpha=1-math.exp(-2*math.pi*45/RATE)
+ alpha=1-math.exp(-2*math.pi*(620+weight*20)/RATE)
+ bass_alpha=1-math.exp(-2*math.pi*180/RATE)
  low_a=low_b=low_c=bass=0.0
  for i in range(int(RATE*duration)):
   t=i/RATE
@@ -38,10 +38,10 @@ def render_step(name, seed, weight):
   low_b+=alpha*(low_a-low_b)
   low_c+=alpha*(low_b-low_c)
   bass+=bass_alpha*(low_c-bass)
-  attack=math.sin(min(1,t/.012)*math.pi/2)**2
-  tail=min(1,(duration-t)/.030)**2
-  envelope=math.exp(-45*t)*attack*tail
-  value=(low_c-bass)*.8*envelope
+  attack=math.sin(min(1,t/.020)*math.pi/2)**2
+  tail=min(1,(duration-t)/.040)**2
+  envelope=math.exp(-28*t)*attack*tail
+  value=(low_c-bass)*.35*envelope
   samples.append(struct.pack('<h',int(value*32767)))
  with wave.open(str(ROOT/name),'wb') as file:
   file.setnchannels(1);file.setsampwidth(2);file.setframerate(RATE);file.writeframes(b''.join(samples))

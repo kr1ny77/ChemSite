@@ -4543,6 +4543,16 @@
           "setting": "Измельчённый CaCO₃",
           "observation": "При той же массе доступная поверхность больше; модельный ход быстрее."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "kinetic-coarse",
+          "caption": "Крупный кусок CaCO₃"
+        },
+        {
+          "kind": "kinetic-fine",
+          "caption": "Измельчённый CaCO₃"
+        }
       ]
     },
     "correctAnswer": "измельчить CaCO3",
@@ -5325,6 +5335,16 @@
           "setting": "Влажный участок балки",
           "observation": "Вода и кислород контактируют со сталью; возможны связанные анодные и катодные участки."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "dry-surface",
+          "caption": "Сухой участок балки"
+        },
+        {
+          "kind": "electrolyte-film",
+          "caption": "Влажный участок балки"
+        }
       ]
     },
     "id": "L4-153",
@@ -5370,6 +5390,16 @@
         {
           "setting": "Катодный участок",
           "observation": "Электроны принимаются в восстановительном процессе."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Fe → Fe²⁺ + 2e⁻"
+        },
+        {
+          "kind": "electron-acceptor",
+          "caption": "Катодный участок"
         }
       ]
     },
@@ -5460,6 +5490,16 @@
         {
           "setting": "Защищаемая сталь",
           "observation": "Стальная конструкция поддерживается в катодном состоянии."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "metal-oxidation",
+          "caption": "Активный протектор"
+        },
+        {
+          "kind": "electron-acceptor",
+          "caption": "Защищаемая сталь"
         }
       ]
     },
@@ -5602,6 +5642,16 @@
         {
           "setting": "Общая влажная среда",
           "observation": "Водная плёнка переносит ионы; более активный металл пары становится анодом."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "galvanic-contact",
+          "caption": "Электрический контакт"
+        },
+        {
+          "kind": "electrolyte-film",
+          "caption": "Общая влажная среда"
         }
       ]
     },

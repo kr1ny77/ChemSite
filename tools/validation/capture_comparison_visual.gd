@@ -12,11 +12,15 @@ func _run() -> void:
 	site.save_path = "user://capture-comparison-visual-progress.json"
 	root.add_child(site)
 	site._player.controls_enabled = false
+	var corrosion := OS.get_cmdline_user_args().has("--corrosion-extended")
 	var kinetics := OS.get_cmdline_user_args().has("--kinetics")
 	var thermal := OS.get_cmdline_user_args().has("--thermal")
 	var directory := "res://artifacts/comparison-vfx"
 	var identifiers := ["L4-147", "L4-155", "L4-157", "L4-158"]
-	if kinetics:
+	if corrosion:
+		directory = "res://artifacts/corrosion-extended-vfx"
+		identifiers = ["L4-138", "L4-153", "L4-154", "L4-156", "L4-159"]
+	elif kinetics:
 		directory = "res://artifacts/kinetics-vfx"
 		identifiers = ["L4-131", "L4-132", "L4-134", "L4-135"]
 	elif hydrolysis:

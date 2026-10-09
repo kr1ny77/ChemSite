@@ -140,3 +140,19 @@ supports the surface/contact and concentration relationships.
 supports an alternative pathway with a lower activation barrier. Original
 geometry retains the existing qualitative scale disclaimer. Status: VERIFIED
 presentation consistency; target-course instructor acceptance remains open.
+
+## Additional corrosion/contact presentation — 2026-10-09
+
+L4-138 adds existing coarse/fine contact visuals; L4-153 dry/wet surface;
+L4-154 iron oxidation and cathodic electron acceptance; L4-156 sacrificial
+anode oxidation and a fixed protected steel surface; L4-159 electrical
+contact plus electrolyte film. All 200 task answers, explanations and
+observation readouts remain unchanged. Fe → Fe²⁺ + 2e⁻ is copied from
+the curated readout and conserves atoms/charge. Cathodic steel has constant
+thickness; no metal plating is implied. Abstract contacting metals carry
+no specified current direction. Qualitative scale and finite/reduced motion
+are preserved. Reference: OpenStax Chemistry 2e §17.6 Corrosion,
+https://openstax.org/books/chemistry-2e/pages/17-6-corrosion .
+Presentation gate: 144 layout/reveal/motion cases; 30 native captures reviewed
+including full iron and protector panels. Packaged corrosion round passed.
+Instructor acceptance remains open.

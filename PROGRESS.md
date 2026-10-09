@@ -1,5 +1,35 @@
 # ChemSite progress
 
+## Additional corrosion diagrams — 2026-10-09
+
+Current phase: post-prerelease chemistry visualization. Completed work:
+five kinetics/corrosion diagrams, fixed cathodic steel surface, abstract
+metal contact and electrolyte film; electron label moved below its arrow
+to clear the protector caption. Last verification: 144 comparison cases,
+30 native reveal/motion views, full iron/protector panels, Level 4 content,
+200-task content preservation and packaged corrosion round passed. Current
+work: refresh final capture/export evidence and push revisions. Next task:
+eight remaining equilibrium comparisons; current Windows native f554b80
+succeeded, visual job remains in progress. Known issues: human listening,
+movement/accessibility, instructor, representative laptop and physical
+Windows acceptance remain open. Coverage: 24/32 comparisons, five mixing.
+
+
+## Softer brushed footsteps — 2026-10-09
+
+Current phase: audio polish after further user discomfort. Completed work:
+four original 90 ms brushed-sole variants, 20 ms rounded attack, 180 Hz
+bass suppression and 620–680 Hz low-pass; playback reduced from -28 to
+-32 dB. Existing SFX settings and contact synchronization retained. Last
+verification: import, audio smoke, Walk/Run footstep timing and macOS export
+passed; four files have silent endpoints and peaks -33.0 to -29.6 dBFS.
+Current work: listening acceptance; preview artifacts/soft-footsteps-brush-preview.wav
+is boosted for audition, game playback is quieter. Next task: resume the
+five comparison diagrams already in progress and remaining checkpoints.
+Known issues: listening comfort requires human review; broader release
+acceptance gates remain open. Published v0.1.0 archives unchanged.
+
+
 ## Windows visual observation count repair — 2026-10-09
 
 Current phase: post-prerelease cross-platform QA. Completed work: investigated

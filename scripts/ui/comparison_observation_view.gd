@@ -2,7 +2,7 @@ extends Control
 
 # Qualitative diagrams illustrate the curated observation. Motion duration and
 # geometry are presentation values; chemistry quantities/rates are never inferred.
-const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid", "kinetic-coarse", "kinetic-fine", "kinetic-dilute", "kinetic-concentrated", "kinetic-barrier-high", "kinetic-barrier-low"]
+const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid", "kinetic-coarse", "kinetic-fine", "kinetic-dilute", "kinetic-concentrated", "kinetic-barrier-high", "kinetic-barrier-low", "electron-acceptor", "galvanic-contact"]
 var kinds: Array[String] = []
 var _captions: Array[String] = []
 var _colors: Array[Color] = []
@@ -58,6 +58,8 @@ func _draw() -> void:
 		var progress := smoothstep(0.0, 1.0, _elapsed[index] / 1.2)
 		if kinds[index] in ["metal-oxidation", "metal-reduction"]:
 			_electrode(offset, kinds[index], progress, _captions[index], _colors[index])
+		elif kinds[index] in ["electron-acceptor", "galvanic-contact"]:
+			_corrosion_connection(offset, kinds[index], progress, _captions[index])
 		elif kinds[index].begins_with("kinetic-"):
 			_kinetic(offset, kinds[index], progress, _captions[index])
 		elif kinds[index].begins_with("hydrolysis-"):
@@ -88,7 +90,7 @@ func _electrode(offset: Vector2, kind: String, progress: float, caption: String,
 	var left := offset + Vector2(167, 43)
 	var right := offset + Vector2(211, 43)
 	_arrow(right, left, ink) if reducing else _arrow(left, right, ink)
-	draw_string(get_theme_default_font(), offset + Vector2(171, 28), "e⁻", HORIZONTAL_ALIGNMENT_LEFT, -1, 21, ink)
+	draw_string(get_theme_default_font(), offset + Vector2(171, 62), "e⁻", HORIZONTAL_ALIGNMENT_LEFT, -1, 21, ink)
 
 func _surface(offset: Vector2, kind: String, progress: float) -> void:
 	var origin := offset + Vector2(24, 39)
@@ -204,3 +206,17 @@ func _kinetic(offset: Vector2, kind: String, progress: float, caption: String) -
 		draw_rect(Rect2(base - Vector2(0, height * progress), Vector2(76, height * progress)), Color("80becb"))
 		_arrow(base + Vector2(94, 0), base + Vector2(94, -height * progress), ink)
 		draw_string(get_theme_default_font(), base + Vector2(106, -9), "Eₐ", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, ink)
+
+func _corrosion_connection(offset: Vector2, kind: String, progress: float, caption: String) -> void:
+	var ink := Color("3f6470")
+	draw_string(get_theme_default_font(), offset + Vector2(12, 21), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x * .5 - 24, 15, ink)
+	if kind == "electron-acceptor":
+		# Cathodic electron acceptance is shown without predicting metal plating.
+		draw_rect(Rect2(offset + Vector2(24, 45), Vector2(176, 17)), Color("8eaaaf"))
+		_arrow(offset + Vector2(133, 29), offset + Vector2(133, 42), Color(ink, progress))
+		draw_string(get_theme_default_font(), offset + Vector2(147, 37), "e⁻", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, ink)
+	else:
+		# A conducting connection; metal identity and current direction are unspecified.
+		draw_rect(Rect2(offset + Vector2(28, 42), Vector2(45, 20)), Color("8eaaaf"))
+		draw_rect(Rect2(offset + Vector2(146, 42), Vector2(45, 20)), Color("c98550"))
+		draw_polyline(PackedVector2Array([offset + Vector2(50, 42), offset + Vector2(50, 30), offset + Vector2(168, 30), offset + Vector2(168, 42)]), Color(ink, progress), 2, true)

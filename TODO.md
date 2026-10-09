@@ -2,6 +2,10 @@
 
 ## Completed checkpoints
 
+- [x] Add five remaining kinetics/corrosion comparison diagrams (L4-138/153/154/156/159); 144 comparison checks, 30 native views, Level 4 content and packaged corrosion round pass. Coverage 24/32; eight equilibrium comparisons remain.
+
+- [x] Further soften footsteps after repeated discomfort: replace bass contact with 90 ms brushed sole, rounded attack, bass suppression and -32 dB playback; native audio/contact checks, import and macOS export pass. Human listening acceptance remains open.
+
 - [x] Repair Windows visual observation counts after new diagrams: derive expectation from actual five selected tasks, retain strict declaration/file/aggregate checks; native Level 3, hydrolysis and kinetics declarations match 1/3/4 captured observations.
 
 - [x] Add four kinetics comparison diagrams: coarse/fine contact, concentration and activation barrier. 114 comparison cases, 24 native capture states, Level 4 content, unchanged 200-task content and packaged focused round pass; observation audit now 19/32 comparisons.
