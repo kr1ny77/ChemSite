@@ -153,3 +153,26 @@ This experiment establishes that angular responsiveness alone does not
 satisfy tight-turn contact. Next investigation: support anchor/release
 behavior with final evaluated sole trajectories and chronological native
 turn captures. Exported manual movement acceptance remains open.
+
+## Cross-frequency turn experiments — 2026-10-09
+
+Reducing the boot twist bound to 35° failed the 60 Hz reversal displacement
+gate and was reverted. Lowering maximum body turn speed from 720°/s to
+540°/s passed heading settling and all current contact gates, but the
+frequency matrix exposed regressions; that candidate was also reverted.
+
+| Frequency | Baseline reversal peak | 540°/s candidate |
+| --- | ---: | ---: |
+| 30 Hz | 130.31 mm | 147.22 mm |
+| 60 Hz | 61.84 mm | 44.62 mm |
+| 120 Hz | 21.68 mm | 39.45 mm |
+
+Corner peaks were unchanged (88.97/32.09/12.89 mm). All twelve steady cases
+and active-lock release/leg-height/length bounds passed. Thirteen
+chronological isolated side views of the 540°/s candidate were reviewed;
+upright carriage remained readable. Single-frequency improvement is
+insufficient for promotion. Production retains response 16, 720°/s,
+65° boot bound. Next work requires a support-anchor treatment or authored
+directional gait, evaluated at all three frequencies. Human acceptance
+remains open. Logs: /tmp/chemsite-turn-twist35.log,
+/tmp/chemsite-turn-rate540.log, /tmp/chemsite-turn540-{30,120}.log.

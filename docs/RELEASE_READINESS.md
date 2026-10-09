@@ -14,8 +14,8 @@ acceptance work. The full production objective remains active.
 | Adaptive learning and persistence | Version-five migration, level-scoped mastery, scheduling and isolated package saves | Physical Windows save/relaunch acceptance |
 | Practice | All 44 level/topic bindings; five timer-free package rounds; unchanged career file hashes | Human topic browsing |
 | HUD, menus and accessibility | 200 task/400 feedback layout matrix, 7,089 HUD and 172 menu contrast/state checks; keyboard rounds; reduced motion | Human readability and full accessibility acceptance |
-| Chemistry feedback and environment motion | Curated mixing/comparison/thermal views, finite/reduced-motion gates, mixer loop, repaired particle fade | Broader VFX coverage/readability audit |
-| Audio | Original music reproducibility, four soft sole contacts, contact timing, native playback/settings gates | Headphone/laptop-speaker mix acceptance, physical Windows audio |
+| Chemistry feedback and environment motion | All 32 comparison and five mixing diagrams, 192 reveal/layout/motion checks, native state reviews, finite/reduced motion, mixer loop, repaired particle fade | Human VFX readability/acceptance |
+| Audio | Original music reproducibility, four brushed-sole contacts at reduced gain, contact timing, native playback/settings gates | Headphone/laptop-speaker mix acceptance, physical Windows audio |
 | Performance | M4 source profiles documented in PERFORMANCE_BASELINE.md | Approximately 60 FPS on representative student laptop |
 | macOS build | Universal release export; practice and keyboard career package tests | Human exported five-task round; unsigned/unnotarized distribution |
 | Windows build | GitHub native/graphical workflows; ac41d28 native 37924483319 and graphical 37924656032 both green | Physical desktop input/audio/save |

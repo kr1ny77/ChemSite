@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Cross-frequency movement tuning — 2026-10-09
+
+Current phase: tight-turn investigation. Completed work: tested smaller
+boot twist and lower maximum heading speed. Last verification: 35° twist
+failed reversal; 540°/s reduced 60 Hz reversal drift 61.84→44.62 mm,
+but worsened 30/120 Hz to 147.22/39.45 mm. Both rejected and original
+controller/modifier restored. Twelve steady cases, release and pose bounds
+passed; thirteen native side poses reviewed. Current work: restore local
+package to production controller after candidate QA. Next task: support
+anchor/directional gait investigation and Windows artifact review. Known
+issues: tight-turn contact and human/hardware/instructor acceptance remain
+open. Release readiness now reflects all 32 comparison/five mixing diagrams.
+
+
 ## Tight-turn heading experiment — 2026-10-09
 
 Current phase: movement polish and Windows regression. Completed work:
