@@ -2,7 +2,8 @@ extends Control
 
 # Qualitative diagrams illustrate the curated observation. Motion duration and
 # geometry are presentation values; chemistry quantities/rates are never inferred.
-const KINDS := ["metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid", "kinetic-coarse", "kinetic-fine", "kinetic-dilute", "kinetic-concentrated", "kinetic-barrier-high", "kinetic-barrier-low", "electron-acceptor", "galvanic-contact"]
+const EQUILIBRIUM = preload("res://scripts/ui/equilibrium_diagram.gd")
+const KINDS := ["equilibrium-added", "equilibrium-closed", "equilibrium-compressed", "equilibrium-expanded", "equilibrium-fast", "equilibrium-forward", "equilibrium-removed", "equilibrium-retained", "equilibrium-reverse", "equilibrium-slow", "equilibrium-volume", "metal-oxidation", "metal-reduction", "intact-coating", "damaged-coating", "bare-surface", "passive-film", "dry-surface", "electrolyte-film", "thermal-low", "thermal-reference", "thermal-high", "hydrolysis-spectator", "hydrolysis-base", "hydrolysis-acid", "kinetic-coarse", "kinetic-fine", "kinetic-dilute", "kinetic-concentrated", "kinetic-barrier-high", "kinetic-barrier-low", "electron-acceptor", "galvanic-contact"]
 var kinds: Array[String] = []
 var _captions: Array[String] = []
 var _colors: Array[Color] = []
@@ -56,7 +57,9 @@ func _draw() -> void:
 			draw_string(font, offset + Vector2(18, 42), "%d · ОБРАЗЕЦ ОЖИДАЕТ ОСМОТРА" % (index + 1), HORIZONTAL_ALIGNMENT_LEFT, half - 24, 14, Color("637d84"))
 			continue
 		var progress := smoothstep(0.0, 1.0, _elapsed[index] / 1.2)
-		if kinds[index] in ["metal-oxidation", "metal-reduction"]:
+		if kinds[index].begins_with("equilibrium-"):
+			EQUILIBRIUM.render(self, offset, kinds[index], progress, _captions[index])
+		elif kinds[index] in ["metal-oxidation", "metal-reduction"]:
 			_electrode(offset, kinds[index], progress, _captions[index], _colors[index])
 		elif kinds[index] in ["electron-acceptor", "galvanic-contact"]:
 			_corrosion_connection(offset, kinds[index], progress, _captions[index])

@@ -2,7 +2,7 @@
   "date": "2026-10-09",
   "task_count": 200,
   "comparison_count": 32,
-  "visualized_comparisons": 24,
+  "visualized_comparisons": 32,
   "visualized_mixing": 5,
   "covered": [
     {
@@ -105,11 +105,59 @@
       ]
     },
     {
+      "id": "L4-136",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-slow",
+        "equilibrium-fast"
+      ]
+    },
+    {
+      "id": "L4-137",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-slow",
+        "equilibrium-fast"
+      ]
+    },
+    {
       "id": "L4-138",
       "family": "comparison",
       "kinds": [
         "kinetic-coarse",
         "kinetic-fine"
+      ]
+    },
+    {
+      "id": "L4-139",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-forward",
+        "equilibrium-reverse"
+      ]
+    },
+    {
+      "id": "L4-140",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-closed",
+        "equilibrium-added"
+      ]
+    },
+    {
+      "id": "L4-141",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-volume",
+        "equilibrium-compressed"
+      ]
+    },
+    {
+      "id": "L4-142",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-volume",
+        "equilibrium-expanded"
       ]
     },
     {
@@ -126,6 +174,22 @@
       "kinds": [
         "thermal-reference",
         "thermal-low"
+      ]
+    },
+    {
+      "id": "L4-145",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-retained",
+        "equilibrium-removed"
+      ]
+    },
+    {
+      "id": "L4-146",
+      "family": "comparison",
+      "kinds": [
+        "equilibrium-slow",
+        "equilibrium-fast"
       ]
     },
     {
@@ -233,76 +297,12 @@
       ]
     }
   ],
-  "comparisons_without_diagrams": [
-    {
-      "id": "L4-136",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Без катализатора",
-        "С катализатором"
-      ]
-    },
-    {
-      "id": "L4-137",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Без катализатора",
-        "С катализатором"
-      ]
-    },
-    {
-      "id": "L4-139",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Датчик прямой реакции",
-        "Датчик обратной реакции"
-      ]
-    },
-    {
-      "id": "L4-140",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Исходное равновесие",
-        "Добавлен реагент"
-      ]
-    },
-    {
-      "id": "L4-141",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Исходный объём, T постоянна",
-        "Сжатый объём, T постоянна"
-      ]
-    },
-    {
-      "id": "L4-142",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Исходный объём, T постоянна",
-        "Расширенный объём, T постоянна"
-      ]
-    },
-    {
-      "id": "L4-145",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "NH₃ остаётся в системе",
-        "NH₃ постоянно удаляется"
-      ]
-    },
-    {
-      "id": "L4-146",
-      "interaction": "equilibrium-control",
-      "settings": [
-        "Без катализатора",
-        "С катализатором"
-      ]
-    }
-  ],
+  "comparisons_without_diagrams": [],
   "source_sha256": {
-    "data/chemistry/curated_tasks.json": "2df36f8cb4aeb9c1bb1a2d68758bcd4826ae3d0a3422ef7987f2c7b1f5030661",
-    "scripts/ui/comparison_observation_view.gd": "65038ab9ee8ff4f00d1ea360e502c5d6d8588706e560364ec42d3f91ecdec46c",
-    "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5"
+    "data/chemistry/curated_tasks.json": "0a2372652f4d32e8bd7f16d61c6ea44dc388ddca94134467cc47a84f91bedc6e",
+    "scripts/ui/comparison_observation_view.gd": "5a13958fe553883c144c506371807e29757f6348bc597e30ab8adb42b8bbd4e3",
+    "scripts/ui/mixing_observation_view.gd": "d8663e3e8c258f30d9e79a542e5fba31f9a099ba42ebb11d36b41cb0bed1e9c5",
+    "scripts/ui/equilibrium_diagram.gd": "1ef276a195563a78ec6cc640399caacc4166e11eb38047d8fab8b9567551a3e5"
   },
   "scope": "Data/render-kind audit; native visual acceptance is separate."
 }

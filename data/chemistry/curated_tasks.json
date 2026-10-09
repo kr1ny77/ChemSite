@@ -4459,6 +4459,16 @@
           "setting": "С катализатором",
           "observation": "Тот же равновесный состав достигается быстрее."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-slow",
+          "caption": "Без катализатора"
+        },
+        {
+          "kind": "equilibrium-fast",
+          "caption": "С катализатором"
+        }
       ]
     },
     "prompt": "Изменяет ли катализатор положение химического равновесия?",
@@ -4499,6 +4509,16 @@
         {
           "setting": "С катализатором",
           "observation": "Оба направления ускоряются; равновесие устанавливается быстрее."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-slow",
+          "caption": "Без катализатора"
+        },
+        {
+          "kind": "equilibrium-fast",
+          "caption": "С катализатором"
         }
       ]
     },
@@ -4597,6 +4617,16 @@
           "setting": "Датчик обратной реакции",
           "observation": "Обратная реакция продолжается с такой же скоростью; состав остаётся постоянным."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-forward",
+          "caption": "Датчик прямой реакции"
+        },
+        {
+          "kind": "equilibrium-reverse",
+          "caption": "Датчик обратной реакции"
+        }
       ]
     },
     "prompt": "Что означает динамическое химическое равновесие?",
@@ -4636,6 +4666,16 @@
         {
           "setting": "Добавлен реагент",
           "observation": "При новом равновесии часть добавленного реагента израсходована прямым направлением."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-closed",
+          "caption": "Исходное равновесие"
+        },
+        {
+          "kind": "equilibrium-added",
+          "caption": "Добавлен реагент"
         }
       ]
     },
@@ -4678,6 +4718,16 @@
         {
           "setting": "Сжатый объём, T постоянна",
           "observation": "Новая равновесная смесь имеет большую долю NH₃."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-volume",
+          "caption": "Исходный объём,\nT постоянна"
+        },
+        {
+          "kind": "equilibrium-compressed",
+          "caption": "Сжатый объём,\nT постоянна"
         }
       ]
     },
@@ -4727,6 +4777,16 @@
         {
           "setting": "Расширенный объём, T постоянна",
           "observation": "Новая равновесная смесь имеет меньшую долю NH₃."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-volume",
+          "caption": "Исходный объём,\nT постоянна"
+        },
+        {
+          "kind": "equilibrium-expanded",
+          "caption": "Расширенный объём,\nT постоянна"
         }
       ]
     },
@@ -4891,6 +4951,16 @@
           "setting": "NH₃ постоянно удаляется",
           "observation": "Образование NH₃ прямой реакцией продолжается, восполняя удаляемый продукт."
         }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-retained",
+          "caption": "NH₃ остаётся в системе"
+        },
+        {
+          "kind": "equilibrium-removed",
+          "caption": "NH₃ постоянно удаляется"
+        }
       ]
     },
     "prompt": "Из системы N₂ + 3H₂ ⇌ 2NH₃ постоянно удаляют NH₃. Куда смещается равновесие?",
@@ -4937,6 +5007,16 @@
         {
           "setting": "С катализатором",
           "observation": "Тот же равновесный состав достигается за меньшее модельное время."
+        }
+      ],
+      "comparisonVisuals": [
+        {
+          "kind": "equilibrium-slow",
+          "caption": "Без катализатора"
+        },
+        {
+          "kind": "equilibrium-fast",
+          "caption": "С катализатором"
         }
       ]
     },

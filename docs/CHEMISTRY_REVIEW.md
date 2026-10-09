@@ -156,3 +156,21 @@ https://openstax.org/books/chemistry-2e/pages/17-6-corrosion .
 Presentation gate: 144 layout/reveal/motion cases; 30 native captures reviewed
 including full iron and protector panels. Packaged corrosion round passed.
 Instructor acceptance remains open.
+
+## Equilibrium presentation coverage — 2026-10-09
+
+L4-136/137/146 share qualitative composition/time curves: same final
+endpoint, earlier plateau with catalyst, unnumbered axes. L4-139 uses equal
+length forward/reverse arrows and equal-rate caption. L4-140 shows reactant
+input and forward consumption; L4-141/142 show smaller/larger container
+and qualitative NH₃ fraction direction at constant temperature. L4-145
+shows retained product versus an outlet. Continuous removal remains an
+open-system process in the existing readout. Curated observations and
+all 200 original answers/explanations are preserved. Container dimensions
+and curve shapes are illustrative; no concentrations, rates or equilibrium
+constants are computed. Reference reviewed: OpenStax Chemistry 2e §13.3,
+https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle .
+Verification: 192 reveal/layout/motion checks; 48 native states reviewed,
+full catalyst/volume/product-removal panels reviewed; Level 4 content,
+import/export and packaged equilibrium round passed. All 32 comparison
+tasks now have supported visual metadata; instructor acceptance remains open.

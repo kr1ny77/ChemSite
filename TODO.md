@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Add eight equilibrium comparison diagrams; all 32 comparisons now have visual metadata. 192 layout/reveal/motion cases, 48 native states, Level 4 content, preserved 200-task content, import/export and packaged equilibrium round pass.
+
 - [x] Add five remaining kinetics/corrosion comparison diagrams (L4-138/153/154/156/159); 144 comparison checks, 30 native views, Level 4 content and packaged corrosion round pass. Coverage 24/32; eight equilibrium comparisons remain.
 
 - [x] Further soften footsteps after repeated discomfort: replace bass contact with 90 ms brushed sole, rounded attack, bass suppression and -32 dB playback; native audio/contact checks, import and macOS export pass. Human listening acceptance remains open.

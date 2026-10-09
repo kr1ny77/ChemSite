@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Complete comparison diagram coverage — 2026-10-09
+
+Current phase: chemistry visualization and post-prerelease QA. Completed
+work: eight equilibrium comparisons cover catalyst time, dynamic equal
+rates, reactant addition, volume changes and product removal. Renderer
+extracted to a reusable equilibrium helper. Last verification: 192
+comparison checks; 48 native states plus full catalyst/volume/outlet panels
+reviewed; Level 4 content and preservation of all 200 task answers and
+explanations pass. Import/export and packaged equilibrium round pass.
+Current work: push for Windows native/graphical regression. Next task:
+inspect current Windows evidence and remaining production acceptance
+checkpoints before a patch release. Known issues: complete visual metadata
+coverage (32 comparisons/five mixing) is separate from human curriculum,
+movement, listening/accessibility, physical Windows and laptop acceptance.
+Published v0.1.0 archives remain unchanged.
+
+
 ## Additional corrosion diagrams — 2026-10-09
 
 Current phase: post-prerelease chemistry visualization. Completed work:

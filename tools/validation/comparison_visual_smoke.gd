@@ -1,7 +1,7 @@
 extends SceneTree
 
 const BANK = preload("res://scripts/chemistry/task_bank.gd")
-const EXPECTED := {"L4-138": ["kinetic-coarse", "kinetic-fine"], "L4-153": ["dry-surface", "electrolyte-film"], "L4-154": ["metal-oxidation", "electron-acceptor"], "L4-156": ["metal-oxidation", "electron-acceptor"], "L4-159": ["galvanic-contact", "electrolyte-film"], "L4-131": ["kinetic-coarse", "kinetic-fine"], "L4-132": ["kinetic-coarse", "kinetic-fine"], "L4-134": ["kinetic-dilute", "kinetic-concentrated"], "L4-135": ["kinetic-barrier-high", "kinetic-barrier-low"], "L3-117": ["hydrolysis-spectator", "hydrolysis-spectator"], "L3-118": ["hydrolysis-base", "hydrolysis-spectator"], "L3-119": ["hydrolysis-spectator", "hydrolysis-acid"], "L4-133": ["thermal-low", "thermal-high"], "L4-143": ["thermal-reference", "thermal-high"], "L4-144": ["thermal-reference", "thermal-low"], "L4-155": ["intact-coating", "damaged-coating"], "L4-157": ["bare-surface", "passive-film"], "L4-158": ["dry-surface", "electrolyte-film"]}
+const EXPECTED := {"L4-136": ["equilibrium-slow", "equilibrium-fast"], "L4-137": ["equilibrium-slow", "equilibrium-fast"], "L4-139": ["equilibrium-forward", "equilibrium-reverse"], "L4-140": ["equilibrium-closed", "equilibrium-added"], "L4-141": ["equilibrium-volume", "equilibrium-compressed"], "L4-142": ["equilibrium-volume", "equilibrium-expanded"], "L4-145": ["equilibrium-retained", "equilibrium-removed"], "L4-146": ["equilibrium-slow", "equilibrium-fast"], "L4-138": ["kinetic-coarse", "kinetic-fine"], "L4-153": ["dry-surface", "electrolyte-film"], "L4-154": ["metal-oxidation", "electron-acceptor"], "L4-156": ["metal-oxidation", "electron-acceptor"], "L4-159": ["galvanic-contact", "electrolyte-film"], "L4-131": ["kinetic-coarse", "kinetic-fine"], "L4-132": ["kinetic-coarse", "kinetic-fine"], "L4-134": ["kinetic-dilute", "kinetic-concentrated"], "L4-135": ["kinetic-barrier-high", "kinetic-barrier-low"], "L3-117": ["hydrolysis-spectator", "hydrolysis-spectator"], "L3-118": ["hydrolysis-base", "hydrolysis-spectator"], "L3-119": ["hydrolysis-spectator", "hydrolysis-acid"], "L4-133": ["thermal-low", "thermal-high"], "L4-143": ["thermal-reference", "thermal-high"], "L4-144": ["thermal-reference", "thermal-low"], "L4-155": ["intact-coating", "damaged-coating"], "L4-157": ["bare-surface", "passive-film"], "L4-158": ["dry-surface", "electrolyte-film"]}
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -11,7 +11,7 @@ func _run() -> void:
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
 	var tasks: Array[Dictionary] = (BANK.load_verified_tasks(3) + BANK.load_verified_tasks(4)).filter(func(task): return task.get("parameters", {}).has("comparisonVisuals"))
-	if not _check(tasks.size() == 24, "Expected 24 curated comparison diagrams"): return
+	if not _check(tasks.size() == 32, "Expected 32 curated comparison diagrams"): return
 	var cases := 0
 	for viewport_size in [Vector2i(1028, 642), Vector2i(1152, 720), Vector2i(1440, 900)]:
 		root.size = viewport_size

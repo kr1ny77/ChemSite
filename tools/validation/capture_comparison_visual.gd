@@ -17,7 +17,10 @@ func _run() -> void:
 	var thermal := OS.get_cmdline_user_args().has("--thermal")
 	var directory := "res://artifacts/comparison-vfx"
 	var identifiers := ["L4-147", "L4-155", "L4-157", "L4-158"]
-	if corrosion:
+	if OS.get_cmdline_user_args().has("--equilibrium"):
+		directory = "res://artifacts/equilibrium-vfx"
+		identifiers = ["L4-136", "L4-137", "L4-139", "L4-140", "L4-141", "L4-142", "L4-145", "L4-146"]
+	elif corrosion:
 		directory = "res://artifacts/corrosion-extended-vfx"
 		identifiers = ["L4-138", "L4-153", "L4-154", "L4-156", "L4-159"]
 	elif kinetics:
