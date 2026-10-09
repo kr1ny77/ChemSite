@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Tight-turn heading experiment — 2026-10-09
+
+Current phase: movement polish and Windows regression. Completed work:
+revalidated current final-skinned-sole baseline and tested faster angular
+response. Last verification: baseline corner 32.09 mm, reversal 61.84 mm,
+steady straight 0.071 mm/tick; release and pose bounds pass. Response 22
+passed angular settling but failed planted corner displacement; rejected
+and original response 16 restored. Current work: support anchor/release
+investigation. Next task: evaluate support trajectories through tight turns
+and inspect current Windows artifacts. Known issues: tight-turn/manual
+movement acceptance, human audio/UI, physical Windows, laptop performance
+and instructor gates remain open. No candidate gameplay change retained.
+
+
 ## Complete comparison diagram coverage — 2026-10-09
 
 Current phase: chemistry visualization and post-prerelease QA. Completed

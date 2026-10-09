@@ -138,3 +138,18 @@ are hidden for silhouette inspection. All 48 PNG poses in
 boots and arm counter-swing remain readable. This completes the native integration
 review together with the upright station-action pass. Human movement feel and
 exported manual acceptance remain separate open requirements.
+
+## Heading response experiment — 2026-10-09
+
+Re-ran the current 60 Hz final-skinned-sole baseline: corner peak 32.09 mm,
+reversal 61.84 mm, straight steady 0.071 mm/tick; active-lock release and
+leg/ankle bounds pass. Tested angular spring response 22 instead of 16
+with the unchanged 720°/s cap. Angular settling passed, but the final sole
+contact gate rejected the corner before completing the matrix. Faster
+heading response is rejected and the production value 16 is restored.
+Evidence: /tmp/chemsite-turn-baseline.log, /tmp/chemsite-turn-baseline.json,
+/tmp/chemsite-turn-candidate.log and /tmp/chemsite-turn-response-candidate.log.
+This experiment establishes that angular responsiveness alone does not
+satisfy tight-turn contact. Next investigation: support anchor/release
+behavior with final evaluated sole trajectories and chronological native
+turn captures. Exported manual movement acceptance remains open.
