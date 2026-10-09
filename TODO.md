@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Soften footsteps after user feedback: 65 ms padded contacts, three-stage 190–220 Hz low-pass and additional 6 dB attenuation; native audio/contact checks and macOS export pass. Listening acceptance remains open.
+
 - [x] Add explicit keyboard focus outlines to both audio sliders; review native before/after and focus transfer, verify 172 menu checks and separate Music/SFX persistence.
 
 - [x] Collect original distribution notices and hash manifest; create requirement/evidence readiness ledger and native archive packaging tool. macOS ZIP CRC, fourteen extracted file hashes, executable permissions and extracted five-level practice run pass; Windows artifact digest, x86_64 PE, ZIP CRC and ten extracted file hashes pass; ac41d28 native/visual CI both succeeded.

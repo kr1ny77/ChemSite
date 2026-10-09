@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Softer footsteps — 2026-10-09
+
+Current phase: post-prerelease audio polish. Completed work: four deterministic
+sole contacts shortened from 100 to 65 ms, filtered with three low-pass stages
+at 190–220 Hz, smooth 12 ms attack/30 ms tail; playback gain reduced from
+−22 to −28 dB. Source peaks −33.3 to −30.0 dBFS, endpoints zero.
+Last verification: editor import, FOOTSTEP_TIMING_SMOKE_OK, native Forward+
+CHEMSITE_AUDIO_SMOKE_OK and macOS release export pass. Current work: user
+listening acceptance. Next task: resume contextual scene readability and
+remaining production QA. Known issues: listening acceptance and broader
+human/hardware/instructor gates remain open. Local app refreshed; published
+v0.1.0 archive retains original bytes. Preview: artifacts/soft-footsteps-preview.wav.
+
+
 ## Audio slider keyboard focus — 2026-10-09
 
 Current phase: post-prerelease accessibility polish. Completed work: reusable
