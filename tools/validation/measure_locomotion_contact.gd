@@ -127,7 +127,7 @@ func _run() -> void:
 				push_error("Foot plant changed leg length/height or exceeded correction bounds")
 				quit(1)
 				return
-			report["plant"] = {"processed": plant.processed_ticks, "corrected": plant.corrected_ticks, "maximum_correction_m": plant.maximum_correction, "length_error_m": plant.maximum_length_error, "height_error_m": plant.maximum_height_error, "boot_twist_degrees": rad_to_deg(plant.maximum_boot_twist), "final_length_error_m": final_length_error[0]}
+			report["plant"] = {"reach_clamped_ticks": plant.reach_clamped_ticks, "maximum_reach_loss_m": plant.maximum_reach_loss, "processed": plant.processed_ticks, "corrected": plant.corrected_ticks, "maximum_correction_m": plant.maximum_correction, "length_error_m": plant.maximum_length_error, "height_error_m": plant.maximum_height_error, "boot_twist_degrees": rad_to_deg(plant.maximum_boot_twist), "final_length_error_m": final_length_error[0]}
 			print("PLANT_METRICS ", scenario, " ", report.plant)
 			if not await _verify_plant_release(player, plant, action, scenario):
 				quit(1)

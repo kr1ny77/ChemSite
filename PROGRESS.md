@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Sole anchor investigation and Windows native evidence — 2026-10-09
+
+Current phase: movement polish and cross-platform QA. Completed work:
+sole-centre anchoring tested at three frequencies, negligible improvement
+and reverted. Added observational reach-clamp counters. Last verification:
+60 Hz final-pose/release gates pass; corner/reversal reach loss up to
+11.43/22.22 mm, three/two clamped solves. Production pose behavior unchanged.
+Downloaded b0b1a80 Windows native log artifact; digest/CRC/33 files and
+five keyboard rounds, 192 comparison cases/contact gate verified. Current
+work: correlate reach loss with support phase. Next task: directional gait
+or release treatment and pending Windows graphical evidence. Known issues:
+tight-turn/manual acceptance and broader human/hardware/instructor gates
+remain open.
+
+
 ## Cross-frequency movement tuning — 2026-10-09
 
 Current phase: tight-turn investigation. Completed work: tested smaller

@@ -10,6 +10,8 @@ var maximum_correction := 0.0
 var maximum_length_error := 0.0
 var maximum_height_error := 0.0
 var maximum_boot_twist := 0.0
+var reach_clamped_ticks := 0
+var maximum_reach_loss := 0.0
 var player: CharacterBody3D
 var _feet: Array[Dictionary] = []
 
@@ -76,7 +78,11 @@ func _solve_leg(skeleton: Skeleton3D, foot: Dictionary, target: Transform3D) -> 
 	var reach := length_a + length_b - 0.0001
 	var vertical := target.origin.y - hip.origin.y
 	var horizontal := Vector2(target.origin.x - hip.origin.x, target.origin.z - hip.origin.z)
+	var requested_horizontal := horizontal
 	horizontal = horizontal.limit_length(sqrt(maxf(0.0, reach * reach - vertical * vertical)))
+	var reach_loss := requested_horizontal.distance_to(horizontal)
+	if reach_loss > 0.0001: reach_clamped_ticks += 1
+	maximum_reach_loss = maxf(maximum_reach_loss, reach_loss)
 	target.origin.x = hip.origin.x + horizontal.x
 	target.origin.z = hip.origin.z + horizontal.y
 	var direction := target.origin - hip.origin

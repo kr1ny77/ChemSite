@@ -176,3 +176,23 @@ insufficient for promotion. Production retains response 16, 720°/s,
 directional gait, evaluated at all three frequencies. Human acceptance
 remains open. Logs: /tmp/chemsite-turn-twist35.log,
 /tmp/chemsite-turn-rate540.log, /tmp/chemsite-turn540-{30,120}.log.
+
+## Sole-centre and reach diagnosis — 2026-10-09
+
+A candidate derived the bottom centre of each rigid sole through its skin
+bind pose and compensated the ankle target for bounded boot rotation.
+Final-skin tests at 30/60/120 Hz retained corner peaks 88.965/32.090/12.889
+mm and reversal peaks 130.307/61.904/21.678 mm. This negligible change
+does not establish a quality improvement; the candidate was reverted.
+Original gait, controller and planting behavior remain in production.
+
+Added two diagnostic counters to the existing modifier: reach-clamped
+solves and maximum horizontal target loss. The 60 Hz full evaluated-pose
+gate passes unchanged: straight/start-stop have zero clamped solves;
+corner has three with maximum loss 11.43 mm; reversal has two with maximum
+loss 22.22 mm. Leg length/ankle height, active release and original drift
+gates pass. These counters observe the existing reach projection and
+change no pose. Next step: correlate clamped solves with support/contact
+phase before choosing an authored directional gait or release treatment.
+Evidence: /tmp/chemsite-sole-centre-{30,60,120}.log and
+/tmp/chemsite-reach-diagnostic.log.

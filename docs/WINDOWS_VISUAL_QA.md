@@ -111,3 +111,13 @@ hydrolysis 3/3 and kinetics 4/4. The kinetics round has fifteen total PNGs.
 The YAML parses. Superseded 908301d visual run 37931301985 was cancelled after
 the deterministic inherited count mismatch was identified; a new source push
 runs the corrected check. Published v0.1.0 evidence counts remain historical.
+
+## Equilibrium revision native evidence — 2026-10-09
+
+Revision b0b1a80 native run 37932930540 succeeded. Downloaded native log
+artifact 11617248233 (43,313 bytes), verified SHA-256
+fd39fd8558ac795b043c05720adfc7adb7be78498cd94046158136c994c9e483
+and ZIP CRC for 33 files. Logs confirm all five keyboard rounds, the
+final-skinned-sole contact gate and 192 comparison diagram cases.
+Graphical run 37932930583 remains separate and was still running when
+checked; physical Windows acceptance remains open.
