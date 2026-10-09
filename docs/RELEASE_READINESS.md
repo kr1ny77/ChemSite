@@ -18,13 +18,18 @@ acceptance work. The full production objective remains active.
 | Audio | Original music reproducibility, four soft sole contacts, contact timing, native playback/settings gates | Headphone/laptop-speaker mix acceptance, physical Windows audio |
 | Performance | M4 source profiles documented in PERFORMANCE_BASELINE.md | Approximately 60 FPS on representative student laptop |
 | macOS build | Universal release export; practice and keyboard career package tests | Human exported five-task round; unsigned/unnotarized distribution |
-| Windows build | GitHub native/graphical workflows; previous bc8ab7b both green | Updated commit workflows; physical desktop input/audio/save |
-| Source and documentation | Main pushed, current screenshots/README, asset provenance | Final release revision and download links |
-| Download archives and checksums | Packaging tool validates notices, log markers, CRC and SHA-256; preserves app permissions | Generate/inspect both archives from verified same-revision builds |
-| GitHub prerelease | Explicitly authorized after playable native QA in original brief section 48 | Tag, upload both archives/checksums, inspect published assets |
+| Windows build | GitHub native/graphical workflows; ac41d28 native 37924483319 and graphical 37924656032 both green | Physical desktop input/audio/save |
+| Source and documentation | Main pushed, v0.1.0 tags ac41d28, current screenshots/README and asset provenance | Broader acceptance tracked below |
+| Download archives and checksums | Both archives generated and extracted; CRC, file hashes and permissions verified; GitHub asset digests match | Physical Windows acceptance |
+| GitHub prerelease | Published v0.1.0 with both archives and checksum files; public tag/downloads verified | Broader production acceptance |
 
-The latest practice addition and audio revision require updated Windows runs.
-A green workflow for an earlier revision supports that revision only.
+The practice/audio revision passed current Windows native and graphical runs.
+All 191 captures decode at 1028×642; sixteen contact sheets and three full-size
+panels were reviewed after artifact digest verification. The macOS extracted app
+passed five career levels and five-level practice.
+
+Published prerelease: https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.0.
+Release source revision: ac41d28bb0a60011297175e3cc3c203384204918.
 
 ## Distribution notices
 

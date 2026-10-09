@@ -2,7 +2,7 @@
 
 ## Completed checkpoints
 
-- [x] Collect original distribution notices and hash manifest; create requirement/evidence readiness ledger and native archive packaging tool. Archive verification remains in progress.
+- [x] Collect original distribution notices and hash manifest; create requirement/evidence readiness ledger and native archive packaging tool. macOS ZIP CRC, fourteen extracted file hashes, executable permissions and extracted five-level practice run pass; Windows artifact digest, x86_64 PE, ZIP CRC and ten extracted file hashes pass; ac41d28 native/visual CI both succeeded.
 
 - [x] Expose all 44 practice topics across five levels; verify selection bindings, timer-free completion, career save isolation and compact wrapped/focus-following menu in source and macOS package.
 
@@ -123,6 +123,6 @@
 - [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
 - [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 154-screen career/focused Windows visual matrix and all-task native Windows layout gate pass
-- [ ] Phase 16: source push and GitHub prerelease after the vertical slice meets its quality gate
+- [x] Phase 16: source push and GitHub v0.1.0 prerelease published at ac41d28 with verified macOS/Windows archives, notices and SHA-256 files; public tag and checksum downloads checked. Broader human/hardware/instructor gates remain open.
 
 - [x] Resolve production music provenance: existing original synthesis source reproduces native track 1 byte-for-byte in an isolated directory; source, size and SHA-256 recorded in docs/ASSET_LICENSES.md.

@@ -1,12 +1,38 @@
 # ChemSite progress
 
+## Published native prerelease — 2026-10-09
+
+Current phase: post-prerelease production QA. Completed work: v0.1.0 published
+from ac41d28 with universal macOS and Windows x86_64 archives, original notices,
+install instructions, build metadata and SHA-256 files. Both uploaded asset
+digests match local archives. Windows native 37924483319 and graphical
+37924656032 pass this revision. All 191 graphical captures decode at 1028×642;
+sixteen contact sheets and three full-size panels reviewed. Mac extracted app
+passes all five career levels and practice; file hashes/permissions pass.
+Last verification: public prerelease/tag and checksum downloads verified; tag
+resolves to ac41d28. Current work: remaining visual/accessibility and product QA.
+Next task: audit remaining control focus states and contextual scene readability.
+Known issues: human movement/audio/accessibility acceptance, physical Windows
+Forward+/input/audio/save, representative student-laptop performance, residual
+bounded turn drift and target-course instructor review remain open. Full goal
+remains active. Release: https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.0.
+Details: docs/RELEASE_READINESS.md; artifacts/release-package-proof.json.
+
 ## Distribution packaging — 2026-10-09
 
 Current phase: prerelease preparation. Completed work: readiness ledger maps
 production requirements to evidence and remaining acceptance. Packaging tool
 checks native log markers, original notice hashes, archive CRC and output SHA-256;
 it includes install instructions, known issues, revision metadata and permissions.
-Current work: verify macOS archive and updated Windows CI at 78a8e04.
+Current work: draft prerelease 407858850; archive upload and final visual
+artifact review. Windows ac41d28 native 37924483319 and visual 37924656032
+both succeeded. Native artifact digest and five keyboard/practice logs verified.
+Windows ZIP CRC and all ten extracted file hashes verified; PE x86_64 confirmed.
+macOS archive: 74,404,466 bytes; all fourteen packaged file hashes and
+executable permissions verified after extraction. Extracted application passes
+all five practice levels, keyboard career Level 1 and career Levels 2–5.
+Universal x86_64/arm64 architecture confirmed. Evidence:
+artifacts/release-package-proof.json.
 Last verification: updated macOS practice and keyboard career round pass; source
 78a8e04 pushed. Next task: inspect extracted build, collect matching Windows
 artifact and prepare prerelease. Known issues: human/hardware/instructor gates

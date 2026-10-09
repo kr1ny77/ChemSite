@@ -23,11 +23,19 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 
 ![Native audio and motion settings](docs/screenshots/audio-settings.png)
 
+## Download
+
+[ChemSite v0.1.0 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.0)
+provides **ChemSite-macOS.zip**, **ChemSite-Windows.zip** and matching SHA-256 files.
+Extract the entire archive, then open `ChemSite.app` or `ChemSite.exe`.
+Keep the Windows EXE and PCK together. Both archives include install instructions,
+known issues, build metadata and third-party notices.
+
 ## Status
 
 The native macOS app and Windows x86_64 EXE have automated gameplay and export checks. Current verification and unfinished checkpoints are recorded in [PROGRESS.md](PROGRESS.md) and [TODO.md](TODO.md).
 
-Human movement/audio/accessibility acceptance, a representative student-laptop performance test, physical Windows input/audio/save checks and target-course instructor review remain open. The macOS build is unsigned and unnotarized. A preliminary release should carry these limitations in its release notes.
+Human movement/audio/accessibility acceptance, a representative student-laptop performance test, physical Windows input/audio/save checks and target-course instructor review remain open. The macOS build is unsigned and unnotarized. The v0.1.0 prerelease records these limitations in its release notes.
 
 ## Run from source
 
@@ -48,6 +56,7 @@ git lfs pull
 | Control | Action |
 | --- | --- |
 | WASD / arrows | Move |
+| Shift | Run |
 | E | Interact with a nearby station or inspection |
 | Tab / Shift+Tab | Move keyboard focus |
 | Space / Enter | Activate the focused control |
@@ -62,7 +71,7 @@ godot --headless --path . --export-release macOS builds/macos/ChemSite.app
 godot --headless --path . --export-release "Windows Desktop" builds/windows/ChemSite.exe
 ```
 
-Keep `ChemSite.exe` and `ChemSite.pck` together. Planned download archive names are `ChemSite-macOS.zip` and `ChemSite-Windows.zip`; publish them with checksums, third-party notices and known issues.
+Keep `ChemSite.exe` and `ChemSite.pck` together. The published download archives are `ChemSite-macOS.zip` and `ChemSite-Windows.zip`, with checksums, third-party notices and known issues.
 
 [PLAYTEST.md](docs/PLAYTEST.md) describes an isolated exported test profile and the acceptance route. It preserves ordinary player progress and settings.
 
@@ -103,4 +112,4 @@ The Windows workflows in [`.github/workflows/`](.github/workflows/) export the E
 
 Original project assets include the cartoon builder, authored stations/environment additions, UI illustration and deterministic synthesized audio. Selected construction props use Kenney CC0 assets. Onest is distributed under the SIL Open Font License; its license is included at [`assets/fonts/OFL.txt`](assets/fonts/OFL.txt).
 
-See [ASSET_LICENSES.md](docs/ASSET_LICENSES.md) for source paths, modifications and license files. The Godot runtime has its own license and third-party notices, which should accompany downloadable builds.
+See [ASSET_LICENSES.md](docs/ASSET_LICENSES.md) for source paths, modifications and license files. The Godot runtime has its own license and third-party notices, included with the downloadable builds.

@@ -1,0 +1,78 @@
+{
+  "release_url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.0",
+  "release_id": 407858850,
+  "tag": "v0.1.0",
+  "source_revision": "ac41d28bb0a60011297175e3cc3c203384204918",
+  "prerelease": true,
+  "public_tag_and_checksum_downloads_verified": true,
+  "windows_native_run": 37924483319,
+  "windows_visual_run": 37924656032,
+  "windows_visual_artifact": 11613124932,
+  "visual_artifact_sha256": "8c713512444c67c3e6bcb0f3b92c00d3f7de9302259b0c47ec11a356554495d6",
+  "decoded_pngs": 191,
+  "reviewed_contact_sheets": 16,
+  "full_size_panels_reviewed": [
+    "level4-corrosion/observation_04.png",
+    "level3-dissociation/task_04.png",
+    "level5/results.png"
+  ],
+  "macos_architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "extracted_file_hashes_verified": {
+    "macOS": 14,
+    "Windows": 10
+  },
+  "macos_extracted_career_levels_passed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "macos_extracted_practice_levels_passed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "assets": [
+    {
+      "id": 624810836,
+      "name": "ChemSite-macOS.zip",
+      "size": 74404466,
+      "digest": "sha256:a97f1304e172001bfbba9f257688e86e2cf3fca5b9c9662af189e7913ac0cce5",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.0/ChemSite-macOS.zip"
+    },
+    {
+      "id": 624814771,
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:fb36d5935522610c312b71b2dc821873d50679f4881c38b5c4e089aee77b6467",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.0/ChemSite-macOS.zip.sha256"
+    },
+    {
+      "id": 624813142,
+      "name": "ChemSite-Windows.zip",
+      "size": 46725315,
+      "digest": "sha256:bc09b7066915e525b8a111e484f3c82c7f90b65b6b1537e9a63a780cff614800",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.0/ChemSite-Windows.zip"
+    },
+    {
+      "id": 624815378,
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:290fa64cfc0594f5713e8afc43139d5064b9567f5cef83f067f9bd881d46ad9c",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.0/ChemSite-Windows.zip.sha256"
+    }
+  ],
+  "remaining_acceptance": [
+    "Human movement/audio/accessibility",
+    "Physical Windows Forward+ input/audio/save",
+    "Representative student laptop approximately 60 FPS",
+    "Target-course instructor review",
+    "Residual bounded reversal foot drift"
+  ]
+}

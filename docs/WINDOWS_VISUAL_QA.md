@@ -82,3 +82,15 @@ All 191 PNG dimensions are 1028×642. All five full-size career result images
 were inspected: earned slab/wall/roof captions fit and match the five stages.
 This review identified the empty lower navigation prompt on results, repaired
 by hiding its container and checking visibility in every exported career round.
+
+## v0.1.0 release revision — 2026-10-09
+
+Source ac41d28 passed native run 37924483319 and graphical run 37924656032.
+Artifact 11613124932: 112,776,502 bytes, SHA-256
+`8c713512444c67c3e6bcb0f3b92c00d3f7de9302259b0c47ec11a356554495d6`.
+All 191 PNGs decode at 1028×642. Reviewed all sixteen round sheets and full-size
+corrosion observation, AlCl₃ dissociation input and Level 5 result. Current theme
+checks report 7,089 HUD and 170 menu checks. No new blocking layout finding.
+Hosted Compatibility rendering remains brighter than native macOS Forward+;
+physical Windows Forward+ and human audio/input/save acceptance remain open.
+Archive and extracted-file checks recorded in artifacts/release-package-proof.json.
