@@ -1,5 +1,22 @@
 # ChemSite progress
 
+## Five-level station context and occlusion — 2026-10-09
+
+Current phase: post-prerelease contextual visual QA. Completed work: all 18
+level/station bindings captured with real task/prompt, nearest-station checks
+and task opening; five current contact sheets reviewed. Inspection monitor
+blocked the player on Levels 2/4/5; station meshes now use existing camera
+occlusion fade. Before/after reviewed at native size. Last verification:
+18 captures, original visibility checks plus 24 station fades/restoration,
+negative control fails as expected, clean import/export and packaged keyboard
+round pass. Windows 105d4c3 native 37928896513 succeeded; visual 37928896645
+remains running. Current work: push contextual repair for Windows regression.
+Next task: inspect current Windows results and broader VFX coverage. Known
+issues: residual frame/rebar overlap reduces body contrast at inspection;
+human movement/audio/accessibility, physical Windows Forward+, representative
+laptop and instructor review remain open. Evidence: docs/STATION_CONTEXT_QA.md.
+
+
 ## Construction composition review — 2026-10-09
 
 Current phase: post-prerelease visual QA. Completed work: reviewed twelve native

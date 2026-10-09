@@ -376,6 +376,7 @@ func _station_prop(asset_name: String, pos: Vector3) -> void:
 	prop.position = pos
 	for node in prop.find_children("*", "MeshInstance3D", true, false):
 		var mesh := node as MeshInstance3D
+		mesh.add_to_group("player_camera_occluder")
 		if mesh.name.begins_with("Periodic element") or mesh.name.begins_with("Formula glyph") or mesh.name.begins_with("Amber header marker") or mesh.name == "Side sample analyzer":
 			var original := mesh.get_active_material(0) as StandardMaterial3D
 			if original != null:

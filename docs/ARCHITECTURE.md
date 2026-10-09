@@ -17,7 +17,7 @@ Player heading uses a critically damped angular response after collision resolut
 ## Player visibility through construction frames
 
 `CameraRig/PlayerVisibility` owns render-only obstruction feedback. Tall static
-construction-shell, cabin and rebar meshes join `player_camera_occluder` during
+construction-shell, cabin, rebar and station meshes join `player_camera_occluder` during
 world assembly. Nine orthographic camera segments sample the player's torso and
 head width against each mesh's local bounds, retaining rotated/scaled mesh space.
 Intersecting parts ease to 82% transparency; clear parts restore full opacity.

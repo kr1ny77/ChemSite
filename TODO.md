@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Review 18 contextual station approaches across all five levels; repair inspection monitor/player occlusion with existing fade system. Negative control and three-level fade/restore gate pass; native capture, clean import/export and packaged keyboard round pass.
+
 - [x] Review six construction stages in twelve native yard/close captures; isolate static capture from navigation, focus and camera-occlusion effects. Progression/persistence gate passes; evidence in docs/CONSTRUCTION_VISUAL_QA.md.
 
 - [x] Correct offscreen station guidance: rotate edge arrow toward target and reserve top/bottom HUD space; all 200 tasks, 2,000 camera/motion cases, native edge captures and packaged macOS keyboard round pass.
