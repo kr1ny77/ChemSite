@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const TRANSITION_GROUNDING = preload("res://tools/validation/turn_transition_grounding.gd")
+
 # Isolated prototype; production input and character resources retain their owners.
 var model: Node3D
 var tree: AnimationTree
@@ -12,6 +14,7 @@ var requested_total := Vector3.ZERO
 var blocked_ticks := 0
 var maximum_step := 0.0
 var initial_rotation := Quaternion.IDENTITY
+var grounding: SkeletonModifier3D
 var locomotion_state := ""
 var locomotion_speed := 0.0
 var locomotion_elapsed := 0.0
@@ -76,6 +79,11 @@ func configure(scene: Node3D, action: String) -> void:
 	playback = tree.get("parameters/playback")
 	playback.start(action)
 	tree.advance(0.0)
+	if OS.get_cmdline_user_args().has("--ground-transition"):
+		skeleton.modifier_callback_mode_process = Skeleton3D.MODIFIER_CALLBACK_MODE_PROCESS_PHYSICS
+		grounding = TRANSITION_GROUNDING.new()
+		grounding.player = self
+		skeleton.add_child(grounding)
 
 func _physics_process(delta: float) -> void:
 	step(delta)

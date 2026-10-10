@@ -51,6 +51,7 @@ func _run() -> void:
 	var gait := "Run" if OS.get_cmdline_user_args().has("--handoff-run") else ("Walk" if OS.get_cmdline_user_args().has("--handoff-walk") else "")
 	var folder := base + ("/handoff-" + gait.to_lower() if not gait.is_empty() else "/native-frames")
 	if OS.get_cmdline_user_args().has("--side-view"): folder += "-side"
+	if OS.get_cmdline_user_args().has("--ground-transition"): folder += "-grounded"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	for action in ["TurnLeftStep", "TurnRightStep"]:
 		var document := GLTFDocument.new()

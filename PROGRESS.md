@@ -1,3 +1,18 @@
+## Complete-sole transition contact repaired — 2026-10-10
+
+Current phase: movement animation production. Completed work: final-pose audit of
+all 664 sole vertices, with current physics tick and independent final leg lengths;
+candidate-only 120 ms floor-plane/ankle correction using the existing two-link IK.
+Last verification: paired 48-case audits at 30/60/120 Hz complete; uncorrected floor
+penetration 30.601198 mm, corrected maximum 0.052651 mm, leg-length error below
+0.000114 mm and maximum lift 6.500 mm. Travel, heading and destination-state gates
+pass. Largest per-case peak sole-speed increase 0.056337 m/s; first-step increase
+below 0.000082 mm. Reviewed 80 corrected native handoff frames from two angles and two critical
+full-size poses. Current work: responsive controller integration. Next task: paired
+moving corner/reversal contact checks after integration. Known issues: proof covers flat-floor constant-speed
+handoffs; continuous timing, real input, exports and broader human/device/course
+acceptance remain open. Published 0.1.3 and production assets retain verified bytes.
+
 ## Dedicated turn root and gait transition audit — 2026-10-10
 
 Current phase: movement animation production. Completed work: added an optional

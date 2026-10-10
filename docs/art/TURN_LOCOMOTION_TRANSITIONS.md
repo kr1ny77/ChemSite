@@ -1,7 +1,7 @@
 # Turn / locomotion transition investigation
 
-Status: dedicated motion root verified in an isolated prototype; transition
-contact fails acceptance. Production player and released 0.1.3 remain at their
+Status: dedicated motion root and complete-sole handoff contact verified in an
+isolated prototype. Production controller integration remains open. Production player and released 0.1.3 remain at their
 verified source.
 
 ## Rig contract
@@ -55,7 +55,7 @@ for production. The native run handoff (20 frames) and rejected matched Walk
 handoff (20 frames) were opened; floor penetration stays a numerical defect even
 where small screen scale makes it hard to judge visually.
 
-## Next validation
+## Validation plan before the complete-sole repair
 
 Measure all sole vertices and tag peak time/fading state to locate deformation
 inside the blend. Repair contact while retaining leg lengths, gait vertical motion
@@ -63,3 +63,35 @@ and responsive controls. Compare production corner/reversal results at all three
 physics rates, review continuous motion and native gameplay, then refresh exports.
 The source/asset hashes, raw cases and explicit scopes are recorded in
 `docs/release/turn-locomotion-transition-audit.json`.
+
+## Complete-sole contact repair — 2026-10-10
+
+The final-pose audit now evaluates every vertex of both soles (664). It captures
+inside `Skeleton3D.skeleton_updated` and checks the current physics tick. A direct
+read after modification had observed the restored authored pose and missed the
+candidate correction; the final-pose signal resolves that measurement error.
+Godot documents this signal after the modifier chain:
+https://docs.godotengine.org/en/stable/classes/class_skeleton3d.html#class-skeleton3d-signal-skeleton-updated.
+
+The full-sole control exposes a 30.601198 mm penetration peak during blending,
+with all 48 cases exceeding 3 mm. `turn_transition_grounding.gd` flattens each
+boot's pitch/roll while retaining yaw, queries the physical floor, lifts only
+the penetrating ankle and reuses the production two-link leg solver. It is
+restricted to the first 120 ms of a grounded handoff. Capsule motion, pelvis,
+chemistry and production assets retain their owners. Rigid sole skinning is
+checked explicitly. Slopes/steps and production input remain outside this test.
+
+Run the audit with `-- --ground-transition` for the candidate; omit that flag for
+the paired control. Both complete 48 cases. Corrected maximum penetration is
+0.052651 mm; final leg-length error is below 0.000114 mm and maximum ankle lift
+6.500 mm. Physical travel, heading and target state pass their existing gates.
+The largest per-case peak sole-speed increase is 0.056337 m/s; first-step increase
+is below 0.000082 mm. These measurements establish contact and bounded continuity
+in this prototype; continuous timing and production controller acceptance remain open.
+The durable proof is `docs/release/turn-transition-grounding.json`.
+
+All 80 corrected native handoff frames (Walk/Run, both turns, two angles) were
+opened on four chronological sheets. Two critical poses were opened at full
+640×400 resolution. Posture stays upright and the short contact correction
+shows no visible joint separation. Production input and continuous timing remain
+the next acceptance scope.
