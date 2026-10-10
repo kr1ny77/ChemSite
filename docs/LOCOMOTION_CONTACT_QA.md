@@ -236,3 +236,17 @@ was restored to 65°. Evidence: artifacts/twist90-contact-physics-60.json and
 /tmp/chemsite-twist90-contact.log. The largest displacement still requires
 correction-bound/support-release diagnosis. User accepted general controls in
 the exported five-task macOS round; this focused residual remains tracked.
+
+## Unbounded support request diagnosis — 2026-10-10
+
+Added a read-only requested-offset value before the existing 65 mm clamp.
+The 60 Hz diagnostic retains turn peaks exactly (difference <0.0001 mm). At
+the corner peak the anchor requests 103.05 mm correction, with 65 mm applied
+and zero reach loss; at reversal it requests 119.81 mm, with 64.99 mm applied
+and zero reach loss. Support phases are 0.15159 and 0.12513 respectively. This
+locates the peak before leg-reach projection: the body/gait sweep exceeds the
+bounded support correction. Further work should address authored directional
+contact/body pivot or support transfer while preserving existing leg-length,
+height and cross-frequency gates. A larger boot-twist limit does not affect it.
+Evidence: artifacts/turn-requested-offset-peaks.json and
+/tmp/chemsite-requested-offset-contact.log.

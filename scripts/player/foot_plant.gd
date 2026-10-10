@@ -19,7 +19,7 @@ var _support_state := ""
 func _ready() -> void:
 	var skeleton := get_skeleton()
 	for side in ["l", "r"]:
-		_feet.append({"hip": skeleton.find_bone("thigh_" + side), "knee": skeleton.find_bone("calf_" + side), "foot": skeleton.find_bone("foot_" + side), "shift": 0.0 if side == "l" else 0.5, "reach_loss": 0.0, "support": false, "anchor": Transform3D.IDENTITY, "offset": Vector3.ZERO, "release": RELEASE_SECONDS})
+		_feet.append({"hip": skeleton.find_bone("thigh_" + side), "knee": skeleton.find_bone("calf_" + side), "foot": skeleton.find_bone("foot_" + side), "shift": 0.0 if side == "l" else 0.5, "reach_loss": 0.0, "requested_offset_m": 0.0, "support": false, "anchor": Transform3D.IDENTITY, "offset": Vector3.ZERO, "release": RELEASE_SECONDS})
 
 func _process_modification_with_delta(delta: float) -> void:
 	if player == null or _feet.is_empty():
@@ -44,6 +44,7 @@ func _process_modification_with_delta(delta: float) -> void:
 	var world := skeleton.global_transform
 	for foot in _feet:
 		foot.reach_loss = 0.0
+		foot.requested_offset_m = 0.0
 		var pose := skeleton.get_bone_global_pose(foot.foot)
 		var authored := world * pose
 		var support_phase := fposmod(phase - 0.25 + float(foot.shift), 1.0)
@@ -51,7 +52,9 @@ func _process_modification_with_delta(delta: float) -> void:
 		if support:
 			if not foot.support:
 				foot.anchor = authored
-			foot.offset = (foot.anchor.origin - authored.origin).limit_length(MAX_CORRECTION)
+			var requested_offset: Vector3 = foot.anchor.origin - authored.origin
+			foot.requested_offset_m = requested_offset.length()
+			foot.offset = requested_offset.limit_length(MAX_CORRECTION)
 			# Keep the authored vertical profile; correct horizontal slide only.
 			foot.offset.y = 0.0
 			foot.release = 0.0

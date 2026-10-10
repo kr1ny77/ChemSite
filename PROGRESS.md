@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Support-request diagnosis — 2026-10-10
+
+Current phase: movement residual diagnosis/platform QA. Completed work:
+verified d221954 Windows native diagnostics digest, 34-file CRC, five keyboard
+levels and absence of engine errors; tracked current native evidence. Added
+requested correction diagnostic before existing bound. Last verification:
+60 Hz contact/release/length/height gates pass with identical turn peaks.
+Corner/reversal request 103.05/119.81 mm correction at their peaks, exceed
+65 mm applied correction and show zero reach loss. Current work: directional
+contact/body-pivot investigation; target device details requested from user.
+Next task: inspect current graphical 38066605312, then choose an authored
+contact/transfer candidate from measured support sweep. Known issues: residual
+turn contact, physical Windows, representative laptop, broad accessibility and
+instructor acceptance remain open.
+
 ## Turn diagnosis and Windows success — 2026-10-10
 
 Current phase: movement residual diagnosis and platform QA. Completed work:

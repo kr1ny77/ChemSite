@@ -1,0 +1,31 @@
+{
+  "run_id": 38066605311,
+  "head_sha": "d22195498457efbab736a5c82b89a68138aea526",
+  "conclusion": "success",
+  "artifacts": [
+    {
+      "id": 11675515008,
+      "name": "ChemSite-Windows-native-QA-logs",
+      "size_in_bytes": 43552,
+      "digest": "sha256:2353442877971a47a7f566f18960b854c09d019cc08fa9b3dd6789e140bad963"
+    },
+    {
+      "id": 11675039512,
+      "name": "ChemSite-Windows-x86_64",
+      "size_in_bytes": 47678213,
+      "digest": "sha256:c9c4617280f377aa64ae180321cadc17c01970c3dda8429026a88491a56eb089"
+    }
+  ],
+  "native_diagnostics": {
+    "zip_sha256": "2353442877971a47a7f566f18960b854c09d019cc08fa9b3dd6789e140bad963",
+    "crc_files": 34,
+    "keyboard_levels_passed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "engine_errors_found": false
+  }
+}

@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Verify d221954 Windows native diagnostics digest/34-file CRC/five keyboard levels/no engine errors; add pose-preserving requested-support-offset diagnosis. Peak requests 103.05/119.81 mm exceed the 65 mm correction with zero reach loss; 60 Hz turn peaks remain exact. Directional contact/body pivot refinement remains open.
+
 - [x] Test and reject 90° boot-twist candidate: measured twist stays 59.19°, corner/reversal drift unchanged at 32.090/40.354 mm; restore 65° production source. d221954 Windows native 38066605311 and older 0eed5fd graphical 38066133509 succeeded; current graphical review follows.
 
 - [x] Verify d221954 shell-material macOS export with keyboard career (700 points) and all 44 practice bindings; inspect digest-verified 0eed5fd Windows diagnostics (34 files, five keyboard levels, version 0.1.1.0, no engine errors). d221954 Windows native 38066605311 and graphical 38066605312 continue.
