@@ -1,10 +1,10 @@
 {
-  "status": "macos_verified_windows_pending",
+  "status": "platform_packages_and_graphical_review_verified",
   "version": "0.1.1",
   "game_source_revision": "1de892ffd1ed78ff5faa8a0f53cf181856437df6",
   "macos": {
-    "archive_bytes": 74413708,
-    "sha256": "73ef314a7d5ec70fc500815a2839f4c0fd4607bb15a0abc4682593b04de3a80a",
+    "archive_bytes": 74413869,
+    "sha256": "e5112f168c6a32894cf050b29876820357c9533064e6dbf7e68b70b7f8c57bec",
     "crc_checked": true,
     "file_hashes_checked": 14,
     "embedded_version": "0.1.1",
@@ -16,7 +16,7 @@
   "windows": {
     "native_run": 38064301998,
     "graphical_run": 38064301853,
-    "status": "in_progress",
+    "status": "verified",
     "native_status": "success",
     "file_version": "0.1.1.0",
     "product_version": "0.1.1.0",
@@ -32,13 +32,62 @@
     ],
     "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
     "build_artifact_id": 11674855910,
-    "build_artifact_sha256": "3ce94810b3e182cc4d50a4f5b333406e1423b95f1c88bff0029a114c2d422d7d"
+    "build_artifact_sha256": "3ce94810b3e182cc4d50a4f5b333406e1423b95f1c88bff0029a114c2d422d7d",
+    "archive_bytes": 46734226,
+    "sha256": "033a8c4b5011ed08de718b0f24b58e570d0705a7a30b87737c06c37023f8cc8c",
+    "file_hashes_checked": 10,
+    "crc_checked": true,
+    "paired_binary_hashes_match_ci": true,
+    "graphical_status": "success",
+    "graphical_artifact_id": 11674686854,
+    "graphical_artifact_sha256": "173596b99be721bb91a8d85b781c9ece46052b98b0b85565f7bf63dfb7ffd602",
+    "graphical_artifact_bytes": 127174999,
+    "graphical_review": {
+      "images_decoded": 212,
+      "dimensions": [
+        1028,
+        642
+      ],
+      "crc_entries": 254,
+      "exact_card_interiors_vs_b583a3e": 176,
+      "different_full_captures_reviewed": 36,
+      "sheets_reviewed": 4,
+      "full_panels_reviewed": [
+        "level5/task_04.png",
+        "level4-electrode/task_03.png"
+      ]
+    }
   },
   "draft_release_id": 409025384,
   "pending": [
-    "Current Windows native and graphical evidence",
-    "Replace superseded draft assets and finalize notes",
     "Publication checks"
   ],
-  "scope": "Current repaired character candidate; broader production acceptance remains open."
+  "scope": "Current repaired character candidate; broader production acceptance remains open.",
+  "draft_windows_asset_id": 628342203,
+  "draft_assets": [
+    {
+      "id": 628343827,
+      "name": "ChemSite-macOS.zip",
+      "size": 74413869,
+      "digest": "sha256:e5112f168c6a32894cf050b29876820357c9533064e6dbf7e68b70b7f8c57bec"
+    },
+    {
+      "id": 628346924,
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:a2d54ace697b54c020d2aa973cf721ef0f2fdaa254bdc321bd9ea48df6f8e536"
+    },
+    {
+      "id": 628342203,
+      "name": "ChemSite-Windows.zip",
+      "size": 46734226,
+      "digest": "sha256:033a8c4b5011ed08de718b0f24b58e570d0705a7a30b87737c06c37023f8cc8c"
+    },
+    {
+      "id": 628345853,
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:67fa01de073979bb84d5e6f149b4e268d655465937acbb6e35e110278bb56121"
+    }
+  ]
 }

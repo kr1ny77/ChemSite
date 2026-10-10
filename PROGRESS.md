@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Repaired platform candidates verified — 2026-10-10
+
+Current phase: release verification. Completed work: both repaired 1de892f
+platform archives and four draft assets match local size/SHA-256. Current Windows
+graphical archive digest and CRC (254 entries) pass; all 212 images decode at
+1028×642. Reviewed 36 differing full captures in four sheets and two full panels;
+176 card interiors exactly match reviewed b583a3e. Last verification: native
+five-level Windows/practice and macOS keyboard/practice pass; prompt/card
+overlap is absent in inspected views. Current work: finalize publication proof.
+Next task: publish verified patch and continue environmental/human QA work.
+Known issues: manual exported round feedback, device performance/accessibility
+and instructor review remain open. User accepted footstep comfort.
+
 ## Repaired Windows native proof — 2026-10-10
 
 Current phase: release verification. Completed work: 1de892f Windows native

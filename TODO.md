@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Verify repaired platform draft assets against local size/SHA-256; review current 212 Windows images (176 exact card interiors, 36 differing full captures, four sheets and two full panels). Publication checks follow.
+
 - [x] Verify repaired 1de892f Windows native success: embedded 0.1.1.0, all five keyboard rounds, 44-topic practice, diagnostics digest and 34-file CRC. Build download and graphical review continue.
 
 - [x] Inspect 72 repaired native cloth cycle samples in eight sheets; package 1de892f macOS after keyboard/practice pass, verify CRC/fourteen hashes/version/mode/extracted equality; open isolated exported app for requested manual review.

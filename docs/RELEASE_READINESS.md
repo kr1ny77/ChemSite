@@ -67,17 +67,22 @@ new version/tag and fresh platform verification.
 
 ## 0.1.1 patch preparation — 2026-10-10
 
-The patch includes softer brushed footsteps, station
-guidance/occlusion polish, all 32 comparison diagrams, gait-bound support
-anchors and modal navigation cleanup. Packager accepts explicit release
-version and verified source revision; BUILD_INFO and README carry the
-supplied version. Candidate archives use builds/release/v0.1.1, preserving
-published 0.1.0 bytes. macOS keyboard career and five-level/44-topic
-practice passed; package CRC, fourteen file hashes, executable mode and
-version/source metadata checked. Extracted app five-level practice passed. Version audit found embedded macOS
-0.1.0 metadata; export presets and project version are updated to 0.1.1,
-with explicit Windows file/product version 0.1.1.0. The prior candidate is
-superseded. Fresh macOS 0.1.1 export, embedded version check, keyboard round,
-practice and extracted practice passed. The current candidate manifest records
-archive hashes and source revision. Windows versioned native/graphical results
-and finalized package notes remain pending before publication.
+Current game source is 1de892ffd1ed78ff5faa8a0f53cf181856437df6. The patch includes
+quiet brushed footsteps (human comfort accepted), all 32 comparison diagrams,
+gait-bound support anchors, modal navigation cleanup and corrected lower-cuff
+skinning. Blender and native critical-pose reviews plus 72 sampled cycle views
+confirm removal of waist-connected sleeve wedges. Complete movement, device,
+accessibility and instructor acceptance remains tracked above.
+
+Fresh universal macOS export contains version 0.1.1 and passed keyboard career
+and five-level/44-topic practice. Archive CRC, fourteen file hashes, extracted
+app equality and executable mode passed. Windows native 38064301998 passed
+embedded file/product 0.1.1.0, all five keyboard rounds and practice; native
+artifact digest/CRC checked. Graphical 38064301853 and its image review remain
+completed after package preparation: 212 images decoded, 176 exact card interiors and 36 differing full captures reviewed. Candidate evidence is recorded separately in
+`docs/release/v0.1.1-sleeve-candidate.json`.
+
+Earlier b583a3e draft assets are superseded by the sleeve repair. Current packages
+are prepared under builds/release/v0.1.1-sleeve and require matching draft asset
+digests, source/tag and final graphical review before publication. Published
+0.1.0 archives retain their original bytes and checksums.
