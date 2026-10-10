@@ -80,6 +80,15 @@ jobs:
           if ($export.ExitCode -ne 0) { throw "Godot export failed ($($export.ExitCode))" }
           Get-ChildItem 'builds/windows' | Select-Object Name,Length | Format-Table
           if (-not (Test-Path 'builds/windows/ChemSite.exe')) { throw 'Windows EXE missing' }
+          $versionLines = @(Select-String -Path 'project.godot' -Pattern '^config/version="([^"]+)"$')
+          if ($versionLines.Count -ne 1) { throw 'Expected one project release version' }
+          $expectedVersion = $versionLines[0].Matches[0].Groups[1].Value + '.0'
+          $versionInfo = [System.Diagnostics.FileVersionInfo]::GetVersionInfo((Resolve-Path 'builds/windows/ChemSite.exe').Path)
+          if ($versionInfo.FileVersion -ne $expectedVersion -or $versionInfo.ProductVersion -ne $expectedVersion) {
+            throw "Windows embedded version mismatch: file=$($versionInfo.FileVersion) product=$($versionInfo.ProductVersion) expected=$expectedVersion"
+          }
+          @{ file_version = $versionInfo.FileVersion; product_version = $versionInfo.ProductVersion } | ConvertTo-Json | Set-Content 'artifacts/native-qa/windows-version.json'
+          Write-Host "WINDOWS_EMBEDDED_VERSION_OK $expectedVersion"
           if (-not (Test-Path 'builds/windows/ChemSite.pck')) { throw 'Windows PCK missing' }
       - name: Run native five-level gameplay smokes
         shell: pwsh

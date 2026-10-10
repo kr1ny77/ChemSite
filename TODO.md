@@ -2,6 +2,10 @@
 
 ## Completed checkpoints
 
+- [x] Correct embedded patch versions to macOS 0.1.1 / Windows 0.1.1.0, add Windows PE version verification, supersede earlier mislabeled candidate; fresh macOS Info.plist verified.
+
+- [x] Reverify current brushed footsteps: native audio playback and Walk/Run contact timing pass; all four clips have silent endpoints. Human listening comfort remains open.
+
 - [x] Compare gait-repair Windows UI evidence: 182 card interiors exactly match reviewed matrix; thirty differing captures reviewed. Add explicit package version/source provenance and create separate 0.1.1 macOS candidate with verified CRC, fourteen file hashes and metadata; extracted app practice passes; Windows platform verification remains pending.
 
 - [x] Review 212 Windows comparison-matrix images and repair navigation prompt behind large modal cards; native 200-task/400-feedback/modal restoration gate and packaged equilibrium round pass. Verify gait-repair Windows native/graphical success, artifact hashes/CRC and 212 decoded images; latest image review remains next.

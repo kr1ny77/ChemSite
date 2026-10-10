@@ -1,5 +1,29 @@
 # ChemSite progress
 
+## Embedded patch version repair — 2026-10-10
+
+Current phase: release preparation. Completed work: aligned project/macOS
+versions at 0.1.1 and Windows file/product versions at 0.1.1.0; added a
+native Windows PE version gate and retained version evidence JSON. Earlier
+patch candidate is marked superseded because its embedded app was 0.1.0.
+Last verification: fresh macOS export completed and both Info.plist versions
+read 0.1.1; workflow YAML parses. Current work: exported app gameplay smoke
+and new Windows revision. Next task: rebuild versioned archives from this
+revision, inspect current Windows evidence and prepare release notes.
+Known issues: human/hardware/instructor acceptance remains open.
+
+## Footstep comfort verification — 2026-10-10
+
+Current phase: audio polish. Completed work: confirmed the current four
+brushed-sole variants, rounded 20 ms attack, suppressed bass and −32 dB
+playback gain are present in the source and refreshed macOS app. Last
+verification: native Forward+ audio playback smoke and authored Walk/Run
+contact timing smoke passed; all four PCM clips have silent endpoints.
+Current work: listener comfort acceptance. Next task: listen to the brushed
+preview and current exported app on headphones and speakers. Known issues:
+human listening acceptance remains open; release candidate metadata work
+continues separately.
+
 ## Patch package preparation — 2026-10-10
 
 Current phase: release preparation. Completed work: compared 212 gait-repair

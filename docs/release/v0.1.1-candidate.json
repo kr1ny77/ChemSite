@@ -1,5 +1,5 @@
 {
-  "status": "candidate_unpublished",
+  "status": "superseded_embedded_version_mismatch",
   "version": "0.1.1",
   "game_source_revision": "f6b1949e918a391df89b7026f900b606944ce4f6",
   "macos": {
@@ -11,8 +11,9 @@
     "extracted_log_sha256": "4e8177a810c7ed9e86bff5835f462b30bad3eb30919b7ef1848f799b46eb321c"
   },
   "pending": [
-    "Windows f6b1949 native and graphical verification",
-    "Final package known-issues/notes and publication checks"
+    "Re-export macOS with embedded 0.1.1 version",
+    "Fresh Windows 0.1.1.0 PE version and native/graphical verification",
+    "Final candidate archives and publication checks"
   ],
   "scope": "Candidate archive verification; complete production acceptance remains open."
 }
