@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Review final reduced material-cache GLB in six BAS angles; refreshed macOS export passes keyboard five-task career (700 points) and five-level/44-topic practice. Source 0eed5fd pushed; Windows native 38066133512 and graphical 38066133509 running.
+
 - [x] Inspect 18 five-level station approaches and panel opening; refine authored cement sacks with flat paper faces, fitted closures and printing. Fresh BAS metrics (20,824 triangles/eight materials), import and native camera review pass. Reduced-asset final multiview and refreshed exports follow.
 
 - [x] Define three equipment clusters with restrained batched floor corner marks: sample workbench, material/mixer bay and water display. Godot import, native 1440×900/1027×642 visual review and station traversal pass. Richer authored dressing remains open.

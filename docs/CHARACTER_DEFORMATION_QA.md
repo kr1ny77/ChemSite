@@ -57,3 +57,11 @@ The exported 1de892f macOS app passed the five-task keyboard round (700 points)
 and all 44 practice bindings across five levels. Current candidate archive
 CRC, fourteen file hashes, embedded 0.1.1 version, executable mode and exact
 extracted-app equality with that tested export passed.
+
+## Published repaired build and human round — 2026-10-10
+
+The repaired 1de892f source is published as v0.1.1 after native platform/package
+and Windows graphical review; see docs/release/v0.1.1-verification.json.
+User answered the exported five-task macOS playtest prompt with “все хорошо”,
+accepting general controls, readability and audio in that round. Focused
+all-phase dynamic contact and physical Windows acceptance remain separate gates.

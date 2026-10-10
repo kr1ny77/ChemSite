@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Revised asset and macOS export verified — 2026-10-10
+
+Current phase: environment polish and platform verification. Completed work:
+reviewed final reduced 20,824-triangle/eight-material cache in six BAS angles;
+exported source 0eed5fd macOS app. Last verification: export success, keyboard
+five-task career 700 points and all 44 practice topics across five levels.
+Current work: Windows native 38066133512 and graphical 38066133509 confirmed
+in_progress via GitHub API. Next task: inspect these exact run results and
+continue coherent authored dressing/material refinement. Known issues: physical
+Windows, representative student laptop, broad accessibility and course instructor
+acceptance remain open; general exported macOS round accepted by user.
+
 ## Material-cache form refinement — 2026-10-10
 
 Current phase: environment polish. Completed work: reviewed 18 station-context

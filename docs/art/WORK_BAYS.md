@@ -88,3 +88,9 @@ meet the 22,000 triangle ceiling; final reduced asset native view reviewed.
 Final reduced-asset multiview and refreshed exports remain next gates.
 Five-level station context review covered 18 decoded native 1027×642 captures
 and verified each nearest station and task-panel opening.
+
+Final reduced-asset six-view BAS review completed (perspective, front/back,
+left/right, top) under artifacts/material-cache-refinement/reduced-final-review.
+The revised native macOS app passed keyboard five-task career (700 points)
+and five-level/44-topic practice. Windows native 38066133512 and graphical
+38066133509 run against source 0eed5fd71c002ab0670825f1af3aac26ee299f0b.
