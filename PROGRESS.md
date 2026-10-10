@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Optional hints exported — 2026-10-10
+
+Current phase: 0.1.3 native patch verification. Completed work: source 76168b2
+pushed; clean editor import and universal macOS export. Last verification:
+packaged keyboard career 700 points, practice 44 topics/five levels; native
+hint Space/focus/reset capture, 11,317 text/state contrast checks and 200-task/
+400-feedback layouts at 1028×642 pass. Current work: Windows native 38069646718
+and graphical 38069646712 at exact 76168b24a6578670a0440ac02a2e4282a71134db.
+Next task: verify their artifacts, review hint UI captures, package/publish
+separate 0.1.3. Known issues: turn residual, broader accessibility/course review
+and user-owned Windows/device tests. Published 0.1.2 preserved.
+
 ## Optional hints implemented — 2026-10-10
 
 Current phase: requested UI refinement, 0.1.3 preparation. Completed work:

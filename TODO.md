@@ -211,3 +211,6 @@
 
 - [x] Review d221954 Windows graphical artifact: digest/254-entry CRC, 212 decoded PNGs and 36 differing captures inspected against the reviewed baseline.
 - [x] Package and publish v0.1.2 at c0d23b2: embedded 0.1.2/0.1.2.0, macOS/extracted practice and keyboard pass, Windows five-level/practice native success, 212 decoded images/31 differing frames reviewed; public tag/four assets/two checksum downloads verified.
+
+- [x] Export optional hints in macOS 0.1.3; keyboard career/practice, raw hint keyboard/reset and 11,317 contrast/state checks pass. Exact-source Windows native 38069646718 and graphical 38069646712 running.
+- [ ] Publish verified 0.1.3 with optional hints after native Windows and visual artifact review.
