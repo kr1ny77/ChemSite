@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Inspect 18 five-level station approaches and panel opening; refine authored cement sacks with flat paper faces, fitted closures and printing. Fresh BAS metrics (20,824 triangles/eight materials), import and native camera review pass. Reduced-asset final multiview and refreshed exports follow.
+
 - [x] Define three equipment clusters with restrained batched floor corner marks: sample workbench, material/mixer bay and water display. Godot import, native 1440×900/1027×642 visual review and station traversal pass. Richer authored dressing remains open.
 
 - [x] Publish v0.1.1 prerelease at repaired source 1de892f; verify tag commit, four platform/checksum assets and both public checksum downloads. Broader human/hardware/instructor acceptance remains open.
@@ -172,7 +174,7 @@
 - [x] Automatically pause exploration on desktop focus loss; freeze timer/movement, preserve open panels and require explicit resume. Verify native image and movement regressions.
 - [x] Add a persistent isolated exported playtest profile; verify menu/career/answer/menu persistence and unchanged user file hashes.
 - [x] Exercise all five default career rounds through raw keyboard events, collision-based walking, Tab/Space preparations, equation/numeric/formula input, pause, save/unlock and menu return; review native captures, run the macOS package and Windows EXE CI. Physical human playtesting remains a separate gate.
-- [ ] Complete a human-driven five-task playtest in the exported app and resolve gameplay, visual and audio QA findings; packaged macOS runs capture all five HUD interaction states and results, and `docs/AUDIO_QA.md` provides a listening path with measured source peaks
+- [x] Complete a human-driven five-task playtest in the exported macOS app: user replied “все хорошо” on 2026-10-10 to the explicit five-task control/readability/audio check. Broader device, all-level and accessibility reviews remain open.
 
 ## Later phases
 

@@ -1,5 +1,28 @@
 # ChemSite progress
 
+## Material-cache form refinement — 2026-10-10
+
+Current phase: environment polish. Completed work: reviewed 18 station-context
+captures across five levels; refined original sacks with flat paper faces,
+rounded corners, end closures and fitted printing. Added isolated output option
+to authored source. Last verification: fresh BAS import of reduced final GLB
+20,824 triangles/eight meshes/eight materials, zero issues; editor import and
+native 1440×900 view pass. Six earlier candidate angles reviewed; closure bevels
+then reduced to meet 22,000 ceiling. Current work: final reduced-asset multiview
+and refreshed native packages. Next task: complete those gates and continue
+authored environmental detail. Known issues: broader human/device/accessibility/
+instructor QA remains open. User accepted exported macOS five-task round.
+
+## Human exported macOS round accepted — 2026-10-10
+
+Current phase: environment polish and QA. Completed work: user answered the
+explicit exported five-task playtest request with “все хорошо”, accepting that
+macOS round’s controls, question readability and audio. Last verification:
+current curated JSON contains exactly 200 tasks, forty per level. Current work:
+material-cache form refinement and native review. Next task: finish revised
+asset validation and inspect expanded work-zone context. Known issues: broader
+all-level/hardware/accessibility/instructor review remains open.
+
 ## Equipment cluster floor hierarchy — 2026-10-10
 
 Current phase: environment polish. Completed work: separate reusable

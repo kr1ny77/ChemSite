@@ -1,13 +1,19 @@
 """Create a compact palletized cement-and-brick storage assembly."""
 
 from pathlib import Path
+import argparse
+import sys
+import math
 
 import bpy
 
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / "assets/models/environment"
-SOURCE = ROOT / "tools/blender/source"
+parser = argparse.ArgumentParser()
+parser.add_argument("--output-root", type=Path, default=ROOT)
+options = parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
+OUTPUT = options.output_root / "assets/models/environment"
+SOURCE = options.output_root / "tools/blender/source"
 OUTPUT.mkdir(parents=True, exist_ok=True)
 SOURCE.mkdir(parents=True, exist_ok=True)
 
@@ -36,7 +42,7 @@ strap = material("blue retaining strap", (0.08, 0.28, 0.36), 0.42, 0.2)
 steel = material("galvanized tie hardware", (0.40, 0.48, 0.48), 0.38, 0.55)
 
 
-def box(name, location, dimensions, surface, bevel=0.02):
+def box(name, location, dimensions, surface, bevel=0.02, segments=3):
     bpy.ops.mesh.primitive_cube_add(size=1, location=location)
     obj = bpy.context.object
     obj.name = name
@@ -46,7 +52,7 @@ def box(name, location, dimensions, surface, bevel=0.02):
     if bevel:
         modifier = obj.modifiers.new("rounded edge", "BEVEL")
         modifier.width = min(bevel, min(dimensions) * 0.3)
-        modifier.segments = 3
+        modifier.segments = segments
         obj.modifiers.new("weighted normals", "WEIGHTED_NORMAL")
     return obj
 
@@ -55,11 +61,22 @@ def bag(name, location, dimensions):
     bpy.ops.mesh.primitive_uv_sphere_add(segments=20, ring_count=10, location=location)
     obj = bpy.context.object
     obj.name = name
+    # Flatten broad paper faces while retaining soft filled corners.
+    for vertex in obj.data.vertices:
+        for axis in range(3):
+            value = vertex.co[axis]
+            exponent = 0.48 if axis < 2 else 0.65
+            vertex.co[axis] = math.copysign(abs(value) ** exponent, value)
     obj.scale = (dimensions[0] / 2, dimensions[1] / 2, dimensions[2] / 2)
     bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
     obj.data.materials.append(cement)
     for face in obj.data.polygons:
         face.use_smooth = True
+    # Folded closure tabs meet the compressed ends of the paper shell.
+    for sign in (-1, 1):
+        box(name + " folded end seam",
+            (location[0] + sign * dimensions[0] * 0.50, location[1], location[2]),
+            (0.028, dimensions[1] * 0.67, dimensions[2] * 0.48), cement, 0.008, segments=2)
     return obj
 
 
@@ -80,7 +97,7 @@ for layer, z in enumerate((0.41, 0.66, 0.91)):
             offset = 0.045 if layer == 1 else 0.0
             bag("sealed cement sack", (x + offset, y, z), (0.72, 0.52, 0.24))
             if layer == 2:
-                box("printed cement band", (x + offset, y, z + 0.105), (0.35, 0.12, 0.012), cement_label, 0.004)
+                box("printed cement band", (x + offset, y, z + 0.121), (0.35, 0.12, 0.012), cement_label, 0.004)
 
 # Bonded courses of bricks on the second pallet, with visible offset joints.
 for layer in range(4):

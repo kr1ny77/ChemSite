@@ -65,3 +65,26 @@ camera at two sizes, eight source/package notes, physical approach and five-leve
 station routes. Broader material hierarchy, animation/VFX and human QA continue.
 
 Final pipe-display GLB uses 11,932 triangles and seven batched materials. Reduced small-fastener density, tank radial sections and thin retaining-ring sampling preserved the five-view shape while meeting the 12,000-triangle budget. Fresh inspection reports zero issues. Physical approach stops at z=3.885 m and the optional inspection is reachable.
+
+## Material-cache refinement contract — 2026-10-10
+
+Existing original asset repair: keep two pallets, twelve cement sacks, bonded
+brick courses and retaining straps at the current footprint. Reviewed native
+five-level context reveals overly oval sacks. Target smooth cartoon paper
+packaging with flattened broad faces, soft corners, fitted folded end closures
+and visible top printing. Preserve eight materials, collision footprint and
+static batching; triangle ceiling 22,000. Candidate output stays under
+artifacts/material-cache-refinement until fresh import, complementary views and
+native camera review pass. Baseline BAS inspection: 18,232 triangles, eight
+meshes/materials, zero invalid/degenerate/missing-material geometry issues.
+The existing asset defines proportions; folded closure geometry is an original
+authoring assumption.
+
+Candidate promoted after native 1440×900 review: broad sack faces and fitted end
+closures read from the game camera. Final GLB: 20,824 triangles, eight meshes and
+eight materials; fresh BAS import reports zero geometry/material issues. Six
+views reviewed before reducing closure bevels from three to two segments to
+meet the 22,000 triangle ceiling; final reduced asset native view reviewed.
+Final reduced-asset multiview and refreshed exports remain next gates.
+Five-level station context review covered 18 decoded native 1027×642 captures
+and verified each nearest station and task-panel opening.
