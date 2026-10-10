@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Random answer positions implemented — 2026-10-10
+
+Current phase: requested 0.1.3 UI refinement. Completed work: independent
+per-HUD choice RNG, copied/per-task cached Fisher-Yates permutation; reopening
+retains order, source content and value-bound validation unchanged. Last
+verification: 128 seeded orders cover all four positions, cache mutation and
+reopen checks; 112 choice task option preservation/correct submissions pass.
+Current work: native 200-task layout and fresh 0.1.3 source export. Next task:
+exact-source platform checks and replace unpublished draft candidate assets.
+Known issues: prior draft/source checks superseded, turn residual, broader
+accessibility/course review and user-owned device tests.
+
 ## Focus validator repaired — 2026-10-10
 
 Current phase: 0.1.3 release gate repair. Completed work: native Windows

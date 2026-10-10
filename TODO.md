@@ -216,3 +216,5 @@
 - [ ] Publish verified 0.1.3 with optional hints after native Windows and visual artifact review.
 
 - [x] Repair focus-pause validator after hint header became a container: verify stable task-prompt identity/text through focus loss. Native source gate passes; fresh Windows runs follow new source.
+
+- [x] Randomize displayed answer positions with independent per-round RNG and cached per-task permutation; preserve original data, reopening order and value-bound answer validation. Seeded 128-run coverage reaches all four positions; all 112 choice tasks retain options and submit correct value. Native layout/export follows.

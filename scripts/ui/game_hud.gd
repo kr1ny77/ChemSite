@@ -15,6 +15,7 @@ const IONIZATION_SCAN_VIEW = preload("res://scripts/ui/ionization_scan_view.gd")
 const DISSOCIATION_SETUP_VIEW = preload("res://scripts/ui/dissociation_setup_view.gd")
 
 var reduced_motion := false
+var _choice_order = preload("res://scripts/ui/choice_order.gd").new()
 
 var _objective: Label
 var _status: Label
@@ -261,7 +262,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		cards.add_theme_constant_override("h_separation", 10)
 		cards.add_theme_constant_override("v_separation", 10)
 		_panel_content.add_child(cards)
-		for option in task.options:
+		for option in _choice_order.options_for(task):
 			var button := Button.new()
 			button.text = option
 			button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

@@ -59,6 +59,7 @@ jobs:
             @{ Script = 'mixer_motion_smoke'; Marker = 'CHEMSITE_MIXER_MOTION_OK' }
             @{ Script = 'construction_progress_smoke'; Marker = 'CHEMSITE_CONSTRUCTION_PROGRESS_OK' }
             @{ Script = 'focus_pause_smoke'; Marker = 'FOCUS_PAUSE_SMOKE_OK' }
+            @{ Script = 'choice_order_smoke'; Marker = 'CHOICE_ORDER_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
