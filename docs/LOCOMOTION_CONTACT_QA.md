@@ -272,3 +272,18 @@ restored byte-for-byte. No release assets changed. This identifies leg reach
 as the limit of this correction-only approach; the next candidate must modify
 authored support transfer/body turn timing. Failed candidate output:
 `/tmp/chemsite-correction120-measured.log`.
+
+## Directional gait baseline — 2026-10-10
+
+The fresh production 60 Hz gate passes: corner/reversal peaks remain
+32.090403/40.354334 mm. Added read-only `velocity_yaw` and `heading_error`
+fields to the validator, preserving the same evaluated poses and thresholds.
+At those peaks, velocity leads body heading by 46.600° and 90.632°.
+The current sagittal ankle trajectory is aligned with the body while
+translation follows this substantially different direction. This supports
+a directional-gait candidate: steer stance/swing trajectories toward local
+travel direction while retaining body turn damping, authored contact phase,
+vertical profiles and existing correction/reach bounds. Counter-steering
+should settle to zero during straight travel. Validate all three physics
+frequencies, straight negative control, release, two views and normal-speed
+turn recording before promotion. Diagnostic: artifacts/turn-direction-baseline.json.

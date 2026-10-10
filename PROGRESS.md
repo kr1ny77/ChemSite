@@ -1,5 +1,16 @@
 # ChemSite progress
 
+## Directional gait diagnosis — 2026-10-10
+
+Current phase: movement polish. Completed work: fresh production 60 Hz contact
+gate; validator now records velocity/body heading mismatch without pose changes.
+Last verification: corner/reversal peaks exactly 32.090/40.354 mm; local travel
+leads body by 46.600°/90.632° at those peaks. Current work: directional local
+ankle-path candidate. Next task: retain authored support timing/vertical profile
+and body damping while steering gait toward travel; verify three frequencies
+and two-view full motion before promotion. Known issues: turn residual, broad
+accessibility/course review and user-owned Windows/device tests.
+
 ## Correction-only turn candidate rejected — 2026-10-10
 
 Current phase: movement polish after verified 0.1.2 publication. Completed work:

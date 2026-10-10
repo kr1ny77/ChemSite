@@ -82,7 +82,7 @@ func _run() -> void:
 							previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 							continue
 						var drift := Vector2(point.x - last.point.x, point.z - last.point.z).length()
-						samples.append({"frame": frame, "time_s": float(frame) / physics_hz, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y, "phase": phase, "support_phase": shifted, "reach_loss_m": plant._feet[1 if "-1" in sole.name else 0].reach_loss, "plant_offset_m": plant._feet[1 if "-1" in sole.name else 0].offset.length(), "requested_offset_m": plant._feet[1 if "-1" in sole.name else 0].requested_offset_m})
+						samples.append({"frame": frame, "time_s": float(frame) / physics_hz, "sole": str(sole.name), "state": state, "drift_m": drift, "height_m": point.y, "speed": Vector2(player.velocity.x, player.velocity.z).length(), "yaw": player.visual.rotation.y, "velocity_yaw": atan2(player.velocity.x, player.velocity.z), "heading_error": wrapf(atan2(player.velocity.x, player.velocity.z) - player.visual.rotation.y, -PI, PI), "phase": phase, "support_phase": shifted, "reach_loss_m": plant._feet[1 if "-1" in sole.name else 0].reach_loss, "plant_offset_m": plant._feet[1 if "-1" in sole.name else 0].offset.length(), "requested_offset_m": plant._feet[1 if "-1" in sole.name else 0].requested_offset_m})
 				previous[sole.name] = {"supporting": supporting, "state": state, "phase": phase, "point": point, "tick": Engine.get_physics_frames()}
 		Input.action_release(action)
 		var maximum := 0.0
