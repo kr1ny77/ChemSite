@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Current material export verified — 2026-10-10
+
+Current phase: environment polish/platform QA. Completed work: d221954 macOS
+release export, keyboard career 700 points and five-level/44-topic practice
+passed; readiness ledger reflects user macOS acceptance and published patch.
+Last verification: 0eed5fd native Windows diagnostics digest/34-file CRC,
+five keyboard levels, embedded 0.1.1.0 and no engine errors. Current work:
+d221954 Windows native 38066605311 and graphical 38066605312; older 0eed5fd
+graphical 38066133509 also confirmed running. Next task: inspect these exact
+runs, review current Windows images and continue environmental material/detail
+work. Known issues: physical Windows, representative laptop, broad accessibility
+and instructor acceptance remain open.
+
 ## Shell coatings reviewed — 2026-10-10
 
 Current phase: environment materials. Completed work: refine five painted/window

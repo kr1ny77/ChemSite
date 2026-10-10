@@ -1,6 +1,6 @@
 # ChemSite prerelease readiness
 
-Updated 2026-10-09. This ledger distinguishes automated evidence from remaining
+Updated 2026-10-10. This ledger distinguishes automated evidence from remaining
 acceptance work. The full production objective remains active.
 
 ## Native implementation and evidence
@@ -15,15 +15,15 @@ acceptance work. The full production objective remains active.
 | Practice | All 44 level/topic bindings; five timer-free package rounds; unchanged career file hashes | Human topic browsing |
 | HUD, menus and accessibility | 200 task/400 feedback layout matrix, 7,089 HUD and 172 menu contrast/state checks; keyboard rounds; reduced motion | Human readability and full accessibility acceptance |
 | Chemistry feedback and environment motion | All 32 comparison and five mixing diagrams, 192 reveal/layout/motion checks, native state reviews, finite/reduced motion, mixer loop, repaired particle fade | Human VFX readability/acceptance |
-| Audio | Original music reproducibility, four brushed-sole contacts at reduced gain, contact timing, native playback/settings gates | Headphone/laptop-speaker mix acceptance, physical Windows audio |
+| Audio | Original music reproducibility, four brushed-sole contacts, timing/playback/settings gates; user accepted footstep comfort | Headphone/laptop-speaker mix acceptance, physical Windows audio |
 | Performance | M4 source profiles documented in PERFORMANCE_BASELINE.md | Approximately 60 FPS on representative student laptop |
-| macOS build | Universal release export; practice and keyboard career package tests | Human exported five-task round; unsigned/unnotarized distribution |
-| Windows build | GitHub native/graphical workflows; ac41d28 native 37924483319 and graphical 37924656032 both green | Physical desktop input/audio/save |
-| Source and documentation | Main pushed, v0.1.0 tags ac41d28, current screenshots/README and asset provenance | Broader acceptance tracked below |
+| macOS build | Universal release export; practice/keyboard career tests; user accepted exported five-task round (“все хорошо”, 2026-10-10) | Unsigned/unnotarized distribution; broader all-level/device QA |
+| Windows build | Published 1de892f native 38064301998 and graphical 38064301853 passed; current 0eed5fd native 38066133512 passed | Physical desktop input/audio/save |
+| Source and documentation | Main pushed; v0.1.0 ac41d28 and v0.1.1 1de892f tags, current screenshots/README and asset provenance | Broader acceptance tracked below |
 | Download archives and checksums | Both archives generated and extracted; CRC, file hashes and permissions verified; GitHub asset digests match | Physical Windows acceptance |
-| GitHub prerelease | Published v0.1.0 with both archives and checksum files; public tag/downloads verified | Broader production acceptance |
+| GitHub prerelease | Published v0.1.0 and v0.1.1 with platform archives/checksums; public tags/downloads verified | Broader production acceptance |
 
-The practice/audio revision passed current Windows native and graphical runs.
+Historical v0.1.0 practice/audio revision passed Windows native and graphical runs.
 All 191 captures decode at 1028×642; sixteen contact sheets and three full-size
 panels were reviewed after artifact digest verification. The macOS extracted app
 passed five career levels and five-level practice.

@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Verify d221954 shell-material macOS export with keyboard career (700 points) and all 44 practice bindings; inspect digest-verified 0eed5fd Windows diagnostics (34 files, five keyboard levels, version 0.1.1.0, no engine errors). d221954 Windows native 38066605311 and graphical 38066605312 continue.
+
 - [x] Refine shell/stage coated-material properties while preserving geometry chunks/hierarchy; editor import, BAS fresh staged GLB (32,440 triangles/zero issues) and twelve matched native stage views pass. Cache/markings M4 final-stage profile records 145 FPS locally. Windows native 38066133512 succeeded on pre-coating 0eed5fd; graphical 38066133509 remains running.
 
 - [x] Review final reduced material-cache GLB in six BAS angles; refreshed macOS export passes keyboard five-task career (700 points) and five-level/44-topic practice. Source 0eed5fd pushed; Windows native 38066133512 and graphical 38066133509 running.
