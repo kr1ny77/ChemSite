@@ -14,7 +14,6 @@
     "native_hidden_shown_views_reviewed": true
   },
   "pending": [
-    "fresh macOS wrapper/extracted verification",
     "Windows native/graphical exact-source results",
     "Windows artifact/package verification",
     "new release publication/public asset checks"
@@ -31,15 +30,24 @@
       "status": "in_progress"
     }
   ],
-  "superseded_draft_assets": {
-    "release_id": 409081352,
-    "source_revision": "7cbecf259282b871588a5ea1dbc4ba0cc2de7cee",
-    "reason": "Requested random answer positions added; replace draft macOS assets after fresh verification"
-  },
   "choice_order_checks": {
     "seeded_orders": 128,
     "correct_positions": 4,
     "choice_tasks": 112,
     "native_all_task_layout": true
+  },
+  "release_id": 409081352,
+  "macos": {
+    "source_revision": "fea5dda2c6540ee7467e885e7b294b73e713f093",
+    "keyboard_level_1": true,
+    "practice_topics": 44,
+    "practice_levels": 5,
+    "archive_crc": true,
+    "app_file_hashes_equal": 6,
+    "extracted_app_practice": true,
+    "bytes": 74484596,
+    "sha256": "687aac268e733acdea1375e3fc5f4c432ed705664e3f6af2e9d4ed45c7a2241f",
+    "asset_id": 628509352,
+    "checksum_asset_id": 628510396
   }
 }

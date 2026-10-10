@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Current 0.1.3 macOS draft verified — 2026-10-10
+
+Current phase: patch verification. Completed work: fea5dda macOS wrapper with
+matching source metadata, CRC and six tested-app file hashes; extracted
+app 44-topic/five-level practice passes. Superseded draft macOS assets removed
+under explicit draft guard; new 74,484,596-byte ZIP SHA
+687aac268e733acdea1375e3fc5f4c432ed705664e3f6af2e9d4ed45c7a2241f and checksum
+upload digests verified on draft 409081352. Last verification: archive/extracted
+app and GitHub asset digest. Current work: native 38070150831 and graphical
+38070150875 running. Next task: verify their artifacts, package Windows and
+publish current 0.1.3. Known issues: broad acceptance and turn residual.
+
 ## Randomized choices exported — 2026-10-10
 
 Current phase: exact-source 0.1.3 native verification. Completed work: fea5dda
