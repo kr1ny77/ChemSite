@@ -25,6 +25,8 @@ var _xp_label: Label
 var _prompt: Label
 var _panel: PanelContainer
 var _panel_content: VBoxContainer
+var _hint: Label
+var _hint_button: Button
 var _feedback: Label
 var _formula_buffer: String = ""
 var _formula_tokens: Array[String] = []
@@ -153,9 +155,24 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_panel.anchor_bottom = 0.82
 	_panel.visible = true
 	var eyebrow := _label("СТАНЦИЯ  /  " + _station_name(station_id), 17, Color("975013"))
-	_panel_content.add_child(eyebrow)
+	var task_header := HBoxContainer.new()
+	eyebrow.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	task_header.add_child(eyebrow)
+	_hint_button = Button.new()
+	_hint_button.text = "ПОКАЗАТЬ ПОДСКАЗКУ"
+	_hint_button.toggle_mode = true
+	_hint_button.add_theme_font_size_override("font_size", 17)
+	_style_button(_hint_button, true)
+	_hint_button.toggled.connect(func(shown: bool) -> void:
+		_hint.visible = shown
+		_hint_button.text = "СКРЫТЬ ПОДСКАЗКУ" if shown else "ПОКАЗАТЬ ПОДСКАЗКУ"
+	)
+	task_header.add_child(_hint_button)
+	_panel_content.add_child(task_header)
 	_panel_content.add_child(_label(task.prompt, 30, Color("243b43")))
-	_panel_content.add_child(_label("ПОДСКАЗКА: " + task.hint, 19, Color("52666c")))
+	_hint = _label("ПОДСКАЗКА: " + task.hint, 19, Color("52666c"))
+	_hint.visible = false
+	_panel_content.add_child(_hint)
 	if not mission_steps.is_empty():
 		_mission_stage = MISSION_STAGE_VIEW.new()
 		_mission_stage.configure(mission_steps)
@@ -552,6 +569,8 @@ func _clear_panel() -> void:
 	_panel_fit_active = false
 	_panel.offset_top = 0.0
 	_panel.offset_bottom = 0.0
+	_hint = null
+	_hint_button = null
 	_mission_stage = null
 	_mix_view = null
 	_scale_view = null

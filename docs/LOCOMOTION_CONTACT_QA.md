@@ -313,3 +313,11 @@ and candidate files are in artifacts/directional-gait-*.json; comparison is
 artifacts/directional-gait-comparison.json. No visual promotion gate claimed.
 Next candidate should steer during swing/transfer and preserve support ownership;
 a continuously steered planted leg introduces phase-sensitive reach loss.
+
+## Swing-only direction candidate rejected — 2026-10-10
+
+30° steering updated during swing and held through support. 60 Hz corner
+regresses 32.090→33.936 mm; reversal improves 40.354→35.763 mm. Both gates
+pass, reach loss 30.937/33.309 mm. Production restored byte-for-byte after
+comparative rejection; wider promotion/visual checks omitted. Evidence:
+artifacts/swing-only-steering-physics60.json. Movement polish remains open.

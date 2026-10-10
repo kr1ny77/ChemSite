@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Optional hints implemented — 2026-10-10
+
+Current phase: requested UI refinement, 0.1.3 preparation. Completed work:
+hidden initial hint, show/hide button in task header, fresh state at every task
+opening, answer-preparation gates preserved. Last verification: native
+1028×642 all 200 tasks hidden/revealed/expanded, 400 feedback states; raw Space
+reveal/focus/reset and two reviewed native captures. Swing-only steering
+candidate rejected for mixed 60 Hz result; movement restored. Current work:
+0.1.3 export and platform verification. Next task: packaged keyboard/practice,
+Windows exact-source runs and separate patch publication. Known issues:
+turn residual, broad accessibility/course review and user-owned device tests.
+
 ## Directional steering measured and rejected — 2026-10-10
 
 Current phase: movement polish. Completed work: 60° and 30° local ankle

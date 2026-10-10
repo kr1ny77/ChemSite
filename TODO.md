@@ -2,6 +2,9 @@
 
 ## Completed checkpoints
 
+- [x] Make task hints opt-in through keyboard-accessible show/hide button; reset on each opening, retain existing answer preparation gates. Native 200-task hidden/revealed/expanded and 400-feedback matrix at 1028×642 passes; two native views and raw Space/reset check reviewed. Version 0.1.3 export follows.
+- [x] Reject swing-only steering after mixed 60 Hz result: corner 32.090→33.936 mm, reversal 40.354→35.763 mm; restore production movement.
+
 - [x] Compare 60°/30° directional ankle steering; 30° improves corners at all three frequencies and 30/60 Hz reversals, but 120 Hz reversal worsens 27.181→34.840 mm. Reject promotion and restore production byte-for-byte. Next candidate steers swing/transfer while preserving planted support.
 
 - [x] Measure velocity/body direction at production contact peaks: 46.600° corner and 90.632° reversal mismatch; add read-only diagnostic fields, preserve exact 32.090/40.354 mm peaks and pass full 60 Hz contact gate. Next: directional local ankle paths with existing support/height/reach bounds.

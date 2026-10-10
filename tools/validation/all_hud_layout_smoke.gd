@@ -19,6 +19,12 @@ func _run() -> void:
 			await process_frame
 			checked += 1
 			_check_panel(hud, str(task.id), "unread", failures)
+			assert(not hud._hint.visible and not hud._hint_button.button_pressed, "Hint visible on task open")
+			hud._hint_button.set_pressed(true)
+			await process_frame
+			await process_frame
+			assert(hud._hint.visible and hud._hint.text == "ПОДСКАЗКА: " + task.hint)
+			_check_panel(hud, str(task.id), "hint", failures)
 			var expanded := false
 			if hud._comparison_view != null:
 				hud._comparison_view.inspect_run(0)
@@ -39,6 +45,8 @@ func _run() -> void:
 			if expanded:
 				await process_frame
 				_check_panel(hud, str(task.id), "read", failures)
+			hud._hint_button.set_pressed(false)
+			assert(not hud._hint.visible, "Hint toggle failed to hide")
 			hud.close_panel()
 			if not hud._prompt.get_parent().visible: failures.append(str(task.id) + " navigation not restored after close")
 	var feedback_checked := 0
