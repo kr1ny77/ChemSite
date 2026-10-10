@@ -250,3 +250,13 @@ contact/body pivot or support transfer while preserving existing leg-length,
 height and cross-frequency gates. A larger boot-twist limit does not affect it.
 Evidence: artifacts/turn-requested-offset-peaks.json and
 /tmp/chemsite-requested-offset-contact.log.
+
+## Slower heading candidate — 2026-10-10
+
+Response 13 tested gentler angular acceleration against production response 16.
+At 60 Hz corner peak increased from 32.090 to 35.332 mm; reversal decreased
+only from 40.354 to 39.706 mm. The candidate passed existing numeric limits
+but degraded corner contact while slowing response. Restored response 16;
+cross-frequency/visual promotion gates were skipped after this rejection.
+Evidence: artifacts/response13-contact-60.json and
+/tmp/chemsite-response13-contact60.log.

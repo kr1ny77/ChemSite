@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Heading candidate rejected; graphical success — 2026-10-10
+
+Current phase: movement polish and Windows image review. Completed work:
+response 13 tested, compared to response 16 and rejected: corner contact
+degrades 32.090→35.332 mm for 0.648 mm reversal improvement. Restored original
+player source. Last verification: 60 Hz contact/length/height/release and
+heading response gates pass; promotion stopped after comparative rejection.
+Current work: d221954 graphical 38066605312 completed success; artifact
+11674619216 (127,438,217 bytes, SHA aa879279df8d904f7eb9e58c584877815b87f7d19f7b77cd90994b702740858f) downloading.
+Next task: verify/download/review current Windows image matrix; retain current
+controller and investigate authored directional contact for later movement
+refinement. Known issues: residual turn contact, physical Windows, target
+laptop details, accessibility and instructor acceptance remain open.
+
 ## Support-request diagnosis — 2026-10-10
 
 Current phase: movement residual diagnosis/platform QA. Completed work:
