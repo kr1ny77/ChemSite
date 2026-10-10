@@ -1,3 +1,19 @@
+## Version 0.1.3 published and verified — 2026-10-10
+
+Current phase: UI patch release complete; broader production polish continues.
+Completed work: optional hints and independent randomized answer order shipped
+at fea5dda2c6540ee7467e885e7b294b73e713f093. All 112 choice tasks preserve
+answer validation and all four positions are covered. Native Windows
+38070150831 and graphical 38070150875 succeeded. All 212 Windows PNGs decoded;
+72 card interiors matched the preceding review, 140 differing frames reviewed
+on 16 sheets, with long mission/equilibrium panels inspected full size.
+Current work: release evidence recorded. Next task: remaining movement/contact
+and environment polish from TODO. Last verification: release 409081352 public,
+prerelease true, exact tag commit, four asset sizes/digests and both public
+checksum downloads verified; macOS package/extracted practice already passed.
+Known issues: tight-turn contact, broader accessibility/course review and
+user-owned Windows/device checks remain open. Earlier published bytes retained.
+
 # ChemSite progress
 
 ## Current 0.1.3 Windows package verified — 2026-10-10

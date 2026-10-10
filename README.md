@@ -26,7 +26,7 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 
 ## Download
 
-[ChemSite v0.1.2 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.2)
+[ChemSite v0.1.3 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.3)
 provides **ChemSite-macOS.zip**, **ChemSite-Windows.zip** and matching SHA-256 files.
 Extract the entire archive, then open `ChemSite.app` or `ChemSite.exe`.
 Keep the Windows EXE and PCK together. Both archives include install instructions,

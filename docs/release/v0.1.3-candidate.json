@@ -1,7 +1,7 @@
 {
   "source_revision": "fea5dda2c6540ee7467e885e7b294b73e713f093",
   "version": "0.1.3",
-  "status": "verification_in_progress",
+  "status": "published_verified",
   "superseded_native_failure": {
     "run": 38069646718,
     "cause": "focus validator assumed old header was a Label; prompt identity/text validator repaired"
@@ -13,20 +13,19 @@
     "raw_space_focus_reset": true,
     "native_hidden_shown_views_reviewed": true
   },
-  "pending": [
-    "Windows graphical exact-source results and image review",
-    "new release publication/public asset checks"
-  ],
+  "pending": [],
   "runs": [
     {
       "id": 38070150831,
       "name": "Windows native smoke",
-      "status": "in_progress"
+      "status": "completed",
+      "conclusion": "success"
     },
     {
       "id": 38070150875,
       "name": "Windows visual QA",
-      "status": "in_progress"
+      "status": "completed",
+      "conclusion": "success"
     }
   ],
   "choice_order_checks": {
@@ -68,7 +67,13 @@
     "build_artifact_id": 11677015625,
     "build_artifact_sha256": "645d72846a4afc79fd0c1d21683224b7aee12ee756844d08c0e1e21003ca3576",
     "wrapper_crc": true,
-    "wrapper_binaries_match": true
+    "wrapper_binaries_match": true,
+    "visual_run": 38070150875,
+    "visual_conclusion": "success",
+    "visual_images": 212,
+    "exact_card_interiors": 72,
+    "changed_frames_reviewed": 140,
+    "contact_sheets_reviewed": 16
   },
   "assets": [
     {

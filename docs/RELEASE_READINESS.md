@@ -97,3 +97,14 @@ pass. Windows graphical run 38067867808: 254-entry CRC, 212 decoded PNGs,
 Public tag, four asset sizes/digests and both public checksum downloads verified
 in docs/release/v0.1.2-verification.json. Published earlier archives preserved.
 User owns target-computer performance and physical Windows checks; results pending.
+
+## 0.1.3 verified publication — 2026-10-10
+
+Source fea5dda2c6540ee7467e885e7b294b73e713f093; native Windows
+38070150831 and graphical 38070150875 succeeded. 212 PNGs decoded,
+72 exact card interiors and 140 differing captures reviewed on 16 sheets;
+long mission and equilibrium panels inspected at full size. Optional hints
+and randomized choices preserve layout and correct answer submission.
+Public release 409081352, tag, four asset sizes/digests and two checksum
+downloads verified in docs/release/v0.1.3-verification.json.
+Broader human, device, accessibility and course acceptance remain open.

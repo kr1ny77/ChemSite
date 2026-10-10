@@ -160,3 +160,14 @@ docs/release/windows-ui-comparison-88ab688.json.
 
 The subsequent f6b1949 modal repair is in Windows native run 38061582316
 and visual run 38061582404; both remained in progress at this checkpoint.
+
+## 0.1.3 verified publication — 2026-10-10
+
+Source fea5dda2c6540ee7467e885e7b294b73e713f093; native Windows
+38070150831 and graphical 38070150875 succeeded. 212 PNGs decoded,
+72 exact card interiors and 140 differing captures reviewed on 16 sheets;
+long mission and equilibrium panels inspected at full size. Optional hints
+and randomized choices preserve layout and correct answer submission.
+Public release 409081352, tag, four asset sizes/digests and two checksum
+downloads verified in docs/release/v0.1.3-verification.json.
+Broader human, device, accessibility and course acceptance remain open.
