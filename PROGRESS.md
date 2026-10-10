@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Equipment cluster floor hierarchy — 2026-10-10
+
+Current phase: environment polish. Completed work: separate reusable
+WorkZoneMarkings renderer batches 24 short paint segments across sample, concrete
+and water equipment bays. Open corner brackets connect related equipment and
+retain the central path. Last verification: Godot editor import/parse, native
+Forward+ 1440×900 and actual 1027×642 captures reviewed; Level 1 collision-based
+station traversal passes. Evidence: artifacts/work-zone-review. Current work:
+continue authored environment refinement. Next task: inspect five-level equipment
+composition and add meaningful work-zone detail from existing art sources. Known
+issues: denser asset dressing, human exported round/device/accessibility/instructor
+review remain open. This source polish follows published 0.1.1.
+
 ## v0.1.1 published and verified — 2026-10-10
 
 Current phase: production polish following verified patch publication. Completed

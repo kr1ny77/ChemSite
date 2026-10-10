@@ -124,3 +124,10 @@ entry and seeds consecutive prior levels through the existing save service.
 Player AnimationTree uses the physics callback to match controller displacement.
 `docs/LOCOMOTION_CONTACT_QA.md` records actual skinned-sole diagnostics and the
 remaining reversal-contact issue.
+
+### Equipment bay floor hierarchy
+
+`work_zone_markings.gd` groups sample, concrete/mixer and water equipment with
+three static MultiMesh batches (24 short flat paint segments). Corner brackets
+leave open approaches and introduce no physics or interaction state. All marks
+sit at y=0.006 above the existing work-zone surface.

@@ -197,6 +197,9 @@ func _build_world() -> void:
 	_block("CentralPath", Vector3(0, -0.0035, 0.2), Vector3(3.6, 0.012, 12.5), Color("9daeb7"), false)
 	_block("RearPath", Vector3(0, -0.003, -3.4), Vector3(14, 0.012, 2.5), Color("9daeb7"), false)
 	_build_path_markings()
+	var work_zones := preload("res://scripts/world/work_zone_markings.gd").new()
+	work_zones.name = "WorkZoneMarkings"
+	_world.add_child(work_zones)
 	_block("BuildPad", Vector3(-5.2, 0.07, 4.1), Vector3(6.3, 0.13, 4.3), Color("b5b9ad"), true)
 	_environment_prop("construction_stages", Vector3(-5.6, 0.14, 4.1))
 	_environment_prop("rebar_bay", Vector3(-2.5, 0.14, 4.0))

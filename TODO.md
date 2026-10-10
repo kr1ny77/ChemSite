@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Define three equipment clusters with restrained batched floor corner marks: sample workbench, material/mixer bay and water display. Godot import, native 1440×900/1027×642 visual review and station traversal pass. Richer authored dressing remains open.
+
 - [x] Publish v0.1.1 prerelease at repaired source 1de892f; verify tag commit, four platform/checksum assets and both public checksum downloads. Broader human/hardware/instructor acceptance remains open.
 
 - [x] Verify repaired platform draft assets against local size/SHA-256; review current 212 Windows images (176 exact card interiors, 36 differing full captures, four sheets and two full panels). Publication checks follow.
