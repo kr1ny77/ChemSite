@@ -1,0 +1,38 @@
+{
+  "release_id": 409065092,
+  "url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.2",
+  "draft": false,
+  "prerelease": true,
+  "tag_commit": "c0d23b2bb0392fbb2869d86420a0ac9943e47128",
+  "public_checksum_downloads_verified": [
+    "ChemSite-macOS.zip.sha256",
+    "ChemSite-Windows.zip.sha256"
+  ],
+  "assets": [
+    {
+      "id": 628436692,
+      "name": "ChemSite-macOS.zip",
+      "size": 74483075,
+      "digest": "sha256:7f246d023b7cbb9fbe112021372d5bf8d19b8b3b7372b11af3d7bfc233836618"
+    },
+    {
+      "id": 628437720,
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:d97611487a8bf1f55c5c59630b75848659fe0b35d226fd78a414c1f97263b984"
+    },
+    {
+      "id": 628448515,
+      "name": "ChemSite-Windows.zip",
+      "size": 46803841,
+      "digest": "sha256:13c609dc276c13127bc27e155a49f59250471ff21104c3b3ef6a129a2d908b12"
+    },
+    {
+      "id": 628449138,
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:8b2531d040f51b3b26da7f59586860307de24ef9b4f10cc690b05c87aa8d1648"
+    }
+  ],
+  "scope": "Verified published prerelease; broader human, device, accessibility and course acceptance remain open."
+}

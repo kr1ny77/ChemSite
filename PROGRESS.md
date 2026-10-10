@@ -1,5 +1,30 @@
 # ChemSite progress
 
+## Version 0.1.2 published and verified — 2026-10-10
+
+Current phase: published native patch; broader production polish remains active.
+Completed work: GitHub prerelease 409065092 at c0d23b2, matching embedded
+0.1.2/0.1.2.0; native macOS and Windows keyboard/practice checks pass.
+Last verification: Windows graphical success, 254-entry CRC, 212 decoded PNGs,
+181 exact card interiors and 31 differing frames reviewed in four sheets;
+public tag, four asset size/digests and both checksum downloads verified.
+Current work: Windows installation instructions. Next task: continue authored
+turn-contact/environment/accessibility polish from remaining TODO gates.
+Known issues: user-owned Windows/device tests, target-course instructor review,
+broad accessibility and residual tight-turn contact.
+
+## Version 0.1.2 macOS package verified — 2026-10-10
+
+Current phase: native release verification. Completed work: c0d23b2 universal
+macOS release export, raw-keyboard five-task career and 44-topic/five-level
+practice pass. ZIP CRC and six app-file hashes match the tested app; extracted
+app practice passes. Draft 409065092 contains macOS ZIP and checksum with
+verified upload digests. Last verification: packaged Forward+ app and extracted
+practice logs. Current work: live Windows native 38067866167 and graphical
+38067867808 at exact source. Next task: digest-check their artifacts, package
+Windows and publish 0.1.2. Known issues: broader user device/accessibility/course
+acceptance and residual tight-turn foot contact.
+
 ## Version 0.1.2 preparation — 2026-10-10
 
 Current phase: native patch packaging. Completed work: d221954 Windows graphical
@@ -32,8 +57,7 @@ Current work: d221954 graphical 38066605312 completed success; artifact
 11674619216 (127,438,217 bytes, SHA aa879279df8d904f7eb9e58c584877815b87f7d19f7b77cd90994b702740858f) downloading.
 Next task: verify/download/review current Windows image matrix; retain current
 controller and investigate authored directional contact for later movement
-refinement. Known issues: residual turn contact, physical Windows, target
-laptop details, accessibility and instructor acceptance remain open.
+refinement. Known issues: residual turn contact, physical Windows, user-owned target-device checks, accessibility and instructor acceptance remain open.
 
 ## Support-request diagnosis — 2026-10-10
 
@@ -1401,5 +1425,5 @@ observation captures: 175 PNGs expected. New Windows verification follows push.
 - The authored shell provides a coherent upper frame and safety-rail silhouette. Its surfaces and the surrounding modular props still need material refinement and richer environmental dressing.
 - Further station animations, chemistry VFX coverage and human accessibility review remain pending. Reduced motion is implemented; a human accessibility review remains pending. Footstep/machinery audio has structural and level checks; a listening mix review remains pending.
 - All nine action key poses have visual evidence, the revised celebration pose reads in Godot, and sustained locomotion has a contact sheet. Minor in-place foot slide may benefit from later animation polish.
-- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven round in the exported app remains pending. The Windows x86_64 EXE passed automated rounds and a graphical five-task capture on GitHub Actions. Physical keyboard, audio listening and save behavior on a Windows user desktop remain to be reviewed.
+- The macOS release is unsigned and unnotarized; its automated five-task round and full visual capture pass. A human-driven five-task macOS round was accepted on 2026-10-10. The Windows x86_64 EXE passed automated rounds and a graphical five-task capture on GitHub Actions. Physical keyboard, audio listening and save behavior on a Windows user desktop remain to be reviewed.
 - Level 1 mastery and weak-topic scheduling now work. All 200 source tasks are structured in native JSON and marked verified; a target-course instructor review remains open. Levels 1–5 enter gameplay through separate career rounds. All five levels still need human playtesting and contextual interaction polish.

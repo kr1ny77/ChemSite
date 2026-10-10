@@ -201,4 +201,4 @@
 - [x] Resolve production music provenance: existing original synthesis source reproduces native track 1 byte-for-byte in an isolated directory; source, size and SHA-256 recorded in docs/ASSET_LICENSES.md.
 
 - [x] Review d221954 Windows graphical artifact: digest/254-entry CRC, 212 decoded PNGs and 36 differing captures inspected against the reviewed baseline.
-- [ ] Package and publish v0.1.2 with matching embedded versions, current environment refinements and exact-source native verification.
+- [x] Package and publish v0.1.2 at c0d23b2: embedded 0.1.2/0.1.2.0, macOS/extracted practice and keyboard pass, Windows five-level/practice native success, 212 decoded images/31 differing frames reviewed; public tag/four assets/two checksum downloads verified.

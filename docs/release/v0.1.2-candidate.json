@@ -1,0 +1,76 @@
+{
+  "source_revision": "c0d23b2bb0392fbb2869d86420a0ac9943e47128",
+  "release_id": 409065092,
+  "status": "published_verified",
+  "embedded_version": "0.1.2",
+  "macos": {
+    "bytes": 74483075,
+    "sha256": "7f246d023b7cbb9fbe112021372d5bf8d19b8b3b7372b11af3d7bfc233836618",
+    "keyboard_level_1": true,
+    "practice_topics": 44,
+    "practice_levels": 5,
+    "extracted_app_practice": true,
+    "archive_app_hashes_equal": true
+  },
+  "windows": {
+    "native_run": 38067866167,
+    "graphical_run": 38067867808,
+    "status": "in_progress",
+    "native_status": "success",
+    "embedded_version": "0.1.2.0",
+    "keyboard_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "practice_topics": 44,
+    "practice_levels": 5,
+    "diagnostics_crc_entries": 34,
+    "engine_errors_found": false,
+    "archive_binary_hashes_equal": true,
+    "graphical_status": "completed",
+    "graphical_conclusion": "success",
+    "graphical_artifact": {
+      "id": 11675433101,
+      "sha256": "7f50cc396af3b35f87ec61e487541e856de83ee99030ec0700cf27e11cda104a"
+    },
+    "decoded_pngs": 212,
+    "exact_panel_interiors": 181,
+    "different_frames_reviewed": 31
+  },
+  "pending": [],
+  "broader_acceptance": [
+    "user-owned device performance/input/audio/save",
+    "expanded accessibility",
+    "target-course instructor review",
+    "tight-turn contact polish"
+  ],
+  "assets": [
+    {
+      "id": 628436692,
+      "name": "ChemSite-macOS.zip",
+      "size": 74483075,
+      "digest": "sha256:7f246d023b7cbb9fbe112021372d5bf8d19b8b3b7372b11af3d7bfc233836618"
+    },
+    {
+      "id": 628437720,
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:d97611487a8bf1f55c5c59630b75848659fe0b35d226fd78a414c1f97263b984"
+    },
+    {
+      "id": 628448515,
+      "name": "ChemSite-Windows.zip",
+      "size": 46803841,
+      "digest": "sha256:13c609dc276c13127bc27e155a49f59250471ff21104c3b3ef6a129a2d908b12"
+    },
+    {
+      "id": 628449138,
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:8b2531d040f51b3b26da7f59586860307de24ef9b4f10cc690b05c87aa8d1648"
+    }
+  ]
+}
