@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## Randomized choices exported — 2026-10-10
+
+Current phase: exact-source 0.1.3 native verification. Completed work: fea5dda
+source push, import/export, native 200-task/400-feedback layout, 112 value-bound
+choice submissions and 128-seed four-position checks; native screenshot reviewed
+with correct answer moved to upper right. Last verification: macOS packaged
+keyboard round 700 points; practice log and source hint keyboard/reset pass.
+Current work: Windows native 38070150831 and graphical 38070150875 at
+fea5dda2c6540ee7467e885e7b294b73e713f093. Next task: replace superseded
+unpublished 0.1.3 draft 409081352 macOS assets after fresh package verification,
+review Windows outputs and publish. Known issues: older draft source 7cbecf2
+superseded, turn residual, broader acceptance and user-owned device tests.
+
 ## Random answer positions implemented — 2026-10-10
 
 Current phase: requested 0.1.3 UI refinement. Completed work: independent

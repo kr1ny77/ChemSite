@@ -1,0 +1,45 @@
+{
+  "source_revision": "fea5dda2c6540ee7467e885e7b294b73e713f093",
+  "version": "0.1.3",
+  "status": "verification_in_progress",
+  "superseded_native_failure": {
+    "run": 38069646718,
+    "cause": "focus validator assumed old header was a Label; prompt identity/text validator repaired"
+  },
+  "local_hint_checks": {
+    "task_panels": 200,
+    "feedback_panels": 400,
+    "contrast_state_checks": 11317,
+    "raw_space_focus_reset": true,
+    "native_hidden_shown_views_reviewed": true
+  },
+  "pending": [
+    "fresh macOS wrapper/extracted verification",
+    "Windows native/graphical exact-source results",
+    "Windows artifact/package verification",
+    "new release publication/public asset checks"
+  ],
+  "runs": [
+    {
+      "id": 38070150831,
+      "name": "Windows native smoke",
+      "status": "in_progress"
+    },
+    {
+      "id": 38070150875,
+      "name": "Windows visual QA",
+      "status": "in_progress"
+    }
+  ],
+  "superseded_draft_assets": {
+    "release_id": 409081352,
+    "source_revision": "7cbecf259282b871588a5ea1dbc4ba0cc2de7cee",
+    "reason": "Requested random answer positions added; replace draft macOS assets after fresh verification"
+  },
+  "choice_order_checks": {
+    "seeded_orders": 128,
+    "correct_positions": 4,
+    "choice_tasks": 112,
+    "native_all_task_layout": true
+  }
+}
