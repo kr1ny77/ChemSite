@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Upload and verify all four 0.1.1 draft assets against local SHA-256/size; add native build evidence and checksums to draft notes. Current graphical review and publication remain pending.
+
 - [x] Package b583a3e Windows 0.1.1 archive with matching CI binaries and ten hashes; refresh macOS wrapper and verify unchanged tested app; create GitHub patch draft and verify Windows asset upload.
 
 - [x] Verify b583a3e Windows native success: PE file/product 0.1.1.0, five keyboard rounds, 44-topic practice, native diagnostics digest and all 34 file CRCs; update current audio QA measurements.

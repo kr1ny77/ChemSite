@@ -17,7 +17,7 @@
   },
   "pending": [
     "Current Windows graphical evidence review",
-    "Draft asset upload and publication checks"
+    "Finalized release notes and publication checks"
   ],
   "scope": "Candidate archive verification; complete production acceptance remains open.",
   "windows": {
@@ -45,5 +45,31 @@
     "file_hashes_checked": 10,
     "paired_binary_hashes_match_ci": true
   },
-  "draft_release_id": 409025384
+  "draft_release_id": 409025384,
+  "draft_assets": [
+    {
+      "id": 628277315,
+      "name": "ChemSite-macOS.zip",
+      "bytes": 74413591,
+      "sha256": "42e37d06125c69a4722c1958adc3e0cd508d3955fb727f75f689d0f7c04acaa3"
+    },
+    {
+      "id": 628276092,
+      "name": "ChemSite-Windows.zip",
+      "bytes": 46733867,
+      "sha256": "4c84fe577b1cc34832b8da924d5f8c89e22043810cb349b62b18397fc899ef94"
+    },
+    {
+      "id": 628279316,
+      "name": "ChemSite-macOS.zip.sha256",
+      "bytes": 85,
+      "sha256": "6dc0f3154d2519e9763c7682bff8594f5538988af7b9c92b30fb6a2cd624898f"
+    },
+    {
+      "id": 628278599,
+      "name": "ChemSite-Windows.zip.sha256",
+      "bytes": 87,
+      "sha256": "b9646f58bbff486dea4cb67e847cb3070bdcc58baf03daea42051cd12d2a5948"
+    }
+  ]
 }

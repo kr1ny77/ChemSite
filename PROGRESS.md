@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Draft asset integrity — 2026-10-10
+
+Current phase: release preparation. Completed work: uploaded both platform
+archives and checksum files to draft release 409025384. Last verification:
+all four server asset sizes and SHA-256 digests equal local files; draft tag
+is v0.1.1, source b583a3e, prerelease flag retained. Updated draft body with
+native workflow evidence and archive hashes. Current work: graphical workflow
+38062449518 remains live; listener comfort feedback requested while independent
+release work continues. Next task: inspect current Windows graphical archive,
+finalize notes and publish verified prerelease. Known issues: full human,
+hardware and instructor acceptance remains open; draft is unpublished.
+
 ## Windows archive and draft patch — 2026-10-10
 
 Current phase: release preparation. Completed work: downloaded Windows build
