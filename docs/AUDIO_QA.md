@@ -1,5 +1,25 @@
 # ChemSite audio QA
 
+## Current brushed footsteps (2026-10-10)
+
+Four original 90 ms sole-brush clips use a 20 ms rounded attack, 40 ms tail
+fade, three cascaded 620–680 Hz low-pass stages and 180 Hz bass suppression.
+Runtime playback gain is −32 dB through SFX, with the existing small pitch
+variation and animation-contact timing. All PCM endpoints are silent.
+
+| Clip | RMS dBFS | Peak dBFS |
+| --- | ---: | ---: |
+| `step_a.wav` | -45.81 | -31.20 |
+| `step_b.wav` | -44.58 | -32.96 |
+| `step_c.wav` | -45.88 | -32.78 |
+| `step_d.wav` | -43.66 | -29.65 |
+
+Native Forward+ audio playback and Walk/Run contact timing pass. The current
+versioned macOS app passed keyboard gameplay and all-level practice. The
+preview `artifacts/soft-footsteps-brush-preview.wav` is amplified for timbre
+review; game playback is quieter. Headphone/speaker comfort acceptance remains
+open. Earlier measurements below describe historical revisions.
+
 ## Quiet sole refinement (2026-10-08)
 
 Follow-up walking-sound feedback: four contacts now last 100 ms, with

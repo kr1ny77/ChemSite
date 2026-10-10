@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Windows embedded version and native rounds — 2026-10-10
+
+Current phase: release preparation. Completed work: Windows native workflow
+38062449441 on b583a3e succeeded. Downloaded native diagnostics match GitHub
+SHA-256; all 34 files pass ZIP CRC. PE file/product versions are 0.1.1.0.
+Last verification: all five packaged keyboard rounds and 44-topic/five-level
+practice markers confirmed; updated audio QA with current brushed clip RMS/
+peak measurements and historical revision labels. Current work: build artifact
+download and graphical workflow 38062449518. Next task: inspect graphical
+evidence and finalize Windows archive/publication checks. Known issues:
+human/hardware/instructor acceptance remains open.
+
 ## Versioned macOS candidate — 2026-10-10
 
 Current phase: release preparation. Completed work: committed/pushed b583a3e

@@ -77,5 +77,7 @@ practice passed; package CRC, fourteen file hashes, executable mode and
 version/source metadata checked. Extracted app five-level practice passed. Version audit found embedded macOS
 0.1.0 metadata; export presets and project version are updated to 0.1.1,
 with explicit Windows file/product version 0.1.1.0. The prior candidate is
-superseded and both platforms require fresh export/version verification
-and finalized package notes before publication.
+superseded. Fresh macOS 0.1.1 export, embedded version check, keyboard round,
+practice and extracted practice passed. The current candidate manifest records
+archive hashes and source revision. Windows versioned native/graphical results
+and finalized package notes remain pending before publication.
