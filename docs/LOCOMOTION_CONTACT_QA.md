@@ -224,3 +224,15 @@ Human movement acceptance and residual turn displacement remain open.
 Evidence: docs/screenshots/gait-anchor-reset-review.jpg;
 /tmp/chemsite-gait-anchor-reset.log, /tmp/chemsite-anchor-reset-{30,120}.log,
 /tmp/chemsite-anchor-reset-{transitions,steps,package}.log.
+
+## Boot-twist bound diagnosis — 2026-10-10
+
+A temporary 90° boot limit tested whether the 65° rotation bound caused the
+remaining 60 Hz turn displacement. The measured maximum actual twist was
+59.19°; corner/reversal peaks remained 32.090/40.354 mm, matching the repaired
+production results. All contact/release/length/height gates passed. The limit
+was inactive in this scenario and the candidate produced no improvement; source
+was restored to 65°. Evidence: artifacts/twist90-contact-physics-60.json and
+/tmp/chemsite-twist90-contact.log. The largest displacement still requires
+correction-bound/support-release diagnosis. User accepted general controls in
+the exported five-task macOS round; this focused residual remains tracked.

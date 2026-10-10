@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Turn diagnosis and Windows success — 2026-10-10
+
+Current phase: movement residual diagnosis and platform QA. Completed work:
+90° boot-twist candidate tested against 60 Hz full evaluated soles; actual
+maximum twist 59.19°, unchanged 32.090/40.354 mm corner/reversal. Reverted to
+65° source because the bound is inactive. Last verification: contact/release/
+length/height gates pass; d221954 Windows native 38066605311 succeeded and
+0eed5fd graphical 38066133509 succeeded, artifact identities saved. Current
+work: current native diagnostics download and d221954 graphical 38066605312.
+Next task: verify diagnostics and current graphical artifact; investigate
+correction-bound release for residual displacement. Known issues: residual
+turn contact, physical Windows, representative laptop, broad accessibility
+and instructor acceptance remain open. General macOS round accepted.
+
 ## Current material export verified — 2026-10-10
 
 Current phase: environment polish/platform QA. Completed work: d221954 macOS
