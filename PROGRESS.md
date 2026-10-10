@@ -1,5 +1,15 @@
 # ChemSite progress
 
+## Human footstep comfort accepted — 2026-10-10
+
+Current phase: audio acceptance and release preparation. Completed work:
+user explicitly rated the current brushed walking sound “Комфортный”.
+Last verification: direct user listening feedback; source/native contact and
+playback gates were already passed. Current work: Windows graphical artifact
+download. Next task: inspect images and finalize 0.1.1 prerelease. Known issues:
+output device unspecified; full-mix headphone/speaker and physical Windows
+audio checks, broader movement/hardware/instructor acceptance remain open.
+
 ## Current Windows graphical success — 2026-10-10
 
 Current phase: release preparation. Completed work: b583a3e graphical workflow

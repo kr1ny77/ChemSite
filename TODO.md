@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Human walking-sound comfort acceptance: user explicitly rated current brushed footsteps “Комфортный” on 2026-10-10. Full-mix/device-specific listening remains open.
+
 - [x] Confirm b583a3e Windows graphical workflow success and record current 127,198,201-byte artifact identity/digest; image download and visual review remain pending.
 
 - [x] Upload and verify all four 0.1.1 draft assets against local SHA-256/size; add native build evidence and checksums to draft notes. Current graphical review and publication remain pending.

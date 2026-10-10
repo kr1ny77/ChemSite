@@ -17,8 +17,11 @@ variation and animation-contact timing. All PCM endpoints are silent.
 Native Forward+ audio playback and Walk/Run contact timing pass. The current
 versioned macOS app passed keyboard gameplay and all-level practice. The
 preview `artifacts/soft-footsteps-brush-preview.wav` is amplified for timbre
-review; game playback is quieter. Headphone/speaker comfort acceptance remains
-open. Earlier measurements below describe historical revisions.
+review; game playback is quieter. On 2026-10-10 the user explicitly rated the
+current walking sound “Комфортный”. Walking-sound comfort is accepted. The
+output device was unspecified; headphone/laptop-speaker full-mix and physical
+Windows listening checks remain open. Earlier measurements below describe
+historical revisions.
 
 ## Quiet sole refinement (2026-10-08)
 
