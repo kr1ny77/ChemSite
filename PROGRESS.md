@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Current 0.1.3 Windows package verified — 2026-10-10
+
+Current phase: final graphical patch review. Completed work: fea5dda Windows
+native 38070150831 success, version 0.1.3.0, five keyboard levels, 44-topic
+practice and 112-choice/four-position checks pass; 35 diagnostics files
+CRC/SHA verified without engine errors. Windows wrapper CRC and EXE/PCK
+hashes match verified artifact. Last verification: four draft 409081352 assets
+match local size/SHA-256, including new macOS/extracted practice. Current work:
+graphical 38070150875 live, capture phase. Next task: digest-download/review
+212 Windows images against 0.1.2, then publish/tag/check public assets. Known
+issues: broader acceptance and turn residual. Russian Windows guide added.
+
 ## Current 0.1.3 macOS draft verified — 2026-10-10
 
 Current phase: patch verification. Completed work: fea5dda macOS wrapper with

@@ -14,6 +14,7 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 - An enclosed construction yard, eight optional inspections, station guidance and earned construction stages.
 - Local progression, topic learning, score, combo, stars and per-level records.
 - Keyboard navigation, separate music/effects volume, reduced motion and focus-loss pause.
+- Current source: optional show/hide hints and shuffled choice positions, stable when reopening a task.
 
 ## Screenshots
 
@@ -25,17 +26,19 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 
 ## Download
 
-[ChemSite v0.1.0 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.0)
+[ChemSite v0.1.2 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.2)
 provides **ChemSite-macOS.zip**, **ChemSite-Windows.zip** and matching SHA-256 files.
 Extract the entire archive, then open `ChemSite.app` or `ChemSite.exe`.
 Keep the Windows EXE and PCK together. Both archives include install instructions,
 known issues, build metadata and third-party notices.
 
+[Пошаговая инструкция для Windows](docs/WINDOWS_INSTALL_RU.md).
+
 ## Status
 
 The native macOS app and Windows x86_64 EXE have automated gameplay and export checks. Current verification and unfinished checkpoints are recorded in [PROGRESS.md](PROGRESS.md) and [TODO.md](TODO.md).
 
-Human movement/audio/accessibility acceptance, a representative student-laptop performance test, physical Windows input/audio/save checks and target-course instructor review remain open. The macOS build is unsigned and unnotarized. The v0.1.0 prerelease records these limitations in its release notes.
+The user accepted a five-task macOS control/readability/audio playtest and footstep comfort. Broader movement/audio/accessibility acceptance, a representative student-laptop performance test, physical Windows input/audio/save checks and target-course instructor review remain open. The macOS build is unsigned and unnotarized. The published prerelease records these limitations in its release notes.
 
 ## Run from source
 
