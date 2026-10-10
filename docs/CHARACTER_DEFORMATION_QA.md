@@ -44,3 +44,16 @@ passed. Sole errors remain below 0.2 mm; steady Walk/Run drift remains below
 0.9 mm. Full-cycle cloth review, human movement feel and revised packaged
 macOS/Windows verification remain open. The previous b583a3e patch archives
 are superseded by this character repair before publication.
+
+## Sampled cycle regression
+
+The native capture now accepts `--cycle`: nine normalized phases (0 through
+0.999) for Walk, Run, Interact and Celebrate in front/profile views. All 72
+images were opened in eight chronological sheets. Cuffs follow the arms across
+these samples; the former waist-connected wedges remain absent. These are
+sampled cycle captures; continuous controller movement acceptance remains open.
+`artifacts/cartoon-sleeve-repair/native-cycles/` retains the images and sheets.
+The exported 1de892f macOS app passed the five-task keyboard round (700 points)
+and all 44 practice bindings across five levels. Current candidate archive
+CRC, fourteen file hashes, embedded 0.1.1 version, executable mode and exact
+extracted-app equality with that tested export passed.

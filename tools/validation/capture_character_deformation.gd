@@ -36,22 +36,26 @@ func _run() -> void:
 	var camera: Camera3D = site.get_node("CameraRig/Camera3D")
 	camera.size = 2.4
 	var animations := player.visual.find_children("*", "AnimationPlayer", true, false)[0] as AnimationPlayer
-	var folder := "res://artifacts/cartoon-sleeve-repair/native"
+	var cycle := OS.get_cmdline_user_args().has("--cycle")
+	var folder := "res://artifacts/cartoon-sleeve-repair/native-cycles" if cycle else "res://artifacts/cartoon-sleeve-repair/native"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	for view in ["front", "side"]:
 		camera.global_position = Vector3(0, 1.1, 5) if view == "front" else Vector3(5, 1.1, 0)
 		camera.look_at(Vector3(0, .82, 0))
-		for action in ["Run", "Interact", "Celebrate"]:
-			animations.play(action)
-			animations.seek(animations.get_animation(action).length * (.8 if action == "Celebrate" else .65), true)
-			animations.pause()
-			for frame in range(3):
-				await process_frame
-			RenderingServer.force_draw()
-			var capture := root.get_texture().get_image()
-			if capture.save_png("%s/%s-%s.png" % [folder, action.to_lower(), view]) != OK:
-				push_error("Character deformation capture failed")
-				quit(1)
-				return
-	print("CHARACTER_DEFORMATION_CAPTURE_OK views=2 actions=3")
+		for action in (["Walk", "Run", "Interact", "Celebrate"] if cycle else ["Run", "Interact", "Celebrate"]):
+			for sample in range(9 if cycle else 1):
+				var phase := minf(float(sample) / 8.0, .999) if cycle else (.8 if action == "Celebrate" else .65)
+				animations.play(action)
+				animations.seek(animations.get_animation(action).length * phase, true)
+				animations.pause()
+				for frame in range(3):
+					await process_frame
+				RenderingServer.force_draw()
+				var capture := root.get_texture().get_image()
+				var filename := "%s-%s-%02d.png" % [action.to_lower(), view, sample] if cycle else "%s-%s.png" % [action.to_lower(), view]
+				if capture.save_png("%s/%s" % [folder, filename]) != OK:
+					push_error("Character deformation capture failed")
+					quit(1)
+					return
+	print("CHARACTER_DEFORMATION_CAPTURE_OK views=2 actions=%d samples=%d" % [4 if cycle else 3, 9 if cycle else 1])
 	quit()

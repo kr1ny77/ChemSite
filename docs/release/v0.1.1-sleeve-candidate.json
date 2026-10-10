@@ -1,0 +1,28 @@
+{
+  "status": "macos_verified_windows_pending",
+  "version": "0.1.1",
+  "game_source_revision": "1de892ffd1ed78ff5faa8a0f53cf181856437df6",
+  "macos": {
+    "archive_bytes": 74413708,
+    "sha256": "73ef314a7d5ec70fc500815a2839f4c0fd4607bb15a0abc4682593b04de3a80a",
+    "crc_checked": true,
+    "file_hashes_checked": 14,
+    "embedded_version": "0.1.1",
+    "extracted_app_equals_tested_export": true,
+    "executable_mode_checked": true,
+    "keyboard_marker": "KEYBOARD_ROUND_SMOKE_OK level=1 completed=5 score=700.0",
+    "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5"
+  },
+  "windows": {
+    "native_run": 38064301998,
+    "graphical_run": 38064301853,
+    "status": "in_progress"
+  },
+  "draft_release_id": 409025384,
+  "pending": [
+    "Current Windows native and graphical evidence",
+    "Replace superseded draft assets and finalize notes",
+    "Publication checks"
+  ],
+  "scope": "Current repaired character candidate; broader production acceptance remains open."
+}

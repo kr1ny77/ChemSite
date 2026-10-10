@@ -1,5 +1,21 @@
 # ChemSite progress
 
+## Repaired macOS package and sampled cloth cycles — 2026-10-10
+
+Current phase: character QA and release preparation. Completed work: reviewed
+72 native front/profile phase captures of Walk, Run, Interact and Celebrate
+in eight chronological sheets; cuffs follow the arms without prior fabric
+wedges in sampled phases. Last verification: current 1de892f macOS export
+passed five-task keyboard round (700 points) and all 44 practice topics/five
+levels; new archive CRC/fourteen file hashes, embedded 0.1.1, executable mode
+and extracted app equality passed. Archive: builds/release/v0.1.1-sleeve,
+74,413,708 bytes. Current work: native Windows 38064301998 and graphical
+38064301853; isolated exported app opened for user manual five-task review
+and feedback requested. Next task: inspect those Windows results, replace
+superseded draft assets and publish after final checks. Known issues:
+continuous controller/human movement, hardware and instructor acceptance remain
+open; direct manual feedback pending. Footstep comfort is accepted.
+
 ## Sleeve skinning repair and current Windows image review — 2026-10-10
 
 Current phase: character polish and release verification. Completed work:
@@ -12,9 +28,11 @@ reordered sleeve classification and repaired current source/GLB through a
 reviewed candidate. Last verification: identical fresh-import structure/action
 metrics, nine affected Blender pose views, six native Forward+ captures,
 import/parse, grounding/stance, phase, footstep and contact diagnostics pass.
-Current work: new platform builds required; b583a3e draft assets are superseded
-and remain unpublished. Next task: export repaired macOS, run packaged smoke,
-push source and inspect new Windows native/graphical results before replacing
+Current work: 1de892f pushed; repaired macOS export completed, packaged
+keyboard process is live (session 27171, /tmp/chemsite-sleeve-keyboard.log).
+Windows native 38064301998 and graphical 38064301853 are live on 1de892f.
+b583a3e draft assets are superseded and remain unpublished. Next task: finish
+packaged keyboard/practice checks, inspect those Windows results and replace
 draft assets. Known issues: full-cycle cloth/human movement, hardware and
 instructor acceptance remain open. Human footstep comfort is accepted.
 

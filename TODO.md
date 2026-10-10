@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Inspect 72 repaired native cloth cycle samples in eight sheets; package 1de892f macOS after keyboard/practice pass, verify CRC/fourteen hashes/version/mode/extracted equality; open isolated exported app for requested manual review.
+
 - [x] Review current Windows 212-image matrix (179 exact interiors, 33 differing captures inspected); identify and repair 153 incorrectly weighted cuff vertices; inspect fresh Blender/native poses and pass grounding/phase/contact/audio regression gates. Fresh platform packages follow.
 
 - [x] Human walking-sound comfort acceptance: user explicitly rated current brushed footsteps “Комфортный” on 2026-10-10. Full-mix/device-specific listening remains open.

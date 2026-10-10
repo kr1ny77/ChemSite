@@ -5,7 +5,7 @@ below. The shipped `assets/models/character/chemist.glb` now uses the original
 cartoon model from `tools/blender/source/cartoon_chemist.blend`. Authoring script:
 `tools/blender/build_cartoon_chemist.py`; candidate outputs go to
 `artifacts/cartoon-character/`. Blender 5.2.2; original geometry and solid-color
-materials, 43,912 triangles, 15 bones and nine actions. Four user-supplied
+materials, 44,424 triangles, 15 bones and nine actions. Four user-supplied
 Overcooked images guide rounded proportions and readable cartoon surfaces.
 Contract: `docs/art/CHARACTER_DIRECTION.md`. Geometry and textures from those
 reference games are absent from the authored asset.
@@ -18,6 +18,14 @@ support-edge interpolation accurate. Nominal Walk speed is 0.499512 m/s, Run
 50%, Run stance 20%. Upright PickUp/Interact preserve stationary soles. Native
 physics/controller gates use the actual imported skinned soles, preserve phase,
 check contact-aligned sound events and verify stopped animation against fences.
+
+## Sleeve skinning repair, 2026-10-10
+
+153 lower-cuff vertices were incorrectly assigned to pelvis/leg groups. Sleeve
+classification now precedes trouser classification; the current source and GLB
+carry corrected weights. Fresh structure/action metrics are unchanged. Blender
+pose views, native critical poses and 72 sampled cycle views were inspected.
+See `docs/CHARACTER_DEFORMATION_QA.md` for scope and remaining acceptance.
 
 ## Equipment refinement, 2026-10-06
 
