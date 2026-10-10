@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import os
+import plistlib
 import re
 from pathlib import Path
 import stat
@@ -54,6 +55,9 @@ def main():
             raise SystemExit('Notice checksum mismatch: ' + entry['file'])
     build = args.build.resolve()
     if args.platform == 'macOS':
+        metadata = plistlib.loads((build / 'Contents/Info.plist').read_bytes())
+        if any(metadata.get(key) != args.version for key in ['CFBundleShortVersionString', 'CFBundleVersion']):
+            raise SystemExit('Embedded macOS version does not match package version')
         executable = build / 'Contents/MacOS/ChemSite'
         if not executable.is_file() or not os.access(executable, os.X_OK):
             raise SystemExit('Missing executable macOS app')

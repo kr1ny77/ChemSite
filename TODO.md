@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Build current 0.1.1 macOS candidate from b583a3e; packaged keyboard/practice pass, CRC/fourteen hashes/version/source/modes verified; draft patch notes and enforce embedded macOS version during packaging. Windows verification remains running.
+
 - [x] Correct embedded patch versions to macOS 0.1.1 / Windows 0.1.1.0, add Windows PE version verification, supersede earlier mislabeled candidate; fresh macOS Info.plist verified.
 
 - [x] Reverify current brushed footsteps: native audio playback and Walk/Run contact timing pass; all four clips have silent endpoints. Human listening comfort remains open.

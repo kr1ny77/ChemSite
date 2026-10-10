@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Versioned macOS candidate — 2026-10-10
+
+Current phase: release preparation. Completed work: committed/pushed b583a3e
+embedded version repair; refreshed macOS app passed keyboard five-task round
+(700 points) and all 44 practice topics across five levels. Added embedded
+macOS version validation to packaging and drafted 0.1.1 release notes.
+Last verification: archive CRC, fourteen hashes, source revision, executable
+modes and both embedded versions passed; archive is 74,413,544 bytes.
+Extracted app practice also passed all five levels/44 topics.
+Current work: Windows native 38062449441 /
+graphical 38062449518 on b583a3e. Next task: inspect those exact results,
+finish platform candidates and prerelease publication checks. Known issues:
+human/hardware/instructor acceptance remains open. Earlier candidate was
+superseded; published 0.1.0 remains unchanged.
+
 ## Embedded patch version repair — 2026-10-10
 
 Current phase: release preparation. Completed work: aligned project/macOS

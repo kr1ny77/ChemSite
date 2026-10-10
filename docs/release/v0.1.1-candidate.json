@@ -1,19 +1,27 @@
 {
-  "status": "superseded_embedded_version_mismatch",
+  "status": "macos_versioned_candidate_windows_pending",
   "version": "0.1.1",
-  "game_source_revision": "f6b1949e918a391df89b7026f900b606944ce4f6",
+  "game_source_revision": "b583a3edad1871cf7b37ee9d9be98f45de2e72fb",
   "macos": {
-    "archive_bytes": 74413184,
-    "sha256": "2b690282250cbae42fcf7fc6e37cc01d271c4475aca85b5d059fae2523342dbc",
+    "archive_bytes": 74413544,
+    "sha256": "049167c4c281a98114d696ee2180da749d065189ca4d5fbfa5c0cbee32a84cd5",
+    "embedded_short_version": "0.1.1",
+    "embedded_build_version": "0.1.1",
     "crc_checked": true,
     "file_hashes_checked": 14,
-    "extracted_practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
-    "extracted_log_sha256": "4e8177a810c7ed9e86bff5835f462b30bad3eb30919b7ef1848f799b46eb321c"
+    "keyboard_marker": "KEYBOARD_ROUND_SMOKE_OK level=1 completed=5 score=700.0",
+    "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
+    "extracted_practice": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
+    "extracted_log_sha256": "3c9727e72684585e58a59627b24baa6348d1b8fdd6dde04fcd83b0f64d6d6865"
   },
   "pending": [
-    "Re-export macOS with embedded 0.1.1 version",
-    "Fresh Windows 0.1.1.0 PE version and native/graphical verification",
-    "Final candidate archives and publication checks"
+    "Windows embedded version/native/graphical results and archive",
+    "Publication checks"
   ],
-  "scope": "Candidate archive verification; complete production acceptance remains open."
+  "scope": "Candidate archive verification; complete production acceptance remains open.",
+  "windows": {
+    "native_run": 38062449441,
+    "graphical_run": 38062449518,
+    "status": "in_progress"
+  }
 }
