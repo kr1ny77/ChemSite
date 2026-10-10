@@ -1,5 +1,18 @@
 # ChemSite progress
 
+## v0.1.1 published and verified — 2026-10-10
+
+Current phase: production polish following verified patch publication. Completed
+work: v0.1.1 prerelease published at repaired game commit 1de892f, with current
+macOS/Windows archives and SHA-256 files. Last verification: public tag commit,
+draft=false/prerelease=true, all four asset sizes/digests and both public checksum
+downloads; current native and graphical evidence recorded in release documents.
+Current work: inspect environmental composition against the next production
+checkpoint. Next task: refine coherent chemistry clusters and review traversal,
+camera and collision. Known issues: manual exported round feedback, physical
+Windows, representative laptop performance, accessibility and instructor review
+remain open. Footstep comfort accepted; full objective remains active.
+
 ## Repaired platform candidates verified — 2026-10-10
 
 Current phase: release verification. Completed work: both repaired 1de892f

@@ -1,5 +1,5 @@
 {
-  "status": "platform_packages_and_graphical_review_verified",
+  "status": "published_verified",
   "version": "0.1.1",
   "game_source_revision": "1de892ffd1ed78ff5faa8a0f53cf181856437df6",
   "macos": {
@@ -59,9 +59,7 @@
     }
   },
   "draft_release_id": 409025384,
-  "pending": [
-    "Publication checks"
-  ],
+  "pending": [],
   "scope": "Current repaired character candidate; broader production acceptance remains open.",
   "draft_windows_asset_id": 628342203,
   "draft_assets": [
@@ -89,5 +87,7 @@
       "size": 87,
       "digest": "sha256:67fa01de073979bb84d5e6f149b4e268d655465937acbb6e35e110278bb56121"
     }
-  ]
+  ],
+  "published_url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.1",
+  "publication_evidence": "docs/release/v0.1.1-verification.json"
 }

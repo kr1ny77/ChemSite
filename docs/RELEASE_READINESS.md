@@ -65,7 +65,7 @@ archives are verified. Describe the remaining acceptance items in release notes.
 Keep the prior tagged source and archive checksums for rollback; fixes receive a
 new version/tag and fresh platform verification.
 
-## 0.1.1 patch preparation — 2026-10-10
+## 0.1.1 published patch — 2026-10-10
 
 Current game source is 1de892ffd1ed78ff5faa8a0f53cf181856437df6. The patch includes
 quiet brushed footsteps (human comfort accepted), all 32 comparison diagrams,
@@ -78,11 +78,11 @@ Fresh universal macOS export contains version 0.1.1 and passed keyboard career
 and five-level/44-topic practice. Archive CRC, fourteen file hashes, extracted
 app equality and executable mode passed. Windows native 38064301998 passed
 embedded file/product 0.1.1.0, all five keyboard rounds and practice; native
-artifact digest/CRC checked. Graphical 38064301853 and its image review remain
-completed after package preparation: 212 images decoded, 176 exact card interiors and 36 differing full captures reviewed. Candidate evidence is recorded separately in
+artifact digest/CRC checked. Graphical 38064301853 and its image review completed: 212 images decoded, 176 exact card interiors and 36 differing full captures reviewed. Candidate evidence is recorded separately in
 `docs/release/v0.1.1-sleeve-candidate.json`.
 
 Earlier b583a3e draft assets are superseded by the sleeve repair. Current packages
-are prepared under builds/release/v0.1.1-sleeve and require matching draft asset
-digests, source/tag and final graphical review before publication. Published
+are published from builds/release/v0.1.1-sleeve. All four asset digests/sizes,
+source tag and public checksum downloads are verified in
+`docs/release/v0.1.1-verification.json`. Published
 0.1.0 archives retain their original bytes and checksums.
