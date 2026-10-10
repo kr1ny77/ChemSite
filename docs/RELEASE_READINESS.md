@@ -18,10 +18,10 @@ acceptance work. The full production objective remains active.
 | Audio | Original music reproducibility, four brushed-sole contacts, timing/playback/settings gates; user accepted footstep comfort | Headphone/laptop-speaker mix acceptance, physical Windows audio |
 | Performance | M4 source profiles documented in PERFORMANCE_BASELINE.md | Approximately 60 FPS on representative student laptop |
 | macOS build | Universal release export; practice/keyboard career tests; user accepted exported five-task round (“все хорошо”, 2026-10-10) | Unsigned/unnotarized distribution; broader all-level/device QA |
-| Windows build | Published 1de892f native 38064301998 and graphical 38064301853 passed; current 0eed5fd native 38066133512 passed | Physical desktop input/audio/save |
-| Source and documentation | Main pushed; v0.1.0 ac41d28 and v0.1.1 1de892f tags, current screenshots/README and asset provenance | Broader acceptance tracked below |
+| Windows build | Published c0d23b2 0.1.2 native 38067866167 and graphical 38067867808 passed | Physical desktop input/audio/save |
+| Source and documentation | Main pushed; v0.1.0 ac41d28, v0.1.1 1de892f and v0.1.2 c0d23b2 tags, current screenshots/README and asset provenance | Broader acceptance tracked below |
 | Download archives and checksums | Both archives generated and extracted; CRC, file hashes and permissions verified; GitHub asset digests match | Physical Windows acceptance |
-| GitHub prerelease | Published v0.1.0 and v0.1.1 with platform archives/checksums; public tags/downloads verified | Broader production acceptance |
+| GitHub prerelease | Published v0.1.0, v0.1.1 and v0.1.2 with platform archives/checksums; public tags/downloads verified | Broader production acceptance |
 
 Historical v0.1.0 practice/audio revision passed Windows native and graphical runs.
 All 191 captures decode at 1028×642; sixteen contact sheets and three full-size
@@ -86,3 +86,14 @@ are published from builds/release/v0.1.1-sleeve. All four asset digests/sizes,
 source tag and public checksum downloads are verified in
 `docs/release/v0.1.1-verification.json`. Published
 0.1.0 archives retain their original bytes and checksums.
+
+## 0.1.2 verified publication — 2026-10-10
+
+Source c0d23b2bb0392fbb2869d86420a0ac9943e47128; release 409065092.
+Embedded macOS 0.1.2 and Windows 0.1.2.0. Fresh native/extracted macOS
+practice and keyboard checks, Windows five keyboard levels and 44-topic practice
+pass. Windows graphical run 38067867808: 254-entry CRC, 212 decoded PNGs,
+181 exact card interiors and 31 differing captures reviewed across four sheets.
+Public tag, four asset sizes/digests and both public checksum downloads verified
+in docs/release/v0.1.2-verification.json. Published earlier archives preserved.
+User owns target-computer performance and physical Windows checks; results pending.

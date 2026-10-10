@@ -260,3 +260,15 @@ but degraded corner contact while slowing response. Restored response 16;
 cross-frequency/visual promotion gates were skipped after this rejection.
 Evidence: artifacts/response13-contact-60.json and
 /tmp/chemsite-response13-contact60.log.
+
+## 120 mm correction candidate rejected — 2026-10-10
+
+Raw support-offset requests at 60 Hz reach 103/120 mm, motivating a bounded
+120 mm candidate. The existing unchanged corner gate rejected it: peak
+displacement increases from 32.090 to 54.766 mm and maximum reach loss becomes
+55.802 mm. Maximum requested correction applied was 120 mm. Straight steady
+motion remains 0.071 mm/tick. Both production modifier and validator were
+restored byte-for-byte. No release assets changed. This identifies leg reach
+as the limit of this correction-only approach; the next candidate must modify
+authored support transfer/body turn timing. Failed candidate output:
+`/tmp/chemsite-correction120-measured.log`.

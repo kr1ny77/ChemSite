@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Reject 120 mm foot-correction candidate: 60 Hz corner displacement grows 32.090→54.766 mm, reach loss 55.802 mm; restore production modifier/validator byte-for-byte. Next movement candidate requires authored support transfer/turn timing.
+
 - [x] Reject slower heading response 13 after 60 Hz comparison: corner drift grows 32.090→35.332 mm while reversal changes 40.354→39.706 mm; restore response 16. Heading gates pass but net contact quality does not improve. Current d221954 graphical 38066605312 succeeded; artifact download follows.
 
 - [x] Verify d221954 Windows native diagnostics digest/34-file CRC/five keyboard levels/no engine errors; add pose-preserving requested-support-offset diagnosis. Peak requests 103.05/119.81 mm exceed the 65 mm correction with zero reach loss; 60 Hz turn peaks remain exact. Directional contact/body pivot refinement remains open.

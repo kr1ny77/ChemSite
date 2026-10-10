@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Correction-only turn candidate rejected — 2026-10-10
+
+Current phase: movement polish after verified 0.1.2 publication. Completed work:
+120 mm foot-correction candidate measured and rejected by the unchanged 60 Hz
+corner gate: displacement 54.766 mm versus production 32.090 mm, reach loss
+55.802 mm. Production modifier/validator restored byte-for-byte. Last
+verification: candidate actual skinned-sole measurement and source equality.
+Current work: authored support-transfer/turn-timing investigation. Next task:
+choose a directional animation/body-turn candidate using the measured reach
+constraint. Known issues: turn residual, broader accessibility/course review
+and user-owned Windows/device acceptance. Published 0.1.2 bytes retained.
+
 ## Version 0.1.2 published and verified — 2026-10-10
 
 Current phase: published native patch; broader production polish remains active.
