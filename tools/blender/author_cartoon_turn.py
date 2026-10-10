@@ -1,17 +1,37 @@
 """Author two planted stepping-turn candidates from the accepted character source."""
-import bpy, math, json
+import bpy, math, json, sys
 from pathlib import Path
 from mathutils import Vector, Matrix, Quaternion
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'artifacts/cartoon-turn-candidate'
+DEDICATED_ROOT='--dedicated-root' in sys.argv
+OUT=ROOT/('artifacts/cartoon-turn-root-candidate' if DEDICATED_ROOT else 'artifacts/cartoon-turn-candidate')
 OUT.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/'tools/blender/source/cartoon_chemist.blend'))
 rig=next(o for o in bpy.data.objects if o.type=='ARMATURE')
 scene=bpy.context.scene
 scene.render.fps=384
 frames=291
-rest={b.name:b.matrix_local.copy() for b in rig.data.bones}
 original_actions=[a.name for a in bpy.data.actions]
+if DEDICATED_ROOT:
+    bpy.context.view_layer.objects.active=rig
+    rig.select_set(True)
+    bpy.ops.object.mode_set(mode='EDIT')
+    motion=rig.data.edit_bones.new('motion_root')
+    motion.head=(0,0,0);motion.tail=(0,0,.1)
+    motion.use_deform=False
+    rig.data.edit_bones['pelvis'].parent=motion
+    bpy.ops.object.mode_set(mode='OBJECT')
+    # Explicit identity channels keep pre-existing action exports independent.
+    for name in original_actions:
+        action=bpy.data.actions[name]
+        rig.animation_data.action=action
+        pb=rig.pose.bones['motion_root'];pb.rotation_mode='QUATERNION'
+        for frame in action.frame_range:
+            pb.matrix_basis=Matrix.Identity(4)
+            for channel in ['location','rotation_quaternion','scale']:
+                pb.keyframe_insert(channel,frame=frame,group=pb.name)
+    rig.animation_data.action=None
+rest={b.name:b.matrix_local.copy() for b in rig.data.bones}
 
 def eased(t):return t*t*(3-2*t)
 def rotation(a):return Matrix.Rotation(a,4,'Z')
@@ -61,6 +81,11 @@ for name,sign in [('TurnLeftStep',1),('TurnRightStep',-1)]:
         root=anchor-rotation(angle).to_3x3()@anchors[support]
         root.z=-.0002
         for pb in rig.pose.bones:pb.matrix_basis=Matrix.Identity(4)
+        if DEDICATED_ROOT:
+            motion=rotation(angle)@rest['motion_root']
+            motion.translation+=Vector((root.x,root.y,0))
+            rig.pose.bones['motion_root'].matrix=motion
+            bpy.context.view_layer.update()
         pelvis=rotation(angle)@rest['pelvis'];pelvis.translation+=root
         rig.pose.bones['pelvis'].matrix=pelvis
         bpy.context.view_layer.update()
@@ -92,5 +117,5 @@ for o in bpy.data.objects:
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'cartoon_turn.blend'))
 rig.animation_data.action=None
 bpy.ops.export_scene.gltf(filepath=str(OUT/'cartoon_turn.glb'),export_format='GLB',use_selection=True,export_apply=True,export_animation_mode='NLA_TRACKS',export_anim_slide_to_zero=True)
-(OUT/'source_checks.json').write_text(json.dumps({'existing_actions':original_actions,'turns':checks,'scope':'Candidate; root translation/yaw requires native integration and exported sole review.'},indent=2)+'\n')
+(OUT/'source_checks.json').write_text(json.dumps({'dedicated_root':DEDICATED_ROOT,'existing_actions':original_actions,'turns':checks,'scope':'Candidate; root translation/yaw requires native integration and exported sole review.'},indent=2)+'\n')
 print('TURN_CANDIDATE_AUTHORED',json.dumps(checks))

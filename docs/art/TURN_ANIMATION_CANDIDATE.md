@@ -86,3 +86,10 @@ measure start/end continuity and transitions from Walk/Run. The in-place
 prototype alone does not establish improved moving corner/reversal contact.
 Compare fresh paired 30/60/120 Hz controller runs and inspect native gameplay
 from two angles, then refresh platform exports before promotion.
+
+## Dedicated-root follow-up
+
+The isolated hierarchy and transition investigation is recorded in
+`TURN_LOCOMOTION_TRANSITIONS.md`. It retains this candidate as the pose-preservation
+baseline and uses a separate artifact directory. Root extraction passes; gait
+transition contact currently fails the production floor tolerance.

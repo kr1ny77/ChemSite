@@ -18,7 +18,7 @@ func _run() -> void:
 			for heading in [0.0, PI / 2.0]:
 				var document := GLTFDocument.new()
 				var state := GLTFState.new()
-				assert(document.append_from_file("res://artifacts/cartoon-turn-candidate/cartoon_turn.glb", state) == OK)
+				assert(document.append_from_file(_folder() + "/cartoon_turn.glb", state) == OK)
 				var model := document.generate_scene(state, 384.0)
 				var body = DRIVER.new()
 				root.add_child(body)
@@ -50,7 +50,7 @@ func _run() -> void:
 				# Physical floor profile uses the production grounding gate (3 mm).
 				# Horizontal/vertical support displacement retains the 1 mm gate.
 				if sole_drift >= 0.001 or sole_height >= 0.003:
-					var failure := FileAccess.open("res://artifacts/cartoon-turn-candidate/root_motion_contact_failure.json", FileAccess.WRITE)
+					var failure := FileAccess.open(_folder() + "/root_motion_contact_failure.json", FileAccess.WRITE)
 					failure.store_string(JSON.stringify(samples, "\t"))
 					push_error("Root-motion support contact gate failed")
 					quit(1)
@@ -74,7 +74,7 @@ func _run() -> void:
 		for scenario in ["pause", "interrupt_early", "interrupt_transfer", "interrupt_settle", "wall"]:
 			var document := GLTFDocument.new()
 			var state := GLTFState.new()
-			assert(document.append_from_file("res://artifacts/cartoon-turn-candidate/cartoon_turn.glb", state) == OK)
+			assert(document.append_from_file(_folder() + "/cartoon_turn.glb", state) == OK)
 			var body = DRIVER.new()
 			root.add_child(body)
 			body.configure(document.generate_scene(state, 384.0), "TurnLeftStep")
@@ -120,7 +120,10 @@ func _run() -> void:
 			body.queue_free()
 			if wall != null: wall.queue_free()
 			await process_frame
-	var file := FileAccess.open("res://artifacts/cartoon-turn-candidate/root_motion_checks.json", FileAccess.WRITE)
+	var file := FileAccess.open(_folder() + "/root_motion_checks.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(reports, "\t"))
 	print("TURN_ROOT_MOTION_OK ", reports.size())
 	quit()
+
+func _folder() -> String:
+	return "res://artifacts/cartoon-turn-root-candidate" if OS.get_cmdline_user_args().has("--dedicated-root") else "res://artifacts/cartoon-turn-candidate"

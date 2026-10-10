@@ -1,3 +1,22 @@
+## Dedicated turn root and gait transition audit — 2026-10-10
+
+Current phase: movement animation production. Completed work: added an optional
+non-deforming motion root above pelvis, retaining vertical gait motion; fresh GLB
+comparison preserves all vertex coordinates, skin weights/material slots and all
+11 action ranges, with 33 bone-pose samples per action. Source/export BAS inspections
+report 44,424 triangles, 16 bones, 13 materials, 11 actions and zero issues.
+Last verification: corrected root axis passes 27 physical turn cases at 30/60/120 Hz;
+28 turn frames from two cameras and 20 native default Run handoff frames reviewed.
+A 48-case gait audit verifies travel/heading/state but detects measured sole-point
+penetration up to 13.728 mm (24 cases over 3 mm). Contact-phase matching worsens
+this to 20.270 mm (32 cases); optional experiment stays disabled. Its 20 Walk
+handoff frames were reviewed. Current work: transition contact investigation.
+Next task: measure complete sole surfaces and peak blend phase, then repair contact
+and integrate responsive production input. Known issues: contact audit samples one
+point per sole, giving a lower bound; production turns, continuous timing review,
+exports and broader human/device/course/accessibility acceptance remain open.
+Published 0.1.3 and production player retain verified source and bytes.
+
 ## Physical stepping-turn prototype verified — 2026-10-10
 
 Current phase: movement animation production. Completed work: repaired a 45°

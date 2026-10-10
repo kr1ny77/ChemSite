@@ -47,19 +47,36 @@ func _run() -> void:
 	material.roughness = 0.85
 	floor_mesh.material_override = material
 	root.add_child(floor_mesh)
-	var folder := "res://artifacts/cartoon-turn-candidate/native-frames"
+	var base := "res://artifacts/cartoon-turn-root-candidate" if OS.get_cmdline_user_args().has("--dedicated-root") else "res://artifacts/cartoon-turn-candidate"
+	var gait := "Run" if OS.get_cmdline_user_args().has("--handoff-run") else ("Walk" if OS.get_cmdline_user_args().has("--handoff-walk") else "")
+	var folder := base + ("/handoff-" + gait.to_lower() if not gait.is_empty() else "/native-frames")
 	if OS.get_cmdline_user_args().has("--side-view"): folder += "-side"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	for action in ["TurnLeftStep", "TurnRightStep"]:
 		var document := GLTFDocument.new()
 		var state := GLTFState.new()
-		assert(document.append_from_file("res://artifacts/cartoon-turn-candidate/cartoon_turn.glb", state) == OK)
+		assert(document.append_from_file(base + "/cartoon_turn.glb", state) == OK)
 		var body = DRIVER.new()
 		root.add_child(body)
 		body.configure(document.generate_scene(state, 384.0), action)
 		body.paused = true
 		await physics_frame
 		await process_frame
+		if not gait.is_empty():
+			body.paused = false
+			while body.elapsed < body.duration * 0.55:
+				await physics_frame
+				await process_frame
+			body.start_locomotion(gait)
+			for moment in [0.0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.2, 0.3, 0.4]:
+				while body.locomotion_elapsed < moment:
+					await physics_frame
+					await process_frame
+				RenderingServer.force_draw(false)
+				root.get_texture().get_image().save_png(folder + "/%s-%03d.png" % [action, roundi(moment * 1000)])
+			body.queue_free()
+			await process_frame
+			continue
 		for phase in [0.0, 0.2, 0.397, 0.42, 0.6, 0.8, 1.0]:
 			while body.elapsed < body.duration * phase:
 				await physics_frame
@@ -69,5 +86,5 @@ func _run() -> void:
 			body.paused = false
 		body.queue_free()
 		await process_frame
-	print("TURN_ROOT_CAPTURE_OK frames=14")
+	print("TURN_ROOT_CAPTURE_OK frames=", 14 if gait.is_empty() else 20)
 	quit()
