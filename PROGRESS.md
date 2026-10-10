@@ -1,3 +1,19 @@
+## Physical stepping-turn prototype verified — 2026-10-10
+
+Current phase: movement animation production. Completed work: repaired a 45°
+foot rotation discontinuity at support release; added full-cycle sole-point speed
+validation and an isolated CharacterBody3D root-motion driver with collision,
+pause/resume and interruption handling. Last verification: 27 native physics
+cases at 30/60/120 Hz pass, endpoint error below 0.000030 mm, support displacement
+below 0.002133 mm and physical floor error 1.033483 mm against the existing 3 mm
+grounding gate. Dense imported-GLB height/displacement gates retain 1 mm.
+Reviewed all 80 repaired exported frames and 28 native Forward+ frames from two
+angles. Current work: isolated candidate qualification. Next task: normal-speed
+playback, production Walk/Run transition design and fresh moving-contact comparisons.
+Known issues: isolated stepping turns establish capsule/root extraction; moving
+corner/reversal improvement and production transitions remain unproven. Broader
+human/device/course/accessibility gates remain open. Published 0.1.3 is retained.
+
 ## Authored turn candidates pass native contact — 2026-10-10
 
 Current phase: movement animation production. Completed work: two 90°

@@ -68,7 +68,7 @@ for name,sign in [('TurnLeftStep',1),('TurnRightStep',-1)]:
         end=second_anchor if half==0 else (final_left if half==1 else end_root+rotation(angle).to_3x3()@anchors['r'])
         target=start.lerp(end,eased(u));target.z+=.055*math.sin(math.pi*u)**2
         leg(support,anchor,0 if half==0 else (mid if half==1 else angle))
-        leg(swing,target,angle if half<2 else mid*(1+eased(u)))
+        leg(swing,target,(angle if half==0 else angle*eased(u)) if half<2 else mid*(1+eased(u)))
         for pb in rig.pose.bones:
             pb.rotation_mode='QUATERNION'
             pb.keyframe_insert('location',frame=frame,group=pb.name)

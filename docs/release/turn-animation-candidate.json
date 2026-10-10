@@ -1,5 +1,5 @@
 {
-  "status": "candidate_native_contact_verified",
+  "status": "candidate_physical_root_motion_verified",
   "runtime_promoted": false,
   "files": {
     "tools/blender/source/cartoon_chemist.blend": {
@@ -7,12 +7,12 @@
       "sha256": "53093ac8e1cba89bd21ef4442f94e8cb043e7be61c9458d23d8edcbfb7e8c777"
     },
     "artifacts/cartoon-turn-candidate/cartoon_turn.blend": {
-      "bytes": 1575209,
-      "sha256": "6318e44894fab5f1ac234ca04d4adb2ca07d1df62cd3d586597f29f9b77aee23"
+      "bytes": 1577389,
+      "sha256": "a67161848a8bfdf4fbb2148299593993894526d7788622871bffa8c698bfdb71"
     },
     "artifacts/cartoon-turn-candidate/cartoon_turn.glb": {
       "bytes": 1749512,
-      "sha256": "2194588fbc00bdac7cf5366afa42b10951ebabe7228965c0ff5d5838ae87c2bb"
+      "sha256": "d3722f4e4ead94d859033d0a49fafa663098d17f92160d978552430cc46a39d7"
     }
   },
   "source_checks": {
@@ -63,14 +63,16 @@
       "duration_s": 0.7552083333333334,
       "support_samples": 233,
       "max_supporting_sole_height_error_m": 1.2824779105358175e-07,
-      "max_supporting_sole_tick_drift_m": 1.7279057081825512e-06
+      "max_supporting_sole_tick_drift_m": 1.7279057081825512e-06,
+      "max_sole_point_speed_m_s": 2.620911897129674
     },
     {
       "action": "TurnRightStep",
       "duration_s": 0.7552083333333334,
       "support_samples": 233,
       "max_supporting_sole_height_error_m": 8.722233246771793e-08,
-      "max_supporting_sole_tick_drift_m": 1.7218786038681865e-06
+      "max_supporting_sole_tick_drift_m": 1.7218786038681865e-06,
+      "max_sole_point_speed_m_s": 3.0302983040239604
     }
   ],
   "native_checks": [
@@ -129,10 +131,254 @@
   "reviewed_exported_chronological_frames": 80,
   "normal_speed_playback_review": "pending",
   "remaining": [
-    "collision-resolved root motion integration",
-    "Walk/Run transition and interruption continuity",
+    "normal-speed playback review",
+    "production Walk/Run transition and interruption continuity",
     "fresh paired 30/60/120 Hz moving contact comparisons",
     "native gameplay review",
     "platform exports"
-  ]
+  ],
+  "root_motion_checks": [
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.0218153912574053,
+      "physics_hz": 30,
+      "position_error_m": 1.05367119473954e-08,
+      "support_drift_m": 1.45626790981623e-06,
+      "support_height_error_m": 0.000284695066511631,
+      "yaw_error_rad": 1.62920679613876e-07
+    },
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.0219927504658699,
+      "physics_hz": 30,
+      "position_error_m": 1.49011611938477e-08,
+      "support_drift_m": 1.39871895044053e-06,
+      "support_height_error_m": 0.000165291261509992,
+      "yaw_error_rad": 3.89414378076935e-07
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.0219927504658699,
+      "physics_hz": 30,
+      "position_error_m": 2.98023223876953e-08,
+      "support_drift_m": 1.38558630169427e-06,
+      "support_height_error_m": 0.000165325269335881,
+      "yaw_error_rad": 5.2054854826622e-07
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.0219927504658699,
+      "physics_hz": 30,
+      "position_error_m": 1.66600049311683e-08,
+      "support_drift_m": 1.36206983825105e-06,
+      "support_height_error_m": 0.000165325269335881,
+      "yaw_error_rad": 2.60479282587767e-08
+    },
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.011022787541151,
+      "physics_hz": 60,
+      "position_error_m": 1.05367119473954e-08,
+      "support_drift_m": 2.12518739317602e-06,
+      "support_height_error_m": 0.000284695066511631,
+      "yaw_error_rad": 1.71264144377403e-06
+    },
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.0110227866098285,
+      "physics_hz": 60,
+      "position_error_m": 7.45058059692383e-09,
+      "support_drift_m": 2.12304757951642e-06,
+      "support_height_error_m": 0.000284695066511631,
+      "yaw_error_rad": 8.6625153628006e-07
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.0110228005796671,
+      "physics_hz": 60,
+      "position_error_m": 1.66600049311683e-08,
+      "support_drift_m": 2.12894474316272e-06,
+      "support_height_error_m": 0.00028478488093242,
+      "yaw_error_rad": 1.71264144377403e-06
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.0110228005796671,
+      "physics_hz": 60,
+      "position_error_m": 1.05367119473954e-08,
+      "support_drift_m": 2.13238058677234e-06,
+      "support_height_error_m": 0.00028478488093242,
+      "yaw_error_rad": 1.96538167074323e-07
+    },
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.00552280899137259,
+      "physics_hz": 120,
+      "position_error_m": 1.05367119473954e-08,
+      "support_drift_m": 1.47053310683987e-06,
+      "support_height_error_m": 0.0010334609542042,
+      "yaw_error_rad": 8.78176416918564e-07
+    },
+    {
+      "action": "TurnLeftStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.0055228085257113,
+      "physics_hz": 120,
+      "position_error_m": 7.45058059692383e-09,
+      "support_drift_m": 1.49869174492778e-06,
+      "support_height_error_m": 0.0010334609542042,
+      "yaw_error_rad": 1.10467011538162e-06
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 0.0,
+      "maximum_step_m": 0.00552280899137259,
+      "physics_hz": 120,
+      "position_error_m": 2.35608048626545e-08,
+      "support_drift_m": 1.39444364322117e-06,
+      "support_height_error_m": 0.00103348249103874,
+      "yaw_error_rad": 5.2054854826622e-07
+    },
+    {
+      "action": "TurnRightStep",
+      "initial_heading_rad": 1.5707963267949,
+      "maximum_step_m": 0.00552280899137259,
+      "physics_hz": 120,
+      "position_error_m": 1.66600049311683e-08,
+      "support_drift_m": 1.41047905799496e-06,
+      "support_height_error_m": 0.00103348249103874,
+      "yaw_error_rad": 1.75161403603852e-06
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.0704162791371346,
+      "physics_hz": 30,
+      "scenario": "pause",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.0171776115894318,
+      "physics_hz": 30,
+      "scenario": "interrupt_early",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.00648815743625164,
+      "physics_hz": 30,
+      "scenario": "interrupt_transfer",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.0704162791371346,
+      "physics_hz": 30,
+      "scenario": "interrupt_settle",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 1,
+      "final_x": -0.0137188192456961,
+      "physics_hz": 30,
+      "scenario": "wall",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.070416271686554,
+      "physics_hz": 60,
+      "scenario": "pause",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.0171776134520769,
+      "physics_hz": 60,
+      "scenario": "interrupt_early",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.0158353969454765,
+      "physics_hz": 60,
+      "scenario": "interrupt_transfer",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.070416271686554,
+      "physics_hz": 60,
+      "scenario": "interrupt_settle",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 1,
+      "final_x": -0.0137188164517283,
+      "physics_hz": 60,
+      "scenario": "wall",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.070416271686554,
+      "physics_hz": 120,
+      "scenario": "pause",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.0148533675819635,
+      "physics_hz": 120,
+      "scenario": "interrupt_early",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": 0.0158353969454765,
+      "physics_hz": 120,
+      "scenario": "interrupt_transfer",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 0,
+      "final_x": -0.070416271686554,
+      "physics_hz": 120,
+      "scenario": "interrupt_settle",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    },
+    {
+      "blocked_ticks": 1,
+      "final_x": -0.0188822634518147,
+      "physics_hz": 120,
+      "scenario": "wall",
+      "stopped_drift_m": 0.0,
+      "stopped_yaw_rad": 0.0
+    }
+  ],
+  "reviewed_native_frames": 28,
+  "reviewed_source_views_scope": "Geometry inspection from preceding animation revision; repaired export reviewed in 80 chronological and 28 native frames."
 }
