@@ -1,5 +1,16 @@
 # ChemSite progress
 
+## Current Windows graphical success — 2026-10-10
+
+Current phase: release preparation. Completed work: b583a3e graphical workflow
+38062449518 completed successfully; artifact 11673304282 contains 127,198,201
+bytes with GitHub SHA-256 recorded in the candidate manifest. Last verification:
+all four draft asset digests/sizes and retained v0.1.1 draft metadata passed.
+Current work: graphical artifact download (live session 52028); review follows
+complete digest/CRC validation. Next task: inspect current comparison/UI matrix,
+finalize release notes and publish only after the image review passes. Known
+issues: human/hardware/instructor acceptance remains open; draft is unpublished.
+
 ## Draft asset integrity — 2026-10-10
 
 Current phase: release preparation. Completed work: uploaded both platform

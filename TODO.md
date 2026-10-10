@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Confirm b583a3e Windows graphical workflow success and record current 127,198,201-byte artifact identity/digest; image download and visual review remain pending.
+
 - [x] Upload and verify all four 0.1.1 draft assets against local SHA-256/size; add native build evidence and checksums to draft notes. Current graphical review and publication remain pending.
 
 - [x] Package b583a3e Windows 0.1.1 archive with matching CI binaries and ten hashes; refresh macOS wrapper and verify unchanged tested app; create GitHub patch draft and verify Windows asset upload.

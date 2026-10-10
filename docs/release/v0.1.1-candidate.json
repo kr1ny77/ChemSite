@@ -43,7 +43,12 @@
     "sha256": "4c84fe577b1cc34832b8da924d5f8c89e22043810cb349b62b18397fc899ef94",
     "archive_crc_checked": true,
     "file_hashes_checked": 10,
-    "paired_binary_hashes_match_ci": true
+    "paired_binary_hashes_match_ci": true,
+    "graphical_status": "success",
+    "graphical_artifact_id": 11673304282,
+    "graphical_artifact_sha256": "3cbe34c90bc85835624407b419839e97cccd2e9c3e159723ef09ab16af6a8abe",
+    "graphical_artifact_bytes": 127198201,
+    "graphical_review": "download_in_progress"
   },
   "draft_release_id": 409025384,
   "draft_assets": [
