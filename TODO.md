@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Package b583a3e Windows 0.1.1 archive with matching CI binaries and ten hashes; refresh macOS wrapper and verify unchanged tested app; create GitHub patch draft and verify Windows asset upload.
+
 - [x] Verify b583a3e Windows native success: PE file/product 0.1.1.0, five keyboard rounds, 44-topic practice, native diagnostics digest and all 34 file CRCs; update current audio QA measurements.
 
 - [x] Build current 0.1.1 macOS candidate from b583a3e; packaged keyboard/practice pass, CRC/fourteen hashes/version/source/modes verified; draft patch notes and enforce embedded macOS version during packaging. Windows verification remains running.

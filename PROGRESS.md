@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Windows archive and draft patch — 2026-10-10
+
+Current phase: release preparation. Completed work: downloaded Windows build
+artifact 11673089027 with matching GitHub SHA-256 and CRC; packaged 0.1.1
+EXE/PCK with notices, instructions and source metadata. Last verification:
+Windows archive CRC/ten file hashes and binary hashes against verified CI build
+pass (46,733,867 bytes). Refreshed macOS wrapper with current known issues;
+CRC/fourteen hashes and exact app equality with extracted tested app pass
+(74,413,591 bytes). Draft release 409025384 created for b583a3e; Windows
+archive upload verified by server digest. Current work: macOS draft upload,
+Windows graphical workflow 38062449518. Next task: current graphical artifact
+review, checksum uploads, finalized notes and publication checks. Known issues:
+human/hardware/instructor acceptance remains open; draft remains unpublished.
+
 ## Windows embedded version and native rounds — 2026-10-10
 
 Current phase: release preparation. Completed work: Windows native workflow

@@ -1,10 +1,10 @@
 {
-  "status": "macos_versioned_candidate_windows_pending",
+  "status": "platform_archives_graphical_review_pending",
   "version": "0.1.1",
   "game_source_revision": "b583a3edad1871cf7b37ee9d9be98f45de2e72fb",
   "macos": {
-    "archive_bytes": 74413544,
-    "sha256": "049167c4c281a98114d696ee2180da749d065189ca4d5fbfa5c0cbee32a84cd5",
+    "archive_bytes": 74413591,
+    "sha256": "42e37d06125c69a4722c1958adc3e0cd508d3955fb727f75f689d0f7c04acaa3",
     "embedded_short_version": "0.1.1",
     "embedded_build_version": "0.1.1",
     "crc_checked": true,
@@ -12,17 +12,18 @@
     "keyboard_marker": "KEYBOARD_ROUND_SMOKE_OK level=1 completed=5 score=700.0",
     "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
     "extracted_practice": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
-    "extracted_log_sha256": "3c9727e72684585e58a59627b24baa6348d1b8fdd6dde04fcd83b0f64d6d6865"
+    "extracted_log_sha256": "3c9727e72684585e58a59627b24baa6348d1b8fdd6dde04fcd83b0f64d6d6865",
+    "app_matches_extracted_test": true
   },
   "pending": [
-    "Windows embedded version/native/graphical results and archive",
-    "Publication checks"
+    "Current Windows graphical evidence review",
+    "Draft asset upload and publication checks"
   ],
   "scope": "Candidate archive verification; complete production acceptance remains open.",
   "windows": {
     "native_run": 38062449441,
     "graphical_run": 38062449518,
-    "status": "in_progress",
+    "status": "native_and_archive_verified",
     "native_status": "success",
     "file_version": "0.1.1.0",
     "product_version": "0.1.1.0",
@@ -37,6 +38,12 @@
     ],
     "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
     "build_artifact_id": 11673089027,
-    "build_artifact_sha256": "b4aab8220b17e02fbc5cfe88be555121999b4a7da0bb8ff43cef6954dcb98cb3"
-  }
+    "build_artifact_sha256": "b4aab8220b17e02fbc5cfe88be555121999b4a7da0bb8ff43cef6954dcb98cb3",
+    "archive_bytes": 46733867,
+    "sha256": "4c84fe577b1cc34832b8da924d5f8c89e22043810cb349b62b18397fc899ef94",
+    "archive_crc_checked": true,
+    "file_hashes_checked": 10,
+    "paired_binary_hashes_match_ci": true
+  },
+  "draft_release_id": 409025384
 }
