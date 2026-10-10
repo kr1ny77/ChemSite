@@ -1,3 +1,24 @@
+## Authored turn candidates pass native contact — 2026-10-10
+
+Current phase: movement animation production. Completed work: two 90°
+stepping-turn actions with three support/transfer phases, upright posture
+and final boot alignment; editable candidate and GLB exported from accepted
+source, retaining all nine existing actions. BAS reports 44,424 triangles,
+15 bones, 13 materials, 11 actions, zero issues. Reviewed six source views,
+seven critical-phase views and 80 fresh-export chronological frames from
+front/side. Four finite 24 FPS movies generated; playback review pending.
+Last verification: 233 actual supporting-sole samples per action in fresh
+Blender and Godot; native maximum drift 0.00178 mm, floor error 0.00014 mm.
+The default 30 Hz GLTF bake failed at 3.486 mm; matching production's 384 Hz
+bake passes. Current work: candidate preserved outside production.
+Next task: review normal-speed timing and integrate collision-resolved root
+motion plus Walk/Run interruptions, then compare fresh controller runs at
+30/60/120 Hz and inspect native gameplay before promotion/export.
+Known issues: candidate translates root approximately 100 mm and turns root
+90°; blending it directly into the current controller would double turning
+and reset root offset. Moving turn contact and broader human/device/course
+acceptance remain open. Published 0.1.3 and production runtime retained.
+
 ## Turn trajectory candidates evaluated — 2026-10-10
 
 Current phase: motion production investigation. Completed work: tested

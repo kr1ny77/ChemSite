@@ -1,0 +1,138 @@
+{
+  "status": "candidate_native_contact_verified",
+  "runtime_promoted": false,
+  "files": {
+    "tools/blender/source/cartoon_chemist.blend": {
+      "bytes": 1212773,
+      "sha256": "53093ac8e1cba89bd21ef4442f94e8cb043e7be61c9458d23d8edcbfb7e8c777"
+    },
+    "artifacts/cartoon-turn-candidate/cartoon_turn.blend": {
+      "bytes": 1575209,
+      "sha256": "6318e44894fab5f1ac234ca04d4adb2ca07d1df62cd3d586597f29f9b77aee23"
+    },
+    "artifacts/cartoon-turn-candidate/cartoon_turn.glb": {
+      "bytes": 1749512,
+      "sha256": "2194588fbc00bdac7cf5366afa42b10951ebabe7228965c0ff5d5838ae87c2bb"
+    }
+  },
+  "source_checks": {
+    "existing_actions": [
+      "Celebrate",
+      "Failure",
+      "Idle",
+      "Interact",
+      "PickUp",
+      "Run",
+      "Turn",
+      "UseStation",
+      "Walk"
+    ],
+    "turns": [
+      {
+        "action": "TurnLeftStep",
+        "frames": 291,
+        "fps": 384,
+        "duration_s": 0.7552083333333334,
+        "support_ankle_error_m": 1.8250120749944284e-08,
+        "support_frame_drift_m": 2.2351741790771484e-08,
+        "root_translation_end": [
+          -0.07041627168655396,
+          -0.07041631639003754,
+          0.0
+        ]
+      },
+      {
+        "action": "TurnRightStep",
+        "frames": 291,
+        "fps": 384,
+        "duration_s": 0.7552083333333334,
+        "support_ankle_error_m": 3.0719530773294423e-08,
+        "support_frame_drift_m": 2.2351741790771484e-08,
+        "root_translation_end": [
+          -0.07041629403829575,
+          0.07041631639003754,
+          0.0
+        ]
+      }
+    ],
+    "scope": "Candidate; root translation/yaw requires native integration and exported sole review."
+  },
+  "exported_sole_checks": [
+    {
+      "action": "TurnLeftStep",
+      "duration_s": 0.7552083333333334,
+      "support_samples": 233,
+      "max_supporting_sole_height_error_m": 1.2824779105358175e-07,
+      "max_supporting_sole_tick_drift_m": 1.7279057081825512e-06
+    },
+    {
+      "action": "TurnRightStep",
+      "duration_s": 0.7552083333333334,
+      "support_samples": 233,
+      "max_supporting_sole_height_error_m": 8.722233246771793e-08,
+      "max_supporting_sole_tick_drift_m": 1.7218786038681865e-06
+    }
+  ],
+  "native_checks": [
+    {
+      "action": "TurnLeftStep",
+      "duration_s": 0.755208313465118,
+      "height_error_m": 1.34001908236314e-07,
+      "samples": 233,
+      "support_drift_m": 1.71596468589996e-06
+    },
+    {
+      "action": "TurnRightStep",
+      "duration_s": 0.755208313465118,
+      "height_error_m": 1.2435161522717e-07,
+      "samples": 233,
+      "support_drift_m": 1.77556557900971e-06
+    }
+  ],
+  "inspection_totals": {
+    "actions": 11,
+    "armatures": 1,
+    "bones": 15,
+    "boundary_edges": 4908,
+    "cameras": 0,
+    "constraints": 0,
+    "degenerate_faces": 0,
+    "edges": 69090,
+    "flat_polygons": 0,
+    "geometry_nodes_modifiers": 0,
+    "images": 0,
+    "invalid_vertices": 0,
+    "isolated_vertices": 0,
+    "lights": 0,
+    "materials": 13,
+    "mesh_objects": 86,
+    "missing_material_faces": 0,
+    "node_materials": 13,
+    "non_manifold_edges": 4908,
+    "objects": 87,
+    "polygons": 44424,
+    "refinement_modifiers": 0,
+    "rigid_body_objects": 0,
+    "shape_keys": 0,
+    "simulation_modifiers": 0,
+    "smooth_polygons": 44424,
+    "textured_materials": 0,
+    "triangles": 44424,
+    "uv_mapped_meshes": 75,
+    "vertices": 24757,
+    "weighted_meshes": 86,
+    "wire_edges": 0,
+    "zero_length_edges": 0
+  },
+  "reviewed_source_views": 6,
+  "reviewed_critical_frames": 7,
+  "reviewed_exported_chronological_frames": 80,
+  "normal_speed_playback_review": "pending",
+  "remaining": [
+    "collision-resolved root motion integration",
+    "Walk/Run transition and interruption continuity",
+    "fresh paired 30/60/120 Hz moving contact comparisons",
+    "native gameplay review",
+    "platform exports"
+  ]
+}
