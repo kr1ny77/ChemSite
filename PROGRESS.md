@@ -1,5 +1,23 @@
 # ChemSite progress
 
+## Sleeve skinning repair and current Windows image review — 2026-10-10
+
+Current phase: character polish and release verification. Completed work:
+reviewed b583a3e Windows artifact after matching SHA-256/CRC: 212 decoded
+1028×642 images, 179 exact card interiors against reviewed 88ab688 and 33
+differing full images inspected in four sheets plus three full panels.
+Fresh Blender character review exposed waist-connected fabric wedges in
+Celebrate. Source audit identified 153 cuff vertices weighted to lower body;
+reordered sleeve classification and repaired current source/GLB through a
+reviewed candidate. Last verification: identical fresh-import structure/action
+metrics, nine affected Blender pose views, six native Forward+ captures,
+import/parse, grounding/stance, phase, footstep and contact diagnostics pass.
+Current work: new platform builds required; b583a3e draft assets are superseded
+and remain unpublished. Next task: export repaired macOS, run packaged smoke,
+push source and inspect new Windows native/graphical results before replacing
+draft assets. Known issues: full-cycle cloth/human movement, hardware and
+instructor acceptance remain open. Human footstep comfort is accepted.
+
 ## Human footstep comfort accepted — 2026-10-10
 
 Current phase: audio acceptance and release preparation. Completed work:

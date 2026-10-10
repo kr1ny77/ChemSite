@@ -313,14 +313,14 @@ for obj in parts:
         elif obj.name.startswith(('Hand','Thumb')):weights={'hand_'+side:1}
         elif obj.name.startswith(('Safety vest','Reflective','Shoulder')):weights={'spine_03':1}
         else:
-            if co.z<.48:
+            if abs(co.x)>.285 and co.z>.43:
+                names=['spine_03','upperarm_'+side,'lowerarm_'+side]
+            elif co.z<.48:
                 t=max(0,min(1,(co.z-.30)/.18)); seat=t*t*(3-2*t)
                 t=max(0,min(1,(co.z-.15)/.13)); upper=t*t*(3-2*t)
                 weights={'pelvis':seat,'thigh_'+side:(1-seat)*upper,'calf_'+side:(1-seat)*(1-upper)}
                 for name,value in weights.items():groups[name].add([v.index],value,'REPLACE')
                 continue
-            elif abs(co.x)>.285 and co.z>.43:
-                names=['spine_03','upperarm_'+side,'lowerarm_'+side]
             else:names=['pelvis','spine_03']
             scores={name:1/(.018+segment_distance(co,rig.data.bones[name]))**4 for name in names}
             total=sum(scores.values());weights={name:value/total for name,value in scores.items()}

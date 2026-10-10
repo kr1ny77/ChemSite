@@ -1,5 +1,5 @@
 {
-  "status": "platform_archives_graphical_review_pending",
+  "status": "superseded_character_sleeve_repair",
   "version": "0.1.1",
   "game_source_revision": "b583a3edad1871cf7b37ee9d9be98f45de2e72fb",
   "macos": {
@@ -16,8 +16,8 @@
     "app_matches_extracted_test": true
   },
   "pending": [
-    "Current Windows graphical evidence review",
-    "Finalized release notes and publication checks"
+    "Fresh platform builds including sleeve weight repair",
+    "Replacement draft archives, updated source provenance and publication checks"
   ],
   "scope": "Candidate archive verification; complete production acceptance remains open.",
   "windows": {
@@ -48,7 +48,7 @@
     "graphical_artifact_id": 11673304282,
     "graphical_artifact_sha256": "3cbe34c90bc85835624407b419839e97cccd2e9c3e159723ef09ab16af6a8abe",
     "graphical_artifact_bytes": 127198201,
-    "graphical_review": "download_in_progress"
+    "graphical_review": "212 decoded, 179 card interiors exact vs reviewed 88ab688; 33 differing captures reviewed in four sheets and three full panels"
   },
   "draft_release_id": 409025384,
   "draft_assets": [
