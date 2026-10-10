@@ -29,10 +29,10 @@ def material(name, color, roughness=0.8, metallic=0.0):
 
 concrete = material("shell warm cast concrete", (0.64, 0.68, 0.63), 0.9)
 concrete_edge = material("shell concrete aggregate edge", (0.49, 0.55, 0.52), 0.95)
-steel = material("shell dark painted steel", (0.13, 0.24, 0.27), 0.48, 0.4)
+steel = material("shell dark painted steel", (0.13, 0.24, 0.27), 0.62, 0.0)
 rebar = material("shell weathered reinforcement", (0.31, 0.27, 0.23), 0.72, 0.32)
 timber = material("shell sealed formwork timber", (0.56, 0.36, 0.19), 0.83)
-amber = material("shell safety amber", (0.92, 0.49, 0.12), 0.62, 0.08)
+amber = material("shell safety amber", (0.92, 0.49, 0.12), 0.62, 0.0)
 
 
 def box(name, location, dimensions, surface, bevel=0.025):

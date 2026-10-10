@@ -37,9 +37,9 @@ def material(name,color,roughness=.8,metallic=0):
  return m
 brick=material('stage warm sand masonry',(.71,.52,.33))
 mortar=material('stage recessed mortar',(.49,.47,.39),.92)
-frame=material('stage ivory window metal',(.78,.83,.76),.5,.2)
-glass=material('stage opaque blue window',(.19,.43,.49),.22,.3)
-roof=material('stage teal standing seam roof',(.13,.32,.34),.45,.35)
+frame=material('stage ivory window metal',(.78,.83,.76),.5,0)
+glass=material('stage opaque blue window',(.19,.43,.49),.22,0)
+roof=material('stage teal standing seam roof',(.13,.32,.34),.55,0)
 
 def box(stage,name,location,dimensions,surface,bevel=.018):
  bpy.ops.mesh.primitive_cube_add(size=1,location=location)

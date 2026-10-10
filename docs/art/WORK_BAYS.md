@@ -94,3 +94,25 @@ left/right, top) under artifacts/material-cache-refinement/reduced-final-review.
 The revised native macOS app passed keyboard five-task career (700 points)
 and five-level/44-topic practice. Windows native 38066133512 and graphical
 38066133509 run against source 0eed5fd71c002ab0670825f1af3aac26ee299f0b.
+
+## Shell coating material contract — 2026-10-10
+
+Preserve all shell/stage geometry, UVs, colors, hierarchy and physics. Refine
+painted dark steel, amber rails, ivory window frames and teal roof as dielectric
+coatings; the opaque illustrative blue window uses a dielectric glossy surface.
+Existing weathered rebar retains its mixed exposed-metal/rust treatment. Frozen
+source/GLB and twelve native stage views: artifacts/shell-materials-before.
+Verify unchanged binary geometry and JSON non-material fields, source builder
+reproducibility, fresh import and matching native stage views before acceptance.
+
+Shell coating pass accepted in twelve matched native stage/yard views across
+three before/after sheets. Bare rebar distinction stays visible and the painted
+roof/frame retain readable highlights. Editor import and BAS fresh staged GLB
+inspection pass (32,440 triangles, zero issues). Binary GLB chunks and all
+non-material JSON fields are unchanged; exact report is retained in
+artifacts/shell-materials-refinement.json. Current source export follows.
+
+Pre-coating M4 1440×900 final-stage profile after cache/paint marks: exploration
+median 145 FPS, wall-frame p90 7.61 ms/p99 8.34 ms, 816 draw calls, 72.0 MB static;
+task median 145 FPS, p90 7.56 ms/p99 7.98 ms, 887 draws, 72.4 MB. This supports
+local performance only; representative student-laptop evidence remains open.

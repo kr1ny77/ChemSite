@@ -1,5 +1,19 @@
 # ChemSite progress
 
+## Shell coatings reviewed — 2026-10-10
+
+Current phase: environment materials. Completed work: refine five painted/window
+material profiles in editable shell/stage source and durable builders; preserve
+GLB binary chunks and non-material JSON fields. Last verification: editor import,
+BAS staged GLB 32,440 triangles/zero issues; twelve matched native stage/yard
+views reviewed in three sheets. Pre-coating cache/markings M4 final-stage profile
+records 145 FPS locally (wall-frame p90 7.61/7.56 ms exploration/task). Current
+work: shell source export refresh; Windows native 38066133512 completed success
+on 0eed5fd, graphical 38066133509 confirmed still running. Next task: inspect
+that graphical run and verify current material export. Known issues: physical
+Windows, representative student laptop, broad accessibility and instructor
+acceptance remain open.
+
 ## Revised asset and macOS export verified — 2026-10-10
 
 Current phase: environment polish and platform verification. Completed work:
