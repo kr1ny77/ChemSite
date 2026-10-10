@@ -36,9 +36,10 @@ func _run() -> void:
 	assert(player.controls_enabled and not site._hud.is_panel_open())
 	site._hud.show_task(site._tasks[0], site._tasks[0].station)
 	player.controls_enabled = false
-	var heading: String = site._hud._panel_content.get_child(0).text
+	var prompt: Label = site._hud._panel_content.get_child(1)
+	var heading: String = prompt.text
 	root.focus_exited.emit()
-	assert(site._hud._panel_content.get_child(0).text == heading)
+	assert(site._hud._panel_content.get_child(1) == prompt and prompt.text == heading)
 	site._resume()
 	site._round_done = true
 	root.focus_exited.emit()

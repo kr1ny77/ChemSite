@@ -1,5 +1,16 @@
 # ChemSite progress
 
+## Focus validator repaired — 2026-10-10
+
+Current phase: 0.1.3 release gate repair. Completed work: native Windows
+38069646718 stopped at focus_pause_smoke because its old first-child text
+assumption encountered the new task-header HBox. Updated validator to retain
+and compare actual prompt identity/text. Last verification: source native
+FOCUS_PAUSE_SMOKE_OK; extracted macOS practice also passes. Current work:
+fresh source push and Windows rerun. Next task: inspect exact new-source
+results, package and publish 0.1.3. Known issues: superseded native run failed;
+turn residual, broad accessibility/course review and user-owned device tests.
+
 ## Optional hints exported — 2026-10-10
 
 Current phase: 0.1.3 native patch verification. Completed work: source 76168b2

@@ -214,3 +214,5 @@
 
 - [x] Export optional hints in macOS 0.1.3; keyboard career/practice, raw hint keyboard/reset and 11,317 contrast/state checks pass. Exact-source Windows native 38069646718 and graphical 38069646712 running.
 - [ ] Publish verified 0.1.3 with optional hints after native Windows and visual artifact review.
+
+- [x] Repair focus-pause validator after hint header became a container: verify stable task-prompt identity/text through focus loss. Native source gate passes; fresh Windows runs follow new source.
