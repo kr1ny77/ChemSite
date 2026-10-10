@@ -1,5 +1,23 @@
 # ChemSite progress
 
+## Windows matrix review and modal navigation repair — 2026-10-10
+
+Current phase: QA and release preparation. Completed work: reviewed all
+212 b0b1a80 Windows images in sixteen sheets plus three full panels; found
+partial navigation prompt behind large task cards. Prompt now follows
+modal visibility and returns immediately on close. Last verification:
+native 1028×642 200-task/400-feedback/results/pause layout and prompt
+hide/restore gate passed, native equilibrium capture reviewed, macOS
+export and packaged equilibrium round passed. 88ab688 Windows native
+and graphical jobs succeeded; native log digest/CRC and all five keyboard
+rounds, 40.35 mm reversal and 192 comparison cases checked. Current work:
+current graphical archive fully downloaded and 212 PNGs decoded/dimension
+checked; image review pending. Next task: review current Windows images,
+verify modal revision on Windows, prepare patch archives. Known issues:
+human/hardware/instructor acceptance and residual turn drift remain open.
+Published v0.1.0 remains unchanged.
+
+
 ## Gait support anchor repair — 2026-10-09
 
 Current phase: movement polish. Completed work: correlated per-sample

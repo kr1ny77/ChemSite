@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Review 212 Windows comparison-matrix images and repair navigation prompt behind large modal cards; native 200-task/400-feedback/modal restoration gate and packaged equilibrium round pass. Verify gait-repair Windows native/graphical success, artifact hashes/CRC and 212 decoded images; latest image review remains next.
+
 - [x] Add eight equilibrium comparison diagrams; all 32 comparisons now have visual metadata. 192 layout/reveal/motion cases, 48 native states, Level 4 content, preserved 200-task content, import/export and packaged equilibrium round pass.
 
 - [x] Add five remaining kinetics/corrosion comparison diagrams (L4-138/153/154/156/159); 144 comparison checks, 30 native views, Level 4 content and packaged corrosion round pass. Coverage 24/32; eight equilibrium comparisons remain.

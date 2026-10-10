@@ -12,6 +12,9 @@ func _run() -> void:
 	var failures: Array[String] = []
 	for level in range(1, 6):
 		for task in TASK_BANK.load_verified_tasks(level):
+			hud.close_panel()
+			hud.update_status(task, 0, 0, 900.0, {})
+			if not hud._prompt.get_parent().visible: failures.append(str(task.id) + " missing exploration navigation")
 			hud.show_task(task, str(task.station))
 			await process_frame
 			checked += 1
@@ -36,6 +39,8 @@ func _run() -> void:
 			if expanded:
 				await process_frame
 				_check_panel(hud, str(task.id), "read", failures)
+			hud.close_panel()
+			if not hud._prompt.get_parent().visible: failures.append(str(task.id) + " navigation not restored after close")
 	var feedback_checked := 0
 	for level in range(1, 6):
 		for task in TASK_BANK.load_verified_tasks(level):
@@ -66,6 +71,8 @@ func _run() -> void:
 	quit()
 
 func _check_panel(hud: Control, identifier: String, phase: String, failures: Array[String]) -> void:
+	if hud._prompt.get_parent().visible:
+		failures.append(identifier + " " + phase + " navigation visible behind modal")
 	var panel: PanelContainer = hud._panel
 	var panel_rect := panel.get_global_rect()
 	var screen := Vector2(root.get_viewport().get_visible_rect().size)

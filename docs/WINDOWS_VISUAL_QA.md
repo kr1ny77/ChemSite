@@ -121,3 +121,27 @@ and ZIP CRC for 33 files. Logs confirm all five keyboard rounds, the
 final-skinned-sole contact gate and 192 comparison diagram cases.
 Graphical run 37932930583 remains separate and was still running when
 checked; physical Windows acceptance remains open.
+
+## Comparison matrix review and gait revision — 2026-10-10
+
+b0b1a80 graphical run 37932930583 succeeded. Artifact 11616669606
+(122,355,403 bytes) matched SHA-256
+f418dd5cd8fffa76314761d7a980dda384603c099a173b16e0b3c008fa0a35b8.
+ZIP CRC and 212 PNG dimensions/decode passed. Reviewed all sixteen round
+sheets and full-size hydrolysis/carbonate, compressed-volume equilibrium
+and protector panels. The lower navigation prompt showed partly behind
+large cards; repaired by modal visibility ownership in the subsequent
+revision, with native HUD/modal restoration and packaged equilibrium QA.
+Compatibility remains brighter than macOS Forward+.
+
+88ab688 native 37934502248 and graphical 37934502043 both succeeded.
+Native logs artifact 11618515512 (43,365 bytes) matched SHA-256
+7ceb30ee3366910f09b07d63bcbdd35ca9ef333f27388a7363023b42ee8ee71c;
+33-file ZIP CRC passed. All five keyboard round logs confirm active foot
+planting and completion; contact log confirms repaired 40.35 mm reversal
+peak and comparison gate confirms 192 cases. Graphical artifact
+11618036909 (122,374,598 bytes) matched SHA-256
+ea86c4637877e08c8e08b2681ffb6a07c207322b438e4c3a4767d226377a4355;
+CRC and all 212 PNG dimensions/decode passed. Current-revision image
+review remains next; previous revision's review is recorded separately.
+Physical Windows acceptance remains open.

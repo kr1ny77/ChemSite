@@ -100,6 +100,7 @@ func _ready() -> void:
 	_panel.mouse_filter = Control.MOUSE_FILTER_STOP
 	_panel.add_theme_stylebox_override("panel", _panel_style(Color("f3efe1"), 16))
 	add_child(_panel)
+	_panel.visibility_changed.connect(_sync_navigation_prompt)
 	_panel_content = VBoxContainer.new()
 	_panel_content.add_theme_constant_override("separation", 15)
 	_panel.add_child(_panel_content)
@@ -115,6 +116,11 @@ func update_status(task: Dictionary, completed: int, score: int, time_left: floa
 		_prompt.text = "[ E ]  %s" % nearest.name
 	else:
 		_prompt.text = "%s  ·  ТЕКУЩАЯ ЦЕЛЬ: %s" % [nearest.name, _station_name(task.station)]
+
+	_sync_navigation_prompt()
+
+func _sync_navigation_prompt() -> void:
+	(_prompt.get_parent() as Control).visible = not _panel.visible and not _prompt.text.is_empty()
 
 func update_round_stats(completed: int, score: int, time_left: float, streak: int, mode: String) -> void:
 	_score_label.text = "ОЧКИ  %d" % score
