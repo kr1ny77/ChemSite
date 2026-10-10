@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Compare 60°/30° directional ankle steering; 30° improves corners at all three frequencies and 30/60 Hz reversals, but 120 Hz reversal worsens 27.181→34.840 mm. Reject promotion and restore production byte-for-byte. Next candidate steers swing/transfer while preserving planted support.
+
 - [x] Measure velocity/body direction at production contact peaks: 46.600° corner and 90.632° reversal mismatch; add read-only diagnostic fields, preserve exact 32.090/40.354 mm peaks and pass full 60 Hz contact gate. Next: directional local ankle paths with existing support/height/reach bounds.
 
 - [x] Reject 120 mm foot-correction candidate: 60 Hz corner displacement grows 32.090→54.766 mm, reach loss 55.802 mm; restore production modifier/validator byte-for-byte. Next movement candidate requires authored support transfer/turn timing.

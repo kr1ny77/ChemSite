@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Directional steering measured and rejected — 2026-10-10
+
+Current phase: movement polish. Completed work: 60° and 30° local ankle
+steering candidates compared; fresh 30/120 Hz production baselines collected.
+Last verification: 30° candidate passes contact/release/length/height gates
+at 30/60/120 Hz and improves corners; 120 Hz reversal regresses
+27.181→34.840 mm, preventing promotion. Production modifier restored byte-for-byte.
+Current work: swing/transfer-specific steering design. Next task: steer the
+unloaded foot toward travel while preserving planted support ownership;
+repeat comparative contact gates before visual promotion. Known issues: turn
+residual, broader accessibility/course review and user-owned device acceptance.
+
 ## Directional gait diagnosis — 2026-10-10
 
 Current phase: movement polish. Completed work: fresh production 60 Hz contact

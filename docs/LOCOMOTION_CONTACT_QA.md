@@ -287,3 +287,29 @@ vertical profiles and existing correction/reach bounds. Counter-steering
 should settle to zero during straight travel. Validate all three physics
 frequencies, straight negative control, release, two views and normal-speed
 turn recording before promotion. Diagnostic: artifacts/turn-direction-baseline.json.
+
+## Directional ankle steering candidates — 2026-10-10
+
+Two presentation-only candidates rotate ankle trajectories about each hip toward
+velocity, damped at 24 s⁻¹. Support phases, heights, leg lengths, body/controller
+and 65 mm correction bound retain production values. 60° steering at 60 Hz
+changes corner/reversal to 26.890/43.777 mm, with 28.848/27.572 mm reach loss;
+rejected for reversal regression. The moderated 30° candidate passes all
+existing contact/release/length/height gates at three frequencies:
+
+| Hz | Scenario | Fresh baseline mm | 30° candidate mm |
+| --- | --- | --- | --- |
+| 30 | corner | 88.965 | 50.194 |
+| 30 | reversal | 66.380 | 46.486 |
+| 60 | corner | 32.090 | 30.048 |
+| 60 | reversal | 40.354 | 39.205 |
+| 120 | corner | 18.207 | 0.001 |
+| 120 | reversal | 27.181 | 34.840 |
+
+The 120 Hz reversal regression rejects promotion despite broad corner gains.
+Straight steady motion and start/stop remain unchanged. Production modifier
+restored byte-for-byte; published assets unchanged. Fresh 30/120 baselines
+and candidate files are in artifacts/directional-gait-*.json; comparison is
+artifacts/directional-gait-comparison.json. No visual promotion gate claimed.
+Next candidate should steer during swing/transfer and preserve support ownership;
+a continuously steered planted leg introduces phase-sensitive reach loss.
