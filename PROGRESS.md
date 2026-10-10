@@ -1,5 +1,17 @@
 # ChemSite progress
 
+## Repaired Windows native proof — 2026-10-10
+
+Current phase: release verification. Completed work: 1de892f Windows native
+38064301998 succeeded; current native diagnostics match GitHub digest and
+all 34 files pass CRC. Last verification: file/product version 0.1.1.0,
+five keyboard rounds and five-level/44-topic practice confirmed from native
+logs/workflow. Current work: build download session 12877, graphical workflow
+38064301853; user manual exported round feedback pending. Next task: package
+current Windows binary, review current graphical evidence, replace draft assets
+and publish after final checks. Known issues: broader human movement/device/
+instructor acceptance remains open; existing draft assets are superseded.
+
 ## Repaired macOS package and sampled cloth cycles — 2026-10-10
 
 Current phase: character QA and release preparation. Completed work: reviewed

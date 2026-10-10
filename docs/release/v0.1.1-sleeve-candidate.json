@@ -16,7 +16,23 @@
   "windows": {
     "native_run": 38064301998,
     "graphical_run": 38064301853,
-    "status": "in_progress"
+    "status": "in_progress",
+    "native_status": "success",
+    "file_version": "0.1.1.0",
+    "product_version": "0.1.1.0",
+    "native_logs_artifact_id": 11674860890,
+    "native_logs_sha256": "8e305c7da6466f58c352364f43de25a815d7bcad3defd43c23c49b455e812f81",
+    "native_log_files_crc_checked": 34,
+    "keyboard_levels_passed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
+    "build_artifact_id": 11674855910,
+    "build_artifact_sha256": "3ce94810b3e182cc4d50a4f5b333406e1423b95f1c88bff0029a114c2d422d7d"
   },
   "draft_release_id": 409025384,
   "pending": [
