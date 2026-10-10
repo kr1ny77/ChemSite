@@ -1,3 +1,17 @@
+## Turn trajectory candidates evaluated — 2026-10-10
+
+Current phase: motion production investigation. Completed work: tested
+rest-ankle trajectory steering and input-heading anticipation against unchanged
+60 Hz skinned-support gates. Rest-pivot reversal 54.011 mm and anticipated
+corner 48.470 mm exceed their gates; both candidates rejected. Failure output
+now includes measured scenario/displacement for useful triage.
+Last verification: both runtime files restored byte-for-byte; fresh restored
+60 Hz contact, straight travel, height, leg length and release gates pass.
+Current work: select authored turn-motion approach. Next task: Blender turn
+clip authoring and multiview/native evaluation. Known issues: tight-turn
+contact and broader human/device/course/accessibility acceptance remain open.
+Published 0.1.3 retains its verified source and bytes.
+
 ## Tight-turn support-phase audit — 2026-10-10
 
 Current phase: movement polish after published 0.1.3.

@@ -120,7 +120,7 @@ func _run() -> void:
 			return
 		if plant != null and plant.active:
 			if physics_hz == 60 and ((scenario == "reverse_run" and turn_maximum >= 0.05) or (scenario == "corner_run" and turn_maximum >= 0.04)):
-				push_error("Planted turn contact exceeds its displacement gate")
+				push_error("Planted turn contact exceeds its displacement gate: %s %.6f m" % [scenario, turn_maximum])
 				quit(1)
 				return
 			if plant.maximum_length_error > 0.0001 or plant.maximum_height_error > 0.0001 or plant.maximum_correction > 0.06501 or plant.maximum_boot_twist > deg_to_rad(65.01):

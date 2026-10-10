@@ -340,3 +340,25 @@ Reproducible summary: tools/validation/summarize_turn_contact.py; report
 with raw-input SHA-256 and exact peak/onset samples:
 docs/release/turn-contact-phase-audit.json. This diagnostic changes no
 runtime pose or acceptance threshold. Published 0.1.3 remains current.
+
+## Rest-ankle trajectory and input anticipation rejected — 2026-10-10
+
+Two distinct 60 Hz experiments were evaluated against unchanged physical
+support windows and displacement thresholds. Rotating ankle displacement
+around its global rest position (retaining stance width and authored height),
+with full local velocity heading and turn-response damping, changed corner
+peak 32.090→31.164 mm but reversal 40.354→54.011 mm. Corner reach loss
+was 34.310 mm. Rejected by the 50 mm reversal gate. The second experiment
+used desired input direction as the body-heading target while retaining the
+production foot modifier. Corner peak became 48.470 mm, exceeding the
+40 mm gate. Rejected before further frequency/visual checks.
+
+Both runtime files restored byte-for-byte. Fresh restored 60 Hz diagnostics
+pass all support, leg length, height, release and straight-control gates.
+The validator now prints scenario and measured displacement on failure;
+acceptance thresholds and measurement logic retain their values.
+Evidence logs: /tmp/chemsite-restpivot60-detailed.log,
+/tmp/chemsite-input-heading60.log, /tmp/chemsite-restpivot-restored.log.
+These results favor authored turn-specific motion rather than further
+rotations of the existing sagittal cycle. A new turn clip needs Blender
+rig/action authoring, multiview review and full native promotion gates.
