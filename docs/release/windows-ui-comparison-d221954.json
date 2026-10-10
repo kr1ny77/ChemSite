@@ -1,0 +1,2122 @@
+[
+  {
+    "image": "level1/feedback_01.png",
+    "panel_interior": [
+      199,
+      248,
+      828,
+      394
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/feedback_02.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      392
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/feedback_03.png",
+    "panel_interior": [
+      29,
+      93,
+      828,
+      407
+    ],
+    "identical": false
+  },
+  {
+    "image": "level1/feedback_04.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      408
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/feedback_05.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      407
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/task_01.png",
+    "panel_interior": [
+      199,
+      190,
+      828,
+      452
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/task_02.png",
+    "panel_interior": [
+      199,
+      187,
+      829,
+      461
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/task_03.png",
+    "panel_interior": [
+      199,
+      192,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/task_04.png",
+    "panel_interior": [
+      199,
+      191,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level1/task_05.png",
+    "panel_interior": [
+      199,
+      192,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/feedback_01.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      392
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/feedback_02.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      452
+    ],
+    "identical": false
+  },
+  {
+    "image": "level2/feedback_03.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      407
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/feedback_04.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      406
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/feedback_05.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      407
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/task_01.png",
+    "panel_interior": [
+      199,
+      192,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/task_02.png",
+    "panel_interior": [
+      199,
+      142,
+      829,
+      501
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/task_03.png",
+    "panel_interior": [
+      199,
+      178,
+      828,
+      465
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/task_04.png",
+    "panel_interior": [
+      199,
+      192,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level2/task_05.png",
+    "panel_interior": [
+      199,
+      173,
+      828,
+      469
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/feedback_01.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      393
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/feedback_02.png",
+    "panel_interior": [
+      199,
+      127,
+      828,
+      451
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3/feedback_03.png",
+    "panel_interior": [
+      199,
+      224,
+      828,
+      418
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/feedback_04.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      482
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3/feedback_05.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      447
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3/observation_05.png",
+    "panel_interior": [
+      199,
+      91,
+      828,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3/task_01.png",
+    "panel_interior": [
+      199,
+      191,
+      828,
+      451
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/task_02.png",
+    "panel_interior": [
+      199,
+      149,
+      829,
+      493
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/task_03.png",
+    "panel_interior": [
+      199,
+      154,
+      829,
+      489
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/task_04.png",
+    "panel_interior": [
+      199,
+      125,
+      829,
+      518
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3/task_05.png",
+    "panel_interior": [
+      199,
+      145,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/feedback_01.png",
+    "panel_interior": [
+      199,
+      115,
+      828,
+      393
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-dissociation/feedback_02.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      393
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/feedback_03.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-dissociation/feedback_04.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-dissociation/feedback_05.png",
+    "panel_interior": [
+      199,
+      224,
+      828,
+      418
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/task_01.png",
+    "panel_interior": [
+      199,
+      145,
+      828,
+      493
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/task_02.png",
+    "panel_interior": [
+      199,
+      148,
+      828,
+      494
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/task_03.png",
+    "panel_interior": [
+      199,
+      148,
+      828,
+      494
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/task_04.png",
+    "panel_interior": [
+      199,
+      148,
+      828,
+      507
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-dissociation/task_05.png",
+    "panel_interior": [
+      199,
+      154,
+      828,
+      489
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/feedback_01.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      447
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/feedback_02.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/feedback_03.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/feedback_04.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/feedback_05.png",
+    "panel_interior": [
+      199,
+      224,
+      828,
+      418
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/observation_01.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/observation_02.png",
+    "panel_interior": [
+      199,
+      106,
+      829,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/observation_03.png",
+    "panel_interior": [
+      199,
+      105,
+      829,
+      537
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/task_01.png",
+    "panel_interior": [
+      199,
+      145,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/task_02.png",
+    "panel_interior": [
+      199,
+      159,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/task_03.png",
+    "panel_interior": [
+      199,
+      158,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-hydrolysis/task_04.png",
+    "panel_interior": [
+      199,
+      85,
+      829,
+      557
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-hydrolysis/task_05.png",
+    "panel_interior": [
+      199,
+      154,
+      828,
+      489
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/feedback_01.png",
+    "panel_interior": [
+      199,
+      115,
+      828,
+      392
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ion/feedback_02.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      393
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/feedback_03.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ion/feedback_04.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ion/feedback_05.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ion/observation_05.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ion/task_01.png",
+    "panel_interior": [
+      199,
+      144,
+      829,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/task_02.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/task_03.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/task_04.png",
+    "panel_interior": [
+      199,
+      85,
+      829,
+      557
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ion/task_05.png",
+    "panel_interior": [
+      199,
+      145,
+      828,
+      507
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/feedback_01.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      392
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/feedback_02.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      392
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/feedback_03.png",
+    "panel_interior": [
+      199,
+      169,
+      828,
+      406
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ph/feedback_04.png",
+    "panel_interior": [
+      199,
+      169,
+      828,
+      419
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ph/feedback_05.png",
+    "panel_interior": [
+      199,
+      169,
+      828,
+      408
+    ],
+    "identical": false
+  },
+  {
+    "image": "level3-ph/results.png",
+    "panel_interior": [
+      199,
+      169,
+      829,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/task_01.png",
+    "panel_interior": [
+      199,
+      158,
+      828,
+      484
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/task_02.png",
+    "panel_interior": [
+      199,
+      158,
+      828,
+      484
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/task_03.png",
+    "panel_interior": [
+      199,
+      158,
+      829,
+      484
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/task_04.png",
+    "panel_interior": [
+      199,
+      158,
+      829,
+      484
+    ],
+    "identical": true
+  },
+  {
+    "image": "level3-ph/task_05.png",
+    "panel_interior": [
+      199,
+      169,
+      829,
+      467
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/feedback_01.png",
+    "panel_interior": [
+      199,
+      238,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/feedback_02.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      447
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/feedback_04.png",
+    "panel_interior": [
+      199,
+      216,
+      828,
+      427
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/feedback_05.png",
+    "panel_interior": [
+      199,
+      216,
+      828,
+      427
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/observation_02.png",
+    "panel_interior": [
+      199,
+      107,
+      828,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/observation_03.png",
+    "panel_interior": [
+      199,
+      92,
+      828,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/observation_04.png",
+    "panel_interior": [
+      199,
+      92,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/results.png",
+    "panel_interior": [
+      199,
+      126,
+      828,
+      459
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4/task_01.png",
+    "panel_interior": [
+      199,
+      176,
+      828,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/task_02.png",
+    "panel_interior": [
+      199,
+      160,
+      828,
+      482
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/task_03.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/task_04.png",
+    "panel_interior": [
+      199,
+      143,
+      829,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4/task_05.png",
+    "panel_interior": [
+      199,
+      123,
+      828,
+      520
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/feedback_01.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/feedback_02.png",
+    "panel_interior": [
+      199,
+      238,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/feedback_04.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/feedback_05.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/observation_01.png",
+    "panel_interior": [
+      187,
+      92,
+      828,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/observation_02.png",
+    "panel_interior": [
+      199,
+      108,
+      828,
+      535
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/observation_03.png",
+    "panel_interior": [
+      199,
+      54,
+      828,
+      588
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/observation_04.png",
+    "panel_interior": [
+      199,
+      92,
+      828,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/observation_05.png",
+    "panel_interior": [
+      199,
+      73,
+      828,
+      569
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/task_01.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/task_02.png",
+    "panel_interior": [
+      199,
+      160,
+      828,
+      482
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/task_03.png",
+    "panel_interior": [
+      199,
+      106,
+      828,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/task_04.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-corrosion/task_05.png",
+    "panel_interior": [
+      199,
+      125,
+      828,
+      518
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/feedback_01.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      447
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/feedback_02.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/feedback_03.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/feedback_04.png",
+    "panel_interior": [
+      199,
+      235,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/feedback_05.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/observation_01.png",
+    "panel_interior": [
+      199,
+      107,
+      829,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/observation_02.png",
+    "panel_interior": [
+      199,
+      106,
+      829,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/observation_03.png",
+    "panel_interior": [
+      199,
+      106,
+      829,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/observation_04.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/observation_05.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/task_01.png",
+    "panel_interior": [
+      199,
+      160,
+      828,
+      482
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/task_02.png",
+    "panel_interior": [
+      199,
+      159,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/task_03.png",
+    "panel_interior": [
+      199,
+      159,
+      828,
+      507
+    ],
+    "identical": false
+  },
+  {
+    "image": "level4-electrode/task_04.png",
+    "panel_interior": [
+      199,
+      145,
+      828,
+      507
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-electrode/task_05.png",
+    "panel_interior": [
+      199,
+      145,
+      828,
+      507
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/feedback_01.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/feedback_02.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/feedback_04.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/feedback_05.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/observation_01.png",
+    "panel_interior": [
+      199,
+      92,
+      829,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/observation_02.png",
+    "panel_interior": [
+      199,
+      88,
+      829,
+      554
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/observation_03.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      552
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/observation_04.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      552
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/observation_05.png",
+    "panel_interior": [
+      199,
+      73,
+      829,
+      569
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/results.png",
+    "panel_interior": [
+      199,
+      183,
+      829,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/task_01.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/task_02.png",
+    "panel_interior": [
+      199,
+      140,
+      829,
+      502
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/task_03.png",
+    "panel_interior": [
+      199,
+      143,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/task_04.png",
+    "panel_interior": [
+      199,
+      143,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-equilibrium/task_05.png",
+    "panel_interior": [
+      199,
+      125,
+      829,
+      518
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/feedback_01.png",
+    "panel_interior": [
+      199,
+      238,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/feedback_02.png",
+    "panel_interior": [
+      199,
+      249,
+      828,
+      393
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/feedback_03.png",
+    "panel_interior": [
+      199,
+      236,
+      828,
+      407
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/feedback_04.png",
+    "panel_interior": [
+      199,
+      223,
+      828,
+      419
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/feedback_05.png",
+    "panel_interior": [
+      199,
+      224,
+      828,
+      418
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/results.png",
+    "panel_interior": [
+      199,
+      183,
+      829,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/task_01.png",
+    "panel_interior": [
+      199,
+      176,
+      828,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/task_02.png",
+    "panel_interior": [
+      199,
+      123,
+      829,
+      519
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/task_03.png",
+    "panel_interior": [
+      199,
+      122,
+      829,
+      520
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/task_04.png",
+    "panel_interior": [
+      199,
+      176,
+      829,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-hess/task_05.png",
+    "panel_interior": [
+      199,
+      176,
+      829,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/feedback_01.png",
+    "panel_interior": [
+      199,
+      229,
+      828,
+      413
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/feedback_02.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/feedback_04.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/feedback_05.png",
+    "panel_interior": [
+      199,
+      215,
+      828,
+      428
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/observation_01.png",
+    "panel_interior": [
+      199,
+      92,
+      829,
+      551
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/observation_02.png",
+    "panel_interior": [
+      199,
+      93,
+      829,
+      549
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/observation_03.png",
+    "panel_interior": [
+      199,
+      93,
+      829,
+      549
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/observation_04.png",
+    "panel_interior": [
+      199,
+      88,
+      829,
+      554
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/observation_05.png",
+    "panel_interior": [
+      199,
+      76,
+      829,
+      565
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/results.png",
+    "panel_interior": [
+      199,
+      183,
+      829,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/task_01.png",
+    "panel_interior": [
+      199,
+      143,
+      828,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/task_02.png",
+    "panel_interior": [
+      199,
+      145,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/task_03.png",
+    "panel_interior": [
+      199,
+      145,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/task_04.png",
+    "panel_interior": [
+      199,
+      140,
+      829,
+      502
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-kinetics/task_05.png",
+    "panel_interior": [
+      199,
+      128,
+      829,
+      514
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/feedback_01.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/feedback_02.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/feedback_04.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/feedback_05.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/observation_01.png",
+    "panel_interior": [
+      187,
+      73,
+      828,
+      569
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/observation_02.png",
+    "panel_interior": [
+      199,
+      89,
+      828,
+      554
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/observation_03.png",
+    "panel_interior": [
+      199,
+      92,
+      828,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/observation_04.png",
+    "panel_interior": [
+      199,
+      92,
+      828,
+      550
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/observation_05.png",
+    "panel_interior": [
+      199,
+      54,
+      828,
+      588
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/task_01.png",
+    "panel_interior": [
+      199,
+      125,
+      828,
+      518
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/task_02.png",
+    "panel_interior": [
+      199,
+      140,
+      828,
+      502
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/task_03.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/task_04.png",
+    "panel_interior": [
+      199,
+      144,
+      828,
+      499
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-surface/task_05.png",
+    "panel_interior": [
+      199,
+      106,
+      828,
+      536
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/feedback_01.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/feedback_02.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/feedback_04.png",
+    "panel_interior": [
+      199,
+      223,
+      828,
+      419
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/feedback_05.png",
+    "panel_interior": [
+      199,
+      224,
+      828,
+      418
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/observation_01.png",
+    "panel_interior": [
+      199,
+      93,
+      829,
+      549
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/observation_02.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      552
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/observation_03.png",
+    "panel_interior": [
+      199,
+      91,
+      829,
+      552
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/results.png",
+    "panel_interior": [
+      199,
+      183,
+      829,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/task_01.png",
+    "panel_interior": [
+      199,
+      145,
+      828,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/task_02.png",
+    "panel_interior": [
+      199,
+      143,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/task_03.png",
+    "panel_interior": [
+      199,
+      143,
+      829,
+      498
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/task_04.png",
+    "panel_interior": [
+      199,
+      176,
+      829,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level4-thermal/task_05.png",
+    "panel_interior": [
+      199,
+      176,
+      829,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/feedback_01.png",
+    "panel_interior": [
+      199,
+      239,
+      828,
+      404
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/feedback_02.png",
+    "panel_interior": [
+      199,
+      250,
+      828,
+      452
+    ],
+    "identical": false
+  },
+  {
+    "image": "level5/feedback_03.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/feedback_04.png",
+    "panel_interior": [
+      199,
+      225,
+      828,
+      417
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/feedback_05.png",
+    "panel_interior": [
+      199,
+      216,
+      828,
+      427
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/results.png",
+    "panel_interior": [
+      199,
+      183,
+      828,
+      459
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/task_01.png",
+    "panel_interior": [
+      199,
+      176,
+      828,
+      466
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/task_02.png",
+    "panel_interior": [
+      112,
+      144,
+      829,
+      451
+    ],
+    "identical": false
+  },
+  {
+    "image": "level5/task_03.png",
+    "panel_interior": [
+      199,
+      156,
+      828,
+      486
+    ],
+    "identical": true
+  },
+  {
+    "image": "level5/task_04.png",
+    "panel_interior": [
+      199,
+      102,
+      828,
+      489
+    ],
+    "identical": false
+  },
+  {
+    "image": "level5/task_05.png",
+    "panel_interior": [
+      199,
+      175,
+      828,
+      466
+    ],
+    "identical": true
+  }
+]

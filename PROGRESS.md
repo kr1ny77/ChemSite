@@ -1,5 +1,16 @@
 # ChemSite progress
 
+## Version 0.1.2 preparation — 2026-10-10
+
+Current phase: native patch packaging. Completed work: d221954 Windows graphical
+archive SHA-256 and 254-entry CRC verified; all 212 PNGs decode, 176 task-card
+interiors match reviewed 1de baseline, 36 differing frames reviewed on four
+sheets. Last verification: native d221954 five-level EXE checks and graphical
+run succeeded. Current work: align embedded project/macOS/Windows versions to
+0.1.2, export matching packages. Next task: verify versioned exports and publish
+new prerelease with fresh digests. Known issues: residual tight-turn contact,
+broad accessibility/course review and user-owned device acceptance.
+
 ## User-owned device acceptance — 2026-10-10
 
 User explicitly chose to check target-computer performance personally and

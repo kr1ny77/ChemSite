@@ -199,3 +199,6 @@
 - [x] Phase 16: source push and GitHub v0.1.0 prerelease published at ac41d28 with verified macOS/Windows archives, notices and SHA-256 files; public tag and checksum downloads checked. Broader human/hardware/instructor gates remain open.
 
 - [x] Resolve production music provenance: existing original synthesis source reproduces native track 1 byte-for-byte in an isolated directory; source, size and SHA-256 recorded in docs/ASSET_LICENSES.md.
+
+- [x] Review d221954 Windows graphical artifact: digest/254-entry CRC, 212 decoded PNGs and 36 differing captures inspected against the reviewed baseline.
+- [ ] Package and publish v0.1.2 with matching embedded versions, current environment refinements and exact-source native verification.
