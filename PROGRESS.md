@@ -1,5 +1,15 @@
 # ChemSite progress
 
+## User-owned device acceptance — 2026-10-10
+
+User explicitly chose to check target-computer performance personally and
+requested Windows download instructions. Published v0.1.1 Windows archive is
+available from the verified prerelease. Device acceptance remains pending
+user results; further device-specification questions are unnecessary. Current
+work: current environment graphical artifact download session 30454. Next task:
+finish current image review and remaining authored production work. Known issues:
+residual turn contact, broad accessibility/course review and user device tests.
+
 ## Heading candidate rejected; graphical success — 2026-10-10
 
 Current phase: movement polish and Windows image review. Completed work:
