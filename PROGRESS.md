@@ -1,5 +1,20 @@
 # ChemSite progress
 
+## Patch package preparation — 2026-10-10
+
+Current phase: release preparation. Completed work: compared 212 gait-repair
+Windows card interiors against reviewed matrix (182 exact matches, thirty
+differing full captures reviewed). Packager now accepts release version
+and verified source revision. Last verification: syntax/help checks,
+macOS keyboard and five-level/44-topic practice pass; 0.1.1 candidate
+archive created separately, CRC/fourteen file hashes/source/version/mode
+verified; extracted app five-level practice passed. Current work: f6b1949
+Windows native/visual jobs still running. Next task: finalize verified
+platform candidate archives and prerelease notes. Known issues: full
+human/hardware/instructor acceptance and residual turn drift remain open.
+Published 0.1.0 bytes remain unchanged.
+
+
 ## Windows matrix review and modal navigation repair — 2026-10-10
 
 Current phase: QA and release preparation. Completed work: reviewed all

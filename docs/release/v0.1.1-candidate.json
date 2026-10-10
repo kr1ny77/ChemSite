@@ -1,0 +1,18 @@
+{
+  "status": "candidate_unpublished",
+  "version": "0.1.1",
+  "game_source_revision": "f6b1949e918a391df89b7026f900b606944ce4f6",
+  "macos": {
+    "archive_bytes": 74413184,
+    "sha256": "2b690282250cbae42fcf7fc6e37cc01d271c4475aca85b5d059fae2523342dbc",
+    "crc_checked": true,
+    "file_hashes_checked": 14,
+    "extracted_practice_marker": "PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5",
+    "extracted_log_sha256": "4e8177a810c7ed9e86bff5835f462b30bad3eb30919b7ef1848f799b46eb321c"
+  },
+  "pending": [
+    "Windows f6b1949 native and graphical verification",
+    "Final package known-issues/notes and publication checks"
+  ],
+  "scope": "Candidate archive verification; complete production acceptance remains open."
+}

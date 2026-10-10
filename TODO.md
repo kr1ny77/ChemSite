@@ -2,6 +2,8 @@
 
 ## Completed checkpoints
 
+- [x] Compare gait-repair Windows UI evidence: 182 card interiors exactly match reviewed matrix; thirty differing captures reviewed. Add explicit package version/source provenance and create separate 0.1.1 macOS candidate with verified CRC, fourteen file hashes and metadata; extracted app practice passes; Windows platform verification remains pending.
+
 - [x] Review 212 Windows comparison-matrix images and repair navigation prompt behind large modal cards; native 200-task/400-feedback/modal restoration gate and packaged equilibrium round pass. Verify gait-repair Windows native/graphical success, artifact hashes/CRC and 212 decoded images; latest image review remains next.
 
 - [x] Add eight equilibrium comparison diagrams; all 32 comparisons now have visual metadata. 192 layout/reveal/motion cases, 48 native states, Level 4 content, preserved 200-task content, import/export and packaged equilibrium round pass.

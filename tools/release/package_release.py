@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import stat
 import subprocess
@@ -27,11 +28,15 @@ def sha(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--version', default='0.1.0', help='Release version written into package metadata and instructions')
+    parser.add_argument('--source-revision', default='HEAD', help='Verified build source commit; defaults to current HEAD')
     parser.add_argument('--platform', choices=['macOS', 'Windows'], required=True)
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--verification-log', type=Path, action='append', required=True)
     parser.add_argument('--output', type=Path, default=ROOT / 'builds/release')
     args = parser.parse_args()
+    if not re.fullmatch(r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?', args.version):
+        parser.error('--version must be a semantic version')
     logs = '\n'.join(path.read_text() for path in args.verification_log)
     levels = [1] if args.platform == 'macOS' else range(1, 6)
     required = [f'KEYBOARD_ROUND_SMOKE_OK level={level}' for level in levels]
@@ -41,7 +46,7 @@ def main():
             raise SystemExit('Missing packaged verification marker: ' + marker)
     if any(line.startswith(('ERROR:', 'SCRIPT ERROR:')) for line in logs.splitlines()):
         raise SystemExit('Verification log contains engine errors')
-    revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    revision = subprocess.check_output(['git', 'rev-parse', '--verify', args.source_revision + '^{commit}'], cwd=ROOT, text=True).strip()
     notices = ROOT / 'docs/release/notices'
     manifest = json.loads((notices / 'manifest.json').read_text())
     for entry in manifest:
@@ -67,10 +72,10 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     archive = args.output / f'ChemSite-{args.platform}.zip'
     binary_hashes = {str(target): sha(source) for source, target in files if not source.is_symlink()}
-    info = {'source_revision': revision, 'platform': args.platform,
+    info = {'version': args.version, 'source_revision': revision, 'platform': args.platform,
             'verification_markers': required, 'files_sha256': binary_hashes,
             'scope': 'Automated packaged QA; human and hardware acceptance listed in KNOWN_ISSUES.md'}
-    instructions = ('ChemSite v0.1.0 prerelease\n\n'
+    instructions = (f'ChemSite v{args.version} prerelease\n\n'
                     + ('Extract the entire ZIP and open ChemSite.app.\n'
                        'This build is unsigned and unnotarized. macOS may require explicit approval in Privacy & Security.\n'
                        if args.platform == 'macOS' else

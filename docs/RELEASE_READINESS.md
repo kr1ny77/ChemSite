@@ -64,3 +64,15 @@ Publish only after current-revision native/graphical checks pass and both downlo
 archives are verified. Describe the remaining acceptance items in release notes.
 Keep the prior tagged source and archive checksums for rollback; fixes receive a
 new version/tag and fresh platform verification.
+
+## 0.1.1 patch preparation — 2026-10-10
+
+Candidate game source f6b1949 includes softer brushed footsteps, station
+guidance/occlusion polish, all 32 comparison diagrams, gait-bound support
+anchors and modal navigation cleanup. Packager accepts explicit release
+version and verified source revision; BUILD_INFO and README carry the
+supplied version. Candidate archives use builds/release/v0.1.1, preserving
+published 0.1.0 bytes. macOS keyboard career and five-level/44-topic
+practice passed; package CRC, fourteen file hashes, executable mode and
+version/source metadata checked. Extracted app five-level practice passed. Current Windows source
+verification and finalized package notes remain required before publication.

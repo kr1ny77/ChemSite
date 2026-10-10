@@ -145,3 +145,18 @@ ea86c4637877e08c8e08b2681ffb6a07c207322b438e4c3a4767d226377a4355;
 CRC and all 212 PNG dimensions/decode passed. Current-revision image
 review remains next; previous revision's review is recorded separately.
 Physical Windows acceptance remains open.
+
+## Gait revision UI comparison — 2026-10-10
+
+Compared all 212 decoded 88ab688 captures against the previously reviewed
+b0b1a80 matrix. For each capture, found the bounding box of exact panel
+background RGB(243,239,225) and inset it fourteen pixels to exclude rounded
+edge/background variation. 182 interiors match pixel-for-pixel. Reviewed
+the thirty differing full captures in three sheets: feedback/results,
+ion/hydrolysis input, electrode and Level 5 mission panels remain readable.
+This comparison covers card interiors; world composition and human
+accessibility acceptance retain their separate scope. Report:
+docs/release/windows-ui-comparison-88ab688.json.
+
+The subsequent f6b1949 modal repair is in Windows native run 38061582316
+and visual run 38061582404; both remained in progress at this checkpoint.
