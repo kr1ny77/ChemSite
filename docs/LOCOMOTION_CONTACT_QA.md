@@ -321,3 +321,22 @@ regresses 32.090→33.936 mm; reversal improves 40.354→35.763 mm. Both gates
 pass, reach loss 30.937/33.309 mm. Production restored byte-for-byte after
 comparative rejection; wider promotion/visual checks omitted. Evidence:
 artifacts/swing-only-steering-physics60.json. Movement polish remains open.
+
+## Fresh support-phase audit — 2026-10-10
+
+Production modifier/controller retained. Fresh 30/60/120 Hz diagnostics pass
+with zero skipped support pairs. Corner/reversal peak displacement in this
+run is 88.965/66.380, 32.090/40.354 and 16.587/21.678 mm respectively.
+The 120 Hz peaks differ from earlier samples; compare future candidates to
+fresh paired runs and capture timing before claiming a gain.
+All six peaks have zero reach loss. At 60 Hz correction saturation begins
+at frame 82 (corner) and 86 (reversal), followed by peaks at 83/87;
+peak support phases are 0.1516/0.1251 within the Run 0.2 support interval.
+The correction budget is exhausted before the worst slide; enlarging that
+budget previously caused reach regression. The next experiment should
+change directional support trajectory/transfer and retain the same physical
+support and skinned-vertex measurement windows.
+Reproducible summary: tools/validation/summarize_turn_contact.py; report
+with raw-input SHA-256 and exact peak/onset samples:
+docs/release/turn-contact-phase-audit.json. This diagnostic changes no
+runtime pose or acceptance threshold. Published 0.1.3 remains current.

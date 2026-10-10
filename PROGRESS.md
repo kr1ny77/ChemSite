@@ -1,3 +1,17 @@
+## Tight-turn support-phase audit — 2026-10-10
+
+Current phase: movement polish after published 0.1.3.
+Completed work: fresh production diagnostics at 30/60/120 Hz and reproducible
+phase-audit summary with raw-input hashes. Last verification: all three
+native engine diagnostics pass, zero skipped support pairs; every corner/
+reversal peak has zero reach loss. 60 Hz saturation precedes the peak by
+one tick. Current work: isolate directional support trajectory candidate.
+Next task: modify support trajectory/transfer, compare fresh paired runs,
+then perform visual/export gates before promotion. Known issues: 120 Hz
+sample peaks differ from earlier runs, so historical numbers alone are
+insufficient for promotion; turn contact and broader human/device/course
+acceptance remain open. Runtime and published release bytes retained.
+
 ## Version 0.1.3 published and verified — 2026-10-10
 
 Current phase: UI patch release complete; broader production polish continues.
