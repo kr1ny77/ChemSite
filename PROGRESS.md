@@ -1,3 +1,11 @@
+## 0.1.6 public download verified — 2026-10-15
+
+Current phase: published. Completed work: public release v0.1.6, four asset
+sizes/digests verified, Windows unauthenticated download HTTP 200; native and
+visual Windows runs both completed successfully. Current work: collect/review
+visual artifacts for final evidence. Next task: attach capture review evidence.
+Known issues: instructor and user-owned physical Windows acceptance external.
+
 ## 0.1.6 publication authorized — 2026-10-15
 
 Current phase: published prerelease and final evidence recording. Completed work:

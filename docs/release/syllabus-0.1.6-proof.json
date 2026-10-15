@@ -1,6 +1,6 @@
 {
   "version": "0.1.6",
-  "status": "published_user_authorized_visual_acceptance_automated_capture_pending",
+  "status": "published_platform_checks_passed",
   "published_baseline": "v0.1.5",
   "preserved_records": 1000,
   "total_tasks": 1053,
@@ -94,7 +94,17 @@
   "visual_acceptance": {
     "user": "2026-10-15: visually good; publish now",
     "automated_run_id": 38788065868,
-    "automated_status_at_publication": "in_progress"
+    "automated_status_at_publication": "in_progress",
+    "automated_status": "completed_success",
+    "artifact_review": "pending collection",
+    "artifacts": [
+      {
+        "id": 11999197684,
+        "name": "ChemSite-Windows-visual-QA",
+        "size_in_bytes": 132356232,
+        "digest": "sha256:e4dd5a2129072cbf042a8438528e52a8c181faf2fad4e58d4921acb392a34b1c"
+      }
+    ]
   },
   "public_release": {
     "id": "RE_kwDOUnt79M4Yr38q",
