@@ -62,6 +62,7 @@ jobs:
             @{ Script = 'choice_order_smoke'; Marker = 'CHOICE_ORDER_SMOKE_OK' }
             @{ Script = 'career_history_smoke'; Marker = 'CAREER_HISTORY_SMOKE_OK' }
             @{ Script = 'course_integration_smoke'; Marker = 'COURSE_INTEGRATION_OK' }
+            @{ Script = 'learning_materials_smoke'; Marker = 'LEARNING_MATERIALS_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"

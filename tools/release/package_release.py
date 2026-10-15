@@ -41,7 +41,10 @@ def main():
     logs = '\n'.join(path.read_text() for path in args.verification_log)
     levels = [1] if args.platform == 'macOS' else range(1, 6)
     required = [f'KEYBOARD_ROUND_SMOKE_OK level={level}' for level in levels]
-    required.append('PRACTICE_LEVELS_SMOKE_OK topics=44 levels=5')
+    bank = json.loads((ROOT / 'data/chemistry/curated_tasks.json').read_text())
+    topic_count = len({(task['level'], task['topic']) for task in bank if task.get('reviewStatus') == 'verified'})
+    required.append(f'PRACTICE_LEVELS_SMOKE_OK topics={topic_count} levels=5')
+    required.append(f'COURSE_ROUNDS_SMOKE_OK version={args.version} chapters=13 answers=65 practice=5')
     for marker in required:
         if marker not in logs:
             raise SystemExit('Missing packaged verification marker: ' + marker)
@@ -72,7 +75,8 @@ def main():
     files += [(path, Path('ChemSite/ThirdPartyNotices') / path.name)
               for path in sorted(notices.iterdir()) if path.is_file()]
     files += [(ROOT / 'docs/ASSET_LICENSES.md', Path('ChemSite/ASSET_LICENSES.md')),
-              (ROOT / 'docs/RELEASE_READINESS.md', Path('ChemSite/KNOWN_ISSUES.md'))]
+              (ROOT / 'docs/RELEASE_READINESS.md', Path('ChemSite/KNOWN_ISSUES.md')),
+              (ROOT / 'assets/learning/ATTRIBUTION.md', Path('ChemSite/LEARNING_MEDIA.md'))]
     args.output.mkdir(parents=True, exist_ok=True)
     archive = args.output / f'ChemSite-{args.platform}.zip'
     binary_hashes = {str(target): sha(source) for source, target in files if not source.is_symlink()}
@@ -86,7 +90,8 @@ def main():
                        'Extract the entire ZIP and run ChemSite.exe. Keep ChemSite.pck beside it.\n')
                     + '\nMove: WASD/arrows. Interact: E. Run: Shift. Pause/back: Escape.\n'
                     'Menu/answers: Tab, arrows, Space/Enter. Audio and reduced motion: Settings.\n'
-                    'Practice covers all five levels without changing career progress.\n'
+                    'Career: 13 ordered chapters. Practice: select one or several topics.\n'
+                    'Materials: reference tables, diagrams, photos and interactive scratchpad.\n'
                     'See KNOWN_ISSUES.md and ThirdPartyNotices.\n')
     # Atomic replacement avoids publishing a partially written archive.
     with tempfile.NamedTemporaryFile(dir=args.output, suffix='.zip', delete=False) as temporary:

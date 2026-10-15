@@ -1,3 +1,16 @@
+## Course release QA correction — 2026-10-15
+
+Current phase: platform verification. Windows native run 38738892290 reached the
+wayfinder gate and correctly failed its stale hardcoded 200-task expectation after
+exercising the expanded bank. Replaced the fixture with isolated progress, actual
+1028×642 viewport and expected coverage derived from every verified task. The native
+source gate now passes 1000 tasks / 10000 edge cases. Added material interaction QA
+to Windows CI. Current work: repeat Windows CI and package matching builds.
+Last verification: macOS exported keyboard, 50-topic/five-environment practice,
+13-chapter/65-answer course and movement gates pass. Native rendered menu accessibility
+passes 201 contrast/focus/keyboard checks. Next task: verified Windows artifact,
+archive hashes and publication. Known issues remain as listed below.
+
 ## Course integration and platform QA — 2026-10-15
 
 Current phase: expanded course platform verification.

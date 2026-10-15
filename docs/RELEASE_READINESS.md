@@ -1,3 +1,24 @@
+## 0.1.4 course update
+
+The production bank now contains 1000 fixed tasks across 13 ordered chapters.
+Five correct answers unlock the next chapter. Career answer history persists
+across sessions from save schema 6 onward; earlier successful IDs were never
+stored, while earlier mistake IDs migrate. Repetition remains available in
+multi-topic practice. Chapters reuse the five existing construction environments.
+
+The materials button retains the current answer and provides 11 references,
+including a dated IUPAC periodic table, solution/ion/acid/electrochemistry tables,
+original qualitative diagrams and credited USGS/NPS photos. The optional scratchpad
+contains real-number arithmetic and a particle-count model. 570 calculations have
+post-answer worked steps. Graded answers remain in the reviewed task bank.
+
+Source and native macOS checks cover schema, arithmetic/formulas/equations,
+save migration/history, all 13 station routes, 1000 question/2000 feedback layouts,
+65 chapter answers plus mixed-topic practice, references and keyboard input.
+Current source/platform evidence is recorded in PROGRESS.md and release proof files.
+Instructor acceptance and performance/input/audio acceptance on a physical Windows
+student laptop remain external checks. Existing macOS builds are unsigned prereleases.
+
 # ChemSite prerelease readiness
 
 Updated 2026-10-10. This ledger distinguishes automated evidence from remaining

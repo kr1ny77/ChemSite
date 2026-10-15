@@ -4,12 +4,19 @@ func _initialize() -> void:
 	call_deferred("_run")
 
 func _run() -> void:
+	root.size = Vector2i(1028, 642)
+	root.content_scale_size = Vector2i(1440, 900)
+	var path := "user://qa-wayfinder-isolated.json"
+	DirAccess.remove_absolute(path)
+	var expected_count := 0
 	var count := 0
 	var edge_checks := 0
 	var offscreen_checks := 0
 	for level in range(1, 6):
 		var site := (load("res://scenes/levels/construction_site.tscn") as PackedScene).instantiate()
 		site.level = level
+		site.save_path = path
+		expected_count += preload("res://scripts/chemistry/task_bank.gd").load_verified_tasks(level).size()
 		root.add_child(site)
 		site.set_process(false)
 		for index in range(site._tasks.size()):
@@ -68,11 +75,11 @@ func _run() -> void:
 			return
 		site.queue_free()
 		await process_frame
-	if count != 200:
-		push_error("Wayfinder gate requires all 200 curated tasks")
+	if count != expected_count:
+		push_error("Wayfinder gate requires every verified task")
 		quit(1)
 		return
-	if edge_checks != 2000 or offscreen_checks == 0:
+	if edge_checks != count * 10 or offscreen_checks == 0:
 		push_error("Station edge coverage missing")
 		quit(1)
 		return
