@@ -1,6 +1,6 @@
 {
   "version": "0.1.6",
-  "status": "published_platform_checks_passed",
+  "status": "published_platform_and_visual_evidence_verified",
   "published_baseline": "v0.1.5",
   "preserved_records": 1000,
   "total_tasks": 1053,
@@ -96,7 +96,22 @@
     "automated_run_id": 38788065868,
     "automated_status_at_publication": "in_progress",
     "automated_status": "completed_success",
-    "artifact_review": "pending collection",
+    "artifact_review": {
+      "decoded_pngs": 222,
+      "contact_sheets_reviewed": 17,
+      "full_size_review": [
+        "polymer-equation-3.png",
+        "physical.png",
+        "scientific-scratchpad.png"
+      ],
+      "dimensions": {
+        "1028x642": 212,
+        "1027x642": 10
+      },
+      "notes": "Ten source editor captures have an actual 1027px viewport width on Windows; 212 exported gameplay captures are 1028px. All are 642px high. Reviewed text, diagrams, controls and boundaries remain visible.",
+      "artifact_sha256_and_crc": "passed",
+      "engine_error_and_object_leak_scan": "clean"
+    },
     "artifacts": [
       {
         "id": 11999197684,

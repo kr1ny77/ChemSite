@@ -1,3 +1,19 @@
+## 0.1.6 final visual evidence complete — 2026-10-15
+
+Current phase: prerelease delivered; external acceptance remains. Previous goal
+turn: progress (release and commits published). Completed work: visual run
+38788065868 artifact 11999197684 digest/CRC verified; 222 PNGs decoded, 17 contact
+sheets and three detailed full-size references/equation screens reviewed. All
+212 exported screens are 1028×642; ten editor material captures are 1027×642 on
+Windows, with complete visible controls/text. Logs contain no engine/script
+errors or ObjectDB leak warning. Current work: completion audit and handoff.
+Next task: formal target-course instructor review and user-owned physical Windows
+performance/input/audio/save acceptance. Last verification: both final platform
+jobs success; package payload hashes and public Windows HTTP 200 recorded in
+syllabus-0.1.6-proof.json. Known issues: external checks above remain open;
+Phase 11 broader human accessibility/all-level judgments remain explicit. Current
+release is published at https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.6 .
+
 ## 0.1.6 public download verified — 2026-10-15
 
 Current phase: published. Completed work: public release v0.1.6, four asset

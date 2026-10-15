@@ -4,13 +4,13 @@
 
 - [x] Retrieve and inspect the accessible official MGSU 08.03.01 chemistry program; identify assessed outcomes beyond the current bank.
 - [x] Review and integrate 53 supplemental cases, five contextual references, three original diagrams and scientific scratchpad functions; independent arithmetic/equation audits, 53 native UI answers, 1053/2106 actual-size layouts and ten reviewed captures pass. All 1000 published records remain unchanged.
-- [x] Independently audit supplement and preserve all published records; native interaction/layout checks and both packaged platforms pass. Publish v0.1.6 at user request with user visual acceptance; automated Windows capture evidence follows.
+- [x] Independently audit supplement and preserve all published records; native interaction/layout checks and both packaged platforms pass. Publish v0.1.6 at user request with user visual acceptance; automated Windows capture evidence verified: artifact SHA-256/CRC, 222 PNGs, 17 reviewed sheets and three full-size screens.
 
 ## Remaining original production minimum — 2026-10-15 audit
 
 - [x] Implement quiet UI-action, virtual-liquid, combo and timer-warning cues; preserve four accepted footstep hashes and gain; source event and native mixer capture checks pass.
 - [x] Verify and publish the 0.1.5 audio patch on macOS/Windows; exact source a3aaf0d, clean native logs, 212 Windows captures, 15/12 archive file hashes and four public assets verified. External device/listening acceptance remains explicit.
-- [ ] Retain explicit instructor and user-owned physical Windows acceptance gates.
+- [x] Retain explicit instructor and user-owned physical Windows acceptance gates in readiness, release notes and proof. Actual external acceptance remains open below.
 - [x] Publish the complete 0.1.4 content update and reconcile the original brief in docs/PRODUCTION_COMPLETION_AUDIT.md.
 
 ## Course integration — 2026-10-15
@@ -239,10 +239,10 @@
 
 - [x] Phase 9: level-scoped adaptive mastery and related-task scheduling cover all five career levels; version-5 saves track each level’s best score, stars, XP and rounds, preserve legacy global records, and show level results in the menu
 - [ ] Phase 11: full visual, gameplay, chemistry and accessibility QA
-- [ ] Phase 12 review: conduct a course-specific subject-matter review of Levels 1–5 against the target syllabus; all 200 tasks are verified by independent content checks, and L2-050 now uses an explicit molecular formula
-- [ ] Phase 13: Levels 2–5 and their station mechanics; Levels 2–5 have playable first passes, with contextual station interactions and human visual QA still required
+- [ ] Phase 12 review: conduct a course-specific subject-matter review of Levels 1–5 against the target syllabus; all 1053 tasks pass independent internal content checks, and L2-050 now uses an explicit molecular formula
+- [x] Phase 13: Levels 2–5 station mechanics and focused interactions pass native/exported gates; all 222 Windows captures reviewed, user accepted visuals on 2026-10-15. Course-specific instructor review remains Phase 12.
 - [ ] Phase 14: verify approximately 60 FPS on a representative student laptop and optimize measured bottlenecks; an Apple M4 source-project baseline now covers exploration and task panels at 1440×900
-- [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 154-screen career/focused Windows visual matrix and all-task native Windows layout gate pass
+- [ ] Phase 15: complete physical Windows input/audio/save QA; GitHub Actions exports the native x86_64 EXE, passes Levels 1–5 plus focused interactions including pH, ion scans, hydrolysis, dissociation, electrode comparison and corrosion inspection, and uploads the EXE/PCK; the 222-screen career/focused/reference Windows visual matrix and all-task native Windows layout gate pass
 - [x] Phase 16: source push and GitHub v0.1.0 prerelease published at ac41d28 with verified macOS/Windows archives, notices and SHA-256 files; public tag and checksum downloads checked. Broader human/hardware/instructor gates remain open.
 
 - [x] Resolve production music provenance: existing original synthesis source reproduces native track 1 byte-for-byte in an isolated directory; source, size and SHA-256 recorded in docs/ASSET_LICENSES.md.

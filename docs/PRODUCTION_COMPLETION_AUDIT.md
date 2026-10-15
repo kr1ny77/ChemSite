@@ -47,4 +47,7 @@ published records remain structurally identical. Native Windows run 38788066020
 passes, including source audits, exported supplement/course/practice/keyboard,
 movement and audio. macOS six packaged gates and extracted supplement pass;
 all 15 macOS / 12 Windows archive payload hashes and CRC checks pass.
-Final visual publication evidence follows in syllabus-0.1.6-proof.json.
+Final visual evidence: artifact 11999197684 SHA-256/CRC verified, 222 decoded
+PNGs reviewed across 17 sheets and three full-size screens; clean engine logs.
+Published v0.1.6 has four verified assets and public Windows download HTTP 200.
+See syllabus-0.1.6-proof.json.
