@@ -1,6 +1,6 @@
 # Chemistry Content Schema
 
-The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved source schema used to export the original 200 native tasks. The combined bank contains 1,000 tasks: the original 200 plus 800 course tasks authored in `tools/chemistry/build_course_bank.py` and `course_cases.py`. Rebuild with `python3 tools/chemistry/build_course_bank.py`; the exporter also preserves the extension.
+The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved source schema used to export the original 200 native tasks. The combined bank contains 1,053 tasks: the original 200 plus 853 course tasks authored in `tools/chemistry/build_course_bank.py` and `course_cases.py`. Rebuild with `python3 tools/chemistry/build_course_bank.py`; the exporter also preserves the extension.
 
 All chemistry content must be stored as structured data.
 
@@ -990,3 +990,12 @@ contentKey when planning wording revisions. Run `stable_course_ids_smoke.py` and
 review bank diffs after rebuilding. A round-trip rebuild of the current 800
 extension records preserves all five source files and the 1000-task aggregate
 byte-for-byte. This protects persisted career history as the bank grows.
+
+## Explicit reference routing (0.1.6)
+
+Optional `materialId` is a catalog entry ID from
+`data/chemistry/materials/catalog.json`. It chooses the initial page of the
+materials overlay; authors can attach a new reference through data. The bank audit
+rejects unknown IDs. Older records retain their established contextual fallback.
+The 53 syllabus-supplement cases carry `syllabus-supplement` in tags for focused QA.
+All references and questions stay separate from scenes and grading code.

@@ -1,6 +1,6 @@
 # Native ChemSite architecture
 
-Godot 4.7 Forward+ is the production runtime. `Main` owns scene transitions; the active `ConstructionSite` owns the round, player, station proximity, task state, and HUD. `Player` is a CharacterBody3D with semantic InputMap actions. `GameHud` is a Control scene that emits answer, resume and exit signals. The native bank loads 1,000 verified tasks (200/160/240/240/160 across Levels 1–5) from `data/chemistry/curated_tasks.json`. Level 5 routes material, formula and oxidation tasks to its Blender-authored specimen tester, equation tasks to the reaction bench, and corrosion/inspection tasks to their established stations. Levels 2–4 use their own station sets and reuse compatible props. The original TypeScript bank remains in `legacy-web/src/chemistry/tasks/` and can be re-exported with `tools/chemistry/export_legacy_tasks.mjs`.
+Godot 4.7 Forward+ is the production runtime. `Main` owns scene transitions; the active `ConstructionSite` owns the round, player, station proximity, task state, and HUD. `Player` is a CharacterBody3D with semantic InputMap actions. `GameHud` is a Control scene that emits answer, resume and exit signals. The native bank loads 1,053 verified tasks (200/160/272/248/173 across Levels 1–5) from `data/chemistry/curated_tasks.json`. Level 5 routes material, formula and oxidation tasks to its Blender-authored specimen tester, equation tasks to the reaction bench, and corrosion/inspection tasks to their established stations. Levels 2–4 use their own station sets and reuse compatible props. The original TypeScript bank remains in `legacy-web/src/chemistry/tasks/` and can be re-exported with `tools/chemistry/export_legacy_tasks.mjs`.
 
 Optional site observations load through `scripts/world/site_inspections.gd` from `data/chemistry/site_inspections.json`. `ConstructionSite` selects the nearest interaction point; `GameHud` displays an unscored observation panel. This path does not alter task selection, chemistry validation or save data.
 
@@ -167,3 +167,16 @@ numbers/operators; integer tokens are promoted to real numbers before evaluation
 `worked_steps.json` is an authored presentation derivative of fixed audit data,
 shown only after answering. `build_learning_support.py` regenerates its 570
 worked calculations. Chemistry validation continues to read the reviewed task bank.
+
+## Detailed syllabus supplement (0.1.6 candidate)
+
+53 original tasks extend the stable bank with dispersed/surface systems, organic
+functional classes, polymer schemes, Arrhenius/temperature-coefficient calculations,
+boiling-point elevation and ideal-gas/stoichiometric volume problems. All 1000
+published records remain unchanged. `materialId` selects an explicit catalog entry;
+older tasks retain module/topic fallbacks. The catalog contains 16 references.
+The scratchpad accepts bounded arithmetic with exp, ln/log and sqrt; a function
+allowlist precedes Expression parsing, integer literals become real numbers, and
+nonfinite results are rejected. Three new diagrams are static original SVGs.
+The exported supplement QA path grades all 53 cases through native controls and
+checks three scientific scratchpad expressions without changing real progress.

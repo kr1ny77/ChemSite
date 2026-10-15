@@ -31,8 +31,8 @@ for (const id of Object.keys(reviewOverrides)) {
 for (let level = 1; level <= 5; level += 1) {
   tasks.push(...JSON.parse(readFileSync(`${root}data/chemistry/course/level${level}.json`, 'utf8')))
 }
-if (tasks.length !== 1000 || new Set(tasks.map(task => task.id)).size !== 1000) {
-  throw new Error('Expected 1000 unique chemistry tasks')
+if (tasks.length !== 1053 || new Set(tasks.map(task => task.id)).size !== 1053) {
+  throw new Error('Expected 1053 unique chemistry tasks')
 }
 writeFileSync(`${root}data/chemistry/curated_tasks.json`, `${JSON.stringify(tasks, null, 2)}\n`)
 console.log(`Exported ${tasks.length} tasks from the preserved bank and course extension`)

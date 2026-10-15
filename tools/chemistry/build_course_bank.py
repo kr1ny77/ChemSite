@@ -1,4 +1,4 @@
-"""Build 800 reproducible course tasks. Run from any directory with Python 3.
+"""Build 853 reproducible course tasks. Run from any directory with Python 3.
 Original authored content; reference links describe principles, not copied exercises.
 """
 import json, math, re
@@ -226,9 +226,12 @@ for task in TASKS:
   task['interactionType']='construction-mission'; task['station']='inspection-station'
   task['parameters']={'missionSteps':[{'title':'Паспорт виртуальной пробы','readout':task['prompt'].split(' Выбери')[0].split(' Оцени')[0]},{'title':'Критерий заключения','readout':task['rule']}]}
 
-assert Counter(t['level'] for t in TASKS)=={1:160,2:120,3:200,4:200,5:120}
-assert len(TASKS)==800
-assert len({t['prompt'] for t in TASKS})==800
+from syllabus_supplement import append_supplement
+append_supplement(TASKS,calc,choice,SOURCES,add)
+
+assert Counter(t['level'] for t in TASKS)=={1:160,2:120,3:232,4:208,5:133}
+assert len(TASKS)==853
+assert len({t['prompt'] for t in TASKS})==853
 # Published identities remain stable when future families are inserted/reordered.
 from course_ids import assign_stable_ids
 registry_path=ROOT/'tools/chemistry/course_id_registry.json'
@@ -243,7 +246,7 @@ TASKS.sort(key=lambda task:(task['level'],task['id']))
 OUT.mkdir(exist_ok=True)
 for level in range(1,6):
  (OUT/f'level{level}.json').write_text(json.dumps([t for t in TASKS if t['level']==level],ensure_ascii=False,indent=2)+'\n')
-report={'totalAdditional':800,'base':200,'total':1000,'byLevel':dict(Counter(t['level'] for t in TASKS)),'byModule':dict(Counter(t['moduleId'] for t in TASKS)),'families':dict(Counter(t['subtopic'] for t in TASKS)),'sources':SOURCES}
+report={'totalAdditional':853,'base':200,'total':1053,'byLevel':dict(Counter(t['level'] for t in TASKS)),'byModule':dict(Counter(t['moduleId'] for t in TASKS)),'families':dict(Counter(t['subtopic'] for t in TASKS)),'sources':SOURCES}
 (OUT/'manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print('COURSE_BANK_BUILT',len(TASKS),'tasks;',len(report['families']),'families')
 

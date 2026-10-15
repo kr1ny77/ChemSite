@@ -48,3 +48,19 @@ instructor judgment. Supporting examples are task IDs, not proposed new IDs.
 
 The supplementary topic list is a coverage finding. It does not certify complete
 UGNTU/MGSU course equivalence or replace instructor acceptance.
+
+## Supplement implementation (0.1.6 candidate)
+
+53 fixed cases now cover the missing groups above: 32 classifications, 18 numeric
+problems and three equation-entry tasks. New totals: 1053 questions and 588 worked
+numeric solutions. The 1000 records from v0.1.5 are structurally identical. Added
+five references, three original diagrams and scientific scratchpad functions.
+Independent checks derive all 18 numeric answers from displayed conditions, compare
+monomer/repeat elemental composition and balance the condensation-link equation.
+All 53 cases pass actual native controls, contextual-reference and feedback checks.
+The full native 1028×642 matrix passes 1053 task and 2106 feedback panels; ten new
+native captures were reviewed. Platform exports and prerelease remain pending.
+
+The retrieved reference PDF is 1,028,279 bytes, SHA-256
+`b539e8d7d4442f010231d1e3098569b645b1c608022484483d4f9ea1c4cca537`.
+Source file is retained in ignored local QA artifacts for reproducible comparison.

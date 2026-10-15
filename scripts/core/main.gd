@@ -20,7 +20,9 @@ func _ready() -> void:
 		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
 		print("CHEMSITE_MANUAL_PLAYTEST_ISOLATED")
 	show_menu()
-	if OS.get_cmdline_user_args().has("--qa-study-audio"):
+	if OS.get_cmdline_user_args().has("--qa-syllabus-supplement"):
+		call_deferred("_run_syllabus_supplement_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-study-audio"):
 		call_deferred("_run_study_audio_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-course"):
 		call_deferred("_run_course_smoke")
@@ -348,3 +350,7 @@ func _shutdown(exit_code: int) -> void:
 	for frame in range(4): await get_tree().process_frame
 	await get_tree().create_timer(.6).timeout
 	get_tree().quit(exit_code)
+
+func _run_syllabus_supplement_smoke() -> void:
+	var passed: bool = await preload("res://scripts/qa/syllabus_supplement_smoke.gd").run(self)
+	await _shutdown(0 if passed else 1)

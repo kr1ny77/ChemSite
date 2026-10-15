@@ -25155,6 +25155,1196 @@
     ]
   },
   {
+    "id": "C3-201",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — капли жидкости в газе. Как классифицировать систему по фазам?",
+    "correctAnswer": "аэрозоль",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли жидкости в газе — аэрозоль. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли жидкости в газе — аэрозоль. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли жидкости в газе — аэрозоль. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "аэрозоль",
+      "эмульсия",
+      "пена",
+      "твёрдый раствор"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-202",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — пузырьки газа в жидкости. Как классифицировать систему по фазам?",
+    "correctAnswer": "пена",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в жидкости — пена. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в жидкости — пена. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в жидкости — пена. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "пена",
+      "эмульсия",
+      "раствор соли",
+      "аэрозоль"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-203",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — капли одной жидкости в другой несмешивающейся жидкости. Как классифицировать систему по фазам?",
+    "correctAnswer": "эмульсия",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли одной жидкости в другой несмешивающейся жидкости — эмульсия. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли одной жидкости в другой несмешивающейся жидкости — эмульсия. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: капли одной жидкости в другой несмешивающейся жидкости — эмульсия. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "эмульсия",
+      "газовая смесь",
+      "твёрдый раствор",
+      "пена"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-204",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — твёрдые коллоидные частицы в жидкости. Как классифицировать систему по фазам?",
+    "correctAnswer": "золь",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые коллоидные частицы в жидкости — золь. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые коллоидные частицы в жидкости — золь. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые коллоидные частицы в жидкости — золь. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "золь",
+      "пена",
+      "газовая смесь",
+      "молекулярный раствор"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-205",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — твёрдые частицы в газе. Как классифицировать систему по фазам?",
+    "correctAnswer": "твёрдый аэрозоль",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые частицы в газе — твёрдый аэрозоль. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые частицы в газе — твёрдый аэрозоль. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: твёрдые частицы в газе — твёрдый аэрозоль. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "твёрдый аэрозоль",
+      "эмульсия",
+      "пена",
+      "ионный раствор"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-206",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Классификация дисперсных систем",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальном образце дисперсная фаза — пузырьки газа в твёрдой матрице. Как классифицировать систему по фазам?",
+    "correctAnswer": "твёрдая пена",
+    "explanation": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в твёрдой матрице — твёрдая пена. Размер частиц оценивают отдельно.",
+    "rule": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в твёрдой матрице — твёрдая пена. Размер частиц оценивают отдельно.",
+    "hint": "Агрегатное состояние частиц и непрерывной среды определяет тип системы: пузырьки газа в твёрдой матрице — твёрдая пена. Размер частиц оценивают отдельно.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Классификация дисперсных систем",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Классификация дисперсных систем",
+    "options": [
+      "твёрдая пена",
+      "эмульсия",
+      "золь",
+      "молекулярный раствор"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-207",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Наблюдение дисперсной пробы",
+    "difficulty": 2,
+    "station": "inspection-station",
+    "interactionType": "classification",
+    "prompt": "Виртуальная микромодель: частицы растворённого вещества представлены отдельными ионами и молекулами. Выбери вывод.",
+    "correctAnswer": "истинный раствор",
+    "explanation": "Истинный раствор однороден на молекулярном или ионном уровне.",
+    "rule": "Истинный раствор однороден на молекулярном или ионном уровне.",
+    "hint": "Истинный раствор однороден на молекулярном или ионном уровне.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Наблюдение дисперсной пробы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Наблюдение дисперсной пробы",
+    "options": [
+      "истинный раствор",
+      "коллоидная дисперсия",
+      "грубая суспензия",
+      "пена"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-208",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Наблюдение дисперсной пробы",
+    "difficulty": 2,
+    "station": "inspection-station",
+    "interactionType": "classification",
+    "prompt": "Виртуальная микромодель: мелкие частицы рассеивают боковой луч и устойчиво распределены в жидкости. Выбери вывод.",
+    "correctAnswer": "коллоидная дисперсия",
+    "explanation": "Коллоидные частицы могут рассеивать свет и длительно сохраняться в дисперсии.",
+    "rule": "Коллоидные частицы могут рассеивать свет и длительно сохраняться в дисперсии.",
+    "hint": "Коллоидные частицы могут рассеивать свет и длительно сохраняться в дисперсии.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Наблюдение дисперсной пробы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Наблюдение дисперсной пробы",
+    "options": [
+      "коллоидная дисперсия",
+      "идеальный газ",
+      "кристалл соли",
+      "истинный раствор"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-209",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Наблюдение дисперсной пробы",
+    "difficulty": 2,
+    "station": "inspection-station",
+    "interactionType": "classification",
+    "prompt": "Виртуальная микромодель: крупные твёрдые частицы при отстаивании образуют осадок. Выбери вывод.",
+    "correctAnswer": "грубая суспензия",
+    "explanation": "Осаждение крупных взвешенных частиц характерно для грубодисперсной суспензии.",
+    "rule": "Осаждение крупных взвешенных частиц характерно для грубодисперсной суспензии.",
+    "hint": "Осаждение крупных взвешенных частиц характерно для грубодисперсной суспензии.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Наблюдение дисперсной пробы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Наблюдение дисперсной пробы",
+    "options": [
+      "грубая суспензия",
+      "молекулярный раствор",
+      "газовая смесь",
+      "кристаллическая решётка"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-210",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Наблюдение дисперсной пробы",
+    "difficulty": 2,
+    "station": "inspection-station",
+    "interactionType": "classification",
+    "prompt": "Виртуальная микромодель: дисперсные частицы слипаются в более крупные агрегаты. Выбери вывод.",
+    "correctAnswer": "коагуляция",
+    "explanation": "Коагуляция означает объединение частиц дисперсной фазы в агрегаты.",
+    "rule": "Коагуляция означает объединение частиц дисперсной фазы в агрегаты.",
+    "hint": "Коагуляция означает объединение частиц дисперсной фазы в агрегаты.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Наблюдение дисперсной пробы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Наблюдение дисперсной пробы",
+    "options": [
+      "коагуляция",
+      "диссоциация молекул",
+      "испарение среды",
+      "идеальное растворение"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-211",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Фаза и образование дисперсии",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальной модели крупные частицы разделяются на более мелкие без изменения состава. Как называется принцип образования дисперсии?",
+    "correctAnswer": "диспергирование",
+    "explanation": "Диспергирование уменьшает размеры исходных частиц.",
+    "rule": "Диспергирование уменьшает размеры исходных частиц.",
+    "hint": "Диспергирование уменьшает размеры исходных частиц.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Фаза и образование дисперсии",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Фаза и образование дисперсии",
+    "options": [
+      "диспергирование",
+      "конденсационное укрупнение молекул",
+      "электролиз",
+      "полимеризация"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-212",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Фаза и образование дисперсии",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальной модели молекулы объединяются до коллоидного размера без образования крупных оседающих частиц. Как называется подход?",
+    "correctAnswer": "конденсационный",
+    "explanation": "Конденсационный подход формирует частицы из меньших единиц; задан предел коллоидного размера.",
+    "rule": "Конденсационный подход формирует частицы из меньших единиц; задан предел коллоидного размера.",
+    "hint": "Конденсационный подход формирует частицы из меньших единиц; задан предел коллоидного размера.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Фаза и образование дисперсии",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Фаза и образование дисперсии",
+    "options": [
+      "конденсационный",
+      "механическое дробление",
+      "фильтрация осадка",
+      "испарение готового сорбента"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-213",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Фаза и образование дисперсии",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В модельной эмульсии масляные капли распределены в непрерывной воде. Что является дисперсной фазой?",
+    "correctAnswer": "масляные капли",
+    "explanation": "Дисперсная фаза представлена отдельными каплями; вода служит непрерывной средой.",
+    "rule": "Дисперсная фаза представлена отдельными каплями; вода служит непрерывной средой.",
+    "hint": "Дисперсная фаза представлена отдельными каплями; вода служит непрерывной средой.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Фаза и образование дисперсии",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Фаза и образование дисперсии",
+    "options": [
+      "масляные капли",
+      "непрерывная вода",
+      "вся посуда",
+      "только граница рисунка"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-214",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Дисперсные системы",
+    "subtopic": "Фаза и образование дисперсии",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В модельном золе твёрдые частицы распределены в непрерывной воде. Что является дисперсионной средой?",
+    "correctAnswer": "вода",
+    "explanation": "Дисперсионная среда — непрерывная фаза, в которой распределены частицы.",
+    "rule": "Дисперсионная среда — непрерывная фаза, в которой распределены частицы.",
+    "hint": "Дисперсионная среда — непрерывная фаза, в которой распределены частицы.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Фаза и образование дисперсии",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Фаза и образование дисперсии",
+    "options": [
+      "вода",
+      "твёрдые частицы",
+      "только электроны",
+      "воздух за пределами образца"
+    ],
+    "materialId": "dispersions"
+  },
+  {
+    "id": "C3-215",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Смачивание поверхности",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "Модель гладкой однородной поверхности: равновесный краевой угол воды 25°, отсчитанный внутри капли. Используй границу 90°. Какова поверхность?",
+    "correctAnswer": "гидрофильная",
+    "explanation": "В заданной классификации угол 25° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "rule": "В заданной классификации угол 25° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "hint": "В заданной классификации угол 25° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Смачивание поверхности",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/10-2-properties-of-liquids"
+    ],
+    "learningObjective": "Смачивание поверхности",
+    "options": [
+      "гидрофильная",
+      "гидрофобная",
+      "краевой угол равен нулю",
+      "по условию угол равен 180°"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-216",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Смачивание поверхности",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "Модель гладкой однородной поверхности: равновесный краевой угол воды 60°, отсчитанный внутри капли. Используй границу 90°. Какова поверхность?",
+    "correctAnswer": "гидрофильная",
+    "explanation": "В заданной классификации угол 60° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "rule": "В заданной классификации угол 60° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "hint": "В заданной классификации угол 60° меньше 90°: поверхность гидрофильная. Шероховатость и гистерезис в модели исключены.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Смачивание поверхности",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/10-2-properties-of-liquids"
+    ],
+    "learningObjective": "Смачивание поверхности",
+    "options": [
+      "гидрофильная",
+      "гидрофобная",
+      "краевой угол равен нулю",
+      "по условию угол равен 180°"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-217",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Смачивание поверхности",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "Модель гладкой однородной поверхности: равновесный краевой угол воды 110°, отсчитанный внутри капли. Используй границу 90°. Какова поверхность?",
+    "correctAnswer": "гидрофобная",
+    "explanation": "В заданной классификации угол 110° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "rule": "В заданной классификации угол 110° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "hint": "В заданной классификации угол 110° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Смачивание поверхности",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/10-2-properties-of-liquids"
+    ],
+    "learningObjective": "Смачивание поверхности",
+    "options": [
+      "гидрофобная",
+      "гидрофильная",
+      "краевой угол равен нулю",
+      "по условию угол равен 180°"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-218",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Смачивание поверхности",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "Модель гладкой однородной поверхности: равновесный краевой угол воды 140°, отсчитанный внутри капли. Используй границу 90°. Какова поверхность?",
+    "correctAnswer": "гидрофобная",
+    "explanation": "В заданной классификации угол 140° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "rule": "В заданной классификации угол 140° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "hint": "В заданной классификации угол 140° больше 90°: поверхность гидрофобная. Шероховатость и гистерезис в модели исключены.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Смачивание поверхности",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/10-2-properties-of-liquids"
+    ],
+    "learningObjective": "Смачивание поверхности",
+    "options": [
+      "гидрофобная",
+      "гидрофильная",
+      "краевой угол равен нулю",
+      "по условию угол равен 180°"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-219",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Поверхность и устойчивость",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "Молекулы вещества преимущественно накапливаются на поверхности виртуального пористого сорбента. Как называется процесс?",
+    "correctAnswer": "адсорбция",
+    "explanation": "Адсорбция относится к накоплению вещества на границе фаз.",
+    "rule": "Адсорбция относится к накоплению вещества на границе фаз.",
+    "hint": "Адсорбция относится к накоплению вещества на границе фаз.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Поверхность и устойчивость",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://goldbook.iupac.org/terms/view/A00155"
+    ],
+    "learningObjective": "Поверхность и устойчивость",
+    "options": [
+      "адсорбция",
+      "испарение",
+      "электролиз",
+      "кристаллизация всего сорбента"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-220",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Поверхность и устойчивость",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В модели одна часть молекулы ПАВ притягивается к воде, другая — к масляной капле. Как назвать строение?",
+    "correctAnswer": "амфифильное",
+    "explanation": "Амфифильная молекула сочетает гидрофильный участок и гидрофобный участок.",
+    "rule": "Амфифильная молекула сочетает гидрофильный участок и гидрофобный участок.",
+    "hint": "Амфифильная молекула сочетает гидрофильный участок и гидрофобный участок.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Поверхность и устойчивость",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Поверхность и устойчивость",
+    "options": [
+      "амфифильное",
+      "только гидрофильное",
+      "только гидрофобное",
+      "металлическое"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-221",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Поверхность и устойчивость",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В виртуальной эмульсии добавка препятствует слиянию масляных капель. Какова её роль?",
+    "correctAnswer": "эмульгатор",
+    "explanation": "Эмульгатор стабилизирует распределение капель и препятствует их слиянию.",
+    "rule": "Эмульгатор стабилизирует распределение капель и препятствует их слиянию.",
+    "hint": "Эмульгатор стабилизирует распределение капель и препятствует их слиянию.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Поверхность и устойчивость",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Поверхность и устойчивость",
+    "options": [
+      "эмульгатор",
+      "окислитель металла",
+      "источник электронного тока",
+      "растворитель стальной арматуры"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-222",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Поверхностные явления",
+    "subtopic": "Поверхность и устойчивость",
+    "difficulty": 2,
+    "station": "solution-laboratory",
+    "interactionType": "classification",
+    "prompt": "В модели одинаково заряженные коллоидные частицы отталкиваются. Как это влияет на их слипание?",
+    "correctAnswer": "препятствует сближению и агрегации",
+    "explanation": "Электростатическое отталкивание может поддерживать агрегативную устойчивость; состояние среды также влияет на неё.",
+    "rule": "Электростатическое отталкивание может поддерживать агрегативную устойчивость; состояние среды также влияет на неё.",
+    "hint": "Электростатическое отталкивание может поддерживать агрегативную устойчивость; состояние среды также влияет на неё.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Поверхность и устойчивость",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-5-colloids"
+    ],
+    "learningObjective": "Поверхность и устойчивость",
+    "options": [
+      "препятствует сближению и агрегации",
+      "обязательно превращает их в газ",
+      "создаёт ковалентную сетку",
+      "нейтрализует все ионы раствора"
+    ],
+    "materialId": "surface"
+  },
+  {
+    "id": "C3-223",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Повышение температуры кипения",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальный разбавленный водный раствор нелетучего неэлектролита: b=0.1 моль/кг, Kb=0.512 К·кг/моль, i=1. Найди повышение температуры кипения при неизменном давлении. Ответ: К.",
+    "correctAnswer": {
+      "value": 0.0512,
+      "absoluteTolerance": 5.1200000000000004e-05,
+      "unit": "К"
+    },
+    "explanation": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества. Подстановка данных даёт 0.0512 К.",
+    "rule": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "hint": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Повышение температуры кипения",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Повышение температуры кипения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+    ],
+    "learningObjective": "Повышение температуры кипения",
+    "audit": {
+      "expression": "i*K*b",
+      "variables": {
+        "i": 1,
+        "K": 0.512,
+        "b": 0.1
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-224",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Повышение температуры кипения",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальный разбавленный водный раствор нелетучего неэлектролита: b=0.2 моль/кг, Kb=0.512 К·кг/моль, i=1. Найди повышение температуры кипения при неизменном давлении. Ответ: К.",
+    "correctAnswer": {
+      "value": 0.1024,
+      "absoluteTolerance": 0.00010240000000000001,
+      "unit": "К"
+    },
+    "explanation": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества. Подстановка данных даёт 0.1024 К.",
+    "rule": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "hint": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Повышение температуры кипения",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Повышение температуры кипения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+    ],
+    "learningObjective": "Повышение температуры кипения",
+    "audit": {
+      "expression": "i*K*b",
+      "variables": {
+        "i": 1,
+        "K": 0.512,
+        "b": 0.2
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-225",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Повышение температуры кипения",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальный разбавленный водный раствор нелетучего неэлектролита: b=0.3 моль/кг, Kb=0.512 К·кг/моль, i=1. Найди повышение температуры кипения при неизменном давлении. Ответ: К.",
+    "correctAnswer": {
+      "value": 0.1536,
+      "absoluteTolerance": 0.0001536,
+      "unit": "К"
+    },
+    "explanation": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества. Подстановка данных даёт 0.1536 К.",
+    "rule": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "hint": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Повышение температуры кипения",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Повышение температуры кипения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+    ],
+    "learningObjective": "Повышение температуры кипения",
+    "audit": {
+      "expression": "i*K*b",
+      "variables": {
+        "i": 1,
+        "K": 0.512,
+        "b": 0.3
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-226",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Повышение температуры кипения",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальный разбавленный водный раствор нелетучего неэлектролита: b=0.5 моль/кг, Kb=0.512 К·кг/моль, i=1. Найди повышение температуры кипения при неизменном давлении. Ответ: К.",
+    "correctAnswer": {
+      "value": 0.256,
+      "absoluteTolerance": 0.000256,
+      "unit": "К"
+    },
+    "explanation": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества. Подстановка данных даёт 0.256 К.",
+    "rule": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "hint": "ΔTb = i Kb b. Величина положительна для заданного растворённого вещества.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Повышение температуры кипения",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Повышение температуры кипения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+    ],
+    "learningObjective": "Повышение температуры кипения",
+    "audit": {
+      "expression": "i*K*b",
+      "variables": {
+        "i": 1,
+        "K": 0.512,
+        "b": 0.5
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-227",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Идеальный газ",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная проба идеального газа: n=0.1 моль, T=300 К, p=100 кПа. Используй R=8.314 л·кПа/(моль·К). Найди объём. Ответ: л.",
+    "correctAnswer": {
+      "value": 2.4942,
+      "absoluteTolerance": 0.0024942000000000002,
+      "unit": "л"
+    },
+    "explanation": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру. Подстановка данных даёт 2.4942 л.",
+    "rule": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "hint": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Идеальный газ",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Идеальный газ",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law"
+    ],
+    "learningObjective": "Идеальный газ",
+    "audit": {
+      "expression": "n*R*T/p",
+      "variables": {
+        "n": 0.1,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-228",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Идеальный газ",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная проба идеального газа: n=0.2 моль, T=300 К, p=100 кПа. Используй R=8.314 л·кПа/(моль·К). Найди объём. Ответ: л.",
+    "correctAnswer": {
+      "value": 4.9884,
+      "absoluteTolerance": 0.0049884000000000005,
+      "unit": "л"
+    },
+    "explanation": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру. Подстановка данных даёт 4.9884 л.",
+    "rule": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "hint": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Идеальный газ",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Идеальный газ",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law"
+    ],
+    "learningObjective": "Идеальный газ",
+    "audit": {
+      "expression": "n*R*T/p",
+      "variables": {
+        "n": 0.2,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-229",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Идеальный газ",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная проба идеального газа: n=0.3 моль, T=300 К, p=100 кПа. Используй R=8.314 л·кПа/(моль·К). Найди объём. Ответ: л.",
+    "correctAnswer": {
+      "value": 7.482599999999999,
+      "absoluteTolerance": 0.007482599999999999,
+      "unit": "л"
+    },
+    "explanation": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру. Подстановка данных даёт 7.4826 л.",
+    "rule": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "hint": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Идеальный газ",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Идеальный газ",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law"
+    ],
+    "learningObjective": "Идеальный газ",
+    "audit": {
+      "expression": "n*R*T/p",
+      "variables": {
+        "n": 0.3,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-230",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Идеальный газ",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная проба идеального газа: n=0.5 моль, T=300 К, p=100 кПа. Используй R=8.314 л·кПа/(моль·К). Найди объём. Ответ: л.",
+    "correctAnswer": {
+      "value": 12.470999999999998,
+      "absoluteTolerance": 0.012470999999999998,
+      "unit": "л"
+    },
+    "explanation": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру. Подстановка данных даёт 12.471 л.",
+    "rule": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "hint": "pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Идеальный газ",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Идеальный газ",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law"
+    ],
+    "learningObjective": "Идеальный газ",
+    "audit": {
+      "expression": "n*R*T/p",
+      "variables": {
+        "n": 0.5,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-231",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Газовый объём по стехиометрии",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель: чистый CaCO3 массой 5 г полностью превращён по CaCO3 → CaO + CO2. M(CaCO3)=100 г/моль. CO2 рассматривается как идеальный газ при T=300 К, p=100 кПа; R=8.314 л·кПа/(моль·К). Найди объём CO2. Ответ: л.",
+    "correctAnswer": {
+      "value": 1.2471,
+      "absoluteTolerance": 0.0012471000000000001,
+      "unit": "л"
+    },
+    "explanation": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p. Подстановка данных даёт 1.2471 л.",
+    "rule": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p.",
+    "hint": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Газовый объём по стехиометрии",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Газовый объём по стехиометрии",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law",
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Газовый объём по стехиометрии",
+    "audit": {
+      "expression": "m/M*R*T/p",
+      "variables": {
+        "m": 5,
+        "M": 100,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
+    "id": "C3-232",
+    "level": 3,
+    "moduleId": 6,
+    "topic": "Растворы и количество вещества",
+    "subtopic": "Газовый объём по стехиометрии",
+    "difficulty": 3,
+    "station": "solution-laboratory",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель: чистый CaCO3 массой 10 г полностью превращён по CaCO3 → CaO + CO2. M(CaCO3)=100 г/моль. CO2 рассматривается как идеальный газ при T=300 К, p=100 кПа; R=8.314 л·кПа/(моль·К). Найди объём CO2. Ответ: л.",
+    "correctAnswer": {
+      "value": 2.4942,
+      "absoluteTolerance": 0.0024942000000000002,
+      "unit": "л"
+    },
+    "explanation": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p. Подстановка данных даёт 2.4942 л.",
+    "rule": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p.",
+    "hint": "По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p.",
+    "points": 100,
+    "tags": [
+      "module-6",
+      "Газовый объём по стехиометрии",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Газовый объём по стехиометрии",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law",
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Газовый объём по стехиометрии",
+    "audit": {
+      "expression": "m/M*R*T/p",
+      "variables": {
+        "m": 10,
+        "M": 100,
+        "R": 8.314,
+        "T": 300,
+        "p": 100
+      }
+    },
+    "materialId": "physical"
+  },
+  {
     "id": "C4-001",
     "level": 4,
     "moduleId": 8,
@@ -33185,6 +34375,334 @@
     ]
   },
   {
+    "id": "C4-201",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=25000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 1.8709631875590471,
+      "absoluteTolerance": 0.001870963187559047,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 1.87096 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 25000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-202",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=40000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 2.724610262406092,
+      "absoluteTolerance": 0.0027246102624060922,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 2.72461 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 40000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-203",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=50000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 3.50050324920111,
+      "absoluteTolerance": 0.00350050324920111,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 3.5005 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 50000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-204",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=60000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 4.497348911416965,
+      "absoluteTolerance": 0.0044973489114169644,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 4.49735 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 60000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-205",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=2. Остальные условия постоянны. Найди отношение скоростей при нагреве на 10 К.",
+    "correctAnswer": {
+      "value": 2.0,
+      "absoluteTolerance": 0.002,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 2 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 2,
+        "d": 10
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-206",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=2. Остальные условия постоянны. Найди отношение скоростей при нагреве на 20 К.",
+    "correctAnswer": {
+      "value": 4.0,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 4 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 2,
+        "d": 20
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-207",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=3. Остальные условия постоянны. Найди отношение скоростей при нагреве на 10 К.",
+    "correctAnswer": {
+      "value": 3.0,
+      "absoluteTolerance": 0.003,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 3 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 3,
+        "d": 10
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-208",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=3. Остальные условия постоянны. Найди отношение скоростей при нагреве на 20 К.",
+    "correctAnswer": {
+      "value": 9.0,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 9 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 3,
+        "d": 20
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
     "id": "C5-001",
     "level": 5,
     "moduleId": 13,
@@ -37874,5 +39392,463 @@
       "хлориды обязательно отсутствуют",
       "сульфаты обязательно отсутствуют"
     ]
+  },
+  {
+    "id": "C5-121",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3CH2OH. Определи класс вещества.",
+    "correctAnswer": "спирт",
+    "explanation": "Группа OH связана с насыщенным атомом углерода.",
+    "rule": "Группа OH связана с насыщенным атомом углерода.",
+    "hint": "Группа OH связана с насыщенным атомом углерода.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-2-alcohols-and-ethers"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "спирт",
+      "простой эфир",
+      "альдегид",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-122",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3OCH3. Определи класс вещества.",
+    "correctAnswer": "простой эфир",
+    "explanation": "Атом кислорода соединяет два углеродных заместителя.",
+    "rule": "Атом кислорода соединяет два углеродных заместителя.",
+    "hint": "Атом кислорода соединяет два углеродных заместителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-2-alcohols-and-ethers"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "простой эфир",
+      "спирт",
+      "кетон",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-123",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3CHO. Определи класс вещества.",
+    "correctAnswer": "альдегид",
+    "explanation": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "rule": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "hint": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "альдегид",
+      "кетон",
+      "спирт",
+      "сложный эфир"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-124",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COCH3. Определи класс вещества.",
+    "correctAnswer": "кетон",
+    "explanation": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "rule": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "hint": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "кетон",
+      "альдегид",
+      "спирт",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-125",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COOH. Определи класс вещества.",
+    "correctAnswer": "карбоновая кислота",
+    "explanation": "Функциональная группа COOH — карбоксильная.",
+    "rule": "Функциональная группа COOH — карбоксильная.",
+    "hint": "Функциональная группа COOH — карбоксильная.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "карбоновая кислота",
+      "кетон",
+      "простой эфир",
+      "альдегид"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-126",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COOCH3. Определи класс вещества.",
+    "correctAnswer": "сложный эфир",
+    "explanation": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "rule": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "hint": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "сложный эфир",
+      "простой эфир",
+      "спирт",
+      "альдегид"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-127",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "При идеализированной цепной полимеризации этилена CH2=CH2 какой фрагмент повторяется в основной цепи?",
+    "correctAnswer": "–CH2–CH2–",
+    "explanation": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "rule": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "hint": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "–CH2–CH2–",
+      "–CH=CH–",
+      "–CO–O–",
+      "–Si–O–"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-128",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Какой мономер соответствует идеализированному звену полипропилена –CH2–CH(CH3)–?",
+    "correctAnswer": "CH2=CH–CH3",
+    "explanation": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "rule": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "hint": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "CH2=CH–CH3",
+      "CH2=CH2",
+      "CH3OH",
+      "CH3COOH"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-129",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В учебной схеме диол и дикарбоновая кислота образуют полиэфир с удалением воды. Как классифицировать образование цепи?",
+    "correctAnswer": "поликонденсация",
+    "explanation": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "rule": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "hint": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "поликонденсация",
+      "испарение готового полимера",
+      "ионная диссоциация",
+      "электролиз"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-130",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В модели полиамида цепь растёт через образование связей –CO–NH– между аминными и карбоксильными группами с выделением воды. Какова связь между звеньями?",
+    "correctAnswer": "амидная",
+    "explanation": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "rule": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "hint": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "амидная",
+      "ионная решётка NaCl",
+      "металлическая",
+      "только водородная"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-131",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Схема цепной полимеризации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Составь идеализированную схему цепной полимеризации CH2=CH2. Используй n перед мономером и звено (CH2CH2)n справа; концевые группы опущены. Запиши полное уравнение.",
+    "correctAnswer": "nCH2=CH2 -> (CH2CH2)n",
+    "explanation": "Двойная связь этилена раскрывается; состав звена C2H4 сохраняется.",
+    "rule": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "hint": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Схема цепной полимеризации",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Схема цепной полимеризации",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Схема цепной полимеризации",
+    "audit": {
+      "polymerMonomer": "CH2=CH2",
+      "polymerRepeat": "(CH2CH2)n"
+    },
+    "acceptedAnswers": [
+      "nCH2=CH2 -> [CH2CH2]n",
+      "nCH2=CH2 -> (-CH2CH2-)n"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-132",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Схема цепной полимеризации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Составь идеализированную схему цепной полимеризации CH2=CHCH3. Используй n перед мономером и звено (CH2CH(CH3))n справа; концевые группы опущены. Запиши полное уравнение.",
+    "correctAnswer": "nCH2=CHCH3 -> (CH2CH(CH3))n",
+    "explanation": "В звене полипропилена сохраняется боковая группа CH3; состав звена C3H6.",
+    "rule": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "hint": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Схема цепной полимеризации",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Схема цепной полимеризации",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Схема цепной полимеризации",
+    "audit": {
+      "polymerMonomer": "CH2=CHCH3",
+      "polymerRepeat": "(CH2CH(CH3))n"
+    },
+    "acceptedAnswers": [
+      "nCH2=CHCH3 -> [CH2CH(CH3)]n",
+      "nCH2=CHCH3 -> (-CH2CH(CH3)-)n"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-133",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Связь при поликонденсации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Виртуальная модель первого сложноэфирного соединения диола с дикарбоновой кислотой: HOCH2CH2OH + HOOC(CH2)4COOH. Образуется HOCH2CH2OCO(CH2)4COOH и вода. Запиши полное уравнение; свободные концевые группы позволяют продолжить цепь.",
+    "correctAnswer": "HOCH2CH2OH + HOOC(CH2)4COOH -> HOCH2CH2OCO(CH2)4COOH + H2O",
+    "explanation": "При образовании одной сложноэфирной связи из OH диола и COOH кислоты выделяется одна H2O; оставшиеся OH и COOH могут участвовать в росте цепи.",
+    "rule": "Образование одной связи CO–O в заданной схеме сопровождается выделением одной молекулы воды.",
+    "hint": "Образование одной связи CO–O в заданной схеме сопровождается выделением одной молекулы воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Связь при поликонденсации",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Связь при поликонденсации",
+    "acceptedAnswers": [
+      "HOOC(CH2)4COOH + HOCH2CH2OH -> HOCH2CH2OCO(CH2)4COOH + H2O",
+      "HOCH2CH2OH + HOOC(CH2)4COOH -> H2O + HOCH2CH2OCO(CH2)4COOH",
+      "HOOC(CH2)4COOH + HOCH2CH2OH -> H2O + HOCH2CH2OCO(CH2)4COOH"
+    ],
+    "materialId": "organic"
   }
 ]

@@ -1,3 +1,13 @@
+## 0.1.6 syllabus supplement
+
+1053 fixed tasks, 13 chapters, 53 level/topic practice bindings, 588 worked
+calculations and 16 contextual references. Three original diagrams support dispersed
+systems, wetting and organic groups. Scientific scratchpad and keyboard reference
+scrolling support the new calculations and long tables. Original 1000 records
+are preserved. Exact-source packaged verification belongs in BUILD_INFO.json and
+docs/release/syllabus-0.1.6-proof.json. Instructor acceptance and physical Windows
+Forward+ / representative student-device performance and audio remain external.
+
 ## 0.1.4 course update
 
 The production bank now contains 1000 fixed tasks across 13 ordered chapters.

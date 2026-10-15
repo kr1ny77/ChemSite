@@ -22,12 +22,19 @@ func _ready() -> void:
 	output.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	add_child(output)
 	calculate.pressed.connect(func() -> void:
+		if expression.text.length() > 256:
+			output.text = "Используйте выражение длиной до 256 символов."
+			return
+		var functions := RegEx.new()
+		functions.compile("\\b(?:exp|ln|log|sqrt)\\s*\\(")
 		var allowed := RegEx.new()
 		allowed.compile("^[0-9eE+*/()., \\-]+$")
 		var input := expression.text.replace(",", ".")
-		if allowed.search(input) == null:
-			output.text = "Используйте числа, скобки и знаки + − * /."
+		var arithmetic := functions.sub(input, "(", true)
+		if allowed.search(arithmetic) == null:
+			output.text = "Используйте числа, скобки, знаки + − * / и функции exp, ln, sqrt."
 			return
+		input = input.replace("ln", "log")
 		var numbers := RegEx.new()
 		numbers.compile("(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)(?:[eE][+-]?[0-9]+)?")
 		var matches := numbers.search_all(input)
@@ -45,6 +52,10 @@ func _ready() -> void:
 		else:
 			output.text = "Результат: %s. Единицы укажите в ответе по условию." % str(value)
 	)
+	var scientific_note := Label.new()
+	scientific_note.text = "exp(x) = eˣ; ln(x) — натуральный логарифм; sqrt(x) — корень. Например: exp(50000/8.314*(1/300.0-1/320.0)). Температуры и единицы выбирайте по условию."
+	scientific_note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	add_child(scientific_note)
 	var note := Label.new()
 	note.text = "МОДЕЛЬ АТОМА И ИОНА · исследуйте число частиц"
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

@@ -77,6 +77,11 @@ jobs:
           foreach ($check in @('settings_ui_smoke.gd', 'reduced_motion_smoke.gd', 'menu_accessibility_smoke.gd')) {
             Invoke-VisualCheck $check $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', "tools/validation/$check")
           }
+          Invoke-VisualCheck 'syllabus-materials' $env:GODOT_EXE @('--path', '.', '--rendering-method', 'gl_compatibility', '--resolution', '1028x642', '--script', 'tools/validation/capture_syllabus_materials.gd')
+          New-Item -ItemType Directory -Force -Path 'artifacts/windows-visual/syllabus-materials' | Out-Null
+          Copy-Item 'artifacts/syllabus-ui/*.png' 'artifacts/windows-visual/syllabus-materials/'
+          $syllabusScreens = @(Get-ChildItem 'artifacts/windows-visual/syllabus-materials' -Filter '*.png')
+          if ($syllabusScreens.Count -ne 10) { throw 'Expected ten syllabus material/question captures' }
           $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
           $rounds = @(
             @{ Name = 'level1'; Flag = '--qa-visual-round'; Folder = 'qa-visual-round' }
@@ -96,7 +101,7 @@ jobs:
             @{ Name = 'level4-thermal'; Flag = '--qa-visual-level4-thermal-round'; Folder = 'qa-visual-level4-round-mission' }
             @{ Name = 'level4-surface'; Flag = '--qa-visual-level4-surface-round'; Folder = 'qa-visual-level4-round-mission' }
           )
-          $expectedTotal = 0
+          $expectedTotal = 10
           foreach ($round in $rounds) {
             Invoke-VisualCheck $round.Name $exe @('--rendering-method', 'gl_compatibility', '--', $round.Flag) 90
             $captures = Get-ChildItem (Join-Path $env:APPDATA 'Godot/app_userdata') -Recurse -Filter 'task_01.png' -ErrorAction SilentlyContinue | Where-Object { $_.Directory.Name -eq $round.Folder }

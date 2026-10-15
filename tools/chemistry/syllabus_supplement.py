@@ -4,7 +4,7 @@ Call append_supplement before stable-ID assignment. All activities are virtual.
 import math
 
 
-def append_supplement(tasks, calc, choice, sources):
+def append_supplement(tasks, calc, choice, sources, add):
     sources.update({
         'colloids': 'https://openstax.org/books/chemistry-2e/pages/11-5-colloids',
         'surface': 'https://openstax.org/books/chemistry-2e/pages/10-2-properties-of-liquids',
@@ -98,4 +98,31 @@ def append_supplement(tasks, calc, choice, sources):
     for amount in [.1, .2, .3, .5]:
         calc(3, 6, 'Идеальный газ', f'Виртуальная проба идеального газа: n={amount} моль, T=300 К, p=100 кПа. Используй R=8.314 л·кПа/(моль·К). Найди объём.',
              amount*8.314*300/100, 'л', 'pV=nRT; V=nRT/p. Используй согласованные единицы и абсолютную температуру.', 'n*R*T/p', {'n':amount, 'R':8.314, 'T':300, 'p':100}, source='gas')
-    assert len(tasks)-start == 48, len(tasks)-start
+    for mass in [5, 10]:
+        calc(3, 6, 'Газовый объём по стехиометрии', f'Виртуальная модель: чистый CaCO3 массой {mass} г полностью превращён по CaCO3 → CaO + CO2. M(CaCO3)=100 г/моль. CO2 рассматривается как идеальный газ при T=300 К, p=100 кПа; R=8.314 л·кПа/(моль·К). Найди объём CO2.',
+             mass/100*8.314*300/100, 'л', 'По уравнению n(CO2)=n(CaCO3)=m/M; V(CO2)=nRT/p.', 'm/M*R*T/p', {'m':mass, 'M':100, 'R':8.314, 'T':300, 'p':100}, source='gas')
+        tasks[-1]['sourceRefs'].append('https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry')
+    for monomer, repeat, why in [
+        ('CH2=CH2', '(CH2CH2)n', 'Двойная связь этилена раскрывается; состав звена C2H4 сохраняется.'),
+        ('CH2=CHCH3', '(CH2CH(CH3))n', 'В звене полипропилена сохраняется боковая группа CH3; состав звена C3H6.'),
+    ]:
+        answer=f'n{monomer} -> {repeat}'
+        add(5,13,'Схема цепной полимеризации', f'Составь идеализированную схему цепной полимеризации {monomer}. Используй n перед мономером и звено {repeat} справа; концевые группы опущены. Запиши полное уравнение.', answer, why,
+            'n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.', interaction='equation-completion', station='reaction-bench', source='chain', evidence={'polymerMonomer':monomer,'polymerRepeat':repeat}, difficulty=3)
+        tasks[-1]['topic']='Полимерные материалы'
+        unit = repeat[1:-2]
+        tasks[-1]['acceptedAnswers'] = [f'n{monomer} -> [{unit}]n', f'n{monomer} -> (-{unit}-)n']
+    add(5,13,'Связь при поликонденсации', 'Виртуальная модель первого сложноэфирного соединения диола с дикарбоновой кислотой: HOCH2CH2OH + HOOC(CH2)4COOH. Образуется HOCH2CH2OCO(CH2)4COOH и вода. Запиши полное уравнение; свободные концевые группы позволяют продолжить цепь.',
+        'HOCH2CH2OH + HOOC(CH2)4COOH -> HOCH2CH2OCO(CH2)4COOH + H2O',
+        'При образовании одной сложноэфирной связи из OH диола и COOH кислоты выделяется одна H2O; оставшиеся OH и COOH могут участвовать в росте цепи.',
+        'Образование одной связи CO–O в заданной схеме сопровождается выделением одной молекулы воды.', interaction='equation-completion', station='reaction-bench', source='step', difficulty=3)
+    tasks[-1]['topic']='Полимерные материалы'
+    tasks[-1]['acceptedAnswers'] = [
+        'HOOC(CH2)4COOH + HOCH2CH2OH -> HOCH2CH2OCO(CH2)4COOH + H2O',
+        'HOCH2CH2OH + HOOC(CH2)4COOH -> H2O + HOCH2CH2OCO(CH2)4COOH',
+        'HOOC(CH2)4COOH + HOCH2CH2OH -> H2O + HOCH2CH2OCO(CH2)4COOH',
+    ]
+    for task in tasks[start:]:
+        task.setdefault('tags', []).append('syllabus-supplement')
+        task['materialId'] = ('kinetics' if task['moduleId']==9 else 'physical' if task['subtopic'] in ['Повышение температуры кипения','Идеальный газ','Газовый объём по стехиометрии'] else 'organic' if task['moduleId']==13 else 'surface' if task['topic']=='Поверхностные явления' else 'dispersions')
+    assert len(tasks)-start == 53, len(tasks)-start

@@ -3,7 +3,7 @@ const BANK = preload("res://scripts/chemistry/task_bank.gd")
 func _initialize() -> void:
 	call_deferred("_run")
 func _run() -> void:
-	var counts := [200, 160, 240, 240, 160]
+	var counts := [200, 160, 272, 248, 173]
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
 	var checked := 0

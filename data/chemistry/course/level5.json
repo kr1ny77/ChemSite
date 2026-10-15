@@ -4689,5 +4689,463 @@
       "хлориды обязательно отсутствуют",
       "сульфаты обязательно отсутствуют"
     ]
+  },
+  {
+    "id": "C5-121",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3CH2OH. Определи класс вещества.",
+    "correctAnswer": "спирт",
+    "explanation": "Группа OH связана с насыщенным атомом углерода.",
+    "rule": "Группа OH связана с насыщенным атомом углерода.",
+    "hint": "Группа OH связана с насыщенным атомом углерода.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-2-alcohols-and-ethers"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "спирт",
+      "простой эфир",
+      "альдегид",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-122",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3OCH3. Определи класс вещества.",
+    "correctAnswer": "простой эфир",
+    "explanation": "Атом кислорода соединяет два углеродных заместителя.",
+    "rule": "Атом кислорода соединяет два углеродных заместителя.",
+    "hint": "Атом кислорода соединяет два углеродных заместителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-2-alcohols-and-ethers"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "простой эфир",
+      "спирт",
+      "кетон",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-123",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3CHO. Определи класс вещества.",
+    "correctAnswer": "альдегид",
+    "explanation": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "rule": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "hint": "Карбонильный атом углерода группы CHO связан с водородом.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "альдегид",
+      "кетон",
+      "спирт",
+      "сложный эфир"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-124",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COCH3. Определи класс вещества.",
+    "correctAnswer": "кетон",
+    "explanation": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "rule": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "hint": "Карбонильная группа соединена с двумя углеродными заместителями.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "кетон",
+      "альдегид",
+      "спирт",
+      "карбоновая кислота"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-125",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COOH. Определи класс вещества.",
+    "correctAnswer": "карбоновая кислота",
+    "explanation": "Функциональная группа COOH — карбоксильная.",
+    "rule": "Функциональная группа COOH — карбоксильная.",
+    "hint": "Функциональная группа COOH — карбоксильная.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "карбоновая кислота",
+      "кетон",
+      "простой эфир",
+      "альдегид"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-126",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Органическая химия",
+    "subtopic": "Функциональные группы",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "На виртуальной карточке структурная формула CH3COOCH3. Определи класс вещества.",
+    "correctAnswer": "сложный эфир",
+    "explanation": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "rule": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "hint": "Фрагмент C(=O)–O–C характерен для сложного эфира.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Функциональные группы",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/20-3-aldehydes-ketones-carboxylic-acids-and-esters"
+    ],
+    "learningObjective": "Функциональные группы",
+    "options": [
+      "сложный эфир",
+      "простой эфир",
+      "спирт",
+      "альдегид"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-127",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "При идеализированной цепной полимеризации этилена CH2=CH2 какой фрагмент повторяется в основной цепи?",
+    "correctAnswer": "–CH2–CH2–",
+    "explanation": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "rule": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "hint": "При присоединении этилена двойная связь раскрывается, образуя звено полиэтилена.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "–CH2–CH2–",
+      "–CH=CH–",
+      "–CO–O–",
+      "–Si–O–"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-128",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Какой мономер соответствует идеализированному звену полипропилена –CH2–CH(CH3)–?",
+    "correctAnswer": "CH2=CH–CH3",
+    "explanation": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "rule": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "hint": "Боковая группа CH3 сохраняется при цепном присоединении пропилена.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "CH2=CH–CH3",
+      "CH2=CH2",
+      "CH3OH",
+      "CH3COOH"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-129",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В учебной схеме диол и дикарбоновая кислота образуют полиэфир с удалением воды. Как классифицировать образование цепи?",
+    "correctAnswer": "поликонденсация",
+    "explanation": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "rule": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "hint": "При образовании сложноэфирных связей в заданной схеме выделяется низкомолекулярный продукт — вода.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "поликонденсация",
+      "испарение готового полимера",
+      "ионная диссоциация",
+      "электролиз"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-130",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Образование полимерной цепи",
+    "difficulty": 2,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В модели полиамида цепь растёт через образование связей –CO–NH– между аминными и карбоксильными группами с выделением воды. Какова связь между звеньями?",
+    "correctAnswer": "амидная",
+    "explanation": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "rule": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "hint": "Фрагмент –CO–NH– представляет ковалентную амидную связь основной цепи.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Образование полимерной цепи",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Образование полимерной цепи",
+    "options": [
+      "амидная",
+      "ионная решётка NaCl",
+      "металлическая",
+      "только водородная"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-131",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Схема цепной полимеризации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Составь идеализированную схему цепной полимеризации CH2=CH2. Используй n перед мономером и звено (CH2CH2)n справа; концевые группы опущены. Запиши полное уравнение.",
+    "correctAnswer": "nCH2=CH2 -> (CH2CH2)n",
+    "explanation": "Двойная связь этилена раскрывается; состав звена C2H4 сохраняется.",
+    "rule": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "hint": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Схема цепной полимеризации",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Схема цепной полимеризации",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Схема цепной полимеризации",
+    "audit": {
+      "polymerMonomer": "CH2=CH2",
+      "polymerRepeat": "(CH2CH2)n"
+    },
+    "acceptedAnswers": [
+      "nCH2=CH2 -> [CH2CH2]n",
+      "nCH2=CH2 -> (-CH2CH2-)n"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-132",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Схема цепной полимеризации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Составь идеализированную схему цепной полимеризации CH2=CHCH3. Используй n перед мономером и звено (CH2CH(CH3))n справа; концевые группы опущены. Запиши полное уравнение.",
+    "correctAnswer": "nCH2=CHCH3 -> (CH2CH(CH3))n",
+    "explanation": "В звене полипропилена сохраняется боковая группа CH3; состав звена C3H6.",
+    "rule": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "hint": "n молекул винильного мономера образуют n повторяющихся звеньев; состав звена сохраняется.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Схема цепной полимеризации",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Схема цепной полимеризации",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+    ],
+    "learningObjective": "Схема цепной полимеризации",
+    "audit": {
+      "polymerMonomer": "CH2=CHCH3",
+      "polymerRepeat": "(CH2CH(CH3))n"
+    },
+    "acceptedAnswers": [
+      "nCH2=CHCH3 -> [CH2CH(CH3)]n",
+      "nCH2=CHCH3 -> (-CH2CH(CH3)-)n"
+    ],
+    "materialId": "organic"
+  },
+  {
+    "id": "C5-133",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Полимерные материалы",
+    "subtopic": "Связь при поликонденсации",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "equation-completion",
+    "prompt": "Виртуальная модель первого сложноэфирного соединения диола с дикарбоновой кислотой: HOCH2CH2OH + HOOC(CH2)4COOH. Образуется HOCH2CH2OCO(CH2)4COOH и вода. Запиши полное уравнение; свободные концевые группы позволяют продолжить цепь.",
+    "correctAnswer": "HOCH2CH2OH + HOOC(CH2)4COOH -> HOCH2CH2OCO(CH2)4COOH + H2O",
+    "explanation": "При образовании одной сложноэфирной связи из OH диола и COOH кислоты выделяется одна H2O; оставшиеся OH и COOH могут участвовать в росте цепи.",
+    "rule": "Образование одной связи CO–O в заданной схеме сопровождается выделением одной молекулы воды.",
+    "hint": "Образование одной связи CO–O в заданной схеме сопровождается выделением одной молекулы воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Связь при поликонденсации",
+      "syllabus-supplement"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-4-step-growth-polymers"
+    ],
+    "learningObjective": "Связь при поликонденсации",
+    "acceptedAnswers": [
+      "HOOC(CH2)4COOH + HOCH2CH2OH -> HOCH2CH2OCO(CH2)4COOH + H2O",
+      "HOCH2CH2OH + HOOC(CH2)4COOH -> H2O + HOCH2CH2OCO(CH2)4COOH",
+      "HOOC(CH2)4COOH + HOCH2CH2OH -> H2O + HOCH2CH2OCO(CH2)4COOH"
+    ],
+    "materialId": "organic"
   }
 ]

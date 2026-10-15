@@ -182,6 +182,9 @@ func show_task(task: Dictionary, station_id: String) -> void:
 			overlay.initial_material = "solubility"
 		elif task.topic == "Ряд активности" or task.get("subtopic", "") == "Ряд активности":
 			overlay.initial_material = "activity"
+		if module_id == 9:
+			overlay.initial_material = "kinetics"
+		overlay.initial_material = str(task.get("materialId", overlay.initial_material))
 		add_child(overlay)
 	)
 	task_header.add_child(materials)

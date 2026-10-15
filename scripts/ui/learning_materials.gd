@@ -1,6 +1,7 @@
 extends PanelContainer
 
 var _content: VBoxContainer
+var _scroll: ScrollContainer
 var _catalog: Array
 var _previous_focus: Control
 var initial_material := "periodic"
@@ -53,7 +54,11 @@ func _ready() -> void:
 	close.text = "К ЗАДАНИЮ  ←"
 	close.pressed.connect(_close)
 	row.add_child(close)
+	var help := _text("PgUp / PgDn — прокрутка · Shift + PgUp / PgDn — по горизонтали · Home / End — начало / конец", 16)
+	column.add_child(help)
 	var scroll := ScrollContainer.new()
+	_scroll = scroll
+	scroll.focus_mode = Control.FOCUS_ALL
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 	scroll.follow_focus = true
@@ -78,6 +83,24 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_viewport().set_input_as_handled()
 		_close()
+	elif event.is_action_pressed("ui_page_down", true):
+		if event is InputEventKey and event.shift_pressed:
+			_scroll.scroll_horizontal += int(_scroll.size.x * .8)
+		else:
+			_scroll.scroll_vertical += int(_scroll.size.y * .8)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_page_up", true):
+		if event is InputEventKey and event.shift_pressed:
+			_scroll.scroll_horizontal -= int(_scroll.size.x * .8)
+		else:
+			_scroll.scroll_vertical -= int(_scroll.size.y * .8)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_home", true):
+		_scroll.scroll_vertical = 0
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_end", true):
+		_scroll.scroll_vertical = int(_scroll.get_v_scroll_bar().max_value)
+		get_viewport().set_input_as_handled()
 
 func _close() -> void:
 	_closing = true
@@ -93,6 +116,9 @@ func _text(value: String, font_size: int = 22) -> Label:
 	return label
 
 func _display(index: int) -> void:
+	var scroll := _content.get_parent() as ScrollContainer
+	scroll.scroll_vertical = 0
+	scroll.scroll_horizontal = 0
 	for child in _content.get_children():
 		_content.remove_child(child)
 		child.queue_free()
@@ -127,7 +153,7 @@ func _display(index: int) -> void:
 		diagram.custom_minimum_size.y = 300
 		_content.add_child(diagram)
 		_content.add_child(_text(str(entry.get("diagramCaption", "")), 21))
-		_content.add_child(_text("Условная схема; размеры, траектории и энергетические уровни иллюстративны.", 16))
+		_content.add_child(_text("Условная схема; размеры и геометрия иллюстративны. Для расчёта используйте данные задания.", 16))
 	if entry.has("columns"):
 		var grid := GridContainer.new()
 		grid.columns = entry.columns.size()

@@ -6,3 +6,11 @@
 - `atom.svg`, `solution.svg`, `energy.svg`: original ChemSite schematic geometry. Captions rendered as native UI text. Dimensions and trajectories are illustrative.
 
 All reference text and worked steps are original authoring/presentation; OpenStax references support scientific principles. No OpenStax illustrations or exercise text were copied.
+
+## Detailed syllabus supplement — 2026-10-15
+
+`dispersions.svg`, `wetting.svg` and `organic_groups.svg` are original ChemSite
+vector diagrams authored for the virtual teaching models. Native captions identify
+particle-size simplifications, qualitative wetting shapes and omitted carbon-bound
+hydrogens. They contain no copied textbook figures. Their reference principles are
+listed in `data/chemistry/materials/catalog.json` (OpenStax and IUPAC terminology).

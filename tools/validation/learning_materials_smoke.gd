@@ -59,5 +59,5 @@ func _run() -> void:
 	assert(input.text == "12.6")
 	hud.queue_free()
 	await process_frame
-	print("LEARNING_MATERIALS_SMOKE_OK 11 references, contextual opening, calculator, atom model, retained answer")
+	print("LEARNING_MATERIALS_SMOKE_OK 16 references, contextual opening, calculator, atom model, retained answer")
 	quit()

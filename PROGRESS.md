@@ -1,3 +1,20 @@
+## 0.1.6 syllabus supplement integrated — 2026-10-15
+
+Current phase: platform verification for 0.1.6. Completed work: 53 reviewed tasks
+close the detailed fallback-topic gaps; 1053 total tasks, 588 worked calculations,
+16 references, three new original SVG diagrams, bounded exp/ln/sqrt scratchpad and
+data-driven materialId routing. Materials support vertical / shifted horizontal
+keyboard scrolling and reset scroll on selection. Published 1000 records remain identical; reserved
+IDs and insertion/reorder controls pass. Current work: final source validation and
+exact-source exports. Next task: macOS/Windows packaged supplement, course,
+practice, keyboard, audio and visual gates, then immutable 0.1.6 prerelease.
+Last verification: independent 18 prompt-derived numeric checks and wrong-answer
+controls, polymer composition/condensation balance, 53 actual native UI answers,
+16-reference modal/retained-input gate, six scientific expressions / nine rejected
+inputs, native 1053 task / 2106 feedback layouts at 1028×642; ten source captures
+reviewed. Known issues: platform verification pending; instructor and physical
+Windows acceptance remain external. Public 0.1.5 stays available and unchanged.
+
 ## Detailed fallback syllabus gap found — 2026-10-15
 
 Current phase: complete the chemistry coverage audit and supplement. Previous

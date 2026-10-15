@@ -1,0 +1,49 @@
+{
+  "version": "0.1.6",
+  "status": "local_verified_platform_exports_pending",
+  "published_baseline": "v0.1.5",
+  "preserved_records": 1000,
+  "total_tasks": 1053,
+  "supplement_tasks": 53,
+  "supplement_numeric": 18,
+  "supplement_equations": 3,
+  "worked_calculations": 588,
+  "references": 16,
+  "topics": 53,
+  "original_diagrams": [
+    "dispersions.svg",
+    "wetting.svg",
+    "organic_groups.svg"
+  ],
+  "syllabus": {
+    "url": "https://mgsu.ru/vikon/sveden/files/eix/080301_TEOGKH_B1_O_11_2025_brs.pdf",
+    "sha256": "b539e8d7d4442f010231d1e3098569b645b1c608022484483d4f9ea1c4cca537",
+    "scope": "Detailed fallback profile; formal target-course equivalence external"
+  },
+  "native_verification": {
+    "new_tasks_through_ui": 53,
+    "contextual_reference_and_retained_input": true,
+    "scientific_valid_cases": 6,
+    "scientific_rejected_cases": 9,
+    "keyboard_materials": [
+      "PageUp",
+      "PageDown",
+      "Home",
+      "End",
+      "Shift+PageUp",
+      "Shift+PageDown"
+    ],
+    "task_layouts": 1053,
+    "feedback_layouts": 2106,
+    "resolution": [
+      1028,
+      642
+    ],
+    "source_captures_reviewed": 10
+  },
+  "external_gates": [
+    "target-course instructor acceptance",
+    "physical Windows Forward+ / student-device performance / audio acceptance"
+  ],
+  "published_baseline_records_sha256": "9146103a6fa8fd6360c0726c4550cb76ac130d31a0f3a5d10c999ff00ed2118a"
+}

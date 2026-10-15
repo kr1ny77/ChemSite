@@ -8028,5 +8028,333 @@
       "цинк удаляет все молекулы воды",
       "цинк делает кислород инертным газом"
     ]
+  },
+  {
+    "id": "C4-201",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=25000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 1.8709631875590471,
+      "absoluteTolerance": 0.001870963187559047,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 1.87096 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 25000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-202",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=40000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 2.724610262406092,
+      "absoluteTolerance": 0.0027246102624060922,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 2.72461 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 40000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-203",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=50000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 3.50050324920111,
+      "absoluteTolerance": 0.00350050324920111,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 3.5005 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 50000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-204",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Уравнение Аррениуса",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Аррениуса Ea=60000 Дж/моль, R=8.314 Дж/(моль·К), T1=300 К, T2=320 К. Предэкспоненциальный множитель и Ea постоянны. Найди k2/k1.",
+    "correctAnswer": {
+      "value": 4.497348911416965,
+      "absoluteTolerance": 0.0044973489114169644,
+      "unit": ""
+    },
+    "explanation": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К. Подстановка данных даёт 4.49735 .",
+    "rule": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "hint": "k2/k1 = exp[(Ea/R)(1/T1 − 1/T2)]. Температуры используют в К.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Уравнение Аррениуса",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Уравнение Аррениуса",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Уравнение Аррениуса",
+    "audit": {
+      "expression": "exp(E/R*(1/T1-1/T2))",
+      "variables": {
+        "E": 60000,
+        "R": 8.314,
+        "T1": 300,
+        "T2": 320
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-205",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=2. Остальные условия постоянны. Найди отношение скоростей при нагреве на 10 К.",
+    "correctAnswer": {
+      "value": 2.0,
+      "absoluteTolerance": 0.002,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 2 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 2,
+        "d": 10
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-206",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=2. Остальные условия постоянны. Найди отношение скоростей при нагреве на 20 К.",
+    "correctAnswer": {
+      "value": 4.0,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 4 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 2,
+        "d": 20
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-207",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=3. Остальные условия постоянны. Найди отношение скоростей при нагреве на 10 К.",
+    "correctAnswer": {
+      "value": 3.0,
+      "absoluteTolerance": 0.003,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 3 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 3,
+        "d": 10
+      }
+    },
+    "materialId": "kinetics"
+  },
+  {
+    "id": "C4-208",
+    "level": 4,
+    "moduleId": 9,
+    "topic": "Химическая кинетика",
+    "subtopic": "Температурный коэффициент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для ограниченного интервала модели задано: при каждых +10 К скорость умножается на γ=3. Остальные условия постоянны. Найди отношение скоростей при нагреве на 20 К.",
+    "correctAnswer": {
+      "value": 9.0,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": ""
+    },
+    "explanation": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала. Подстановка данных даёт 9 .",
+    "rule": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "hint": "В заданной эмпирической модели v2/v1 = γ^(ΔT/10); это приближение для указанного интервала.",
+    "points": 100,
+    "tags": [
+      "module-9",
+      "Температурный коэффициент",
+      "syllabus-supplement"
+    ],
+    "procedural": true,
+    "generatorId": "Температурный коэффициент",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+    ],
+    "learningObjective": "Температурный коэффициент",
+    "audit": {
+      "expression": "g**(d/10)",
+      "variables": {
+        "g": 3,
+        "d": 20
+      }
+    },
+    "materialId": "kinetics"
   }
 ]

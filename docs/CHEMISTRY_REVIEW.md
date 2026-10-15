@@ -243,3 +243,21 @@ Current task correctness checks remain valid. Missing assessed topic groups now
 have explicit supplement tasks in TODO.md; full curriculum coverage stays open.
 New conceptual families require source checks and deterministic answers before
 production selection. Formal instructor acceptance remains open.
+
+## Syllabus supplement internal review — 2026-10-15
+
+53 original tasks extend the bank to 1053: dispersed phases, colloid observations,
+coagulation, adsorption and wetting; six oxygen-containing functional classes;
+polymer formation; Arrhenius, given empirical temperature coefficients, boiling
+point and ideal-gas calculations including two stoichiometric volumes. Conditions
+specify model limits, absolute temperatures, pressure, units and ideal behavior.
+The polymer schemes omit terminal groups explicitly; the condensation case grades
+one ester-link step with remaining OH/COOH groups. No practical preparation steps
+are provided. Accepted bracket/bond representations and species orders are explicit.
+
+New per-record references were read: OpenStax Chemistry 2e §§9.2, 10.2, 11.4–11.5,
+12.5, 20.2–20.3; Organic Chemistry §§31.1, 31.4; IUPAC adsorption terminology.
+Arithmetic is independently derived from each displayed prompt; 18 wrong-answer
+controls fail; chain-repeat elemental composition and the condensation equation
+are checked. Internal accuracy/technical review passes; target-course instructor
+acceptance and full institutional equivalence remain open.

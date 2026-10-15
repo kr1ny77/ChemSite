@@ -32,6 +32,15 @@ jobs:
           New-Item -ItemType Directory -Force -Path $templateDir | Out-Null
           Copy-Item 'godot-templates/templates/*' $templateDir -Recurse -Force
           if (-not (Test-Path (Join-Path $templateDir 'windows_release_x86_64.exe'))) { throw 'Windows export template missing' }
+      - name: Audit course and syllabus supplement
+        shell: pwsh
+        run: |
+          python tools/validation/audit_course_bank.py
+          if ($LASTEXITCODE -ne 0) { throw 'Course audit failed' }
+          python tools/validation/audit_syllabus_supplement.py
+          if ($LASTEXITCODE -ne 0) { throw 'Supplement audit failed' }
+          python tools/validation/stable_course_ids_smoke.py
+          if ($LASTEXITCODE -ne 0) { throw 'Stable IDs failed' }
       - name: Import and export Windows release
         shell: pwsh
         run: |
@@ -64,6 +73,10 @@ jobs:
             @{ Script = 'course_integration_smoke'; Marker = 'COURSE_INTEGRATION_OK' }
             @{ Script = 'learning_materials_smoke'; Marker = 'LEARNING_MATERIALS_SMOKE_OK' }
             @{ Script = 'study_audio_smoke'; Marker = 'STUDY_AUDIO_SMOKE_OK' }
+            @{ Script = 'course_bank_smoke'; Marker = 'COURSE_BANK_NATIVE_OK' }
+            @{ Script = 'scientific_scratchpad_smoke'; Marker = 'SCIENTIFIC_SCRATCHPAD_OK' }
+            @{ Script = 'materials_keyboard_smoke'; Marker = 'MATERIALS_KEYBOARD_OK' }
+            @{ Script = 'syllabus_supplement_smoke'; Marker = 'SYLLABUS_SUPPLEMENT_NATIVE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
@@ -125,6 +138,16 @@ jobs:
           $text = Get-Content $log -Raw
           Write-Host $text
           if ($process.ExitCode -ne 0 -or $text -notmatch 'STUDY_AUDIO_SMOKE_OK' -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') { throw 'Packaged study audio failed' }
+      - name: Verify packaged syllabus supplement
+        shell: pwsh
+        run: |
+          $log = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'syllabus-supplement.log')
+          $process = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $log + '"'), '--', '--qa-syllabus-supplement') -PassThru -NoNewWindow
+          if (-not $process.WaitForExit(60000)) { Stop-Process -Id $process.Id -Force; throw 'Supplement timed out' }
+          $process.Refresh()
+          $text = Get-Content $log -Raw
+          Write-Host $text
+          if ($process.ExitCode -ne 0 -or $text -notmatch 'SYLLABUS_SUPPLEMENT_NATIVE_OK version=0.1.6 tasks=53' -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') { throw 'Packaged supplement failed' }
       - name: Run native five-level gameplay smokes
         shell: pwsh
         run: |

@@ -47,6 +47,8 @@ def main():
     required.append(f'COURSE_ROUNDS_SMOKE_OK version={args.version} chapters=13 answers=65 practice=5')
     if tuple(map(int, args.version.split('-', 1)[0].split('.'))) >= (0, 1, 5):
         required.append(f'STUDY_AUDIO_SMOKE_OK version={args.version}')
+    if tuple(map(int, args.version.split('-', 1)[0].split('.'))) >= (0, 1, 6):
+        required.append(f'SYLLABUS_SUPPLEMENT_NATIVE_OK version={args.version} tasks=53')
     for marker in required:
         if marker not in logs:
             raise SystemExit('Missing packaged verification marker: ' + marker)

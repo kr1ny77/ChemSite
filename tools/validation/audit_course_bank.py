@@ -11,7 +11,7 @@ def evaluate(node, variables):
  if isinstance(node,ast.Name): return variables[node.id]
  if isinstance(node,ast.BinOp): return OPS[type(node.op)](evaluate(node.left,variables),evaluate(node.right,variables))
  if isinstance(node,ast.UnaryOp) and isinstance(node.op,ast.USub): return -evaluate(node.operand,variables)
- if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id in ('sqrt','log10') and len(node.args)==1: return getattr(math,node.func.id)(evaluate(node.args[0],variables))
+ if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id in ('sqrt','log10','exp') and len(node.args)==1: return getattr(math,node.func.id)(evaluate(node.args[0],variables))
  raise ValueError(ast.dump(node))
 def main():
  production=json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text())
@@ -19,16 +19,19 @@ def main():
  extra=sum([json.loads((ROOT/f'data/chemistry/course/level{l}.json').read_text()) for l in range(1,6)],[])
  tasks=base+extra
  assert production==tasks, "Rebuild the combined production bank"
- assert len(tasks)==1000
- assert len({t['id'] for t in tasks})==1000
- assert len({t['prompt'] for t in extra})==800
+ assert len(tasks)==1053
+ assert len({t['id'] for t in tasks})==1053
+ assert len({t['prompt'] for t in tasks})==1053
+ assert len({t['prompt'] for t in extra})==853
  assert set(t['moduleId'] for t in extra)==set(range(1,14))
- assert Counter(t['level'] for t in tasks)=={1:200,2:160,3:240,4:240,5:160}
+ assert Counter(t['level'] for t in tasks)=={1:200,2:160,3:272,4:248,5:173}
  allowed={1:{'substance-storage','formula-board','periodic-table-terminal'},2:{'reaction-bench','mixing-station','ionic-reaction-station','inspection-station'},3:{'solution-laboratory','ionic-reaction-station','inspection-station'},4:{'reaction-bench','electrochemistry-station','corrosion-test-rig','inspection-station'},5:{'construction-materials-station','reaction-bench','corrosion-test-rig','inspection-station'}}
+ material_ids={entry['id'] for entry in json.loads((ROOT/'data/chemistry/materials/catalog.json').read_text())}
  arithmetic=equations=formulas=0
  for t in tasks:
   assert t['station'] in allowed[t['level']],t['id']
   assert t['reviewStatus']=='verified',t['id']
+  if 'materialId' in t: assert t['materialId'] in material_ids,t['id']
  for t in extra:
   for field in ('prompt','explanation','hint','rule','learningObjective','sourceRefs','tags'): assert t[field],(t['id'],field)
   audit=t.get('audit',{})
@@ -76,5 +79,5 @@ def main():
  # Negative controls exercise arithmetic and chemistry checks, rather than accepting every record.
  assert not is_balanced('H2 + O2 -> H2O')
  assert evaluate(ast.parse('a/b',mode='eval'),{'a':1,'b':4})==.25
- print(f'COURSE_AUDIT_OK: 1000 tasks, 13 modules; {arithmetic} numeric, {formulas} formula and {equations} equation checks; {len(set(t["subtopic"] for t in extra))} new families')
+ print(f'COURSE_AUDIT_OK: 1053 tasks, 13 modules; {arithmetic} numeric, {formulas} formula and {equations} equation checks; {len(set(t["subtopic"] for t in extra))} new families')
 if __name__=='__main__': main()

@@ -22,7 +22,7 @@ func _run() -> void:
 			assert(not ids.has(task.id))
 			ids[task.id] = true
 		site.free()
-	assert(ids.size() == 1000)
+	assert(ids.size() == 1053)
 	DirAccess.remove_absolute(PATH)
 	var chapter_tasks := COURSE.tasks(1)
 	for index in range(2):
@@ -47,5 +47,5 @@ func _run() -> void:
 	assert(practice._tasks[0].topic != practice._tasks[1].topic)
 	practice.free()
 	DirAccess.remove_absolute(PATH)
-	print("COURSE_INTEGRATION_OK 13 chapters, 1000 unique tasks, station routing, progression, multi-topic practice")
+	print("COURSE_INTEGRATION_OK 13 chapters, 1053 unique tasks, station routing, progression, multi-topic practice")
 	quit()
