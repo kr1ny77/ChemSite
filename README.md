@@ -6,10 +6,10 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 
 ## Playable features
 
-- **1000 curated tasks** with deterministic answer validation and explanations.
+- **1053 curated tasks** with deterministic answer validation and explanations.
 - Thirteen ordered course chapters across five construction environments, from atomic structure to construction chemistry.
 - Untimed practice with one or several selected topics, interleaved across the round.
-- Persistent career answer history, 570 worked calculations and 11 contextual references with diagrams, photos and an interactive scratchpad.
+- Persistent career answer history, 588 worked calculations and 16 contextual references with diagrams, photos and an interactive scratchpad.
 - Formula assembly, equations, calculations, virtual measurement, observations and comparisons.
 - A detailed cartoon builder with nine skeletal actions, smooth heading and bounded foot planting.
 - An enclosed construction yard, eight optional inspections, station guidance and earned construction stages.
@@ -121,3 +121,5 @@ See [ASSET_LICENSES.md](docs/ASSET_LICENSES.md) for source paths, modifications 
 Learning references include a dated IUPAC periodic table and credited USGS/NPS public-domain photographs. Their provenance is recorded in [learning media attribution](assets/learning/ATTRIBUTION.md). [Release evidence](docs/release/course-0.1.4-proof.json) records the exact source and verified archives.
 
 Version 0.1.5 adds quiet UI, mixing, combo and timer cues, preserves accepted footsteps, and fixes audio/effect teardown. [Audio and platform release evidence](docs/release/study-audio-0.1.5-proof.json).
+
+Version 0.1.6 source adds 53 syllabus cases, three original learning diagrams, scientific exp/ln/sqrt calculations and synchronized topic selection. Platform release evidence: [syllabus proof](docs/release/syllabus-0.1.6-proof.json).

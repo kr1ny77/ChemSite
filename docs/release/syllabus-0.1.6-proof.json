@@ -1,6 +1,6 @@
 {
   "version": "0.1.6",
-  "status": "local_verified_platform_exports_pending",
+  "status": "both_platform_packages_verified_visual_pending",
   "published_baseline": "v0.1.5",
   "preserved_records": 1000,
   "total_tasks": 1053,
@@ -9,7 +9,6 @@
   "supplement_equations": 3,
   "worked_calculations": 588,
   "references": 16,
-  "topics": 53,
   "original_diagrams": [
     "dispersions.svg",
     "wetting.svg",
@@ -45,5 +44,51 @@
     "target-course instructor acceptance",
     "physical Windows Forward+ / student-device performance / audio acceptance"
   ],
-  "published_baseline_records_sha256": "9146103a6fa8fd6360c0726c4550cb76ac130d31a0f3a5d10c999ff00ed2118a"
+  "published_baseline_records_sha256": "9146103a6fa8fd6360c0726c4550cb76ac130d31a0f3a5d10c999ff00ed2118a",
+  "level_topic_bindings": 53,
+  "unique_topic_names": 52,
+  "source_revision": "3a1c11bad46bf7244631fb90a5f84912fc2c2b4c",
+  "duplicate_topic_regression": "Native synchronized rows, unique emitted selection, independent deselection and empty disabled state passed",
+  "native_windows": {
+    "run_id": 38788066020,
+    "conclusion": "success",
+    "clean_log_files": 66,
+    "artifacts": [
+      {
+        "id": 11998718931,
+        "name": "ChemSite-Windows-native-QA-logs",
+        "size_in_bytes": 54343,
+        "digest": "sha256:23c3df2ac7753a1c80b2aa96253dd4c7e7f7b8dbb6615fcee0614b08bad18da7"
+      },
+      {
+        "id": 11998579270,
+        "name": "ChemSite-Windows-x86_64",
+        "size_in_bytes": 51412912,
+        "digest": "sha256:7118d497dd4f4a86f94d01eaa75683a9447067acb13029719b1d01fdac5fa807"
+      }
+    ]
+  },
+  "macos_packaged_checks": [
+    "supplement53",
+    "course13chapters65answers",
+    "practice53bindings_and_duplicate_topic_regression",
+    "raw_keyboard",
+    "movement",
+    "study_audio",
+    "extracted_archive_supplement53"
+  ],
+  "archives": {
+    "ChemSite-Windows.zip": {
+      "bytes": 50543096,
+      "sha256": "17052d06e8daa2a3b7bebffff83a1465a699b3bf02f06bb6f5e5a885abd09bad"
+    },
+    "ChemSite-macOS.zip": {
+      "bytes": 78219459,
+      "sha256": "ce961849c34fab7cdfd5d7faba30c6822e4349d2951ca3b1e562bbf864c56479"
+    }
+  },
+  "archive_crc_and_payload_hashes": {
+    "macOS": 15,
+    "Windows": 12
+  }
 }

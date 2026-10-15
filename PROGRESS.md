@@ -1,3 +1,16 @@
+## 0.1.6 final macOS package verified — 2026-10-15
+
+Current phase: Windows exact-source gates and draft release. Completed work:
+source 3a1c11bad46bf7244631fb90a5f84912fc2c2b4c exported as macOS release;
+six native packaged gates (53-task supplement, 13-chapter course, 53 practice
+bindings including duplicate-topic regression, raw keyboard, movement and study
+audio) pass with clean logs. Archive CRC and all 15 payload SHA-256 values pass;
+extracted archive repeats the supplement UI gate. Draft v0.1.6 contains macOS ZIP
+and checksum. Current work: native Windows run 38788066020 and visual Windows
+run 38788065868; both confirmed active. Next task: verify exact Windows artifacts,
+review all 222 captures, package/upload and publish. Known issues: these final
+Windows gates remain pending; instructor and physical Windows acceptance external.
+
 ## 0.1.6 final selection regression — 2026-10-15
 
 Current phase: final export verification. Completed work: repeated topic rows
