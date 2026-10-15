@@ -91,7 +91,7 @@ func _ready() -> void:
 		chapter_button.text = "%02d · %s  ·  ✓ %d" % [chapter_id, chapter.title, int(chapter_record.get("correct", 0))]
 		chapter_button.disabled = chapter_id > int(progress.unlocked_chapter)
 		if chapter_button.disabled:
-			chapter_button.text += "  🔒"
+			chapter_button.text += " · ЗАКРЫТО"
 		chapter_button.pressed.connect(func() -> void: course_requested.emit(chapter_id))
 		course_list.add_child(chapter_button)
 		if chapter_id == 1:
