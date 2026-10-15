@@ -1,0 +1,292 @@
+{
+  "status": "production_integrated_platform_verification_in_progress",
+  "version": "0.1.4",
+  "reference_revision": "7decf06e5ea620b49e6006f26c884faf5476beb8",
+  "files_sha256": {
+    "scripts/player/foot_plant.gd": "0181b4e42648ae0a4908f761d16cab3676893a18db792c878677ef01aa646abe",
+    "scripts/player/player.gd": "ee1ed9bad6226c55828e3964dddd21a4872dc71b12f0cea74d93742573e0d762",
+    "tools/validation/reference_foot_plant.gd": "15f3416bb9cac3946e689db4dc52e7d51410f64a1b0c50f4f2157a5e8926ae87",
+    "tools/validation/measure_locomotion_contact.gd": "49ad9e659c34dbb31ad85faef69ac01f94b61080fab50b9ff3e3f64d88a2101e",
+    "tools/validation/capture_locomotion.gd": "06f8d4997fa81360e7fe93094b5a6785ec3b69ce3eefba8a681d887b1bfe7dde",
+    "scripts/qa/packaged_movement_smoke.gd": "b3bf415f9c370849c330d58fc9952ba97bd4aeff41d2bfdc3618e55630287266",
+    "scripts/qa/keyboard_round_smoke.gd": "24fdba91a4ba99e72a1ee27a6ccd1ab647e9bfd8a78948cdb314d835ddfe9312"
+  },
+  "raw_reports_sha256": {
+    "artifacts/locomotion-contact-physics-30-support-control.json": "a4fd4a1eb8870832eae389d8bc3f56c5eb0037667f00cda315007097a47d1d72",
+    "artifacts/locomotion-contact-physics-30.json": "1f767a0f5a76d056733543acb4d4a6100722ec2a1c37bd29eb225bceb8f386a5",
+    "artifacts/locomotion-contact-physics-60-support-control.json": "fb2784a4af3d367cdbc403abb6eb705a11a472154a928da21e25260990b4efd7",
+    "artifacts/locomotion-contact-physics-60.json": "ed14a2165190fddd7009829450826d2f5ded02924197874f437250c967834b07",
+    "artifacts/locomotion-contact-physics-120-support-control.json": "b301d789e921ad5048ecbc697299606eb7ba7c58007168c3ece6df1c26f77410",
+    "artifacts/locomotion-contact-physics-120.json": "0f0c290915df399a0faf9ff6a06dedd5dc0ec81377711baf7bebc2941cf7f1aa"
+  },
+  "cases": [
+    {
+      "physics_hz": 30,
+      "scenario": "straight_run",
+      "control_turn_drift_m": 2.3842119389883e-06,
+      "production_turn_drift_m": 2.86102294921875e-06,
+      "steady_drift_m": 3.57628073288652e-06,
+      "plant": {
+        "boot_twist_degrees": 0.0,
+        "corrected": 0,
+        "final_length_error_m": 5.36441802923004e-08,
+        "height_error_m": 0.0,
+        "length_error_m": 0.0,
+        "maximum_correction_m": 0.0,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 97,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 30,
+      "scenario": "corner_run",
+      "control_turn_drift_m": 0.088965468108654,
+      "production_turn_drift_m": 0.0400786809623241,
+      "steady_drift_m": 3.33799312102201e-06,
+      "plant": {
+        "boot_twist_degrees": 34.7004823801155,
+        "corrected": 17,
+        "final_length_error_m": 8.34465026799958e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 4.4703483581543e-08,
+        "maximum_correction_m": 0.119999997317791,
+        "maximum_pelvis_offset_m": 0.0307122617959976,
+        "maximum_pelvis_step_m": 0.0307122617959976,
+        "maximum_reach_loss_m": 0.00196524453349411,
+        "processed": 91,
+        "reach_clamped_ticks": 1
+      }
+    },
+    {
+      "physics_hz": 30,
+      "scenario": "reverse_run",
+      "control_turn_drift_m": 0.0663802251219749,
+      "production_turn_drift_m": 0.00325672654435039,
+      "steady_drift_m": 3.33799312102201e-06,
+      "plant": {
+        "boot_twist_degrees": 48.0000047508163,
+        "corrected": 12,
+        "final_length_error_m": 5.36441802923004e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 2.98023223876953e-08,
+        "maximum_correction_m": 0.119995079934597,
+        "maximum_pelvis_offset_m": 0.00835312064737082,
+        "maximum_pelvis_step_m": 0.00835312064737082,
+        "maximum_reach_loss_m": 0.0093025267124176,
+        "processed": 91,
+        "reach_clamped_ticks": 1
+      }
+    },
+    {
+      "physics_hz": 30,
+      "scenario": "start_stop_walk",
+      "control_turn_drift_m": 7.75433306898776e-07,
+      "production_turn_drift_m": 7.75433306898776e-07,
+      "steady_drift_m": 1.81280455535671e-07,
+      "plant": {
+        "boot_twist_degrees": 0.0395646811852521,
+        "corrected": 46,
+        "final_length_error_m": 8.88109207286547e-08,
+        "height_error_m": 2.23517417907715e-08,
+        "length_error_m": 4.4703483581543e-08,
+        "maximum_correction_m": 0.000669181346893311,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 91,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 60,
+      "scenario": "straight_run",
+      "control_turn_drift_m": 6.34193420410156e-05,
+      "production_turn_drift_m": 6.34193420410156e-05,
+      "steady_drift_m": 7.08103179931641e-05,
+      "plant": {
+        "boot_twist_degrees": 0.0,
+        "corrected": 0,
+        "final_length_error_m": 5.36441802923004e-08,
+        "height_error_m": 0.0,
+        "length_error_m": 0.0,
+        "maximum_correction_m": 0.0,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 188,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 60,
+      "scenario": "corner_run",
+      "control_turn_drift_m": 0.0320904031395912,
+      "production_turn_drift_m": 0.0295402482151985,
+      "steady_drift_m": 7.08103179931641e-05,
+      "plant": {
+        "boot_twist_degrees": 28.5866127144024,
+        "corrected": 34,
+        "final_length_error_m": 9.83476638738434e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 2.98023223876953e-08,
+        "maximum_correction_m": 0.11025033891201,
+        "maximum_pelvis_offset_m": 0.0250000022351742,
+        "maximum_pelvis_step_m": 0.0250000022351742,
+        "maximum_reach_loss_m": 0.0401705764234066,
+        "processed": 181,
+        "reach_clamped_ticks": 3
+      }
+    },
+    {
+      "physics_hz": 60,
+      "scenario": "reverse_run",
+      "control_turn_drift_m": 0.0403543338179588,
+      "production_turn_drift_m": 0.0286705698817968,
+      "steady_drift_m": 7.08103179931641e-05,
+      "plant": {
+        "boot_twist_degrees": 59.1858089696407,
+        "corrected": 40,
+        "final_length_error_m": 1.1861324311635e-07,
+        "height_error_m": 2.23517417907715e-08,
+        "length_error_m": 1.04308128356934e-07,
+        "maximum_correction_m": 0.11266502737999,
+        "maximum_pelvis_offset_m": 0.0459096021950245,
+        "maximum_pelvis_step_m": 0.025000000372529,
+        "maximum_reach_loss_m": 0.0567015074193478,
+        "processed": 181,
+        "reach_clamped_ticks": 5
+      }
+    },
+    {
+      "physics_hz": 60,
+      "scenario": "start_stop_walk",
+      "control_turn_drift_m": 1.13288035663572e-06,
+      "production_turn_drift_m": 1.13288035663572e-06,
+      "steady_drift_m": 8.285046533274e-06,
+      "plant": {
+        "boot_twist_degrees": 0.0,
+        "corrected": 1,
+        "final_length_error_m": 5.36441802923004e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 1.49011611938477e-08,
+        "maximum_correction_m": 0.000333935022354126,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 181,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 120,
+      "scenario": "straight_run",
+      "control_turn_drift_m": 2.86117824543908e-06,
+      "production_turn_drift_m": 8.58306884765625e-06,
+      "steady_drift_m": 3.33786010742188e-06,
+      "plant": {
+        "boot_twist_degrees": 0.0,
+        "corrected": 27,
+        "final_length_error_m": 5.90085983409594e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 4.4703483581543e-08,
+        "maximum_correction_m": 0.000416994094848633,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 372,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 120,
+      "scenario": "corner_run",
+      "control_turn_drift_m": 0.0128889326006174,
+      "production_turn_drift_m": 0.000386674393666908,
+      "steady_drift_m": 3.21865945807076e-06,
+      "plant": {
+        "boot_twist_degrees": 16.454388455877,
+        "corrected": 94,
+        "final_length_error_m": 8.34465026799958e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 4.4703483581543e-08,
+        "maximum_correction_m": 0.0930150523781776,
+        "maximum_pelvis_offset_m": 0.0027400238905102,
+        "maximum_pelvis_step_m": 0.0027400238905102,
+        "maximum_reach_loss_m": 0.0177943762391806,
+        "processed": 361,
+        "reach_clamped_ticks": 5
+      }
+    },
+    {
+      "physics_hz": 120,
+      "scenario": "reverse_run",
+      "control_turn_drift_m": 0.0216782726347446,
+      "production_turn_drift_m": 0.0173455737531185,
+      "steady_drift_m": 3.21865945807076e-06,
+      "plant": {
+        "boot_twist_degrees": 33.6146940379477,
+        "corrected": 105,
+        "final_length_error_m": 8.34465026799958e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 4.4703483581543e-08,
+        "maximum_correction_m": 0.120000004768372,
+        "maximum_pelvis_offset_m": 0.00340024870820343,
+        "maximum_pelvis_step_m": 0.00340024870820343,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 362,
+        "reach_clamped_ticks": 0
+      }
+    },
+    {
+      "physics_hz": 120,
+      "scenario": "start_stop_walk",
+      "control_turn_drift_m": 4.18295513782141e-07,
+      "production_turn_drift_m": 4.77767571283039e-07,
+      "steady_drift_m": 2.98116333397047e-07,
+      "plant": {
+        "boot_twist_degrees": 0.0395646811852521,
+        "corrected": 11,
+        "final_length_error_m": 8.88109207286547e-08,
+        "height_error_m": 1.49011611938477e-08,
+        "length_error_m": 5.96046447753906e-08,
+        "maximum_correction_m": 0.00056302547454834,
+        "maximum_pelvis_offset_m": 0.0,
+        "maximum_pelvis_step_m": 0.0,
+        "maximum_reach_loss_m": 0.0,
+        "processed": 362,
+        "reach_clamped_ticks": 0
+      }
+    }
+  ],
+  "contract": {
+    "shoe_correction_m": 0.12,
+    "body_transfer_m": 0.065,
+    "body_transfer_speed_m_s": 1.5,
+    "release_s": 0.065,
+    "maximum_boot_twist_deg": 65,
+    "authored_pelvis_height_preserved": true,
+    "physics_controller_bytes_unchanged": true
+  },
+  "reviewed_native_frames": 36,
+  "scope": "One actual skinned sole vertex during consecutive authored support windows; independent final leg lengths, four active-lock releases per frequency, unchanged displacement/height/length/twist gates. 120Hz phase variation retained in current raw reports.",
+  "rejected_unbounded_transfer": {
+    "maximum_body_step_60hz_m": 0.0545503124594688,
+    "reason": "Bound body transfer speed for smooth motion; retained 1.5m/s variant."
+  },
+  "local_source_checks": [
+    "editor import/parse",
+    "grounding/steady soles",
+    "movement easing",
+    "footstep timing",
+    "complete source round",
+    "built-in movement gate"
+  ],
+  "pending": [
+    "final macOS keyboard/practice/movement archive verification",
+    "Windows native and graphical CI at exact source revision",
+    "prerelease packaging/publication"
+  ]
+}

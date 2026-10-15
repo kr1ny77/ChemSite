@@ -59,6 +59,8 @@ var _round_complete_pending: bool = false
 var mode: String = "career"
 var level: int = 1
 var practice_topic: String = ""
+var practice_topics: Array = []
+var course_chapter: int = 0
 var _target_count: int = 5
 var _machinery_player: AudioStreamPlayer3D
 var _work_lights: Array[OmniLight3D] = []
@@ -103,6 +105,10 @@ func _ready() -> void:
 	_hud.resume_requested.connect(_resume)
 	_hud.exit_requested.connect(func() -> void: exit_requested.emit())
 	_update_hud()
+	if _tasks.is_empty():
+		_round_done = true
+		_player.controls_enabled = false
+		_hud.show_course_complete()
 	get_window().focus_exited.connect(_pause_on_focus_loss)
 
 func _pause_on_focus_loss() -> void:
@@ -163,14 +169,33 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _load_tasks() -> void:
 	_tasks = TASK_BANK.load_verified_tasks(level)
-	if mode == "practice":
+	if course_chapter > 0:
+		_tasks = preload("res://scripts/chemistry/course_catalog.gd").tasks(course_chapter)
+		# Chapter 11 includes redox tasks originally authored for the reaction zone.
+		for task in _tasks:
+			if course_chapter == 11 and task.station in ["mixing-station", "ionic-reaction-station"]:
+				task.station = "reaction-bench"
+	if mode == "practice" and not practice_topics.is_empty():
+		_tasks.clear()
+		for environment in range(1, 6):
+			for task in TASK_BANK.load_verified_tasks(environment):
+				if task.topic in practice_topics:
+					task.station = "inspection-station"
+					_tasks.append(task)
+		_tasks = TASK_SCHEDULER.practice_order(_tasks, practice_topics)
+		_target_count = mini(maxi(5, practice_topics.size()), _tasks.size())
+	elif mode == "practice":
 		_tasks = _tasks.filter(func(task: Dictionary) -> bool: return task.topic == practice_topic)
 		_target_count = mini(5, _tasks.size())
 		if _tasks.is_empty():
 			push_error("No verified practice tasks for topic: " + practice_topic)
 	else:
 		var progress: Dictionary = SAVE_DATA.load_progress(save_path)
-		_tasks = TASK_SCHEDULER.order_tasks(_tasks, progress.topic_mastery)
+		_tasks = TASK_SCHEDULER.order_tasks(_tasks, progress.topic_mastery, progress.career_answered_ids)
+		_target_count = mini(5, _tasks.size())
+		if _tasks.is_empty() and course_chapter > 0:
+			var exhausted_error := SAVE_DATA.record_chapter(course_chapter, 0, 0, save_path, true)
+			if exhausted_error != OK: push_warning("Could not save exhausted chapter")
 
 func _build_world() -> void:
 	var environment := WorldEnvironment.new()
@@ -460,7 +485,7 @@ func _submit_answer(answer: String) -> void:
 	var task: Dictionary = _tasks[_task_index]
 	var valid: bool = TASK_BANK.validate_choice(task, answer)
 	if mode == "career":
-		var learning_error: Error = SAVE_DATA.record_answer(task, valid, save_path)
+		var learning_error: Error = SAVE_DATA.record_answer(task, valid, save_path, course_chapter)
 		if learning_error != OK:
 			push_warning("Could not save topic mastery: %s" % error_string(learning_error))
 	feedback_given.emit(valid)
@@ -506,6 +531,8 @@ func _finish_round() -> void:
 	if mode == "career":
 		var prior_stage := _construction_stage
 		var save_error: Error = SAVE_DATA.record_round(_score, _completed, save_path, level)
+		if course_chapter > 0 and save_error == OK:
+			save_error = SAVE_DATA.record_chapter(course_chapter, _completed, _score, save_path)
 		if save_error != OK:
 			push_warning("Could not save round progress: %s" % error_string(save_error))
 		else:
@@ -516,6 +543,9 @@ func _finish_round() -> void:
 	_hud.show_results(_score, _completed, _time_left, _target_count, mode, construction_reward)
 
 func _resume() -> void:
+	if _tasks.is_empty():
+		exit_requested.emit()
+		return
 	if _round_done:
 		return
 	if _round_complete_pending:

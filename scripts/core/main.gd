@@ -13,12 +13,16 @@ var _current: Node
 var _manual_playtest := false
 
 func _ready() -> void:
-	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest") or OS.get_cmdline_user_args().has("--qa-keyboard-round")
+	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest") or OS.get_cmdline_user_args().has("--qa-keyboard-round") or OS.get_cmdline_user_args().has("--qa-movement")
 	if _manual_playtest:
 		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
 		print("CHEMSITE_MANUAL_PLAYTEST_ISOLATED")
 	show_menu()
-	if OS.get_cmdline_user_args().has("--qa-keyboard-round"):
+	if OS.get_cmdline_user_args().has("--qa-course"):
+		call_deferred("_run_course_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-movement"):
+		call_deferred("_run_movement_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-keyboard-round"):
 		call_deferred("_run_keyboard_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-practice-levels"):
 		call_deferred("_run_practice_levels_smoke")
@@ -244,15 +248,27 @@ func _run_export_visual_level_five_mission_smoke() -> void:
 func show_menu() -> void:
 	_replace(MENU_SCENE)
 	_current.start_requested.connect(start_game)
+	_current.course_requested.connect(start_course)
+	_current.topics_requested.connect(start_topics)
 	_current.settings_changed.connect($AudioController.apply_settings)
 
-func start_game(mode: String = "career", topic: String = "", level: int = 1, progress_path: String = "") -> void:
+func start_course(chapter: int) -> void:
+	var chapters: Array = preload("res://scripts/chemistry/course_catalog.gd").chapters()
+	if chapter < 1 or chapter > chapters.size(): return
+	start_game("career", "", int(chapters[chapter - 1].environment), "", chapter)
+
+func start_topics(topics: Array) -> void:
+	start_game("practice", "", 5, "", 0, topics)
+
+func start_game(mode: String = "career", topic: String = "", level: int = 1, progress_path: String = "", chapter: int = 0, topics: Array = []) -> void:
 	if is_instance_valid(_current):
 		_current.queue_free()
 	_current = SITE_SCENE.instantiate()
 	_current.mode = mode
 	_current.practice_topic = topic
 	_current.level = level
+	_current.course_chapter = chapter
+	_current.practice_topics = topics
 	_configure_playtest_paths()
 	if not progress_path.is_empty():
 		_current.save_path = progress_path
@@ -293,4 +309,16 @@ func _run_export_level_four_thermal_smoke(capture_visual: bool = false) -> void:
 
 func _run_practice_levels_smoke() -> void:
 	var passed: bool = await preload("res://scripts/qa/practice_levels_smoke.gd").run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_movement_smoke() -> void:
+	get_tree().create_timer(20.0).timeout.connect(func(): get_tree().quit(1))
+	if _current != null:
+		_current.queue_free()
+		_current = null
+	var passed: bool = await preload("res://scripts/qa/packaged_movement_smoke.gd").new().run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_course_smoke() -> void:
+	var passed: bool = await preload("res://scripts/qa/course_rounds_smoke.gd").run(self)
 	get_tree().quit(0 if passed else 1)

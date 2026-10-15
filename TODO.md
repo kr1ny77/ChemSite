@@ -1,3 +1,19 @@
+## Course integration — 2026-10-15
+
+- [x] Persist answered career task IDs, migrate version-5 mistakes, and filter future rounds; isolated native regression passes.
+- [x] Verify exhaustion screen and native career flow visually; native keyboard round and completion-screen capture reviewed.
+- [x] Integrate 13 sequential course chapters independently of five environment layouts; 1000 unique routed tasks and 65 native UI answers pass.
+- [x] Add multi-topic practice selection; 50 topic bindings and mixed-topic round verified.
+- [x] Add 11 contextual references, original diagrams, two credited photos, interactive scratchpad and 570 worked calculations.
+- [ ] Audit all 1,000 tasks, expanded interactions and full-size native layouts; export and verify updated desktop builds.
+
+## Content bank expansion — 2026-10-15
+
+- [x] Expand the structured bank from 200 to 1,000 tasks across all 13 course modules; add 122 learning families with hints, explanations, source references and deterministic answers.
+- [x] Preserve original 200 records and observation metadata; keep all game scripts/scenes unchanged by this task, per user scope clarification.
+- [x] Validate numeric/formula/equation evidence, unique IDs/prompts, station compatibility and original chemistry fixtures; verify all 1,000 answers with the existing native validator.
+- [ ] Complete instructor review against the target UGNTU syllabus; assess depth and teaching balance of the expanded bank.
+
 # ChemSite native production plan
 
 ## Completed checkpoints

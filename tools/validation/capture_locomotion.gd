@@ -1,5 +1,8 @@
 extends SceneTree
 
+const MOVING_SUPPORT = preload("res://scripts/player/foot_plant.gd")
+const REFERENCE_SUPPORT = preload("res://tools/validation/reference_foot_plant.gd")
+
 func _initialize() -> void:
 	call_deferred("_run")
 
@@ -22,6 +25,15 @@ func _run() -> void:
 			if bounds.size.y > 0.12:
 				mesh.visible = false
 	var player := site.get_node("Player") as CharacterBody3D
+	if OS.get_cmdline_user_args().has("--pelvis-support") or OS.get_cmdline_user_args().has("--support-control"):
+		var old: SkeletonModifier3D = player._foot_plant
+		var skeleton := old.get_parent()
+		skeleton.remove_child(old)
+		old.free()
+		var replacement: SkeletonModifier3D = REFERENCE_SUPPORT.new() if OS.get_cmdline_user_args().has("--support-control") else MOVING_SUPPORT.new()
+		replacement.player = player
+		skeleton.add_child(replacement)
+		player._foot_plant = replacement
 	if OS.get_cmdline_user_args().has("--no-plant"):
 		player._foot_plant.active = false
 	var walking := OS.get_cmdline_user_args().has("--walk")
@@ -46,6 +58,8 @@ func _run() -> void:
 		folder += "-side"
 	if OS.get_cmdline_user_args().has("--isolated"):
 		folder += "-isolated"
+	if OS.get_cmdline_user_args().has("--pelvis-support"): folder += "-pelvis-support"
+	if OS.get_cmdline_user_args().has("--support-control"): folder += "-support-control"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	var movement := "move_right" if walking else "move_forward"
 	Input.action_press(movement, 0.68 if transitions else (0.3 if walking else 1.0))

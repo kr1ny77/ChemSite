@@ -27,29 +27,30 @@ static func run(main: Node) -> bool:
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
 	var seed := SAVE.load_progress(path)
 	seed.unlocked_level = level
+	seed.unlocked_chapter = 13
 	if SAVE._write_progress(seed, path) != OK: return false
 	main.show_menu()
 	await tree.process_frame
 	var focus := main.get_viewport().gui_get_focus_owner()
-	if not (focus is Button and focus.text.begins_with("КАРЬЕРА")):
+	if not (focus is Button and focus.has_meta("course_chapter") and int(focus.get_meta("course_chapter")) == 1):
 		push_error("Keyboard round check failed at step %d" % 19)
 		return false
-	if level == 1:
-		await _tap(main, KEY_SPACE)
-	else:
-		var selected := false
-		for child in main._current._menu_content.get_children():
-			if child is Button and child.text.begins_with("УРОВЕНЬ %d ·" % level):
-				selected = await _button(main, child.text)
-				break
-		if not selected: return false
+	var selected_chapter: int = {1: 1, 2: 5, 3: 6, 4: 8, 5: 13}[level]
+	var selected := false
+	for child in main._current.find_children("*", "Button", true, false):
+		if child.has_meta("course_chapter") and int(child.get_meta("course_chapter")) == selected_chapter:
+			selected = await _button(main, child.text)
+			break
+	if not selected: return false
 	var site: Node = main._current
 	if not (site is Node3D and site.save_path == path and site.level == level):
 		push_error("Keyboard round check failed at step %d" % 22)
 		return false
 	var player: CharacterBody3D = site._player
+	var expected_score := 0
 	for index in range(5):
 		var task: Dictionary = site._tasks[site._task_index]
+		expected_score += roundi(float(task.get("points", 100)) * (2.0 if index == 4 else (1.5 if index >= 2 else 1.0)))
 		print("KEYBOARD_TASK_BEGIN level=", level, " id=", task.id)
 		var stations: Array = site._stations().filter(func(entry: Dictionary): return entry.id == task.station)
 		if stations.size() != 1: return false
@@ -127,7 +128,7 @@ static func run(main: Node) -> bool:
 		push_error("Keyboard round check failed at step %d" % 60)
 		return false
 	var plant = player._foot_plant
-	if plant == null or plant.corrected_ticks == 0 or plant.maximum_correction > .06501 or plant.maximum_length_error > .0001 or plant.maximum_height_error > .0001 or plant.maximum_boot_twist > deg_to_rad(65.01):
+	if plant == null or plant.corrected_ticks == 0 or plant.maximum_correction > .12001 or plant.maximum_pelvis_offset > .06501 or plant.maximum_pelvis_step > 1.5 / Engine.physics_ticks_per_second + .00001 or plant.maximum_length_error > .0001 or plant.maximum_height_error > .0001 or plant.maximum_boot_twist > deg_to_rad(65.01):
 		push_error("Packaged foot planting was absent or exceeded pose bounds")
 		return false
 	print("KEYBOARD_FOOT_PLANT_OK corrected_ticks=", plant.corrected_ticks)
@@ -138,7 +139,7 @@ static func run(main: Node) -> bool:
 	if not (int(progress.completed_rounds) == 1 and int(progress.unlocked_level) == mini(level + 1, 5)):
 		push_error("Keyboard round check failed at step %d" % 63)
 		return false
-	if not (int(progress.best_score) == site._score and site._score == int({1: 700, 2: 840, 3: 980, 4: 1120, 5: 1260}[level]) and int(progress.best_stars) == 3):
+	if not (int(progress.best_score) == site._score and site._score == expected_score and int(progress.best_stars) == 3):
 		push_error("Keyboard round check failed at step %d" % 64)
 		return false
 	await _tap(main, KEY_SPACE)

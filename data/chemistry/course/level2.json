@@ -1,0 +1,4392 @@
+[
+  {
+    "id": "C2-001",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: H2 + O2 → H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "2H2 + O2 -> 2H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. 2H2 + O2 -> 2H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "2H2 + O2 -> 2H2O"
+    }
+  },
+  {
+    "id": "C2-002",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2H2 + O2 -> 2H2O. Для получения 2 моль H2O сколько моль H2 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 2.0,
+      "absoluteTolerance": 0.002,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 2 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 2,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-003",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2H2 + O2 -> 2H2O. Взято 2 моль H2, остальные реагенты в избытке. Найди теоретическое количество H2O. Ответ: моль.",
+    "correctAnswer": {
+      "value": 2.0,
+      "absoluteTolerance": 0.002,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 2 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 2,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-004",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 2H2 + O2 -> 2H2O теоретически получается 2 моль H2O, практически — 1.6 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 1.6,
+        "t": 2
+      }
+    }
+  },
+  {
+    "id": "C2-005",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 2H2 + O2 -> 2H2O исходно 2 моль H2, осталось 0.5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 2,
+        "b": 0.5
+      }
+    }
+  },
+  {
+    "id": "C2-006",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: N2 + H2 → NH3. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "N2 + 3H2 -> 2NH3",
+    "explanation": "Число атомов каждого элемента сохраняется. N2 + 3H2 -> 2NH3",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "N2 + 3H2 -> 2NH3"
+    }
+  },
+  {
+    "id": "C2-007",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель N2 + 3H2 -> 2NH3. Для получения 3 моль NH3 сколько моль N2 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 1.5,
+      "absoluteTolerance": 0.0015,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 1.5 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 3,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-008",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель N2 + 3H2 -> 2NH3. Взято 3 моль N2, остальные реагенты в избытке. Найди теоретическое количество NH3. Ответ: моль.",
+    "correctAnswer": {
+      "value": 6.0,
+      "absoluteTolerance": 0.006,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 6 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 3,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-009",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели N2 + 3H2 -> 2NH3 теоретически получается 3 моль NH3, практически — 2.4 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 2.4000000000000004,
+        "t": 3
+      }
+    }
+  },
+  {
+    "id": "C2-010",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе N2 + 3H2 -> 2NH3 исходно 3 моль N2, осталось 0.75 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 3,
+        "b": 0.75
+      }
+    }
+  },
+  {
+    "id": "C2-011",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: CaO + H2O → Ca(OH)2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "CaO + H2O -> Ca(OH)2",
+    "explanation": "Число атомов каждого элемента сохраняется. CaO + H2O -> Ca(OH)2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "CaO + H2O -> Ca(OH)2"
+    }
+  },
+  {
+    "id": "C2-012",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CaO + H2O -> Ca(OH)2. Для получения 4 моль Ca(OH)2 сколько моль CaO потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 4.0,
+      "absoluteTolerance": 0.004,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 4 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 4,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-013",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CaO + H2O -> Ca(OH)2. Взято 4 моль CaO, остальные реагенты в избытке. Найди теоретическое количество Ca(OH)2. Ответ: моль.",
+    "correctAnswer": {
+      "value": 4.0,
+      "absoluteTolerance": 0.004,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 4 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 4,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-014",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели CaO + H2O -> Ca(OH)2 теоретически получается 4 моль Ca(OH)2, практически — 3.2 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 3.2,
+        "t": 4
+      }
+    }
+  },
+  {
+    "id": "C2-015",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе CaO + H2O -> Ca(OH)2 исходно 4 моль CaO, осталось 1 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 4,
+        "b": 1.0
+      }
+    }
+  },
+  {
+    "id": "C2-016",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Ca(OH)2 + HCl → CaCl2 + H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "Ca(OH)2 + 2HCl -> CaCl2 + 2H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. Ca(OH)2 + 2HCl -> CaCl2 + 2H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "Ca(OH)2 + 2HCl -> CaCl2 + 2H2O"
+    }
+  },
+  {
+    "id": "C2-017",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Ca(OH)2 + 2HCl -> CaCl2 + 2H2O. Для получения 5 моль CaCl2 сколько моль Ca(OH)2 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 5.0,
+      "absoluteTolerance": 0.005,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 5 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 5,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-018",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Ca(OH)2 + 2HCl -> CaCl2 + 2H2O. Взято 5 моль Ca(OH)2, остальные реагенты в избытке. Найди теоретическое количество CaCl2. Ответ: моль.",
+    "correctAnswer": {
+      "value": 5.0,
+      "absoluteTolerance": 0.005,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 5 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 5,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-019",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Ca(OH)2 + 2HCl -> CaCl2 + 2H2O теоретически получается 5 моль CaCl2, практически — 4 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 4.0,
+        "t": 5
+      }
+    }
+  },
+  {
+    "id": "C2-020",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе Ca(OH)2 + 2HCl -> CaCl2 + 2H2O исходно 5 моль Ca(OH)2, осталось 1.25 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 5,
+        "b": 1.25
+      }
+    }
+  },
+  {
+    "id": "C2-021",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: NaOH + H2SO4 → Na2SO4 + H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "2NaOH + H2SO4 -> Na2SO4 + 2H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. 2NaOH + H2SO4 -> Na2SO4 + 2H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "2NaOH + H2SO4 -> Na2SO4 + 2H2O"
+    }
+  },
+  {
+    "id": "C2-022",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2NaOH + H2SO4 -> Na2SO4 + 2H2O. Для получения 6 моль Na2SO4 сколько моль NaOH потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 12.0,
+      "absoluteTolerance": 0.012,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 12 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 6,
+        "a": 2,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-023",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2NaOH + H2SO4 -> Na2SO4 + 2H2O. Взято 6 моль NaOH, остальные реагенты в избытке. Найди теоретическое количество Na2SO4. Ответ: моль.",
+    "correctAnswer": {
+      "value": 3.0,
+      "absoluteTolerance": 0.003,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 3 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 6,
+        "a": 2,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-024",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 2NaOH + H2SO4 -> Na2SO4 + 2H2O теоретически получается 6 моль Na2SO4, практически — 4.8 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 4.800000000000001,
+        "t": 6
+      }
+    }
+  },
+  {
+    "id": "C2-025",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 2NaOH + H2SO4 -> Na2SO4 + 2H2O исходно 6 моль NaOH, осталось 1.5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 6,
+        "b": 1.5
+      }
+    }
+  },
+  {
+    "id": "C2-026",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Na2CO3 + HCl → NaCl + H2O + CO2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+    "explanation": "Число атомов каждого элемента сохраняется. Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2"
+    }
+  },
+  {
+    "id": "C2-027",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. Для получения 7 моль NaCl сколько моль Na2CO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 3.5,
+      "absoluteTolerance": 0.0035,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 3.5 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 7,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-028",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. Взято 7 моль Na2CO3, остальные реагенты в избытке. Найди теоретическое количество NaCl. Ответ: моль.",
+    "correctAnswer": {
+      "value": 14.0,
+      "absoluteTolerance": 0.014,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 14 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 7,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-029",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 теоретически получается 7 моль NaCl, практически — 5.6 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 5.6000000000000005,
+        "t": 7
+      }
+    }
+  },
+  {
+    "id": "C2-030",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 исходно 7 моль Na2CO3, осталось 1.75 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 7,
+        "b": 1.75
+      }
+    }
+  },
+  {
+    "id": "C2-031",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: CaCO3 + HCl → CaCl2 + H2O + CO2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "CaCO3 + 2HCl -> CaCl2 + H2O + CO2",
+    "explanation": "Число атомов каждого элемента сохраняется. CaCO3 + 2HCl -> CaCl2 + H2O + CO2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "CaCO3 + 2HCl -> CaCl2 + H2O + CO2"
+    }
+  },
+  {
+    "id": "C2-032",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CaCO3 + 2HCl -> CaCl2 + H2O + CO2. Для получения 8 моль CaCl2 сколько моль CaCO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 8.0,
+      "absoluteTolerance": 0.008,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 8 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 8,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-033",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CaCO3 + 2HCl -> CaCl2 + H2O + CO2. Взято 8 моль CaCO3, остальные реагенты в избытке. Найди теоретическое количество CaCl2. Ответ: моль.",
+    "correctAnswer": {
+      "value": 8.0,
+      "absoluteTolerance": 0.008,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 8 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 8,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-034",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели CaCO3 + 2HCl -> CaCl2 + H2O + CO2 теоретически получается 8 моль CaCl2, практически — 6.4 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 6.4,
+        "t": 8
+      }
+    }
+  },
+  {
+    "id": "C2-035",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе CaCO3 + 2HCl -> CaCl2 + H2O + CO2 исходно 8 моль CaCO3, осталось 2 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 8,
+        "b": 2.0
+      }
+    }
+  },
+  {
+    "id": "C2-036",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Zn + HCl → ZnCl2 + H2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "Zn + 2HCl -> ZnCl2 + H2",
+    "explanation": "Число атомов каждого элемента сохраняется. Zn + 2HCl -> ZnCl2 + H2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "Zn + 2HCl -> ZnCl2 + H2"
+    }
+  },
+  {
+    "id": "C2-037",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Zn + 2HCl -> ZnCl2 + H2. Для получения 9 моль ZnCl2 сколько моль Zn потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 9.0,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 9 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 9,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-038",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Zn + 2HCl -> ZnCl2 + H2. Взято 9 моль Zn, остальные реагенты в избытке. Найди теоретическое количество ZnCl2. Ответ: моль.",
+    "correctAnswer": {
+      "value": 9.0,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 9 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 9,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-039",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Zn + 2HCl -> ZnCl2 + H2 теоретически получается 9 моль ZnCl2, практически — 7.2 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 7.2,
+        "t": 9
+      }
+    }
+  },
+  {
+    "id": "C2-040",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе Zn + 2HCl -> ZnCl2 + H2 исходно 9 моль Zn, осталось 2.25 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 9,
+        "b": 2.25
+      }
+    }
+  },
+  {
+    "id": "C2-041",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Mg + O2 → MgO. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "2Mg + O2 -> 2MgO",
+    "explanation": "Число атомов каждого элемента сохраняется. 2Mg + O2 -> 2MgO",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "2Mg + O2 -> 2MgO"
+    }
+  },
+  {
+    "id": "C2-042",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2Mg + O2 -> 2MgO. Для получения 10 моль MgO сколько моль Mg потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 10.0,
+      "absoluteTolerance": 0.01,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 10 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 10,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-043",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2Mg + O2 -> 2MgO. Взято 10 моль Mg, остальные реагенты в избытке. Найди теоретическое количество MgO. Ответ: моль.",
+    "correctAnswer": {
+      "value": 10.0,
+      "absoluteTolerance": 0.01,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 10 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 10,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-044",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 2Mg + O2 -> 2MgO теоретически получается 10 моль MgO, практически — 8 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 8.0,
+        "t": 10
+      }
+    }
+  },
+  {
+    "id": "C2-045",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 2Mg + O2 -> 2MgO исходно 10 моль Mg, осталось 2.5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 10,
+        "b": 2.5
+      }
+    }
+  },
+  {
+    "id": "C2-046",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Al + O2 → Al2O3. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "4Al + 3O2 -> 2Al2O3",
+    "explanation": "Число атомов каждого элемента сохраняется. 4Al + 3O2 -> 2Al2O3",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "4Al + 3O2 -> 2Al2O3"
+    }
+  },
+  {
+    "id": "C2-047",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 4Al + 3O2 -> 2Al2O3. Для получения 11 моль Al2O3 сколько моль Al потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 22.0,
+      "absoluteTolerance": 0.022,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 22 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 11,
+        "a": 4,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-048",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 4Al + 3O2 -> 2Al2O3. Взято 11 моль Al, остальные реагенты в избытке. Найди теоретическое количество Al2O3. Ответ: моль.",
+    "correctAnswer": {
+      "value": 5.5,
+      "absoluteTolerance": 0.0055,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 5.5 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 11,
+        "a": 4,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-049",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 4Al + 3O2 -> 2Al2O3 теоретически получается 11 моль Al2O3, практически — 8.8 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 8.8,
+        "t": 11
+      }
+    }
+  },
+  {
+    "id": "C2-050",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 4Al + 3O2 -> 2Al2O3 исходно 11 моль Al, осталось 2.75 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 11,
+        "b": 2.75
+      }
+    }
+  },
+  {
+    "id": "C2-051",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: Fe2O3 + CO → Fe + CO2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "Fe2O3 + 3CO -> 2Fe + 3CO2",
+    "explanation": "Число атомов каждого элемента сохраняется. Fe2O3 + 3CO -> 2Fe + 3CO2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "Fe2O3 + 3CO -> 2Fe + 3CO2"
+    }
+  },
+  {
+    "id": "C2-052",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения Fe2O3 + 3CO -> 2Fe + 3CO2 найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 9,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 9 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 4,
+        "b": 5
+      }
+    }
+  },
+  {
+    "id": "C2-053",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Fe2O3 + 3CO -> 2Fe + 3CO2. Для получения 12 моль Fe сколько моль Fe2O3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 6.0,
+      "absoluteTolerance": 0.006,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 6 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 12,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-054",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель Fe2O3 + 3CO -> 2Fe + 3CO2. Взято 12 моль Fe2O3, остальные реагенты в избытке. Найди теоретическое количество Fe. Ответ: моль.",
+    "correctAnswer": {
+      "value": 24.0,
+      "absoluteTolerance": 0.024,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 24 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 12,
+        "a": 1,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-055",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели Fe2O3 + 3CO -> 2Fe + 3CO2 теоретически получается 12 моль Fe, практически — 9.6 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 9.600000000000001,
+        "t": 12
+      }
+    }
+  },
+  {
+    "id": "C2-056",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе Fe2O3 + 3CO -> 2Fe + 3CO2 исходно 12 моль Fe2O3, осталось 3 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 12,
+        "b": 3.0
+      }
+    }
+  },
+  {
+    "id": "C2-057",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: CuO + H2 → Cu + H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "CuO + H2 -> Cu + H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. CuO + H2 -> Cu + H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "CuO + H2 -> Cu + H2O"
+    }
+  },
+  {
+    "id": "C2-058",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения CuO + H2 -> Cu + H2O найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 4,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 4 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-059",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CuO + H2 -> Cu + H2O. Для получения 13 моль Cu сколько моль CuO потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 13.0,
+      "absoluteTolerance": 0.013000000000000001,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 13 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 13,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-060",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CuO + H2 -> Cu + H2O. Взято 13 моль CuO, остальные реагенты в избытке. Найди теоретическое количество Cu. Ответ: моль.",
+    "correctAnswer": {
+      "value": 13.0,
+      "absoluteTolerance": 0.013000000000000001,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 13 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 13,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-061",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели CuO + H2 -> Cu + H2O теоретически получается 13 моль Cu, практически — 10.4 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 10.4,
+        "t": 13
+      }
+    }
+  },
+  {
+    "id": "C2-062",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе CuO + H2 -> Cu + H2O исходно 13 моль CuO, осталось 3.25 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 13,
+        "b": 3.25
+      }
+    }
+  },
+  {
+    "id": "C2-063",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: BaCl2 + Na2SO4 → BaSO4 + NaCl. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "BaCl2 + Na2SO4 -> BaSO4 + 2NaCl",
+    "explanation": "Число атомов каждого элемента сохраняется. BaCl2 + Na2SO4 -> BaSO4 + 2NaCl",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "BaCl2 + Na2SO4 -> BaSO4 + 2NaCl"
+    }
+  },
+  {
+    "id": "C2-064",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения BaCl2 + Na2SO4 -> BaSO4 + 2NaCl найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 5,
+      "absoluteTolerance": 0.005,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 5 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 3
+      }
+    }
+  },
+  {
+    "id": "C2-065",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель BaCl2 + Na2SO4 -> BaSO4 + 2NaCl. Для получения 14 моль BaSO4 сколько моль BaCl2 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 14.0,
+      "absoluteTolerance": 0.014,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 14 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 14,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-066",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель BaCl2 + Na2SO4 -> BaSO4 + 2NaCl. Взято 14 моль BaCl2, остальные реагенты в избытке. Найди теоретическое количество BaSO4. Ответ: моль.",
+    "correctAnswer": {
+      "value": 14.0,
+      "absoluteTolerance": 0.014,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 14 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 14,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-067",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели BaCl2 + Na2SO4 -> BaSO4 + 2NaCl теоретически получается 14 моль BaSO4, практически — 11.2 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 11.200000000000001,
+        "t": 14
+      }
+    }
+  },
+  {
+    "id": "C2-068",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе BaCl2 + Na2SO4 -> BaSO4 + 2NaCl исходно 14 моль BaCl2, осталось 3.5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 14,
+        "b": 3.5
+      }
+    }
+  },
+  {
+    "id": "C2-069",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: AgNO3 + NaCl → AgCl + NaNO3. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "AgNO3 + NaCl -> AgCl + NaNO3",
+    "explanation": "Число атомов каждого элемента сохраняется. AgNO3 + NaCl -> AgCl + NaNO3",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "AgNO3 + NaCl -> AgCl + NaNO3"
+    }
+  },
+  {
+    "id": "C2-070",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения AgNO3 + NaCl -> AgCl + NaNO3 найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 4,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 4 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-071",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель AgNO3 + NaCl -> AgCl + NaNO3. Для получения 15 моль AgCl сколько моль AgNO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 15.0,
+      "absoluteTolerance": 0.015,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 15 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 15,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-072",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель AgNO3 + NaCl -> AgCl + NaNO3. Взято 15 моль AgNO3, остальные реагенты в избытке. Найди теоретическое количество AgCl. Ответ: моль.",
+    "correctAnswer": {
+      "value": 15.0,
+      "absoluteTolerance": 0.015,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 15 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 15,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-073",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели AgNO3 + NaCl -> AgCl + NaNO3 теоретически получается 15 моль AgCl, практически — 12 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 12.0,
+        "t": 15
+      }
+    }
+  },
+  {
+    "id": "C2-074",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе AgNO3 + NaCl -> AgCl + NaNO3 исходно 15 моль AgNO3, осталось 3.75 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 15,
+        "b": 3.75
+      }
+    }
+  },
+  {
+    "id": "C2-075",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: CuSO4 + NaOH → Cu(OH)2 + Na2SO4. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4",
+    "explanation": "Число атомов каждого элемента сохраняется. CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4"
+    }
+  },
+  {
+    "id": "C2-076",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4 найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 5,
+      "absoluteTolerance": 0.005,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 5 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 3,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-077",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4. Для получения 16 моль Cu(OH)2 сколько моль CuSO4 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 16.0,
+      "absoluteTolerance": 0.016,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 16 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 16,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-078",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4. Взято 16 моль CuSO4, остальные реагенты в избытке. Найди теоретическое количество Cu(OH)2. Ответ: моль.",
+    "correctAnswer": {
+      "value": 16.0,
+      "absoluteTolerance": 0.016,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 16 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 16,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-079",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4 теоретически получается 16 моль Cu(OH)2, практически — 12.8 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 12.8,
+        "t": 16
+      }
+    }
+  },
+  {
+    "id": "C2-080",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4 исходно 16 моль CuSO4, осталось 4 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 16,
+        "b": 4.0
+      }
+    }
+  },
+  {
+    "id": "C2-081",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: FeCl3 + NaOH → Fe(OH)3 + NaCl. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl",
+    "explanation": "Число атомов каждого элемента сохраняется. FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl"
+    }
+  },
+  {
+    "id": "C2-082",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 8,
+      "absoluteTolerance": 0.008,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 8 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 4,
+        "b": 4
+      }
+    }
+  },
+  {
+    "id": "C2-083",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl. Для получения 17 моль Fe(OH)3 сколько моль FeCl3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 17.0,
+      "absoluteTolerance": 0.017,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 17 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 17,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-084",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl. Взято 17 моль FeCl3, остальные реагенты в избытке. Найди теоретическое количество Fe(OH)3. Ответ: моль.",
+    "correctAnswer": {
+      "value": 17.0,
+      "absoluteTolerance": 0.017,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 17 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 17,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-085",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl теоретически получается 17 моль Fe(OH)3, практически — 13.6 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 13.600000000000001,
+        "t": 17
+      }
+    }
+  },
+  {
+    "id": "C2-086",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl исходно 17 моль FeCl3, осталось 4.25 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 17,
+        "b": 4.25
+      }
+    }
+  },
+  {
+    "id": "C2-087",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: CO2 + Ca(OH)2 → CaCO3 + H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "CO2 + Ca(OH)2 -> CaCO3 + H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. CO2 + Ca(OH)2 -> CaCO3 + H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "CO2 + Ca(OH)2 -> CaCO3 + H2O"
+    }
+  },
+  {
+    "id": "C2-088",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения CO2 + Ca(OH)2 -> CaCO3 + H2O найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 4,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 4 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-089",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CO2 + Ca(OH)2 -> CaCO3 + H2O. Для получения 18 моль CaCO3 сколько моль CO2 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 18.0,
+      "absoluteTolerance": 0.018000000000000002,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 18 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 18,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-090",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель CO2 + Ca(OH)2 -> CaCO3 + H2O. Взято 18 моль CO2, остальные реагенты в избытке. Найди теоретическое количество CaCO3. Ответ: моль.",
+    "correctAnswer": {
+      "value": 18.0,
+      "absoluteTolerance": 0.018000000000000002,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 18 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 18,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-091",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели CO2 + Ca(OH)2 -> CaCO3 + H2O теоретически получается 18 моль CaCO3, практически — 14.4 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 14.4,
+        "t": 18
+      }
+    }
+  },
+  {
+    "id": "C2-092",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе CO2 + Ca(OH)2 -> CaCO3 + H2O исходно 18 моль CO2, осталось 4.5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 18,
+        "b": 4.5
+      }
+    }
+  },
+  {
+    "id": "C2-093",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: SO3 + H2O → H2SO4. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "SO3 + H2O -> H2SO4",
+    "explanation": "Число атомов каждого элемента сохраняется. SO3 + H2O -> H2SO4",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "SO3 + H2O -> H2SO4"
+    }
+  },
+  {
+    "id": "C2-094",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения SO3 + H2O -> H2SO4 найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 3,
+      "absoluteTolerance": 0.003,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 3 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-095",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель SO3 + H2O -> H2SO4. Для получения 19 моль H2SO4 сколько моль SO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 19.0,
+      "absoluteTolerance": 0.019,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 19 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 19,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-096",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель SO3 + H2O -> H2SO4. Взято 19 моль SO3, остальные реагенты в избытке. Найди теоретическое количество H2SO4. Ответ: моль.",
+    "correctAnswer": {
+      "value": 19.0,
+      "absoluteTolerance": 0.019,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 19 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 19,
+        "a": 1,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-097",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели SO3 + H2O -> H2SO4 теоретически получается 19 моль H2SO4, практически — 15.2 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 15.200000000000001,
+        "t": 19
+      }
+    }
+  },
+  {
+    "id": "C2-098",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе SO3 + H2O -> H2SO4 исходно 19 моль SO3, осталось 4.75 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 19,
+        "b": 4.75
+      }
+    }
+  },
+  {
+    "id": "C2-099",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: NaHCO3 → Na2CO3 + CO2 + H2O. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "2NaHCO3 -> Na2CO3 + CO2 + H2O",
+    "explanation": "Число атомов каждого элемента сохраняется. 2NaHCO3 -> Na2CO3 + CO2 + H2O",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "2NaHCO3 -> Na2CO3 + CO2 + H2O"
+    }
+  },
+  {
+    "id": "C2-100",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения 2NaHCO3 -> Na2CO3 + CO2 + H2O найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 5,
+      "absoluteTolerance": 0.005,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 5 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 3
+      }
+    }
+  },
+  {
+    "id": "C2-101",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2NaHCO3 -> Na2CO3 + CO2 + H2O. Для получения 20 моль Na2CO3 сколько моль NaHCO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 40.0,
+      "absoluteTolerance": 0.04,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 40 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 20,
+        "a": 2,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-102",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2NaHCO3 -> Na2CO3 + CO2 + H2O. Взято 20 моль NaHCO3, остальные реагенты в избытке. Найди теоретическое количество Na2CO3. Ответ: моль.",
+    "correctAnswer": {
+      "value": 10.0,
+      "absoluteTolerance": 0.01,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 10 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 20,
+        "a": 2,
+        "b": 1
+      }
+    }
+  },
+  {
+    "id": "C2-103",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 2NaHCO3 -> Na2CO3 + CO2 + H2O теоретически получается 20 моль Na2CO3, практически — 16 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 16.0,
+        "t": 20
+      }
+    }
+  },
+  {
+    "id": "C2-104",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 2NaHCO3 -> Na2CO3 + CO2 + H2O исходно 20 моль NaHCO3, осталось 5 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 20,
+        "b": 5.0
+      }
+    }
+  },
+  {
+    "id": "C2-105",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Баланс атомов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "equation-balancing",
+    "prompt": "Виртуальная модель: KClO3 → KCl + O2. Запиши полное уравнение с минимальными целыми коэффициентами.",
+    "correctAnswer": "2KClO3 -> 2KCl + 3O2",
+    "explanation": "Число атомов каждого элемента сохраняется. 2KClO3 -> 2KCl + 3O2",
+    "rule": "Коэффициенты умножают число атомов всей формулы.",
+    "hint": "Коэффициенты умножают число атомов всей формулы.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Баланс атомов"
+    ],
+    "procedural": true,
+    "generatorId": "Баланс атомов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Баланс атомов",
+    "audit": {
+      "equation": "2KClO3 -> 2KCl + 3O2"
+    }
+  },
+  {
+    "id": "C2-106",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Сумма коэффициентов",
+    "difficulty": 2,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для уравнения 2KClO3 -> 2KCl + 3O2 найди сумму всех минимальных целых коэффициентов, включая единицы.",
+    "correctAnswer": {
+      "value": 7,
+      "absoluteTolerance": 0.007,
+      "unit": ""
+    },
+    "explanation": "Сложи коэффициенты обеих частей. Подстановка данных даёт 7 .",
+    "rule": "Сложи коэффициенты обеих частей.",
+    "hint": "Сложи коэффициенты обеих частей.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Сумма коэффициентов"
+    ],
+    "procedural": true,
+    "generatorId": "Сумма коэффициентов",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Сумма коэффициентов",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 2,
+        "b": 5
+      }
+    }
+  },
+  {
+    "id": "C2-107",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Расход реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2KClO3 -> 2KCl + 3O2. Для получения 21 моль KCl сколько моль KClO3 потребуется при полном превращении? Ответ: моль.",
+    "correctAnswer": {
+      "value": 21.0,
+      "absoluteTolerance": 0.021,
+      "unit": "моль"
+    },
+    "explanation": "n(реагента)/n(продукта) = отношение коэффициентов. Подстановка данных даёт 21 моль.",
+    "rule": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "hint": "n(реагента)/n(продукта) = отношение коэффициентов.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Расход реагента"
+    ],
+    "procedural": true,
+    "generatorId": "Расход реагента",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Расход реагента",
+    "audit": {
+      "expression": "v*a/b",
+      "variables": {
+        "v": 21,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-108",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Выход продукта",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель 2KClO3 -> 2KCl + 3O2. Взято 21 моль KClO3, остальные реагенты в избытке. Найди теоретическое количество KCl. Ответ: моль.",
+    "correctAnswer": {
+      "value": 21.0,
+      "absoluteTolerance": 0.021,
+      "unit": "моль"
+    },
+    "explanation": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента). Подстановка данных даёт 21 моль.",
+    "rule": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "hint": "n(продукта) = n(реагента) × ν(продукта)/ν(реагента).",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Выход продукта"
+    ],
+    "procedural": true,
+    "generatorId": "Выход продукта",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Выход продукта",
+    "audit": {
+      "expression": "v*b/a",
+      "variables": {
+        "v": 21,
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  {
+    "id": "C2-109",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Практический выход",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В модели 2KClO3 -> 2KCl + 3O2 теоретически получается 21 моль KCl, практически — 16.8 моль. Найди выход в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 80,
+      "absoluteTolerance": 0.08,
+      "unit": "%"
+    },
+    "explanation": "η = n(практ)/n(теор) × 100%. Подстановка данных даёт 80 %.",
+    "rule": "η = n(практ)/n(теор) × 100%.",
+    "hint": "η = n(практ)/n(теор) × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Практический выход"
+    ],
+    "procedural": true,
+    "generatorId": "Практический выход",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Практический выход",
+    "audit": {
+      "expression": "p/t*100",
+      "variables": {
+        "p": 16.8,
+        "t": 21
+      }
+    }
+  },
+  {
+    "id": "C2-110",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Степень превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "numeric-calculation",
+    "prompt": "В виртуальном процессе 2KClO3 -> 2KCl + 3O2 исходно 21 моль KClO3, осталось 5.25 моль. Какая доля исходного реагента израсходована в процентах? Ответ: %.",
+    "correctAnswer": {
+      "value": 75,
+      "absoluteTolerance": 0.075,
+      "unit": "%"
+    },
+    "explanation": "α = (n₀ − n)/n₀ × 100%. Подстановка данных даёт 75 %.",
+    "rule": "α = (n₀ − n)/n₀ × 100%.",
+    "hint": "α = (n₀ − n)/n₀ × 100%.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Степень превращения"
+    ],
+    "procedural": true,
+    "generatorId": "Степень превращения",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень превращения",
+    "audit": {
+      "expression": "(a-b)/a*100",
+      "variables": {
+        "a": 21,
+        "b": 5.25
+      }
+    }
+  },
+  {
+    "id": "C2-111",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Ионное сокращение",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "В водной модели HCl + NaOH → NaCl + H₂O выбери сокращённое ионное уравнение.",
+    "correctAnswer": "H⁺ + OH⁻ → H₂O",
+    "explanation": "Сильные электролиты представлены ионами; Na⁺ и Cl⁻ сохраняются в растворе.",
+    "rule": "Сильные электролиты представлены ионами; Na⁺ и Cl⁻ сохраняются в растворе.",
+    "hint": "Сильные электролиты представлены ионами; Na⁺ и Cl⁻ сохраняются в растворе.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Ионное сокращение"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Ионное сокращение",
+    "options": [
+      "H⁺ + OH⁻ → H₂O",
+      "Na⁺ + Cl⁻ → NaCl",
+      "H₂ + O₂ → H₂O",
+      "Na → Na⁺ + e⁻"
+    ]
+  },
+  {
+    "id": "C2-112",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Спектаторные ионы",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s) + 2NaCl(aq). Какие ионы остаются наблюдателями?",
+    "correctAnswer": "Na⁺ и Cl⁻",
+    "explanation": "Ba²⁺ и SO₄²⁻ образуют осадок; Na⁺ и Cl⁻ присутствуют по обе стороны полного ионного уравнения.",
+    "rule": "Ba²⁺ и SO₄²⁻ образуют осадок; Na⁺ и Cl⁻ присутствуют по обе стороны полного ионного уравнения.",
+    "hint": "Ba²⁺ и SO₄²⁻ образуют осадок; Na⁺ и Cl⁻ присутствуют по обе стороны полного ионного уравнения.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Спектаторные ионы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Спектаторные ионы",
+    "options": [
+      "Na⁺ и Cl⁻",
+      "Ba²⁺ и SO₄²⁻",
+      "H⁺ и OH⁻",
+      "Ba²⁺ и Na⁺"
+    ]
+  },
+  {
+    "id": "C2-113",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Источник газа",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "В виртуальном анализе карбонат реагирует с кислотой. Образуется соль и вода, выделяется газ. Выбери газ.",
+    "correctAnswer": "CO₂",
+    "explanation": "Карбонат при подкислении образует CO₂ и воду.",
+    "rule": "Карбонат при подкислении образует CO₂ и воду.",
+    "hint": "Карбонат при подкислении образует CO₂ и воду.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Источник газа"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Источник газа",
+    "options": [
+      "CO₂",
+      "O₂",
+      "N₂",
+      "Cl₂"
+    ]
+  },
+  {
+    "id": "C2-114",
+    "level": 2,
+    "moduleId": 11,
+    "topic": "Окисление и восстановление",
+    "subtopic": "Восстановитель",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "В модели Zn + Cu²⁺ → Zn²⁺ + Cu выбери восстановитель.",
+    "correctAnswer": "Zn",
+    "explanation": "Zn отдаёт электроны, восстанавливая Cu²⁺.",
+    "rule": "Zn отдаёт электроны, восстанавливая Cu²⁺.",
+    "hint": "Zn отдаёт электроны, восстанавливая Cu²⁺.",
+    "points": 100,
+    "tags": [
+      "module-11",
+      "Восстановитель"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Восстановитель",
+    "options": [
+      "Zn",
+      "Cu²⁺",
+      "Zn²⁺",
+      "Cu"
+    ]
+  },
+  {
+    "id": "C2-115",
+    "level": 2,
+    "moduleId": 11,
+    "topic": "Окисление и восстановление",
+    "subtopic": "Окислитель",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "В модели 2Mg + O₂ → 2MgO выбери окислитель.",
+    "correctAnswer": "O₂",
+    "explanation": "Атомы кислорода принимают электроны и переходят из степени 0 в −2.",
+    "rule": "Атомы кислорода принимают электроны и переходят из степени 0 в −2.",
+    "hint": "Атомы кислорода принимают электроны и переходят из степени 0 в −2.",
+    "points": 100,
+    "tags": [
+      "module-11",
+      "Окислитель"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Окислитель",
+    "options": [
+      "O₂",
+      "Mg",
+      "MgO",
+      "Mg²⁺"
+    ]
+  },
+  {
+    "id": "C2-116",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Лимитирующий реагент",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "Модель 2H₂ + O₂ → 2H₂O: взято 3 моль H₂ и 2 моль O₂. Что ограничивает количество воды?",
+    "correctAnswer": "H₂",
+    "explanation": "Для 3 моль H₂ требуется 1.5 моль O₂; кислород остаётся в избытке.",
+    "rule": "Для 3 моль H₂ требуется 1.5 моль O₂; кислород остаётся в избытке.",
+    "hint": "Для 3 моль H₂ требуется 1.5 моль O₂; кислород остаётся в избытке.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Лимитирующий реагент"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Лимитирующий реагент",
+    "options": [
+      "H₂",
+      "O₂",
+      "вода",
+      "оба реагента израсходуются полностью"
+    ]
+  },
+  {
+    "id": "C2-117",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Остаток реагента",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "Модель N₂ + 3H₂ → 2NH₃: взято 2 моль N₂ и 3 моль H₂, реакция проходит до исчерпания реагента. Какой остаток?",
+    "correctAnswer": "1 моль N₂",
+    "explanation": "3 моль H₂ расходуют 1 моль N₂ из исходных двух.",
+    "rule": "3 моль H₂ расходуют 1 моль N₂ из исходных двух.",
+    "hint": "3 моль H₂ расходуют 1 моль N₂ из исходных двух.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Остаток реагента"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Остаток реагента",
+    "options": [
+      "1 моль N₂",
+      "1 моль H₂",
+      "2 моль H₂",
+      "2 моль N₂"
+    ]
+  },
+  {
+    "id": "C2-118",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Классификация превращения",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "Модель CaCO₃ → CaO + CO₂. Выбери тип по числу исходных веществ и продуктов.",
+    "correctAnswer": "разложение",
+    "explanation": "Из одного вещества образуются два продукта.",
+    "rule": "Из одного вещества образуются два продукта.",
+    "hint": "Из одного вещества образуются два продукта.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Классификация превращения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Классификация превращения",
+    "options": [
+      "разложение",
+      "соединение",
+      "замещение",
+      "обмен двух солей"
+    ]
+  },
+  {
+    "id": "C2-119",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Реакция обмена",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "Какая модель водного обмена имеет движущую силу образования осадка?",
+    "correctAnswer": "AgNO₃ + NaCl → AgCl↓ + NaNO₃",
+    "explanation": "Малорастворимый AgCl выводит ионы из раствора.",
+    "rule": "Малорастворимый AgCl выводит ионы из раствора.",
+    "hint": "Малорастворимый AgCl выводит ионы из раствора.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Реакция обмена"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Реакция обмена",
+    "options": [
+      "AgNO₃ + NaCl → AgCl↓ + NaNO₃",
+      "NaNO₃ + KCl → NaCl + KNO₃",
+      "KNO₃ + NaCl → KCl + NaNO₃",
+      "NaCl + KBr → NaBr + KCl"
+    ]
+  },
+  {
+    "id": "C2-120",
+    "level": 2,
+    "moduleId": 5,
+    "topic": "Химические реакции",
+    "subtopic": "Ряд активности",
+    "difficulty": 3,
+    "station": "reaction-bench",
+    "interactionType": "classification",
+    "prompt": "В виртуальной пробе Cu помещена в раствор ZnSO₄. Каков прогноз по ряду активности для обычных водных условий?",
+    "correctAnswer": "медь сохраняется, вытеснение Zn отсутствует",
+    "explanation": "Zn активнее Cu; восстановление Zn²⁺ медью термодинамически неблагоприятно в этой учебной модели.",
+    "rule": "Zn активнее Cu; восстановление Zn²⁺ медью термодинамически неблагоприятно в этой учебной модели.",
+    "hint": "Zn активнее Cu; восстановление Zn²⁺ медью термодинамически неблагоприятно в этой учебной модели.",
+    "points": 100,
+    "tags": [
+      "module-5",
+      "Ряд активности"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Ряд активности",
+    "options": [
+      "медь сохраняется, вытеснение Zn отсутствует",
+      "медь вытесняет цинк",
+      "образуется Mg",
+      "сульфат превращается в кислород"
+    ]
+  }
+]

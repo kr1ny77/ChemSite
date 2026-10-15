@@ -1,6 +1,6 @@
 # Native ChemSite architecture
 
-Godot 4.7 Forward+ is the production runtime. `Main` owns scene transitions; the active `ConstructionSite` owns the round, player, station proximity, task state, and HUD. `Player` is a CharacterBody3D with semantic InputMap actions. `GameHud` is a Control scene that emits answer, resume and exit signals. The native bank loads 40 verified tasks per level from `data/chemistry/curated_tasks.json`. Level 5 routes material, formula and oxidation tasks to its Blender-authored specimen tester, equation tasks to the reaction bench, and corrosion/inspection tasks to their established stations. Levels 2–4 use their own station sets and reuse compatible props. The original TypeScript bank remains in `legacy-web/src/chemistry/tasks/` and can be re-exported with `tools/chemistry/export_legacy_tasks.mjs`.
+Godot 4.7 Forward+ is the production runtime. `Main` owns scene transitions; the active `ConstructionSite` owns the round, player, station proximity, task state, and HUD. `Player` is a CharacterBody3D with semantic InputMap actions. `GameHud` is a Control scene that emits answer, resume and exit signals. The native bank loads 1,000 verified tasks (200/160/240/240/160 across Levels 1–5) from `data/chemistry/curated_tasks.json`. Level 5 routes material, formula and oxidation tasks to its Blender-authored specimen tester, equation tasks to the reaction bench, and corrosion/inspection tasks to their established stations. Levels 2–4 use their own station sets and reuse compatible props. The original TypeScript bank remains in `legacy-web/src/chemistry/tasks/` and can be re-exported with `tools/chemistry/export_legacy_tasks.mjs`.
 
 Optional site observations load through `scripts/world/site_inspections.gd` from `data/chemistry/site_inspections.json`. `ConstructionSite` selects the nearest interaction point; `GameHud` displays an unscored observation panel. This path does not alter task selection, chemistry validation or save data.
 
@@ -131,3 +131,39 @@ remaining reversal-contact issue.
 three static MultiMesh batches (24 short flat paint segments). Corner brackets
 leave open approaches and introduce no physics or interaction state. All marks
 sit at y=0.006 above the existing work-zone surface.
+
+
+## Thirteen-chapter course integration (2026-10-15)
+
+`course_catalog.gd` selects the 13 ordered chapters in `course/progression.json`.
+The five existing environment layouts remain independent from chapter IDs.
+New tasks use explicit `moduleId`; the original 200 IDs have a reviewed topic
+mapping in the progression data. Chapter 11 remaps its two earlier reaction-zone
+redox cards to the available reaction bench. UI and validation retain their
+original interaction contracts.
+
+Save schema 6 adds `career_answered_ids`, `unlocked_chapter`, and
+`chapter_records`. Each submitted career answer persists its ID, chapter attempts,
+and successful-answer count immediately. Five correct answers unlock the next
+chapter. Completed-ID filtering happens before adaptive scheduling. Exhausted
+chapters show a completion message and unlock the next chapter; practice offers
+repetition. Original pre-v6 successful answer IDs were never stored and cannot
+be reconstructed; old mistake IDs migrate. Writes use a flushed temporary file
+and atomic rename. Stable content IDs must survive content edits and releases.
+
+The menu emits separate course and multi-topic practice signals. Multi-topic
+practice gathers every selected topic across all environments, interleaves shuffled topic pools so every selected topic appears,
+and uses the existing inspection workbench in environment 5 as its shared station.
+It leaves career saves unchanged and runs without a timer. The older single-topic
+entry remains available to focused regression tests.
+
+`learning_materials.gd` is an independent modal overlay over the retained task
+controls. A contextual default, selectable reference list, scrollable tables,
+zoomable periodic table, original schematic geometry and credited photos come
+from `materials/catalog.json`. It restores prior keyboard focus on close.
+`learning_workbench.gd` owns an optional arithmetic scratchpad and particle-count
+model, with no submission or scoring side effects. Arithmetic input accepts only
+numbers/operators; integer tokens are promoted to real numbers before evaluation.
+`worked_steps.json` is an authored presentation derivative of fixed audit data,
+shown only after answering. `build_learning_support.py` regenerates its 570
+worked calculations. Chemistry validation continues to read the reviewed task bank.

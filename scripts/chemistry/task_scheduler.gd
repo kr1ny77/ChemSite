@@ -1,7 +1,10 @@
 extends RefCounted
 
-static func order_tasks(tasks: Array, mastery: Dictionary) -> Array:
-	var remaining := tasks.duplicate()
+static func order_tasks(tasks: Array, mastery: Dictionary, answered_ids: Array = []) -> Array:
+	var excluded := {}
+	for task_id in answered_ids:
+		excluded[str(task_id)] = true
+	var remaining := tasks.filter(func(task: Dictionary) -> bool: return not excluded.has(str(task.get("id", ""))))
 	var ordered: Array = []
 	while not remaining.is_empty():
 		var best_index := 0
@@ -66,3 +69,19 @@ static func schedule_related(tasks: Array, failed_index: int) -> bool:
 	tasks.remove_at(best_index)
 	tasks.insert(target_index, related)
 	return true
+
+static func practice_order(tasks: Array, topics: Array) -> Array:
+	var buckets := {}
+	for topic in topics: buckets[topic] = []
+	for task in tasks:
+		if buckets.has(task.topic): buckets[task.topic].append(task)
+	for bucket in buckets.values(): bucket.shuffle()
+	var ordered: Array = []
+	while ordered.size() < tasks.size():
+		var added := false
+		for topic in topics:
+			if not buckets[topic].is_empty():
+				ordered.append(buckets[topic].pop_back())
+				added = true
+		if not added: break
+	return ordered

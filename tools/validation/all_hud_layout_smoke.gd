@@ -6,6 +6,8 @@ func _initialize() -> void:
 	call_deferred("_run")
 
 func _run() -> void:
+	root.size = Vector2i(1028, 642)
+	root.content_scale_size = Vector2i(1440, 900)
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)
 	var checked := 0

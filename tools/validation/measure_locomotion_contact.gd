@@ -1,5 +1,8 @@
 extends "res://tools/validation/player_grounding_smoke.gd"
 
+const MOVING_SUPPORT = preload("res://scripts/player/foot_plant.gd")
+const REFERENCE_SUPPORT = preload("res://tools/validation/reference_foot_plant.gd")
+
 # Diagnostic of the actual AnimationTree/controller, including transitions.
 # Reports sole motion during authored support windows; thresholds are established
 # after reviewing the native sequence and comparing straight travel with turns.
@@ -25,6 +28,15 @@ func _run() -> void:
 		root.add_child(player)
 		if baseline:
 			player._animation_tree.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_IDLE
+		if OS.get_cmdline_user_args().has("--pelvis-support") or OS.get_cmdline_user_args().has("--support-control"):
+			var old: SkeletonModifier3D = player._foot_plant
+			var skeleton := old.get_parent()
+			skeleton.remove_child(old)
+			old.free()
+			var replacement: SkeletonModifier3D = REFERENCE_SUPPORT.new() if OS.get_cmdline_user_args().has("--support-control") else MOVING_SUPPORT.new()
+			replacement.player = player
+			skeleton.add_child(replacement)
+			player._foot_plant = replacement
 		var plant: SkeletonModifier3D = player._foot_plant
 		if OS.get_cmdline_user_args().has("--no-plant"):
 			plant.active = false
@@ -123,11 +135,15 @@ func _run() -> void:
 				push_error("Planted turn contact exceeds its displacement gate: %s %.6f m" % [scenario, turn_maximum])
 				quit(1)
 				return
-			if plant.maximum_length_error > 0.0001 or plant.maximum_height_error > 0.0001 or plant.maximum_correction > 0.06501 or plant.maximum_boot_twist > deg_to_rad(65.01):
+			if not OS.get_cmdline_user_args().has("--support-control"):
+				assert(plant.maximum_pelvis_offset <= 0.06501)
+				assert(plant.maximum_pelvis_step <= 1.5 / physics_hz + 0.00001)
+			var correction_limit := 0.06501 if OS.get_cmdline_user_args().has("--support-control") else 0.12001
+			if plant.maximum_length_error > 0.0001 or plant.maximum_height_error > 0.0001 or plant.maximum_correction > correction_limit or plant.maximum_boot_twist > deg_to_rad(65.01):
 				push_error("Foot plant changed leg length/height or exceeded correction bounds")
 				quit(1)
 				return
-			report["plant"] = {"reach_clamped_ticks": plant.reach_clamped_ticks, "maximum_reach_loss_m": plant.maximum_reach_loss, "processed": plant.processed_ticks, "corrected": plant.corrected_ticks, "maximum_correction_m": plant.maximum_correction, "length_error_m": plant.maximum_length_error, "height_error_m": plant.maximum_height_error, "boot_twist_degrees": rad_to_deg(plant.maximum_boot_twist), "final_length_error_m": final_length_error[0]}
+			report["plant"] = {"reach_clamped_ticks": plant.reach_clamped_ticks, "maximum_reach_loss_m": plant.maximum_reach_loss, "processed": plant.processed_ticks, "corrected": plant.corrected_ticks, "maximum_correction_m": plant.maximum_correction, "length_error_m": plant.maximum_length_error, "height_error_m": plant.maximum_height_error, "boot_twist_degrees": rad_to_deg(plant.maximum_boot_twist), "final_length_error_m": final_length_error[0], "maximum_pelvis_offset_m": plant.maximum_pelvis_offset if not OS.get_cmdline_user_args().has("--support-control") else 0.0, "maximum_pelvis_step_m": plant.maximum_pelvis_step if not OS.get_cmdline_user_args().has("--support-control") else 0.0}
 			print("PLANT_METRICS ", scenario, " ", report.plant)
 			if not await _verify_plant_release(player, plant, action, scenario):
 				quit(1)
@@ -138,6 +154,8 @@ func _run() -> void:
 		await process_frame
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://artifacts"))
 	var filename := "res://artifacts/locomotion-contact-%s-%d%s.json" % ["idle" if baseline else "physics", physics_hz, "-unplanted" if OS.get_cmdline_user_args().has("--no-plant") else ""]
+	if OS.get_cmdline_user_args().has("--pelvis-support"): filename = filename.replace(".json", "-pelvis-support.json")
+	if OS.get_cmdline_user_args().has("--support-control"): filename = filename.replace(".json", "-support-control.json")
 	var file := FileAccess.open(filename, FileAccess.WRITE)
 	file.store_string(JSON.stringify(reports, "\t"))
 	file.close()
@@ -178,5 +196,11 @@ func _verify_plant_release(player: CharacterBody3D, plant: SkeletonModifier3D, a
 		if foot.support or not foot.offset.is_zero_approx():
 			push_error("Foot lock survived its release condition: " + scenario)
 			return false
+	if not OS.get_cmdline_user_args().has("--support-control"):
+		for frame in range(roundi(Engine.physics_ticks_per_second * 0.4)):
+			await physics_frame
+			await process_frame
+		assert(plant.pelvis_offset.length() < 0.001, "Body transfer survived release window")
+		assert(absf(plant.pelvis_offset.y) < 0.000001, "Body transfer changed authored height")
 	print("PLANT_RELEASE_OK ", scenario)
 	return true

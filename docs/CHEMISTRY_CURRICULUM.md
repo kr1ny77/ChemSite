@@ -137,3 +137,42 @@ The [UGNTU Architectural and Construction Institute program list](https://asf.ug
 - corrosion of reinforcement
 - aggressive environments
 - polymers in construction
+
+## Expanded task bank — 2026-10-15
+
+The combined content bank contains **1,000 fixed tasks**, comprising the original
+200 and 800 additional records across **122 new learning families**. Parameterised
+families deliberately revisit a skill with different substances or data. Counts
+by game level: 200, 160, 240, 240, 160. The extension covers all thirteen existing
+curriculum modules; this is a coverage map, with course-specific instructor
+acceptance remaining a separate gate.
+
+| Module | Additional tasks | Coverage examples |
+| --- | ---: | --- |
+| 1 Atomic structure | 50 | Isotopes, ions, configurations, quantum numbers, Hund/Pauli, periodic trends |
+| 2 Bonding | 10 | Ionic/covalent/metallic bonding, polarity, networks, hydrogen bonding |
+| 3 Inorganic compounds | 80 | Charge-balanced formulas and unambiguous salt naming |
+| 4 Oxidation states | 20 | Neutrality and conventional H/O assignments |
+| 5 Reactions | 118 | Balancing, mole ratios, limiting reagent, conversion/yield, net ionic reasoning |
+| 6 Solutions | 103 | Concentration, dilution, mixtures, crystallisation, molality, osmosis, ideal gas model |
+| 7 Electrolytes | 97 | pH/pOH, buffers, hydrolysis, dissociation, Ksp/common ion, neutralisation |
+| 8 Thermodynamics | 71 | Calorimetry, Hess, entropy, Gibbs energy and direction |
+| 9 Kinetics | 32 | Rate data, order, rate laws, half-life, catalysis |
+| 10 Equilibrium | 32 | K/Q, concentration exponents, dynamic equilibrium, pressure effects |
+| 11 Redox | 22 | Electron equivalents, oxidant/reductant, iron and permanganate |
+| 12 Electrochemistry | 45 | EMF, Faraday, Nernst, electrodes, salt bridge, galvanic corrosion |
+| 13 Construction chemistry | 120 | Water balance/hardness, lime/gypsum, cement, carbonation, chlorides, polymers/silicates |
+
+Each new record includes an objective, hint, explanation, rule and source links.
+570 numeric records carry reproducible arithmetic evidence; 50 formula tasks
+carry charge/atom evidence; 20 equation tasks conserve atoms. Forty distinct
+transfer cases address interpretation and common misconceptions. All experimental
+quantities are explicitly virtual or specified teaching models. Water-quality
+limits in the cases are given educational criteria.
+
+Recommended study order: Modules 1–4 → 5–7 → 8–12 → 13. Within a family, study
+the rule, attempt a problem unaided, then explain a new case using that rule.
+References include OpenStax Chemistry 2e, OpenStax Organic Chemistry §31.7,
+USGS water hardness, American Cement Association, NIST durability publications
+and USG gypsum chemistry. The MGSU fallback mapping above remains applicable;
+full alignment to a particular UGNTU syllabus requires that syllabus and review.

@@ -1,6 +1,6 @@
 # Chemistry Content Schema
 
-The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved source schema used to export all 200 native tasks.
+The production Godot runtime stores verified tasks as JSON in `data/chemistry/`. The TypeScript definition below documents the preserved source schema used to export the original 200 native tasks. The combined bank contains 1,000 tasks: the original 200 plus 800 course tasks authored in `tools/chemistry/build_course_bank.py` and `course_cases.py`. Rebuild with `python3 tools/chemistry/build_course_bank.py`; the exporter also preserves the extension.
 
 All chemistry content must be stored as structured data.
 
@@ -940,3 +940,40 @@ its ordered `comparisonRuns.setting`. The qualitative thermometer and closed
 system icon use schematic levels/colors; heat waves represent the warmer state.
 No numeric temperature, phase, reaction rate or equilibrium composition is
 calculated from the drawing. Existing textual observations determine the answer.
+
+## Course extension (2026-10-15)
+
+`data/chemistry/course/level1.json` through `level5.json` store the 800 additional
+source records. `curated_tasks.json` is the complete 1,000-task runtime artifact.
+`course/manifest.json` records counts, families, modules and general references.
+Stable original `L1-001`–`L5-200` IDs and values are preserved; extension IDs use
+`C1-001`–`C5-120` with per-level ranges recorded in the manifest.
+
+Additional content-only metadata: `moduleId` (1–13), `learningObjective`,
+`sourceRefs`, and `audit` (arithmetic expression/inputs, formula charges/counts,
+or balanced equation). The existing runtime ignores this review metadata.
+Numeric tolerance is 0.1% with a 1e-18 floor; tiny positive ion concentrations
+have tolerances smaller than the answer. Assumptions and units appear in prompts.
+Generation happens during authoring; gameplay reads fixed JSON answers.
+
+Run `python3 tools/validation/audit_course_bank.py` and
+`python3 tools/validation/check_curated_tasks.py` after rebuilding. The original
+40-task-per-level fixture audits retain their original-ID scope.
+
+
+## Adding tasks to the 13-chapter course
+
+Keep each published task ID stable. Assign `moduleId` 1–13 and retain `level`
+1–5 as its environment/station family. New IDs with `moduleId` are selected
+without adding scene code or extending the original-ID mapping. Required graded
+fields, reviewed source references, explicit numeric units/tolerances and accepted
+variants retain the existing contract. Use supported native interaction types.
+For observation mechanics, supply the corresponding structured `parameters`;
+qualitative diagrams must explicitly identify their illustrative scale.
+
+After authoring, regenerate the combined bank using the existing exporter/builder,
+run `tools/chemistry/build_learning_support.py`, then run the schema, course,
+chemistry, native bank, chapter routing and HUD layout checks. An added reference
+uses a stable ID, title, original text, source URL, optional columns/rows and
+licensed image/diagram paths in `materials/catalog.json`. Record image rights in
+`assets/learning/ATTRIBUTION.md`. Answer changes require renewed scientific review.

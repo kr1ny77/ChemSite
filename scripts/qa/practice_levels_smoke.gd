@@ -10,14 +10,17 @@ static func run(main: Node) -> bool:
 	menu.save_path = PATH
 	tree.root.add_child(menu)
 	var selections: Array[Dictionary] = []
-	menu.start_requested.connect(func(mode: String, topic: String, level: int) -> void: selections.append({"mode": mode, "topic": topic, "level": level}))
+	menu.topics_requested.connect(func(topics: Array) -> void: selections.append({"topics": topics}))
 	var keys: Array[String] = []
 	for button in menu.find_children("*", "Button", true, false):
 		if not button.has_meta("practice_level"): continue
-		button.pressed.emit()
-		var selection: Dictionary = selections.back()
-		if selection.mode != "practice" or selection.level != button.get_meta("practice_level") or selection.topic != button.get_meta("practice_topic"):
+		button.button_pressed = true
+		for begin in menu.find_children("*", "Button", true, false):
+			if begin.text == "НАЧАТЬ ТРЕНИРОВКУ": begin.pressed.emit()
+		if selections.is_empty() or selections.back().topics != [button.get_meta("practice_topic")]:
 			return _fail("Practice menu binding mismatch")
+		var selection := {"level":button.get_meta("practice_level"), "topic":button.get_meta("practice_topic")}
+		button.button_pressed = false
 		keys.append("%d:%s" % [selection.level, selection.topic])
 	var expected: Array[String] = []
 	for level in range(1, 6):

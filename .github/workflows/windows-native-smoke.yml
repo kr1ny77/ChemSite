@@ -60,6 +60,8 @@ jobs:
             @{ Script = 'construction_progress_smoke'; Marker = 'CHEMSITE_CONSTRUCTION_PROGRESS_OK' }
             @{ Script = 'focus_pause_smoke'; Marker = 'FOCUS_PAUSE_SMOKE_OK' }
             @{ Script = 'choice_order_smoke'; Marker = 'CHOICE_ORDER_SMOKE_OK' }
+            @{ Script = 'career_history_smoke'; Marker = 'CAREER_HISTORY_SMOKE_OK' }
+            @{ Script = 'course_integration_smoke'; Marker = 'COURSE_INTEGRATION_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
@@ -91,6 +93,25 @@ jobs:
           @{ file_version = $versionInfo.FileVersion; product_version = $versionInfo.ProductVersion } | ConvertTo-Json | Set-Content 'artifacts/native-qa/windows-version.json'
           Write-Host "WINDOWS_EMBEDDED_VERSION_OK $expectedVersion"
           if (-not (Test-Path 'builds/windows/ChemSite.pck')) { throw 'Windows PCK missing' }
+      - name: Verify exported movement in isolated directory
+        shell: pwsh
+        run: |
+          $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
+          $log = Join-Path (Resolve-Path 'artifacts/native-qa').Path 'packaged-movement.log'
+          $isolated = Join-Path $env:RUNNER_TEMP 'chemsite-movement-qa'
+          New-Item -ItemType Directory -Force -Path $isolated | Out-Null
+          $process = Start-Process -FilePath $exe -WorkingDirectory $isolated -ArgumentList @('--headless', '--log-file', ('"' + $log + '"'), '--', '--qa-movement') -PassThru
+          if (-not $process.WaitForExit(45000)) {
+            Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+            throw 'Packaged movement timed out'
+          }
+          $process.Refresh()
+          $text = Get-Content $log -Raw
+          Write-Host $text
+          $version = (Select-String -Path 'project.godot' -Pattern '^config/version="([^"]+)"$').Matches[0].Groups[1].Value
+          if ($process.ExitCode -ne 0 -or $text -notmatch ([regex]::Escape("PACKAGED_MOVEMENT_SMOKE_OK version=$version ")) -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') {
+            throw "Packaged movement failed ($($process.ExitCode))"
+          }
       - name: Run native five-level gameplay smokes
         shell: pwsh
         run: |
@@ -99,6 +120,13 @@ jobs:
             $round = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', $flag) -Wait -PassThru -NoNewWindow
             if ($round.ExitCode -ne 0) { throw "Level $level packaged smoke failed ($($round.ExitCode))" }
           }
+          $courseLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'course-rounds.log')
+          $course = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $courseLog + '"'), '--', '--qa-course') -PassThru -NoNewWindow
+          if (-not $course.WaitForExit(120000)) { Stop-Process -Id $course.Id -Force; throw 'Course rounds timed out' }
+          $course.Refresh()
+          $courseText = Get-Content $courseLog -Raw
+          Write-Host $courseText
+          if ($course.ExitCode -ne 0 -or $courseText -notmatch 'COURSE_ROUNDS_SMOKE_OK' -or $courseText -match '(?m)^(SCRIPT ERROR|ERROR):') { throw 'Course rounds failed' }
           $practice = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-practice-levels') -Wait -PassThru -NoNewWindow
           if ($practice.ExitCode -ne 0) { throw "Five-level practice smoke failed ($($practice.ExitCode))" }
           $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow

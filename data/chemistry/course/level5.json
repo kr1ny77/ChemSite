@@ -1,0 +1,4693 @@
+[
+  {
+    "id": "C5-001",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 145 кг, цемент 310 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.46774193548387094,
+      "absoluteTolerance": 0.00046774193548387096,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.467742 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 145,
+        "c": 310
+      }
+    }
+  },
+  {
+    "id": "C5-002",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 510 кг, свободная поверхностная влага 2% от сухой массы. Требуется 151 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 140.8,
+      "absoluteTolerance": 0.1408,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 140.8 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 151,
+        "m": 510,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-003",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 11 кг учебного материала определено 2 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.01818181818181818,
+      "absoluteTolerance": 1.8181818181818182e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0181818 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 2,
+        "m": 11
+      }
+    }
+  },
+  {
+    "id": "C5-004",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=0.6 ммоль/л, [Mg²⁺]=0.25 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 0.85,
+      "absoluteTolerance": 0.00085,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 0.85 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 0.6,
+        "b": 0.25
+      }
+    }
+  },
+  {
+    "id": "C5-005",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=0.7 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 70.0,
+      "absoluteTolerance": 0.07,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 70 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 0.7,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-006",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 74 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 44,
+      "absoluteTolerance": 0.044,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 44 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 74,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-007",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 172 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 36,
+      "absoluteTolerance": 0.036000000000000004,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 36 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 172,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-008",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 100 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 56,
+      "absoluteTolerance": 0.056,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 56 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 100,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-009",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 210 г содержит 71% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 149.1,
+      "absoluteTolerance": 0.1491,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 149.1 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 210,
+        "w": 71
+      }
+    }
+  },
+  {
+    "id": "C5-010",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 135 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "соответствует заданному В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "соответствует заданному В/Ц",
+      "превышает заданное В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 135 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-011",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.2, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма укладывается в предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма укладывается в предел",
+      "сумма превышает предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.2, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-012",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 150 кг, цемент 320 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.46875,
+      "absoluteTolerance": 0.00046875,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.46875 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 150,
+        "c": 320
+      }
+    }
+  },
+  {
+    "id": "C5-013",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 520 кг, свободная поверхностная влага 2% от сухой массы. Требуется 152 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 141.6,
+      "absoluteTolerance": 0.1416,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 141.6 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 152,
+        "m": 520,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-014",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 12 кг учебного материала определено 4 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.03333333333333333,
+      "absoluteTolerance": 3.3333333333333335e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0333333 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 4,
+        "m": 12
+      }
+    }
+  },
+  {
+    "id": "C5-015",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=0.7 ммоль/л, [Mg²⁺]=0.3 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.0,
+      "absoluteTolerance": 0.001,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 0.7,
+        "b": 0.30000000000000004
+      }
+    }
+  },
+  {
+    "id": "C5-016",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=0.9 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 90.0,
+      "absoluteTolerance": 0.09,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 90 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 0.9,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-017",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 148 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 88,
+      "absoluteTolerance": 0.088,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 88 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 148,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-018",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 344 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 72,
+      "absoluteTolerance": 0.07200000000000001,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 72 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 344,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-019",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 200 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 112,
+      "absoluteTolerance": 0.112,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 112 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 200,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-020",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 220 г содержит 72% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 158.4,
+      "absoluteTolerance": 0.1584,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 158.4 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 220,
+        "w": 72
+      }
+    }
+  },
+  {
+    "id": "C5-021",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 140 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "соответствует заданному В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "соответствует заданному В/Ц",
+      "превышает заданное В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 140 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-022",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.4, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма укладывается в предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма укладывается в предел",
+      "сумма превышает предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.4, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-023",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 155 кг, цемент 330 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.4696969696969697,
+      "absoluteTolerance": 0.0004696969696969697,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.469697 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 155,
+        "c": 330
+      }
+    }
+  },
+  {
+    "id": "C5-024",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 530 кг, свободная поверхностная влага 2% от сухой массы. Требуется 153 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 142.4,
+      "absoluteTolerance": 0.1424,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 142.4 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 153,
+        "m": 530,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-025",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 13 кг учебного материала определено 6 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.04615384615384615,
+      "absoluteTolerance": 4.615384615384615e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0461538 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 6,
+        "m": 13
+      }
+    }
+  },
+  {
+    "id": "C5-026",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=0.8 ммоль/л, [Mg²⁺]=0.35 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.15,
+      "absoluteTolerance": 0.00115,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.15 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 0.8,
+        "b": 0.35000000000000003
+      }
+    }
+  },
+  {
+    "id": "C5-027",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=1.1 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 110.00000000000001,
+      "absoluteTolerance": 0.11000000000000001,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 110 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 1.1,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-028",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 222 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 132,
+      "absoluteTolerance": 0.132,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 132 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 222,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-029",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 516 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 108,
+      "absoluteTolerance": 0.108,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 108 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 516,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-030",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 300 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 168,
+      "absoluteTolerance": 0.168,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 168 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 300,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-031",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 230 г содержит 73% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 167.9,
+      "absoluteTolerance": 0.16790000000000002,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 167.9 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 230,
+        "w": 73
+      }
+    }
+  },
+  {
+    "id": "C5-032",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 145 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "соответствует заданному В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "соответствует заданному В/Ц",
+      "превышает заданное В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 145 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-033",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.6, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма укладывается в предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма укладывается в предел",
+      "сумма превышает предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.6, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-034",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 160 кг, цемент 340 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.47058823529411764,
+      "absoluteTolerance": 0.00047058823529411766,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.470588 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 160,
+        "c": 340
+      }
+    }
+  },
+  {
+    "id": "C5-035",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 540 кг, свободная поверхностная влага 2% от сухой массы. Требуется 154 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 143.2,
+      "absoluteTolerance": 0.1432,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 143.2 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 154,
+        "m": 540,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-036",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 14 кг учебного материала определено 8 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.05714285714285715,
+      "absoluteTolerance": 5.714285714285715e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0571429 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 8,
+        "m": 14
+      }
+    }
+  },
+  {
+    "id": "C5-037",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=0.9 ммоль/л, [Mg²⁺]=0.4 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.2999999999999998,
+      "absoluteTolerance": 0.0013,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.3 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 0.9,
+        "b": 0.4
+      }
+    }
+  },
+  {
+    "id": "C5-038",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=1.3 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 130.0,
+      "absoluteTolerance": 0.13,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 130 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 1.3,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-039",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 296 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 176,
+      "absoluteTolerance": 0.176,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 176 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 296,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-040",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 688 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 144,
+      "absoluteTolerance": 0.14400000000000002,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 144 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 688,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-041",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 400 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 224,
+      "absoluteTolerance": 0.224,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 224 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 400,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-042",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 240 г содержит 74% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 177.6,
+      "absoluteTolerance": 0.1776,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 177.6 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 240,
+        "w": 74
+      }
+    }
+  },
+  {
+    "id": "C5-043",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 150 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "соответствует заданному В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "соответствует заданному В/Ц",
+      "превышает заданное В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 150 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-044",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.8, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма укладывается в предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма укладывается в предел",
+      "сумма превышает предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=0.8, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-045",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 165 кг, цемент 350 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.4714285714285714,
+      "absoluteTolerance": 0.0004714285714285714,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.471429 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 165,
+        "c": 350
+      }
+    }
+  },
+  {
+    "id": "C5-046",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 550 кг, свободная поверхностная влага 2% от сухой массы. Требуется 155 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 144.0,
+      "absoluteTolerance": 0.14400000000000002,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 144 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 155,
+        "m": 550,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-047",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 15 кг учебного материала определено 10 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.06666666666666667,
+      "absoluteTolerance": 6.666666666666667e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0666667 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 10,
+        "m": 15
+      }
+    }
+  },
+  {
+    "id": "C5-048",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1 ммоль/л, [Mg²⁺]=0.45 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.45,
+      "absoluteTolerance": 0.00145,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.45 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.0,
+        "b": 0.45
+      }
+    }
+  },
+  {
+    "id": "C5-049",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=1.5 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 150.0,
+      "absoluteTolerance": 0.15,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 150 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 1.5,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-050",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 370 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 220,
+      "absoluteTolerance": 0.22,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 220 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 370,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-051",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 860 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 180,
+      "absoluteTolerance": 0.18,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 180 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 860,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-052",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 500 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 280,
+      "absoluteTolerance": 0.28,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 280 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 500,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-053",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 250 г содержит 75% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 187.5,
+      "absoluteTolerance": 0.1875,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 187.5 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 250,
+        "w": 75
+      }
+    }
+  },
+  {
+    "id": "C5-054",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 155 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 155 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-055",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма укладывается в предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма укладывается в предел",
+      "сумма превышает предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-056",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 170 кг, цемент 360 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.4722222222222222,
+      "absoluteTolerance": 0.00047222222222222224,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.472222 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 170,
+        "c": 360
+      }
+    }
+  },
+  {
+    "id": "C5-057",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 560 кг, свободная поверхностная влага 2% от сухой массы. Требуется 156 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 144.8,
+      "absoluteTolerance": 0.1448,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 144.8 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 156,
+        "m": 560,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-058",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 16 кг учебного материала определено 12 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.075,
+      "absoluteTolerance": 7.5e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.075 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 12,
+        "m": 16
+      }
+    }
+  },
+  {
+    "id": "C5-059",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1.1 ммоль/л, [Mg²⁺]=0.5 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.5999999999999999,
+      "absoluteTolerance": 0.0015999999999999999,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.6 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.1,
+        "b": 0.5
+      }
+    }
+  },
+  {
+    "id": "C5-060",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=1.7 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 170.00000000000003,
+      "absoluteTolerance": 0.17000000000000004,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 170 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 1.7000000000000002,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-061",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 444 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 264,
+      "absoluteTolerance": 0.264,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 264 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 444,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-062",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 1032 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 216,
+      "absoluteTolerance": 0.216,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 216 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 1032,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-063",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 600 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 336,
+      "absoluteTolerance": 0.336,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 336 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 600,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-064",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 260 г содержит 76% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 197.6,
+      "absoluteTolerance": 0.1976,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 197.6 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 260,
+        "w": 76
+      }
+    }
+  },
+  {
+    "id": "C5-065",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 160 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 160 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-066",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.2, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма превышает предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма превышает предел",
+      "сумма укладывается в предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.2, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-067",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 175 кг, цемент 370 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.47297297297297297,
+      "absoluteTolerance": 0.00047297297297297297,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.472973 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 175,
+        "c": 370
+      }
+    }
+  },
+  {
+    "id": "C5-068",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 570 кг, свободная поверхностная влага 2% от сухой массы. Требуется 157 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 145.6,
+      "absoluteTolerance": 0.1456,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 145.6 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 157,
+        "m": 570,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-069",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 17 кг учебного материала определено 14 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.08235294117647059,
+      "absoluteTolerance": 8.23529411764706e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0823529 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 14,
+        "m": 17
+      }
+    }
+  },
+  {
+    "id": "C5-070",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1.2 ммоль/л, [Mg²⁺]=0.55 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.75,
+      "absoluteTolerance": 0.00175,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.75 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.2000000000000002,
+        "b": 0.55
+      }
+    }
+  },
+  {
+    "id": "C5-071",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=1.9 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 190.0,
+      "absoluteTolerance": 0.19,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 190 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 1.9000000000000001,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-072",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 518 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 308,
+      "absoluteTolerance": 0.308,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 308 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 518,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-073",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 1204 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 252,
+      "absoluteTolerance": 0.252,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 252 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 1204,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-074",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 700 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 392,
+      "absoluteTolerance": 0.392,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 392 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 700,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-075",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 270 г содержит 77% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 207.9,
+      "absoluteTolerance": 0.2079,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 207.9 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 270,
+        "w": 77
+      }
+    }
+  },
+  {
+    "id": "C5-076",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 165 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 165 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-077",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.4, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма превышает предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма превышает предел",
+      "сумма укладывается в предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.4, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-078",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 180 кг, цемент 380 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.47368421052631576,
+      "absoluteTolerance": 0.00047368421052631577,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.473684 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 180,
+        "c": 380
+      }
+    }
+  },
+  {
+    "id": "C5-079",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 580 кг, свободная поверхностная влага 2% от сухой массы. Требуется 158 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 146.4,
+      "absoluteTolerance": 0.1464,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 146.4 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 158,
+        "m": 580,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-080",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 18 кг учебного материала определено 16 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.08888888888888889,
+      "absoluteTolerance": 8.888888888888889e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0888889 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 16,
+        "m": 18
+      }
+    }
+  },
+  {
+    "id": "C5-081",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1.3 ммоль/л, [Mg²⁺]=0.6 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 1.9,
+      "absoluteTolerance": 0.0019,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 1.9 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.3,
+        "b": 0.6000000000000001
+      }
+    }
+  },
+  {
+    "id": "C5-082",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=2.1 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 210.0,
+      "absoluteTolerance": 0.21,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 210 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 2.1,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-083",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 592 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 352,
+      "absoluteTolerance": 0.352,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 352 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 592,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-084",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 1376 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 288,
+      "absoluteTolerance": 0.28800000000000003,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 288 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 1376,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-085",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 800 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 448,
+      "absoluteTolerance": 0.448,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 448 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 800,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-086",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 280 г содержит 78% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 218.4,
+      "absoluteTolerance": 0.2184,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 218.4 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 280,
+        "w": 78
+      }
+    }
+  },
+  {
+    "id": "C5-087",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 170 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 170 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-088",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.6, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма превышает предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма превышает предел",
+      "сумма укладывается в предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.6, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-089",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 185 кг, цемент 390 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.47435897435897434,
+      "absoluteTolerance": 0.00047435897435897434,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.474359 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 185,
+        "c": 390
+      }
+    }
+  },
+  {
+    "id": "C5-090",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 590 кг, свободная поверхностная влага 2% от сухой массы. Требуется 159 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 147.2,
+      "absoluteTolerance": 0.1472,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 147.2 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 159,
+        "m": 590,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-091",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 19 кг учебного материала определено 18 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.09473684210526315,
+      "absoluteTolerance": 9.473684210526315e-05,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.0947368 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 18,
+        "m": 19
+      }
+    }
+  },
+  {
+    "id": "C5-092",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1.4 ммоль/л, [Mg²⁺]=0.65 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 2.05,
+      "absoluteTolerance": 0.0020499999999999997,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 2.05 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.4,
+        "b": 0.65
+      }
+    }
+  },
+  {
+    "id": "C5-093",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=2.3 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 229.99999999999997,
+      "absoluteTolerance": 0.22999999999999998,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 230 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 2.3,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-094",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 666 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 396,
+      "absoluteTolerance": 0.396,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 396 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 666,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-095",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 1548 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 324,
+      "absoluteTolerance": 0.324,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 324 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 1548,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-096",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 900 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 504,
+      "absoluteTolerance": 0.504,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 504 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 900,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-097",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 290 г содержит 79% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 229.1,
+      "absoluteTolerance": 0.2291,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 229.1 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 290,
+        "w": 79
+      }
+    }
+  },
+  {
+    "id": "C5-098",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 175 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 175 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-099",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.8, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма превышает предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма превышает предел",
+      "сумма укладывается в предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=1.8, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-100",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Водоцементное отношение",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Паспорт виртуального замеса: вода 190 кг, цемент 400 кг. Вычисли массовое В/Ц.",
+    "correctAnswer": {
+      "value": 0.475,
+      "absoluteTolerance": 0.000475,
+      "unit": ""
+    },
+    "explanation": "В/Ц = m(воды)/m(цемента). Подстановка данных даёт 0.475 .",
+    "rule": "В/Ц = m(воды)/m(цемента).",
+    "hint": "В/Ц = m(воды)/m(цемента).",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Водоцементное отношение"
+    ],
+    "procedural": true,
+    "generatorId": "Водоцементное отношение",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Водоцементное отношение",
+    "audit": {
+      "expression": "w/c",
+      "variables": {
+        "w": 190,
+        "c": 400
+      }
+    }
+  },
+  {
+    "id": "C5-101",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Поправка на влагу заполнителя",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебный баланс: сухая масса заполнителя 600 кг, свободная поверхностная влага 2% от сухой массы. Требуется 160 кг суммарной свободной воды. Сколько воды учитывается как добавляемая? Ответ: кг.",
+    "correctAnswer": {
+      "value": 148.0,
+      "absoluteTolerance": 0.148,
+      "unit": "кг"
+    },
+    "explanation": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя. Подстановка данных даёт 148 кг.",
+    "rule": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "hint": "Добавляемая вода = заданная свободная вода − свободная влага заполнителя.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Поправка на влагу заполнителя"
+    ],
+    "procedural": true,
+    "generatorId": "Поправка на влагу заполнителя",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Поправка на влагу заполнителя",
+    "audit": {
+      "expression": "w-m*f",
+      "variables": {
+        "w": 160,
+        "m": 600,
+        "f": 0.02
+      }
+    }
+  },
+  {
+    "id": "C5-102",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Содержание примеси",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "В 20 кг учебного материала определено 20 г хлорид-иона. Найди массовую долю Cl⁻ в процентах. Ответ: %.",
+    "correctAnswer": {
+      "value": 0.1,
+      "absoluteTolerance": 0.0001,
+      "unit": "%"
+    },
+    "explanation": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%. Подстановка данных даёт 0.1 %.",
+    "rule": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "hint": "Приведи массы к одной единице, затем w = m(Cl⁻)/m(образца) ×100%.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Содержание примеси"
+    ],
+    "procedural": true,
+    "generatorId": "Содержание примеси",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Содержание примеси",
+    "audit": {
+      "expression": "a/(m*1000)*100",
+      "variables": {
+        "a": 20,
+        "m": 20
+      }
+    }
+  },
+  {
+    "id": "C5-103",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость по ионам",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Модель воды: [Ca²⁺]=1.5 ммоль/л, [Mg²⁺]=0.7 ммоль/л. Найди сумму концентраций этих ионов. Ответ: ммоль/л.",
+    "correctAnswer": {
+      "value": 2.2,
+      "absoluteTolerance": 0.0022,
+      "unit": "ммоль/л"
+    },
+    "explanation": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺]. Подстановка данных даёт 2.2 ммоль/л.",
+    "rule": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "hint": "Суммарная молярная концентрация = [Ca²⁺] + [Mg²⁺].",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость по ионам"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость по ионам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость по ионам",
+    "audit": {
+      "expression": "a+b",
+      "variables": {
+        "a": 1.5,
+        "b": 0.7
+      }
+    }
+  },
+  {
+    "id": "C5-104",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Жёсткость в пересчёте на CaCO3",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Сумма [Ca²⁺]+[Mg²⁺]=2.5 ммоль/л. M(CaCO₃)=100 г/моль. Найди эквивалентную концентрацию в мг CaCO₃/л. Ответ: мг/л.",
+    "correctAnswer": {
+      "value": 250.0,
+      "absoluteTolerance": 0.25,
+      "unit": "мг/л"
+    },
+    "explanation": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃. Подстановка данных даёт 250 мг/л.",
+    "rule": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "hint": "Один ммоль двухвалентных ионов соответствует одному ммоль CaCO₃.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Жёсткость в пересчёте на CaCO3"
+    ],
+    "procedural": true,
+    "generatorId": "Жёсткость в пересчёте на CaCO3",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Жёсткость в пересчёте на CaCO3",
+    "audit": {
+      "expression": "c*M",
+      "variables": {
+        "c": 2.5,
+        "M": 100
+      }
+    }
+  },
+  {
+    "id": "C5-105",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация извести",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Идеальная модель Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Прореагировало 740 г чистого Ca(OH)₂, M=74 г/моль. Найди поглощённую массу CO₂; M(CO₂)=44 г/моль. Ответ: г.",
+    "correctAnswer": {
+      "value": 440,
+      "absoluteTolerance": 0.44,
+      "unit": "г"
+    },
+    "explanation": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44. Подстановка данных даёт 440 г.",
+    "rule": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "hint": "Стехиометрия 1:1; m(CO₂) = m(Ca(OH)₂)/74 ×44.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация извести"
+    ],
+    "procedural": true,
+    "generatorId": "Карбонизация извести",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Карбонизация извести",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 740,
+        "A": 74,
+        "B": 44
+      }
+    }
+  },
+  {
+    "id": "C5-106",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Вода в кристаллогидрате",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба CaSO₄·2H₂O массой 1720 г. M(CaSO₄·2H₂O)=172 г/моль, M(H₂O)=18 г/моль. Найди массу кристаллизационной воды. Ответ: г.",
+    "correctAnswer": {
+      "value": 360,
+      "absoluteTolerance": 0.36,
+      "unit": "г"
+    },
+    "explanation": "На моль дигидрата приходится два моля воды. Подстановка данных даёт 360 г.",
+    "rule": "На моль дигидрата приходится два моля воды.",
+    "hint": "На моль дигидрата приходится два моля воды.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Вода в кристаллогидрате"
+    ],
+    "procedural": true,
+    "generatorId": "Вода в кристаллогидрате",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Вода в кристаллогидрате",
+    "audit": {
+      "expression": "m/M*2*W",
+      "variables": {
+        "m": 1720,
+        "M": 172,
+        "W": 18
+      }
+    }
+  },
+  {
+    "id": "C5-107",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Обжиг в идеальной модели",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Виртуальная модель CaCO₃ → CaO + CO₂: 1000 г чистого CaCO₃, полное превращение. M(CaCO₃)=100, M(CaO)=56 г/моль. Найди массу CaO. Ответ: г.",
+    "correctAnswer": {
+      "value": 560,
+      "absoluteTolerance": 0.56,
+      "unit": "г"
+    },
+    "explanation": "Количество CaCO₃ равно количеству CaO. Подстановка данных даёт 560 г.",
+    "rule": "Количество CaCO₃ равно количеству CaO.",
+    "hint": "Количество CaCO₃ равно количеству CaO.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Обжиг в идеальной модели"
+    ],
+    "procedural": true,
+    "generatorId": "Обжиг в идеальной модели",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Обжиг в идеальной модели",
+    "audit": {
+      "expression": "m/A*B",
+      "variables": {
+        "m": 1000,
+        "A": 100,
+        "B": 56
+      }
+    }
+  },
+  {
+    "id": "C5-108",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Чистота известняка",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "numeric-calculation",
+    "prompt": "Учебная проба известняка 300 г содержит 80% CaCO₃ по массе. Найди массу CaCO₃. Ответ: г.",
+    "correctAnswer": {
+      "value": 240.0,
+      "absoluteTolerance": 0.24,
+      "unit": "г"
+    },
+    "explanation": "m(компонента) = m(пробы) × w. Подстановка данных даёт 240 г.",
+    "rule": "m(компонента) = m(пробы) × w.",
+    "hint": "m(компонента) = m(пробы) × w.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Чистота известняка"
+    ],
+    "procedural": true,
+    "generatorId": "Чистота известняка",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Чистота известняка",
+    "audit": {
+      "expression": "m*w/100",
+      "variables": {
+        "m": 300,
+        "w": 80
+      }
+    }
+  },
+  {
+    "id": "C5-109",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Контроль водоцементного отношения",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 180 кг, цемент 300 кг. Оцени соответствие только этому критерию.",
+    "correctAnswer": "превышает заданное В/Ц",
+    "explanation": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "rule": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "hint": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Контроль водоцементного отношения"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Контроль водоцементного отношения",
+    "options": [
+      "превышает заданное В/Ц",
+      "соответствует заданному В/Ц",
+      "равенство масс воды и цемента",
+      "прочность точно равна 50 МПа"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Учебная спецификация задаёт В/Ц ≤ 0.50. В виртуальном паспорте вода 180 кг, цемент 300 кг."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сравни отношение массы воды к массе цемента с заданным пределом 0.50. Прочность требует отдельного испытания."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-110",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Инспекция водной пробы",
+    "difficulty": 3,
+    "station": "inspection-station",
+    "interactionType": "construction-mission",
+    "prompt": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=2, Mg²⁺=0.9 ммоль/л. Выбери заключение только по этому критерию.",
+    "correctAnswer": "сумма превышает предел",
+    "explanation": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "rule": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "hint": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Инспекция водной пробы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.usgs.gov/special-topics/water-science-school/science/hardness-water"
+    ],
+    "learningObjective": "Инспекция водной пробы",
+    "options": [
+      "сумма превышает предел",
+      "сумма укладывается в предел",
+      "сумма всегда равна pH",
+      "по этим ионам установлена вся пригодность воды"
+    ],
+    "parameters": {
+      "missionSteps": [
+        {
+          "title": "Паспорт виртуальной пробы",
+          "readout": "Для учебной водной пробы предел суммы [Ca²⁺]+[Mg²⁺] задан 2.0 ммоль/л. Измерено Ca²⁺=2, Mg²⁺=0.9 ммоль/л."
+        },
+        {
+          "title": "Критерий заключения",
+          "readout": "Сложи молярные концентрации двух ионов и сравни с учебным пределом; общий состав воды оценивается отдельно."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C5-111",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Гидратация цемента",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Почему портландцемент твердеет при наличии воды в подходящих условиях?",
+    "correctAnswer": "образуются продукты гидратации",
+    "explanation": "Гидравлическое твердение связано с реакциями цементных минералов с водой.",
+    "rule": "Гидравлическое твердение связано с реакциями цементных минералов с водой.",
+    "hint": "Гидравлическое твердение связано с реакциями цементных минералов с водой.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Гидратация цемента"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Гидратация цемента",
+    "options": [
+      "образуются продукты гидратации",
+      "только испаряется вода",
+      "песок превращается в железо",
+      "цемент обязательно плавится"
+    ]
+  },
+  {
+    "id": "C5-112",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Пористость и уход",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Поверхность молодого цементного образца преждевременно высохла. Какой процесс это затрудняет?",
+    "correctAnswer": "продолжение гидратации",
+    "explanation": "Доступная вода поддерживает гидратацию; раннее высыхание ограничивает развитие структуры.",
+    "rule": "Доступная вода поддерживает гидратацию; раннее высыхание ограничивает развитие структуры.",
+    "hint": "Доступная вода поддерживает гидратацию; раннее высыхание ограничивает развитие структуры.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Пористость и уход"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Пористость и уход",
+    "options": [
+      "продолжение гидратации",
+      "образование металлической меди",
+      "ядерный синтез кремния",
+      "плавление кварца"
+    ]
+  },
+  {
+    "id": "C5-113",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Карбонизация и арматура",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Фронт карбонизации достиг арматуры. Почему возрастает риск потери пассивного состояния?",
+    "correctAnswer": "снижается щёлочность порового раствора",
+    "explanation": "Карбонизация расходует щелочные компоненты; снижение pH может нарушить пассивность стали.",
+    "rule": "Карбонизация расходует щелочные компоненты; снижение pH может нарушить пассивность стали.",
+    "hint": "Карбонизация расходует щелочные компоненты; снижение pH может нарушить пассивность стали.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Карбонизация и арматура"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir89-4086.pdf"
+    ],
+    "learningObjective": "Карбонизация и арматура",
+    "options": [
+      "снижается щёлочность порового раствора",
+      "железо становится благородным газом",
+      "CaCO₃ превращается в хлор",
+      "вся вода превращается в металл"
+    ]
+  },
+  {
+    "id": "C5-114",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Хлориды и пассивность",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В бетонном образце достаточно щелочная среда, но у арматуры накопились хлориды. Какой риск сохраняется?",
+    "correctAnswer": "локальное разрушение пассивной плёнки",
+    "explanation": "Хлориды могут вызывать локальную депассивацию даже при общей щелочной среде.",
+    "rule": "Хлориды могут вызывать локальную депассивацию даже при общей щелочной среде.",
+    "hint": "Хлориды могут вызывать локальную депассивацию даже при общей щелочной среде.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Хлориды и пассивность"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir89-4086.pdf"
+    ],
+    "learningObjective": "Хлориды и пассивность",
+    "options": [
+      "локальное разрушение пассивной плёнки",
+      "обязательное полное отсутствие коррозии",
+      "превращение стали в полимер",
+      "удвоение атомного номера Fe"
+    ]
+  },
+  {
+    "id": "C5-115",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Сульфатная среда",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "При внешнем сульфатном воздействии у цементного камня обнаружены расширение и трещины. Какой механизм согласуется с наблюдением?",
+    "correctAnswer": "образование расширяющихся продуктов взаимодействия",
+    "explanation": "Сульфатное воздействие может образовывать гипс и эттрингит и сопровождаться расширением; конкретный механизм требует анализа.",
+    "rule": "Сульфатное воздействие может образовывать гипс и эттрингит и сопровождаться расширением; конкретный механизм требует анализа.",
+    "hint": "Сульфатное воздействие может образовывать гипс и эттрингит и сопровождаться расширением; конкретный механизм требует анализа.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Сульфатная среда"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.nist.gov/publications/microstructural-origins-cement-paste-degradation-external-sulfate-attack"
+    ],
+    "learningObjective": "Сульфатная среда",
+    "options": [
+      "образование расширяющихся продуктов взаимодействия",
+      "только увеличение числа протонов",
+      "превращение воды в песок",
+      "обязательное растворение всей арматуры"
+    ]
+  },
+  {
+    "id": "C5-116",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Гипс и полугидрат",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "В модели CaSO₄·0.5H₂O + 1.5H₂O → CaSO₄·2H₂O какой процесс сопровождает схватывание гипсового вяжущего?",
+    "correctAnswer": "образование кристаллов дигидрата",
+    "explanation": "Полугидрат взаимодействует с водой с образованием кристаллического дигидрата.",
+    "rule": "Полугидрат взаимодействует с водой с образованием кристаллического дигидрата.",
+    "hint": "Полугидрат взаимодействует с водой с образованием кристаллического дигидрата.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Гипс и полугидрат"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://assemblies-tools.usg.com/content/dam/USG_Marketing_Communications/united_states/product_promotional_materials/finished_assets/usg-gypsum-misconceptions-white-paper-en-IG1847.pdf"
+    ],
+    "learningObjective": "Гипс и полугидрат",
+    "options": [
+      "образование кристаллов дигидрата",
+      "выделение металлического кальция",
+      "образование карбоната натрия",
+      "полная ионизация кислорода"
+    ]
+  },
+  {
+    "id": "C5-117",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Полимерная архитектура",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Термореактивная смола после отверждения образовала пространственную сеть. Какова причина ограниченного течения при повторном нагреве?",
+    "correctAnswer": "ковалентные поперечные связи",
+    "explanation": "Поперечные связи соединяют макромолекулы в сетку; сильный нагрев может привести к разложению.",
+    "rule": "Поперечные связи соединяют макромолекулы в сетку; сильный нагрев может привести к разложению.",
+    "hint": "Поперечные связи соединяют макромолекулы в сетку; сильный нагрев может привести к разложению.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Полимерная архитектура"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-7-polymer-structure-and-physical-properties"
+    ],
+    "learningObjective": "Полимерная архитектура",
+    "options": [
+      "ковалентные поперечные связи",
+      "полное отсутствие связей",
+      "исчезновение всех атомов углерода",
+      "только растворённый NaCl"
+    ]
+  },
+  {
+    "id": "C5-118",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Термопласт",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Какое поведение характерно для обычного термопласта в рабочем диапазоне до разложения?",
+    "correctAnswer": "размягчение при нагреве и затвердевание при охлаждении",
+    "explanation": "Подвижность цепей увеличивается при нагреве; охлаждение восстанавливает твёрдое состояние.",
+    "rule": "Подвижность цепей увеличивается при нагреве; охлаждение восстанавливает твёрдое состояние.",
+    "hint": "Подвижность цепей увеличивается при нагреве; охлаждение восстанавливает твёрдое состояние.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Термопласт"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/organic-chemistry/pages/31-7-polymer-structure-and-physical-properties"
+    ],
+    "learningObjective": "Термопласт",
+    "options": [
+      "размягчение при нагреве и затвердевание при охлаждении",
+      "необратимое превращение в цемент",
+      "обязательное выделение водорода",
+      "ядерная полимеризация"
+    ]
+  },
+  {
+    "id": "C5-119",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Силикатная структура",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Какой фрагмент является базовой структурной единицей большинства силикатов?",
+    "correctAnswer": "тетраэдр SiO₄",
+    "explanation": "Кремний обычно окружён четырьмя атомами кислорода; тетраэдры соединяются общими вершинами.",
+    "rule": "Кремний обычно окружён четырьмя атомами кислорода; тетраэдры соединяются общими вершинами.",
+    "hint": "Кремний обычно окружён четырьмя атомами кислорода; тетраэдры соединяются общими вершинами.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Силикатная структура"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-atoms-first-2e/pages/18-3-structure-and-general-properties-of-the-metalloids",
+      "https://openstax.org/books/chemistry-2e/pages/18-9-occurrence-preparation-and-compounds-of-oxygen"
+    ],
+    "learningObjective": "Силикатная структура",
+    "options": [
+      "тетраэдр SiO₄",
+      "молекула NaCl",
+      "атом Fe без окружения",
+      "кольцо из одних протонов"
+    ]
+  },
+  {
+    "id": "C5-120",
+    "level": 5,
+    "moduleId": 13,
+    "topic": "Строительная химия",
+    "subtopic": "Многофакторная инспекция",
+    "difficulty": 3,
+    "station": "construction-materials-station",
+    "interactionType": "classification",
+    "prompt": "Вода удовлетворяет учебному пределу жёсткости. Какой вывод о пригодности для конкретного бетона корректен?",
+    "correctAnswer": "требуется проверка остальных нормируемых компонентов",
+    "explanation": "Пригодность зависит от нескольких показателей состава и требований выбранного материала.",
+    "rule": "Пригодность зависит от нескольких показателей состава и требований выбранного материала.",
+    "hint": "Пригодность зависит от нескольких показателей состава и требований выбранного материала.",
+    "points": 100,
+    "tags": [
+      "module-13",
+      "Многофакторная инспекция"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ],
+    "learningObjective": "Многофакторная инспекция",
+    "options": [
+      "требуется проверка остальных нормируемых компонентов",
+      "пригодность для любого бетона установлена",
+      "хлориды обязательно отсутствуют",
+      "сульфаты обязательно отсутствуют"
+    ]
+  }
+]

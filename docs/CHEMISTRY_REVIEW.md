@@ -174,3 +174,63 @@ Verification: 192 reveal/layout/motion checks; 48 native states reviewed,
 full catalyst/volume/product-removal panels reviewed; Level 4 content,
 import/export and packaged equilibrium round passed. All 32 comparison
 tasks now have supported visual metadata; instructor acceptance remains open.
+
+## Course-bank extension — 2026-10-15
+
+Added 800 fixed authoring-time tasks, bringing the combined bank to 1,000.
+Original 200 records, including native observation illustrations, are preserved
+structurally. The extension contains 122 families spanning all 13 curriculum
+modules, with deterministic numeric, formula, equation and curated choice answers.
+`audit_course_bank.py` recomputes 570 numeric records from stored arithmetic
+evidence, checks minimal charge-balanced/atom-conserving formulas in 50 records,
+and checks atom conservation in 20 new full equations. Original Level 2 audit now
+also verifies the new equations (40 total). Original-ID fixture audits retain
+all existing Level 3–5 checks. Numeric tolerances exclude zero for tiny positive
+ion concentrations. Conditions specify ideal/dilute models, temperature, unit
+conversions, complete conversion and selected side-reaction exclusions where
+needed. Unstable Al(III)/Fe(III) carbonate construction examples are replaced by
+bromides; naming and formula tasks describe composition rather than synthesis.
+
+Reference principles: [stoichiometry](https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry),
+[colligative properties](https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties),
+[buffers](https://openstax.org/books/chemistry-2e/pages/14-6-buffers),
+[solubility equilibria](https://openstax.org/books/chemistry-2e/pages/15-1-precipitation-and-dissolution),
+[Gibbs energy](https://openstax.org/books/chemistry-2e/pages/16-4-free-energy),
+[electrolysis](https://openstax.org/books/chemistry-2e/pages/17-7-electrolysis),
+[corrosion](https://openstax.org/books/chemistry-2e/pages/17-6-corrosion),
+[cement hydration and water/cement ratio](https://www.cement.org/cement-concrete/applications-of-cement/),
+[polymer structure](https://openstax.org/books/organic-chemistry/pages/31-7-polymer-structure-and-physical-properties).
+Per-record sourceRefs identify the applicable source; NIST references support
+concrete durability cases and USG supports gypsum hydration. Problems and
+explanations are original authored text. Arithmetic checks establish internal
+consistency; course-specific depth, terminology and assessment balance remain
+for instructor review. Status: deterministic content checks VERIFIED;
+target-course instructor acceptance OPEN.
+
+
+## Expanded course presentation review — 2026-10-15
+
+The full 1000-record bank retains its graded answers. Re-ran schema, course
+arithmetic/formula/equation evidence and original Level 2–5 content audits.
+Native layout checks now explicitly use 1028×642 rather than a headless default.
+570 worked calculations expose existing rules and numeric substitution after
+submission. Original SVG diagrams show only qualitative particle counting,
+dilution and catalyst barriers; native captions identify the model/scale.
+The calculator treats integer inputs as real arithmetic (20/1000 = 0.02), rejects
+non-arithmetic input and performs no scoring. The atom tool implements A=Z+N and
+e=Z−q and explicitly separates particle counting from isotope/ion stability.
+
+Reference checks: IUPAC periodic-table source was read in the browser and explicitly
+permits table use. Its 2022 table is labeled with that date; task-specific rounded
+masses take precedence. Standard half-cell sign conventions and rounded Zn/Fe/H/Cu/Ag
+reduction potentials follow OpenStax Chemistry 2e §17.3. Calorimetry follows §5.2;
+other original reference summaries identify concentration/ideal-solution/25 °C
+approximations and preserve task-specific conditions. Photo captions identify visible
+well corrosion and bridge spalling while leaving causation to additional evidence.
+Attribution and per-image Public Domain/source permissions are recorded separately.
+
+Verification: 1000 native task panels, 2000 feedback states; 13 chapter routes cover
+1000 unique tasks; 65 UI answers and a mixed-topic practice round; actual keyboard
+Chapter 1 round; material modal retains entered answers; all references and interactive
+models pass their native gate. Instructor acceptance against the target syllabus
+remains OPEN. This presentation pass establishes consistency and technical validation.

@@ -169,6 +169,17 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_hint_button.text = "СКРЫТЬ ПОДСКАЗКУ" if shown else "ПОКАЗАТЬ ПОДСКАЗКУ"
 	)
 	task_header.add_child(_hint_button)
+	var materials := Button.new()
+	materials.text = "МАТЕРИАЛЫ"
+	materials.add_theme_font_size_override("font_size", 17)
+	_style_button(materials, true)
+	materials.pressed.connect(func() -> void:
+		var overlay := preload("res://scripts/ui/learning_materials.gd").new()
+		var module_id := int(task.get("moduleId", preload("res://scripts/chemistry/course_catalog.gd").data().taskChapters.get(str(task.id), 1)))
+		overlay.initial_material = "ions" if module_id in [2, 3, 4, 5, 11] else ("solutions" if module_id == 6 else ("acid" if module_id == 7 else ("energy" if module_id in [8, 9, 10] else ("electro" if module_id == 12 else ("materials" if module_id == 13 else "periodic")))))
+		add_child(overlay)
+	)
+	task_header.add_child(materials)
 	_panel_content.add_child(task_header)
 	_panel_content.add_child(_label(task.prompt, 30, Color("243b43")))
 	_hint = _label("ПОДСКАЗКА: " + task.hint, 19, Color("52666c"))
@@ -483,6 +494,26 @@ func show_feedback(correct: bool, task: Dictionary, awarded: int = 100, streak: 
 		_panel_content.add_child(_label("СЕРИЯ %d  ·  МНОЖИТЕЛЬ x%s" % [streak, "2" if streak >= 5 else "1.5"], 18, Color("20705b")))
 	_panel_content.add_child(_label(task.explanation, 21, Color("243b43")))
 	_panel_content.add_child(_label("ПРАВИЛО: " + task.rule, 18, Color("52666c")))
+	var worked: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/chemistry/materials/worked_steps.json"))
+	if worked.has(str(task.id)):
+		var details := ScrollContainer.new()
+		details.custom_minimum_size.y = 180
+		details.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		details.follow_focus = true
+		details.visible = false
+		var steps := VBoxContainer.new()
+		steps.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		details.add_child(steps)
+		var reveal := Button.new()
+		reveal.text = "РЕШЕНИЕ ПО ШАГАМ"
+		reveal.toggle_mode = true
+		_style_button(reveal, true)
+		reveal.toggled.connect(func(shown: bool) -> void: details.visible = shown)
+		_panel_content.add_child(reveal)
+		_panel_content.add_child(details)
+		for step in worked[str(task.id)]:
+			steps.add_child(_label(step, 19, Color("243b43")))
+
 	if not correct:
 		var answer: Variant = task.correctAnswer
 		var answer_text := str(answer)
@@ -661,3 +692,18 @@ func _station_name(station_id: String) -> String:
 		"corrosion-test-rig": return "ИСПЫТАНИЕ КОРРОЗИИ"
 		"construction-materials-station": return "ИСПЫТАНИЕ МАТЕРИАЛОВ"
 	return station_id
+
+func show_course_complete() -> void:
+	_clear_panel()
+	_panel.visible = true
+	_panel_content.add_child(_label("ВСЕ ЗАДАНИЯ ГЛАВЫ ПРОЙДЕНЫ", 29, Color("20705b")))
+	_panel_content.add_child(_label("Выберите доступную главу в меню. Для повторения выберите нужные темы в практике.", 23, Color("243b43")))
+	var menu := Button.new()
+	menu.text = "ГЛАВНОЕ МЕНЮ"
+	menu.custom_minimum_size.y = 55
+	_style_button(menu)
+	menu.pressed.connect(func() -> void: exit_requested.emit())
+	_panel_content.add_child(menu)
+	menu.grab_focus()
+	_panel_fit_active = true
+	_fit_panel.call_deferred()

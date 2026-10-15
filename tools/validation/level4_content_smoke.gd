@@ -6,7 +6,7 @@ func _initialize() -> void:
 	call_deferred("_run")
 
 func _run() -> void:
-	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(4)
+	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(4).filter(func(task: Dictionary) -> bool: return str(task.id).begins_with("L"))
 	assert(tasks.size() == 40, "Level 4 task count changed")
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()
 	root.add_child(hud)

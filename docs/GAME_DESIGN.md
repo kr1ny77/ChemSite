@@ -133,7 +133,7 @@ Use:
 
 ## Progression
 
-Five levels.
+Thirteen sequential course chapters across five construction environments.
 
 Each completed level awards:
 
@@ -298,7 +298,7 @@ The player should feel that chemistry knowledge is helping construct the buildin
 
 ## Practice mode
 
-The user chooses one topic and trains without career progression.
+The user chooses one or several topics and trains without career progression.
 
 Practice mode may optionally disable the timer.
 
@@ -319,3 +319,5 @@ Completing consecutive career levels adds rear and front upper-floor slabs,
 rear and side walls with windows, then a supported roof over the teaching section.
 The ground-level station paths remain accessible. Replays retain earned work;
 practice uses the saved construction view. Results announce a newly earned stage.
+
+Career chapters follow the 13-module curriculum. Five correct answers unlock the next chapter; each answered task ID is excluded from future career rounds. A completed pool routes the player toward the next chapter or practice. Optional materials preserve the active answer and provide reference tables, diagrams, photos and an interactive scratchpad.

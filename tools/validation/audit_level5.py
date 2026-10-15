@@ -5,7 +5,7 @@ from pathlib import Path
 from audit_level2_equations import is_balanced
 
 ROOT=Path(__file__).resolve().parents[2]
-TASKS={t['id']:t for t in json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text()) if t['level']==5}
+TASKS={t['id']:t for t in json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text()) if t['level']==5 and t['id'].startswith('L')}
 DIGITS=str.maketrans('₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻','01234567890123456789+-')
 def normalize(value:str)->str:
  return ' '.join(value.translate(DIGITS).replace('^','').casefold().split())

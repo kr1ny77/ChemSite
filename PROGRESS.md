@@ -1,3 +1,60 @@
+## Course integration and platform QA — 2026-10-15
+
+Current phase: expanded course platform verification.
+Completed: 13 ordered chapters over five environments; separate multi-topic practice;
+save schema 6 with immediate career answer history/chapter credit and atomic writes;
+exhausted-pool menu; 11 selectable references, IUPAC table zoom, original diagrams,
+two credited public-domain photos, calculator/particle-count workbench and 570
+regenerable worked solutions available after answering. Original task answers stay
+unchanged. Course selection uses new moduleId fields automatically.
+Current work: final macOS/Windows exports and packaged verification.
+Next task: Windows CI, fresh package checksums, release notes and download assets.
+Last verification: 1000-task schema; 570 independent arithmetic evidence cases,
+50 formula constructions, 40 old/new balanced equations; original Level 3–5 audits;
+1000 native task / 2000 feedback layouts at actual 1028×642; save migration/history,
+all 13 chapter routes (1000 unique tasks), 65 answers through native UI plus 5
+multi-topic practice answers; 50 topic bindings / five legacy practice environments;
+reference/context/focus-preserved answer, calculator fractional division/invalid input,
+particle-count model; native rendered menu/materials/photos/worked/exhaustion captures;
+actual keyboard-driven Chapter 1 round (five tasks, 700 points) including moving foot
+plant bounds. macOS candidate packaged 13-chapter smoke passed; tiny subsequent
+completion-screen polish requires final re-export.
+Known issues: old pre-v6 successful IDs were never recorded and cannot be reconstructed;
+old mistake IDs migrate. Subject-matter instructor acceptance remains open. The 13
+chapters reuse five environment layouts. Course content is deterministic and uses
+parameter variants. Physical Windows/device-specific performance remains a user-owned
+acceptance check per prior instruction. Mac distribution retains the existing unsigned
+prerelease arrangement. New final archives/publication remain pending.
+
+## Content-only expansion to 1,000 tasks — 2026-10-15
+
+Current phase: chemistry content expansion. Completed work: added 800 fixed
+records across 122 learning families and 13 modules; combined production JSON
+contains 1,000 tasks (200/160/240/240/160 by level). Added formula/nomenclature,
+atomic/bonding concepts, reaction reasoning, solution/acid-base calculations,
+thermodynamics, kinetics, electrochemistry and construction transfer cases.
+Each new task has an objective, rule, hint, explanation and references.
+Original 200 records and observation metadata are structurally preserved.
+The builder and legacy exporter preserve the full combined bank. User clarified
+content-only scope; loader, scheduler and construction-site changes were reverted.
+Existing unrelated working-tree changes are retained.
+
+Current work: expanded bank ready for curriculum review. Next task: instructor
+review against the actual target syllabus and evaluation of topic depth/balance.
+Last verification: Python full-bank schema/distribution/unique ID and prompt checks;
+570 numeric evidence checks, 50 charge/atom formula checks, 20 new balanced
+equations; existing Level 2–5 chemistry audits pass. Existing Godot validator
+accepts all 1,000 answers, rejects deliberately wrong numeric inputs and builds
+all 50 new formulas from tokens. Original content fixture tests and five-level
+practice/mastery checks passed during validation. Fifteen representative native
+panels were visually captured before scope clarification. Headless all-panel
+checks report 1,000 task and 2,000 feedback cases; their 64×64 offscreen viewport
+limits their value as visual evidence. All game source changes from this task
+were removed; changes are data, documentation, authoring tools and content tests.
+Known issues: instructor acceptance/course-specific completeness remains open;
+122 families intentionally include parameterised practice variants. No release
+or platform package is produced in this content-only task.
+
 ## Complete-sole transition contact repaired — 2026-10-10
 
 Current phase: movement animation production. Completed work: final-pose audit of

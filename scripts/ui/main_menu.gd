@@ -1,6 +1,8 @@
 extends Control
 
 signal start_requested(mode: String, topic: String, level: int)
+signal course_requested(chapter: int)
+signal topics_requested(topics: Array)
 signal settings_changed(settings: Dictionary)
 
 const SAVE_DATA = preload("res://scripts/core/save_data.gd")
@@ -66,47 +68,34 @@ func _ready() -> void:
 	record.add_theme_color_override("font_color", Color("f3a846"))
 	record.add_theme_font_size_override("font_size", 18)
 	content.add_child(record)
-	var start := Button.new()
-	start.theme_type_variation = "PrimaryMenuButton"
-	start.custom_minimum_size = Vector2(280, 60)
-	start.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	start.add_theme_font_size_override("font_size", 24)
-	start.text = _career_label("КАРЬЕРА · УРОВЕНЬ 1", 1, progress)
-	start.pressed.connect(func() -> void: start_requested.emit("career", "", 1))
-	content.add_child(start)
-	start.grab_focus()
-	var level_two := Button.new()
-	level_two.text = _career_label("УРОВЕНЬ 2 · РЕАКЦИИ", 2, progress) if int(progress.unlocked_level) >= 2 else "УРОВЕНЬ 2 · ЗАВЕРШИ УРОВЕНЬ 1"
-	level_two.disabled = int(progress.unlocked_level) < 2
-	level_two.custom_minimum_size = Vector2(350, 48)
-	level_two.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	level_two.add_theme_font_size_override("font_size", 20)
-	level_two.pressed.connect(func() -> void: start_requested.emit("career", "", 2))
-	content.add_child(level_two)
-	var level_three := Button.new()
-	level_three.text = _career_label("УРОВЕНЬ 3 · РАСТВОРЫ", 3, progress) if int(progress.unlocked_level) >= 3 else "УРОВЕНЬ 3 · ЗАВЕРШИ УРОВЕНЬ 2"
-	level_three.disabled = int(progress.unlocked_level) < 3
-	level_three.custom_minimum_size = Vector2(350, 48)
-	level_three.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	level_three.add_theme_font_size_override("font_size", 20)
-	level_three.pressed.connect(func() -> void: start_requested.emit("career", "", 3))
-	content.add_child(level_three)
-	var level_four := Button.new()
-	level_four.text = _career_label("УРОВЕНЬ 4 · ЭНЕРГИЯ И КОРРОЗИЯ", 4, progress) if int(progress.unlocked_level) >= 4 else "УРОВЕНЬ 4 · ЗАВЕРШИ УРОВЕНЬ 3"
-	level_four.disabled = int(progress.unlocked_level) < 4
-	level_four.custom_minimum_size = Vector2(350, 48)
-	level_four.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	level_four.add_theme_font_size_override("font_size", 20)
-	level_four.pressed.connect(func() -> void: start_requested.emit("career", "", 4))
-	content.add_child(level_four)
-	var level_five := Button.new()
-	level_five.text = _career_label("УРОВЕНЬ 5 · СТРОИТЕЛЬНАЯ ХИМИЯ", 5, progress) if int(progress.unlocked_level) >= 5 else "УРОВЕНЬ 5 · ЗАВЕРШИ УРОВЕНЬ 4"
-	level_five.disabled = int(progress.unlocked_level) < 5
-	level_five.custom_minimum_size = Vector2(350, 48)
-	level_five.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	level_five.add_theme_font_size_override("font_size", 20)
-	level_five.pressed.connect(func() -> void: start_requested.emit("career", "", 5))
-	content.add_child(level_five)
+	var course_scroll := ScrollContainer.new()
+	course_scroll.custom_minimum_size = Vector2(570, 270)
+	course_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	course_scroll.follow_focus = true
+	content.add_child(course_scroll)
+	var course_list := VBoxContainer.new()
+	course_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	course_scroll.add_child(course_list)
+	for chapter in preload("res://scripts/chemistry/course_catalog.gd").chapters():
+		var chapter_id := int(chapter.id)
+		if chapter_id in [1, 8]:
+			var semester := Label.new()
+			semester.text = "СЕМЕСТР %d" % int(chapter.semester)
+			semester.add_theme_color_override("font_color", Color("f3a846"))
+			course_list.add_child(semester)
+		var chapter_button := Button.new()
+		chapter_button.set_meta("course_chapter", chapter_id)
+		chapter_button.custom_minimum_size.y = 55
+		chapter_button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		var chapter_record: Dictionary = progress.chapter_records.get(str(chapter_id), {})
+		chapter_button.text = "%02d · %s  ·  ✓ %d" % [chapter_id, chapter.title, int(chapter_record.get("correct", 0))]
+		chapter_button.disabled = chapter_id > int(progress.unlocked_chapter)
+		if chapter_button.disabled:
+			chapter_button.text += "  🔒"
+		chapter_button.pressed.connect(func() -> void: course_requested.emit(chapter_id))
+		course_list.add_child(chapter_button)
+		if chapter_id == 1:
+			chapter_button.grab_focus()
 	var practice_button := Button.new()
 	practice_button.text = "ПРАКТИКА"
 	practice_button.custom_minimum_size = Vector2(280, 42)
@@ -148,7 +137,8 @@ func _ready() -> void:
 	practice_content.add_theme_constant_override("separation", 18)
 	practice_panel.add_child(practice_content)
 	var practice_title := Label.new()
-	practice_title.text = "ВЫБЕРИ ТЕМУ"
+	practice_title.text = "ВЫБЕРИ ОДНУ ИЛИ НЕСКОЛЬКО ТЕМ"
+	practice_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	practice_title.add_theme_color_override("font_color", Color("f3a846"))
 	practice_title.add_theme_font_size_override("font_size", 30)
 	practice_content.add_child(practice_title)
@@ -161,12 +151,15 @@ func _ready() -> void:
 	topic_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	topic_list.add_theme_constant_override("separation", 12)
 	topic_scroll.add_child(topic_list)
+	var begin_practice := Button.new()
+	begin_practice.disabled = true
+	var selected_topics: Array = []
 	var first_topic_button: Button
 	var level_titles := ["ОСНОВЫ", "РЕАКЦИИ", "РАСТВОРЫ", "ЭНЕРГИЯ И КОРРОЗИЯ", "СТРОИТЕЛЬНАЯ ХИМИЯ"]
 	for practice_level in range(1, 6):
 		var heading := Label.new()
 		heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		heading.text = "УРОВЕНЬ %d · %s" % [practice_level, level_titles[practice_level - 1]]
+		heading.text = level_titles[practice_level - 1]
 		heading.add_theme_color_override("font_color", Color("f3a846"))
 		heading.add_theme_font_size_override("font_size", 18)
 		topic_list.add_child(heading)
@@ -175,15 +168,27 @@ func _ready() -> void:
 			var topic := str(task.topic)
 			if not topics.has(topic): topics.append(topic)
 		for topic in topics:
-			var topic_button := Button.new()
+			var topic_button := CheckButton.new()
 			topic_button.text = topic.to_upper()
 			topic_button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			topic_button.custom_minimum_size.y = 58
 			topic_button.set_meta("practice_level", practice_level)
 			topic_button.set_meta("practice_topic", topic)
-			topic_button.pressed.connect(_start_practice.bind(topic, practice_level))
+			topic_button.toggled.connect(func(selected: bool) -> void:
+				if selected:
+					if topic not in selected_topics: selected_topics.append(topic)
+				else:
+					selected_topics.erase(topic)
+				begin_practice.disabled = selected_topics.is_empty()
+			)
 			topic_list.add_child(topic_button)
 			if first_topic_button == null: first_topic_button = topic_button
+	begin_practice.text = "НАЧАТЬ ТРЕНИРОВКУ"
+	begin_practice.custom_minimum_size.y = 54
+	practice_content.add_child(begin_practice)
+	begin_practice.pressed.connect(func() -> void:
+		if not selected_topics.is_empty(): topics_requested.emit(selected_topics.duplicate())
+	)
 	var close_practice := Button.new()
 	close_practice.text = "НАЗАД  ←"
 	close_practice.custom_minimum_size.y = 54

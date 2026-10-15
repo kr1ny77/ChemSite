@@ -1,10 +1,10 @@
 extends RefCounted
 
 const SAVE_PATH := "user://progress.json"
-const VERSION := 5
+const VERSION := 6
 
 static func load_progress(path: String = SAVE_PATH) -> Dictionary:
-	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": [], "unlocked_level": 1, "level_records": {}}
+	var defaults := {"save_version": VERSION, "best_score": 0, "best_stars": 0, "total_xp": 0, "completed_rounds": 0, "topic_mastery": {}, "mistakes": [], "unlocked_level": 1, "level_records": {}, "career_answered_ids": [], "unlocked_chapter": 1, "chapter_records": {}}
 	if not FileAccess.file_exists(path):
 		return defaults
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -28,10 +28,28 @@ static func load_progress(path: String = SAVE_PATH) -> Dictionary:
 		parsed.mistakes = []
 	if not parsed.level_records is Dictionary:
 		parsed.level_records = {}
+	if not parsed.chapter_records is Dictionary:
+		parsed.chapter_records = {}
+	parsed.unlocked_chapter = clampi(int(parsed.unlocked_chapter), 1, 13)
+	var history: Array = []
+	if parsed.career_answered_ids is Array:
+		for task_id in parsed.career_answered_ids:
+			if task_id is String and not task_id.is_empty() and task_id not in history:
+				history.append(task_id)
+	# Earlier saves retained IDs for mistakes, allowing these to migrate too.
+	for mistake in parsed.mistakes:
+		if mistake is Dictionary:
+			var task_id := str(mistake.get("task_id", ""))
+			if not task_id.is_empty() and task_id not in history:
+				history.append(task_id)
+	parsed.career_answered_ids = history
 	return parsed
 
-static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_PATH) -> Error:
+static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_PATH, chapter: int = 0) -> Error:
 	var progress := load_progress(path)
+	var task_id := str(task.get("id", ""))
+	if not task_id.is_empty() and task_id not in progress.career_answered_ids:
+		progress.career_answered_ids.append(task_id)
 	var topic := str(task.get("topic", ""))
 	var level := int(task.get("level", 1))
 	var mastery_key := "%d:%s" % [level, topic]
@@ -55,6 +73,14 @@ static func record_answer(task: Dictionary, correct: bool, path: String = SAVE_P
 		if mistakes.size() > 100:
 			mistakes.pop_front()
 	progress.topic_mastery[mastery_key] = record
+	if chapter >= 1 and chapter <= 13:
+		var chapter_key := str(chapter)
+		var chapter_record: Dictionary = progress.chapter_records.get(chapter_key, {})
+		chapter_record["attempts"] = int(chapter_record.get("attempts", 0)) + 1
+		chapter_record["correct"] = int(chapter_record.get("correct", 0)) + (1 if correct else 0)
+		progress.chapter_records[chapter_key] = chapter_record
+		if int(chapter_record.correct) >= 5:
+			progress.unlocked_chapter = maxi(int(progress.unlocked_chapter), mini(13, chapter + 1))
 	return _write_progress(progress, path)
 
 static func record_round(score: int, completed: int, path: String = SAVE_PATH, level: int = 1) -> Error:
@@ -87,10 +113,29 @@ static func record_round(score: int, completed: int, path: String = SAVE_PATH, l
 	progress.level_records[key] = record
 	return _write_progress(progress, path)
 
+static func record_chapter(chapter: int, _completed: int, score: int, path: String = SAVE_PATH, exhausted: bool = false) -> Error:
+	if chapter < 1 or chapter > 13:
+		return ERR_INVALID_PARAMETER
+	var progress := load_progress(path)
+	if not progress.chapter_records is Dictionary:
+		progress.chapter_records = {}
+	var key := str(chapter)
+	var record: Dictionary = progress.chapter_records.get(key, {})
+	record["correct"] = int(record.get("correct", 0))
+	record["best_score"] = maxi(int(record.get("best_score", 0)), score)
+	progress.chapter_records[key] = record
+	if int(record.correct) >= 5 or exhausted:
+		progress.unlocked_chapter = maxi(int(progress.unlocked_chapter), mini(13, chapter + 1))
+	return _write_progress(progress, path)
+
 static func _write_progress(progress: Dictionary, path: String) -> Error:
-	var file := FileAccess.open(path, FileAccess.WRITE)
+	var temporary := path + ".tmp"
+	var file := FileAccess.open(temporary, FileAccess.WRITE)
 	if file == null:
 		return FileAccess.get_open_error()
 	file.store_string(JSON.stringify(progress))
+	file.flush()
+	var write_error := file.get_error()
 	file.close()
-	return OK
+	if write_error != OK: return write_error
+	return DirAccess.rename_absolute(ProjectSettings.globalize_path(temporary), ProjectSettings.globalize_path(path))

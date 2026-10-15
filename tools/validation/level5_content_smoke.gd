@@ -7,7 +7,7 @@ func _initialize() -> void:
 	call_deferred("_run")
 
 func _run() -> void:
-	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(5)
+	var tasks: Array[Dictionary] = TASK_BANK.load_verified_tasks(5).filter(func(task: Dictionary) -> bool: return str(task.id).begins_with("L"))
 	assert(tasks.size() == 40, "Level 5 task count changed")
 	var station_ids := ["construction-materials-station", "reaction-bench", "corrosion-test-rig", "inspection-station"]
 	var hud := (load("res://scenes/ui/game_hud.tscn") as PackedScene).instantiate()

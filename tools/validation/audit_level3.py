@@ -7,7 +7,7 @@ from pathlib import Path
 from audit_level2_equations import is_balanced
 
 ROOT = Path(__file__).resolve().parents[2]
-TASKS = {task['id']: task for task in json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text()) if task['level'] == 3}
+TASKS = {task['id']: task for task in json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text()) if task['level'] == 3 and task['id'].startswith('L')}
 ATOMIC = {'H': 1.008, 'O': 16.00, 'Na': 22.99, 'Ca': 40.08, 'C': 12.01, 'S': 32.06, 'Cl': 35.45}
 M = {
  'H2O': 2*ATOMIC['H']+ATOMIC['O'],

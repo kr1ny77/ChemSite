@@ -1,0 +1,5971 @@
+[
+  {
+    "id": "C1-001",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Na (заряд +1) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "NaCl",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: NaCl.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Na",
+        "Cl"
+      ]
+    },
+    "audit": {
+      "cation": "Na",
+      "anion": "Cl",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-002",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано NaCl. Выбери название.",
+    "correctAnswer": "хлорид натрия",
+    "explanation": "Cl — хлорид; катион определяет название «натрия».",
+    "rule": "Cl — хлорид; катион определяет название «натрия».",
+    "hint": "Cl — хлорид; катион определяет название «натрия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид натрия",
+      "оксид натрия",
+      "гидроксид натрия",
+      "сульфид натрия"
+    ]
+  },
+  {
+    "id": "C1-003",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Na (заряд +1) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "NaNO3",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: NaNO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Na",
+        "N",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Na",
+      "anion": "NO3",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-004",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано NaNO3. Выбери название.",
+    "correctAnswer": "нитрат натрия",
+    "explanation": "NO3 — нитрат; катион определяет название «натрия».",
+    "rule": "NO3 — нитрат; катион определяет название «натрия».",
+    "hint": "NO3 — нитрат; катион определяет название «натрия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат натрия",
+      "оксид натрия",
+      "гидроксид натрия",
+      "сульфид натрия"
+    ]
+  },
+  {
+    "id": "C1-005",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Na (заряд +1) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "Na2SO4",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: Na2SO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Na",
+        "2",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Na",
+      "anion": "SO4",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-006",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Na2SO4. Выбери название.",
+    "correctAnswer": "сульфат натрия",
+    "explanation": "SO4 — сульфат; катион определяет название «натрия».",
+    "rule": "SO4 — сульфат; катион определяет название «натрия».",
+    "hint": "SO4 — сульфат; катион определяет название «натрия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат натрия",
+      "оксид натрия",
+      "гидроксид натрия",
+      "сульфид натрия"
+    ]
+  },
+  {
+    "id": "C1-007",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Na (заряд +1) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "Na2CO3",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: Na2CO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Na",
+        "2",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Na",
+      "anion": "CO3",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-008",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Na (заряд +1) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Na3PO4",
+    "explanation": "Заряды компенсируются: 3 × 1 = 1 × 3. Формула: Na3PO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Na",
+        "3",
+        "P",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Na",
+      "anion": "PO4",
+      "positive": 1,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-009",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из K (заряд +1) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "KCl",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: KCl.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "K",
+        "Cl"
+      ]
+    },
+    "audit": {
+      "cation": "K",
+      "anion": "Cl",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-010",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано KCl. Выбери название.",
+    "correctAnswer": "хлорид калия",
+    "explanation": "Cl — хлорид; катион определяет название «калия».",
+    "rule": "Cl — хлорид; катион определяет название «калия».",
+    "hint": "Cl — хлорид; катион определяет название «калия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид калия",
+      "оксид калия",
+      "гидроксид калия",
+      "сульфид калия"
+    ]
+  },
+  {
+    "id": "C1-011",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из K (заряд +1) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "KNO3",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: KNO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "K",
+        "N",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "K",
+      "anion": "NO3",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-012",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано KNO3. Выбери название.",
+    "correctAnswer": "нитрат калия",
+    "explanation": "NO3 — нитрат; катион определяет название «калия».",
+    "rule": "NO3 — нитрат; катион определяет название «калия».",
+    "hint": "NO3 — нитрат; катион определяет название «калия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат калия",
+      "оксид калия",
+      "гидроксид калия",
+      "сульфид калия"
+    ]
+  },
+  {
+    "id": "C1-013",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из K (заряд +1) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "K2SO4",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: K2SO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "K",
+        "2",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "K",
+      "anion": "SO4",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-014",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано K2SO4. Выбери название.",
+    "correctAnswer": "сульфат калия",
+    "explanation": "SO4 — сульфат; катион определяет название «калия».",
+    "rule": "SO4 — сульфат; катион определяет название «калия».",
+    "hint": "SO4 — сульфат; катион определяет название «калия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат калия",
+      "оксид калия",
+      "гидроксид калия",
+      "сульфид калия"
+    ]
+  },
+  {
+    "id": "C1-015",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из K (заряд +1) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "K2CO3",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: K2CO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "K",
+        "2",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "K",
+      "anion": "CO3",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-016",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из K (заряд +1) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "K3PO4",
+    "explanation": "Заряды компенсируются: 3 × 1 = 1 × 3. Формула: K3PO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "K",
+        "3",
+        "P",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "K",
+      "anion": "PO4",
+      "positive": 1,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-017",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Ca (заряд +2) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "CaCl2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: CaCl2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "Cl",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Ca",
+      "anion": "Cl",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-018",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано CaCl2. Выбери название.",
+    "correctAnswer": "хлорид кальция",
+    "explanation": "Cl — хлорид; катион определяет название «кальция».",
+    "rule": "Cl — хлорид; катион определяет название «кальция».",
+    "hint": "Cl — хлорид; катион определяет название «кальция».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид кальция",
+      "оксид кальция",
+      "гидроксид кальция",
+      "сульфид кальция"
+    ]
+  },
+  {
+    "id": "C1-019",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Ca (заряд +2) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Ca(NO3)2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: Ca(NO3)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Ca",
+      "anion": "NO3",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-020",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Ca(NO3)2. Выбери название.",
+    "correctAnswer": "нитрат кальция",
+    "explanation": "NO3 — нитрат; катион определяет название «кальция».",
+    "rule": "NO3 — нитрат; катион определяет название «кальция».",
+    "hint": "NO3 — нитрат; катион определяет название «кальция».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат кальция",
+      "оксид кальция",
+      "гидроксид кальция",
+      "сульфид кальция"
+    ]
+  },
+  {
+    "id": "C1-021",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Ca (заряд +2) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "CaSO4",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: CaSO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Ca",
+      "anion": "SO4",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-022",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано CaSO4. Выбери название.",
+    "correctAnswer": "сульфат кальция",
+    "explanation": "SO4 — сульфат; катион определяет название «кальция».",
+    "rule": "SO4 — сульфат; катион определяет название «кальция».",
+    "hint": "SO4 — сульфат; катион определяет название «кальция».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат кальция",
+      "оксид кальция",
+      "гидроксид кальция",
+      "сульфид кальция"
+    ]
+  },
+  {
+    "id": "C1-023",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Ca (заряд +2) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "CaCO3",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: CaCO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Ca",
+      "anion": "CO3",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-024",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Ca (заряд +2) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Ca3(PO4)2",
+    "explanation": "Заряды компенсируются: 3 × 2 = 2 × 3. Формула: Ca3(PO4)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Ca",
+        "3",
+        "(",
+        "P",
+        "O",
+        "4",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Ca",
+      "anion": "PO4",
+      "positive": 2,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-025",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Mg (заряд +2) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "MgCl2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: MgCl2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "Cl",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Mg",
+      "anion": "Cl",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-026",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано MgCl2. Выбери название.",
+    "correctAnswer": "хлорид магния",
+    "explanation": "Cl — хлорид; катион определяет название «магния».",
+    "rule": "Cl — хлорид; катион определяет название «магния».",
+    "hint": "Cl — хлорид; катион определяет название «магния».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид магния",
+      "оксид магния",
+      "гидроксид магния",
+      "сульфид магния"
+    ]
+  },
+  {
+    "id": "C1-027",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Mg (заряд +2) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Mg(NO3)2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: Mg(NO3)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Mg",
+      "anion": "NO3",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-028",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Mg(NO3)2. Выбери название.",
+    "correctAnswer": "нитрат магния",
+    "explanation": "NO3 — нитрат; катион определяет название «магния».",
+    "rule": "NO3 — нитрат; катион определяет название «магния».",
+    "hint": "NO3 — нитрат; катион определяет название «магния».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат магния",
+      "оксид магния",
+      "гидроксид магния",
+      "сульфид магния"
+    ]
+  },
+  {
+    "id": "C1-029",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Mg (заряд +2) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "MgSO4",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: MgSO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Mg",
+      "anion": "SO4",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-030",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано MgSO4. Выбери название.",
+    "correctAnswer": "сульфат магния",
+    "explanation": "SO4 — сульфат; катион определяет название «магния».",
+    "rule": "SO4 — сульфат; катион определяет название «магния».",
+    "hint": "SO4 — сульфат; катион определяет название «магния».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат магния",
+      "оксид магния",
+      "гидроксид магния",
+      "сульфид магния"
+    ]
+  },
+  {
+    "id": "C1-031",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Mg (заряд +2) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "MgCO3",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: MgCO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Mg",
+      "anion": "CO3",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-032",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Mg (заряд +2) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Mg3(PO4)2",
+    "explanation": "Заряды компенсируются: 3 × 2 = 2 × 3. Формула: Mg3(PO4)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Mg",
+        "3",
+        "(",
+        "P",
+        "O",
+        "4",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Mg",
+      "anion": "PO4",
+      "positive": 2,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-033",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Al (заряд +3) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "AlCl3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: AlCl3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "Cl",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Al",
+      "anion": "Cl",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-034",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано AlCl3. Выбери название.",
+    "correctAnswer": "хлорид алюминия",
+    "explanation": "Cl — хлорид; катион определяет название «алюминия».",
+    "rule": "Cl — хлорид; катион определяет название «алюминия».",
+    "hint": "Cl — хлорид; катион определяет название «алюминия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид алюминия",
+      "оксид алюминия",
+      "гидроксид алюминия",
+      "сульфид алюминия"
+    ]
+  },
+  {
+    "id": "C1-035",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Al (заряд +3) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Al(NO3)3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: Al(NO3)3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Al",
+      "anion": "NO3",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-036",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Al(NO3)3. Выбери название.",
+    "correctAnswer": "нитрат алюминия",
+    "explanation": "NO3 — нитрат; катион определяет название «алюминия».",
+    "rule": "NO3 — нитрат; катион определяет название «алюминия».",
+    "hint": "NO3 — нитрат; катион определяет название «алюминия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат алюминия",
+      "оксид алюминия",
+      "гидроксид алюминия",
+      "сульфид алюминия"
+    ]
+  },
+  {
+    "id": "C1-037",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Al (заряд +3) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "Al2(SO4)3",
+    "explanation": "Заряды компенсируются: 2 × 3 = 3 × 2. Формула: Al2(SO4)3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "2",
+        "(",
+        "S",
+        "O",
+        "4",
+        ")",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Al",
+      "anion": "SO4",
+      "positive": 3,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-038",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Al2(SO4)3. Выбери название.",
+    "correctAnswer": "сульфат алюминия",
+    "explanation": "SO4 — сульфат; катион определяет название «алюминия».",
+    "rule": "SO4 — сульфат; катион определяет название «алюминия».",
+    "hint": "SO4 — сульфат; катион определяет название «алюминия».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат алюминия",
+      "оксид алюминия",
+      "гидроксид алюминия",
+      "сульфид алюминия"
+    ]
+  },
+  {
+    "id": "C1-039",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Al (заряд +3) и Br (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "AlBr3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: AlBr3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "Br",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Al",
+      "anion": "Br",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-040",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Al (заряд +3) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "AlPO4",
+    "explanation": "Заряды компенсируются: 1 × 3 = 1 × 3. Формула: AlPO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Al",
+        "P",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Al",
+      "anion": "PO4",
+      "positive": 3,
+      "negative": 3,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-041",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Zn (заряд +2) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "ZnCl2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: ZnCl2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Zn",
+        "Cl",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Zn",
+      "anion": "Cl",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-042",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано ZnCl2. Выбери название.",
+    "correctAnswer": "хлорид цинка",
+    "explanation": "Cl — хлорид; катион определяет название «цинка».",
+    "rule": "Cl — хлорид; катион определяет название «цинка».",
+    "hint": "Cl — хлорид; катион определяет название «цинка».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид цинка",
+      "оксид цинка",
+      "гидроксид цинка",
+      "сульфид цинка"
+    ]
+  },
+  {
+    "id": "C1-043",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Zn (заряд +2) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Zn(NO3)2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: Zn(NO3)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Zn",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Zn",
+      "anion": "NO3",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-044",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Zn(NO3)2. Выбери название.",
+    "correctAnswer": "нитрат цинка",
+    "explanation": "NO3 — нитрат; катион определяет название «цинка».",
+    "rule": "NO3 — нитрат; катион определяет название «цинка».",
+    "hint": "NO3 — нитрат; катион определяет название «цинка».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат цинка",
+      "оксид цинка",
+      "гидроксид цинка",
+      "сульфид цинка"
+    ]
+  },
+  {
+    "id": "C1-045",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Zn (заряд +2) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "ZnSO4",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: ZnSO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Zn",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Zn",
+      "anion": "SO4",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-046",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано ZnSO4. Выбери название.",
+    "correctAnswer": "сульфат цинка",
+    "explanation": "SO4 — сульфат; катион определяет название «цинка».",
+    "rule": "SO4 — сульфат; катион определяет название «цинка».",
+    "hint": "SO4 — сульфат; катион определяет название «цинка».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат цинка",
+      "оксид цинка",
+      "гидроксид цинка",
+      "сульфид цинка"
+    ]
+  },
+  {
+    "id": "C1-047",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Zn (заряд +2) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "ZnCO3",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: ZnCO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Zn",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Zn",
+      "anion": "CO3",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-048",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Zn (заряд +2) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Zn3(PO4)2",
+    "explanation": "Заряды компенсируются: 3 × 2 = 2 × 3. Формула: Zn3(PO4)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Zn",
+        "3",
+        "(",
+        "P",
+        "O",
+        "4",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Zn",
+      "anion": "PO4",
+      "positive": 2,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-049",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +2) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "FeCl2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: FeCl2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "Cl",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "Cl",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-050",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано FeCl2. Выбери название.",
+    "correctAnswer": "хлорид железа(II)",
+    "explanation": "Cl — хлорид; катион определяет название «железа(II)».",
+    "rule": "Cl — хлорид; катион определяет название «железа(II)».",
+    "hint": "Cl — хлорид; катион определяет название «железа(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид железа(II)",
+      "оксид железа(II)",
+      "гидроксид железа(II)",
+      "сульфид железа(II)"
+    ]
+  },
+  {
+    "id": "C1-051",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +2) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Fe(NO3)2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: Fe(NO3)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "NO3",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-052",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Fe(NO3)2. Выбери название.",
+    "correctAnswer": "нитрат железа(II)",
+    "explanation": "NO3 — нитрат; катион определяет название «железа(II)».",
+    "rule": "NO3 — нитрат; катион определяет название «железа(II)».",
+    "hint": "NO3 — нитрат; катион определяет название «железа(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат железа(II)",
+      "оксид железа(II)",
+      "гидроксид железа(II)",
+      "сульфид железа(II)"
+    ]
+  },
+  {
+    "id": "C1-053",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +2) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "FeSO4",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: FeSO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "SO4",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-054",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано FeSO4. Выбери название.",
+    "correctAnswer": "сульфат железа(II)",
+    "explanation": "SO4 — сульфат; катион определяет название «железа(II)».",
+    "rule": "SO4 — сульфат; катион определяет название «железа(II)».",
+    "hint": "SO4 — сульфат; катион определяет название «железа(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат железа(II)",
+      "оксид железа(II)",
+      "гидроксид железа(II)",
+      "сульфид железа(II)"
+    ]
+  },
+  {
+    "id": "C1-055",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +2) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "FeCO3",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: FeCO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "CO3",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-056",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +2) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Fe3(PO4)2",
+    "explanation": "Заряды компенсируются: 3 × 2 = 2 × 3. Формула: Fe3(PO4)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "3",
+        "(",
+        "P",
+        "O",
+        "4",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "PO4",
+      "positive": 2,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-057",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +3) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "FeCl3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: FeCl3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "Cl",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "Cl",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-058",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано FeCl3. Выбери название.",
+    "correctAnswer": "хлорид железа(III)",
+    "explanation": "Cl — хлорид; катион определяет название «железа(III)».",
+    "rule": "Cl — хлорид; катион определяет название «железа(III)».",
+    "hint": "Cl — хлорид; катион определяет название «железа(III)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид железа(III)",
+      "оксид железа(III)",
+      "гидроксид железа(III)",
+      "сульфид железа(III)"
+    ]
+  },
+  {
+    "id": "C1-059",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +3) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Fe(NO3)3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: Fe(NO3)3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "NO3",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-060",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Fe(NO3)3. Выбери название.",
+    "correctAnswer": "нитрат железа(III)",
+    "explanation": "NO3 — нитрат; катион определяет название «железа(III)».",
+    "rule": "NO3 — нитрат; катион определяет название «железа(III)».",
+    "hint": "NO3 — нитрат; катион определяет название «железа(III)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат железа(III)",
+      "оксид железа(III)",
+      "гидроксид железа(III)",
+      "сульфид железа(III)"
+    ]
+  },
+  {
+    "id": "C1-061",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +3) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "Fe2(SO4)3",
+    "explanation": "Заряды компенсируются: 2 × 3 = 3 × 2. Формула: Fe2(SO4)3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "2",
+        "(",
+        "S",
+        "O",
+        "4",
+        ")",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "SO4",
+      "positive": 3,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-062",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Fe2(SO4)3. Выбери название.",
+    "correctAnswer": "сульфат железа(III)",
+    "explanation": "SO4 — сульфат; катион определяет название «железа(III)».",
+    "rule": "SO4 — сульфат; катион определяет название «железа(III)».",
+    "hint": "SO4 — сульфат; катион определяет название «железа(III)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат железа(III)",
+      "оксид железа(III)",
+      "гидроксид железа(III)",
+      "сульфид железа(III)"
+    ]
+  },
+  {
+    "id": "C1-063",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +3) и Br (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "FeBr3",
+    "explanation": "Заряды компенсируются: 1 × 3 = 3 × 1. Формула: FeBr3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "Br",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "Br",
+      "positive": 3,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 3
+    }
+  },
+  {
+    "id": "C1-064",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Fe (заряд +3) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "FePO4",
+    "explanation": "Заряды компенсируются: 1 × 3 = 1 × 3. Формула: FePO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Fe",
+        "P",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Fe",
+      "anion": "PO4",
+      "positive": 3,
+      "negative": 3,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-065",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Cu (заряд +2) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "CuCl2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: CuCl2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Cu",
+        "Cl",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Cu",
+      "anion": "Cl",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-066",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано CuCl2. Выбери название.",
+    "correctAnswer": "хлорид меди(II)",
+    "explanation": "Cl — хлорид; катион определяет название «меди(II)».",
+    "rule": "Cl — хлорид; катион определяет название «меди(II)».",
+    "hint": "Cl — хлорид; катион определяет название «меди(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид меди(II)",
+      "оксид меди(II)",
+      "гидроксид меди(II)",
+      "сульфид меди(II)"
+    ]
+  },
+  {
+    "id": "C1-067",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Cu (заряд +2) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "Cu(NO3)2",
+    "explanation": "Заряды компенсируются: 1 × 2 = 2 × 1. Формула: Cu(NO3)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Cu",
+        "(",
+        "N",
+        "O",
+        "3",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Cu",
+      "anion": "NO3",
+      "positive": 2,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-068",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано Cu(NO3)2. Выбери название.",
+    "correctAnswer": "нитрат меди(II)",
+    "explanation": "NO3 — нитрат; катион определяет название «меди(II)».",
+    "rule": "NO3 — нитрат; катион определяет название «меди(II)».",
+    "hint": "NO3 — нитрат; катион определяет название «меди(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат меди(II)",
+      "оксид меди(II)",
+      "гидроксид меди(II)",
+      "сульфид меди(II)"
+    ]
+  },
+  {
+    "id": "C1-069",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Cu (заряд +2) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "CuSO4",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: CuSO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Cu",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "Cu",
+      "anion": "SO4",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-070",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано CuSO4. Выбери название.",
+    "correctAnswer": "сульфат меди(II)",
+    "explanation": "SO4 — сульфат; катион определяет название «меди(II)».",
+    "rule": "SO4 — сульфат; катион определяет название «меди(II)».",
+    "hint": "SO4 — сульфат; катион определяет название «меди(II)».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат меди(II)",
+      "оксид меди(II)",
+      "гидроксид меди(II)",
+      "сульфид меди(II)"
+    ]
+  },
+  {
+    "id": "C1-071",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Cu (заряд +2) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "CuCO3",
+    "explanation": "Заряды компенсируются: 1 × 2 = 1 × 2. Формула: CuCO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Cu",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "Cu",
+      "anion": "CO3",
+      "positive": 2,
+      "negative": 2,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-072",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из Cu (заряд +2) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "Cu3(PO4)2",
+    "explanation": "Заряды компенсируются: 3 × 2 = 2 × 3. Формула: Cu3(PO4)2.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "Cu",
+        "3",
+        "(",
+        "P",
+        "O",
+        "4",
+        ")",
+        "2"
+      ]
+    },
+    "audit": {
+      "cation": "Cu",
+      "anion": "PO4",
+      "positive": 2,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 2
+    }
+  },
+  {
+    "id": "C1-073",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из NH4 (заряд +1) и Cl (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "NH4Cl",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: NH4Cl.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "N",
+        "H",
+        "4",
+        "Cl"
+      ]
+    },
+    "audit": {
+      "cation": "NH4",
+      "anion": "Cl",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-074",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано NH4Cl. Выбери название.",
+    "correctAnswer": "хлорид аммония",
+    "explanation": "Cl — хлорид; катион определяет название «аммония».",
+    "rule": "Cl — хлорид; катион определяет название «аммония».",
+    "hint": "Cl — хлорид; катион определяет название «аммония».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "хлорид аммония",
+      "оксид аммония",
+      "гидроксид аммония",
+      "сульфид аммония"
+    ]
+  },
+  {
+    "id": "C1-075",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из NH4 (заряд +1) и NO3 (заряд −1); используй минимальные индексы.",
+    "correctAnswer": "NH4NO3",
+    "explanation": "Заряды компенсируются: 1 × 1 = 1 × 1. Формула: NH4NO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "N",
+        "H",
+        "4",
+        "N",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "NH4",
+      "anion": "NO3",
+      "positive": 1,
+      "negative": 1,
+      "cationCount": 1,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-076",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано NH4NO3. Выбери название.",
+    "correctAnswer": "нитрат аммония",
+    "explanation": "NO3 — нитрат; катион определяет название «аммония».",
+    "rule": "NO3 — нитрат; катион определяет название «аммония».",
+    "hint": "NO3 — нитрат; катион определяет название «аммония».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "нитрат аммония",
+      "оксид аммония",
+      "гидроксид аммония",
+      "сульфид аммония"
+    ]
+  },
+  {
+    "id": "C1-077",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из NH4 (заряд +1) и SO4 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "(NH4)2SO4",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: (NH4)2SO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "(",
+        "N",
+        "H",
+        "4",
+        ")",
+        "2",
+        "S",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "NH4",
+      "anion": "SO4",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-078",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Название соли",
+    "difficulty": 1,
+    "station": "substance-storage",
+    "interactionType": "classification",
+    "prompt": "На карточке склада указано (NH4)2SO4. Выбери название.",
+    "correctAnswer": "сульфат аммония",
+    "explanation": "SO4 — сульфат; катион определяет название «аммония».",
+    "rule": "SO4 — сульфат; катион определяет название «аммония».",
+    "hint": "SO4 — сульфат; катион определяет название «аммония».",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Название соли"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Название соли",
+    "options": [
+      "сульфат аммония",
+      "оксид аммония",
+      "гидроксид аммония",
+      "сульфид аммония"
+    ]
+  },
+  {
+    "id": "C1-079",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из NH4 (заряд +1) и CO3 (заряд −2); используй минимальные индексы.",
+    "correctAnswer": "(NH4)2CO3",
+    "explanation": "Заряды компенсируются: 2 × 1 = 1 × 2. Формула: (NH4)2CO3.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "(",
+        "N",
+        "H",
+        "4",
+        ")",
+        "2",
+        "C",
+        "O",
+        "3"
+      ]
+    },
+    "audit": {
+      "cation": "NH4",
+      "anion": "CO3",
+      "positive": 1,
+      "negative": 2,
+      "cationCount": 2,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-080",
+    "level": 1,
+    "moduleId": 3,
+    "topic": "Неорганические соединения",
+    "subtopic": "Формула по зарядам",
+    "difficulty": 2,
+    "station": "formula-board",
+    "interactionType": "formula-builder",
+    "prompt": "Собери формулу соли из NH4 (заряд +1) и PO4 (заряд −3); используй минимальные индексы.",
+    "correctAnswer": "(NH4)3PO4",
+    "explanation": "Заряды компенсируются: 3 × 1 = 1 × 3. Формула: (NH4)3PO4.",
+    "rule": "Сумма зарядов в формульной единице равна нулю.",
+    "hint": "Сумма зарядов в формульной единице равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-3",
+      "Формула по зарядам"
+    ],
+    "procedural": true,
+    "generatorId": "Формула по зарядам",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Формула по зарядам",
+    "parameters": {
+      "formulaTokens": [
+        "(",
+        "N",
+        "H",
+        "4",
+        ")",
+        "3",
+        "P",
+        "O",
+        "4"
+      ]
+    },
+    "audit": {
+      "cation": "NH4",
+      "anion": "PO4",
+      "positive": 1,
+      "negative": 3,
+      "cationCount": 3,
+      "anionCount": 1
+    }
+  },
+  {
+    "id": "C1-081",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Связь в кристалле",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "В кристалле NaCl какие частицы образуют решётку?",
+    "correctAnswer": "Na⁺ и Cl⁻",
+    "explanation": "Ионный кристалл состоит из катионов и анионов.",
+    "rule": "Ионный кристалл состоит из катионов и анионов.",
+    "hint": "Ионный кристалл состоит из катионов и анионов.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Связь в кристалле"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Связь в кристалле",
+    "options": [
+      "Na⁺ и Cl⁻",
+      "молекулы NaCl",
+      "нейтральные атомы Na и Cl",
+      "электроны и протоны"
+    ]
+  },
+  {
+    "id": "C1-082",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Полярность связи",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "У атомов H и Cl различается электроотрицательность. Какова связь H–Cl?",
+    "correctAnswer": "ковалентная полярная",
+    "explanation": "Общая электронная пара смещена к более электроотрицательному Cl.",
+    "rule": "Общая электронная пара смещена к более электроотрицательному Cl.",
+    "hint": "Общая электронная пара смещена к более электроотрицательному Cl.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Полярность связи"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Полярность связи",
+    "options": [
+      "ковалентная полярная",
+      "ковалентная неполярная",
+      "металлическая",
+      "водородная внутри молекулы"
+    ]
+  },
+  {
+    "id": "C1-083",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Общая пара",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какая связь внутри молекулы Cl₂?",
+    "correctAnswer": "ковалентная неполярная",
+    "explanation": "Одинаковые атомы одинаково притягивают общую электронную пару.",
+    "rule": "Одинаковые атомы одинаково притягивают общую электронную пару.",
+    "hint": "Одинаковые атомы одинаково притягивают общую электронную пару.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Общая пара"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Общая пара",
+    "options": [
+      "ковалентная неполярная",
+      "металлическая",
+      "ионная",
+      "водородная"
+    ]
+  },
+  {
+    "id": "C1-084",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Проводимость металла",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какие носители обеспечивают ток в твёрдой медной проволоке?",
+    "correctAnswer": "подвижные электроны",
+    "explanation": "В металле есть подвижные делокализованные электроны.",
+    "rule": "В металле есть подвижные делокализованные электроны.",
+    "hint": "В металле есть подвижные делокализованные электроны.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Проводимость металла"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Проводимость металла",
+    "options": [
+      "подвижные электроны",
+      "подвижные ядра Cu",
+      "молекулы Cu₂",
+      "гидроксид-ионы"
+    ]
+  },
+  {
+    "id": "C1-085",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Геометрия и полярность",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Связи C=O полярны, молекула CO₂ линейна и симметрична. Каков суммарный диполь?",
+    "correctAnswer": "равен нулю",
+    "explanation": "Векторы диполей двух одинаковых связей взаимно компенсируются.",
+    "rule": "Векторы диполей двух одинаковых связей взаимно компенсируются.",
+    "hint": "Векторы диполей двух одинаковых связей взаимно компенсируются.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Геометрия и полярность"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Геометрия и полярность",
+    "options": [
+      "равен нулю",
+      "равен заряду CO₃²⁻",
+      "всегда положителен",
+      "равен диполю воды"
+    ]
+  },
+  {
+    "id": "C1-086",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Водородная связь",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какое взаимодействие между молекулами воды связано с H–O и неподелённой парой O соседней молекулы?",
+    "correctAnswer": "водородная связь",
+    "explanation": "Водородная связь возникает между донором H–O и электронной парой соседнего O.",
+    "rule": "Водородная связь возникает между донором H–O и электронной парой соседнего O.",
+    "hint": "Водородная связь возникает между донором H–O и электронной парой соседнего O.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Водородная связь"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Водородная связь",
+    "options": [
+      "водородная связь",
+      "металлическая связь",
+      "связь между ядрами",
+      "ионная решётка NaCl"
+    ]
+  },
+  {
+    "id": "C1-087",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Ковалентная сеть",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Алмаз твёрдый и имеет высокую температуру сублимации. Какая структура это объясняет?",
+    "correctAnswer": "пространственная ковалентная сеть",
+    "explanation": "Ковалентные связи соединяют атомы углерода в протяжённую сеть.",
+    "rule": "Ковалентные связи соединяют атомы углерода в протяжённую сеть.",
+    "hint": "Ковалентные связи соединяют атомы углерода в протяжённую сеть.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Ковалентная сеть"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Ковалентная сеть",
+    "options": [
+      "пространственная ковалентная сеть",
+      "отдельные молекулы C₄",
+      "водородные связи",
+      "ионная соль C⁴⁺C⁴⁻"
+    ]
+  },
+  {
+    "id": "C1-088",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Проводимость расплава",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Почему расплав NaCl проводит электрический ток?",
+    "correctAnswer": "ионы могут перемещаться",
+    "explanation": "В расплаве ионы подвижны и переносят электрический заряд.",
+    "rule": "В расплаве ионы подвижны и переносят электрический заряд.",
+    "hint": "В расплаве ионы подвижны и переносят электрический заряд.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Проводимость расплава"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Проводимость расплава",
+    "options": [
+      "ионы могут перемещаться",
+      "ядра превращаются в электроны",
+      "соль становится медью",
+      "каждый ион теряет ядро"
+    ]
+  },
+  {
+    "id": "C1-089",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Кратность связи",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какая из связей C–C, C=C, C≡C имеет наибольшую кратность?",
+    "correctAnswer": "C≡C",
+    "explanation": "Тройная связь соответствует трём общим электронным парам.",
+    "rule": "Тройная связь соответствует трём общим электронным парам.",
+    "hint": "Тройная связь соответствует трём общим электронным парам.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Кратность связи"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Кратность связи",
+    "options": [
+      "C≡C",
+      "C–C",
+      "C=C",
+      "все имеют кратность 1"
+    ]
+  },
+  {
+    "id": "C1-090",
+    "level": 1,
+    "moduleId": 2,
+    "topic": "Химическая связь",
+    "subtopic": "Растворение и частицы",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какие частицы преобладают при растворении сахарозы в воде?",
+    "correctAnswer": "молекулы сахарозы",
+    "explanation": "Сахароза — молекулярный неэлектролит; в воде сохраняет молекулы.",
+    "rule": "Сахароза — молекулярный неэлектролит; в воде сохраняет молекулы.",
+    "hint": "Сахароза — молекулярный неэлектролит; в воде сохраняет молекулы.",
+    "points": 100,
+    "tags": [
+      "module-2",
+      "Растворение и частицы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/7-introduction"
+    ],
+    "learningObjective": "Растворение и частицы",
+    "options": [
+      "молекулы сахарозы",
+      "ионы Na⁺ и Cl⁻",
+      "атомы углерода",
+      "электроны вне молекул"
+    ]
+  },
+  {
+    "id": "C1-091",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электронная конфигурация",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Основное состояние Na (Z=11): выбери конфигурацию.",
+    "correctAnswer": "1s² 2s² 2p⁶ 3s¹",
+    "explanation": "В основном состоянии 11 электронов последовательно заполняют 1s, 2s, 2p, 3s.",
+    "rule": "В основном состоянии 11 электронов последовательно заполняют 1s, 2s, 2p, 3s.",
+    "hint": "В основном состоянии 11 электронов последовательно заполняют 1s, 2s, 2p, 3s.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электронная конфигурация"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электронная конфигурация",
+    "options": [
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁵ 3s²",
+      "1s² 2s² 2p⁶ 3s²",
+      "1s² 2s² 2p⁶"
+    ]
+  },
+  {
+    "id": "C1-092",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Конфигурация катиона",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Na отдаёт электрон 3s. Какова конфигурация Na⁺?",
+    "correctAnswer": "1s² 2s² 2p⁶",
+    "explanation": "Катион Na⁺ содержит 10 электронов и заполненный второй уровень.",
+    "rule": "Катион Na⁺ содержит 10 электронов и заполненный второй уровень.",
+    "hint": "Катион Na⁺ содержит 10 электронов и заполненный второй уровень.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Конфигурация катиона"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Конфигурация катиона",
+    "options": [
+      "1s² 2s² 2p⁶",
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁵",
+      "1s² 2s²"
+    ]
+  },
+  {
+    "id": "C1-093",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Квантовое число l",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Для p-подуровня чему равно орбитальное квантовое число l?",
+    "correctAnswer": "1",
+    "explanation": "s, p, d, f соответствуют l=0, 1, 2, 3.",
+    "rule": "s, p, d, f соответствуют l=0, 1, 2, 3.",
+    "hint": "s, p, d, f соответствуют l=0, 1, 2, 3.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Квантовое число l"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Квантовое число l",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "C1-094",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Вместимость орбитали",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Сколько электронов максимально помещается на одной орбитали?",
+    "correctAnswer": "2",
+    "explanation": "Принцип Паули допускает два электрона с противоположными спинами.",
+    "rule": "Принцип Паули допускает два электрона с противоположными спинами.",
+    "hint": "Принцип Паули допускает два электрона с противоположными спинами.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Вместимость орбитали"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Вместимость орбитали",
+    "options": [
+      "2",
+      "1",
+      "6",
+      "10"
+    ]
+  },
+  {
+    "id": "C1-095",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Вместимость p-подуровня",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "На p-подуровне три орбитали. Сколько электронов максимально?",
+    "correctAnswer": "6",
+    "explanation": "Три орбитали по два электрона дают вместимость 6.",
+    "rule": "Три орбитали по два электрона дают вместимость 6.",
+    "hint": "Три орбитали по два электрона дают вместимость 6.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Вместимость p-подуровня"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Вместимость p-подуровня",
+    "options": [
+      "6",
+      "2",
+      "3",
+      "10"
+    ]
+  },
+  {
+    "id": "C1-096",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Правило Хунда",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Как три электрона занимают три вырожденные p-орбитали основного состояния?",
+    "correctAnswer": "по одному с параллельными спинами",
+    "explanation": "Вырожденные орбитали сначала заполняются по одному с параллельными спинами.",
+    "rule": "Вырожденные орбитали сначала заполняются по одному с параллельными спинами.",
+    "hint": "Вырожденные орбитали сначала заполняются по одному с параллельными спинами.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Правило Хунда"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Правило Хунда",
+    "options": [
+      "по одному с параллельными спинами",
+      "сначала три на одной орбитали",
+      "одна пара и пустая орбиталь обязательно",
+      "все с одинаковыми четырьмя квантовыми числами"
+    ]
+  },
+  {
+    "id": "C1-097",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Периодический радиус",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Сравни нейтральные атомы Na и Cl одного периода. У какого больше типичный атомный радиус?",
+    "correctAnswer": "Na",
+    "explanation": "Вдоль периода рост эффективного заряда ядра обычно уменьшает радиус.",
+    "rule": "Вдоль периода рост эффективного заряда ядра обычно уменьшает радиус.",
+    "hint": "Вдоль периода рост эффективного заряда ядра обычно уменьшает радиус.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Периодический радиус"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Периодический радиус",
+    "options": [
+      "Na",
+      "Cl",
+      "у обоих нулевой",
+      "радиус равен атомной массе"
+    ]
+  },
+  {
+    "id": "C1-098",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроотрицательность",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "У какого элемента выше электроотрицательность: Na, Mg, S или Cl?",
+    "correctAnswer": "Cl",
+    "explanation": "В пределах периода электроотрицательность в целом растёт к галогенам.",
+    "rule": "В пределах периода электроотрицательность в целом растёт к галогенам.",
+    "hint": "В пределах периода электроотрицательность в целом растёт к галогенам.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроотрицательность"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроотрицательность",
+    "options": [
+      "Cl",
+      "Na",
+      "Mg",
+      "S"
+    ]
+  },
+  {
+    "id": "C1-099",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Валентные электроны",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Основное состояние Mg: [Ne]3s². Сколько электронов на внешнем уровне?",
+    "correctAnswer": "2",
+    "explanation": "Внешний уровень n=3 содержит два электрона 3s.",
+    "rule": "Внешний уровень n=3 содержит два электрона 3s.",
+    "hint": "Внешний уровень n=3 содержит два электрона 3s.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Валентные электроны"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Валентные электроны",
+    "options": [
+      "2",
+      "8",
+      "10",
+      "12"
+    ]
+  },
+  {
+    "id": "C1-100",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Изотопы",
+    "difficulty": 2,
+    "station": "periodic-table-terminal",
+    "interactionType": "classification",
+    "prompt": "Какая пара представляет изотопы одного элемента?",
+    "correctAnswer": "¹²C и ¹⁴C",
+    "explanation": "Изотопы имеют одинаковое Z и разные массовые числа.",
+    "rule": "Изотопы имеют одинаковое Z и разные массовые числа.",
+    "hint": "Изотопы имеют одинаковое Z и разные массовые числа.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Изотопы"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Изотопы",
+    "options": [
+      "¹²C и ¹⁴C",
+      "¹²C и ¹⁴N",
+      "²³Na и ²⁴Mg",
+      "¹⁶O и ¹⁹F"
+    ]
+  },
+  {
+    "id": "C1-101",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа C-12 задан атомный номер Z=6. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 6,
+      "absoluteTolerance": 0.006,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 6 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 6
+      }
+    }
+  },
+  {
+    "id": "C1-102",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп C-12: массовое число A=12, Z=6. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 6,
+      "absoluteTolerance": 0.006,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 6 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 12,
+        "Z": 6
+      }
+    }
+  },
+  {
+    "id": "C1-103",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом C с Z=6 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 4,
+      "absoluteTolerance": 0.004,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 4 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 6,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-104",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре C 6 протонов и 6 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 12,
+      "absoluteTolerance": 0.012,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 12 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 6,
+        "N": 6
+      }
+    }
+  },
+  {
+    "id": "C1-105",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа O-18 задан атомный номер Z=8. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 8,
+      "absoluteTolerance": 0.008,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 8 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 8
+      }
+    }
+  },
+  {
+    "id": "C1-106",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп O-18: массовое число A=18, Z=8. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 10,
+      "absoluteTolerance": 0.01,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 10 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 18,
+        "Z": 8
+      }
+    }
+  },
+  {
+    "id": "C1-107",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом O с Z=8 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 6,
+      "absoluteTolerance": 0.006,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 6 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 8,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-108",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре O 8 протонов и 10 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 18,
+      "absoluteTolerance": 0.018000000000000002,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 18 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 8,
+        "N": 10
+      }
+    }
+  },
+  {
+    "id": "C1-109",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Na-23 задан атомный номер Z=11. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 11,
+      "absoluteTolerance": 0.011,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 11 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 11
+      }
+    }
+  },
+  {
+    "id": "C1-110",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Na-23: массовое число A=23, Z=11. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 12,
+      "absoluteTolerance": 0.012,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 12 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 23,
+        "Z": 11
+      }
+    }
+  },
+  {
+    "id": "C1-111",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Na с Z=11 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 9,
+      "absoluteTolerance": 0.009000000000000001,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 9 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 11,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-112",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Na 11 протонов и 12 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 23,
+      "absoluteTolerance": 0.023,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 23 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 11,
+        "N": 12
+      }
+    }
+  },
+  {
+    "id": "C1-113",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Mg-24 задан атомный номер Z=12. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 12,
+      "absoluteTolerance": 0.012,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 12 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 12
+      }
+    }
+  },
+  {
+    "id": "C1-114",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Mg-24: массовое число A=24, Z=12. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 12,
+      "absoluteTolerance": 0.012,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 12 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 24,
+        "Z": 12
+      }
+    }
+  },
+  {
+    "id": "C1-115",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Mg с Z=12 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 10,
+      "absoluteTolerance": 0.01,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 10 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 12,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-116",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Mg 12 протонов и 12 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 24,
+      "absoluteTolerance": 0.024,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 24 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 12,
+        "N": 12
+      }
+    }
+  },
+  {
+    "id": "C1-117",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Al-27 задан атомный номер Z=13. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 13,
+      "absoluteTolerance": 0.013000000000000001,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 13 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 13
+      }
+    }
+  },
+  {
+    "id": "C1-118",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Al-27: массовое число A=27, Z=13. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 14,
+      "absoluteTolerance": 0.014,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 14 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 27,
+        "Z": 13
+      }
+    }
+  },
+  {
+    "id": "C1-119",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Al с Z=13 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 11,
+      "absoluteTolerance": 0.011,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 11 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 13,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-120",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Al 13 протонов и 14 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 27,
+      "absoluteTolerance": 0.027,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 27 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 13,
+        "N": 14
+      }
+    }
+  },
+  {
+    "id": "C1-121",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Si-28 задан атомный номер Z=14. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 14,
+      "absoluteTolerance": 0.014,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 14 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 14
+      }
+    }
+  },
+  {
+    "id": "C1-122",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Si-28: массовое число A=28, Z=14. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 14,
+      "absoluteTolerance": 0.014,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 14 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 28,
+        "Z": 14
+      }
+    }
+  },
+  {
+    "id": "C1-123",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Si с Z=14 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 12,
+      "absoluteTolerance": 0.012,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 12 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 14,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-124",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Si 14 протонов и 14 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 28,
+      "absoluteTolerance": 0.028,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 28 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 14,
+        "N": 14
+      }
+    }
+  },
+  {
+    "id": "C1-125",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа S-34 задан атомный номер Z=16. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 16,
+      "absoluteTolerance": 0.016,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 16 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 16
+      }
+    }
+  },
+  {
+    "id": "C1-126",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп S-34: массовое число A=34, Z=16. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 18,
+      "absoluteTolerance": 0.018000000000000002,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 18 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 34,
+        "Z": 16
+      }
+    }
+  },
+  {
+    "id": "C1-127",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом S с Z=16 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 14,
+      "absoluteTolerance": 0.014,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 14 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 16,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-128",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре S 16 протонов и 18 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 34,
+      "absoluteTolerance": 0.034,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 34 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 16,
+        "N": 18
+      }
+    }
+  },
+  {
+    "id": "C1-129",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Cl-37 задан атомный номер Z=17. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 17,
+      "absoluteTolerance": 0.017,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 17 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 17
+      }
+    }
+  },
+  {
+    "id": "C1-130",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Cl-37: массовое число A=37, Z=17. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 20,
+      "absoluteTolerance": 0.02,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 20 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 37,
+        "Z": 17
+      }
+    }
+  },
+  {
+    "id": "C1-131",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Cl с Z=17 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 15,
+      "absoluteTolerance": 0.015,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 15 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 17,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-132",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Cl 17 протонов и 20 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 37,
+      "absoluteTolerance": 0.037,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 37 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 17,
+        "N": 20
+      }
+    }
+  },
+  {
+    "id": "C1-133",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Ca-40 задан атомный номер Z=20. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 20,
+      "absoluteTolerance": 0.02,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 20 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 20
+      }
+    }
+  },
+  {
+    "id": "C1-134",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Ca-40: массовое число A=40, Z=20. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 20,
+      "absoluteTolerance": 0.02,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 20 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 40,
+        "Z": 20
+      }
+    }
+  },
+  {
+    "id": "C1-135",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Ca с Z=20 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 18,
+      "absoluteTolerance": 0.018000000000000002,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 18 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 20,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-136",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Ca 20 протонов и 20 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 40,
+      "absoluteTolerance": 0.04,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 40 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 20,
+        "N": 20
+      }
+    }
+  },
+  {
+    "id": "C1-137",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Протоны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Для изотопа Fe-56 задан атомный номер Z=26. Сколько протонов в ядре?",
+    "correctAnswer": {
+      "value": 26,
+      "absoluteTolerance": 0.026000000000000002,
+      "unit": ""
+    },
+    "explanation": "p = Z. Подстановка данных даёт 26 .",
+    "rule": "p = Z.",
+    "hint": "p = Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Протоны"
+    ],
+    "procedural": true,
+    "generatorId": "Протоны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Протоны",
+    "audit": {
+      "expression": "Z",
+      "variables": {
+        "Z": 26
+      }
+    }
+  },
+  {
+    "id": "C1-138",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Нейтроны",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Изотоп Fe-56: массовое число A=56, Z=26. Найди число нейтронов.",
+    "correctAnswer": {
+      "value": 30,
+      "absoluteTolerance": 0.03,
+      "unit": ""
+    },
+    "explanation": "N = A − Z. Подстановка данных даёт 30 .",
+    "rule": "N = A − Z.",
+    "hint": "N = A − Z.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Нейтроны"
+    ],
+    "procedural": true,
+    "generatorId": "Нейтроны",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Нейтроны",
+    "audit": {
+      "expression": "A-Z",
+      "variables": {
+        "A": 56,
+        "Z": 26
+      }
+    }
+  },
+  {
+    "id": "C1-139",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Электроны иона",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "Атом Fe с Z=26 потерял 2 электрона. Сколько электронов у иона?",
+    "correctAnswer": {
+      "value": 24,
+      "absoluteTolerance": 0.024,
+      "unit": ""
+    },
+    "explanation": "Число электронов катиона: Z − q. Подстановка данных даёт 24 .",
+    "rule": "Число электронов катиона: Z − q.",
+    "hint": "Число электронов катиона: Z − q.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Электроны иона"
+    ],
+    "procedural": true,
+    "generatorId": "Электроны иона",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Электроны иона",
+    "audit": {
+      "expression": "Z-q",
+      "variables": {
+        "Z": 26,
+        "q": 2
+      }
+    }
+  },
+  {
+    "id": "C1-140",
+    "level": 1,
+    "moduleId": 1,
+    "topic": "Строение атома",
+    "subtopic": "Массовое число",
+    "difficulty": 1,
+    "station": "periodic-table-terminal",
+    "interactionType": "numeric-calculation",
+    "prompt": "В ядре Fe 26 протонов и 30 нейтронов. Вычисли массовое число.",
+    "correctAnswer": {
+      "value": 56,
+      "absoluteTolerance": 0.056,
+      "unit": ""
+    },
+    "explanation": "A = p + N. Подстановка данных даёт 56 .",
+    "rule": "A = p + N.",
+    "hint": "A = p + N.",
+    "points": 100,
+    "tags": [
+      "module-1",
+      "Массовое число"
+    ],
+    "procedural": true,
+    "generatorId": "Массовое число",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+    ],
+    "learningObjective": "Массовое число",
+    "audit": {
+      "expression": "Z+N",
+      "variables": {
+        "Z": 26,
+        "N": 30
+      }
+    }
+  },
+  {
+    "id": "C1-141",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления S в Na2SO4. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "6",
+    "explanation": "Сумма степеней окисления в Na2SO4 равна нулю; для S получается +6.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "Na2SO4"
+    }
+  },
+  {
+    "id": "C1-142",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления N в KNO3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "5",
+    "explanation": "Сумма степеней окисления в KNO3 равна нулю; для N получается +5.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "KNO3"
+    }
+  },
+  {
+    "id": "C1-143",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления C в CaCO3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "4",
+    "explanation": "Сумма степеней окисления в CaCO3 равна нулю; для C получается +4.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "CaCO3"
+    }
+  },
+  {
+    "id": "C1-144",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Mn в KMnO4. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "7",
+    "explanation": "Сумма степеней окисления в KMnO4 равна нулю; для Mn получается +7.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "KMnO4"
+    }
+  },
+  {
+    "id": "C1-145",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Cr в K2Cr2O7. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "6",
+    "explanation": "Сумма степеней окисления в K2Cr2O7 равна нулю; для Cr получается +6.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "K2Cr2O7"
+    }
+  },
+  {
+    "id": "C1-146",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Fe в Fe2O3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "3",
+    "explanation": "Сумма степеней окисления в Fe2O3 равна нулю; для Fe получается +3.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "Fe2O3"
+    }
+  },
+  {
+    "id": "C1-147",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Fe в FeO. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "2",
+    "explanation": "Сумма степеней окисления в FeO равна нулю; для Fe получается +2.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "FeO"
+    }
+  },
+  {
+    "id": "C1-148",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Cu в CuO. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "2",
+    "explanation": "Сумма степеней окисления в CuO равна нулю; для Cu получается +2.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "CuO"
+    }
+  },
+  {
+    "id": "C1-149",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Al в Al2O3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "3",
+    "explanation": "Сумма степеней окисления в Al2O3 равна нулю; для Al получается +3.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "Al2O3"
+    }
+  },
+  {
+    "id": "C1-150",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Si в SiO2. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "4",
+    "explanation": "Сумма степеней окисления в SiO2 равна нулю; для Si получается +4.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "SiO2"
+    }
+  },
+  {
+    "id": "C1-151",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления S в SO2. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "4",
+    "explanation": "Сумма степеней окисления в SO2 равна нулю; для S получается +4.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "SO2"
+    }
+  },
+  {
+    "id": "C1-152",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления S в SO3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "6",
+    "explanation": "Сумма степеней окисления в SO3 равна нулю; для S получается +6.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "SO3"
+    }
+  },
+  {
+    "id": "C1-153",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления C в CO2. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "4",
+    "explanation": "Сумма степеней окисления в CO2 равна нулю; для C получается +4.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "CO2"
+    }
+  },
+  {
+    "id": "C1-154",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления N в N2O5. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "5",
+    "explanation": "Сумма степеней окисления в N2O5 равна нулю; для N получается +5.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "N2O5"
+    }
+  },
+  {
+    "id": "C1-155",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления P в P2O5. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "5",
+    "explanation": "Сумма степеней окисления в P2O5 равна нулю; для P получается +5.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "P2O5"
+    }
+  },
+  {
+    "id": "C1-156",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Cl в HCl. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "-1",
+    "explanation": "Сумма степеней окисления в HCl равна нулю; для Cl получается -1.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "HCl"
+    }
+  },
+  {
+    "id": "C1-157",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления S в H2S. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "-2",
+    "explanation": "Сумма степеней окисления в H2S равна нулю; для S получается -2.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "H2S"
+    }
+  },
+  {
+    "id": "C1-158",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления N в NH3. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "-3",
+    "explanation": "Сумма степеней окисления в NH3 равна нулю; для N получается -3.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "NH3"
+    }
+  },
+  {
+    "id": "C1-159",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления C в CH4. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "-4",
+    "explanation": "Сумма степеней окисления в CH4 равна нулю; для C получается -4.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "CH4"
+    }
+  },
+  {
+    "id": "C1-160",
+    "level": 1,
+    "moduleId": 4,
+    "topic": "Степени окисления",
+    "subtopic": "Степень окисления",
+    "difficulty": 3,
+    "station": "formula-board",
+    "interactionType": "oxidation-state",
+    "prompt": "Определи степень окисления Mg в MgO. Используй O: −2, H: +1, Na/K: +1, Ca: +2.",
+    "correctAnswer": "2",
+    "explanation": "Сумма степеней окисления в MgO равна нулю; для Mg получается +2.",
+    "rule": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "hint": "Сумма степеней окисления нейтральной частицы равна нулю.",
+    "points": 100,
+    "tags": [
+      "module-4",
+      "Степень окисления"
+    ],
+    "procedural": false,
+    "generatorId": "",
+    "reviewStatus": "verified",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"
+    ],
+    "learningObjective": "Степень окисления",
+    "parameters": {
+      "compound": "MgO"
+    }
+  }
+]
