@@ -1,3 +1,21 @@
+## Original study-cue minimum — 2026-10-15
+
+Four original finite clips add UI actions, completed virtual mixing, streak 3/5,
+and one timer cue on each 60/15-second crossing. Menu/answer buttons use a quiet
+UI child bus routed to SFX. Mixing emits only after both correct virtual samples;
+pause, untimed practice and finished rounds produce no timer cue. Four fixed
+players bound playback resources. All cues follow the existing SFX slider.
+The accepted footstep PCM files and −32 dB playback gain remain unchanged.
+
+Source peaks: UI −22.27, liquid −25.17, combo −21.28, timer −23.12 dBFS.
+All source endpoints are silent. Native CoreAudio/mixer capture at 48 kHz measured
+post-gain peaks −36.28/−35.19/−31.28/−33.12 dBFS at SFX=100%; capture is stored in
+artifacts/study-audio-native.json. This establishes non-silent playback, routing
+and headroom; it is separate from a human headphone/speaker comfort judgment.
+Source event checks cover partial/completed/repeated mixing, streak thresholds,
+pause/practice/end suppression and SFX silence. Existing audio/footstep playback
+regression passes. Fresh 0.1.5 platform packages follow.
+
 # ChemSite audio QA
 
 ## Current brushed footsteps (2026-10-10)

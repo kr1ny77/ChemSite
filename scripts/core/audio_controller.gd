@@ -13,6 +13,10 @@ var _music: AudioStreamPlayer
 var _effects: AudioStreamPlayer
 var _steps: Array[AudioStreamPlayer] = []
 var _step_index: int = 0
+var _ui: AudioStreamPlayer
+var _liquid: AudioStreamPlayer
+var _combo: AudioStreamPlayer
+var _warning: AudioStreamPlayer
 
 func _ready() -> void:
 	apply_settings(SETTINGS_DATA.load_settings())
@@ -37,6 +41,35 @@ func _ready() -> void:
 		step.stream = load(path) as AudioStream
 		add_child(step)
 		_steps.append(step)
+	_ui = _create_cue("res://assets/audio/ui_action.wav", "UI", -4.0)
+	_liquid = _create_cue("res://assets/audio/liquid_mix.wav", "SFX", -10.0)
+	_combo = _create_cue("res://assets/audio/combo.wav", "SFX", -10.0)
+	_warning = _create_cue("res://assets/audio/timer_warning.wav", "SFX", -10.0)
+	get_tree().node_added.connect(_connect_ui_action)
+
+func _create_cue(path: String, bus_name: String, gain_db: float) -> AudioStreamPlayer:
+	var player := AudioStreamPlayer.new()
+	player.stream = load(path) as AudioStream
+	player.bus = bus_name
+	player.volume_db = gain_db
+	add_child(player)
+	return player
+
+func _connect_ui_action(node: Node) -> void:
+	if node is BaseButton and not node.pressed.is_connected(play_ui_action):
+		node.pressed.connect(play_ui_action)
+
+func play_ui_action() -> void:
+	_ui.play()
+
+func play_liquid() -> void:
+	_liquid.play()
+
+func play_combo(_streak: int) -> void:
+	_combo.play()
+
+func play_timer_warning(_seconds: int) -> void:
+	_warning.play()
 
 func apply_settings(settings: Dictionary) -> void:
 	for entry in [{"bus": "Music", "key": "music_volume"}, {"bus": "SFX", "key": "sfx_volume"}]:
@@ -60,6 +93,10 @@ func play_footstep() -> void:
 	_step_index += 1
 
 func _exit_tree() -> void:
+	for player in [_ui, _liquid, _combo, _warning]:
+		if is_instance_valid(player):
+			player.stop()
+			player.stream = null
 	if is_instance_valid(_music):
 		_music.stop()
 		_music.stream = null

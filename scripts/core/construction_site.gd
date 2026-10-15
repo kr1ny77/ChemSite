@@ -4,6 +4,9 @@ signal exit_requested
 signal feedback_given(correct: bool)
 signal station_used
 signal footstep
+signal liquid_used
+signal combo_reached(streak: int)
+signal timer_warning(seconds: int)
 
 const TASK_BANK = preload("res://scripts/chemistry/task_bank.gd")
 const TASK_SCHEDULER = preload("res://scripts/chemistry/task_scheduler.gd")
@@ -104,6 +107,7 @@ func _ready() -> void:
 	_hud.answer_submitted.connect(_submit_answer)
 	_hud.resume_requested.connect(_resume)
 	_hud.exit_requested.connect(func() -> void: exit_requested.emit())
+	_hud.liquid_used.connect(func() -> void: liquid_used.emit())
 	_update_hud()
 	if _tasks.is_empty():
 		_round_done = true
@@ -137,9 +141,14 @@ func _process(delta: float) -> void:
 		_update_wayfinder()
 		return
 	if mode == "career":
+		var previous_time := _time_left
 		_time_left = maxf(0.0, _time_left - delta)
 		if _time_left <= 0.0:
 			_finish_round()
+		else:
+			for threshold in [60, 15]:
+				if previous_time > threshold and _time_left <= threshold:
+					timer_warning.emit(threshold)
 	_find_nearest_station()
 	_update_hud()
 
@@ -503,6 +512,8 @@ func _submit_answer(answer: String) -> void:
 				break
 	if valid:
 		_streak += 1
+		if _streak in [3, 5]:
+			combo_reached.emit(_streak)
 		var multiplier := 2.0 if _streak >= 5 else (1.5 if _streak >= 3 else 1.0)
 		var awarded := int(roundi(float(task.get("points", 100)) * multiplier))
 		_score += awarded

@@ -63,6 +63,7 @@ jobs:
             @{ Script = 'career_history_smoke'; Marker = 'CAREER_HISTORY_SMOKE_OK' }
             @{ Script = 'course_integration_smoke'; Marker = 'COURSE_INTEGRATION_OK' }
             @{ Script = 'learning_materials_smoke'; Marker = 'LEARNING_MATERIALS_SMOKE_OK' }
+            @{ Script = 'study_audio_smoke'; Marker = 'STUDY_AUDIO_SMOKE_OK' }
           )
           foreach ($check in $checks) {
             $log = "artifacts/native-qa/$($check.Script).log"
@@ -113,6 +114,17 @@ jobs:
           if ($process.ExitCode -ne 0 -or $text -notmatch ([regex]::Escape("PACKAGED_MOVEMENT_SMOKE_OK version=$version ")) -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') {
             throw "Packaged movement failed ($($process.ExitCode))"
           }
+      - name: Verify exported study audio events
+        shell: pwsh
+        run: |
+          $log = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'study-audio.log')
+          $exe = (Resolve-Path 'builds/windows/ChemSite.exe').Path
+          $process = Start-Process -FilePath $exe -ArgumentList @('--headless', '--log-file', ('"' + $log + '"'), '--', '--qa-study-audio') -PassThru -NoNewWindow
+          if (-not $process.WaitForExit(45000)) { Stop-Process -Id $process.Id -Force; throw 'Study audio timed out' }
+          $process.Refresh()
+          $text = Get-Content $log -Raw
+          Write-Host $text
+          if ($process.ExitCode -ne 0 -or $text -notmatch 'STUDY_AUDIO_SMOKE_OK' -or $text -match '(?m)^(SCRIPT ERROR|ERROR):') { throw 'Packaged study audio failed' }
       - name: Run native five-level gameplay smokes
         shell: pwsh
         run: |

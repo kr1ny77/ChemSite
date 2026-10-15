@@ -50,3 +50,14 @@ source entry; human mix listening remains an open audio acceptance requirement.
 `docs/release/notices/` preserves Godot 4.7.2 MIT and bundled third-party
 notices, Onest OFL and both Kenney CC0 notices. `manifest.json` records exact
 source URLs/paths and SHA-256 values for packaging verification.
+
+
+## Additional study cues — 2026-10-15
+
+`ui_action.wav`, `liquid_mix.wav`, `combo.wav`, `timer_warning.wav` are original
+ChemSite deterministic synthesis authored in `tools/audio/render_study_cues.py`.
+Mono 16-bit PCM, 44.1 kHz; finite 90/320/480/400 ms clips with silent endpoints.
+The generator writes only those four files. Existing accepted footsteps, interaction,
+feedback, machinery and music source bytes are preserved. These cues add no external
+recordings or licenses. UI routes through a quiet UI child bus into the existing SFX
+volume control; the other three cues use SFX directly.

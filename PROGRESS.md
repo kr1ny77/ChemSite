@@ -1,3 +1,16 @@
+## Final study-audio minimum implemented — 2026-10-15
+
+Current phase: 0.1.5 audio patch verification. Completed: four original finite
+study cues, UI → SFX routing, one completed-mix event, streak 3/5 events and timer
+60/15-second crossings with pause/practice/end suppression; bounded cue players.
+Existing four accepted step files and −32 dB gain are unchanged. Added repeatable
+source and packaged audio gate plus Windows CI. Current work: platform exports.
+Next task: exact-source Windows/macOS verification and immutable 0.1.5 prerelease.
+Last verification: editor import/parse; source event gate; native mixer capture of
+all four cues (post-gain peaks −36.28 to −31.28 dBFS); existing walking/audio smoke.
+Known issues: native captures prove playback/headroom; subjective full-device
+listening and instructor acceptance remain external. Published 0.1.4 stays intact.
+
 ## Original production audit follow-through — 2026-10-15
 
 Current phase: final original-audio minimum. Completed work: published 0.1.4 and

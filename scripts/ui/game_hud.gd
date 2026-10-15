@@ -3,6 +3,7 @@ extends Control
 signal answer_submitted(answer: String)
 signal resume_requested
 signal exit_requested
+signal liquid_used
 
 const MISSION_STAGE_VIEW = preload("res://scripts/ui/mission_stage_view.gd")
 const REAGENT_MIX_VIEW = preload("res://scripts/ui/reagent_mix_view.gd")
@@ -201,6 +202,7 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		_mix_view = REAGENT_MIX_VIEW.new()
 		_mix_view.configure(task.parameters, reduced_motion)
 		_mix_view.mixed.connect(func() -> void:
+			liquid_used.emit()
 			_set_answer_enabled(true)
 			_focus_first_answer()
 		)

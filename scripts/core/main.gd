@@ -18,7 +18,9 @@ func _ready() -> void:
 		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
 		print("CHEMSITE_MANUAL_PLAYTEST_ISOLATED")
 	show_menu()
-	if OS.get_cmdline_user_args().has("--qa-course"):
+	if OS.get_cmdline_user_args().has("--qa-study-audio"):
+		call_deferred("_run_study_audio_smoke")
+	elif OS.get_cmdline_user_args().has("--qa-course"):
 		call_deferred("_run_course_smoke")
 	elif OS.get_cmdline_user_args().has("--qa-movement"):
 		call_deferred("_run_movement_smoke")
@@ -277,6 +279,9 @@ func start_game(mode: String = "career", topic: String = "", level: int = 1, pro
 	_current.feedback_given.connect($AudioController.play_feedback)
 	_current.station_used.connect($AudioController.play_interact)
 	_current.footstep.connect($AudioController.play_footstep)
+	_current.liquid_used.connect($AudioController.play_liquid)
+	_current.combo_reached.connect($AudioController.play_combo)
+	_current.timer_warning.connect($AudioController.play_timer_warning)
 
 func _replace(scene: PackedScene) -> void:
 	if is_instance_valid(_current):
@@ -321,4 +326,8 @@ func _run_movement_smoke() -> void:
 
 func _run_course_smoke() -> void:
 	var passed: bool = await preload("res://scripts/qa/course_rounds_smoke.gd").run(self)
+	get_tree().quit(0 if passed else 1)
+
+func _run_study_audio_smoke() -> void:
+	var passed: bool = await preload("res://scripts/qa/study_audio_smoke.gd").run(self)
 	get_tree().quit(0 if passed else 1)

@@ -1,6 +1,7 @@
 ## Remaining original production minimum — 2026-10-15 audit
 
-- [ ] Add distinct, quiet UI-action, virtual-liquid, combo and timer-warning cues; preserve accepted footsteps and verify source/native/export routing.
+- [x] Implement quiet UI-action, virtual-liquid, combo and timer-warning cues; preserve four accepted footstep hashes and gain; source event and native mixer capture checks pass.
+- [ ] Verify and publish the 0.1.5 audio patch on macOS/Windows; retain explicit external device/listening acceptance.
 - [ ] Retain explicit instructor and user-owned physical Windows acceptance gates.
 - [x] Publish the complete 0.1.4 content update and reconcile the original brief in docs/PRODUCTION_COMPLETION_AUDIT.md.
 
