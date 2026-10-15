@@ -35,6 +35,8 @@ jobs:
       - name: Audit course and syllabus supplement
         shell: pwsh
         run: |
+          python tools/validation/check_curated_tasks.py
+          if ($LASTEXITCODE -ne 0) { throw 'Curated schema failed' }
           python tools/validation/audit_course_bank.py
           if ($LASTEXITCODE -ne 0) { throw 'Course audit failed' }
           python tools/validation/audit_syllabus_supplement.py

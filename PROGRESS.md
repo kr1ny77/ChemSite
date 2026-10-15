@@ -8,7 +8,8 @@ keyboard scrolling and reset scroll on selection. Published 1000 records remain 
 IDs and insertion/reorder controls pass. Current work: final source validation and
 exact-source exports. Next task: macOS/Windows packaged supplement, course,
 practice, keyboard, audio and visual gates, then immutable 0.1.6 prerelease.
-Last verification: independent 18 prompt-derived numeric checks and wrong-answer
+Last verification: combined schema distribution gate updated to 1053 and added
+to Windows CI; independent 18 prompt-derived numeric checks and wrong-answer
 controls, polymer composition/condensation balance, 53 actual native UI answers,
 16-reference modal/retained-input gate, six scientific expressions / nine rejected
 inputs, native 1053 task / 2106 feedback layouts at 1028×642; ten source captures

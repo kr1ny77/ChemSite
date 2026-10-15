@@ -1,4 +1,4 @@
-"""Validate the combined 1000-task chemistry bank before native selection."""
+"""Validate the combined 1053-task chemistry bank before native selection."""
 import json
 from collections import Counter
 from pathlib import Path
@@ -40,11 +40,11 @@ for task in TASKS:
             errors.append(f"{identifier}: options omit accepted answer")
 
 counts = Counter(task.get("level") for task in TASKS)
-if len(TASKS) != 1000 or counts != {1: 200, 2: 160, 3: 240, 4: 240, 5: 160}:
+if len(TASKS) != 1053 or counts != {1: 200, 2: 160, 3: 272, 4: 248, 5: 173}:
     errors.append(f"Unexpected task distribution: {counts}")
 
 if errors:
     raise SystemExit("\n".join(errors))
 verified = sum(task.get("reviewStatus") == "verified" for task in TASKS)
 review_required = len(TASKS) - verified
-print(f"CURATED_TASKS_OK: 1000 tasks, {verified} verified, {review_required} in review")
+print(f"CURATED_TASKS_OK: 1053 tasks, {verified} verified, {review_required} in review")
