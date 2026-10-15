@@ -1,0 +1,58 @@
+{
+  "source_revision": "bb68498d17a0a9f63c5901d44429aa2b8544d166",
+  "version": "0.1.5",
+  "native_mix_capture": [
+    {
+      "cue": "ui",
+      "frames": 31232,
+      "mix_rate": 48000.0,
+      "peak_dbfs": -36.2776268774814,
+      "rms_dbfs": -56.7996594177696
+    },
+    {
+      "cue": "liquid",
+      "frames": 31232,
+      "mix_rate": 48000.0,
+      "peak_dbfs": -35.1891990170971,
+      "rms_dbfs": -50.3413919558885
+    },
+    {
+      "cue": "combo",
+      "frames": 30720,
+      "mix_rate": 48000.0,
+      "peak_dbfs": -31.2794723271451,
+      "rms_dbfs": -43.4393429623659
+    },
+    {
+      "cue": "timer",
+      "frames": 15360,
+      "mix_rate": 48000.0,
+      "peak_dbfs": -33.1190190367176,
+      "rms_dbfs": -41.8074892092731
+    }
+  ],
+  "accepted_footsteps": {
+    "step_a.wav": "be5c42be90b8b583686739ba1e7727b4fc21b86b46bc02725564bd605ef1f1aa",
+    "step_c.wav": "be9fca6031c3e5aedae35f3597c9d9bed75dc20081151fedabcb207c9f6d40bd",
+    "step_b.wav": "449cb7a3a2e9798ad3bad649b6ea6559b008f190e0da30217a6f00e0d37807e3",
+    "step_d.wav": "3964a3841d712a63c1f2bf346812ddcc5e38baef8aa6c6d694d24d0753d6889b"
+  },
+  "cues": {
+    "ui_action.wav": {
+      "sha256": "57c380d8377852170fc64a6780d5849cc923495df1ce30982eb421139997ca4a",
+      "bytes": 7982
+    },
+    "liquid_mix.wav": {
+      "sha256": "eae3c4203f40377b5828e75eabfe4d18ba4d4fde47bc83705d7f6611c6861af9",
+      "bytes": 28268
+    },
+    "combo.wav": {
+      "sha256": "c1733aba220d67ccb0cc55ed51b6d4dd33e1642c10d26e9c43de87679596ce70",
+      "bytes": 42380
+    },
+    "timer_warning.wav": {
+      "sha256": "d3ba7836e0a6e0da3723dcada7d8bbe7107e36ed8572ac49a371a9970d05e301",
+      "bytes": 35324
+    }
+  }
+}

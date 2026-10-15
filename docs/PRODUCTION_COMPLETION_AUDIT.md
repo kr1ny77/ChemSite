@@ -1,8 +1,8 @@
 # Production completion audit — 2026-10-15
 
-The 0.1.4 content update is delivered. The full persistent production goal remains
-active because the original audio minimum has additional implementation work and
-external acceptance remains open. This audit preserves the scope of the original
+The 0.1.4 content update is delivered. The remaining original audio cues are
+implemented in the 0.1.5 candidate. The full persistent production goal remains
+active through final package verification and external acceptance. This audit preserves the scope of the original
 production brief and the latest 1000-task request.
 
 | Requirement | Current evidence | Status |
@@ -20,7 +20,7 @@ production brief and the latest 1000-task request.
 | HUD/menu typography and accessibility | Onest, hidden hints, shuffled choices; actual-size 1000/2000 layout matrix; contrast/focus/raw-key gates; current native/Windows captures | Technical verification complete |
 | Saves, adaptive mastery, XP/stars/combo, progression | save schema 6; atomic writes; migration/history/mastery/round tests; packaged five-environment and 13-chapter gates | Verified |
 | Existing audio: footsteps, music, machinery, station activation and correct/incorrect feedback | audio_controller.gd and construction_site.gd; source provenance; exported macOS human footstep and five-task acceptance | Verified for current layer |
-| Original minimum audio: distinct UI actions, liquid interaction, combo and timer warning | Current AudioController exposes feedback, station interaction and footsteps; relevant additional cues are absent from runtime routing | Implementation remains |
+| Original minimum audio: distinct UI actions, liquid interaction, combo and timer warning | Current AudioController exposes feedback, station interaction and footsteps; relevant additional cues are absent from runtime routing | Implemented; 0.1.5 package verification in progress |
 | Approximately 60 FPS on representative student laptop | Existing measured M4 baseline; user explicitly owns testing their Windows machine | External device acceptance |
 | Formal target-course instructor acceptance | Deterministic/source-based internal chemistry review is recorded; instructor acceptance is explicitly open in CHEMISTRY_REVIEW.md | External acceptance |
 | macOS and Windows archives / release | v0.1.4 source 5eeca30, native/visual Windows success, extracted macOS run, asset/file hashes and public download HTTP 200 | Verified prerelease |

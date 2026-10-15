@@ -45,6 +45,8 @@ def main():
     topic_count = len({(task['level'], task['topic']) for task in bank if task.get('reviewStatus') == 'verified'})
     required.append(f'PRACTICE_LEVELS_SMOKE_OK topics={topic_count} levels=5')
     required.append(f'COURSE_ROUNDS_SMOKE_OK version={args.version} chapters=13 answers=65 practice=5')
+    if tuple(map(int, args.version.split('-', 1)[0].split('.'))) >= (0, 1, 5):
+        required.append(f'STUDY_AUDIO_SMOKE_OK version={args.version}')
     for marker in required:
         if marker not in logs:
             raise SystemExit('Missing packaged verification marker: ' + marker)

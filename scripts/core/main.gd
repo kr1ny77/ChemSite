@@ -13,6 +13,8 @@ var _current: Node
 var _manual_playtest := false
 
 func _ready() -> void:
+	get_tree().auto_accept_quit = false
+	get_window().close_requested.connect(func() -> void: _shutdown(0))
 	_manual_playtest = OS.get_cmdline_user_args().has("--qa-playtest") or OS.get_cmdline_user_args().has("--qa-keyboard-round") or OS.get_cmdline_user_args().has("--qa-movement")
 	if _manual_playtest:
 		$AudioController.apply_settings(preload("res://scripts/core/settings_data.gd").load_settings(QA_PLAYTEST_SETTINGS))
@@ -109,143 +111,143 @@ func _ready() -> void:
 
 func _run_export_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_site_inspections() -> void:
 	var passed: bool = await EXPORT_SITE_INSPECTION_SMOKE.run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_site_inspections() -> void:
 	var passed: bool = await EXPORT_SITE_INSPECTION_SMOKE.run(self, true)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_two_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 2)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_scale_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-086", "L3-087", "L3-088", "L3-089", "L3-090"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_solution_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-095", "L3-096", "L3-097", "L3-098", "L3-099"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_ph_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-101", "L3-102", "L3-103", "L3-107", "L3-104"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_ion_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-113", "L3-114", "L3-115", "L3-116", "L3-117"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_hydrolysis_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-117", "L3-118", "L3-119", "L3-116", "L3-120"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_three_dissociation_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 3, ["L3-109", "L3-110", "L3-111", "L3-112", "L3-120"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_hess_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-126", "L4-127", "L4-128", "L4-129", "L4-130"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_kinetics_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-131", "L4-133", "L4-134", "L4-135", "L4-138"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_equilibrium_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-136", "L4-139", "L4-141", "L4-143", "L4-146"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_electrode_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-147", "L4-149", "L4-150", "L4-151", "L4-152"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_corrosion_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-153", "L4-154", "L4-156", "L4-158", "L4-159"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_five_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 5)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_five_mission_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 5, ["L5-180", "L5-190", "L5-196", "L5-198", "L5-200"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_two_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 2)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_scale_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-086", "L3-087", "L3-088", "L3-089", "L3-090"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_ph_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-101", "L3-102", "L3-103", "L3-107", "L3-104"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_ion_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-113", "L3-114", "L3-115", "L3-116", "L3-117"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_hydrolysis_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-117", "L3-118", "L3-119", "L3-116", "L3-120"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_three_dissociation_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 3, ["L3-109", "L3-110", "L3-111", "L3-112", "L3-120"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_hess_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-126", "L4-127", "L4-128", "L4-129", "L4-130"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_kinetics_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-131", "L4-133", "L4-134", "L4-135", "L4-138"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_equilibrium_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-136", "L4-139", "L4-141", "L4-143", "L4-146"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_electrode_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-147", "L4-149", "L4-150", "L4-151", "L4-152"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_corrosion_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-153", "L4-154", "L4-156", "L4-158", "L4-159"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_five_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 5)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_five_mission_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 5, ["L5-180", "L5-190", "L5-196", "L5-198", "L5-200"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func show_menu() -> void:
 	_replace(MENU_SCENE)
@@ -298,23 +300,23 @@ func _configure_playtest_paths() -> void:
 func _run_keyboard_smoke() -> void:
 	get_tree().create_timer(120).timeout.connect(func(): get_tree().quit(1))
 	var passed: bool = await KEYBOARD_ROUND_SMOKE.run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_surface_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, false, 4, ["L4-155", "L4-157", "L4-158", "L4-153", "L4-156"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_visual_level_four_surface_smoke() -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, true, 4, ["L4-155", "L4-157", "L4-158", "L4-153", "L4-156"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_export_level_four_thermal_smoke(capture_visual: bool = false) -> void:
 	var passed: bool = await EXPORT_ROUND_SMOKE.run(self, capture_visual, 4, ["L4-133", "L4-143", "L4-144", "L4-129", "L4-130"])
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_practice_levels_smoke() -> void:
 	var passed: bool = await preload("res://scripts/qa/practice_levels_smoke.gd").run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_movement_smoke() -> void:
 	get_tree().create_timer(20.0).timeout.connect(func(): get_tree().quit(1))
@@ -322,12 +324,27 @@ func _run_movement_smoke() -> void:
 		_current.queue_free()
 		_current = null
 	var passed: bool = await preload("res://scripts/qa/packaged_movement_smoke.gd").new().run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_course_smoke() -> void:
 	var passed: bool = await preload("res://scripts/qa/course_rounds_smoke.gd").run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
 
 func _run_study_audio_smoke() -> void:
 	var passed: bool = await preload("res://scripts/qa/study_audio_smoke.gd").run(self)
-	get_tree().quit(0 if passed else 1)
+	await _shutdown(0 if passed else 1)
+
+var _closing := false
+func _shutdown(exit_code: int) -> void:
+	if _closing: return
+	_closing = true
+	var audio := get_node_or_null("AudioController")
+	if audio != null:
+		audio.stop_all()
+	if is_instance_valid(_current):
+		_current.queue_free()
+	if audio != null:
+		audio.queue_free()
+	for frame in range(4): await get_tree().process_frame
+	await get_tree().create_timer(.6).timeout
+	get_tree().quit(exit_code)

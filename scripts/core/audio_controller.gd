@@ -92,14 +92,11 @@ func play_footstep() -> void:
 	step.play()
 	_step_index += 1
 
-func _exit_tree() -> void:
-	for player in [_ui, _liquid, _combo, _warning]:
+func stop_all() -> void:
+	for player in [_ui, _liquid, _combo, _warning, _music, _effects] + _steps:
 		if is_instance_valid(player):
 			player.stop()
 			player.stream = null
-	if is_instance_valid(_music):
-		_music.stop()
-		_music.stream = null
-	if is_instance_valid(_effects):
-		_effects.stop()
-		_effects.stream = null
+
+func _exit_tree() -> void:
+	stop_all()

@@ -128,9 +128,16 @@ jobs:
       - name: Run native five-level gameplay smokes
         shell: pwsh
         run: |
+          function Assert-CleanLog($path) {
+            $text = Get-Content $path -Raw
+            Write-Host $text
+            if ($text -match '(?m)^(SCRIPT ERROR|ERROR):|ObjectDB instances leaked') { throw "Engine shutdown/runtime error in $path" }
+          }
           foreach ($level in 1..5) {
             $flag = if ($level -eq 1) { '--qa-round' } else { "--qa-level$level-round" }
-            $round = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', $flag) -Wait -PassThru -NoNewWindow
+            $roundLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path "round-$level.log")
+            $round = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $roundLog + '"'), '--', $flag) -Wait -PassThru -NoNewWindow
+            Assert-CleanLog $roundLog
             if ($round.ExitCode -ne 0) { throw "Level $level packaged smoke failed ($($round.ExitCode))" }
           }
           $courseLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'course-rounds.log')
@@ -140,35 +147,65 @@ jobs:
           $courseText = Get-Content $courseLog -Raw
           Write-Host $courseText
           if ($course.ExitCode -ne 0 -or $courseText -notmatch 'COURSE_ROUNDS_SMOKE_OK' -or $courseText -match '(?m)^(SCRIPT ERROR|ERROR):') { throw 'Course rounds failed' }
-          $practice = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-practice-levels') -Wait -PassThru -NoNewWindow
+          $practiceLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'practice.log')
+          $practice = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $practiceLog + '"'), '--', '--qa-practice-levels') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $practiceLog
           if ($practice.ExitCode -ne 0) { throw "Five-level practice smoke failed ($($practice.ExitCode))" }
-          $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow
+          $missionLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'mission.log')
+          $mission = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $missionLog + '"'), '--', '--qa-level5-mission-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $missionLog
           if ($mission.ExitCode -ne 0) { throw "Level 5 mission smoke failed ($($mission.ExitCode))" }
-          $inspections = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-site-inspections') -Wait -PassThru -NoNewWindow
+          $inspectionsLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'inspections.log')
+          $inspections = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $inspectionsLog + '"'), '--', '--qa-site-inspections') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $inspectionsLog
           if ($inspections.ExitCode -ne 0) { throw "Site inspection smoke failed ($($inspections.ExitCode))" }
-          $scales = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-scale-round') -Wait -PassThru -NoNewWindow
+          $scalesLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'scales.log')
+          $scales = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $scalesLog + '"'), '--', '--qa-level3-scale-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $scalesLog
           if ($scales.ExitCode -ne 0) { throw "Level 3 scale smoke failed ($($scales.ExitCode))" }
-          $solution = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-solution-round') -Wait -PassThru -NoNewWindow
+          $solutionLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'solution.log')
+          $solution = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $solutionLog + '"'), '--', '--qa-level3-solution-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $solutionLog
           if ($solution.ExitCode -ne 0) { throw "Level 3 solution smoke failed ($($solution.ExitCode))" }
-          $ph = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-ph-round') -Wait -PassThru -NoNewWindow
+          $phLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'ph.log')
+          $ph = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $phLog + '"'), '--', '--qa-level3-ph-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $phLog
           if ($ph.ExitCode -ne 0) { throw "Level 3 pH smoke failed ($($ph.ExitCode))" }
-          $ions = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-ion-round') -Wait -PassThru -NoNewWindow
+          $ionsLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'ions.log')
+          $ions = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $ionsLog + '"'), '--', '--qa-level3-ion-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $ionsLog
           if ($ions.ExitCode -ne 0) { throw "Level 3 ion scan smoke failed ($($ions.ExitCode))" }
-          $hydrolysis = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-hydrolysis-round') -Wait -PassThru -NoNewWindow
+          $hydrolysisLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'hydrolysis.log')
+          $hydrolysis = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $hydrolysisLog + '"'), '--', '--qa-level3-hydrolysis-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $hydrolysisLog
           if ($hydrolysis.ExitCode -ne 0) { throw "Level 3 hydrolysis smoke failed ($($hydrolysis.ExitCode))" }
-          $dissociation = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level3-dissociation-round') -Wait -PassThru -NoNewWindow
+          $dissociationLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'dissociation.log')
+          $dissociation = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $dissociationLog + '"'), '--', '--qa-level3-dissociation-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $dissociationLog
           if ($dissociation.ExitCode -ne 0) { throw "Level 3 dissociation smoke failed ($($dissociation.ExitCode))" }
-          $hess = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-hess-round') -Wait -PassThru -NoNewWindow
+          $hessLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'hess.log')
+          $hess = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $hessLog + '"'), '--', '--qa-level4-hess-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $hessLog
           if ($hess.ExitCode -ne 0) { throw "Level 4 Hess smoke failed ($($hess.ExitCode))" }
-          $kinetics = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-kinetics-round') -Wait -PassThru -NoNewWindow
+          $kineticsLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'kinetics.log')
+          $kinetics = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $kineticsLog + '"'), '--', '--qa-level4-kinetics-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $kineticsLog
           if ($kinetics.ExitCode -ne 0) { throw "Level 4 kinetics smoke failed ($($kinetics.ExitCode))" }
-          $thermal = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-thermal-round') -Wait -PassThru -NoNewWindow
+          $thermalLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'thermal.log')
+          $thermal = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $thermalLog + '"'), '--', '--qa-level4-thermal-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $thermalLog
           if ($thermal.ExitCode -ne 0) { throw 'Level 4 thermal round failed' }
-          $equilibrium = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-equilibrium-round') -Wait -PassThru -NoNewWindow
+          $equilibriumLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'equilibrium.log')
+          $equilibrium = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $equilibriumLog + '"'), '--', '--qa-level4-equilibrium-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $equilibriumLog
           if ($equilibrium.ExitCode -ne 0) { throw "Level 4 equilibrium smoke failed ($($equilibrium.ExitCode))" }
-          $electrodes = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-electrode-round') -Wait -PassThru -NoNewWindow
+          $electrodesLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'electrodes.log')
+          $electrodes = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $electrodesLog + '"'), '--', '--qa-level4-electrode-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $electrodesLog
           if ($electrodes.ExitCode -ne 0) { throw "Level 4 electrode smoke failed ($($electrodes.ExitCode))" }
-          $corrosion = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--', '--qa-level4-corrosion-round') -Wait -PassThru -NoNewWindow
+          $corrosionLog = (Join-Path (Resolve-Path 'artifacts/native-qa').Path 'corrosion.log')
+          $corrosion = Start-Process -FilePath (Resolve-Path 'builds/windows/ChemSite.exe') -ArgumentList @('--headless', '--log-file', ('"' + $corrosionLog + '"'), '--', '--qa-level4-corrosion-round') -Wait -PassThru -NoNewWindow
+          Assert-CleanLog $corrosionLog
           if ($corrosion.ExitCode -ne 0) { throw "Level 4 corrosion smoke failed ($($corrosion.ExitCode))" }
       - name: Verify packaged keyboard event rounds
         shell: pwsh

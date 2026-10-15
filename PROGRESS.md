@@ -1,3 +1,14 @@
+## Audio shutdown correction — 2026-10-15
+
+Current phase: final 0.1.5 platform verification. Completed: graceful SceneTree
+window-close and QA shutdown stops all audio streams, frees scene/audio nodes and
+waits for mixer release. Windows legacy exported checks now reject engine errors
+and leaked ObjectDB messages in saved logs. Last verification: clean source
+qa-round, qa-study-audio and qa-site-inspections. Current work: fresh exact-source
+exports and CI. Next task: rebuild both packages and replace draft assets before
+publication. Known issues: earlier bb68498 Windows job was green but its full log
+contained teardown errors; that candidate is excluded from release.
+
 ## Final study-audio minimum implemented — 2026-10-15
 
 Current phase: 0.1.5 audio patch verification. Completed: four original finite
