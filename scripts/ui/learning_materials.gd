@@ -4,6 +4,8 @@ var _content: VBoxContainer
 var _catalog: Array
 var _previous_focus: Control
 var initial_material := "periodic"
+var _close_button: Button
+var _closing := false
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -47,6 +49,7 @@ func _ready() -> void:
 	selector.item_selected.connect(_display)
 	row.add_child(selector)
 	var close := Button.new()
+	_close_button = close
 	close.text = "К ЗАДАНИЮ  ←"
 	close.pressed.connect(_close)
 	row.add_child(close)
@@ -64,7 +67,12 @@ func _ready() -> void:
 		if _catalog[index].id == initial_material: initial_index = index
 	selector.select(initial_index)
 	_display(initial_index)
+	get_viewport().gui_focus_changed.connect(_confine_focus)
 	close.grab_focus()
+
+func _confine_focus(control: Control) -> void:
+	if not _closing and control != null and not is_ancestor_of(control):
+		_close_button.grab_focus.call_deferred()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -72,6 +80,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_close()
 
 func _close() -> void:
+	_closing = true
 	if is_instance_valid(_previous_focus): _previous_focus.grab_focus()
 	queue_free()
 

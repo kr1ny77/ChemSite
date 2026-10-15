@@ -21,6 +21,10 @@ func _run() -> void:
 	var overlay: Node = hud.get_child(hud.get_child_count() - 1)
 	await process_frame
 	assert(overlay.initial_material == "acid")
+	input.grab_focus()
+	await process_frame
+	await process_frame
+	assert(overlay.is_ancestor_of(root.gui_get_focus_owner()), "Materials focus escaped to the covered answer")
 	for index in range(overlay._catalog.size()):
 		overlay._display(index)
 		await process_frame
