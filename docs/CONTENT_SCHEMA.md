@@ -977,3 +977,16 @@ chemistry, native bank, chapter routing and HUD layout checks. An added referenc
 uses a stable ID, title, original text, source URL, optional columns/rows and
 licensed image/diagram paths in `materials/catalog.json`. Record image rights in
 `assets/learning/ATTRIBUTION.md`. Answer changes require renewed scientific review.
+
+
+### Published task identity registry
+
+`tools/chemistry/course_id_registry.json` reserves the authoring identities and IDs
+of published course tasks. The builder uses `course_ids.py` to retain IDs when
+new families are inserted or source order changes; removed IDs remain reserved.
+The identity includes course family, prompt (or explicit contentKey), and audit
+evidence. Changing those identity fields creates a new task; retain an explicit
+contentKey when planning wording revisions. Run `stable_course_ids_smoke.py` and
+review bank diffs after rebuilding. A round-trip rebuild of the current 800
+extension records preserves all five source files and the 1000-task aggregate
+byte-for-byte. This protects persisted career history as the bank grows.

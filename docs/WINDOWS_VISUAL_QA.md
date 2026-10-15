@@ -171,3 +171,20 @@ and randomized choices preserve layout and correct answer submission.
 Public release 409081352, tag, four asset sizes/digests and two checksum
 downloads verified in docs/release/v0.1.3-verification.json.
 Broader human, device, accessibility and course acceptance remain open.
+
+
+## Expanded-course release 0.1.4 — 5eeca30
+
+Native 38740750932 and graphical 38740750716 succeeded. Downloaded 212 PNGs,
+all 1028×642; decoded each image and inspected all sixteen round sheets, plus
+full-size new calorimetry input/feedback and protector observation panels.
+No new clipping was observed. The 1000-task/2000-feedback rendered layout gate
+passes in the Windows workflow. Source/menu accessibility passes 201 checks.
+The new materials modal was also manually exercised in the native macOS package.
+Windows remains Compatibility/Dummy Audio CI evidence; physical Windows Forward+
+performance, device input and sound acceptance stay with the user.
+
+Local evidence: artifacts/course-qa/windows-visual/, windows-sheets/ and
+windows-visual-files.json. Artifact 11976194127 reports SHA-256
+9e6feaf658fc08394aa383ec6ba45fae4dc65ddbd08929d2d332c90aba4f223f.
+Release/archive evidence: docs/release/course-0.1.4-proof.json.

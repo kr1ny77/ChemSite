@@ -1,0 +1,88 @@
+{
+  "version": "0.1.4",
+  "status": "published_verified_prerelease",
+  "source_revision": "5eeca30940f1571e50a355e29961f0bd2fd36a94",
+  "release_url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.4",
+  "release_id": 413839114,
+  "bank": {
+    "tasks": 1000,
+    "unique_ids": 1000,
+    "unique_prompts": 1000,
+    "sha256": "a828034f649b9c8fe13f62a295d776d0cbc11ff7e84b06f6723f4b91b000f594",
+    "chapters": 13,
+    "worked_calculations": 570,
+    "selectable_references": 11
+  },
+  "windows": {
+    "native_run": 38740750932,
+    "visual_run": 38740750716,
+    "build_artifact_id": 11975972863,
+    "build_artifact_sha256": "867436b66632ce877931c72803f65f14a0d7b69c0b2132d472e78ba3e5268f0a",
+    "visual_artifact_id": 11976194127,
+    "visual_artifact_sha256_reported": "9e6feaf658fc08394aa383ec6ba45fae4dc65ddbd08929d2d332c90aba4f223f",
+    "visual_png_count": 212,
+    "visual_size": [
+      1028,
+      642
+    ],
+    "reviewed_round_sheets": 16,
+    "full_size_reviews": [
+      "level4/task_05.png",
+      "level4/feedback_05.png",
+      "level4-corrosion/observation_03.png"
+    ],
+    "embedded_file_version": "0.1.4.0",
+    "embedded_product_version": "0.1.4.0",
+    "public_download_http_status": 200
+  },
+  "macOS": {
+    "packaged_keyboard_round": true,
+    "packaged_practice_50_topics": true,
+    "packaged_13_chapters_65_answers": true,
+    "extracted_archive_13_chapter_test": true,
+    "packaged_movement": true,
+    "manual_materials_table_calculator_and_return": true
+  },
+  "release_assets": [
+    {
+      "name": "ChemSite-macOS.zip",
+      "size": 78151671,
+      "digest": "sha256:8f351278182574f12954aef8efa76aea640660c950e0fdfd1b278f3db5fa39a1",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.4/ChemSite-macOS.zip"
+    },
+    {
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:38ca4eafcdfcb8dfd30171ce003d39cd4f1f45cf22f43eb4c60b548f52276b27",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.4/ChemSite-macOS.zip.sha256"
+    },
+    {
+      "name": "ChemSite-Windows.zip",
+      "size": 50474771,
+      "digest": "sha256:329a1f31720114c81313393992ed9d03779d5c71185a229ba2ac50c0e9ec69ee",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.4/ChemSite-Windows.zip"
+    },
+    {
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:e109b35d216662ac18e878e39e7cc94d44cd3754d218ce8c18ab63670e8d4d3e",
+      "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.4/ChemSite-Windows.zip.sha256"
+    }
+  ],
+  "evidence_logs_sha256": {
+    "artifacts/course-qa/macos-course.log": "a761dbfd531af0caa3a5f046e45ad51589225a1e2160c523b10a0297bf52f93b",
+    "artifacts/course-qa/macos-extracted-course.log": "a761dbfd531af0caa3a5f046e45ad51589225a1e2160c523b10a0297bf52f93b",
+    "artifacts/course-qa/macos-keyboard.log": "785db2ceb5f72bbc54fa501b9361e27c8a50a86d0fb6866ca30e38f7245fc3a6",
+    "artifacts/course-qa/macos-movement.log": "847cce2d76742e79b6b060556f1957e24a0baac042cc9a378726be70ebfaed06",
+    "artifacts/course-qa/macos-practice.log": "c052ed8e6f6f95da895ebb38f654f5590499cd53ebe074bbbaeec449f48c0a98"
+  },
+  "remaining_external_acceptance": [
+    "Target-course instructor acceptance",
+    "Physical student Windows hardware/input/audio/performance acceptance, owned by user per instruction"
+  ],
+  "limitations": [
+    "Previous successful answer IDs before save schema 6 were never recorded; prior mistake IDs migrate.",
+    "Thirteen chapters reuse five construction environments.",
+    "macOS prerelease remains unsigned."
+  ]
+}

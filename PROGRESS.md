@@ -1,3 +1,30 @@
+## 0.1.4 published and verified — 2026-10-15
+
+Current phase: release delivered; original-plan completion audit remains open.
+Completed: 1000 fixed tasks in 13 ordered chapters; persistent career history;
+multi-topic practice; 11 contextual references with table zoom, original diagrams
+and two credited photos; interactive calculator/atom model; 570 worked calculations;
+validated movement support. Both platform archives are public at
+https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.4 . Source: 5eeca30.
+Current work: original production-checkpoint audit and external acceptance tracking.
+Next task: reconcile the original long-term TODO against current evidence; target-course
+instructor acceptance and physical Windows laptop acceptance remain external items.
+Last verification: Windows native 38740750932 and graphical 38740750716 succeeded;
+212 decoded 1028×642 captures inspected in 16 sheets, plus three full-size reviews.
+CI Windows ZIP digest and extracted EXE/PCK match; embedded version 0.1.4.0.
+macOS exported keyboard, practice, movement, 13-chapter course and extracted-archive
+course tests pass. Manual exported-app use verified periodic table, calculator
+0.02 result and return to the unchanged question. Both release archives pass CRC,
+12 Windows / 15 macOS file hashes; all four public release assets match local
+SHA-256/size, Windows public download returns HTTP 200. All 1000 IDs/prompts unique.
+Future authoring registry preserves the 800 extension IDs under insertion/reorder,
+reserves removed IDs and rebuilds the current bank byte-for-byte. Proof:
+docs/release/course-0.1.4-proof.json.
+Known issues: pre-v6 successful IDs cannot be reconstructed; previous mistake IDs
+migrate. Chapters reuse five environments. Formal instructor acceptance stays open;
+physical Windows hardware acceptance belongs to the user by prior instruction.
+macOS remains an unsigned prerelease. These limitations are stated in release notes.
+
 ## Expanded-pool scoring and keyboard fixture repair — 2026-10-15
 
 Windows native run 38739477483 passed import, movement, full-bank wayfinding,

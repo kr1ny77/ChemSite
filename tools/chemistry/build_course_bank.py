@@ -229,6 +229,17 @@ for task in TASKS:
 assert Counter(t['level'] for t in TASKS)=={1:160,2:120,3:200,4:200,5:120}
 assert len(TASKS)==800
 assert len({t['prompt'] for t in TASKS})==800
+# Published identities remain stable when future families are inserted/reordered.
+from course_ids import assign_stable_ids
+registry_path=ROOT/'tools/chemistry/course_id_registry.json'
+registry=json.loads(registry_path.read_text()) if registry_path.exists() else {}
+previous=[]
+for level in range(1,6):
+ path=OUT/f'level{level}.json'
+ if path.exists(): previous.extend(json.loads(path.read_text()))
+registry=assign_stable_ids(TASKS,previous,registry)
+registry_path.write_text(json.dumps(registry,indent=2,sort_keys=True)+'\n')
+TASKS.sort(key=lambda task:(task['level'],task['id']))
 OUT.mkdir(exist_ok=True)
 for level in range(1,6):
  (OUT/f'level{level}.json').write_text(json.dumps([t for t in TASKS if t['level']==level],ensure_ascii=False,indent=2)+'\n')

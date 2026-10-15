@@ -1,5 +1,5 @@
 {
-  "status": "production_integrated_platform_verification_in_progress",
+  "status": "production_integrated_packaged_verified",
   "version": "0.1.4",
   "reference_revision": "7decf06e5ea620b49e6006f26c884faf5476beb8",
   "files_sha256": {
@@ -9,7 +9,7 @@
     "tools/validation/measure_locomotion_contact.gd": "49ad9e659c34dbb31ad85faef69ac01f94b61080fab50b9ff3e3f64d88a2101e",
     "tools/validation/capture_locomotion.gd": "06f8d4997fa81360e7fe93094b5a6785ec3b69ce3eefba8a681d887b1bfe7dde",
     "scripts/qa/packaged_movement_smoke.gd": "b3bf415f9c370849c330d58fc9952ba97bd4aeff41d2bfdc3618e55630287266",
-    "scripts/qa/keyboard_round_smoke.gd": "24fdba91a4ba99e72a1ee27a6ccd1ab647e9bfd8a78948cdb314d835ddfe9312"
+    "scripts/qa/keyboard_round_smoke.gd": "ce0ae92d60608bf9a32bffb2dcf8bfc456955c8bde53cb2939a50eecb807baf7"
   },
   "raw_reports_sha256": {
     "artifacts/locomotion-contact-physics-30-support-control.json": "a4fd4a1eb8870832eae389d8bc3f56c5eb0037667f00cda315007097a47d1d72",
@@ -288,5 +288,12 @@
     "final macOS keyboard/practice/movement archive verification",
     "Windows native and graphical CI at exact source revision",
     "prerelease packaging/publication"
-  ]
+  ],
+  "platform_verification": {
+    "source_revision": "5eeca30940f1571e50a355e29961f0bd2fd36a94",
+    "windows_native_run": 38740750932,
+    "windows_visual_run": 38740750716,
+    "macOS_packaged_movement_log_sha256": "847cce2d76742e79b6b060556f1957e24a0baac042cc9a378726be70ebfaed06",
+    "release_url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.4"
+  }
 }

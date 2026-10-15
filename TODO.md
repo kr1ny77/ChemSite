@@ -5,7 +5,8 @@
 - [x] Integrate 13 sequential course chapters independently of five environment layouts; 1000 unique routed tasks and 65 native UI answers pass.
 - [x] Add multi-topic practice selection; 50 topic bindings and mixed-topic round verified.
 - [x] Add 11 contextual references, original diagrams, two credited photos, interactive scratchpad and 570 worked calculations.
-- [ ] Audit all 1,000 tasks, expanded interactions and full-size native layouts; export and verify updated desktop builds.
+- [x] Audit all 1,000 tasks, expanded interactions and full-size native layouts; verify macOS/Windows packages and publish v0.1.4. Native/visual Windows CI pass; 212 captures reviewed; archive and public asset hashes verified.
+- [x] Preserve published task identities during future bank expansion using a reserved-ID registry; insertion/reorder/removal controls and byte-identical rebuild pass.
 
 ## Content bank expansion — 2026-10-15
 
