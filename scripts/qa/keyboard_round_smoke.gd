@@ -15,7 +15,7 @@ static func save_path() -> String:
 static func _route(station: Dictionary) -> Array:
 	var position: Vector3 = station.position
 	if position.x < 0:
-		return [[KEY_A, -4.1, "x"]] if absf(position.z) < 1 else [[KEY_A, -3.3, "x"], [KEY_W, -1.7, "z"]]
+		return [[KEY_A, -2.3, "x"]] if absf(position.z) < 1 else [[KEY_W, -1.7, "z"], [KEY_A, -3.3, "x"]]
 	return [[KEY_S, 4.5, "z"], [KEY_D, 4.0, "x"]] if position.z > 0 else [[KEY_W, -3.4, "z"], [KEY_D, 4.35, "x"]]
 
 static func run(main: Node) -> bool:

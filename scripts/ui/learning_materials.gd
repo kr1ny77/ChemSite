@@ -133,4 +133,5 @@ func _display(index: int) -> void:
 			for cell in row:
 				grid.add_child(_text(cell, 21))
 	_content.add_child(_text(str(entry.get("source", "Учебный справочник ChemSite; значения округлены.")), 16))
-	_content.add_child(_text("Источник: " + str(entry.url), 15))
+	for source in entry.get("sourceRefs", [entry.url]):
+		_content.add_child(_text("Источник: " + str(source), 15))

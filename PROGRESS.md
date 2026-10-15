@@ -1,3 +1,17 @@
+## Expanded-pool scoring and keyboard fixture repair — 2026-10-15
+
+Windows native run 38739477483 passed import, movement, full-bank wayfinding,
+materials and course routing, then found a stale fixed-score expectation in the
+legacy Level 4 round. The scorer is now checked against the actual selected task
+points and independently calculated combo multipliers. Source Level 4/5 rounds
+pass. New chapter sequencing also exposed a scripted walking route through the
+inspection table; the keyboard fixture approaches from the clear north corridor
+and stops within the inspection interaction radius. The complete five-environment
+keyboard source matrix is being verified before the next CI push. Physical player
+collision and station geometry remain unchanged. Current work: final CI and archives.
+Next task: download verified Windows build and publish matching 0.1.4 packages.
+Known external acceptance items remain as listed below.
+
 ## Course release QA correction — 2026-10-15
 
 Current phase: platform verification. Windows native run 38738892290 reached the

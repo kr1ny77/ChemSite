@@ -77,6 +77,8 @@ def main():
     files += [(ROOT / 'docs/ASSET_LICENSES.md', Path('ChemSite/ASSET_LICENSES.md')),
               (ROOT / 'docs/RELEASE_READINESS.md', Path('ChemSite/KNOWN_ISSUES.md')),
               (ROOT / 'assets/learning/ATTRIBUTION.md', Path('ChemSite/LEARNING_MEDIA.md'))]
+    if args.platform == "Windows":
+        files.append((ROOT / "docs/WINDOWS_INSTALL_RU.md", Path("ChemSite/START_WINDOWS_RU.md")))
     args.output.mkdir(parents=True, exist_ok=True)
     archive = args.output / f'ChemSite-{args.platform}.zip'
     binary_hashes = {str(target): sha(source) for source, target in files if not source.is_symlink()}

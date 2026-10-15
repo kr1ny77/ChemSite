@@ -7,7 +7,10 @@
     "source": "IUPAC, таблица 4 мая 2022; разрешение «yours to use» на странице источника.",
     "url": "https://iupac.org/what-we-do/periodic-table-of-elements/",
     "diagram": "res://assets/learning/atom.svg",
-    "diagramCaption": "Счётная схема: ядро в центре; точки условно обозначают электроны. A = Z + N; q = Z − e. Число нарисованных точек служит иллюстрацией."
+    "diagramCaption": "Счётная схема: ядро в центре; точки условно обозначают электроны. A = Z + N; q = Z − e. Число нарисованных точек служит иллюстрацией.",
+    "sourceRefs": [
+      "https://iupac.org/what-we-do/periodic-table-of-elements/"
+    ]
   },
   {
     "id": "ions",
@@ -31,7 +34,10 @@
         "PO₄³⁻"
       ]
     ],
-    "url": "https://openstax.org/books/chemistry-2e/pages/2-6-molecular-and-ionic-compounds"
+    "url": "https://openstax.org/books/chemistry-2e/pages/2-6-molecular-and-ionic-compounds",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/2-6-molecular-and-ionic-compounds"
+    ]
   },
   {
     "id": "solutions",
@@ -71,7 +77,10 @@
     ],
     "url": "https://openstax.org/books/chemistry-2e/pages/3-3-molarity",
     "diagram": "res://assets/learning/solution.svg",
-    "diagramCaption": "При разбавлении увеличивается объём и уменьшается концентрация; количество растворённого вещества сохраняется при заданных условиях."
+    "diagramCaption": "При разбавлении увеличивается объём и уменьшается концентрация; количество растворённого вещества сохраняется при заданных условиях.",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/3-3-molarity"
+    ]
   },
   {
     "id": "acid",
@@ -95,7 +104,10 @@
         "выше 7"
       ]
     ],
-    "url": "https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh"
+    "url": "https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh"
+    ]
   },
   {
     "id": "energy",
@@ -125,7 +137,11 @@
     ],
     "url": "https://openstax.org/books/chemistry-2e/pages/16-4-free-energy",
     "diagram": "res://assets/learning/energy.svg",
-    "diagramCaption": "Оранжевый путь — без катализатора, зелёный — с катализатором. Исходное и конечное состояния у двух путей совпадают."
+    "diagramCaption": "Оранжевый путь — без катализатора, зелёный — с катализатором. Исходное и конечное состояния у двух путей совпадают.",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/16-4-free-energy",
+      "https://openstax.org/books/chemistry-2e/pages/5-2-calorimetry"
+    ]
   },
   {
     "id": "electro",
@@ -157,7 +173,10 @@
         "+0.80"
       ]
     ],
-    "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"
+    "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"
+    ]
   },
   {
     "id": "materials",
@@ -185,7 +204,11 @@
         "Щелочная среда, защитный слой, проницаемость"
       ]
     ],
-    "url": "https://www.usgs.gov/water-science-school/science/hardness-water"
+    "url": "https://www.usgs.gov/water-science-school/science/hardness-water",
+    "sourceRefs": [
+      "https://www.usgs.gov/water-science-school/science/hardness-water",
+      "https://www.cement.org/cement-concrete/applications-of-cement/"
+    ]
   },
   {
     "id": "corrosion-photo",
@@ -193,7 +216,10 @@
     "text": "Реальный пример повреждения металлической детали. Сопоставьте поверхность с изучаемыми факторами: водная среда, доступ кислорода, состояние защитного слоя. По одному фото состав среды и скорость коррозии определяются дополнительными измерениями.",
     "image": "res://assets/learning/corrosion_usgs.jpg",
     "source": "Фото U.S. Geological Survey, Public Domain, 31.10.2018.",
-    "url": "https://www.usgs.gov/media/images/corrosion-monitoring-well"
+    "url": "https://www.usgs.gov/media/images/corrosion-monitoring-well",
+    "sourceRefs": [
+      "https://www.usgs.gov/media/images/corrosion-monitoring-well"
+    ]
   },
   {
     "id": "concrete-photo",
@@ -201,7 +227,10 @@
     "text": "На фотографии показан мост со сколами бетона. При учебной инспекции отметьте расположение дефектов и состояние защитного слоя. Причину устанавливают по совокупности данных о конструкции и среде.",
     "image": "res://assets/learning/concrete_nps.jpg",
     "source": "NPS / Jacob W. Frank, 10.05.2023. Public Domain; Wikimedia Commons, уменьшенная копия.",
-    "url": "https://commons.wikimedia.org/wiki/File:Northeast_Entrance_Road_bridge_with_spalling_concrete_(52910290724).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Northeast_Entrance_Road_bridge_with_spalling_concrete_(52910290724).jpg",
+    "sourceRefs": [
+      "https://commons.wikimedia.org/wiki/File:Northeast_Entrance_Road_bridge_with_spalling_concrete_(52910290724).jpg"
+    ]
   },
   {
     "id": "solubility",
@@ -237,9 +266,23 @@
         "Гидроксиды металлов",
         "Обычно малорастворимы",
         "NaOH, KOH; растворимость Ca/Sr/Ba растёт вниз группы"
+      ],
+      [
+        "AB(s) ⇌ A⁺ + B⁻",
+        "Ksp ≈ s²",
+        "Идеальный раствор, отсутствие побочных реакций"
+      ],
+      [
+        "Ионное произведение Q",
+        "Q > Ksp: возможно осаждение",
+        "Q < Ksp: ненасыщенный раствор"
       ]
     ],
-    "url": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions"
+    "url": "https://openstax.org/books/chemistry-2e/pages/15-1-precipitation-and-dissolution",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/15-1-precipitation-and-dissolution",
+      "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions"
+    ]
   },
   {
     "id": "activity",
@@ -255,6 +298,9 @@
         "H → Cu, Hg, Ag, Pt, Au"
       ]
     ],
-    "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"
+    "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials",
+    "sourceRefs": [
+      "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"
+    ]
   }
 ]

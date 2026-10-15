@@ -62,8 +62,10 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 	var interact := InputEventAction.new()
 	interact.action = "interact"
 	interact.pressed = true
+	var expected_score := 0
 	for index in range(5):
 		var task: Dictionary = site._tasks[site._task_index]
+		expected_score += roundi(float(task.get("points", 100)) * (2.0 if index == 4 else (1.5 if index >= 2 else 1.0)))
 		var station: Dictionary = site._stations().filter(func(entry: Dictionary) -> bool: return entry.id == task.station)[0]
 		player.global_position = station.position + Vector3(0, 0.05, 1.8)
 		site._find_nearest_station()
@@ -105,7 +107,6 @@ static func run(main: Node, capture_visual: bool = false, level: int = 1, task_i
 	if capture_visual and not await _capture(main, capture_dir + "/results.png"):
 		return false
 	var progress: Dictionary = load("res://scripts/core/save_data.gd").load_progress(save_path)
-	var expected_score := int({1: 700, 2: 840, 3: 980, 4: 1120, 5: 1260}.get(level, -1))
 	var passed: bool = site._round_done and site._score == expected_score and int(progress.best_stars) == 3 and int(progress.completed_rounds) == level and CONSTRUCTION.stage_from_progress(progress) == level and site._construction_view.stage == level and FileAccess.get_sha256(ProjectSettings.globalize_path(SAVE.SAVE_PATH)) == user_hash
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(save_path))
 	if capture_visual:

@@ -177,6 +177,10 @@ func show_task(task: Dictionary, station_id: String) -> void:
 		var overlay := preload("res://scripts/ui/learning_materials.gd").new()
 		var module_id := int(task.get("moduleId", preload("res://scripts/chemistry/course_catalog.gd").data().taskChapters.get(str(task.id), 1)))
 		overlay.initial_material = "ions" if module_id in [2, 3, 4, 5, 11] else ("solutions" if module_id == 6 else ("acid" if module_id == 7 else ("energy" if module_id in [8, 9, 10] else ("electro" if module_id == 12 else ("materials" if module_id == 13 else "periodic")))))
+		if "Растворимость" in str(task.get("subtopic", "")) or "Осадок" in str(task.get("subtopic", "")) or task.topic == "Растворимость":
+			overlay.initial_material = "solubility"
+		elif task.topic == "Ряд активности" or task.get("subtopic", "") == "Ряд активности":
+			overlay.initial_material = "activity"
 		add_child(overlay)
 	)
 	task_header.add_child(materials)
@@ -695,6 +699,10 @@ func _station_name(station_id: String) -> String:
 
 func show_course_complete() -> void:
 	_clear_panel()
+	_objective.text = "ГЛАВА ПРОЙДЕНА"
+	_status.text = "ВЫБЕРИТЕ СЛЕДУЮЩУЮ ГЛАВУ ИЛИ ПРАКТИКУ"
+	_prompt.text = ""
+	(_prompt.get_parent() as Control).hide()
 	_panel.visible = true
 	_panel_content.add_child(_label("ВСЕ ЗАДАНИЯ ГЛАВЫ ПРОЙДЕНЫ", 29, Color("20705b")))
 	_panel_content.add_child(_label("Выберите доступную главу в меню. Для повторения выберите нужные темы в практике.", 23, Color("243b43")))
