@@ -23,6 +23,8 @@ static func run(main: Node) -> bool:
 			if site._completed != index + 1: return false
 			site._resume()
 		if not site._round_done: return false
+		# Let the real rendered answer effects finish before replacing the level.
+		await main.get_tree().create_timer(0.8).timeout
 		var progress := SAVE.load_progress(PATH)
 		if progress.chapter_records[str(int(chapter.id))].correct != 5: return false
 		if progress.unlocked_chapter != mini(13, int(chapter.id) + 1): return false
@@ -42,6 +44,7 @@ static func run(main: Node) -> bool:
 	if not practice._round_done or SAVE.load_progress(PATH).career_answered_ids.size() != 65: return false
 	if FileAccess.get_sha256(SAVE.SAVE_PATH) != hash_before: return false
 	DirAccess.remove_absolute(PATH)
+	await main.get_tree().create_timer(0.8).timeout
 	main.show_menu()
 	main.get_node("AudioController").queue_free()
 	for frame in range(5): await main.get_tree().process_frame

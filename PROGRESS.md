@@ -1,3 +1,12 @@
+## Rendered course stress-test timing — 2026-10-15
+
+Current phase: final 0.1.5 exports. Completed: source native 13-chapter stress test
+now lets 0.68-second answer particles finish before scene replacement. The prior
+zero-delay burst of five answers could destroy an in-flight Metal particle shader;
+repeated native test now exits cleanly after all 65 answers. Current work: rebuild
+with this QA timing and verify exact-source platform artifacts. Next: publish after
+clean logs and archive checks. Known issues: instructor/device acceptance external.
+
 ## Audio shutdown correction — 2026-10-15
 
 Current phase: final 0.1.5 platform verification. Completed: graceful SceneTree
