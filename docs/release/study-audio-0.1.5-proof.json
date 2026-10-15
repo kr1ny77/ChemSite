@@ -1,5 +1,5 @@
 {
-  "source_revision": "bb68498d17a0a9f63c5901d44429aa2b8544d166",
+  "source_revision": "a3aaf0d91df9c50724c41c88dc7eafe030f5c607",
   "version": "0.1.5",
   "native_mix_capture": [
     {
@@ -54,5 +54,271 @@
       "sha256": "d3ba7836e0a6e0da3723dcada7d8bbe7107e36ed8572ac49a371a9970d05e301",
       "bytes": 35324
     }
+  },
+  "native_mix_source_revision": "bb68498d17a0a9f63c5901d44429aa2b8544d166",
+  "macOS": {
+    "archive": {
+      "bytes": 78177008,
+      "sha256": "294191800825894dddedc24a8fd88c7f5d26c5eb5d4ed7aff22af5f1a7940c08"
+    },
+    "files_verified": 15,
+    "checks": [
+      "study audio",
+      "13 chapters / 65 answers",
+      "50 practice bindings",
+      "raw keyboard round",
+      "packaged movement",
+      "legacy round",
+      "extracted archive audio"
+    ],
+    "logs": "artifacts/study-audio-qa/macos-final-*.log",
+    "engine_errors": 0
+  },
+  "lifecycle_fix": {
+    "audio": "stop all streams; free scene/controller; wait for mixer release",
+    "answer_burst": "8/14 CPU particles, 0.68 seconds, native fade and 90-tick cleanup verified",
+    "excluded_candidates": [
+      "bb68498: audio resource leaks despite green native job",
+      "c09634c/ee90715: rendered exported course GPU shader resource leak"
+    ]
+  },
+  "Windows": {
+    "native_run": 38780522433,
+    "source_revision": "a3aaf0d91df9c50724c41c88dc7eafe030f5c607",
+    "build_artifact": [
+      {
+        "id": 11995587490,
+        "node_id": "MDg6QXJ0aWZhY3QxMTk5NTU4NzQ5MA==",
+        "name": "ChemSite-Windows-x86_64",
+        "size_in_bytes": 51371846,
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11995587490",
+        "archive_download_url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11995587490/zip",
+        "expired": false,
+        "digest": "sha256:d9b2e227dcb3102d419e3b0add0560d6384eea60163d5d2dac306658f16ef803",
+        "created_at": "2026-10-15T17:55:11Z",
+        "updated_at": "2026-10-15T17:55:11Z",
+        "expires_at": "2027-01-13T17:49:27Z",
+        "workflow_run": {
+          "id": 38780522433,
+          "repository_id": 1383824372,
+          "head_repository_id": 1383824372,
+          "head_branch": "main",
+          "head_sha": "a3aaf0d91df9c50724c41c88dc7eafe030f5c607"
+        }
+      },
+      {
+        "id": 11994894937,
+        "node_id": "MDg6QXJ0aWZhY3QxMTk5NDg5NDkzNw==",
+        "name": "ChemSite-Windows-native-QA-logs",
+        "size_in_bytes": 52751,
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11994894937",
+        "archive_download_url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11994894937/zip",
+        "expired": false,
+        "digest": "sha256:b5eba8f01268ab26cf546ef7023ff04e5d7c0803da46a68ba533504c70d75b6a",
+        "created_at": "2026-10-15T17:55:06Z",
+        "updated_at": "2026-10-15T17:55:06Z",
+        "expires_at": "2027-01-13T17:49:27Z",
+        "workflow_run": {
+          "id": 38780522433,
+          "repository_id": 1383824372,
+          "head_repository_id": 1383824372,
+          "head_branch": "main",
+          "head_sha": "a3aaf0d91df9c50724c41c88dc7eafe030f5c607"
+        }
+      }
+    ],
+    "native_log_files": 61,
+    "native_engine_errors": 0,
+    "files_verified": 12,
+    "visual_run": 38780522411,
+    "visual_artifact": [
+      {
+        "id": 11995388939,
+        "node_id": "MDg6QXJ0aWZhY3QxMTk5NTM4ODkzOQ==",
+        "name": "ChemSite-Windows-visual-QA",
+        "size_in_bytes": 128712074,
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11995388939",
+        "archive_download_url": "https://api.github.com/repos/kr1ny77/ChemSite/actions/artifacts/11995388939/zip",
+        "expired": false,
+        "digest": "sha256:edf7afa8ef62692a5b84488fafc81c77b2052c931af37eee5696b5a0dabbf36e",
+        "created_at": "2026-10-15T18:03:38Z",
+        "updated_at": "2026-10-15T18:03:38Z",
+        "expires_at": "2027-01-13T17:49:27Z",
+        "workflow_run": {
+          "id": 38780522411,
+          "repository_id": 1383824372,
+          "head_repository_id": 1383824372,
+          "head_branch": "main",
+          "head_sha": "a3aaf0d91df9c50724c41c88dc7eafe030f5c607"
+        }
+      }
+    ],
+    "visual_review": {
+      "screens": 212,
+      "dimensions": [
+        1028,
+        642
+      ],
+      "round_sheets_reviewed": 16,
+      "full_size_reviewed": [
+        "level4-equilibrium/observation_03.png",
+        "level3/task_04.png",
+        "level5/task_04.png"
+      ],
+      "engine_errors": 0,
+      "renderer_scope": "Windows Compatibility automated capture; native Forward+ verified on macOS"
+    }
+  },
+  "release": {
+    "id": 414093062,
+    "url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.5",
+    "prerelease": true,
+    "public_windows_head_status": 200,
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/releases/assets/644679025",
+        "id": 644679025,
+        "node_id": "RA_kwDOUnt79M4mbQVx",
+        "name": "ChemSite-macOS.zip",
+        "label": "",
+        "uploader": {
+          "login": "kr1ny77",
+          "id": 161402571,
+          "node_id": "U_kgDOCZ7Oyw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/161402571?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kr1ny77",
+          "html_url": "https://github.com/kr1ny77",
+          "followers_url": "https://api.github.com/users/kr1ny77/followers",
+          "following_url": "https://api.github.com/users/kr1ny77/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kr1ny77/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kr1ny77/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kr1ny77/subscriptions",
+          "organizations_url": "https://api.github.com/users/kr1ny77/orgs",
+          "repos_url": "https://api.github.com/users/kr1ny77/repos",
+          "events_url": "https://api.github.com/users/kr1ny77/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kr1ny77/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/zip",
+        "state": "uploaded",
+        "size": 78177008,
+        "digest": "sha256:294191800825894dddedc24a8fd88c7f5d26c5eb5d4ed7aff22af5f1a7940c08",
+        "download_count": 0,
+        "created_at": "2026-10-15T17:51:12Z",
+        "updated_at": "2026-10-15T17:51:35Z",
+        "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.5/ChemSite-macOS.zip"
+      },
+      {
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/releases/assets/644679024",
+        "id": 644679024,
+        "node_id": "RA_kwDOUnt79M4mbQVw",
+        "name": "ChemSite-macOS.zip.sha256",
+        "label": "",
+        "uploader": {
+          "login": "kr1ny77",
+          "id": 161402571,
+          "node_id": "U_kgDOCZ7Oyw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/161402571?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kr1ny77",
+          "html_url": "https://github.com/kr1ny77",
+          "followers_url": "https://api.github.com/users/kr1ny77/followers",
+          "following_url": "https://api.github.com/users/kr1ny77/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kr1ny77/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kr1ny77/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kr1ny77/subscriptions",
+          "organizations_url": "https://api.github.com/users/kr1ny77/orgs",
+          "repos_url": "https://api.github.com/users/kr1ny77/repos",
+          "events_url": "https://api.github.com/users/kr1ny77/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kr1ny77/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/octet-stream",
+        "state": "uploaded",
+        "size": 85,
+        "digest": "sha256:68c1ff79e89dc223145ac514c6a980b86646a580d463ea7fcf079fca5067c9d9",
+        "download_count": 0,
+        "created_at": "2026-10-15T17:51:12Z",
+        "updated_at": "2026-10-15T17:51:13Z",
+        "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.5/ChemSite-macOS.zip.sha256"
+      },
+      {
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/releases/assets/644691586",
+        "id": 644691586,
+        "node_id": "RA_kwDOUnt79M4mbTaC",
+        "name": "ChemSite-Windows.zip",
+        "label": "",
+        "uploader": {
+          "login": "kr1ny77",
+          "id": 161402571,
+          "node_id": "U_kgDOCZ7Oyw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/161402571?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kr1ny77",
+          "html_url": "https://github.com/kr1ny77",
+          "followers_url": "https://api.github.com/users/kr1ny77/followers",
+          "following_url": "https://api.github.com/users/kr1ny77/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kr1ny77/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kr1ny77/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kr1ny77/subscriptions",
+          "organizations_url": "https://api.github.com/users/kr1ny77/orgs",
+          "repos_url": "https://api.github.com/users/kr1ny77/repos",
+          "events_url": "https://api.github.com/users/kr1ny77/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kr1ny77/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/zip",
+        "state": "uploaded",
+        "size": 50500734,
+        "digest": "sha256:bfaa832228f1b52bb7ecd4766d7e1d41e03d236148551fbba40e569f6a4c421d",
+        "download_count": 0,
+        "created_at": "2026-10-15T17:56:27Z",
+        "updated_at": "2026-10-15T17:56:42Z",
+        "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.5/ChemSite-Windows.zip"
+      },
+      {
+        "url": "https://api.github.com/repos/kr1ny77/ChemSite/releases/assets/644691587",
+        "id": 644691587,
+        "node_id": "RA_kwDOUnt79M4mbTaD",
+        "name": "ChemSite-Windows.zip.sha256",
+        "label": "",
+        "uploader": {
+          "login": "kr1ny77",
+          "id": 161402571,
+          "node_id": "U_kgDOCZ7Oyw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/161402571?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kr1ny77",
+          "html_url": "https://github.com/kr1ny77",
+          "followers_url": "https://api.github.com/users/kr1ny77/followers",
+          "following_url": "https://api.github.com/users/kr1ny77/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kr1ny77/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kr1ny77/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kr1ny77/subscriptions",
+          "organizations_url": "https://api.github.com/users/kr1ny77/orgs",
+          "repos_url": "https://api.github.com/users/kr1ny77/repos",
+          "events_url": "https://api.github.com/users/kr1ny77/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kr1ny77/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/octet-stream",
+        "state": "uploaded",
+        "size": 87,
+        "digest": "sha256:4af56bd69afd697c9176fbf1fc5e96b4c087011b85ccfd8946a207ece8781501",
+        "download_count": 0,
+        "created_at": "2026-10-15T17:56:27Z",
+        "updated_at": "2026-10-15T17:56:27Z",
+        "browser_download_url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.5/ChemSite-Windows.zip.sha256"
+      }
+    ]
   }
 }

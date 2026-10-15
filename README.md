@@ -27,7 +27,7 @@ Built with **Godot 4.7.2, Forward+, GDScript and native desktop UI**. All experi
 
 ## Download
 
-[ChemSite v0.1.4 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.4)
+[ChemSite v0.1.5 prerelease](https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.5)
 provides **ChemSite-macOS.zip**, **ChemSite-Windows.zip** and matching SHA-256 files.
 Extract the entire archive, then open `ChemSite.app` or `ChemSite.exe`.
 Keep the Windows EXE and PCK together. Both archives include install instructions,
@@ -119,3 +119,5 @@ Original project assets include the cartoon builder, authored stations/environme
 See [ASSET_LICENSES.md](docs/ASSET_LICENSES.md) for source paths, modifications and license files. The Godot runtime has its own license and third-party notices, included with the downloadable builds.
 
 Learning references include a dated IUPAC periodic table and credited USGS/NPS public-domain photographs. Their provenance is recorded in [learning media attribution](assets/learning/ATTRIBUTION.md). [Release evidence](docs/release/course-0.1.4-proof.json) records the exact source and verified archives.
+
+Version 0.1.5 adds quiet UI, mixing, combo and timer cues, preserves accepted footsteps, and fixes audio/effect teardown. [Audio and platform release evidence](docs/release/study-audio-0.1.5-proof.json).

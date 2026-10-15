@@ -1,3 +1,24 @@
+## 0.1.5 published — 2026-10-15
+
+Current phase: automated production release complete; external acceptance handoff.
+Completed work: 1000-task/13-chapter learning update and original minimum audio
+published at https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.5 . Exact build
+source a3aaf0d91df9c50724c41c88dc7eafe030f5c607. Both platform packages, graceful
+audio shutdown and bounded CPU answer effects verified. Current work: recording
+release evidence; implementation and package work for the latest request is done.
+Next task: user-owned physical Windows test and target-course instructor review.
+Last verification: Windows native 38780522433 and visual 38780522411 success;
+61 native logs clean; 212 PNG dimensions and 16 round sheets plus three full-size
+views reviewed; artifact ZIP digests/CRCs verified; macOS course/practice/keyboard/
+movement/audio/legacy checks and extracted-archive audio pass. All 15 macOS and
+12 Windows package file hashes match; four public asset digests/sizes match and
+unauthenticated Windows download HEAD returns 200. Proof is
+ docs/release/study-audio-0.1.5-proof.json.
+Known issues: formal instructor acceptance and representative Windows device /
+full-device audio acceptance remain external. Windows graphical CI uses
+Compatibility; macOS native verification uses Forward+ on M4. The original
+production goal retains those explicit acceptance gates.
+
 ## Small answer-effect lifecycle fix — 2026-10-15
 
 Current phase: 0.1.5 final exports. Completed: the 8/14-bead answer burst uses
