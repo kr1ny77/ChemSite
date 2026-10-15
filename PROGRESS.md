@@ -1,3 +1,17 @@
+## Original production audit follow-through — 2026-10-15
+
+Current phase: final original-audio minimum. Completed work: published 0.1.4 and
+verified four public assets, both platform packages, 212 Windows captures and
+updated README. Full requirement audit is docs/PRODUCTION_COMPLETION_AUDIT.md.
+Current work: original brief audit identified missing distinct UI, liquid, combo
+and timer-warning audio paths; existing footsteps/music/machinery/feedback remain.
+Next task: implement those bounded cues through relevant audio skills, preserve
+accepted walking sound, then verify and export a subsequent patch.
+Last verification: 0.1.4 proof file, internal chemistry/UI/platform checks and
+public Windows download HTTP 200. Known issues: instructor acceptance and
+physical Windows student-device acceptance remain external. Overall goal stays
+active; the latest 1000-task/course/materials request is delivered.
+
 ## 0.1.4 published and verified — 2026-10-15
 
 Current phase: release delivered; original-plan completion audit remains open.

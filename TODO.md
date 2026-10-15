@@ -1,3 +1,9 @@
+## Remaining original production minimum — 2026-10-15 audit
+
+- [ ] Add distinct, quiet UI-action, virtual-liquid, combo and timer-warning cues; preserve accepted footsteps and verify source/native/export routing.
+- [ ] Retain explicit instructor and user-owned physical Windows acceptance gates.
+- [x] Publish the complete 0.1.4 content update and reconcile the original brief in docs/PRODUCTION_COMPLETION_AUDIT.md.
+
 ## Course integration — 2026-10-15
 
 - [x] Persist answered career task IDs, migrate version-5 mistakes, and filter future rounds; isolated native regression passes.

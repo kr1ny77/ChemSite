@@ -1,0 +1,38 @@
+# Production completion audit — 2026-10-15
+
+The 0.1.4 content update is delivered. The full persistent production goal remains
+active because the original audio minimum has additional implementation work and
+external acceptance remains open. This audit preserves the scope of the original
+production brief and the latest 1000-task request.
+
+| Requirement | Current evidence | Status |
+| --- | --- | --- |
+| Native Godot 4.x / Forward+ / GDScript / desktop | project.godot; native scenes/scripts; exact-source macOS and Windows packages | Verified |
+| Preserve browser prototype and 200 seeds | legacy-web/; original-ID fixtures in Level 1–5 audits; current bank contains 200 original IDs | Verified |
+| Git, LFS, source organization, ignored builds | origin kr1ny77/ChemSite; Git LFS 3.8; GLB/BLEND/WAV attributes; repository history and export filters | Verified |
+| Detailed original cartoon construction player, nine actions, upright interactions | CHARACTER_DIRECTION.md; authored GLB/source; prior multiview/cycle evidence; current native game/manual traversal | Technical verification complete |
+| Smooth movement, collision, camera and wayfinder | 30/60/120 Hz contact/easing/phase gates; bounded foot/body corrections; five keyboard routes; 1000 task / 10000 edge-marker cases | Verified |
+| Environment, landmarks, props and construction progress | Fenced yard, eight optional inspections, authored station models and five earned stages; current native Forward+ view and Windows sixteen-round visual review | Technical verification complete |
+| Materials, lighting, shadows and visual feedback | Shared PBR profiles; native Forward+ captures; finite particles, mixer and 32 comparison presentations; current 212 Windows captures | Technical verification complete |
+| Chemistry content and deterministic validation | 1000 unique IDs/prompts; 570 numeric audit cases; 50 formula constructions; old/new equation and original-content audits; native 1000-answer gate | Verified internally |
+| Latest sequential curriculum / practice / no repeats | 13 chapters, immediate schema-6 history, multi-topic practice, 65 chapter answers plus mixed-topic round, migration and exhaustion gates | Verified |
+| Learning materials and worked explanations | 11 references, original diagrams, two credited photos, 570 worked solutions; manual packaged table/calculator/return; native focus/retained-input gate | Verified |
+| HUD/menu typography and accessibility | Onest, hidden hints, shuffled choices; actual-size 1000/2000 layout matrix; contrast/focus/raw-key gates; current native/Windows captures | Technical verification complete |
+| Saves, adaptive mastery, XP/stars/combo, progression | save schema 6; atomic writes; migration/history/mastery/round tests; packaged five-environment and 13-chapter gates | Verified |
+| Existing audio: footsteps, music, machinery, station activation and correct/incorrect feedback | audio_controller.gd and construction_site.gd; source provenance; exported macOS human footstep and five-task acceptance | Verified for current layer |
+| Original minimum audio: distinct UI actions, liquid interaction, combo and timer warning | Current AudioController exposes feedback, station interaction and footsteps; relevant additional cues are absent from runtime routing | Implementation remains |
+| Approximately 60 FPS on representative student laptop | Existing measured M4 baseline; user explicitly owns testing their Windows machine | External device acceptance |
+| Formal target-course instructor acceptance | Deterministic/source-based internal chemistry review is recorded; instructor acceptance is explicitly open in CHEMISTRY_REVIEW.md | External acceptance |
+| macOS and Windows archives / release | v0.1.4 source 5eeca30, native/visual Windows success, extracted macOS run, asset/file hashes and public download HTTP 200 | Verified prerelease |
+| README, credits, instructions and provenance | README.md, WINDOWS_INSTALL_RU.md, ASSET_LICENSES.md, learning attribution, archive notices and BUILD_INFO | Updated and verified |
+
+## Next autonomous implementation
+
+Complete the remaining original audio cues with the audio-design/Godot audio
+workflow. Preserve the user-accepted footstep files and playback settings.
+Use quiet bounded cues, existing SFX volume control, event-specific ownership,
+finite playback and focused signal/behavior checks, followed by native listening
+and fresh exports. Published 0.1.4 archives remain immutable.
+
+Broader human/device judgments stay explicit; automated and model visual review
+are not represented as physical Windows or instructor acceptance.
