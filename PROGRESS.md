@@ -1,3 +1,13 @@
+## Small answer-effect lifecycle fix — 2026-10-15
+
+Current phase: 0.1.5 final exports. Completed: the 8/14-bead answer burst uses
+CPUParticles3D with the same geometry, colors, gradient, velocity and 0.68-second
+lifetime. Source rendered course stress test exits cleanly; five native effect
+captures and the 90-tick automatic cleanup gate pass. The timing-only correction
+was insufficient for the exported Metal build, so it was superseded by this
+bounded CPU simulation. Current work: exported course regression. Next: exact-
+source Windows/macOS packages. Known issues: instructor/device acceptance external.
+
 ## Rendered course stress-test timing — 2026-10-15
 
 Current phase: final 0.1.5 exports. Completed: source native 13-chapter stress test

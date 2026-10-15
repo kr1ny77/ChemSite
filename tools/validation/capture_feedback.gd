@@ -15,5 +15,5 @@ func _run() -> void:
 	var error := image.save_png("res://artifacts/godot-feedback.png")
 	print("FEEDBACK_CAPTURE_RESULT ", error, " ", image.get_width(), "x", image.get_height())
 	await create_timer(1.0).timeout
-	assert(site.find_children("*", "GPUParticles3D", true, false).is_empty(), "Burst did not clean up")
+	assert(site.find_children("*", "CPUParticles3D", true, false).is_empty(), "Burst did not clean up")
 	quit()

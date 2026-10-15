@@ -499,7 +499,7 @@ func _submit_answer(answer: String) -> void:
 			push_warning("Could not save topic mastery: %s" % error_string(learning_error))
 	feedback_given.emit(valid)
 	if not reduced_motion:
-		var burst := ANSWER_BURST.new() as GPUParticles3D
+		var burst := ANSWER_BURST.new() as CPUParticles3D
 		_world.add_child(burst)
 		burst.global_position = _player.global_position + Vector3(0, 2.4, 0)
 		burst.start(valid)

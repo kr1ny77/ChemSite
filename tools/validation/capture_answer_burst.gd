@@ -3,7 +3,7 @@ extends SceneTree
 const BURST = preload("res://scripts/effects/answer_burst.gd")
 var origin_tick := -1
 var last_tick := -1
-var effects: Array[GPUParticles3D] = []
+var effects: Array[CPUParticles3D] = []
 var folder := "res://artifacts/answer-burst-fade"
 
 func _initialize() -> void:
@@ -34,9 +34,9 @@ func _setup() -> void:
 		burst.position.x = -1.2 if correct else 1.2
 		burst.start(correct)
 		if baseline:
-			burst.draw_pass_1.material.albedo_color = Color("75e6ba") if correct else Color("e99352")
-			burst.draw_pass_1.material.vertex_color_use_as_albedo = false
-			burst.draw_pass_1.material.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
+			burst.mesh.material.albedo_color = Color("75e6ba") if correct else Color("e99352")
+			burst.mesh.material.vertex_color_use_as_albedo = false
+			burst.mesh.material.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
 		effects.append(burst)
 	origin_tick = Engine.get_physics_frames()
 	process_frame.connect(_tick)
