@@ -234,3 +234,12 @@ Verification: 1000 native task panels, 2000 feedback states; 13 chapter routes c
 Chapter 1 round; material modal retains entered answers; all references and interactive
 models pass their native gate. Instructor acceptance against the target syllabus
 remains OPEN. This presentation pass establishes consistency and technical validation.
+
+## Detailed fallback coverage finding — 2026-10-15
+
+The accessible MGSU 08.03.01 TEOGKH program provides more detailed outcomes than
+the previously reviewed broad course page. Compare docs/CURRICULUM_COVERAGE.md.
+Current task correctness checks remain valid. Missing assessed topic groups now
+have explicit supplement tasks in TODO.md; full curriculum coverage stays open.
+New conceptual families require source checks and deterministic answers before
+production selection. Formal instructor acceptance remains open.

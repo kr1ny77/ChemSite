@@ -176,3 +176,22 @@ References include OpenStax Chemistry 2e, OpenStax Organic Chemistry §31.7,
 USGS water hardness, American Cement Association, NIST durability publications
 and USG gypsum chemistry. The MGSU fallback mapping above remains applicable;
 full alignment to a particular UGNTU syllabus requires that syllabus and review.
+
+## Detailed fallback program retrieved — 2026-10-15
+
+An accessible official [MGSU chemistry work program for 08.03.01,
+Technical Operation of Housing and Communal Facilities](https://mgsu.ru/vikon/sveden/files/eix/080301_TEOGKH_B1_O_11_2025_brs.pdf)
+provides detailed outcomes (PDF pp. 2–3) and topic tables (pp. 4–6). It is the
+2024-updated program, approved December 2024, for the 2023-entry profile; its
+2025 filename does not change that identity. This supplies a detailed fallback
+comparison. UGNTU-specific equivalence and instructor acceptance remain open.
+
+The current 1000-task bank covers atomic/bonding/inorganic topics, stoichiometry,
+solutions/electrolytes, thermodynamics, kinetics/equilibrium, redox/electrochemistry,
+corrosion and selected construction/polymer properties. Inspection of actual
+prompts/subtopics found missing dispersed/colloidal systems, sorption/wetting and
+surfactants, named Arrhenius/Van't Hoff calculations, organic functional classes
+and polymer-formation equations. Boiling-point elevation and quantitative gas-law
+coverage also require explicit task evidence. Existing freezing-point, osmotic,
+Nernst and polymer-property questions remain valid. Add these outcomes before
+claiming complete fallback syllabus coverage. See docs/CURRICULUM_COVERAGE.md.

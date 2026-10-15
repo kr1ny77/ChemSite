@@ -1,3 +1,21 @@
+## Detailed fallback syllabus gap found — 2026-10-15
+
+Current phase: complete the chemistry coverage audit and supplement. Previous
+turn classification: progress (0.1.5 release published and verified). Completed
+this run: rechecked current TODO/release proofs and exact player/foot-plant hashes;
+reconciled eight stale technical art/UI/movement TODO entries against existing
+evidence. Retrieved the accessible official MGSU 08.03.01 TEOGKH chemistry PDF;
+pp. 2–6 expose detailed outcomes missing from the broad public course summary.
+Current work: 48 original supplemental cases authored in syllabus_supplement.py
+and exercised through an isolated preview (32 choices, 16 numeric answers; unique
+prompts and finite arithmetic pass). Production selection remains the published
+1000-task bank. Next task: independent supplement audit, contextual references /
+illustrations, stable-ID integration, native UI checks and a subsequent patch.
+Last verification: actual subtopic/prompt inspection of all 1000 records; current
+movement source hashes match reviewed proof. Known issues: full target-course
+coverage remains incomplete until this supplement passes; instructor and physical
+Windows acceptance remain external. Public 0.1.5 remains available and unchanged.
+
 ## 0.1.5 published — 2026-10-15
 
 Current phase: automated production release complete; external acceptance handoff.
