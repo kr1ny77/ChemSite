@@ -1,3 +1,15 @@
+## 0.1.6 publication authorized — 2026-10-15
+
+Current phase: published prerelease and final evidence recording. Completed work:
+user explicitly accepted visuals and requested immediate publication. Both native
+platform gates, archive CRC/payload hashes and four uploaded asset digests pass.
+Source 3a1c11b; report commit 08273c1. Current work: verify public download and
+record release metadata. Next task: collect still-running automated Windows visual
+run 38788065868 when finished. Last verification: native Windows 38788066020
+success, six macOS packaged gates and extracted archive supplement pass.
+Known issues: automatic Windows captures pending at publication, accepted by user;
+physical Windows and formal instructor acceptance remain external.
+
 ## 0.1.6 final macOS package verified — 2026-10-15
 
 Current phase: Windows exact-source gates and draft release. Completed work:

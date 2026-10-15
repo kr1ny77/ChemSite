@@ -4,7 +4,7 @@
 
 - [x] Retrieve and inspect the accessible official MGSU 08.03.01 chemistry program; identify assessed outcomes beyond the current bank.
 - [x] Review and integrate 53 supplemental cases, five contextual references, three original diagrams and scientific scratchpad functions; independent arithmetic/equation audits, 53 native UI answers, 1053/2106 actual-size layouts and ten reviewed captures pass. All 1000 published records remain unchanged.
-- [ ] Audit the supplement independently, preserve every published task ID, verify native interactions/layout and export a subsequent patch.
+- [x] Independently audit supplement and preserve all published records; native interaction/layout checks and both packaged platforms pass. Publish v0.1.6 at user request with user visual acceptance; automated Windows capture evidence follows.
 
 ## Remaining original production minimum — 2026-10-15 audit
 

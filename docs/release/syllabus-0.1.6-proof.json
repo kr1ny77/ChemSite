@@ -1,6 +1,6 @@
 {
   "version": "0.1.6",
-  "status": "both_platform_packages_verified_visual_pending",
+  "status": "published_user_authorized_visual_acceptance_automated_capture_pending",
   "published_baseline": "v0.1.5",
   "preserved_records": 1000,
   "total_tasks": 1053,
@@ -90,5 +90,44 @@
   "archive_crc_and_payload_hashes": {
     "macOS": 15,
     "Windows": 12
-  }
+  },
+  "visual_acceptance": {
+    "user": "2026-10-15: visually good; publish now",
+    "automated_run_id": 38788065868,
+    "automated_status_at_publication": "in_progress"
+  },
+  "public_release": {
+    "id": "RE_kwDOUnt79M4Yr38q",
+    "url": "https://github.com/kr1ny77/ChemSite/releases/tag/v0.1.6",
+    "isDraft": false,
+    "isPrerelease": true,
+    "targetCommitish": "3a1c11bad46bf7244631fb90a5f84912fc2c2b4c"
+  },
+  "public_assets": [
+    {
+      "name": "ChemSite-macOS.zip",
+      "size": 78219459,
+      "digest": "sha256:ce961849c34fab7cdfd5d7faba30c6822e4349d2951ca3b1e562bbf864c56479",
+      "url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.6/ChemSite-macOS.zip"
+    },
+    {
+      "name": "ChemSite-macOS.zip.sha256",
+      "size": 85,
+      "digest": "sha256:b86f98080c1fed806713226932acf02b0bfaa34969c827d73dd729fdd35115be",
+      "url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.6/ChemSite-macOS.zip.sha256"
+    },
+    {
+      "name": "ChemSite-Windows.zip",
+      "size": 50543096,
+      "digest": "sha256:17052d06e8daa2a3b7bebffff83a1465a699b3bf02f06bb6f5e5a885abd09bad",
+      "url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.6/ChemSite-Windows.zip"
+    },
+    {
+      "name": "ChemSite-Windows.zip.sha256",
+      "size": 87,
+      "digest": "sha256:403f3a41e2e9b5dc5054e420b8232343538b11ea75c2fded0b306c8168398429",
+      "url": "https://github.com/kr1ny77/ChemSite/releases/download/v0.1.6/ChemSite-Windows.zip.sha256"
+    }
+  ],
+  "public_windows_download_http_status": 200
 }
