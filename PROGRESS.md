@@ -1,3 +1,16 @@
+## 0.1.6 final selection regression — 2026-10-15
+
+Current phase: final export verification. Completed work: repeated topic rows
+now synchronize their checked state and emit one unique selection. Native
+regression covers selecting either row, deselecting while another topic remains,
+and disabling an empty selection; all 53 level/topic bindings and five practice
+layouts pass. Four chemistry validation scripts explicitly read UTF-8, fixing the
+Windows cp1252 failure found in run 38787282414. Source schema, independent
+numeric/equation audit and reserved-ID controls pass. Current work: menu visual
+verification and fresh exact-source platform runs. Next task: export, package and
+publish 0.1.6. Known issues: final platform gates pending; instructor and physical
+Windows acceptance remain external.
+
 ## 0.1.6 syllabus supplement integrated — 2026-10-15
 
 Current phase: platform verification for 0.1.6. Completed work: 53 reviewed tasks

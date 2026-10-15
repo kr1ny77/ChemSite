@@ -4,8 +4,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'tools/chemistry'))
 from course_ids import assign_stable_ids
-previous=sum([json.loads(p.read_text()) for p in (ROOT/'data/chemistry/course').glob('level*.json')],[])
-registry=json.loads((ROOT/'tools/chemistry/course_id_registry.json').read_text())
+previous=sum([json.loads(p.read_text(encoding="utf-8")) for p in (ROOT/'data/chemistry/course').glob('level*.json')],[])
+registry=json.loads((ROOT/'tools/chemistry/course_id_registry.json').read_text(encoding="utf-8"))
 registry=assign_stable_ids(previous,previous,registry)
 original={task['prompt']:task['id'] for task in previous}
 new=json.loads(json.dumps(previous[0]));new['prompt']='Identity insertion negative control'

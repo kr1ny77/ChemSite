@@ -36,7 +36,7 @@ def check(task):
     assert math.isclose(value,task['correctAnswer']['value'],rel_tol=1e-12), task['id']
 
 def main():
-    bank=json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text())
+    bank=json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text(encoding="utf-8"))
     tasks=[t for t in bank if 'syllabus-supplement' in t.get('tags',[])]
     assert len(tasks)==53
     assert Counter(t['level'] for t in tasks)=={3:32,4:8,5:13}

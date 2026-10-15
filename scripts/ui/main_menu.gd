@@ -154,6 +154,7 @@ func _ready() -> void:
 	var begin_practice := Button.new()
 	begin_practice.disabled = true
 	var selected_topics: Array = []
+	var topic_buttons: Array[CheckButton] = []
 	var first_topic_button: Button
 	var level_titles := ["ОСНОВЫ", "РЕАКЦИИ", "РАСТВОРЫ", "ЭНЕРГИЯ И КОРРОЗИЯ", "СТРОИТЕЛЬНАЯ ХИМИЯ"]
 	for practice_level in range(1, 6):
@@ -174,7 +175,11 @@ func _ready() -> void:
 			topic_button.custom_minimum_size.y = 58
 			topic_button.set_meta("practice_level", practice_level)
 			topic_button.set_meta("practice_topic", topic)
+			topic_buttons.append(topic_button)
 			topic_button.toggled.connect(func(selected: bool) -> void:
+				for peer in topic_buttons:
+					if peer.get_meta("practice_topic") == topic:
+						peer.set_pressed_no_signal(selected)
 				if selected:
 					if topic not in selected_topics: selected_topics.append(topic)
 				else:

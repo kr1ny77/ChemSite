@@ -1,5 +1,7 @@
 ## Detailed fallback syllabus coverage — 2026-10-15
 
+- [x] Synchronize repeated topic rows; explicit native selection/deselection regression and all 53 bindings pass. Fix Windows validation UTF-8 decoding.
+
 - [x] Retrieve and inspect the accessible official MGSU 08.03.01 chemistry program; identify assessed outcomes beyond the current bank.
 - [x] Review and integrate 53 supplemental cases, five contextual references, three original diagrams and scientific scratchpad functions; independent arithmetic/equation audits, 53 native UI answers, 1053/2106 actual-size layouts and ten reviewed captures pass. All 1000 published records remain unchanged.
 - [ ] Audit the supplement independently, preserve every published task ID, verify native interactions/layout and export a subsequent patch.

@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-TASKS = json.loads((ROOT / "data/chemistry/curated_tasks.json").read_text())
+TASKS = json.loads((ROOT / "data/chemistry/curated_tasks.json").read_text(encoding="utf-8"))
 
 
 def normalize(value: str) -> str:

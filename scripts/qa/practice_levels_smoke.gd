@@ -11,6 +11,34 @@ static func run(main: Node) -> bool:
 	tree.root.add_child(menu)
 	var selections: Array[Dictionary] = []
 	menu.topics_requested.connect(func(topics: Array) -> void: selections.append({"topics": topics}))
+	var duplicate_buttons: Array[Button] = []
+	var other_button: Button
+	var begin_button: Button
+	for button in menu.find_children("*", "Button", true, false):
+		if button.text == "НАЧАТЬ ТРЕНИРОВКУ": begin_button = button
+		if not button.has_meta("practice_topic"): continue
+		if button.get_meta("practice_topic") == "Окисление и восстановление":
+			duplicate_buttons.append(button)
+		else:
+			other_button = button
+	if duplicate_buttons.size() != 2 or other_button == null or begin_button == null:
+		return _fail("Duplicate-topic regression fixture missing")
+	duplicate_buttons[0].button_pressed = true
+	if not duplicate_buttons[1].button_pressed or begin_button.disabled:
+		return _fail("Repeated topic selection did not synchronize")
+	begin_button.pressed.emit()
+	if selections.back().topics != ["Окисление и восстановление"]:
+		return _fail("Repeated topic emitted duplicate selections")
+	other_button.button_pressed = true
+	duplicate_buttons[1].button_pressed = false
+	if duplicate_buttons[0].button_pressed or begin_button.disabled:
+		return _fail("Repeated topic deselection lost another selection")
+	begin_button.pressed.emit()
+	if selections.back().topics != [other_button.get_meta("practice_topic")]:
+		return _fail("Repeated topic deselection retained stale selection")
+	other_button.button_pressed = false
+	if not begin_button.disabled: return _fail("Empty practice selection remained enabled")
+	print("PRACTICE_DUPLICATE_TOPIC_OK synchronized=2 unique_selection, independent_deselection")
 	var keys: Array[String] = []
 	for button in menu.find_children("*", "Button", true, false):
 		if not button.has_meta("practice_level"): continue

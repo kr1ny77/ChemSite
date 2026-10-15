@@ -14,9 +14,9 @@ def evaluate(node, variables):
  if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id in ('sqrt','log10','exp') and len(node.args)==1: return getattr(math,node.func.id)(evaluate(node.args[0],variables))
  raise ValueError(ast.dump(node))
 def main():
- production=json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text())
+ production=json.loads((ROOT/'data/chemistry/curated_tasks.json').read_text(encoding="utf-8"))
  base=[t for t in production if t['id'].startswith('L')]
- extra=sum([json.loads((ROOT/f'data/chemistry/course/level{l}.json').read_text()) for l in range(1,6)],[])
+ extra=sum([json.loads((ROOT/f'data/chemistry/course/level{l}.json').read_text(encoding="utf-8")) for l in range(1,6)],[])
  tasks=base+extra
  assert production==tasks, "Rebuild the combined production bank"
  assert len(tasks)==1053
@@ -26,7 +26,7 @@ def main():
  assert set(t['moduleId'] for t in extra)==set(range(1,14))
  assert Counter(t['level'] for t in tasks)=={1:200,2:160,3:272,4:248,5:173}
  allowed={1:{'substance-storage','formula-board','periodic-table-terminal'},2:{'reaction-bench','mixing-station','ionic-reaction-station','inspection-station'},3:{'solution-laboratory','ionic-reaction-station','inspection-station'},4:{'reaction-bench','electrochemistry-station','corrosion-test-rig','inspection-station'},5:{'construction-materials-station','reaction-bench','corrosion-test-rig','inspection-station'}}
- material_ids={entry['id'] for entry in json.loads((ROOT/'data/chemistry/materials/catalog.json').read_text())}
+ material_ids={entry['id'] for entry in json.loads((ROOT/'data/chemistry/materials/catalog.json').read_text(encoding="utf-8"))}
  arithmetic=equations=formulas=0
  for t in tasks:
   assert t['station'] in allowed[t['level']],t['id']
